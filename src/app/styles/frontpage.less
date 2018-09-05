@@ -1,0 +1,99 @@
+.frontpage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    .content {
+        width: 100%;
+        max-width: @app-max-width;
+        padding: 2rem 0rem;
+    }
+    
+    .panel {
+        padding: 2rem 2rem;
+        margin-bottom: 52px;
+        border-radius: 0;
+    }
+
+    .panel--border {
+        border-top: 1px solid #C6C2BF;
+        border-bottom: 1px solid #C6C2BF;
+        border-left: none;
+        border-right: none;
+    }
+
+    .space-after-explanation {
+        height: 40px;
+    }
+
+    .frontpage-header {
+        padding: 22px;
+        align-self: stretch;
+        height: 198px;
+        background-color: #e0dae7;
+        border-bottom: 10px solid #a190b8;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .title-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .typo-normal, .typo-innholdstittel {
+        padding: 10px 0;
+    }
+
+    .user-help {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 16px;
+    }
+
+    .bottom-container {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .knapp {
+            align-self: stretch;
+        }
+    }
+
+    @media (min-width: @mobile-breakpoint) {
+        .bottom-container {
+            flex-direction: row;
+            justify-content: space-between;
+
+            .knapp {
+                align-self: center;
+            }
+        }
+
+        .panel {
+            padding: 2rem 3rem 3rem;
+        }
+
+        .type-innholdstittel {
+            align-self: flex-start;
+        }
+
+        .title-wrapper {
+            justify-content: flex-start;
+        }
+
+        .panel--border {
+            border: 1px solid #C6C2BF;
+        }
+
+        .panel {
+            border-radius: 4px;
+        }
+    }
+}

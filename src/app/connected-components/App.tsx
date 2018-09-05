@@ -1,12 +1,10 @@
 import * as React from 'react';
-import PanelBase from 'nav-frontend-paneler';
+import Frontpage from './Frontpage';
 
 const App = () => {
     return (
         <div id="app">
-            <div className="content">
-                <PanelBase border>Hei, verden!</PanelBase>
-            </div>
+            <Frontpage />
         </div>
     );
 };
