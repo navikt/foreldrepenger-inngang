@@ -1,0 +1,27 @@
+name: foreldrepenger-inngang
+image: repo.adeo.no:5443/foreldrepenger-inngang
+replicas:
+  min: 2
+  max: 2
+  cpuThresholdPercentage: 50
+port: 8080
+healthcheck:
+  liveness:
+    path: /health/isAlive
+    initialDelay: 60
+  readiness:
+    path: /health/isReady
+    initialDelay: 60
+resources:
+  limits:
+    cpu: 500m
+    memory: 512Mi
+  requests:
+    cpu: 200m
+    memory: 256Mi
+ingress:
+  enabled: true
+fasitResources:
+  used:
+  - alias: appres.cms
+    resourceType: baseurl
