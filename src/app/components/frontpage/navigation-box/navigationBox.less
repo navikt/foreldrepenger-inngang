@@ -1,7 +1,7 @@
 @import '../../../styles/variables.less';
 
 .navigationBox {
-    margin-bottom: 52px;
+    margin-bottom: 20px;
 
     &__buttonPanel {
         height: 46px;
@@ -14,20 +14,13 @@
     }
 
     .panel {
-        padding: 2rem 2rem;
+        padding: 1rem 1rem;
         border-radius: 0;
     }
 
-    .panel--border {
-        border-top: 1px solid #C6C2BF;
-        border-bottom: 1px solid #C6C2BF;
-        border-left: none;
-        border-right: none;
-    }
-
-    .typo-normal,
-    .typo-innholdstittel {
-        padding: 10px 0;
+    .typo-systemtittel {
+        padding: 0 0 16px;
+        font-weight: 700;
     }
 
     @media (min-width: @mobile-breakpoint) {
@@ -35,13 +28,8 @@
             justify-content: flex-start;
         }
 
-        .panel--border {
-            border: 1px solid #C6C2BF;
-        }
-
         .panel {
-            padding: 2rem 3rem 3rem;
-            border-radius: 4px;
+            padding: 32px 32px;
         }
 
         .type-innholdstittel {

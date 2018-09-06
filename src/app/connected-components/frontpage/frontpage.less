@@ -4,25 +4,78 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 32px;
 
     &__header {
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 22px;
+        justify-content: center;
         align-self: stretch;
-        height: 198px;
-        background-color: #e7dae1;
-        border-bottom: 5px solid #a190b8;
+        height: 56px;
+        background-color: #e0dae7;
     }
     
     &__content {
         width: 100%;
         max-width: @app-max-width;
-        padding: 2rem 0rem;
+    }
+
+    &__navigation-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__double-buttons {
+        align-self: stretch;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+        .frontpage__knapp:nth-child(1) {
+            margin-bottom: 16px;
+        }
+    }
+
+    &__cover-image {
+        height: 131px;
+        width: 100%;
+        background-color: #e0dae7;
     }
 
     &__filler {
-        height: 40px;
+        height: 32px;
+
+        &--small {
+            height: 20px;
+        }
+    }
+
+    &__knapp {
+        height: @button-height;
+        align-self: stretch;
+        padding: 0;
+    }
+
+    .typografi--undertittel {
+        font-weight: 600;
+    }
+
+    @media (min-width: @mobile-breakpoint) {
+        &__double-buttons {
+            flex-direction: row;
+
+            .frontpage__knapp:nth-child(1) {
+                margin-bottom: 0;
+                margin-right: 8px;
+            }
+        }
+
+        &__knapp {
+            align-self: center;
+            width: 300px;
+        }
     }
 }

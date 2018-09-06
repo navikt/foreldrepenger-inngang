@@ -1,6 +1,7 @@
 import * as React from 'react';
 import Lenke from 'nav-frontend-lenker';
 import HjelpetekstBase from 'nav-frontend-hjelpetekst';
+import TypografiBase from 'nav-frontend-typografi';
 import './userHelp.less';
 
 const UserHelp = ({
@@ -14,7 +15,9 @@ const UserHelp = ({
 }) => {
     return (
         <div className="userHelp">
-            <Lenke href={linkUrl}>{linkText}</Lenke>
+            <TypografiBase type="normaltekst">
+                <Lenke href={linkUrl}>{linkText}</Lenke>
+            </TypografiBase>
             <HjelpetekstBase id="hjelpetekst">{helpText}</HjelpetekstBase>
         </div>
     );

@@ -1,0 +1,25 @@
+.breadcrumbs {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 32px 0px;
+    align-self: flex-start;
+
+    .lenke {
+        color: black;
+        border: none;
+    }
+
+    &__item {
+        max-width: 200px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        padding-right: 8px;
+        font-weight: bold;
+
+        &:not(:first-child) {
+            padding-left: 8px;
+        }
+    }
+}

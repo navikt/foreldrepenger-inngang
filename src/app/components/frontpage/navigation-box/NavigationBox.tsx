@@ -15,9 +15,9 @@ const NavigationBox = ({
 }) => {
     return (
         <div className={cls.className}>
-            <PanelBase border={true}>
+            <PanelBase>
                 <div className={cls.element('title')}>
-                    <TypografiBase type="innholdstittel">{title}</TypografiBase>
+                    <TypografiBase type="systemtittel">{title}</TypografiBase>
                 </div>
                 {children}
             </PanelBase>
