@@ -1,0 +1,50 @@
+@import '../../../styles/variables.less';
+
+.navigationBox {
+    &__buttonPanel {
+        height: 46px;
+    }
+
+    &__title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .panel {
+        padding: 2rem 2rem;
+        margin-bottom: 52px;
+        border-radius: 0;
+    }
+
+    .panel--border {
+        border-top: 1px solid #C6C2BF;
+        border-bottom: 1px solid #C6C2BF;
+        border-left: none;
+        border-right: none;
+    }
+
+    .typo-normal,
+    .typo-innholdstittel {
+        padding: 10px 0;
+    }
+
+    @media (min-width: @mobile-breakpoint) {
+        &__title {
+            justify-content: flex-start;
+        }
+
+        .panel--border {
+            border: 1px solid #C6C2BF;
+        }
+
+        .panel {
+            padding: 2rem 3rem 3rem;
+            border-radius: 4px;
+        }
+
+        .type-innholdstittel {
+            align-self: flex-start;
+        }
+    }
+}

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Frontpage from './Frontpage';
+import Frontpage from './frontpage/Frontpage';
 
 const App = () => {
     return (

@@ -1,6 +1,7 @@
 import * as React from 'react';
 import KnappBase from 'nav-frontend-knapper';
-import UserHelp from './UserHelp';
+import UserHelp from '../user-help/UserHelp';
+import './buttonPanel.less';
 
 const ButtonPanel = ({
     buttonText,
@@ -14,8 +15,10 @@ const ButtonPanel = ({
     helpText: string;
 }) => {
     return (
-        <div className="bottom-container">
-            <KnappBase type="standard">{buttonText}</KnappBase>
+        <div className="buttonPanel">
+            <KnappBase className="buttonPanel__knapp" type="standard">
+                {buttonText}
+            </KnappBase>
             <UserHelp
                 linkText={linkText}
                 linkUrl={linkUrl}
