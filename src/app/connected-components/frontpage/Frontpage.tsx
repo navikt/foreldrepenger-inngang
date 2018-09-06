@@ -14,19 +14,18 @@ const translations = {
     no: {
         foreldrepenger: 'Foreldrepenger',
         foreldrepenger_beskrivelse:
-            'Har du en inntekt (minst 46 518kr i året), får ytelse fra NAV eller vært i militæret, kan du få foreldrepenger når du skal ha foreldrepermisjon. Les mer ',
+            'Har du en inntekt som er minst 46 518kr (i året), får ytelse fra NAV eller har vært i militæret, kan du få foreldrepenger når du skal ha foreldrepermisjon. Les mer ',
         ingen_elektronisk_id: 'Jeg har ikke elektronisk ID',
         søk_foreldrepenger: 'Søk om foreldrepenger',
         endre_foreldrepenger: 'Jeg har allerede en søknad',
         engangsstønad: 'Engangsstønad',
         engangsstønad_beskrivelse:
-            'Hvis mor ikke har hatt inntekt, kan hun få en engangssum istedenfor foreldrepenger.',
-        engangsstønad_beskrivelse_fortsettelse:
-            'I noen tilfeller kan far/medmor få engangsstønad',
+            'Hvis mor ikke har hatt inntekt, kan hun få en engangssum isteden for foreldrepenger.',
+        engangsstønad_beskrivelse_fortsettelse: 'Les om tilfeller hvor ',
         søk_engangsstønad: 'Søk om engangsstønad',
         svangerskapspenger: 'Svangerskapspenger',
         svangerskapspenger_beskrivelse:
-            'Dersom du er frisk og gravid, men fortsatt ikke kan jobbe under svangerskapet, gå hit.',
+            'Dersom du er frisk og gravid, men fortsatt ikke kan jobbe under svangerskapet, så kan du søke ',
         søk_svangerskapspenger: 'Søk om svangerskapspenger'
     }
 };
@@ -39,7 +38,7 @@ const Frontpage = () => {
     return (
         <div className={cls.className}>
             <div className={cls.element('header')}>
-                <TypografiBase type="systemtittel">
+                <TypografiBase type="undertittel">
                     Hva vil du søke om?
                 </TypografiBase>
             </div>
@@ -60,14 +59,12 @@ const CoverImage = () => {
 const Foreldrepenger = () => {
     return (
         <NavigationBox title={translate('foreldrepenger')}>
-            <div>
-                <TypografiBase type="normaltekst">
-                    {translate('foreldrepenger_beskrivelse')}
-                    <Lenke href="www.nav.no">
-                        om lengde på foreldrepermisjon, ferie o.l.
-                    </Lenke>
-                </TypografiBase>
-            </div>
+            <TypografiBase type="normaltekst">
+                {translate('foreldrepenger_beskrivelse')}
+                <Lenke href="www.nav.no">
+                    om lengde på foreldrepermisjon, ferie o.l.
+                </Lenke>
+            </TypografiBase>
             <div className={cls.element('filler')} />
             <div className={cls.element('navigation-section')}>
                 <div className={cls.element('double-buttons')}>
@@ -93,9 +90,12 @@ const Engangsstonad = () => {
     return (
         <NavigationBox title={translate('engangsstønad')}>
             <Tekstomrade>{translate('engangsstønad_beskrivelse')}</Tekstomrade>
-            <Tekstomrade>
+            <TypografiBase type="normaltekst">
                 {translate('engangsstønad_beskrivelse_fortsettelse')}
-            </Tekstomrade>
+                <Lenke href="www.nav.no">
+                    far/medmor kan få engangsstønad.
+                </Lenke>
+            </TypografiBase>
             <div className={cls.element('filler')} />
             <ButtonPanel
                 className={cls.element('knapp')}
@@ -111,9 +111,10 @@ const Engangsstonad = () => {
 const Svangerskapspenger = () => {
     return (
         <NavigationBox title={translate('svangerskapspenger')}>
-            <Tekstomrade>
+            <TypografiBase type="normaltekst">
                 {translate('svangerskapspenger_beskrivelse')}
-            </Tekstomrade>
+                <Lenke href="www.nav.no">om svangerskapspenger!</Lenke>
+            </TypografiBase>
             <div className={cls.element('filler')} />
             <ButtonPanel
                 className={cls.element('knapp')}

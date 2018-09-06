@@ -56,6 +56,11 @@
     &__knapp {
         height: @button-height;
         align-self: stretch;
+        padding: 0;
+    }
+
+    .typografi--undertittel {
+        font-weight: 600;
     }
 
     @media (min-width: @mobile-breakpoint) {
@@ -64,12 +69,13 @@
 
             .frontpage__knapp:nth-child(1) {
                 margin-bottom: 0;
+                margin-right: 8px;
             }
         }
 
         &__knapp {
             align-self: center;
-            width: 340px;
+            width: 300px;
         }
     }
 }
