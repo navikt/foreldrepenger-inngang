@@ -3,6 +3,7 @@ import Tekstomrade from 'nav-frontend-tekstomrade';
 import TypografiBase from 'nav-frontend-typografi';
 import KnappBase from 'nav-frontend-knapper';
 import UserHelp from '../../components/frontpage/user-help/UserHelp';
+import Breadcrumbs from '../../components/breadcrumbs/Breadcrumbs';
 import BEMHelper from '../../utils/bem';
 
 import NavigationBox from '../../components/frontpage/navigation-box/NavigationBox';
@@ -10,6 +11,8 @@ import ButtonPanel from '../../components/frontpage/button-panel/ButtonPanel';
 import './frontpage.less';
 import Lenke from 'nav-frontend-lenker';
 
+// TODO: Implementer i18n
+const translate = (s: string) => translations.no[s];
 const translations = {
     no: {
         foreldrepenger: 'Foreldrepenger',
@@ -30,9 +33,19 @@ const translations = {
     }
 };
 
-const cls = BEMHelper('frontpage');
+// TODO: Hent fra state etter routing er implementert
+const tempRoute = [
+    {
+        label: 'Foreldrepenger, engangsstønad og svangerskapspenger',
+        url: 'www.nav.no'
+    },
+    {
+        label: 'Hva vil du søke om',
+        url: 'www.nav.no'
+    }
+];
 
-const translate = (s: string) => translations.no[s];
+const cls = BEMHelper('frontpage');
 
 const Frontpage = () => {
     return (
@@ -43,6 +56,7 @@ const Frontpage = () => {
                 </TypografiBase>
             </div>
             <div className={cls.element('content')}>
+                <Breadcrumbs route={tempRoute} />
                 <CoverImage />
                 <Foreldrepenger />
                 <Engangsstonad />
