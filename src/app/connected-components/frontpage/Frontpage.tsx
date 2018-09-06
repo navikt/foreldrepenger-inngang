@@ -1,31 +1,33 @@
 import * as React from 'react';
 import Tekstomrade from 'nav-frontend-tekstomrade';
-import Lenke from 'nav-frontend-lenker';
 import TypografiBase from 'nav-frontend-typografi';
+import KnappBase from 'nav-frontend-knapper';
+import UserHelp from '../../components/frontpage/user-help/UserHelp';
 import BEMHelper from '../../utils/bem';
 
 import NavigationBox from '../../components/frontpage/navigation-box/NavigationBox';
 import ButtonPanel from '../../components/frontpage/button-panel/ButtonPanel';
 import './frontpage.less';
+import Lenke from 'nav-frontend-lenker';
 
 const translations = {
     no: {
         foreldrepenger: 'Foreldrepenger',
         foreldrepenger_beskrivelse:
-            'Her kan du søke om foreldrepenger, gitt at du oppfyller følgende krav:',
-        foreldrepenger_unntak:
-            'Det er også noen unntak som du bør være klar over, les mer om disse unntakene og generelt:',
+            'Har du en inntekt (minst 46 518kr i året), får ytelse fra NAV eller vært i militæret, kan du få foreldrepenger når du skal ha foreldrepermisjon. Les mer ',
         ingen_elektronisk_id: 'Jeg har ikke elektronisk ID',
         søk_foreldrepenger: 'Søk om foreldrepenger',
+        endre_foreldrepenger: 'Jeg har allerede en søknad',
         engangsstønad: 'Engangsstønad',
         engangsstønad_beskrivelse:
-            'Du kan få engangsstønad hvis du ikke har rett til foreldrepenger, eller velger engangsstønad fremfor foreldrepenger. Du kan ikke senere gjøre om dette valget.',
+            'Hvis mor ikke har hatt inntekt, kan hun få en engangssum istedenfor foreldrepenger.',
+        engangsstønad_beskrivelse_fortsettelse:
+            'I noen tilfeller kan far/medmor få engangsstønad',
         søk_engangsstønad: 'Søk om engangsstønad',
         svangerskapspenger: 'Svangerskapspenger',
         svangerskapspenger_beskrivelse:
-            'Friske, gravide kvinner som ikke kan fortsette å jobbe under svangerskapet fordi det kan medføre risiko for skade på fosteret, kan få svangerskapspenger.',
-        søk_svangerskapspenger:
-            'Gå til papirsøknad for søknad om svangerskapspenger'
+            'Dersom du er frisk og gravid, men fortsatt ikke kan jobbe under svangerskapet, gå hit.',
+        søk_svangerskapspenger: 'Søk om svangerskapspenger'
     }
 };
 
@@ -42,6 +44,7 @@ const Frontpage = () => {
                 </TypografiBase>
             </div>
             <div className={cls.element('content')}>
+                <CoverImage />
                 <Foreldrepenger />
                 <Engangsstonad />
                 <Svangerskapspenger />
@@ -50,18 +53,38 @@ const Frontpage = () => {
     );
 };
 
+const CoverImage = () => {
+    return <div className={cls.element('cover-image')} />;
+};
+
 const Foreldrepenger = () => {
     return (
         <NavigationBox title={translate('foreldrepenger')}>
-            <Tekstomrade>{translate('foreldrepenger_beskrivelse')}</Tekstomrade>
-            <Tekstomrade>{translate('foreldrepenger_unntak')}</Tekstomrade>
+            <div>
+                <TypografiBase type="normaltekst">
+                    {translate('foreldrepenger_beskrivelse')}
+                    <Lenke href="www.nav.no">
+                        om lengde på foreldrepermisjon, ferie o.l.
+                    </Lenke>
+                </TypografiBase>
+            </div>
             <div className={cls.element('filler')} />
-            <ButtonPanel
-                buttonText={translate('søk_foreldrepenger')}
-                linkText={translate('ingen_elektronisk_id')}
-                linkUrl={'www.nav.no'}
-                helpText="<Placeholder>"
-            />
+            <div className={cls.element('navigation-section')}>
+                <div className={cls.element('double-buttons')}>
+                    <KnappBase className={cls.element('knapp')} type="hoved">
+                        {translate('søk_foreldrepenger')}
+                    </KnappBase>
+                    <KnappBase className={cls.element('knapp')} type="standard">
+                        {translate('endre_foreldrepenger')}
+                    </KnappBase>
+                </div>
+                <div className={`${cls.element('filler')}--small`} />
+                <UserHelp
+                    linkText={translate('ingen_elektronisk_id')}
+                    linkUrl={'www.nav.no'}
+                    helpText="<Placeholder>"
+                />
+            </div>
         </NavigationBox>
     );
 };
@@ -70,12 +93,16 @@ const Engangsstonad = () => {
     return (
         <NavigationBox title={translate('engangsstønad')}>
             <Tekstomrade>{translate('engangsstønad_beskrivelse')}</Tekstomrade>
+            <Tekstomrade>
+                {translate('engangsstønad_beskrivelse_fortsettelse')}
+            </Tekstomrade>
             <div className={cls.element('filler')} />
             <ButtonPanel
+                className={cls.element('knapp')}
                 buttonText={translate('søk_engangsstønad')}
                 linkText={translate('ingen_elektronisk_id')}
                 linkUrl={'www.nav.no'}
-                helpText="<Placeholder>"
+                helpText="Skaff deg elektronisk ID nå!"
             />
         </NavigationBox>
     );
@@ -88,9 +115,13 @@ const Svangerskapspenger = () => {
                 {translate('svangerskapspenger_beskrivelse')}
             </Tekstomrade>
             <div className={cls.element('filler')} />
-            <Lenke href="www.nav.no">
-                {translate('søk_svangerskapspenger')}
-            </Lenke>
+            <ButtonPanel
+                className={cls.element('knapp')}
+                buttonText={translate('søk_svangerskapspenger')}
+                linkText={translate('ingen_elektronisk_id')}
+                linkUrl={'www.nav.no'}
+                helpText="<Placeholder>"
+            />
         </NavigationBox>
     );
 };
