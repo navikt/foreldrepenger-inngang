@@ -1,7 +1,10 @@
 import * as React from 'react';
 import KnappBase from 'nav-frontend-knapper';
 import UserHelp from '../user-help/UserHelp';
+import BEMHelper from '../../../utils/bem';
 import './buttonPanel.less';
+
+const cls = BEMHelper('buttonPanel');
 
 const ButtonPanel = ({
     buttonText,
@@ -15,8 +18,8 @@ const ButtonPanel = ({
     helpText: string;
 }) => {
     return (
-        <div className="buttonPanel">
-            <KnappBase className="buttonPanel__knapp" type="standard">
+        <div className={cls.className}>
+            <KnappBase className={cls.element('knapp')} type="standard">
                 {buttonText}
             </KnappBase>
             <UserHelp
