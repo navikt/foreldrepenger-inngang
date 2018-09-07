@@ -22,7 +22,7 @@ const translations = {
 
         ingen_elektronisk_id: 'Jeg har ikke elektronisk ID',
         søk_foreldrepenger: 'Søk om foreldrepenger',
-        endre_foreldrepenger: 'Jeg har allerede en søknad',
+        har_søkt_foreldrepenger: 'Jeg har allerede søkt',
         engangsstønad: 'Engangsstønad',
         engangsstønad_beskrivelse:
             'Hvis mor ikke har hatt inntekt, kan hun få en engangssum istedenfor foreldrepenger.\nI noen tilfeller kan far eller medmor få engangsstønaden.',
@@ -90,7 +90,7 @@ const Foreldrepenger = () => {
                         {translate('søk_foreldrepenger')}
                     </KnappBase>
                     <KnappBase className={cls.element('knapp')} type="standard">
-                        {translate('endre_foreldrepenger')}
+                        {translate('har_søkt_foreldrepenger')}
                     </KnappBase>
                 </div>
                 <div className={`${cls.element('filler')}--small`} />
