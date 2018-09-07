@@ -17,18 +17,22 @@ const translations = {
     no: {
         foreldrepenger: 'Foreldrepenger',
         foreldrepenger_beskrivelse:
-            'Har du en inntekt som er minst 46 518kr (i året), får ytelse fra NAV eller har vært i militæret, kan du få foreldrepenger når du skal ha foreldrepermisjon. Les mer ',
+            'Har du hatt inntekt eller ytelser fra NAV kan du få foreldrepenger når du er hjemme med barnet ditt. ',
+        foreldrepenger_les_mer: 'Les mer om hvem som kan få foreldrepenger',
+
         ingen_elektronisk_id: 'Jeg har ikke elektronisk ID',
         søk_foreldrepenger: 'Søk om foreldrepenger',
         endre_foreldrepenger: 'Jeg har allerede en søknad',
         engangsstønad: 'Engangsstønad',
         engangsstønad_beskrivelse:
-            'Hvis mor ikke har hatt inntekt, kan hun få en engangssum isteden for foreldrepenger.',
-        engangsstønad_beskrivelse_fortsettelse: 'Les om tilfeller hvor ',
+            'Hvis mor ikke har hatt inntekt, kan hun få en engangssum istedenfor foreldrepenger.\nI noen tilfeller kan far eller medmor få engangsstønaden.',
+        engangsstønad_les_mer: 'Les mer om hvem som kan få engangsstønad',
         søk_engangsstønad: 'Søk om engangsstønad',
         svangerskapspenger: 'Svangerskapspenger',
         svangerskapspenger_beskrivelse:
-            'Dersom du er frisk og gravid, men fortsatt ikke kan jobbe under svangerskapet, så kan du søke ',
+            'Hvis du er frisk og gravid, men ikke kan jobbe fordi det kan skade det ufødte barnet, kan du få svangerskapspenger. ',
+        svangerskapspenger_les_mer:
+            'Les mer om hvem som kan få svangerskapspenger',
         søk_svangerskapspenger: 'Søk om svangerskapspenger'
     }
 };
@@ -76,7 +80,7 @@ const Foreldrepenger = () => {
             <TypografiBase type="normaltekst">
                 {translate('foreldrepenger_beskrivelse')}
                 <Lenke href="www.nav.no">
-                    om lengde på foreldrepermisjon, ferie o.l.
+                    {translate('foreldrepenger_les_mer')}
                 </Lenke>
             </TypografiBase>
             <div className={cls.element('filler')} />
@@ -105,9 +109,8 @@ const Engangsstonad = () => {
         <NavigationBox title={translate('engangsstønad')}>
             <Tekstomrade>{translate('engangsstønad_beskrivelse')}</Tekstomrade>
             <TypografiBase type="normaltekst">
-                {translate('engangsstønad_beskrivelse_fortsettelse')}
                 <Lenke href="www.nav.no">
-                    far/medmor kan få engangsstønad.
+                    {translate('engangsstønad_les_mer')}
                 </Lenke>
             </TypografiBase>
             <div className={cls.element('filler')} />
@@ -127,7 +130,9 @@ const Svangerskapspenger = () => {
         <NavigationBox title={translate('svangerskapspenger')}>
             <TypografiBase type="normaltekst">
                 {translate('svangerskapspenger_beskrivelse')}
-                <Lenke href="www.nav.no">om svangerskapspenger!</Lenke>
+                <Lenke href="www.nav.no">
+                    {translate('svangerskapspenger_les_mer')}
+                </Lenke>
             </TypografiBase>
             <div className={cls.element('filler')} />
             <ButtonPanel
