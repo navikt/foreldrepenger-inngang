@@ -15,11 +15,16 @@ const Breadcrumbs = ({
     const breadcrumbChain: ReactNodeArray = [];
     route.forEach((path, index) => {
         if (index !== 0) {
-            breadcrumbChain.push(<NavFrontendChevron type="høyre" />);
+            breadcrumbChain.push(
+                <NavFrontendChevron key={`chevron${index}`} type="høyre" />
+            );
         }
 
         breadcrumbChain.push(
-            <TypografiBase type="normaltekst" className={cls.element('item')}>
+            <TypografiBase
+                key={`crumb${index}`}
+                type="normaltekst"
+                className={cls.element('item')}>
                 <Lenke href={path.url}>{path.label}</Lenke>
             </TypografiBase>
         );

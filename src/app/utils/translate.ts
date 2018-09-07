@@ -10,6 +10,10 @@ const translations = {
         foreldrepenger_les_mer: 'Les mer om hvem som kan få foreldrepenger',
         søk_foreldrepenger: 'Søk om foreldrepenger',
         har_søkt_foreldrepenger: 'Jeg har allerede søkt',
+        foreldrepenger_inngang:
+            'Du kan tidligst søke om foreldrepenger 6 uker før du skal ta ut foreldrepenger.',
+        begynn_søknad_om_foreldrepenger: 'Begynn søknad om foreldrepenger',
+        når_starter_du: 'Når starter du?',
 
         engangsstønad: 'Engangsstønad',
         engangsstønad_beskrivelse:

@@ -1,0 +1,29 @@
+@import '../../styles/variables';
+
+.foreldrepengerEntrance {
+    &__datovelger {
+        margin-top: 32px;
+    }
+
+    .panel {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .typo-element {
+        margin-bottom: 8px;
+    }
+
+    .knapp {
+        align-self: center;
+        width: 100%;
+        margin-top: 56px;
+    }
+
+    @media (min-width: @mobile-breakpoint) {
+        .knapp {
+            max-width: 370px;
+        }
+    }
+}
