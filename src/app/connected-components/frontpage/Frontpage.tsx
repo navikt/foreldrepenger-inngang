@@ -7,7 +7,9 @@ import Foreldrepenger from './Foreldrepenger';
 import Engangsstonad from './Engangsstonad';
 import Svangerskapspenger from './Svangerskapspenger';
 import translate from '../../utils/translate';
+import CustomSVG from '../../utils/CustomSVG';
 
+const family = require('./family.svg').default;
 import './frontpage.less';
 
 // TODO: Hent fra state etter routing er implementert
@@ -44,7 +46,11 @@ const Frontpage = () => {
 };
 
 const CoverImage = () => {
-    return <div className={cls.element('cover-image')} />;
+    return (
+        <div className={cls.element('cover-image')}>
+            <CustomSVG className="family" iconRef={family} size={120} />
+        </div>
+    );
 };
 
 export default Frontpage;

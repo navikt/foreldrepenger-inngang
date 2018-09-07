@@ -1,6 +1,12 @@
+@import '../../../styles/variables.less';
+
 .userHelp {
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 0 16px;
+    padding: 16px 16px 0;
+    
+    @media (min-width: @mobile-breakpoint) {
+        padding: 0 16px;
+    }
 }

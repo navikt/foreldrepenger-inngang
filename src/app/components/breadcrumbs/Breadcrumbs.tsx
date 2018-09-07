@@ -12,7 +12,7 @@ const Breadcrumbs = ({
 }: {
     route: Array<{ url: string; label: string }>;
 }) => {
-    let breadcrumbChain: ReactNodeArray = [];
+    const breadcrumbChain: ReactNodeArray = [];
     route.forEach((path, index) => {
         if (index !== 0) {
             breadcrumbChain.push(<NavFrontendChevron type="høyre" />);

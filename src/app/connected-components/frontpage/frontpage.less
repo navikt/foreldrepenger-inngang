@@ -25,7 +25,6 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-bottom: -16px;
     }
 
     &__double-buttons {
@@ -68,6 +67,12 @@
         margin-block-end: 0;
     }
 
+    .family {
+        position: relative;
+        left: 56px;
+        bottom: -23px;
+    }
+
     @media (min-width: @mobile-breakpoint) {
         &__double-buttons {
             flex-direction: row;
@@ -76,6 +81,10 @@
                 margin-bottom: 0;
                 margin-right: 8px;
             }
+        }
+
+        &__navigation-section {
+            margin-bottom: -16px;
         }
 
         &__knapp {
