@@ -1,15 +1,20 @@
 import React, { Component } from 'react';
+import classnames from 'classnames';
+import moment from 'moment';
+
 import TypografiBase from 'nav-frontend-typografi';
 import Tekstomrade from 'nav-frontend-tekstomrade';
+import Veilederpanel from 'nav-frontend-veilederpanel';
 import KnappBase from 'nav-frontend-knapper';
-import classnames from 'classnames';
 import NavDatovelger from 'nav-datovelger';
 
+import CustomSVG from '../../utils/CustomSVG';
 import Breadcrumbs from '../../components/breadcrumbs/Breadcrumbs';
 import BEMHelper from '../../utils/bem';
 import translate from '../../utils/translate';
 import SvgBanner from '../../components/svgBanner/SvgBanner';
 import NavigationBox from '../../components/frontpage/navigation-box/NavigationBox';
+import { dateIsInLessThanSixWeeks } from '../../utils/dateUtils';
 
 import './foreldrepengerEntrance.less';
 
@@ -35,13 +40,18 @@ const foreldrepengerCls = BEMHelper('foreldrepengerEntrance');
 class ForeldrepengerEntrance extends Component {
     state: {
         selectedDate?: Date;
+        dateIsValid: boolean;
     } = {
-        selectedDate: undefined
+        selectedDate: undefined,
+        dateIsValid: true
     };
 
     setDate = (selectedDate: Date) => {
+        const dateIsValid = dateIsInLessThanSixWeeks(selectedDate);
+
         this.setState({
-            selectedDate
+            selectedDate,
+            dateIsValid
         });
     };
 
@@ -67,16 +77,46 @@ class ForeldrepengerEntrance extends Component {
                         date={this.state.selectedDate}
                         onChange={(date: Date) => this.setDate(date)}
                     />
-                    <KnappBase
-                        className={frontpageCls.element('knapp')}
-                        type="hoved">
-                        {translate('begynn_søknad_om_foreldrepenger')}
-                    </KnappBase>
+                    {this.state.selectedDate &&
+                        !this.state.dateIsValid && (
+                            <Veilederpanel
+                                kompakt={true}
+                                type="normal"
+                                svg={<Frida />}
+                                fargetema="advarsel">
+                                {`${translate(
+                                    'ugyldig_dato_for_foreldrepenger'
+                                )} ${moment(this.state.selectedDate)
+                                    .subtract(6, 'weeks')
+                                    .format('dddd, D. MMMM')}. ${translate(
+                                    'ugyldig_dato_fortsettelse'
+                                )}`}
+                            </Veilederpanel>
+                        )}
+                    {this.state.selectedDate && (
+                        <KnappBase
+                            className={frontpageCls.element('knapp')}
+                            type="hoved">
+                            {translate('begynn_søknad_om_foreldrepenger')}
+                        </KnappBase>
+                    )}
                 </NavigationBox>
             </div>
         </div>
     );
 }
+
+const Frida = () => {
+    const svgFile = require(`./frida.svg`).default;
+
+    return (
+        <CustomSVG
+            className={foreldrepengerCls.element('frida')}
+            iconRef={svgFile}
+            size={64}
+        />
+    );
+};
 
 const DatePicker = ({
     date,
@@ -91,6 +131,7 @@ const DatePicker = ({
                 {translate('når_starter_du')}
             </TypografiBase>
             <NavDatovelger.Datovelger
+                kanVelgeUgyldigDato={true}
                 id="foreldrepenger-startdato"
                 locale="no"
                 dato={date}
@@ -99,6 +140,7 @@ const DatePicker = ({
                     placeholder: 'dd.mm.åååå'
                 }}
             />
+            {}
         </div>
     );
 };
