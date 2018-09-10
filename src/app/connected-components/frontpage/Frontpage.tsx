@@ -7,26 +7,25 @@ import Foreldrepenger from './Foreldrepenger';
 import Engangsstonad from './Engangsstonad';
 import Svangerskapspenger from './Svangerskapspenger';
 import translate from '../../utils/translate';
-import CustomSVG from '../../utils/CustomSVG';
+import SvgBanner from '../../components/svgBanner/SvgBanner';
 
-const family = require('./family.svg').default;
 import './frontpage.less';
 
 // TODO: Hent fra state etter routing er implementert
 const tempRoute = [
     {
         label: 'Foreldrepenger, engangsstønad og svangerskapspenger',
-        url: 'www.nav.no'
+        url: '/hva-vil-du-soke-om'
     },
     {
         label: 'Hva vil du søke om',
-        url: 'www.nav.no'
+        url: '/hva-vil-du-soke-om'
     }
 ];
 
 const cls = BEMHelper('frontpage');
 
-const Frontpage = () => {
+const Frontpage = ({ location }: { location: any }) => {
     return (
         <div className={cls.className}>
             <div className={cls.element('header')}>
@@ -36,19 +35,11 @@ const Frontpage = () => {
             </div>
             <div className={cls.element('content')}>
                 <Breadcrumbs route={tempRoute} />
-                <CoverImage />
+                <SvgBanner svgName="family" />
                 <Foreldrepenger cls={cls} />
                 <Engangsstonad cls={cls} />
                 <Svangerskapspenger cls={cls} />
             </div>
-        </div>
-    );
-};
-
-const CoverImage = () => {
-    return (
-        <div className={cls.element('cover-image')}>
-            <CustomSVG className="family" iconRef={family} size={120} />
         </div>
     );
 };
