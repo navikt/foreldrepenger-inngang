@@ -15,9 +15,7 @@ const translations = {
         begynn_søknad_om_foreldrepenger: 'Begynn søknad om foreldrepenger',
         når_starter_du: 'Når starter du?',
         ugyldig_dato_for_foreldrepenger:
-            'Her skjedde det en feil – du kan ikke søke før ',
-        ugyldig_dato_fortsettelse:
-            'Du kan fortsatt søke, men husk at du kanskje ikke kan søke allikevel. Jeg heter Sara, og du kommer til å se mye av meg.',
+            'Du søker tidligere enn 6 uker før du skal ta ut foreldrepenger. Du kan begynne på søknaden, det vil ikke være mulig å sende den inn før ',
 
         engangsstønad: 'Engangsstønad',
         engangsstønad_beskrivelse:
