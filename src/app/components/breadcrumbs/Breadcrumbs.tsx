@@ -1,8 +1,8 @@
 import React, { ReactNodeArray } from 'react';
 import TypografiBase from 'nav-frontend-typografi';
 import NavFrontendChevron from 'nav-frontend-chevron';
-import Lenke from 'nav-frontend-lenker';
 import BEMHelper from '../../utils/bem';
+import { Link } from 'react-router-dom';
 import './breadcrumbs.less';
 
 const cls = BEMHelper('breadcrumbs');
@@ -25,7 +25,7 @@ const Breadcrumbs = ({
                 key={`crumb${index}`}
                 type="normaltekst"
                 className={cls.element('item')}>
-                <Lenke href={path.url}>{path.label}</Lenke>
+                <Link to={path.url}>{path.label}</Link>
             </TypografiBase>
         );
     });
