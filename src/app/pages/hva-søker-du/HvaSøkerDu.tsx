@@ -25,7 +25,11 @@ const tempRoute = [
 
 const cls = BEMHelper('hvaSøkerDu');
 
-const Frontpage = ({ location }: { location: any }) => {
+interface Props {
+    location: any;
+}
+
+const HvaSøkerDu: React.StatelessComponent<Props> = ({ location }) => {
     return (
         <div className={cls.className}>
             <div className={cls.element('header')}>
@@ -44,4 +48,4 @@ const Frontpage = ({ location }: { location: any }) => {
     );
 };
 
-export default Frontpage;
+export default HvaSøkerDu;

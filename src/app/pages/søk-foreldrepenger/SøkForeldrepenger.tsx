@@ -35,11 +35,11 @@ const tempRoute = [
 const hvaSøkerDuCls = BEMHelper('hvaSøkerDu');
 const foreldrepengerCls = BEMHelper('søkForeldrepenger');
 
-interface FPInngangProps {
+interface Props {
     route: any;
 }
 
-class ForeldrepengerInngang extends Component<FPInngangProps> {
+class SøkForeldrepenger extends Component<Props> {
     state: {
         selectedDate?: Date;
         dateIsValid: boolean;
@@ -102,4 +102,4 @@ class ForeldrepengerInngang extends Component<FPInngangProps> {
     };
 }
 
-export default ForeldrepengerInngang;
+export default SøkForeldrepenger;

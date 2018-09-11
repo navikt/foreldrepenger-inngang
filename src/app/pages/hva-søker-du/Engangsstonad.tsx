@@ -1,5 +1,4 @@
 import * as React from 'react';
-import Tekstomrade from 'nav-frontend-tekstomrade';
 import TypografiBase from 'nav-frontend-typografi';
 import Lenke from 'nav-frontend-lenker';
 
@@ -10,8 +9,9 @@ import translate from '../../utils/translate';
 const Engangsstonad = ({ parentCls }: { parentCls: any }) => {
     return (
         <PanelMedTittel title={translate('engangsstønad')}>
-            <Tekstomrade>{translate('engangsstønad_beskrivelse')}</Tekstomrade>
             <TypografiBase type="normaltekst">
+                {translate('engangsstønad_beskrivelse')}
+                <div className={parentCls.element('filler', 'tiny')} />
                 <Lenke href="www.nav.no">
                     {translate('engangsstønad_les_mer')}
                 </Lenke>

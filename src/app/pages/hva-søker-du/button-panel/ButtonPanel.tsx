@@ -27,7 +27,7 @@ const ButtonPanel = ({
                     cls.element('knapp'),
                     parentCls.element('knapp')
                 )}
-                type="standard">
+                type="hoved">
                 {buttonText}
             </KnappBase>
             <UserHelp

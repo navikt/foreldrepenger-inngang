@@ -23,13 +23,15 @@ const Foreldrepenger: StatelessComponent<ForeldrepengerProps> = ({
         <PanelMedTittel title={translate('foreldrepenger')}>
             <TypografiBase type="normaltekst">
                 {translate('foreldrepenger_beskrivelse')}
+                <div className={parentCls.element('filler', 'tiny')} />
                 <Lenke href="www.nav.no">
                     {translate('foreldrepenger_les_mer')}
                 </Lenke>
             </TypografiBase>
+
             <div className={parentCls.element('filler')} />
             <div className={parentCls.element('navigation-section')}>
-                <div className={parentCls.element('double-buttons')}>
+                <div className={parentCls.element('two-buttons-navigation')}>
                     <KnappBase
                         className={parentCls.element('knapp')}
                         type="hoved"
@@ -43,13 +45,12 @@ const Foreldrepenger: StatelessComponent<ForeldrepengerProps> = ({
                         type="standard">
                         {translate('har_søkt_foreldrepenger')}
                     </KnappBase>
+                    <UserHelp
+                        linkText={translate('ingen_elektronisk_id')}
+                        linkUrl={'www.nav.no'}
+                        helpText="<Placeholder>"
+                    />
                 </div>
-                <div className={`${parentCls.element('filler')}--small`} />
-                <UserHelp
-                    linkText={translate('ingen_elektronisk_id')}
-                    linkUrl={'www.nav.no'}
-                    helpText="<Placeholder>"
-                />
             </div>
         </PanelMedTittel>
     );
