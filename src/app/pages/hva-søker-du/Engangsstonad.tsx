@@ -3,28 +3,28 @@ import Tekstomrade from 'nav-frontend-tekstomrade';
 import TypografiBase from 'nav-frontend-typografi';
 import Lenke from 'nav-frontend-lenker';
 
-import NavigationBox from '../../components/frontpage/navigation-box/NavigationBox';
-import ButtonPanel from '../../components/frontpage/button-panel/ButtonPanel';
+import ButtonPanel from './button-panel/ButtonPanel';
+import PanelMedTittel from '../../components/panel-med-tittel/PanelMedTittel';
 import translate from '../../utils/translate';
 
-const Engangsstonad = ({ cls }: { cls: any }) => {
+const Engangsstonad = ({ parentCls }: { parentCls: any }) => {
     return (
-        <NavigationBox title={translate('engangsstønad')}>
+        <PanelMedTittel title={translate('engangsstønad')}>
             <Tekstomrade>{translate('engangsstønad_beskrivelse')}</Tekstomrade>
             <TypografiBase type="normaltekst">
                 <Lenke href="www.nav.no">
                     {translate('engangsstønad_les_mer')}
                 </Lenke>
             </TypografiBase>
-            <div className={cls.element('filler')} />
+            <div className={parentCls.element('filler')} />
             <ButtonPanel
-                className={cls.element('knapp')}
+                parentCls={parentCls}
                 buttonText={translate('søk_engangsstønad')}
                 linkText={translate('ingen_elektronisk_id')}
                 linkUrl={'www.nav.no'}
                 helpText="Skaff deg elektronisk ID nå!"
             />
-        </NavigationBox>
+        </PanelMedTittel>
     );
 };
 

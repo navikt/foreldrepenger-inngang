@@ -1,3 +1,9 @@
+export interface BEMWrapper {
+    className: string;
+    element: (e?: string, m?: string) => string;
+    modifier: (m?: string) => string;
+}
+
 const BEMHelper = (cls: string) => ({
     className: cls,
     element: (e?: string, m?: string) =>
