@@ -11,18 +11,6 @@ import SvgBanner from '../../components/svg-banner/SvgBanner';
 
 import './hvaSøkerDu.less';
 
-// TODO: Hent fra state etter routing er implementert
-const tempRoute = [
-    {
-        label: 'Foreldrepenger, engangsstønad og svangerskapspenger',
-        url: '/hva-vil-du-soke-om'
-    },
-    {
-        label: 'Hva vil du søke om',
-        url: '/hva-vil-du-soke-om'
-    }
-];
-
 const cls = BEMHelper('hvaSøkerDu');
 
 interface Props {
@@ -38,7 +26,7 @@ const HvaSøkerDu: React.StatelessComponent<Props> = ({ location }) => {
                 </TypografiBase>
             </div>
             <div className={cls.element('content')}>
-                <Breadcrumbs route={tempRoute} />
+                <Breadcrumbs path={location.pathname} />
                 <SvgBanner svgName="family" />
                 <Foreldrepenger parentCls={cls} />
                 <Engangsstonad parentCls={cls} />

@@ -1,6 +1,11 @@
 // TODO: Implementer i18n
 const translations = {
     no: {
+        // Route translations
+        route_: 'Foreldrepenger, engangsstønad og svangerskapspenger',
+        'route_hva-soker-du': 'Hva vil du søke om',
+        route_foreldrepenger: 'Foreldrepenger',
+
         hva_vil_du_søke_om: 'Hva vil du søke om?',
         ingen_elektronisk_id: 'Jeg har ikke elektronisk ID',
 

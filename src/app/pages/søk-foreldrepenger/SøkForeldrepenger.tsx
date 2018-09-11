@@ -16,22 +16,6 @@ import Datovelger from './Datovelger';
 
 import './søkForeldrepenger.less';
 
-// TODO: Hent fra state etter routing er implementert
-const tempRoute = [
-    {
-        label: 'Foreldrepenger, engangsstønad og svangerskapspenger',
-        url: '/hva-vil-du-soke-om'
-    },
-    {
-        label: 'Hva vil du søke om',
-        url: '/hva-vil-du-soke-om'
-    },
-    {
-        label: 'Foreldrepenger',
-        url: '/hva-vil-du-soke-om/foreldrepenger'
-    }
-];
-
 const hvaSøkerDuCls = BEMHelper('hvaSøkerDu');
 const foreldrepengerCls = BEMHelper('søkForeldrepenger');
 
@@ -70,7 +54,7 @@ class SøkForeldrepenger extends Component<Props> {
                     </TypografiBase>
                 </div>
                 <div className={hvaSøkerDuCls.element('content')}>
-                    <Breadcrumbs route={tempRoute} />
+                    <Breadcrumbs path={location.pathname} />
                     <SvgBanner svgName="family" />
                     <PanelMedTittel title={translate('foreldrepenger')}>
                         <Tekstomrade>

@@ -4,12 +4,27 @@ import NavFrontendChevron from 'nav-frontend-chevron';
 import BEMHelper from '../../utils/bem';
 import { Link } from 'react-router-dom';
 import './breadcrumbs.less';
+import translate from '../../utils/translate';
 
 const cls = BEMHelper('breadcrumbs');
 
 interface BreadcrumbsProps {
-    route: Array<{ url: string; label: string }>;
+    path: string;
 }
+
+const parsePath = (path: string) => {
+    const parts = path.split('/');
+    return parts.map((part, index) => {
+        const recombinedParts = parts.slice(0, index + 1);
+        const url =
+            recombinedParts.length === 1 ? '/' : recombinedParts.join('/');
+
+        return {
+            url,
+            label: translate(`route_${part}`)
+        };
+    });
+};
 
 class Breadcrumbs extends Component<BreadcrumbsProps> {
     state: {
@@ -29,23 +44,18 @@ class Breadcrumbs extends Component<BreadcrumbsProps> {
     };
 
     updateWindowDimensions = () => {
-        this.setState(
-            {
-                windowWidth: window.innerWidth
-            },
-            () => {
-                console.warn('Window:', this.state.windowWidth);
-            }
-        );
+        this.setState({
+            windowWidth: window.innerWidth
+        });
     };
 
     render() {
         const breadcrumbChain: ReactNodeArray = [];
+        const parsedPath = parsePath(this.props.path);
 
         if (this.state.windowWidth && this.state.windowWidth < 576) {
-            const routeLength = this.props.route.length;
-            const lastUrl = this.props.route[routeLength - 2].url;
-            console.warn('Current route:', this.props.route, routeLength);
+            const routeLength = parsedPath.length;
+            const lastUrl = parsedPath[routeLength - 2].url;
 
             breadcrumbChain.push(
                 <NavFrontendChevron key="chevron" type="venstre" />
@@ -59,7 +69,7 @@ class Breadcrumbs extends Component<BreadcrumbsProps> {
                 </TypografiBase>
             );
         } else {
-            this.props.route.forEach((path, index) => {
+            parsedPath.forEach((path, index) => {
                 if (index !== 0) {
                     breadcrumbChain.push(
                         <NavFrontendChevron
@@ -74,7 +84,11 @@ class Breadcrumbs extends Component<BreadcrumbsProps> {
                         key={`crumb${index}`}
                         type="normaltekst"
                         className={cls.element('item')}>
-                        <Link to={path.url}>{path.label}</Link>
+                        {index === parsedPath.length - 1 ? (
+                            path.label
+                        ) : (
+                            <Link to={path.url}>{path.label}</Link>
+                        )}
                     </TypografiBase>
                 );
             });
