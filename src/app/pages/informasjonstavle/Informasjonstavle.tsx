@@ -1,12 +1,13 @@
-import React, { ReactNode } from 'react';
-import translate from '../../utils/translate';
-import PanelBase from 'nav-frontend-paneler';
-import BEMHelper from '../../utils/bem';
-
-import './informasjonstavle.less';
+import React from 'react';
 import Tekstomrade from 'nav-frontend-tekstomrade';
 import TypografiBase from 'nav-frontend-typografi';
 import { HoyreChevron } from 'nav-frontend-chevron';
+
+import translate from '../../utils/translate';
+import BEMHelper from '../../utils/bem';
+
+import PanelMedBilde from '../../components/panel-med-bilde/PanelMedBilde';
+import './informasjonstavle.less';
 
 const cls = BEMHelper('informasjonstavle');
 const merInformasjonCls = BEMHelper('merInformasjon');
@@ -15,9 +16,9 @@ const Informasjonstavle = () => {
     return (
         <div className={cls.className}>
             <div className={cls.element('content')}>
-                <div className={cls.element('hovedlenker')}>
+                <div className={cls.element('bildepaneler')}>
                     <PanelMedBilde
-                        svgName="a"
+                        svgName="se-over-søknad"
                         title={translate('hvor_lenge_kan_du_få_permisjon')}
                         urlIsExternal={true}
                         url={'www.nav.no'}>
@@ -26,7 +27,7 @@ const Informasjonstavle = () => {
                         </Tekstomrade>
                     </PanelMedBilde>
                     <PanelMedBilde
-                        svgName="b"
+                        svgName="fylle-ut-søknad"
                         title={translate('gå_rett_til_søknaden')}
                         url={'www.nav.no'}>
                         <Tekstomrade>
@@ -36,32 +37,6 @@ const Informasjonstavle = () => {
                 </div>
                 <MerInformasjon />
             </div>
-        </div>
-    );
-};
-
-const PanelMedBilde = ({
-    svgName,
-    title,
-    urlIsExternal,
-    children
-}: {
-    svgName: any;
-    title: string;
-    urlIsExternal?: boolean;
-    url: string;
-    children: ReactNode;
-}) => {
-    return (
-        <div className={cls.element('panelMedBilde')}>
-            <div className={cls.element('imageOnPanel')}>Bilde kommer!</div>
-            <PanelBase border={false} className={cls.element('panelOnPanel')}>
-                <div className={cls.element('textOnPanel')}>
-                    <TypografiBase type="undertittel">{title}</TypografiBase>
-                    {children}
-                </div>
-                <HoyreChevron className={cls.element('panelChevron')} />
-            </PanelBase>
         </div>
     );
 };
