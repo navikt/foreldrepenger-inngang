@@ -23,7 +23,9 @@ const Foreldrepenger: StatelessComponent<ForeldrepengerProps> = ({
         <PanelMedTittel title={translate('foreldrepenger')}>
             <TypografiBase type="normaltekst">
                 {translate('foreldrepenger_beskrivelse')}
-                <div className={parentCls.element('filler', 'tiny')} />
+            </TypografiBase>
+            <div className={parentCls.element('filler', 'tiny')} />
+            <TypografiBase type="normaltekst">
                 <Lenke href="www.nav.no">
                     {translate('foreldrepenger_les_mer')}
                 </Lenke>

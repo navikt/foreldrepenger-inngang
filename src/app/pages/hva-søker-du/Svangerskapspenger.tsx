@@ -11,7 +11,9 @@ const Svangerskapspenger = ({ parentCls }: { parentCls: any }) => {
         <PanelMedTittel title={translate('svangerskapspenger')}>
             <TypografiBase type="normaltekst">
                 {translate('svangerskapspenger_beskrivelse')}
-                <div className={parentCls.element('filler', 'tiny')} />
+            </TypografiBase>
+            <div className={parentCls.element('filler', 'tiny')} />
+            <TypografiBase type="normaltekst">
                 <Lenke href="www.nav.no">
                     {translate('svangerskapspenger_les_mer')}
                 </Lenke>

@@ -11,7 +11,9 @@ const Engangsstonad = ({ parentCls }: { parentCls: any }) => {
         <PanelMedTittel title={translate('engangsstønad')}>
             <TypografiBase type="normaltekst">
                 {translate('engangsstønad_beskrivelse')}
-                <div className={parentCls.element('filler', 'tiny')} />
+            </TypografiBase>
+            <div className={parentCls.element('filler', 'tiny')} />
+            <TypografiBase type="normaltekst">
                 <Lenke href="www.nav.no">
                     {translate('engangsstønad_les_mer')}
                 </Lenke>
