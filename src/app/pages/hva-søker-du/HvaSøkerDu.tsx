@@ -7,25 +7,17 @@ import Foreldrepenger from './Foreldrepenger';
 import Engangsstonad from './Engangsstonad';
 import Svangerskapspenger from './Svangerskapspenger';
 import translate from '../../utils/translate';
-import SvgBanner from '../../components/svgBanner/SvgBanner';
+import SvgBanner from '../../components/svg-banner/SvgBanner';
 
-import './frontpage.less';
+import './hvaSøkerDu.less';
 
-// TODO: Hent fra state etter routing er implementert
-const tempRoute = [
-    {
-        label: 'Foreldrepenger, engangsstønad og svangerskapspenger',
-        url: '/hva-vil-du-soke-om'
-    },
-    {
-        label: 'Hva vil du søke om',
-        url: '/hva-vil-du-soke-om'
-    }
-];
+const cls = BEMHelper('hvaSøkerDu');
 
-const cls = BEMHelper('frontpage');
+interface Props {
+    location: any;
+}
 
-const Frontpage = ({ location }: { location: any }) => {
+const HvaSøkerDu: React.StatelessComponent<Props> = ({ location }) => {
     return (
         <div className={cls.className}>
             <div className={cls.element('header')}>
@@ -34,14 +26,14 @@ const Frontpage = ({ location }: { location: any }) => {
                 </TypografiBase>
             </div>
             <div className={cls.element('content')}>
-                <Breadcrumbs route={tempRoute} />
+                <Breadcrumbs path={location.pathname} />
                 <SvgBanner svgName="family" />
-                <Foreldrepenger cls={cls} />
-                <Engangsstonad cls={cls} />
-                <Svangerskapspenger cls={cls} />
+                <Foreldrepenger parentCls={cls} />
+                <Engangsstonad parentCls={cls} />
+                <Svangerskapspenger parentCls={cls} />
             </div>
         </div>
     );
 };
 
-export default Frontpage;
+export default HvaSøkerDu;

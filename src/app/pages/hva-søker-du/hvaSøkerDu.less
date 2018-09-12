@@ -1,6 +1,6 @@
-@import '../../styles/variables';
+@import '../../styles/variables.less';
 
-.frontpage {
+.hvaSøkerDu {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -27,14 +27,14 @@
         align-items: center;
     }
 
-    &__double-buttons {
+    &__two-buttons-navigation {
         align-self: stretch;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
 
-        .frontpage__knapp:nth-child(1) {
+        .hvaSøkerDu__knapp:nth-child(1) {
             margin-bottom: 16px;
         }
     }
@@ -45,12 +45,16 @@
         &--small {
             height: 20px;
         }
+
+        &--tiny {
+            height: 8px;
+        }
     }
 
     &__knapp {
         height: @button-height;
         align-self: stretch;
-        padding: 0;
+        padding: 0px 24px;
     }
 
     .typografi--undertittel {
@@ -62,22 +66,17 @@
     }
 
     @media (min-width: @mobile-breakpoint) {
-        &__double-buttons {
+        &__two-buttons-navigation {
             flex-direction: row;
 
-            .frontpage__knapp:nth-child(1) {
+            .hvaSøkerDu__knapp:nth-child(1) {
                 margin-bottom: 0;
                 margin-right: 8px;
             }
         }
 
-        &__navigation-section {
-            margin-bottom: -16px;
-        }
-
         &__knapp {
             align-self: center;
-            width: 300px;
         }
     }
 }

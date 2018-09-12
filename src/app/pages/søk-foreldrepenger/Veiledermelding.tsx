@@ -3,9 +3,7 @@ import moment from 'moment';
 import Veilederpanel from 'nav-frontend-veilederpanel';
 import CustomSVG from '../../utils/CustomSVG';
 import translate from '../../utils/translate';
-import BEMHelper from '../../utils/bem';
-
-const foreldrepengerCls = BEMHelper('foreldrepengerEntrance');
+import { BEMWrapper } from '../../utils/bem';
 
 const createDateErrorMessage = (date: Date) => {
     const sixWeeksEarlier = moment(date)
@@ -17,11 +15,17 @@ const createDateErrorMessage = (date: Date) => {
     )} ${sixWeeksEarlier}.`;
 };
 
-const VeilederMessage = ({ selectedDate }: { selectedDate: Date }) => {
+const Veiledermelding = ({
+    selectedDate,
+    parentCls
+}: {
+    selectedDate: Date;
+    parentCls: BEMWrapper;
+}) => {
     const saraSvg = require(`./sara.svg`).default;
     const sara = (
         <CustomSVG
-            className={foreldrepengerCls.element('frida')}
+            className={parentCls.className}
             iconRef={saraSvg}
             size={64}
         />
@@ -38,4 +42,4 @@ const VeilederMessage = ({ selectedDate }: { selectedDate: Date }) => {
     );
 };
 
-export default VeilederMessage;
+export default Veiledermelding;

@@ -8,34 +8,22 @@ import KnappBase from 'nav-frontend-knapper';
 import Breadcrumbs from '../../components/breadcrumbs/Breadcrumbs';
 import BEMHelper from '../../utils/bem';
 import translate from '../../utils/translate';
-import SvgBanner from '../../components/svgBanner/SvgBanner';
-import NavigationBox from '../../components/frontpage/navigation-box/NavigationBox';
-import { dateIsInLessThanSixWeeks } from '../../utils/dateUtils';
-import VeilederMessage from './VeilederMessage';
-import DatePicker from './DatePicker';
+import SvgBanner from '../../components/svg-banner/SvgBanner';
+import PanelMedTittel from '../../components/panel-med-tittel/PanelMedTittel';
+import { datoErOmMindreEnnSeksUker } from '../../utils/datoUtils';
+import VeilederMessage from './Veiledermelding';
+import Datovelger from './Datovelger';
 
-import './foreldrepengerEntrance.less';
+import './søkForeldrepenger.less';
 
-// TODO: Hent fra state etter routing er implementert
-const tempRoute = [
-    {
-        label: 'Foreldrepenger, engangsstønad og svangerskapspenger',
-        url: '/hva-vil-du-soke-om'
-    },
-    {
-        label: 'Hva vil du søke om',
-        url: '/hva-vil-du-soke-om'
-    },
-    {
-        label: 'Foreldrepenger',
-        url: '/hva-vil-du-soke-om/foreldrepenger'
-    }
-];
+const hvaSøkerDuCls = BEMHelper('hvaSøkerDu');
+const foreldrepengerCls = BEMHelper('søkForeldrepenger');
 
-const frontpageCls = BEMHelper('frontpage');
-const foreldrepengerCls = BEMHelper('foreldrepengerEntrance');
+interface Props {
+    route: any;
+}
 
-class ForeldrepengerEntrance extends Component {
+class SøkForeldrepenger extends Component<Props> {
     state: {
         selectedDate?: Date;
         dateIsValid: boolean;
@@ -45,7 +33,7 @@ class ForeldrepengerEntrance extends Component {
     };
 
     setDate = (selectedDate: Date) => {
-        const dateIsValid = dateIsInLessThanSixWeeks(selectedDate);
+        const dateIsValid = datoErOmMindreEnnSeksUker(selectedDate);
 
         this.setState({
             selectedDate,
@@ -57,43 +45,45 @@ class ForeldrepengerEntrance extends Component {
         return (
             <div
                 className={classnames(
-                    frontpageCls.className,
+                    hvaSøkerDuCls.className,
                     foreldrepengerCls.className
                 )}>
-                <div className={frontpageCls.element('header')}>
+                <div className={hvaSøkerDuCls.element('header')}>
                     <TypografiBase type="undertittel">
                         {translate('hva_vil_du_søke_om')}
                     </TypografiBase>
                 </div>
-                <div className={frontpageCls.element('content')}>
-                    <Breadcrumbs route={tempRoute} />
+                <div className={hvaSøkerDuCls.element('content')}>
+                    <Breadcrumbs path={location.pathname} />
                     <SvgBanner svgName="family" />
-                    <NavigationBox title={translate('foreldrepenger')}>
+                    <PanelMedTittel title={translate('foreldrepenger')}>
                         <Tekstomrade>
                             {translate('foreldrepenger_inngang')}
                         </Tekstomrade>
-                        <DatePicker
+                        <Datovelger
                             date={this.state.selectedDate}
                             onChange={(date: Date) => this.setDate(date)}
+                            parentCls={foreldrepengerCls}
                         />
                         {this.state.selectedDate &&
                             !this.state.dateIsValid && (
                                 <VeilederMessage
+                                    parentCls={foreldrepengerCls}
                                     selectedDate={this.state.selectedDate}
                                 />
                             )}
                         {this.state.selectedDate && (
                             <KnappBase
-                                className={frontpageCls.element('knapp')}
+                                className={hvaSøkerDuCls.element('knapp')}
                                 type="hoved">
                                 {translate('begynn_søknad_om_foreldrepenger')}
                             </KnappBase>
                         )}
-                    </NavigationBox>
+                    </PanelMedTittel>
                 </div>
             </div>
         );
     };
 }
 
-export default ForeldrepengerEntrance;
+export default SøkForeldrepenger;

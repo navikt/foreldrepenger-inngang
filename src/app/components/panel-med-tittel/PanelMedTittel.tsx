@@ -1,12 +1,12 @@
 import React, { ReactNode } from 'react';
 import PanelBase from 'nav-frontend-paneler';
 import TypografiBase from 'nav-frontend-typografi';
-import BEMHelper from '../../../utils/bem';
-import './navigationBox.less';
+import BEMHelper from '../../utils/bem';
+import './panelMedTittel.less';
 
-const cls = BEMHelper('navigationBox');
+const cls = BEMHelper('panelMedTittel');
 
-const NavigationBox = ({
+const PanelMedTittel = ({
     title,
     children
 }: {
@@ -25,4 +25,4 @@ const NavigationBox = ({
     );
 };
 
-export default NavigationBox;
+export default PanelMedTittel;

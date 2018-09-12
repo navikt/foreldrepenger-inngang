@@ -2,20 +2,20 @@ import * as React from 'react';
 import NavDatovelger from 'nav-datovelger';
 import TypografiBase from 'nav-frontend-typografi';
 
-import BEMHelper from '../../utils/bem';
+import { BEMWrapper } from '../../utils/bem';
 import translate from '../../utils/translate';
 
-const foreldrepengerCls = BEMHelper('foreldrepengerEntrance');
-
-const DatePicker = ({
+const Datovelger = ({
     date,
-    onChange
+    onChange,
+    parentCls
 }: {
     date: any;
     onChange: (date: Date) => void;
+    parentCls: BEMWrapper;
 }) => {
     return (
-        <div className={foreldrepengerCls.element('datovelger')}>
+        <div className={parentCls.element('datovelger')}>
             <TypografiBase type="element">
                 {translate('når_starter_du')}
             </TypografiBase>
@@ -34,4 +34,4 @@ const DatePicker = ({
     );
 };
 
-export default DatePicker;
+export default Datovelger;
