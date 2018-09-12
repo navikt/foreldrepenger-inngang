@@ -1,11 +1,18 @@
 import * as React from 'react';
 import Frontpage from './frontpage/Frontpage';
 import ForeldrepengerEntrance from './foreldrepenger-entrance/ForeldrepengerEntrance';
+import Navigasjonsside from './navigasjonsside/Navigasjonsside';
 import { Route, Redirect, Switch, withRouter } from 'react-router-dom';
 
 const App = () => {
     return (
         <Switch>
+            <Route
+            exact={true}
+            path="navigasjonsside"
+            component={Navigasjonsside}
+            key="navigasjonsside"
+            />
             <Route
                 exact={true}
                 path="/hva-vil-du-soke-om"
