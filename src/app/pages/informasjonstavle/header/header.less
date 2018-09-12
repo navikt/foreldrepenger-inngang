@@ -1,0 +1,39 @@
+.header {
+    align-self: stretch;
+    background-color: #e0dae7;
+    border-bottom: 6px solid #826ba1;
+    height: 218px;
+
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    
+    &__content {
+        flex: 1;
+        max-width: 900px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: stretch;
+        overflow: hidden;
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        margin-right: 1rem;
+        flex: 3;
+
+        .typo-innholdstittel {
+            font-size: 2.26rem;
+        }
+    }
+
+    &__svg {
+        align-self: flex-end;
+        overflow: hidden;
+        flex: 2;
+        //position: sticky;
+    }
+}

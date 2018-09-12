@@ -7,6 +7,7 @@ import translate from '../../utils/translate';
 import BEMHelper from '../../utils/bem';
 
 import PanelMedBilde from '../../components/panel-med-bilde/PanelMedBilde';
+import Header from './header/Header';
 import './informasjonstavle.less';
 
 const cls = BEMHelper('informasjonstavle');
@@ -15,6 +16,7 @@ const merInformasjonCls = BEMHelper('merInformasjon');
 const Informasjonstavle = () => {
     return (
         <div className={cls.className}>
+            <Header />
             <div className={cls.element('content')}>
                 <div className={cls.element('bildepaneler')}>
                     <PanelMedBilde

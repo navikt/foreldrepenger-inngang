@@ -1,6 +1,11 @@
 // TODO: Implementer i18n
 const translations = {
     no: {
+        informasjonstavle_tittel:
+            'Foreldrepenger, engangsstønad og svangerskapspenger',
+        informasjonstavle_ingress:
+            'Her finner du all informasjon for både fødsel og adopsjon.',
+
         hvor_lenge_kan_du_få_permisjon: 'Hvor lenge kan du ha permisjon?',
         hvor_lenge_kan_du_få_permisjon_body:
             'Foreldrepengeplanleggeren gir deg svar på det meste.',
