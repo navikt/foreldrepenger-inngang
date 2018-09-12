@@ -1,6 +1,21 @@
 // TODO: Implementer i18n
 const translations = {
     no: {
+        hvor_lenge_kan_du_få_permisjon: 'Hvor lenge kan du ha permisjon?',
+        hvor_lenge_kan_du_få_permisjon_body:
+            'Foreldrepengeplanleggeren gir deg svar på det meste.',
+        gå_rett_til_søknaden: 'Gå rett til søknaden',
+        gå_rett_til_søknaden_body:
+            'Ikke nøl, søk om foreldrepenger, engangsstønad eller svangerskapspenger her!',
+
+        mer_informasjon_tittel: 'Alt du trenger å vite om...',
+        mer_informasjon_foreldrepenger:
+            'Har du hatt inntekt, ytelser fra NAV eller vært i militæret, kan du få foreldrepenger når du skal ha foreldrepermisjon.',
+        mer_informasjon_engangsstønad:
+            'Hvis du ikke hatt inntekt, kan du få en engangssum isteden for foreldrepenger.',
+        mer_informasjon_svangerskapspenger:
+            'Hvis du ikke kan fortsette i jobben når du er gravid, kan du ha rett til svangerskapspenger.',
+
         // Route translations
         route_: 'Foreldrepenger, engangsstønad og svangerskapspenger',
         'route_hva-soker-du': 'Hva vil du søke om',
