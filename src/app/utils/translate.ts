@@ -6,6 +6,11 @@ const translations = {
         informasjonstavle_ingress:
             'Her finner du all informasjon for både fødsel og adopsjon.',
 
+        informasjonstavle_veileder:
+            'For å kunne se status på en tidligare innsendt søknad eller endre eller klage på en eksisterende sak så trenger du å logge inn.',
+
+        logg_inn: 'Logg inn',
+
         hvor_lenge_kan_du_få_permisjon: 'Hvor lenge kan du ha permisjon?',
         hvor_lenge_kan_du_få_permisjon_body:
             'Foreldrepengeplanleggeren gir deg svar på det meste.',
@@ -13,13 +18,13 @@ const translations = {
         gå_rett_til_søknaden_body:
             'Ikke nøl, søk om foreldrepenger, engangsstønad eller svangerskapspenger her!',
 
-        mer_informasjon_tittel: 'Alt du trenger å vite om...',
+        mer_informasjon_tittel: 'All informasjon om',
         mer_informasjon_foreldrepenger:
-            'Har du hatt inntekt, ytelser fra NAV eller vært i militæret, kan du få foreldrepenger når du skal ha foreldrepermisjon.',
+            'Foreldrepenger skal erstatte inntekten din når du skal ha foreldrepermisjon.  Her kan du lese alt om ytelsen.',
         mer_informasjon_engangsstønad:
-            'Hvis du ikke hatt inntekt, kan du få en engangssum isteden for foreldrepenger.',
+            'Har du ikke hatt inntekt de siste året kan du får en engangssum. Dette skal hjelpe deg i rollen som forelder.',
         mer_informasjon_svangerskapspenger:
-            'Hvis du ikke kan fortsette i jobben når du er gravid, kan du ha rett til svangerskapspenger.',
+            'Friske, gravide kvinner som ikke kan fortsette å jobbe under svangerskapet fordi det kan medføre risiko for skade på fosteret.',
 
         // Route translations
         route_: 'Foreldrepenger, engangsstønad og svangerskapspenger',

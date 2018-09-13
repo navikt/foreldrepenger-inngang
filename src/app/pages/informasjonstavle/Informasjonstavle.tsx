@@ -9,6 +9,9 @@ import BEMHelper from '../../utils/bem';
 import PanelMedBilde from '../../components/panel-med-bilde/PanelMedBilde';
 import Header from './header/Header';
 import './informasjonstavle.less';
+import Veilederpanel from 'nav-frontend-veilederpanel';
+import CustomSVG from '../../utils/CustomSVG';
+import KnappBase from 'nav-frontend-knapper';
 
 const cls = BEMHelper('informasjonstavle');
 const merInformasjonCls = BEMHelper('merInformasjon');
@@ -17,6 +20,7 @@ const Informasjonstavle = () => {
     return (
         <div className={cls.className}>
             <Header />
+            <VeilederMedInnlogging />
             <div className={cls.element('content')}>
                 <div className={cls.element('bildepaneler')}>
                     <PanelMedBilde
@@ -40,6 +44,24 @@ const Informasjonstavle = () => {
                 <MerInformasjon />
             </div>
         </div>
+    );
+};
+
+const VeilederMedInnlogging = () => {
+    const saraSvg = require(`../../../assets/sara.svg`).default;
+    const sara = <CustomSVG iconRef={saraSvg} size={64} />;
+
+    return (
+        <Veilederpanel kompakt={true} svg={sara} fargetema="normal">
+            <div className={cls.element('veilederinnhold')}>
+                <div>{translate('informasjonstavle_veileder')}</div>
+                <KnappBase
+                    className={cls.element('veilederknapp')}
+                    type="standard">
+                    {translate('logg_inn')}
+                </KnappBase>
+            </div>
+        </Veilederpanel>
     );
 };
 
