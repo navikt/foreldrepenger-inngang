@@ -7,6 +7,7 @@ import { withRouter } from 'react-router-dom';
 import UserHelp from './user-help/UserHelp';
 import PanelMedTittel from '../../components/panel-med-tittel/PanelMedTittel';
 import translate from '../../utils/translate';
+import externalUrls from '../../utils/externalUrls';
 
 interface ForeldrepengerProps {
     parentCls: any;
@@ -26,7 +27,7 @@ const Foreldrepenger: StatelessComponent<ForeldrepengerProps> = ({
             </TypografiBase>
             <div className={parentCls.element('filler', 'tiny')} />
             <TypografiBase type="normaltekst">
-                <Lenke href="www.nav.no">
+                <Lenke href={externalUrls.les_mer_foreldrepenger}>
                     {translate('foreldrepenger_les_mer')}
                 </Lenke>
             </TypografiBase>
@@ -49,7 +50,9 @@ const Foreldrepenger: StatelessComponent<ForeldrepengerProps> = ({
                     </KnappBase>
                     <UserHelp
                         linkText={translate('ingen_elektronisk_id')}
-                        linkUrl={'www.nav.no'}
+                        linkUrl={
+                            externalUrls.søk_foreldrepenger_eller_engangsstønad_papir
+                        }
                         helpText="<Placeholder>"
                     />
                 </div>

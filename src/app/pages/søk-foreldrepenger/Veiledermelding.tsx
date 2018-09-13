@@ -22,7 +22,7 @@ const Veiledermelding = ({
     selectedDate: Date;
     parentCls: BEMWrapper;
 }) => {
-    const saraSvg = require(`./sara.svg`).default;
+    const saraSvg = require(`../../../assets/sara.svg`).default;
     const sara = (
         <CustomSVG
             className={parentCls.className}

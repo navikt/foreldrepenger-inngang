@@ -15,6 +15,7 @@ import VeilederMessage from './Veiledermelding';
 import Datovelger from './Datovelger';
 
 import './søkForeldrepenger.less';
+import externalUrls from '../../utils/externalUrls';
 
 const hvaSøkerDuCls = BEMHelper('hvaSøkerDu');
 const foreldrepengerCls = BEMHelper('søkForeldrepenger');
@@ -73,11 +74,17 @@ class SøkForeldrepenger extends Component<Props> {
                                 />
                             )}
                         {this.state.selectedDate && (
-                            <KnappBase
-                                className={hvaSøkerDuCls.element('knapp')}
-                                type="hoved">
-                                {translate('begynn_søknad_om_foreldrepenger')}
-                            </KnappBase>
+                            <a
+                                tabIndex={-1}
+                                href={
+                                    externalUrls.søk_foreldrepenger_eller_engangsstønad
+                                }>
+                                <KnappBase type="hoved">
+                                    {translate(
+                                        'begynn_søknad_om_foreldrepenger'
+                                    )}
+                                </KnappBase>
+                            </a>
                         )}
                     </PanelMedTittel>
                 </div>

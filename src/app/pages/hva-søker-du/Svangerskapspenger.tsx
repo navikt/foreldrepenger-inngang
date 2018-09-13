@@ -5,6 +5,7 @@ import Lenke from 'nav-frontend-lenker';
 import PanelMedTittel from '../../components/panel-med-tittel/PanelMedTittel';
 import ButtonPanel from './button-panel/ButtonPanel';
 import translate from '../../utils/translate';
+import externalUrls from '../../utils/externalUrls';
 
 const Svangerskapspenger = ({ parentCls }: { parentCls: any }) => {
     return (
@@ -14,7 +15,7 @@ const Svangerskapspenger = ({ parentCls }: { parentCls: any }) => {
             </TypografiBase>
             <div className={parentCls.element('filler', 'tiny')} />
             <TypografiBase type="normaltekst">
-                <Lenke href="www.nav.no">
+                <Lenke href={externalUrls.les_mer_svangerskapspenger}>
                     {translate('svangerskapspenger_les_mer')}
                 </Lenke>
             </TypografiBase>
@@ -22,8 +23,9 @@ const Svangerskapspenger = ({ parentCls }: { parentCls: any }) => {
             <ButtonPanel
                 parentCls={parentCls}
                 buttonText={translate('søk_svangerskapspenger')}
+                buttonUrl={externalUrls.søk_svangerskapspenger}
                 linkText={translate('ingen_elektronisk_id')}
-                linkUrl={'www.nav.no'}
+                linkUrl={externalUrls.søk_svangerskapspenger}
                 helpText="<Placeholder>"
             />
         </PanelMedTittel>

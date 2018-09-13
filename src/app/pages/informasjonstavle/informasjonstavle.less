@@ -1,0 +1,60 @@
+@import '../../styles/variables.less';
+
+.informasjonstavle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__content {
+        max-width: 800px;
+        width: 100%;
+        margin-top: 2rem;
+    }
+
+    .nav-veilederpanel {
+        background: unset;
+        margin: 2rem 2rem 0;
+        max-width: 650px;
+    }
+
+    &__veilederinnhold {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+        .knapp {
+            padding: 0.5rem 1rem;
+            text-transform: none;
+            margin-top: 1rem;
+
+            // Kompenser for padding i veilederpanel
+            margin-right: 2rem;
+        }
+    }
+
+    &__bildepaneler {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    @media (min-width: @mobile-breakpoint) {
+        &__bildepaneler {
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        &__veilederinnhold {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+
+            .knapp {
+                margin-top: 0;
+                margin-left: 1rem;
+                margin-right: 0;
+            }
+        }
+    }
+}
