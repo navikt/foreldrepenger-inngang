@@ -35,7 +35,8 @@ const Informasjonstavle = () => {
                     <PanelMedBilde
                         svgName="fylle-ut-søknad"
                         title={translate('gå_rett_til_søknaden')}
-                        url={'www.nav.no'}>
+                        urlIsExternal={false}
+                        url="/hva-soker-du/">
                         <Tekstomrade>
                             {translate('gå_rett_til_søknaden_body')}
                         </Tekstomrade>

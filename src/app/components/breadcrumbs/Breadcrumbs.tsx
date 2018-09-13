@@ -14,6 +14,12 @@ interface BreadcrumbsProps {
 
 const parsePath = (path: string) => {
     const parts = path.split('/');
+
+    // Remove any trailing slash ("/")
+    if (parts.length > 1 && parts[parts.length - 1] === '') {
+        parts.pop();
+    }
+
     return parts.map((part, index) => {
         const recombinedParts = parts.slice(0, index + 1);
         const url =
@@ -78,6 +84,8 @@ class Breadcrumbs extends Component<BreadcrumbsProps> {
                         />
                     );
                 }
+
+                console.warn('Pushing:', path);
 
                 breadcrumbChain.push(
                     <TypografiBase
