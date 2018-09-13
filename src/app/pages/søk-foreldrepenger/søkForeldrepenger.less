@@ -25,14 +25,19 @@
         margin-bottom: 8px;
     }
 
-    .knapp {
+    a {
         align-self: center;
         width: 100%;
         margin-top: 32px;
     }
 
+    .knapp {
+        height: @button-height;
+        width: 100%;
+    }
+
     @media (min-width: @mobile-breakpoint) {
-        .knapp {
+        a {
             max-width: 370px;
             margin-top: 64px;
         }

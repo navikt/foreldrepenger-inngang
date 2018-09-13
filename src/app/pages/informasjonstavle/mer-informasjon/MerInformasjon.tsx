@@ -55,7 +55,9 @@ const MerInformasjonLink = ({
                     <TypografiBase type="element">{title}</TypografiBase>
                     <Tekstomrade>{body}</Tekstomrade>
                 </div>
-                <HoyreChevron className={cls.element('chevron')} />
+                <div className={cls.element('chevron')}>
+                    <HoyreChevron />
+                </div>
             </div>
         </a>
     );

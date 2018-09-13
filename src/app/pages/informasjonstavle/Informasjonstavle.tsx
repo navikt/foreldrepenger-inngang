@@ -1,5 +1,6 @@
 import React from 'react';
 import Tekstomrade from 'nav-frontend-tekstomrade';
+import MediaQuery from 'react-responsive';
 
 import translate from '../../utils/translate';
 import BEMHelper from '../../utils/bem';
@@ -19,7 +20,9 @@ const Informasjonstavle = () => {
     return (
         <div className={cls.className}>
             <Header />
-            <VeilederMedInnlogging />
+            <MediaQuery minWidth={800}>
+                <VeilederMedInnlogging />
+            </MediaQuery>
             <div className={cls.element('content')}>
                 <div className={cls.element('bildepaneler')}>
                     <PanelMedBilde
