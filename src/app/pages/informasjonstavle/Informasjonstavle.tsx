@@ -5,6 +5,7 @@ import { HoyreChevron } from 'nav-frontend-chevron';
 
 import translate from '../../utils/translate';
 import BEMHelper from '../../utils/bem';
+import externalUrls from '../../utils/externalUrls';
 
 import PanelMedBilde from '../../components/panel-med-bilde/PanelMedBilde';
 import Header from './header/Header';
@@ -27,7 +28,7 @@ const Informasjonstavle = () => {
                         svgName="se-over-søknad"
                         title={translate('hvor_lenge_kan_du_få_permisjon')}
                         urlIsExternal={true}
-                        url={'www.nav.no'}>
+                        url={externalUrls.foreldrepengeplanlegger}>
                         <Tekstomrade>
                             {translate('hvor_lenge_kan_du_få_permisjon_body')}
                         </Tekstomrade>
@@ -78,14 +79,17 @@ const MerInformasjon = () => {
                 <MerInformasjonLink
                     title={translate('foreldrepenger')}
                     body={translate('mer_informasjon_foreldrepenger')}
+                    url={externalUrls.les_mer_foreldrepenger}
                 />
                 <MerInformasjonLink
                     title={translate('engangsstønad')}
                     body={translate('mer_informasjon_engangsstønad')}
+                    url={externalUrls.les_mer_engangsstønad}
                 />
                 <MerInformasjonLink
                     title={translate('svangerskapspenger')}
                     body={translate('mer_informasjon_svangerskapspenger')}
+                    url={externalUrls.les_mer_svangerskapspenger}
                 />
             </div>
         </div>
@@ -94,19 +98,21 @@ const MerInformasjon = () => {
 
 const MerInformasjonLink = ({
     title,
-    body
+    body,
+    url
 }: {
     title: string;
     body: string;
+    url: string;
 }) => {
     return (
-        <div className={merInformasjonCls.element('link')}>
+        <a href={url} className={merInformasjonCls.element('link')}>
             <div>
                 <TypografiBase type="element">{title}</TypografiBase>
                 <Tekstomrade>{body}</Tekstomrade>
             </div>
             <HoyreChevron className={merInformasjonCls.element('chevron')} />
-        </div>
+        </a>
     );
 };
 

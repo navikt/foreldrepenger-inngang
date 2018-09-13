@@ -12,7 +12,9 @@ const externalUrls = {
     les_mer_engangsstønad:
         'https://www.nav.no/no/Person/Familie/Venter+du+barn/engangsst%C3%B8nad-ved-f%C3%B8dsel-og-adopsjon',
     les_mer_svangerskapspenger:
-        'https://www.nav.no/no/Person/Familie/Venter+du+barn/svangerskapspenger'
+        'https://www.nav.no/no/Person/Familie/Venter+du+barn/svangerskapspenger',
+
+    foreldrepengeplanlegger: 'https://tjenester.nav.no/foreldrepengeplanlegger'
 };
 
 export default externalUrls;
