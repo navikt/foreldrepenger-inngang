@@ -1,3 +1,5 @@
+@import '../../styles/variables.less';
+
 .informasjonstavle {
     display: flex;
     flex-direction: column;
@@ -16,21 +18,24 @@
 
     &__veilederinnhold {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: space-between;
         align-items: center;
 
         .knapp {
             padding: 0.5rem 1rem;
             text-transform: none;
-            margin-left: 1rem;
+            margin-top: 1rem;
+
+            // Kompenser for padding i veilederpanel
+            margin-right: 2rem;
         }
     }
 
     &__bildepaneler {
         display: flex;
-        flex-direction: row;
-        justify-content: center;
+        flex-direction: column;
+        align-items: stretch;
     }
 
     .merInformasjon {
@@ -38,7 +43,7 @@
         display: flex;
         flex-direction: column;
         align-items: stretch;
-        margin: 2rem 0;
+        margin: 2rem 1rem;
 
         &__title {
             height: 68px;
@@ -55,12 +60,11 @@
 
         &__links {
             display: flex;
-            flex-direction: row;
-            justify-content: space-between;
+            flex-direction: column;
+            align-items: stretch;
         }
 
         &__link {
-            flex: 1;
             background-color: white;
             padding: 20px;
             overflow: hidden;
@@ -70,19 +74,11 @@
             justify-content: space-between;
 
             &:nth-child(1), &:nth-child(2) {
-                margin-right: 2px;
-            }
-
-            &:nth-child(1) {
-                border-radius: 0 0 0 4px;
-            }
-
-            &:nth-child(2) {
-                border-radius: none;
+                margin-bottom: 2px;
             }
 
             &:nth-child(3) {
-                border-radius: 0 0 4px 0;
+                border-radius: 0 0 4px 4px;
             }
 
             .typo-element {
@@ -98,6 +94,52 @@
         &__chevron {
             margin: 2rem 0 0.5rem;
             align-self: center;
+        }
+    }
+
+    @media (min-width: @mobile-breakpoint) {
+        &__bildepaneler {
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        &__veilederinnhold {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+
+            .knapp {
+                margin-top: 0;
+                margin-left: 1rem;
+                margin-right: 0;
+            }
+        }
+
+        .merInformasjon {
+            margin: 2rem 0rem;
+
+            &__links {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+            &__link {
+                flex: 1;
+                
+                &:nth-child(1), &:nth-child(2) {
+                    margin-bottom: 0;
+                    margin-right: 2px;
+                }
+    
+                &:nth-child(1) {
+                    border-radius: 0 0 0 4px;
+                }
+    
+                &:nth-child(3) {
+                    border-radius: 0 0 4px 0;
+                }
+            }
         }
     }
 }

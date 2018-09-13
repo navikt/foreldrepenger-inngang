@@ -1,6 +1,11 @@
+@import '../../styles/variables.less';
+
 .panelMedBilde {
-    width: 240px;
     margin: 0 1rem;
+
+    &:nth-child(2) {
+        margin-top: 1rem;
+    }
 
     &__imageOnPanel {
         background-color: #e0dae7;
@@ -37,5 +42,13 @@
     &__panelChevron {
         align-self: center;
         margin: 1rem 0 0.5rem;
+    }
+
+    @media (min-width: @mobile-breakpoint) {
+        width: 240px;
+
+        &:nth-child(2) {
+            margin-top: 0;
+        }
     }
 }
