@@ -85,8 +85,6 @@ class Breadcrumbs extends Component<BreadcrumbsProps> {
                     );
                 }
 
-                console.warn('Pushing:', path);
-
                 breadcrumbChain.push(
                     <TypografiBase
                         key={`crumb${index}`}

@@ -38,72 +38,6 @@
         align-items: stretch;
     }
 
-    .merInformasjon {
-        align-self: stretch;
-        display: flex;
-        flex-direction: column;
-        align-items: stretch;
-        margin: 2rem 1rem;
-
-        &__title {
-            height: 68px;
-            margin-bottom: 2px;
-            background-color: white;
-
-            // Flex over alt!
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            border-radius: 4px 4px 0 0;
-        }
-
-        &__links {
-            display: flex;
-            flex-direction: column;
-            align-items: stretch;
-        }
-
-        &__link {
-            background-color: white;
-            padding: 20px;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            justify-content: space-between;
-            color: black;
-            text-decoration: none;
-
-            &:hover {
-                color: #0067c5;
-                cursor: pointer;
-            }
-
-            &:nth-child(1), &:nth-child(2) {
-                margin-bottom: 2px;
-            }
-
-            &:nth-child(3) {
-                border-radius: 0 0 4px 4px;
-            }
-
-            .typo-element {
-                margin-bottom: 8px;
-            }
-
-            .typo-normal {
-                overflow: hidden;
-                word-break: normal;
-            }
-        }
-
-        &__chevron {
-            margin: 2rem 0 0.5rem;
-            align-self: center;
-        }
-    }
-
     @media (min-width: @mobile-breakpoint) {
         &__bildepaneler {
             flex-direction: row;
@@ -119,33 +53,6 @@
                 margin-top: 0;
                 margin-left: 1rem;
                 margin-right: 0;
-            }
-        }
-
-        .merInformasjon {
-            margin: 2rem 0rem;
-
-            &__links {
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-            }
-
-            &__link {
-                flex: 1;
-
-                &:nth-child(1), &:nth-child(2) {
-                    margin-bottom: 0;
-                    margin-right: 2px;
-                }
-    
-                &:nth-child(1) {
-                    border-radius: 0 0 0 4px;
-                }
-    
-                &:nth-child(3) {
-                    border-radius: 0 0 4px 0;
-                }
             }
         }
     }
