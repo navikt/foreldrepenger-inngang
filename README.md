@@ -1,4 +1,4 @@
-# Inngang til foreldrepenger
+# Inngang til foreldrepenger, engangsstønad og svangerskapspenger
 
 # Komme i gang
 
