@@ -56,7 +56,7 @@ class SøkForeldrepenger extends Component<Props> {
                 </div>
                 <div className={hvaSøkerDuCls.element('content')}>
                     <Breadcrumbs path={location.pathname} />
-                    <SvgBanner svgName="family" />
+                    <SvgBanner />
                     <PanelMedTittel title={translate('foreldrepenger')}>
                         <Tekstomrade>
                             {translate('foreldrepenger_inngang')}

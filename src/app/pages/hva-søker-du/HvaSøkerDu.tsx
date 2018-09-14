@@ -27,7 +27,7 @@ const HvaSøkerDu: React.StatelessComponent<Props> = ({ location }) => {
             </div>
             <div className={cls.element('content')}>
                 <Breadcrumbs path={location.pathname} />
-                <SvgBanner svgName="family" />
+                <SvgBanner />
                 <Foreldrepenger parentCls={cls} />
                 <Engangsstonad parentCls={cls} />
                 <Svangerskapspenger parentCls={cls} />
