@@ -12,8 +12,8 @@ const cls = BEMHelper('header');
 const NUM_FAMILIES = 5;
 
 const Header = () => {
-    const randomFamily = getRandomInt(1, NUM_FAMILIES);
-    const svg = require(`../../../assets/familier-med-bakgrunn/${randomFamily}.svg`)
+    const randomFamilyAtHome = getRandomInt(1, NUM_FAMILIES);
+    const svg = require(`../../../assets/familier-hjemme/familie-hjemme-${randomFamilyAtHome}.svg`)
         .default;
 
     return (
