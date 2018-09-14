@@ -1,82 +1,124 @@
 @import '../../styles/variables.less';
 
 .hvaSøkerDu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 32px;
+
+  &__header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 32px;
+    justify-content: center;
+    align-self: stretch;
+    height: 56px;
+    background-color: #e0dae7;
+  }
 
-    &__header {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        align-self: stretch;
-        height: 56px;
-        background-color: #e0dae7;
-    }
-    
-    &__content {
-        width: 100%;
-        max-width: @app-max-width;
+  &__content {
+    width: 100%;
+    max-width: @app-max-width;
+  }
+
+  &__button-container {
+    display: flex;
+    align-self: stretch;
+    flex-direction: column;
+    align-items: stretch;
+
+  }
+
+  &__two-buttons-navigation {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 2px;
+
+    .hvaSøkerDu__knapp:nth-child(1) {
+      margin-bottom: 16px;
     }
 
-    &__navigation-section {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    .userHelp {
+      padding-left: 0;
+    }
+  }
+
+  &__filler {
+    height: 32px;
+
+    &--small {
+      height: 20px;
+    }
+
+    &--tiny {
+      height: 8px;
+    }
+  }
+
+  &__knapp {
+    height: @button-height;
+    align-self: stretch;
+    padding: 0px 24px;
+  }
+
+  .typografi--undertittel {
+    font-weight: 600;
+  }
+
+  .typo-normal {
+    margin-block-end: 0;
+  }
+
+  @media (min-width: @mobile-breakpoint) {
+
+    &__button-container {
+      flex-direction: row;
     }
 
     &__two-buttons-navigation {
-        align-self: stretch;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
+      flex-direction: column;
 
-        .hvaSøkerDu__knapp:nth-child(1) {
-            margin-bottom: 16px;
-        }
-    }
+      .hvaSøkerDu__knapp:nth-child(1) {
+        margin-bottom: 0;
+        margin-right: 8px;
+      }
 
-    &__filler {
-        height: 32px;
-
-        &--small {
-            height: 20px;
-        }
-
-        &--tiny {
-            height: 8px;
-        }
+      .userHelp {
+        padding-top: 16px;
+        align-self: flex-start;
+      }
     }
 
     &__knapp {
-        height: @button-height;
-        align-self: stretch;
-        padding: 0px 24px;
+      align-self: center;
+    }
+  }
+
+  @media (min-width: @tablet-breakpoint) {
+    &__button-container {
+      flex-direction: row;
+
     }
 
-    .typografi--undertittel {
-        font-weight: 600;
+    &__two-buttons-navigation {
+      flex-direction: row;
+
+      .userHelp {
+        padding-top: 0px;
+        padding-left: 16px;
+        align-self: center;
+        margin-top: 0px;
+      }
+
+      .hvaSøkerDu__knapp:nth-child(1) {
+        margin-bottom: 0;
+        margin-right: 8px;
+      }
     }
 
-    .typo-normal {
-        margin-block-end: 0;
-    }
+  }
 
-    @media (min-width: @mobile-breakpoint) {
-        &__two-buttons-navigation {
-            flex-direction: row;
-
-            .hvaSøkerDu__knapp:nth-child(1) {
-                margin-bottom: 0;
-                margin-right: 8px;
-            }
-        }
-
-        &__knapp {
-            align-self: center;
-        }
-    }
 }
