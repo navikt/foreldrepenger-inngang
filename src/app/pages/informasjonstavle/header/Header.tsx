@@ -5,11 +5,16 @@ import BEMHelper from '../../../utils/bem';
 import translate from '../../../utils/translate';
 import './header.less';
 import MediaQuery from 'react-responsive';
+import { getRandomInt } from '../../../utils/random';
 
 const cls = BEMHelper('header');
 
+const NUM_FAMILIES = 5;
+
 const Header = () => {
-    const svg = require('./hipsterfamilie-hjemme.svg').default;
+    const randomFamily = getRandomInt(1, NUM_FAMILIES);
+    const svg = require(`../../../assets/familier-med-bakgrunn/${randomFamily}.svg`)
+        .default;
 
     return (
         <div className={cls.className}>

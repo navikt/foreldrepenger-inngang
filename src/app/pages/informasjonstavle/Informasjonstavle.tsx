@@ -51,7 +51,7 @@ const Informasjonstavle = () => {
 };
 
 const VeilederMedInnlogging = () => {
-    const saraSvg = require(`../../../assets/sara.svg`).default;
+    const saraSvg = require(`../../assets/sara.svg`).default;
     const sara = <CustomSVG iconRef={saraSvg} size={64} />;
 
     return (
