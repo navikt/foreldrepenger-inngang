@@ -20,31 +20,14 @@ const Informasjonstavle = () => {
     return (
         <div className={cls.className}>
             <Header />
-            <MediaQuery minWidth={800}>
-                <VeilederMedInnlogging />
-            </MediaQuery>
-            <div className={cls.element('content')}>
-                <div className={cls.element('bildepaneler')}>
-                    <PanelMedBilde
-                        svgName="se-over-søknad"
-                        title={translate('hvor_lenge_kan_du_få_permisjon')}
-                        urlIsExternal={true}
-                        url={externalUrls.foreldrepengeplanlegger}>
-                        <Tekstomrade>
-                            {translate('hvor_lenge_kan_du_få_permisjon_body')}
-                        </Tekstomrade>
-                    </PanelMedBilde>
-                    <PanelMedBilde
-                        svgName="fylle-ut-søknad"
-                        title={translate('gå_rett_til_søknaden')}
-                        urlIsExternal={false}
-                        url="/hva-soker-du/">
-                        <Tekstomrade>
-                            {translate('gå_rett_til_søknaden_body')}
-                        </Tekstomrade>
-                    </PanelMedBilde>
+            <div className={cls.element('body')}>
+                <MediaQuery minWidth={800}>
+                    <VeilederMedInnlogging />
+                </MediaQuery>
+                <div className={cls.element('content')}>
+                    <Bildelenker />
+                    <MerInformasjon />
                 </div>
-                <MerInformasjon />
             </div>
         </div>
     );
@@ -65,6 +48,31 @@ const VeilederMedInnlogging = () => {
                 </KnappBase>
             </div>
         </Veilederpanel>
+    );
+};
+
+const Bildelenker = () => {
+    return (
+        <div className={cls.element('bildepaneler')}>
+            <PanelMedBilde
+                svgName="se-over-søknad"
+                title={translate('hvor_lenge_kan_du_få_permisjon')}
+                urlIsExternal={true}
+                url={externalUrls.foreldrepengeplanlegger}>
+                <Tekstomrade>
+                    {translate('hvor_lenge_kan_du_få_permisjon_body')}
+                </Tekstomrade>
+            </PanelMedBilde>
+            <PanelMedBilde
+                svgName="fylle-ut-søknad"
+                title={translate('gå_rett_til_søknaden')}
+                urlIsExternal={false}
+                url="/hva-soker-du/">
+                <Tekstomrade>
+                    {translate('gå_rett_til_søknaden_body')}
+                </Tekstomrade>
+            </PanelMedBilde>
+        </div>
     );
 };
 

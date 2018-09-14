@@ -1,15 +1,17 @@
 @import '../../../styles/variables.less';
 
+@box-spacing: 0.5rem;
+
 .merInformasjon {
     align-self: stretch;
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    margin: 2rem 1rem;
+    margin: 2rem 0;
 
     &__title {
         height: 68px;
-        margin-bottom: 2px;
+        margin-bottom: @box-spacing;
         background-color: white;
 
         // Flex over alt!
@@ -37,7 +39,7 @@
         align-items: stretch;
 
         &:nth-child(1), &:nth-child(2) {
-            margin-bottom: 2px;
+            margin-bottom: @box-spacing;
         }
 
         &:nth-child(3) {
@@ -76,6 +78,7 @@
 
     &__chevron {
         margin: 1rem;
+        margin-right: 0;
         align-self: center;
     }
 
@@ -93,7 +96,7 @@
 
             &:nth-child(1), &:nth-child(2) {
                 margin-bottom: 0;
-                margin-right: 2px;
+                margin-right: @box-spacing;
             }
 
             &:nth-child(1) {
@@ -107,6 +110,10 @@
 
         &__link {
             flex-direction: column;
+        }
+
+        &__chevron {
+            margin-right: 1rem;
         }
     }
 }

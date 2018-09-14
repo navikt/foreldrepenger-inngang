@@ -25,7 +25,7 @@ const ButtonPanel = ({
 }) => {
     return (
         <div className={cls.className}>
-            <Lenke href={buttonUrl}>
+            <Lenke className={cls.element('noBorder')} href={buttonUrl}>
                 <KnappBase
                     className={classnames(
                         cls.element('knapp'),
