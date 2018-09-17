@@ -65,7 +65,12 @@ const translations = {
         Hva_har_du_rett_på_body:
             'Er det foreldrepenger eller engangsstønad du skal søke om? Bruk veilederen for å finne ut!',
 
-        all_informasjon_foreldrepenger: 'All informasjon om foreldrepenger'
+        all_informasjon_foreldrepenger: 'All informasjon om foreldrepenger',
+        for_å_få_foreldrepenger: 'For å få foreldrepenger',
+        for_å_få_foreldrepenger_body:
+            'Hvis du har vært i jobb eller hatt annen inntekt, kan du få foreldrepenger når du skal være hjemme i foreldrepermisjon.',
+        for_å_få_foreldrepenger_body2:
+            'Vanligvis er det tre krav må du fylle for å få foreldrepenger. Men det er noen unntak du må være klar over.'
     }
 };
 
