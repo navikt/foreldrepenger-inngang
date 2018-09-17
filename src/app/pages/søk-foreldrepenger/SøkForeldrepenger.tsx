@@ -54,39 +54,41 @@ class SøkForeldrepenger extends Component<Props> {
                         {translate('hva_vil_du_søke_om')}
                     </TypografiBase>
                 </div>
-                <div className={hvaSøkerDuCls.element('content')}>
-                    <Breadcrumbs path={location.pathname} />
-                    <SvgBanner />
-                    <PanelMedTittel title={translate('foreldrepenger')}>
-                        <Tekstomrade>
-                            {translate('foreldrepenger_inngang')}
-                        </Tekstomrade>
-                        <Datovelger
-                            date={this.state.selectedDate}
-                            onChange={(date: Date) => this.setDate(date)}
-                            parentCls={foreldrepengerCls}
-                        />
-                        {this.state.selectedDate &&
-                            !this.state.dateIsValid && (
-                                <VeilederMessage
-                                    parentCls={foreldrepengerCls}
-                                    selectedDate={this.state.selectedDate}
-                                />
+                <div className={hvaSøkerDuCls.element('body')}>
+                    <div className={hvaSøkerDuCls.element('content')}>
+                        <Breadcrumbs path={location.pathname} />
+                        <SvgBanner />
+                        <PanelMedTittel title={translate('foreldrepenger')}>
+                            <Tekstomrade>
+                                {translate('foreldrepenger_inngang')}
+                            </Tekstomrade>
+                            <Datovelger
+                                date={this.state.selectedDate}
+                                onChange={(date: Date) => this.setDate(date)}
+                                parentCls={foreldrepengerCls}
+                            />
+                            {this.state.selectedDate &&
+                                !this.state.dateIsValid && (
+                                    <VeilederMessage
+                                        parentCls={foreldrepengerCls}
+                                        selectedDate={this.state.selectedDate}
+                                    />
+                                )}
+                            {this.state.selectedDate && (
+                                <a
+                                    tabIndex={-1}
+                                    href={
+                                        externalUrls.søk_foreldrepenger_eller_engangsstønad
+                                    }>
+                                    <KnappBase type="hoved">
+                                        {translate(
+                                            'begynn_søknad_om_foreldrepenger'
+                                        )}
+                                    </KnappBase>
+                                </a>
                             )}
-                        {this.state.selectedDate && (
-                            <a
-                                tabIndex={-1}
-                                href={
-                                    externalUrls.søk_foreldrepenger_eller_engangsstønad
-                                }>
-                                <KnappBase type="hoved">
-                                    {translate(
-                                        'begynn_søknad_om_foreldrepenger'
-                                    )}
-                                </KnappBase>
-                            </a>
-                        )}
-                    </PanelMedTittel>
+                        </PanelMedTittel>
+                    </div>
                 </div>
             </div>
         );

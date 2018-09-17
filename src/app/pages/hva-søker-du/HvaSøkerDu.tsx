@@ -25,12 +25,14 @@ const HvaSøkerDu: React.StatelessComponent<Props> = ({ location }) => {
                     {translate('hva_vil_du_søke_om')}
                 </TypografiBase>
             </div>
-            <div className={cls.element('content')}>
-                <Breadcrumbs path={location.pathname} />
-                <SvgBanner />
-                <Foreldrepenger parentCls={cls} />
-                <Engangsstonad parentCls={cls} />
-                <Svangerskapspenger parentCls={cls} />
+            <div className={cls.element('body')}>
+                <div className={cls.element('content')}>
+                    <Breadcrumbs path={location.pathname} />
+                    <SvgBanner />
+                    <Foreldrepenger parentCls={cls} />
+                    <Engangsstonad parentCls={cls} />
+                    <Svangerskapspenger parentCls={cls} />
+                </div>
             </div>
         </div>
     );
