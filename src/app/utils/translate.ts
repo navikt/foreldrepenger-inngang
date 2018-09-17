@@ -70,7 +70,10 @@ const translations = {
         for_å_få_foreldrepenger_body:
             'Hvis du har vært i jobb eller hatt annen inntekt, kan du få foreldrepenger når du skal være hjemme i foreldrepermisjon.',
         for_å_få_foreldrepenger_body2:
-            'Vanligvis er det tre krav må du fylle for å få foreldrepenger. Men det er noen unntak du må være klar over.'
+            'Vanligvis er det tre krav må du fylle for å få foreldrepenger. Men det er noen unntak du må være klar over.',
+        snarvei_til_søknad:
+            'Du kan også søke med nå med en gang :) Husk å ha bankID eller liknende klart før du søker!',
+        søk_om_foreldrepenger: 'Søk om foreldrepenger'
     }
 };
 

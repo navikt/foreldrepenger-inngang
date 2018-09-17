@@ -6,6 +6,9 @@ import translate from '../../utils/translate';
 import PanelMedIllustrasjon from './panel-med-illustrasjon/PanelMedIllustrasjon';
 
 import './allInformasjon.less';
+import CustomSVG from '../../utils/CustomSVG';
+import Veilederpanel from 'nav-frontend-veilederpanel';
+import KnappBase from 'nav-frontend-knapper';
 
 const cls = BEMHelper('allInformasjon');
 
@@ -28,6 +31,7 @@ const AllInformasjon: React.StatelessComponent<Props> = ({ location }) => {
                 <div className={cls.element('content')}>
                     <Breadcrumbs path={location.pathname} />
                     <Foreldrepengekrav />
+                    <SnarveiTilSøknad />
                 </div>
             </div>
         </div>
@@ -49,6 +53,24 @@ const Foreldrepengekrav = () => {
                 </TypografiBase>
             </div>
         </PanelMedIllustrasjon>
+    );
+};
+
+const SnarveiTilSøknad = () => {
+    const saraSvg = require(`../../assets/sara.svg`).default;
+    const sara = <CustomSVG iconRef={saraSvg} size={64} />;
+
+    return (
+        <Veilederpanel kompakt={true} svg={sara} fargetema="normal">
+            <div className={cls.element('snarveiTilSøknad')}>
+                <div>{translate('snarvei_til_søknad')}</div>
+                <KnappBase
+                    className={cls.element('snarveiTilSøknad__knapp')}
+                    type="standard">
+                    {translate('søk_om_foreldrepenger')}
+                </KnappBase>
+            </div>
+        </Veilederpanel>
     );
 };
 
