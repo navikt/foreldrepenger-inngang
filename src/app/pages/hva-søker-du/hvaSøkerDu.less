@@ -1,6 +1,11 @@
 @import '../../styles/variables.less';
 
 .hvaSøkerDu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 32px;
+  
     &__header {
         display: flex;
         flex-direction: column;
@@ -24,10 +29,11 @@
         max-width: @app-max-width;
     }
 
-    &__navigation-section {
+    &__button-container {
         display: flex;
+        align-self: stretch;
         flex-direction: column;
-        align-items: center;
+        align-items: stretch;
     }
 
     &__two-buttons-navigation {
@@ -36,14 +42,19 @@
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
+        margin-right: 2px;
 
         .hvaSøkerDu__knapp:nth-child(1) {
             margin-bottom: 16px;
         }
+
+        .userHelp {
+            padding-left: 0;
+        }
     }
 
     &__filler {
-        height: 32px;
+            height: 32px;
 
         &--small {
             height: 20px;
@@ -69,6 +80,36 @@
     }
 
     @media (min-width: @mobile-breakpoint) {
+
+        &__button-container {
+            flex-direction: row;
+        }
+
+        &__two-buttons-navigation {
+            flex-direction: column;
+
+            .hvaSøkerDu__knapp:nth-child(1) {
+                margin-bottom: 0;
+                margin-right: 8px;
+            }
+
+            .userHelp {
+                padding-top: 16px;
+                align-self: flex-start;
+            }
+        }
+        
+
+        &__knapp {
+            align-self: center;
+        }
+    }
+
+    @media (min-width: @tablet-breakpoint) {
+        &__button-container {
+        flex-direction: row;
+        }
+
         &__body {
             padding: 0 1rem;
         }
@@ -76,14 +117,17 @@
         &__two-buttons-navigation {
             flex-direction: row;
 
+            .userHelp {
+                padding-top: 0px;
+                padding-left: 16px;
+                align-self: center;
+                margin-top: 0px;
+            }
+
             .hvaSøkerDu__knapp:nth-child(1) {
                 margin-bottom: 0;
                 margin-right: 8px;
             }
-        }
-
-        &__knapp {
-            align-self: center;
         }
     }
 }
