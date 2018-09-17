@@ -4,6 +4,7 @@ import Breadcrumbs from '../../components/breadcrumbs/Breadcrumbs';
 import BEMHelper from '../../utils/bem';
 import translate from '../../utils/translate';
 import PanelMedIllustrasjon from './panel-med-illustrasjon/PanelMedIllustrasjon';
+import HvaErForeldrepenger from './hva-er-foreldrepenger/HvaErForeldrepenger';
 
 import './allInformasjon.less';
 import CustomSVG from '../../utils/CustomSVG';
@@ -19,6 +20,8 @@ interface Props {
 const foreldrepengerSvg = require('../../assets/familier/familie-3.svg')
     .default;
 
+const pageSvg = require('../../assets/page.svg').default;
+
 const AllInformasjon: React.StatelessComponent<Props> = ({ location }) => {
     return (
         <div className={cls.className}>
@@ -32,6 +35,7 @@ const AllInformasjon: React.StatelessComponent<Props> = ({ location }) => {
                     <Breadcrumbs path={location.pathname} />
                     <Foreldrepengekrav />
                     <SnarveiTilSøknad />
+                    <HvaErForeldrepengerWrapper />
                 </div>
             </div>
         </div>
@@ -46,10 +50,10 @@ const Foreldrepengekrav = () => {
             maskSvg={true}>
             <div className={cls.element('alignLeft')}>
                 <TypografiBase type="ingress">
-                    {translate('for_å_få_foreldrepenger_body')}
+                    {translate('for_å_få_foreldrepenger_ingress')}
                 </TypografiBase>
                 <TypografiBase type="ingress">
-                    {translate('for_å_få_foreldrepenger_body2')}
+                    {translate('for_å_få_foreldrepenger_ingress2')}
                 </TypografiBase>
             </div>
         </PanelMedIllustrasjon>
@@ -71,6 +75,16 @@ const SnarveiTilSøknad = () => {
                 </KnappBase>
             </div>
         </Veilederpanel>
+    );
+};
+
+const HvaErForeldrepengerWrapper = () => {
+    return (
+        <PanelMedIllustrasjon
+            title={translate('hva_er_foreldrepenger')}
+            svg={pageSvg}>
+            <HvaErForeldrepenger />
+        </PanelMedIllustrasjon>
     );
 };
 

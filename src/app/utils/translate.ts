@@ -67,13 +67,23 @@ const translations = {
 
         all_informasjon_foreldrepenger: 'All informasjon om foreldrepenger',
         for_å_få_foreldrepenger: 'For å få foreldrepenger',
-        for_å_få_foreldrepenger_body:
+        for_å_få_foreldrepenger_ingress:
             'Hvis du har vært i jobb eller hatt annen inntekt, kan du få foreldrepenger når du skal være hjemme i foreldrepermisjon.',
-        for_å_få_foreldrepenger_body2:
+        for_å_få_foreldrepenger_ingress2:
             'Vanligvis er det tre krav må du fylle for å få foreldrepenger. Men det er noen unntak du må være klar over.',
         snarvei_til_søknad:
             'Du kan også søke med nå med en gang :) Husk å ha bankID eller liknende klart før du søker!',
-        søk_om_foreldrepenger: 'Søk om foreldrepenger'
+        søk_om_foreldrepenger: 'Søk om foreldrepenger',
+        hva_er_foreldrepenger: 'Hva er foreldrepenger?',
+        hva_er_foreldrepenger_ingress:
+            'Foreldrepenger skal erstatte inntekten din når du skal ha foreldrepermisjon. Foreldrepengene kan tas sammenhengende eller kombineres med arbeid eller ferie, men må tas ut før barnet blir 3 år.',
+
+        // Faner i foreldrepengekalkulator
+        farOgMor: 'Far og mor',
+        morOgMedmor: 'Mor og medmor',
+        bareFarHarRett: 'Bare far har rett',
+        bareMorHarRett: 'Bare mor har rett',
+        aleneomsorg: 'Aleneomsorg'
     }
 };
 
