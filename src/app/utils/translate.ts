@@ -58,7 +58,9 @@ const translations = {
             'Hvis du er frisk og gravid, men ikke kan jobbe fordi det kan skade det ufødte barnet, kan du få svangerskapspenger. ',
         svangerskapspenger_les_mer:
             'Les mer om hvem som kan få svangerskapspenger',
-        søk_svangerskapspenger: 'Søk om svangerskapspenger'
+        søk_svangerskapspenger: 'Søk om svangerskapspenger',
+        hva_har_du_rett_på: "Hva har du rett på?",
+        Hva_har_du_rett_på_body: "Er det foreldrepenger eller engangsstønad du skal søke om? Bruk veilederen for å finne ut!"
     }
 };
 
