@@ -3,14 +3,11 @@ import TypografiBase from 'nav-frontend-typografi';
 import BEMHelper from '../../../utils/bem';
 import translate from '../../../utils/translate';
 import Fane, { FaneType } from './fane/Fane';
+import FarOgMor from './FarOgMor';
 
 import './hvaErForeldrepenger.less';
 
 const cls = BEMHelper('hvaErForeldrepenger');
-
-const FarOgMor = () => {
-    return <div>Heisann</div>;
-};
 
 const tabs: FaneType[] = [
     {

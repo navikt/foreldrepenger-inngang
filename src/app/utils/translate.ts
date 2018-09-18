@@ -83,7 +83,16 @@ const translations = {
         morOgMedmor: 'Mor og medmor',
         bareFarHarRett: 'Bare far har rett',
         bareMorHarRett: 'Bare mor har rett',
-        aleneomsorg: 'Aleneomsorg'
+        aleneomsorg: 'Aleneomsorg',
+
+        lengde_på_foreldreperioden: 'Lengde på foreldreperioden',
+        lengde_på_foreldreperioden_body:
+            'Hvor mange barn dere venter og om dere tar 100 eller 80 prosent foreldrepenger, bestemmer hvor mange uker dere kan få. Den totale utbetalingen av foreldrepengene blir høyere ved å velge 100 prosent.',
+
+        ett_barn: 'Ett barn',
+        tvillinger: 'Tvillinger',
+        flere_barn: 'Flere barn',
+        uker: 'uker'
     }
 };
 
