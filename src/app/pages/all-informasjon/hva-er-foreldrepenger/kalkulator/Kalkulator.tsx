@@ -1,56 +1,79 @@
 import * as React from 'react';
 import classnames from 'classnames';
-import BEMHelper from '../../../../utils/bem';
 import TypografiBase from 'nav-frontend-typografi';
 
-import './kalkulator.less';
+import BEMHelper from '../../../../utils/bem';
 import translate from '../../../../utils/translate';
+import './kalkulator.less';
 
 const cls = BEMHelper('kalkulator');
 
-const Kalkulator = () => {
-    return (
-        <div className={cls.className}>
-            <div className={cls.element('antallUkerOgBarn')}>
-                <div />
-                <TypografiBase type="normaltekst">100%</TypografiBase>
-                <TypografiBase type="normaltekst">80%</TypografiBase>
-                <AntallBarn childCount={1} label={translate('ett_barn')} />
-                <AntallUker
-                    numberOfWeeks={49}
-                    isSelected={true}
-                    onSelect={() => {}}
-                />
-                <AntallUker
-                    numberOfWeeks={59}
-                    isSelected={false}
-                    onSelect={() => {}}
-                />
-                <AntallBarn childCount={2} label={translate('tvillinger')} />
-                <AntallUker
-                    numberOfWeeks={54}
-                    isSelected={false}
-                    onSelect={() => {}}
-                />
-                <AntallUker
-                    numberOfWeeks={66}
-                    isSelected={false}
-                    onSelect={() => {}}
-                />
-                <AntallBarn childCount={3} label={translate('flere_barn')} />
-                <AntallUker
-                    numberOfWeeks={95}
-                    isSelected={false}
-                    onSelect={() => {}}
-                />
-                <AntallUker
-                    numberOfWeeks={115}
-                    isSelected={false}
-                    onSelect={() => {}}
-                />
+class Kalkulator extends React.Component {
+    state: {
+        selectedNumberOfWeeks: number;
+    };
+
+    constructor(props: {}) {
+        super(props);
+
+        this.state = {
+            selectedNumberOfWeeks: 49
+        };
+    }
+
+    onNumberOfWeeksSelect = (numberOfWeeks: number) => {
+        console.warn('Hei:', numberOfWeeks);
+        this.setState({
+            selectedNumberOfWeeks: numberOfWeeks
+        });
+    };
+
+    render = () => {
+        const AntallUkerWrapper = addAntallUkerAttributes(
+            this.state.selectedNumberOfWeeks,
+            this.onNumberOfWeeksSelect
+        );
+
+        return (
+            <div className={cls.className}>
+                <div className={cls.element('antallUkerOgBarn')}>
+                    <div />
+                    <TypografiBase type="normaltekst">100%</TypografiBase>
+                    <TypografiBase type="normaltekst">80%</TypografiBase>
+                    <AntallBarn childCount={1} label={translate('ett_barn')} />
+                    <AntallUkerWrapper numberOfWeeks={49} />
+                    <AntallUkerWrapper numberOfWeeks={59} />
+                    <AntallBarn
+                        childCount={2}
+                        label={translate('tvillinger')}
+                    />
+                    <AntallUkerWrapper numberOfWeeks={54} />
+                    <AntallUkerWrapper numberOfWeeks={66} />
+                    <AntallBarn
+                        childCount={3}
+                        label={translate('flere_barn')}
+                    />
+                    <AntallUkerWrapper numberOfWeeks={95} />
+                    <AntallUkerWrapper numberOfWeeks={115} />
+                </div>
+                <div className={cls.element('dinLønn')}>Sann</div>
             </div>
-            <div className={cls.element('dinLønn')}>Sann</div>
-        </div>
+        );
+    };
+}
+
+const addAntallUkerAttributes = (
+    selectedNumberOfWeeks: number,
+    onSelect: (numberOfWeeks: number) => void
+) => ({ numberOfWeeks }: { numberOfWeeks: number }) => {
+    return (
+        <AntallUker
+            numberOfWeeks={numberOfWeeks}
+            isSelected={selectedNumberOfWeeks === numberOfWeeks}
+            onSelect={() => {
+                onSelect(numberOfWeeks);
+            }}
+        />
     );
 };
 
@@ -63,7 +86,7 @@ const AntallBarn = ({
 }) => {
     const childCountIllustration = [];
     for (let i = 0; i < childCount; i++) {
-        childCountIllustration.push(<span>👶</span>);
+        childCountIllustration.push(<span key={i}>👶</span>);
     }
 
     return (
@@ -88,6 +111,8 @@ const AntallUker = ({
             <div
                 role="button"
                 tabIndex={0}
+                onClick={onSelect}
+                onKeyPress={onSelect}
                 className={classnames(
                     cls.element('flexDownwards'),
                     cls.element('antallUker'),
