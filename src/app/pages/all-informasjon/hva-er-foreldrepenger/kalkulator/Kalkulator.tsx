@@ -9,11 +9,37 @@ import './kalkulator.less';
 
 const cls = BEMHelper('kalkulator');
 
+const validateMonthlyWage = (monthlyWage: number) => {
+    if (monthlyWage < 5000) {
+        return translate('for_lav_lønn_feilmelding');
+    } else {
+        return '';
+    }
+};
+
+const antallUtbetalingsuker = {
+    1: {
+        100: 49,
+        80: 59
+    },
+    2: {
+        100: 54,
+        80: 66
+    },
+    3: {
+        100: 95,
+        80: 115
+    }
+};
+
 class Kalkulator extends React.Component {
     state: {
         selectedNumberOfWeeks: number;
+        selectedNumberOfChildren: 1 | 2 | 3;
         selectedPercentage: number;
         monthlyWage: number | null;
+        monthlyWageError: string;
+        maksForeldrepenger: number;
     };
 
     constructor(props: {}) {
@@ -21,13 +47,36 @@ class Kalkulator extends React.Component {
 
         this.state = {
             selectedNumberOfWeeks: 49,
+            selectedNumberOfChildren: 1,
             selectedPercentage: 100,
-            monthlyWage: 22000
+            monthlyWage: 22000,
+            monthlyWageError: '',
+
+            // TODO: Hente grunnbeløpet (G) fra en ekstern kilde
+            maksForeldrepenger: (6 * 96883) / 12
         };
     }
 
-    onNumberOfWeeksSelect = (selectedNumberOfWeeks: number) => {
+    onNumberOfWeeksSelect = (
+        selectedNumberOfWeeks: number,
+        selectedNumberOfChildren: 1 | 2 | 3,
+        selectedPercentage: number
+    ) => {
         this.setState({
+            selectedNumberOfWeeks,
+            selectedNumberOfChildren,
+            selectedPercentage
+        });
+    };
+
+    onPercentageSelect = (selectedPercentage: number) => {
+        const selectedNumberOfWeeks =
+            antallUtbetalingsuker[this.state.selectedNumberOfChildren][
+                selectedPercentage
+            ];
+
+        this.setState({
+            selectedPercentage,
             selectedNumberOfWeeks
         });
     };
@@ -36,19 +85,16 @@ class Kalkulator extends React.Component {
         // TODO: Valider månedslønn og sett evt. en feilmelding-state.
         const sum = parseInt(event.currentTarget.value);
         let monthlyWage = null;
+        let error = '';
 
         if (!isNaN(sum)) {
+            error = validateMonthlyWage(sum);
             monthlyWage = sum;
         }
 
         this.setState({
-            monthlyWage
-        });
-    };
-
-    onPercentageSelect = (selectedPercentage: number) => {
-        this.setState({
-            selectedPercentage
+            monthlyWage,
+            monthlyWageError: error
         });
     };
 
@@ -58,6 +104,13 @@ class Kalkulator extends React.Component {
             this.onNumberOfWeeksSelect
         );
 
+        const wageError =
+            this.state.monthlyWageError === ''
+                ? undefined
+                : {
+                      feilmelding: this.state.monthlyWageError
+                  };
+
         return (
             <div className={cls.className}>
                 <div className={cls.element('antallUkerOgBarn')}>
@@ -66,42 +119,42 @@ class Kalkulator extends React.Component {
                     <TypografiBase type="normaltekst">80%</TypografiBase>
                     <AntallBarn childCount={1} label={translate('ett_barn')} />
                     <AntallUkerWrapper
-                        numberOfWeeks={49}
-                        percentage={100}
+                        numberOfWeeks={antallUtbetalingsuker[1][100]}
                         numberOfChildren={1}
+                        percentage={100}
                     />
                     <AntallUkerWrapper
-                        numberOfWeeks={59}
-                        percentage={80}
+                        numberOfWeeks={antallUtbetalingsuker[1][80]}
                         numberOfChildren={1}
+                        percentage={80}
                     />
                     <AntallBarn
                         childCount={2}
                         label={translate('tvillinger')}
                     />
                     <AntallUkerWrapper
-                        numberOfWeeks={54}
-                        percentage={100}
+                        numberOfWeeks={antallUtbetalingsuker[2][100]}
                         numberOfChildren={2}
+                        percentage={100}
                     />
                     <AntallUkerWrapper
-                        numberOfWeeks={66}
-                        percentage={80}
+                        numberOfWeeks={antallUtbetalingsuker[2][80]}
                         numberOfChildren={2}
+                        percentage={80}
                     />
                     <AntallBarn
                         childCount={3}
                         label={translate('flere_barn')}
                     />
                     <AntallUkerWrapper
-                        numberOfWeeks={95}
-                        percentage={100}
+                        numberOfWeeks={antallUtbetalingsuker[3][100]}
                         numberOfChildren={3}
+                        percentage={100}
                     />
                     <AntallUkerWrapper
-                        numberOfWeeks={115}
-                        percentage={80}
+                        numberOfWeeks={antallUtbetalingsuker[3][80]}
                         numberOfChildren={3}
+                        percentage={80}
                     />
                 </div>
                 <div className={cls.element('dinLønn')}>
@@ -113,12 +166,14 @@ class Kalkulator extends React.Component {
                             percentage={100}
                             onSelect={this.onPercentageSelect}
                             isSelected={this.state.selectedPercentage === 100}
+                            maksForeldrepenger={this.state.maksForeldrepenger}
                             sum={this.state.monthlyWage}
                         />
                         <DinMånedslønnOption
                             percentage={80}
                             onSelect={this.onPercentageSelect}
                             isSelected={this.state.selectedPercentage === 80}
+                            maksForeldrepenger={this.state.maksForeldrepenger}
                             sum={this.state.monthlyWage}
                         />
                     </div>
@@ -126,6 +181,8 @@ class Kalkulator extends React.Component {
                         <Input
                             bredde="L"
                             type="number"
+                            placeholder="0"
+                            feil={wageError}
                             onChange={this.onMonthlyWageChange}
                             value={
                                 this.state.monthlyWage === null
@@ -145,14 +202,21 @@ const DinMånedslønnOption = ({
     percentage,
     onSelect,
     sum,
+    maksForeldrepenger,
     isSelected
 }: {
     percentage: number;
     onSelect: (percentage: number) => void;
     sum: number | null;
+    maksForeldrepenger: number;
     isSelected: boolean;
 }) => {
-    const sumToShow = sum == null ? 0 : Math.round(sum);
+    let monthlyPayment = 0;
+    if (sum != null) {
+        monthlyPayment = sum > maksForeldrepenger ? maksForeldrepenger : sum;
+
+        monthlyPayment = Math.round(monthlyPayment * (percentage / 100));
+    }
 
     return (
         <div
@@ -168,14 +232,18 @@ const DinMånedslønnOption = ({
                 }
             )}>
             <TypografiBase type="normaltekst">{`${percentage}%`}</TypografiBase>
-            <TypografiBase type="element">{`${sumToShow},–`}</TypografiBase>
+            <TypografiBase type="element">{`${monthlyPayment},–`}</TypografiBase>
         </div>
     );
 };
 
 const addAntallUkerAttributes = (
     selectedNumberOfWeeks: number,
-    onSelect: (numberOfWeeks: number) => void
+    onSelect: (
+        numberOfWeeks: number,
+        numberOfChildren: number,
+        percentage: number
+    ) => void
 ) => ({
     numberOfWeeks,
     numberOfChildren,
@@ -192,7 +260,7 @@ const addAntallUkerAttributes = (
             percentage={percentage}
             isSelected={selectedNumberOfWeeks === numberOfWeeks}
             onSelect={() => {
-                onSelect(numberOfWeeks);
+                onSelect(numberOfWeeks, numberOfChildren, percentage);
             }}
         />
     );
