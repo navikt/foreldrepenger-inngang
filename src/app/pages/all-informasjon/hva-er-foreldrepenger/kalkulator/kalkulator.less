@@ -8,15 +8,48 @@
     align-items: stretch;
 
     &__antallUkerOgBarn {
-        flex: 1;
+
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 1rem;
     }
 
     &__dinLønn {
-        flex: 1;
-        margin-left: 4rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+
+        &__percentageOptionContainer {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        &__percentageOption {
+            height: 96px;
+            width: 96px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.4rem 0;
+
+            &:nth-child(2) {
+                margin-left: 2rem;
+            }
+        }
+
+        &__inputContainer {
+            margin-top: 2rem;
+
+            .skjemaelement__label {
+                font-weight: bold;
+            }
+        }
     }
 
     .typo-normal {
@@ -38,18 +71,19 @@
         justify-content: space-between;
     }
 
-    &__antallUker {
-        width: 56px;
-        height: 56px;
+    &__option {
         color: #005cbd;
         font-weight: lighter;
-        padding: 0.4rem 0;
         border-radius: 50%;
         cursor: pointer;
 
         &:focus {
             box-shadow: 0 0 0 3px #FFBD66;
             outline: none;
+        }
+
+        .typo-normal {
+            color: black;
         }
         
         .typo-element {
@@ -65,5 +99,11 @@
                 font-weight: bold;
             }
         }
+    }
+
+    &__antallUker {
+        width: 56px;
+        height: 56px;
+        padding: 0.4rem 0;
     }
 }

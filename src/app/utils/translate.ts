@@ -92,7 +92,8 @@ const translations = {
         ett_barn: 'Ett barn',
         tvillinger: 'Tvillinger',
         flere_barn: 'Flere barn',
-        uker: 'uker'
+        uker: 'uker',
+        din_lønn_per_mnd_ca: 'Din lønn pr. måned (ca)'
     }
 };
 
