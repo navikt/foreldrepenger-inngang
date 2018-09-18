@@ -29,6 +29,7 @@ const translations = {
         // Route translations
         route_: 'Foreldrepenger, engangsstønad og svangerskapspenger',
         'route_hva-soker-du': 'Hva vil du søke om',
+        'route_all-informasjon': 'All informasjon',
         route_foreldrepenger: 'Foreldrepenger',
 
         hva_vil_du_søke_om: 'Hva vil du søke om?',
@@ -58,7 +59,43 @@ const translations = {
             'Hvis du er frisk og gravid, men ikke kan jobbe fordi det kan skade det ufødte barnet, kan du få svangerskapspenger. ',
         svangerskapspenger_les_mer:
             'Les mer om hvem som kan få svangerskapspenger',
-        søk_svangerskapspenger: 'Søk om svangerskapspenger'
+
+        søk_svangerskapspenger: 'Søk om svangerskapspenger',
+        hva_har_du_rett_på: 'Hva har du rett på?',
+        Hva_har_du_rett_på_body:
+            'Er det foreldrepenger eller engangsstønad du skal søke om? Bruk veilederen for å finne ut!',
+
+        all_informasjon_foreldrepenger: 'All informasjon om foreldrepenger',
+        for_å_få_foreldrepenger: 'For å få foreldrepenger',
+        for_å_få_foreldrepenger_ingress:
+            'Hvis du har vært i jobb eller hatt annen inntekt, kan du få foreldrepenger når du skal være hjemme i foreldrepermisjon.',
+        for_å_få_foreldrepenger_ingress2:
+            'Vanligvis er det tre krav må du fylle for å få foreldrepenger. Men det er noen unntak du må være klar over.',
+        snarvei_til_søknad:
+            'Du kan også søke med nå med en gang :) Husk å ha bankID eller liknende klart før du søker!',
+        søk_om_foreldrepenger: 'Søk om foreldrepenger',
+        hva_er_foreldrepenger: 'Hva er foreldrepenger?',
+        hva_er_foreldrepenger_ingress:
+            'Foreldrepenger skal erstatte inntekten din når du skal ha foreldrepermisjon. Foreldrepengene kan tas sammenhengende eller kombineres med arbeid eller ferie, men må tas ut før barnet blir 3 år.',
+
+        // Faner i foreldrepengekalkulator
+        farOgMor: 'Far og mor',
+        farOgMedfar: 'Far og medfar',
+        morOgMedmor: 'Mor og medmor',
+        bareFarHarRett: 'Bare far har rett',
+        bareMorHarRett: 'Bare mor har rett',
+        aleneomsorg: 'Aleneomsorg',
+
+        lengde_på_foreldreperioden: 'Lengde på foreldreperioden',
+        lengde_på_foreldreperioden_body:
+            'Hvor mange barn dere venter og om dere tar 100 eller 80 prosent foreldrepenger, bestemmer hvor mange uker dere kan få. Den totale utbetalingen av foreldrepengene blir høyere ved å velge 100 prosent.',
+
+        ett_barn: 'Ett barn',
+        tvillinger: 'Tvillinger',
+        flere_barn: 'Flere barn',
+        uker: 'uker',
+        din_lønn_per_mnd_ca: 'Din lønn pr. måned (ca)',
+        for_lav_lønn_feilmelding: 'For lav lønn'
     }
 };
 
