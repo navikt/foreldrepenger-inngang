@@ -55,6 +55,15 @@ const Bildelenker = () => {
     return (
         <div className={cls.element('bildepaneler')}>
             <PanelMedBilde
+                svgName="jente-med-imac"
+                title={translate('hva_har_du_rett_på')}
+                urlIsExternal={false}
+                url="/all-informasjon">
+                <Tekstomrade>
+                    {translate('Hva_har_du_rett_på_body')}
+                </Tekstomrade>
+            </PanelMedBilde>
+            <PanelMedBilde
                 svgName="se-over-søknad"
                 title={translate('hvor_lenge_kan_du_få_permisjon')}
                 urlIsExternal={true}
@@ -67,7 +76,7 @@ const Bildelenker = () => {
                 svgName="fylle-ut-søknad"
                 title={translate('gå_rett_til_søknaden')}
                 urlIsExternal={false}
-                url="/hva-soker-du/">
+                url="/hva-soker-du">
                 <Tekstomrade>
                     {translate('gå_rett_til_søknaden_body')}
                 </Tekstomrade>
