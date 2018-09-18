@@ -1,7 +1,7 @@
 import * as React from 'react';
 import classnames from 'classnames';
 import TypografiBase from 'nav-frontend-typografi';
-import { BEMWrapper } from '../../../../utils/bem';
+import { BEMWrapper } from '../../../../../utils/bem';
 
 const Prosentvalg = ({
     parentCls,

@@ -47,12 +47,8 @@ const Fane = ({
         <div
             tabIndex={0}
             role="button"
-            onClick={() => {
-                onSelect();
-            }}
-            onKeyPress={() => {
-                onSelect();
-            }}
+            onClick={onSelect}
+            onKeyPress={onSelect}
             className={classnames(cls.className, {
                 [cls.modifier('selected')]: isSelected
             })}>

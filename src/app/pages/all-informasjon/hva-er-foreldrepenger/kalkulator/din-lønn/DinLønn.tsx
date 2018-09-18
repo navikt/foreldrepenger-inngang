@@ -3,7 +3,7 @@ import { Input } from 'nav-frontend-skjema';
 
 import BEMHelper, { BEMWrapper } from '../../../../../utils/bem';
 import translate from '../../../../../utils/translate';
-import Prosentvalg from '../Prosentvalg';
+import Prosentvalg from './Prosentvalg';
 
 import './dinLønn.less';
 
