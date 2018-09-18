@@ -13,9 +13,15 @@ const tabs: FaneType[] = [
     {
         label: 'farOgMor',
         firstParent: 'far1',
-        secondParent: 'medmor1',
+        secondParent: 'mor1',
         component: <FarOgMor />
     },
+    // {
+    //     label: 'farOgMedfar',
+    //     firstParent: 'far4',
+    //     secondParent: 'far2',
+    //     component: null
+    // },
     {
         label: 'morOgMedmor',
         firstParent: 'mor2',
@@ -39,7 +45,7 @@ const tabs: FaneType[] = [
     {
         label: 'aleneomsorg',
         firstParent: 'far1',
-        secondParent: 'mor1',
+        secondParent: 'medmor1',
         variant: 3,
         component: null
     }
@@ -89,7 +95,7 @@ class HvaErForeldrepenger extends React.Component<Props> {
                 ))}
             </div>
             <div className={cls.element('tabIndicator')} />
-            <div className="dhsla">{this.state.componentToRender}</div>
+            <div>{this.state.componentToRender}</div>
         </div>
     );
 }

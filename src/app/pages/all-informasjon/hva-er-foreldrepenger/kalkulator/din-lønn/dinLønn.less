@@ -1,0 +1,37 @@
+.dinLønn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    &__prosentvalgContainer {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__prosentvalg {
+        height: 96px;
+        width: 96px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.4rem 0;
+
+        &:nth-child(2) {
+            margin-left: 2rem;
+        }
+    }
+
+    &__inputContainer {
+        margin-top: 2rem;
+
+        .skjemaelement__label {
+            font-weight: bold;
+        }
+    }
+}

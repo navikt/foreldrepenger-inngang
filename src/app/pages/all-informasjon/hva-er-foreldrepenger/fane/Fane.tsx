@@ -7,12 +7,13 @@ import translate from '../../../../utils/translate';
 
 import './fane.less';
 
-const cls = BEMHelper('tab');
+const cls = BEMHelper('fane');
 
 type Forelder =
     | 'far1'
     | 'far2'
     | 'far3'
+    | 'far4'
     | 'medmor1'
     | 'medmor2'
     | 'mor1'

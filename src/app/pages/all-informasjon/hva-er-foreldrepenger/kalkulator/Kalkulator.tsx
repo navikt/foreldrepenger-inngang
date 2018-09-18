@@ -1,36 +1,14 @@
 import * as React from 'react';
-import classnames from 'classnames';
 import TypografiBase from 'nav-frontend-typografi';
-import { Input } from 'nav-frontend-skjema';
-
 import BEMHelper from '../../../../utils/bem';
 import translate from '../../../../utils/translate';
+import AntallBarn from './AntallBarn';
+import AntallUker from './AntallUker';
+import DinLønn from './din-lønn/DinLønn';
+import { validerMånedslønn, antallUtbetalingsuker } from './utils';
 import './kalkulator.less';
 
 const cls = BEMHelper('kalkulator');
-
-const validateMonthlyWage = (monthlyWage: number) => {
-    if (monthlyWage < 5000) {
-        return translate('for_lav_lønn_feilmelding');
-    } else {
-        return '';
-    }
-};
-
-const antallUtbetalingsuker = {
-    1: {
-        100: 49,
-        80: 59
-    },
-    2: {
-        100: 54,
-        80: 66
-    },
-    3: {
-        100: 95,
-        80: 115
-    }
-};
 
 class Kalkulator extends React.Component {
     state: {
@@ -82,13 +60,13 @@ class Kalkulator extends React.Component {
     };
 
     onMonthlyWageChange = (event: any) => {
-        // TODO: Valider månedslønn og sett evt. en feilmelding-state.
-        const sum = parseInt(event.currentTarget.value);
-        let monthlyWage = null;
+        const sum = parseInt(event.currentTarget.value, 10);
+
         let error = '';
+        let monthlyWage = null;
 
         if (!isNaN(sum)) {
-            error = validateMonthlyWage(sum);
+            error = validerMånedslønn(sum);
             monthlyWage = sum;
         }
 
@@ -117,7 +95,11 @@ class Kalkulator extends React.Component {
                     <div />
                     <TypografiBase type="normaltekst">100%</TypografiBase>
                     <TypografiBase type="normaltekst">80%</TypografiBase>
-                    <AntallBarn childCount={1} label={translate('ett_barn')} />
+                    <AntallBarn
+                        parentCls={cls}
+                        childCount={1}
+                        label={translate('ett_barn')}
+                    />
                     <AntallUkerWrapper
                         numberOfWeeks={antallUtbetalingsuker[1][100]}
                         numberOfChildren={1}
@@ -129,6 +111,7 @@ class Kalkulator extends React.Component {
                         percentage={80}
                     />
                     <AntallBarn
+                        parentCls={cls}
                         childCount={2}
                         label={translate('tvillinger')}
                     />
@@ -143,6 +126,7 @@ class Kalkulator extends React.Component {
                         percentage={80}
                     />
                     <AntallBarn
+                        parentCls={cls}
                         childCount={3}
                         label={translate('flere_barn')}
                     />
@@ -157,85 +141,19 @@ class Kalkulator extends React.Component {
                         percentage={80}
                     />
                 </div>
-                <div className={cls.element('dinLønn')}>
-                    <div
-                        className={cls.element(
-                            'dinLønn__percentageOptionContainer'
-                        )}>
-                        <DinMånedslønnOption
-                            percentage={100}
-                            onSelect={this.onPercentageSelect}
-                            isSelected={this.state.selectedPercentage === 100}
-                            maksForeldrepenger={this.state.maksForeldrepenger}
-                            sum={this.state.monthlyWage}
-                        />
-                        <DinMånedslønnOption
-                            percentage={80}
-                            onSelect={this.onPercentageSelect}
-                            isSelected={this.state.selectedPercentage === 80}
-                            maksForeldrepenger={this.state.maksForeldrepenger}
-                            sum={this.state.monthlyWage}
-                        />
-                    </div>
-                    <div className={cls.element('dinLønn__inputContainer')}>
-                        <Input
-                            bredde="L"
-                            type="number"
-                            placeholder="0"
-                            feil={wageError}
-                            onChange={this.onMonthlyWageChange}
-                            value={
-                                this.state.monthlyWage === null
-                                    ? ''
-                                    : this.state.monthlyWage
-                            }
-                            label={translate('din_lønn_per_mnd_ca')}
-                        />
-                    </div>
-                </div>
+                <DinLønn
+                    grandParentCls={cls}
+                    selectedPercentage={this.state.selectedPercentage}
+                    onPercentageSelect={this.onPercentageSelect}
+                    onMonthlyWageChange={this.onMonthlyWageChange}
+                    monthlyWage={this.state.monthlyWage}
+                    maximumWage={this.state.maksForeldrepenger}
+                    wageError={wageError}
+                />
             </div>
         );
     };
 }
-
-const DinMånedslønnOption = ({
-    percentage,
-    onSelect,
-    sum,
-    maksForeldrepenger,
-    isSelected
-}: {
-    percentage: number;
-    onSelect: (percentage: number) => void;
-    sum: number | null;
-    maksForeldrepenger: number;
-    isSelected: boolean;
-}) => {
-    let monthlyPayment = 0;
-    if (sum != null) {
-        monthlyPayment = sum > maksForeldrepenger ? maksForeldrepenger : sum;
-
-        monthlyPayment = Math.round(monthlyPayment * (percentage / 100));
-    }
-
-    return (
-        <div
-            role="button"
-            tabIndex={0}
-            onClick={() => onSelect(percentage)}
-            onKeyPress={() => onSelect(percentage)}
-            className={classnames(
-                cls.element('option'),
-                cls.element('dinLønn__percentageOption'),
-                {
-                    [cls.element('option--selected')]: isSelected
-                }
-            )}>
-            <TypografiBase type="normaltekst">{`${percentage}%`}</TypografiBase>
-            <TypografiBase type="element">{`${monthlyPayment},–`}</TypografiBase>
-        </div>
-    );
-};
 
 const addAntallUkerAttributes = (
     selectedNumberOfWeeks: number,
@@ -255,6 +173,7 @@ const addAntallUkerAttributes = (
 }) => {
     return (
         <AntallUker
+            parentCls={cls}
             numberOfWeeks={numberOfWeeks}
             numberOfChildren={numberOfChildren}
             percentage={percentage}
@@ -263,73 +182,6 @@ const addAntallUkerAttributes = (
                 onSelect(numberOfWeeks, numberOfChildren, percentage);
             }}
         />
-    );
-};
-
-const AntallBarn = ({
-    childCount,
-    label
-}: {
-    childCount: number;
-    label: string;
-}) => {
-    const childCountIllustration = [];
-    for (let i = 0; i < childCount; i++) {
-        childCountIllustration.push(<span key={i}>👶</span>);
-    }
-
-    return (
-        <div className={cls.element('centerItems')}>
-            <div>{childCountIllustration}</div>
-            <TypografiBase type="normaltekst">{label}</TypografiBase>
-        </div>
-    );
-};
-
-const AntallUker = ({
-    numberOfWeeks,
-    numberOfChildren,
-    percentage,
-    isSelected,
-    onSelect
-}: {
-    numberOfWeeks: number;
-    numberOfChildren: number;
-    percentage: number;
-    isSelected: boolean;
-    onSelect: () => void;
-}) => {
-    const numberOfChildrenSpelled =
-        numberOfChildren === 1
-            ? translate('ett_barn')
-            : numberOfChildren === 2
-                ? translate('tvillinger')
-                : translate('flere_barn');
-
-    return (
-        <div className={cls.element('centerItems')}>
-            <div
-                role="button"
-                tabIndex={0}
-                aria-label={`${numberOfChildrenSpelled}, ${numberOfWeeks} uker med ${percentage}% utbetaling.`}
-                onClick={onSelect}
-                onKeyPress={onSelect}
-                className={classnames(
-                    cls.element('flexDownwards'),
-                    cls.element('option'),
-                    cls.element('antallUker'),
-                    {
-                        [cls.element('option--selected')]: isSelected
-                    }
-                )}>
-                <TypografiBase type="element">{numberOfWeeks}</TypografiBase>
-                {isSelected && (
-                    <TypografiBase type="undertekst">
-                        {translate('uker')}
-                    </TypografiBase>
-                )}
-            </div>
-        </div>
     );
 };
 

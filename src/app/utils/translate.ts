@@ -80,6 +80,7 @@ const translations = {
 
         // Faner i foreldrepengekalkulator
         farOgMor: 'Far og mor',
+        farOgMedfar: 'Far og medfar',
         morOgMedmor: 'Mor og medmor',
         bareFarHarRett: 'Bare far har rett',
         bareMorHarRett: 'Bare mor har rett',
