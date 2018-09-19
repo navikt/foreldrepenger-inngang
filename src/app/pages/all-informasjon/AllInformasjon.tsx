@@ -5,12 +5,10 @@ import BEMHelper from '../../utils/bem';
 import translate from '../../utils/translate';
 import PanelMedIllustrasjon from './panel-med-illustrasjon/PanelMedIllustrasjon';
 import HvaErForeldrepenger from './hva-er-foreldrepenger/HvaErForeldrepenger';
+import SnarveiTilSøknad from './snarvei-til-søknad/SnarveiTilSøknad';
+import Hurtiglenker from './hurtiglenker/Hurtiglenker';
 
 import './allInformasjon.less';
-import CustomSVG from '../../utils/CustomSVG';
-import Veilederpanel from 'nav-frontend-veilederpanel';
-import KnappBase from 'nav-frontend-knapper';
-import Hurtiglenker from './hurtiglenker/Hurtiglenker';
 
 const cls = BEMHelper('allInformasjon');
 
@@ -72,24 +70,6 @@ const Foreldrepengekrav = ({ id }: { id: string }) => {
                 </TypografiBase>
             </div>
         </PanelMedIllustrasjon>
-    );
-};
-
-const SnarveiTilSøknad = () => {
-    const saraSvg = require(`../../assets/sara.svg`).default;
-    const sara = <CustomSVG iconRef={saraSvg} size={64} />;
-
-    return (
-        <Veilederpanel kompakt={true} svg={sara} fargetema="normal">
-            <div className={cls.element('snarveiTilSøknad')}>
-                <div>{translate('snarvei_til_søknad')}</div>
-                <KnappBase
-                    className={cls.element('snarveiTilSøknad__knapp')}
-                    type="standard">
-                    {translate('søk_om_foreldrepenger')}
-                </KnappBase>
-            </div>
-        </Veilederpanel>
     );
 };
 
