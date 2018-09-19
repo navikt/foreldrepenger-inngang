@@ -1,0 +1,15 @@
+.hurtiglenker {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-gap: 1rem;
+    margin-bottom: 2rem;
+    padding: 2rem 4rem;
+
+    .typo-normal {
+        grid-column: span 3;
+
+        &:nth-child(3n) {
+            grid-column: span 2;
+        }
+    }
+}

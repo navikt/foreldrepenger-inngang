@@ -10,6 +10,7 @@ import './allInformasjon.less';
 import CustomSVG from '../../utils/CustomSVG';
 import Veilederpanel from 'nav-frontend-veilederpanel';
 import KnappBase from 'nav-frontend-knapper';
+import Hurtiglenker from './hurtiglenker/Hurtiglenker';
 
 const cls = BEMHelper('allInformasjon');
 
@@ -35,6 +36,7 @@ const AllInformasjon: React.StatelessComponent<Props> = ({ location }) => {
                     <Breadcrumbs path={location.pathname} />
                     <Foreldrepengekrav />
                     <SnarveiTilSøknad />
+                    <Hurtiglenker />
                     <HvaErForeldrepengerWrapper />
                 </div>
             </div>
