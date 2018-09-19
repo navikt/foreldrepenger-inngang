@@ -82,7 +82,7 @@ const translations = {
         beregning: 'Beregning',
         ferie: 'Ferie',
         hjemme_samtidig: 'Hjemme samtidig',
-        adopsjon: 'Adopsjon',
+        adopsjon_og_arbeidsgiver: 'Adopsjon og arbeidsgiver',
         sykdom: 'Sykdom',
         inntekt: 'Inntekt',
         arbeidsgiver: 'Arbeidsgiver',

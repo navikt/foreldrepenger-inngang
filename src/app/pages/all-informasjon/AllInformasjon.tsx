@@ -24,15 +24,15 @@ const foreldrepengerSvg = require('../../assets/familier/familie-3.svg')
 const pageSvg = require('../../assets/page.svg').default;
 
 const sections = [
+    'for-å-få-foreldrepenger',
     'hva-er-foreldrepenger',
     'jobbe',
     'beregning',
     'ferie',
     'hjemme-samtidig',
-    'adopsjon',
+    'adopsjon-og-arbeidsgiver',
     'sykdom',
-    'inntekt',
-    'arbeidsgiver'
+    'inntekt'
 ];
 
 const AllInformasjon: React.StatelessComponent<Props> = ({ location }) => {
@@ -46,19 +46,20 @@ const AllInformasjon: React.StatelessComponent<Props> = ({ location }) => {
             <div className={cls.element('body')}>
                 <div className={cls.element('content')}>
                     <Breadcrumbs path={location.pathname} />
-                    <Foreldrepengekrav />
-                    <SnarveiTilSøknad />
                     <Hurtiglenker links={sections} />
-                    <HvaErForeldrepengerWrapper id={sections[0]} />
+                    <Foreldrepengekrav id={sections[0]} />
+                    <SnarveiTilSøknad />
+                    <HvaErForeldrepengerWrapper id={sections[1]} />
                 </div>
             </div>
         </div>
     );
 };
 
-const Foreldrepengekrav = () => {
+const Foreldrepengekrav = ({ id }: { id: string }) => {
     return (
         <PanelMedIllustrasjon
+            id={id}
             title={translate('for_å_få_foreldrepenger')}
             svg={foreldrepengerSvg}
             maskSvg={true}>
