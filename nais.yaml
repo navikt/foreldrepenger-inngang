@@ -25,3 +25,5 @@ fasitResources:
   used:
   - alias: appres.cms
     resourceType: baseurl
+  - alias: loadbalancer:foreldrepenger-inngang
+    resourceType: loadbalancerconfig
