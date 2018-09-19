@@ -10,6 +10,7 @@ import './allInformasjon.less';
 import CustomSVG from '../../utils/CustomSVG';
 import Veilederpanel from 'nav-frontend-veilederpanel';
 import KnappBase from 'nav-frontend-knapper';
+import Hurtiglenker from './hurtiglenker/Hurtiglenker';
 
 const cls = BEMHelper('allInformasjon');
 
@@ -22,6 +23,18 @@ const foreldrepengerSvg = require('../../assets/familier/familie-3.svg')
 
 const pageSvg = require('../../assets/page.svg').default;
 
+const sections = [
+    'for-å-få-foreldrepenger',
+    'hva-er-foreldrepenger',
+    'jobbe',
+    'beregning',
+    'ferie',
+    'hjemme-samtidig',
+    'adopsjon-og-arbeidsgiver',
+    'sykdom',
+    'inntekt'
+];
+
 const AllInformasjon: React.StatelessComponent<Props> = ({ location }) => {
     return (
         <div className={cls.className}>
@@ -33,18 +46,20 @@ const AllInformasjon: React.StatelessComponent<Props> = ({ location }) => {
             <div className={cls.element('body')}>
                 <div className={cls.element('content')}>
                     <Breadcrumbs path={location.pathname} />
-                    <Foreldrepengekrav />
+                    <Hurtiglenker links={sections} />
+                    <Foreldrepengekrav id={sections[0]} />
                     <SnarveiTilSøknad />
-                    <HvaErForeldrepengerWrapper />
+                    <HvaErForeldrepengerWrapper id={sections[1]} />
                 </div>
             </div>
         </div>
     );
 };
 
-const Foreldrepengekrav = () => {
+const Foreldrepengekrav = ({ id }: { id: string }) => {
     return (
         <PanelMedIllustrasjon
+            id={id}
             title={translate('for_å_få_foreldrepenger')}
             svg={foreldrepengerSvg}
             maskSvg={true}>
@@ -78,9 +93,10 @@ const SnarveiTilSøknad = () => {
     );
 };
 
-const HvaErForeldrepengerWrapper = () => {
+const HvaErForeldrepengerWrapper = ({ id }: { id: string }) => {
     return (
         <PanelMedIllustrasjon
+            id={id}
             title={translate('hva_er_foreldrepenger')}
             svg={pageSvg}>
             <HvaErForeldrepenger />
