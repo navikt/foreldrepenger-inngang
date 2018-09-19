@@ -9,11 +9,13 @@ import './panelMedIllustrasjon.less';
 const cls = BEMHelper('panelMedIllustrasjon');
 
 const PanelMedIllustrasjon = ({
+    id,
     title,
     svg,
     maskSvg,
     children
 }: {
+    id?: string;
     title: string;
     svg: any;
     maskSvg?: boolean;
@@ -27,12 +29,14 @@ const PanelMedIllustrasjon = ({
     }
 
     return (
-        <PanelBase className={cls.className}>
-            {illustration}
-            <TypografiBase type="systemtittel">{title}</TypografiBase>
-            <div className={cls.element('divider')} />
-            {children}
-        </PanelBase>
+        <div id={id}>
+            <PanelBase className={cls.className}>
+                {illustration}
+                <TypografiBase type="systemtittel">{title}</TypografiBase>
+                <div className={cls.element('divider')} />
+                {children}
+            </PanelBase>
+        </div>
     );
 };
 
