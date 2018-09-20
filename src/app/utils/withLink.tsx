@@ -17,4 +17,30 @@ const withLink = (
     }
 };
 
+export const WithLink = ({
+    url,
+    urlIsExternal,
+    className,
+    children
+}: {
+    url: string;
+    urlIsExternal?: boolean;
+    className?: string;
+    children: ReactNode;
+}) => {
+    if (urlIsExternal) {
+        return (
+            <a className={className} href={url} aria-label="Lenke">
+                {children}
+            </a>
+        );
+    } else {
+        return (
+            <Link className={className} to={url}>
+                {children}
+            </Link>
+        );
+    }
+};
+
 export default withLink;
