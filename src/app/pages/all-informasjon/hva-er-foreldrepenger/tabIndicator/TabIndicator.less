@@ -1,0 +1,34 @@
+.tabIndicator {
+    display: block;
+    text-align: left;
+    overflow: hidden;
+    white-space: nowrap;
+    padding-left: 1px;
+}
+
+.tabIndicator > span {
+    position: relative;
+    display: inline-block;
+}
+
+.tabIndicator > span:before,
+.tabIndicator > span:after {
+    content: '';
+    position: absolute;
+    top: 60%;
+    width: 3000px;
+    height: 1px;
+    background: #efefef;
+    padding-bottom: 2px;
+    margin-bottom: 20px;
+}
+
+.tabIndicator > span:before {
+    right: 70%;
+    margin-right: 0px;
+}
+
+.tabIndicator > span:after {
+    left: 70%;
+    margin-left: 0px;
+}

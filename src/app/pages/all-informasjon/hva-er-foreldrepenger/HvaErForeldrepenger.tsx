@@ -4,6 +4,7 @@ import BEMHelper from '../../../utils/bem';
 import translate from '../../../utils/translate';
 import Fane, { FaneType } from './fane/Fane';
 import FarOgMor from './FarOgMor';
+import TabIndicator from './tabIndicator/TabIndicator';
 
 import './hvaErForeldrepenger.less';
 
@@ -94,7 +95,11 @@ class HvaErForeldrepenger extends React.Component<Props> {
                     />
                 ))}
             </div>
-            <div className={cls.element('tabIndicator')} />
+            <TabIndicator
+                classTab={this.state.currentTab}
+                totalNumberOfTabs={tabs.length}
+            />
+
             <div>{this.state.componentToRender}</div>
         </div>
     );
