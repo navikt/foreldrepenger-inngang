@@ -4,9 +4,9 @@ import TypografiBase from 'nav-frontend-typografi';
 import { HoyreChevron } from 'nav-frontend-chevron';
 
 import BEMHelper from '../../utils/bem';
-import './panelMedBilde.less';
 import CustomSVG from '../../utils/CustomSVG';
-import withLink from '../../utils/withLink';
+import { WithLink } from '../../utils/withLink';
+import './panelMedBilde.less';
 
 const cls = BEMHelper('panelMedBilde');
 
@@ -24,20 +24,12 @@ const PanelMedBilde = ({
     children: ReactNode;
 }) => {
     const svgFile = require(`./${svgName}.svg`).default;
-    const panelWithoutUrl = (
-        <PanelBase border={false} className={cls.element('panelOnPanel')}>
-            <div className={cls.element('textOnPanel')}>
-                <TypografiBase type="undertittel">{title}</TypografiBase>
-                {children}
-            </div>
-            <HoyreChevron className={cls.element('panelChevron')} />
-        </PanelBase>
-    );
-
-    const PanelWithUrl = withLink(url, panelWithoutUrl, urlIsExternal);
 
     return (
-        <div className={cls.className}>
+        <WithLink
+            className={cls.className}
+            url={url}
+            urlIsExternal={urlIsExternal}>
             <div className={cls.element('imageOnPanel')}>
                 <CustomSVG
                     className={cls.element('svg')}
@@ -45,8 +37,14 @@ const PanelMedBilde = ({
                     size={180}
                 />
             </div>
-            {PanelWithUrl}
-        </div>
+            <PanelBase border={false} className={cls.element('panelOnPanel')}>
+                <div className={cls.element('textOnPanel')}>
+                    <TypografiBase type="undertittel">{title}</TypografiBase>
+                    {children}
+                </div>
+                <HoyreChevron className={cls.element('panelChevron')} />
+            </PanelBase>
+        </WithLink>
     );
 };
 
