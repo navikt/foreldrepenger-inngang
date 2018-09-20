@@ -9,15 +9,22 @@ interface Props {
 
 const NUM_FAMILIES = 5;
 class SvgBanner extends Component<Props> {
+    state: {
+        svgIndex: number;
+    };
+
     constructor(props: Props) {
         super(props);
 
-        this.state = this.props.svgIndex || getRandomInt(1, NUM_FAMILIES);
+        this.state = {
+            svgIndex: this.props.svgIndex || getRandomInt(1, NUM_FAMILIES)
+        };
     }
 
     render = () => {
-        const svg = require(`../../assets/familier/familie-${this.state}.svg`)
-            .default;
+        const svg = require(`../../assets/familier/familie-${
+            this.state.svgIndex
+        }.svg`).default;
 
         return (
             <div className="svgBanner">
