@@ -33,7 +33,7 @@ const CustomSVGFromSprite: React.StatelessComponent<Props> = ({
 interface FlexibleProps {
     iconRef: IconRef;
     height?: number;
-    width?: number;
+    width?: number | string;
     className?: string;
 }
 

@@ -4,7 +4,7 @@ import TypografiBase from 'nav-frontend-typografi';
 import { HoyreChevron } from 'nav-frontend-chevron';
 
 import BEMHelper from '../../utils/bem';
-import CustomSVG from '../../utils/CustomSVG';
+import { FlexibleSvg } from '../../utils/CustomSVG';
 import { WithLink } from '../../utils/withLink';
 import './panelMedBilde.less';
 
@@ -31,11 +31,14 @@ const PanelMedBilde = ({
             url={url}
             urlIsExternal={urlIsExternal}>
             <div className={cls.element('imageOnPanel')}>
-                <CustomSVG
-                    className={cls.element('svg')}
-                    iconRef={svgFile}
-                    size={180}
-                />
+                <div className={cls.element('svgContainer')}>
+                    <FlexibleSvg
+                        className={cls.element('svg')}
+                        iconRef={svgFile}
+                        height={115}
+                        width="100%"
+                    />
+                </div>
             </div>
             <PanelBase border={false} className={cls.element('panelOnPanel')}>
                 <div className={cls.element('textOnPanel')}>
