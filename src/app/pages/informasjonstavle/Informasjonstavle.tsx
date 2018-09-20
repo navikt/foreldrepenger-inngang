@@ -1,6 +1,5 @@
 import React from 'react';
 import Tekstomrade from 'nav-frontend-tekstomrade';
-import MediaQuery from 'react-responsive';
 
 import translate from '../../utils/translate';
 import BEMHelper from '../../utils/bem';
@@ -10,9 +9,6 @@ import PanelMedBilde from '../../components/panel-med-bilde/PanelMedBilde';
 import Header from './header/Header';
 import MerInformasjon from './mer-informasjon/MerInformasjon';
 import './informasjonstavle.less';
-import Veilederpanel from 'nav-frontend-veilederpanel';
-import CustomSVG from '../../utils/CustomSVG';
-import KnappBase from 'nav-frontend-knapper';
 
 const cls = BEMHelper('informasjonstavle');
 
@@ -21,33 +17,12 @@ const Informasjonstavle = () => {
         <div className={cls.className}>
             <Header />
             <div className={cls.element('body')}>
-                <MediaQuery minWidth={800}>
-                    <VeilederMedInnlogging />
-                </MediaQuery>
                 <div className={cls.element('content')}>
                     <Bildelenker />
                     <MerInformasjon />
                 </div>
             </div>
         </div>
-    );
-};
-
-const VeilederMedInnlogging = () => {
-    const saraSvg = require(`../../assets/sara.svg`).default;
-    const sara = <CustomSVG iconRef={saraSvg} size={64} />;
-
-    return (
-        <Veilederpanel kompakt={true} svg={sara} fargetema="normal">
-            <div className={cls.element('veilederinnhold')}>
-                <div>{translate('informasjonstavle_veileder')}</div>
-                <KnappBase
-                    className={cls.element('veilederknapp')}
-                    type="standard">
-                    {translate('logg_inn')}
-                </KnappBase>
-            </div>
-        </Veilederpanel>
     );
 };
 
