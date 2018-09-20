@@ -10,16 +10,14 @@
     margin: 2rem 0;
 
     &__title {
-        height: 68px;
-        margin-bottom: @box-spacing;
-        background-color: white;
-
-        // Flex over alt!
         display: flex;
         flex-direction: column;
-        align-items: center;
         justify-content: center;
+        align-items: center;
+        background-color: white;
         border-radius: 4px 4px 0 0;
+        height: 68px;
+        margin-bottom: @box-spacing;
     }
 
     &__links {
@@ -28,15 +26,15 @@
         align-items: stretch;
     }
 
-    &__linkContainer {
-        //flex: 1;
-        color: black;
-        text-decoration: none;
-        overflow: hidden;
-
+    &__link {
         display: flex;
         flex-direction: row;
+        justify-content: space-between;
         align-items: stretch;
+        background-color: white;
+        color: black;
+        padding: 20px;
+        text-decoration: none;
 
         &:nth-child(1), &:nth-child(2) {
             margin-bottom: @box-spacing;
@@ -47,23 +45,23 @@
         }
         
         &:focus {
-            .merInformasjon__link {
-                box-shadow: inset 0 0 0 3px #FFBD66;
-            }
+            background-color: white;
+            box-shadow: 0 0 0 3px #FFBD66;
         }
-    }
 
-    &__link {
-        background-color: white;
-        padding: 20px;
-
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
         
         &:hover {
             color: #0067c5;
+            box-shadow: #B7B1A9 0 2px 1px 0;
             cursor: pointer;
+
+            .typo-element {
+                text-decoration: underline;
+            }
+
+            .nav-frontend-chevron {
+                left: 6px;
+            }
         }
 
         .typo-element {
@@ -82,6 +80,11 @@
         align-self: center;
     }
 
+    .nav-frontend-chevron {
+        left: 0;
+        transition: left 250ms;
+    }
+
     @media (min-width: @mobile-breakpoint) {
         margin: 2rem 0rem;
 
@@ -91,8 +94,9 @@
             justify-content: space-between;
         }
 
-        &__linkContainer {
+        &__link {
             flex: 1;
+            flex-direction: column;
 
             &:nth-child(1), &:nth-child(2) {
                 margin-bottom: 0;
@@ -106,10 +110,6 @@
             &:nth-child(3) {
                 border-radius: 0 0 4px 0;
             }
-        }
-
-        &__link {
-            flex-direction: column;
         }
 
         &__chevron {
