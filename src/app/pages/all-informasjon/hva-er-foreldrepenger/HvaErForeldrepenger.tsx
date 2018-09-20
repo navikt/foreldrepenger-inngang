@@ -100,9 +100,6 @@ class HvaErForeldrepenger extends React.Component<Props> {
                 totalNumberOfTabs={tabs.length}
             />
 
-
-
-
             <div>{this.state.componentToRender}</div>
         </div>
     );
