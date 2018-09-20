@@ -5,8 +5,8 @@ import BEMHelper from '../../utils/bem';
 import translate from '../../utils/translate';
 import PanelMedIllustrasjon from './panel-med-illustrasjon/PanelMedIllustrasjon';
 import HvaErForeldrepenger from './hva-er-foreldrepenger/HvaErForeldrepenger';
-import SnarveiTilSøknad from './snarvei-til-søknad/SnarveiTilSøknad';
 import Hurtiglenker from './hurtiglenker/Hurtiglenker';
+import NyeRegler from './nye-regler/NyeRegler';
 
 import './allInformasjon.less';
 
@@ -46,7 +46,7 @@ const AllInformasjon: React.StatelessComponent<Props> = ({ location }) => {
                     <Breadcrumbs path={location.pathname} />
                     <Hurtiglenker links={sections} />
                     <Foreldrepengekrav id={sections[0]} />
-                    <SnarveiTilSøknad />
+                    <NyeRegler />
                     <HvaErForeldrepengerWrapper id={sections[1]} />
                 </div>
             </div>
