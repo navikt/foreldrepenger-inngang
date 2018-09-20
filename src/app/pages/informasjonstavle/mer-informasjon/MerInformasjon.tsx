@@ -6,6 +6,8 @@ import { HoyreChevron } from 'nav-frontend-chevron';
 import translate from '../../../utils/translate';
 import BEMHelper from '../../../utils/bem';
 import externalUrls from '../../../utils/externalUrls';
+import { WithLink } from '../../../utils/withLink';
+
 import './merInformasjon.less';
 
 const cls = BEMHelper('merInformasjon');
@@ -22,17 +24,20 @@ const MerInformasjon = () => {
                 <MerInformasjonLink
                     title={translate('foreldrepenger')}
                     body={translate('mer_informasjon_foreldrepenger')}
-                    url={externalUrls.les_mer_foreldrepenger}
+                    url="/all-informasjon"
+                    urlIsExternal={false}
                 />
                 <MerInformasjonLink
                     title={translate('engangsstønad')}
                     body={translate('mer_informasjon_engangsstønad')}
                     url={externalUrls.les_mer_engangsstønad}
+                    urlIsExternal={true}
                 />
                 <MerInformasjonLink
                     title={translate('svangerskapspenger')}
                     body={translate('mer_informasjon_svangerskapspenger')}
                     url={externalUrls.les_mer_svangerskapspenger}
+                    urlIsExternal={true}
                 />
             </div>
         </div>
@@ -42,24 +47,27 @@ const MerInformasjon = () => {
 const MerInformasjonLink = ({
     title,
     body,
-    url
+    url,
+    urlIsExternal
 }: {
     title: string;
     body: string;
     url: string;
+    urlIsExternal?: boolean;
 }) => {
     return (
-        <a role="link" className={cls.element('linkContainer')} href={url}>
-            <div className={cls.element('link')}>
-                <div>
-                    <TypografiBase type="element">{title}</TypografiBase>
-                    <Tekstomrade>{body}</Tekstomrade>
-                </div>
-                <div className={cls.element('chevron')}>
-                    <HoyreChevron />
-                </div>
+        <WithLink
+            url={url}
+            urlIsExternal={urlIsExternal}
+            className={cls.element('link')}>
+            <div>
+                <TypografiBase type="element">{title}</TypografiBase>
+                <Tekstomrade>{body}</Tekstomrade>
             </div>
-        </a>
+            <div className={cls.element('chevron')}>
+                <HoyreChevron />
+            </div>
+        </WithLink>
     );
 };
 

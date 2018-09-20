@@ -58,7 +58,7 @@ const Bildelenker = () => {
                 svgName="jente-med-imac"
                 title={translate('hva_har_du_rett_på')}
                 urlIsExternal={false}
-                url="/all-informasjon">
+                url="/#">
                 <Tekstomrade>
                     {translate('Hva_har_du_rett_på_body')}
                 </Tekstomrade>
