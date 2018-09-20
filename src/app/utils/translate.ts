@@ -104,7 +104,14 @@ const translations = {
         flere_barn: 'Flere barn',
         uker: 'uker',
         din_lønn_per_mnd_ca: 'Din lønn pr. måned (ca)',
-        for_lav_lønn_feilmelding: 'For lav lønn'
+        for_lav_lønn_feilmelding: 'For lav lønn',
+        barnet_er_født: 'Barnet er født',
+        nye_regler_fra_1_juli_2018: 'Nye regler fra 1. juli 2018',
+        før_1_juli_2018: 'før 1. juli 2018',
+        etter_1_juli_2018: 'etter 1. juli 2018',
+        barnet_er_født_eller_adoptert: 'Barnet er født eller adoptert',
+        nye_regler_body:
+            'Da jeg kom over broen ved oset, begynte solen å helle mot åsranden; snart lånte den aftenskyene sin beste glans, forat de en kort stund kunne fryde seg ved den fremmede prakt.'
     }
 };
 
