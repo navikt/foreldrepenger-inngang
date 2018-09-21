@@ -1,5 +1,6 @@
 import React, { ReactNode } from 'react';
 import { Link } from 'react-router-dom';
+import Lenke from 'nav-frontend-lenker';
 
 const withLink = (
     url: string,
@@ -30,9 +31,9 @@ export const WithLink = ({
 }) => {
     if (urlIsExternal) {
         return (
-            <a className={className} href={url} aria-label="Lenke">
+            <Lenke className={className} href={url} aria-label="Lenke">
                 {children}
-            </a>
+            </Lenke>
         );
     } else {
         return (
