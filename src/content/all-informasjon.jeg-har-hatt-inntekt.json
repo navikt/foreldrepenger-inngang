@@ -1,0 +1,62 @@
+[
+    {
+        "type": "avsnitt",
+        "style": "undertittel",
+        "children": [
+            {
+                "type": "span",
+                "text": "Hva kan du få?",
+                "marks": []
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Du kan få ",
+                "marks": []
+            },
+            {
+                "type": "span",
+                "text": "foreldrepenger",
+                "marks": ["url_foreldrepenger"]
+            },
+            {
+                "type": "span",
+                "text": " hvis du har hatt inntekt i minst ",
+                "marks": []
+            },
+            {
+                "type": "span",
+                "text": "seks av de ti siste månedene",
+                "marks": ["bold"]
+            }
+        ],
+        "markDefs": [
+            {
+                "key": "url_foreldrepenger",
+                "type": "link",
+                "href": "https://www.nav.no/no/Person/Familie/Venter+du+barn/foreldrepenger--347653" 
+            }
+        ]
+    },
+    {
+        "type": "liste",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "element",
+                "text": "Sykepenger",
+                "marks": []
+            },
+            {
+                "type": "element",
+                "text": "Foreldrepenger",
+                "marks": []
+            }
+        ]
+    }
+]
