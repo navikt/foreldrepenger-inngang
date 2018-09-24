@@ -9,23 +9,15 @@ const Prosentvalg = ({
     percentage,
     onSelect,
     sum,
-    maksForeldrepenger,
     isSelected
 }: {
     parentCls: BEMWrapper;
     grandParentCls: BEMWrapper;
     percentage: number;
     onSelect: (percentage: number) => void;
-    sum: number | null;
-    maksForeldrepenger: number;
+    sum: number;
     isSelected: boolean;
 }) => {
-    let monthlyPayment = 0;
-    if (sum != null) {
-        monthlyPayment = sum > maksForeldrepenger ? maksForeldrepenger : sum;
-        monthlyPayment = Math.round(monthlyPayment * (percentage / 100));
-    }
-
     const combinedClassnames = classnames(
         grandParentCls.element('option'),
         {
@@ -33,6 +25,8 @@ const Prosentvalg = ({
         },
         parentCls.element('prosentvalg')
     );
+
+    const sumToShow = Math.round(sum * (percentage / 100));
 
     return (
         <div
@@ -42,7 +36,7 @@ const Prosentvalg = ({
             onKeyPress={() => onSelect(percentage)}
             className={combinedClassnames}>
             <TypografiBase type="normaltekst">{`${percentage}%`}</TypografiBase>
-            <TypografiBase type="element">{`${monthlyPayment},–`}</TypografiBase>
+            <TypografiBase type="element">{`${sumToShow},–`}</TypografiBase>
         </div>
     );
 };

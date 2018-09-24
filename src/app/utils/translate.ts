@@ -94,6 +94,8 @@ const translations = {
         bareFarHarRett: 'Bare far har rett',
         bareMorHarRett: 'Bare mor har rett',
         aleneomsorg: 'Aleneomsorg',
+        eksempelvis_dersom_inntekt_pr_er:
+            'Eksempelvis dersom inntekt per måned er',
 
         lengde_på_foreldreperioden: 'Lengde på foreldreperioden',
         lengde_på_foreldreperioden_body:
