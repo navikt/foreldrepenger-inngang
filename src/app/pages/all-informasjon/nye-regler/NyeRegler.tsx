@@ -55,6 +55,7 @@ class NyeRegler extends React.Component<Props> {
                 <div className={cls.element('radiopanelgruppe')}>
                     {NyeRegler.radios.map((radio) => (
                         <RadioPanel
+                            key={radio.value}
                             checked={this.state.selectedRule === radio.value}
                             label={translate(radio.label)}
                             name={radio.label}

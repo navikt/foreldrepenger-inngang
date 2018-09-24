@@ -87,6 +87,18 @@ const translations = {
         inntekt: 'Inntekt',
         arbeidsgiver: 'Arbeidsgiver',
 
+        // For å få foreldrepenger
+        jeg_har_hatt_inntekt_6_av_10_siste_mnd:
+            'Jeg har hatt inntekt 6 av 10 siste mnd.',
+        jeg_har_hatt_inntekt_6_av_10_siste_mnd_ingress:
+            'Som inntekt regnes også enkelte ytelser fra NAV, arbeidsgiver eller militæret.',
+        jeg_har_tjent_minst: 'Jeg har tjent minst 46 817,- i året',
+        jeg_har_tjent_minst_ingress:
+            'Omregnet til årsinntekt må inntekten din tilsvare et halvt grunnbeløp (G)',
+        jeg_bor_i_norge: 'Jeg bor i Norge',
+        jeg_bor_i_norge_ingress:
+            'Bor du ikke i Norge, kan du være medlem av folketrygden på en annen måte. Se medlemskap',
+
         // Faner i foreldrepengekalkulator
         farOgMor: 'Far og mor',
         farOgMedfar: 'Far og medfar',

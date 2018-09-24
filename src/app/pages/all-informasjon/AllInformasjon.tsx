@@ -7,6 +7,7 @@ import PanelMedIllustrasjon from './panel-med-illustrasjon/PanelMedIllustrasjon'
 import HvaErForeldrepenger from './hva-er-foreldrepenger/HvaErForeldrepenger';
 import Hurtiglenker from './hurtiglenker/Hurtiglenker';
 import NyeRegler from './nye-regler/NyeRegler';
+import ForÅFåForeldrepenger from './for-å-få-foreldrepenger/ForÅFåForeldrepenger';
 
 import './allInformasjon.less';
 
@@ -15,9 +16,6 @@ const cls = BEMHelper('allInformasjon');
 interface Props {
     location: any;
 }
-
-const foreldrepengerSvg = require('../../assets/familier/familie-3.svg')
-    .default;
 
 const pageSvg = require('../../assets/page.svg').default;
 
@@ -45,31 +43,12 @@ const AllInformasjon: React.StatelessComponent<Props> = ({ location }) => {
                 <div className={cls.element('content')}>
                     <Breadcrumbs path={location.pathname} />
                     <Hurtiglenker links={sections} />
-                    <Foreldrepengekrav id={sections[0]} />
+                    <ForÅFåForeldrepenger id={sections[0]} />
                     <NyeRegler />
                     <HvaErForeldrepengerWrapper id={sections[1]} />
                 </div>
             </div>
         </div>
-    );
-};
-
-const Foreldrepengekrav = ({ id }: { id: string }) => {
-    return (
-        <PanelMedIllustrasjon
-            id={id}
-            title={translate('for_å_få_foreldrepenger')}
-            svg={foreldrepengerSvg}
-            maskSvg={true}>
-            <div className={cls.element('alignLeft')}>
-                <TypografiBase type="ingress">
-                    {translate('for_å_få_foreldrepenger_ingress')}
-                </TypografiBase>
-                <TypografiBase type="ingress">
-                    {translate('for_å_få_foreldrepenger_ingress2')}
-                </TypografiBase>
-            </div>
-        </PanelMedIllustrasjon>
     );
 };
 
