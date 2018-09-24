@@ -17,18 +17,19 @@ export type AvsnittType =
     | 'avsnitt-uten-padding';
 export type TekstsnuttType = 'span' | 'element';
 export type MarkReference = string;
-export type MarkType = 'link';
+export type Mark = 'link';
+export type ListItem = 'bullet' | 'number';
 
 export interface MarkDefinition {
     key: MarkReference;
-    type: MarkType;
+    type: Mark;
     href?: string;
 }
 
 export interface Tekstsnutt {
     type: TekstsnuttType;
     text: string;
-    marks: Array<MarkReference | MarkType>;
+    marks?: Array<MarkReference | Mark>;
 }
 
 export interface Avsnitt {
@@ -36,6 +37,8 @@ export interface Avsnitt {
     style: TypografiType;
     children: Array<Tekstsnutt>;
     markDefs: Array<MarkDefinition>;
+    level: number;
+    listItem: ListItem;
 }
 
 export type StrukturertTekst = Array<Avsnitt>;

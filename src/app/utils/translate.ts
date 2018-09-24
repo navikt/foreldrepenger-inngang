@@ -78,13 +78,13 @@ const translations = {
         hva_er_foreldrepenger_ingress:
             'Foreldrepenger skal erstatte inntekten din når du skal ha foreldrepermisjon. Foreldrepengene kan tas sammenhengende eller kombineres med arbeid eller ferie, men må tas ut før barnet blir 3 år.',
 
-        jobbe: 'Jobbe',
+        jeg_vil_jobbe: 'Jeg vil jobbe',
         beregning: 'Beregning',
         ferie: 'Ferie',
         hjemme_samtidig: 'Hjemme samtidig',
         adopsjon_og_arbeidsgiver: 'Adopsjon og arbeidsgiver',
         sykdom: 'Sykdom',
-        inntekt: 'Inntekt',
+        jeg_har_inntekt: 'Jeg har inntekt',
         arbeidsgiver: 'Arbeidsgiver',
 
         jeg_har_hatt_inntekt: 'Jeg har hatt inntekt',
