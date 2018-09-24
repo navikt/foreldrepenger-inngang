@@ -16,7 +16,7 @@ const webpackConfig = {
     resolve: {
         extensions: ['.ts', '.tsx', '.js', '.json', '.jsx'],
         alias: {
-            app: path.resolve(__dirname, './../../app'),
+            app: path.resolve(__dirname, './../../app')
         }
     },
     module: {
@@ -28,9 +28,7 @@ const webpackConfig = {
             },
             {
                 test: /\.(ts|tsx)$/,
-                include: [
-                    path.resolve(__dirname, './../../app'),
-                ],
+                include: [path.resolve(__dirname, './../../app')],
                 loader: require.resolve('awesome-typescript-loader')
             },
 
@@ -47,9 +45,9 @@ const webpackConfig = {
                         {
                             loader: 'css-loader'
                         },
-                        {
-                            loader: 'postcss-loader'
-                        },
+                        // {
+                        //     loader: 'postcss-loader'
+                        // },
                         {
                             loader: 'less-loader',
                             options: {
