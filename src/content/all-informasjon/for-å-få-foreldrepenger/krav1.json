@@ -1,0 +1,13 @@
+[
+    {
+        "type": "inline",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Som inntekt regnes også enkelte ytelser fra NAV, arbeidsgiver eller militæret.",
+                "marks": []
+            }
+        ]
+    }
+]

@@ -6,25 +6,28 @@ import BEMHelper from '../../../utils/bem';
 import CustomSVG from '../../../utils/CustomSVG';
 
 import './forÅFåForeldrepenger.less';
+import StrukturertTekst from '../../../components/strukturert-tekst/StrukturertTekst';
+import { Avsnitt } from '../../../utils/strukturertTekst';
 
 const cls = BEMHelper('forÅFåForeldrepenger');
 const foreldrepengerSvg = require('../../../assets/familier/familie-1.svg')
     .default;
 
 const checkmarkIcon = require('./checkmark.svg').default;
+const content = require('../../../../content/all-informasjon/for-å-få-foreldrepenger/ingress');
 
 const kravTilForeldrepenger = [
     {
         tittel: translate('jeg_har_hatt_inntekt_6_av_10_siste_mnd'),
-        ingress: translate('jeg_har_hatt_inntekt_6_av_10_siste_mnd_ingress')
+        ingress: require('../../../../content/all-informasjon/for-å-få-foreldrepenger/krav1')
     },
     {
         tittel: translate('jeg_har_tjent_minst'),
-        ingress: translate('jeg_har_tjent_minst_ingress')
+        ingress: require('../../../../content/all-informasjon/for-å-få-foreldrepenger/krav2')
     },
     {
         tittel: translate('jeg_bor_i_norge'),
-        ingress: translate('jeg_bor_i_norge_ingress')
+        ingress: require('../../../../content/all-informasjon/for-å-få-foreldrepenger/krav3')
     }
 ];
 
@@ -36,12 +39,7 @@ const ForÅFåForeldrepenger = ({ id }: { id: string }) => {
             svg={foreldrepengerSvg}
             maskSvg={true}>
             <div className={cls.element('alignLeft')}>
-                <TypografiBase type="ingress">
-                    {translate('for_å_få_foreldrepenger_ingress')}
-                </TypografiBase>
-                <TypografiBase type="ingress">
-                    {translate('for_å_få_foreldrepenger_ingress2')}
-                </TypografiBase>
+                <StrukturertTekst tekst={content} />
             </div>
             <div className={cls.element('kravTilForeldrepenger')}>
                 {kravTilForeldrepenger.map((krav) => (
@@ -61,7 +59,7 @@ const KravTilForeldrepenger = ({
     ingress
 }: {
     tittel: string;
-    ingress: string;
+    ingress: Avsnitt[];
 }) => {
     return (
         <div className={cls.element('krav')}>
@@ -69,9 +67,7 @@ const KravTilForeldrepenger = ({
             <div className={cls.element('kravtittel')}>
                 <TypografiBase type="undertittel">{tittel}</TypografiBase>
             </div>
-            <div className={cls.element('kravingress')}>
-                <TypografiBase type="normaltekst">{ingress}</TypografiBase>
-            </div>
+            <StrukturertTekst tekst={ingress} />
         </div>
     );
 };

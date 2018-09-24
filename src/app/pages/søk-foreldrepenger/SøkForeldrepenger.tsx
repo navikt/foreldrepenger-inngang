@@ -13,9 +13,9 @@ import PanelMedTittel from '../../components/panel-med-tittel/PanelMedTittel';
 import { datoErOmMindreEnnSeksUker } from '../../utils/datoUtils';
 import VeilederMessage from './Veiledermelding';
 import Datovelger from './Datovelger';
+import externalUrls from '../../utils/externalUrls';
 
 import './søkForeldrepenger.less';
-import externalUrls from '../../utils/externalUrls';
 
 const hvaSøkerDuCls = BEMHelper('hvaSøkerDu');
 const foreldrepengerCls = BEMHelper('søkForeldrepenger');

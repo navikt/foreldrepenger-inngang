@@ -42,9 +42,9 @@ const translations = {
         søk_foreldrepenger: 'Søk om foreldrepenger',
         har_søkt_foreldrepenger: 'Jeg har allerede søkt',
         foreldrepenger_inngang:
-            'Du kan tidligst søke om foreldrepenger 6 uker før du skal ta ut foreldrepenger.',
+            'Du kan tidligst sende inn søknad seks uker før du skal ta ut foreldrepengene dine. Skal du vente med å ta ut foreldrepengene dine, gjelder dette også deg.',
         begynn_søknad_om_foreldrepenger: 'Begynn søknad om foreldrepenger',
-        når_starter_du: 'Når starter du?',
+        når_starter_du: 'Når er første dag med uttak eller utsettelse?',
         ugyldig_dato_for_foreldrepenger:
             'Du søker tidligere enn 6 uker før du skal ta ut foreldrepenger. Du kan begynne på søknaden, det vil ikke være mulig å sende den inn før ',
 

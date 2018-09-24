@@ -3,7 +3,7 @@ import translate from '../../../utils/translate';
 import StrukturertTekst from '../../../components/strukturert-tekst/StrukturertTekst';
 import PanelMedIllustrasjon from '../panel-med-illustrasjon/PanelMedIllustrasjon';
 
-const content = require('../../../../content/all-informasjon.jeg-har-hatt-inntekt.json');
+const content = require('../../../../content/all-informasjon/jeg-har-hatt-inntekt.json');
 
 const pageSvg = require('../../../assets/page.svg').default;
 

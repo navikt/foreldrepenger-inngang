@@ -23,20 +23,7 @@ const StrukturertTekst: StatelessComponent<Props> = ({ tekst }) => {
 const renderAvsnitt = (avsnitt: Avsnitt, index: number) => {
     const { type, style, markDefs, children } = avsnitt;
 
-    if (
-        type === 'avsnitt' ||
-        type === 'tittel' ||
-        type === 'avsnitt-uten-padding'
-    ) {
-        return (
-            <TypografiBase
-                key={index}
-                className={cls.element(type)}
-                type={style}>
-                {children.map(renderTekstsnutt(markDefs))}
-            </TypografiBase>
-        );
-    } else if (type === 'liste') {
+    if (type === 'liste') {
         return (
             <TypografiBase
                 key={index}
@@ -46,7 +33,14 @@ const renderAvsnitt = (avsnitt: Avsnitt, index: number) => {
             </TypografiBase>
         );
     } else {
-        return null;
+        return (
+            <TypografiBase
+                key={index}
+                className={cls.element(type)}
+                type={style}>
+                {children.map(renderTekstsnutt(markDefs))}
+            </TypografiBase>
+        );
     }
 };
 
@@ -78,6 +72,11 @@ const renderTekstsnutt = (markDefs: MarkDefinition[]) => (
 
             case 'italic': {
                 toRender = <i>{toRender}</i>;
+                break;
+            }
+
+            case 'external_link': {
+                toRender = <span>{toRender}→</span>;
                 break;
             }
 

@@ -8,7 +8,7 @@ import translate from '../../utils/translate';
 import externalUrls from '../../utils/externalUrls';
 import StrukturertTekst from '../../components/strukturert-tekst/StrukturertTekst';
 
-const content = require('../../../content/hva-vil-du-søke-om.foreldrepenger.json');
+const content = require('../../../content/hva-vil-du-søke-om/foreldrepenger.json');
 
 interface ForeldrepengerProps {
     parentCls: any;
@@ -24,7 +24,7 @@ const Foreldrepenger: StatelessComponent<ForeldrepengerProps> = ({
     return (
         <PanelMedTittel title={translate('foreldrepenger')}>
             <StrukturertTekst tekst={content} />
-            <div className={parentCls.element('filler--small')} />
+            <div className={parentCls.element('filler')} />
             <div className={parentCls.element('two-buttons-navigation')}>
                 <div className={parentCls.element('button-container')}>
                     <KnappBase
