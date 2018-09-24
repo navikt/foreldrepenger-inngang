@@ -59,6 +59,7 @@ const MerInformasjonLink = ({
         <WithLink
             url={url}
             urlIsExternal={urlIsExternal}
+            noStyling={true}
             className={cls.element('link')}>
             <div>
                 <TypografiBase type="element">{title}</TypografiBase>

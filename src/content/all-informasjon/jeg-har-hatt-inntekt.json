@@ -1,0 +1,217 @@
+[
+    {
+        "type": "tittel",
+        "style": "systemtittel",
+        "children": [
+            {
+                "type": "span",
+                "text": "Hva kan du få?",
+                "marks": []
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Du kan få ",
+                "marks": []
+            },
+            {
+                "type": "span",
+                "text": "foreldrepenger",
+                "marks": ["url_foreldrepenger"]
+            },
+            {
+                "type": "span",
+                "text": " hvis du har hatt inntekt i minst ",
+                "marks": []
+            },
+            {
+                "type": "span",
+                "text": "seks av de ti siste månedene",
+                "marks": ["bold"]
+            },
+            {
+                "type": "span",
+                "text": " før du starter foreldrepengeperioden din. Likestilt med inntekt er perioder du mottar:",
+                "marks": []
+            }
+        ],
+        "markDefs": [
+            {
+                "key": "url_foreldrepenger",
+                "type": "link",
+                "href": "https://www.nav.no/no/Person/Familie/Venter+du+barn/foreldrepenger--347653" 
+            }
+        ]
+    },
+    {
+        "type": "liste",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "element",
+                "text": "Sykepenger",
+                "marks": []
+            },
+            {
+                "type": "element",
+                "text": "Foreldrepenger",
+                "marks": []
+            },
+            {
+                "type": "element",
+                "text": "Svangerskapspenger",
+                "marks": []
+            },
+            {
+                "type": "element",
+                "text": "Omsorgspenger ved sykdom hos barnet eller den som passer barnet",
+                "marks": []
+            },
+            {
+                "type": "element",
+                "text": "Pleie- og opplæringspenger",
+                "marks": []
+            },
+            {
+                "type": "element",
+                "text": "Dagpenger under arbeidsløshet",
+                "marks": []
+            },
+            {
+                "type": "element",
+                "text": "Arbeidsavklaringspenger",
+                "marks": []
+            },
+            {
+                "type": "element",
+                "text": "Omsorgsstønad",
+                "marks": []
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Også andre forhold kan likestilles med yrkesaktivitet. Dette kan være:",
+                "marks": []
+            }
+        ]
+    },
+    {
+        "type": "liste",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "element",
+                "text": "lønn fra arbeidsgiver under videre- eller etterutdanning",
+                "marks": []
+            },
+            {
+                "type": "element",
+                "text": "avtjening av militær- eller siviltjeneste eller obligatorisk sivilforsvarstjeneste",
+                "marks": []
+            },
+            {
+                "type": "element",
+                "text": "etterlønn fra arbeidsgiver",
+                "marks": []
+            },
+            {
+                "type": "element",
+                "text": "ventelønn",
+                "marks": []
+            }
+        ]
+    },
+    {
+        "type": "tittel",
+        "style": "element",
+        "children": [
+            {
+                "type": "span",
+                "text": "Hvor mye må du ha tjent",
+                "marks": []
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Årsinntekten din må være minst halvparten av ",
+                "marks": []
+            },
+            {
+                "type": "span",
+                "text": "grunnbeløpet (G)",
+                "marks": ["url_grunnbeløpet"]
+            },
+            {
+                "type": "span",
+                "text": " i folketrygden. Har du hatt flere deltidsstillinger, er det den totale inntekten din som gjelder.",
+                "marks": []
+            }
+        ],
+        "markDefs": [
+            {
+                "key": "url_grunnbeløpet",
+                "type": "link",
+                "href": "https://www.nav.no/internett/no/NAV+og+samfunn/Kontakt+NAV/Utbetalinger/Grunnbelopet+i+folketrygden"
+            }
+        ]
+    },
+    {
+        "type": "tittel",
+        "style": "element",
+        "children": [
+            {
+                "type": "span",
+                "text": "Dager uten arbeid som teller med",
+                "marks": []
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Hvis du har vært i jobb i fire uker sammenhengende og det ikke er mer enn fjorten dager mellom hver gang du er på jobb, regnes også dager uten arbeid med i opptjeningstiden.",
+                "marks": []
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Hvis du har en arbeidsavtale om fast turnus, vil dagene du ikke er i jobb regnes med i opptjeningstiden, selv om du jobber sjeldnere enn hver 14. dag.",
+                "marks": []
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Ferie og avspasering teller også med.",
+                "marks": []
+            }
+        ]
+    }
+]

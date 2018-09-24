@@ -29,6 +29,7 @@ const PanelMedBilde = ({
         <WithLink
             className={cls.className}
             url={url}
+            noStyling={true}
             urlIsExternal={urlIsExternal}>
             <div className={cls.element('imageOnPanel')}>
                 <div className={cls.element('svgContainer')}>

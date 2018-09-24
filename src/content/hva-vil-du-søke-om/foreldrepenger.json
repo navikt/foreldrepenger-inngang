@@ -1,0 +1,31 @@
+[
+    {
+        "type": "avsnitt-uten-padding",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Har du hatt inntekt eller ytelser fra NAV kan du få foreldrepenger når du er hjemme med barnet ditt.",
+                "marks": []
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Les mer om hvem som kan få foreldrepenger",
+                "marks": ["url_foreldrepenger"]
+            }
+        ],
+        "markDefs": [
+            {
+                "key": "url_foreldrepenger",
+                "type": "link",
+                "href": "https://www.nav.no/no/Person/Familie/Venter+du+barn/foreldrepenger--347653" 
+            }
+        ]
+    }
+]

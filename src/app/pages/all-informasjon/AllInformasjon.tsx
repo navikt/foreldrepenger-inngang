@@ -8,6 +8,7 @@ import HvaErForeldrepenger from './hva-er-foreldrepenger/HvaErForeldrepenger';
 import Hurtiglenker from './hurtiglenker/Hurtiglenker';
 import NyeRegler from './nye-regler/NyeRegler';
 import ForÅFåForeldrepenger from './for-å-få-foreldrepenger/ForÅFåForeldrepenger';
+import JegHarHattInntekt from './jeg-har-hatt-inntekt/JegHarHattInntekt';
 
 import './allInformasjon.less';
 
@@ -46,6 +47,7 @@ const AllInformasjon: React.StatelessComponent<Props> = ({ location }) => {
                     <ForÅFåForeldrepenger id={sections[0]} />
                     <NyeRegler />
                     <HvaErForeldrepengerWrapper id={sections[1]} />
+                    <JegHarHattInntekt id={sections[8]} />
                 </div>
             </div>
         </div>
