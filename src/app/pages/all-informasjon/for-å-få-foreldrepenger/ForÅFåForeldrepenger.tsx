@@ -11,8 +11,7 @@ const cls = BEMHelper('forÅFåForeldrepenger');
 const foreldrepengerSvg = require('../../../assets/familier/familie-3.svg')
     .default;
 
-const checkmarkIcon = require('nav-frontend-ikoner-assets/assets/ok-sirkel.svg')
-    .default;
+const checkmarkIcon = require('./checkmark.svg').default;
 
 const kravTilForeldrepenger = [
     {
