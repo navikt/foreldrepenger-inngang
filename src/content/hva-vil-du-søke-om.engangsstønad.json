@@ -11,7 +11,7 @@
         ]
     },
     {
-        "type": "avsnitt",
+        "type": "avsnitt-uten-padding",
         "style": "normaltekst",
         "children": [
             {

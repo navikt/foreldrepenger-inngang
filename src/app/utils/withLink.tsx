@@ -21,17 +21,26 @@ const withLink = (
 export const WithLink = ({
     url,
     urlIsExternal,
+    noStyling,
     className,
     children
 }: {
     url: string;
     urlIsExternal?: boolean;
+    noStyling?: boolean;
     className?: string;
     children: ReactNode;
 }) => {
     if (urlIsExternal) {
+        if (noStyling) {
+            return (
+                <a className={className} href={url}>
+                    {children}
+                </a>
+            );
+        }
         return (
-            <Lenke className={className} href={url} aria-label="Lenke">
+            <Lenke className={className} href={url}>
                 {children}
             </Lenke>
         );
