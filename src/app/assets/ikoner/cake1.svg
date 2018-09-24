@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="29px" height="26px" viewBox="0 0 29 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 6</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="11 18 11 0 29 12.7624013"></polygon>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Fakta-hvaer/komponent/morsdel" transform="translate(-98.000000, -22.000000)">
+            <g id="Group-9" transform="translate(77.000000, 18.000000)">
+                <g id="Group-6" transform="translate(22.000000, 0.000000)">
+                    <g id="Group-40">
+                        <path d="M10,29 C15.5228475,29 20,24.5228475 20,19 C20,17.6233855 19.7218363,16.3117397 19.2186495,15.118203 C18.5179453,13.4561638 17.380888,12.0231559 15.9509745,10.9626763 C14.2881322,9.72944758 12.2292519,9 10,9 C4.4771525,9 0,13.4771525 0,19 C0,24.5228475 4.4771525,29 10,29 Z" id="Oval-2-Copy-13" stroke="#979797" stroke-width="0.5"></path>
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <g id="Mask"></g>
+                        <circle id="Oval-2" fill="#4A4A4A" mask="url(#mask-2)" cx="11.5" cy="17.5" r="13.5"></circle>
+                        <circle id="Oval-5" fill="#3E3832" mask="url(#mask-2)" cx="12.25" cy="17.25" r="1"></circle>
+                    </g>
+                    <polyline id="Path-5" stroke="#FBFBFB" stroke-width="2" points="10 4 10 19 27 14.209456"></polyline>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
