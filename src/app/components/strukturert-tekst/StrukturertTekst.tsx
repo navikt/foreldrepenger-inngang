@@ -23,7 +23,11 @@ const StrukturertTekst: StatelessComponent<Props> = ({ tekst }) => {
 const renderAvsnitt = (avsnitt: Avsnitt, index: number) => {
     const { type, style, markDefs, children } = avsnitt;
 
-    if (type === 'avsnitt' || type === 'avsnitt-uten-padding') {
+    if (
+        type === 'avsnitt' ||
+        type === 'tittel' ||
+        type === 'avsnitt-uten-padding'
+    ) {
         return (
             <TypografiBase
                 key={index}

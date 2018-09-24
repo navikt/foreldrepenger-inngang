@@ -1,5 +1,23 @@
 .strukturertTekst {
     &__avsnitt {
-        padding-bottom: 1rem;
+        padding: 1rem 0;
+    }
+
+    &__tittel {
+        padding-top: 1rem;
+    }
+
+    &__tittel + .strukturertTekst__avsnitt {
+        padding-top: 0.25rem;
+    }
+
+    ul {
+        padding-left: 18px;
+        margin: 0 0 1rem;
+    }
+
+    li {
+        padding-left: 1rem;
+        line-height: 1.4rem;
     }
 }

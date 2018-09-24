@@ -10,7 +10,11 @@ type TypografiType =
     | 'undertekstBold'
     | 'undertekst';
 
-export type AvsnittType = 'avsnitt' | 'liste' | 'avsnitt-uten-padding';
+export type AvsnittType =
+    | 'avsnitt'
+    | 'tittel'
+    | 'liste'
+    | 'avsnitt-uten-padding';
 export type TekstsnuttType = 'span' | 'element';
 export type MarkReference = string;
 export type MarkType = 'link';

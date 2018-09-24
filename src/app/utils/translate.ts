@@ -87,6 +87,8 @@ const translations = {
         inntekt: 'Inntekt',
         arbeidsgiver: 'Arbeidsgiver',
 
+        jeg_har_hatt_inntekt: 'Jeg har hatt inntekt',
+
         // For å få foreldrepenger
         jeg_har_hatt_inntekt_6_av_10_siste_mnd:
             'Jeg har hatt inntekt 6 av 10 siste mnd.',
