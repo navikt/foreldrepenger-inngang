@@ -2,19 +2,19 @@ import * as React from 'react';
 import TypografiBase from 'nav-frontend-typografi';
 import BEMHelper from '../../../utils/bem';
 import translate from '../../../utils/translate';
-import Fane, { FaneType } from './fane/Fane';
+import Fane, { Innholdsfane } from './fane/Fane';
 import FarOgMor from './FarOgMor';
 import TabIndicator from './tabIndicator/TabIndicator';
+import Foreldrepar from '../../../components/foreldrepar/Foreldrepar';
 
 import './hvaErForeldrepenger.less';
 
 const cls = BEMHelper('hvaErForeldrepenger');
 
-const tabs: FaneType[] = [
+const tabs: Innholdsfane[] = [
     {
         label: 'farOgMor',
-        firstParent: 'far1',
-        secondParent: 'mor1',
+        icon: <Foreldrepar firstParent="far1" secondParent="mor1" />,
         component: <FarOgMor />
     },
     // {
@@ -25,29 +25,36 @@ const tabs: FaneType[] = [
     // },
     {
         label: 'morOgMedmor',
-        firstParent: 'mor2',
-        secondParent: 'medmor2',
+        icon: <Foreldrepar firstParent="mor2" secondParent="medmor2" />,
         component: null
     },
     {
         label: 'bareFarHarRett',
-        firstParent: 'far3',
-        secondParent: 'medmor1',
-        variant: 1,
+        icon: (
+            <Foreldrepar
+                firstParent="far3"
+                secondParent="medmor1"
+                variant={1}
+            />
+        ),
         component: null
     },
     {
         label: 'bareMorHarRett',
-        firstParent: 'far2',
-        secondParent: 'mor1',
-        variant: 2,
+        icon: (
+            <Foreldrepar firstParent="far2" secondParent="mor1" variant={2} />
+        ),
         component: null
     },
     {
         label: 'aleneomsorg',
-        firstParent: 'far1',
-        secondParent: 'medmor1',
-        variant: 3,
+        icon: (
+            <Foreldrepar
+                firstParent="far1"
+                secondParent="medmor1"
+                variant={3}
+            />
+        ),
         component: null
     }
 ];
