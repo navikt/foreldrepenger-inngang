@@ -127,7 +127,9 @@ const translations = {
         etter_1_juli_2018: 'etter 1. juli 2018',
         barnet_er_født_eller_adoptert: 'Barnet er født eller adoptert',
         nye_regler_body:
-            'Da jeg kom over broen ved oset, begynte solen å helle mot åsranden; snart lånte den aftenskyene sin beste glans, forat de en kort stund kunne fryde seg ved den fremmede prakt.'
+            'Da jeg kom over broen ved oset, begynte solen å helle mot åsranden; snart lånte den aftenskyene sin beste glans, forat de en kort stund kunne fryde seg ved den fremmede prakt.',
+
+        'menHvaHvis': 'Men hva hvis...'
     }
 };
 
