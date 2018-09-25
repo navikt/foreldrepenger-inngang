@@ -1,6 +1,5 @@
 import React, { ReactNode } from 'react';
 import BEMHelper from '../../../../utils/bem';
-// import TypografiBase from 'nav-frontend-typografi';
 import CustomSVG from '../../../../utils/CustomSVG';
 
 const cls = BEMHelper('InformasjonsfanerBody');

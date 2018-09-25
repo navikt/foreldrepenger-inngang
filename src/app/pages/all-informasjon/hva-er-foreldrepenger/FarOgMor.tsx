@@ -2,13 +2,13 @@ import * as React from 'react';
 import TypografiBase from 'nav-frontend-typografi';
 import Kalkulator from './kalkulator/Kalkulator';
 import Informasjonsfaner from './informasjons-faner/Informasjonsfaner';
-import FarOgMorSubInformasjonsFaneMorsDel from './informasjons-faner/sub-informasjonsfaner-txt/FarOgMorSubInformasjonsFaneMorsDel';
-import FarOgMorSubInformasjonsFaneFarsDel from './informasjons-faner/sub-informasjonsfaner-txt/FarOgMorSubInformasjonsFaneFarsDel';
-import FarOgMorSubInformasjonsFaneFellesDel from './informasjons-faner/sub-informasjonsfaner-txt/FarOgMorSubInformasjonsFaneFellesDel';
+import FarOgMorSubInformasjonsFaneMorsDel from './informasjons-faner/StrukturertText-komponenter/FarOgMorSubInformasjonsFaneMorsDel';
+import FarOgMorSubInformasjonsFaneFarsDel from './informasjons-faner/StrukturertText-komponenter/FarOgMorSubInformasjonsFaneFarsDel';
+import FarOgMorSubInformasjonsFaneFellesDel from './informasjons-faner/StrukturertText-komponenter/FarOgMorSubInformasjonsFaneFellesDel';
 
 import translate from '../../../utils/translate';
 
-const Tabulator = [
+const informasjonsfaner = [
     {
         faneLabel: 'Mors del',
         faneIcon: true,
@@ -51,7 +51,7 @@ const FarOgMor = () => {
                 {translate('lengde_på_foreldreperioden_body')}
             </TypografiBase>
             <Kalkulator />
-            <Informasjonsfaner tabs={Tabulator} />
+            <Informasjonsfaner tabs={informasjonsfaner} />
         </div>
     );
 };

@@ -1,13 +1,16 @@
 import React, { ReactNode } from 'react';
 import Tabs from 'nav-frontend-tabs';
+import BEMHelper from '../../../../utils/bem';
 import InformasjonsFanerLabel from './InformasjonsFanerLabel';
 import InformasjonsFanerBody from './InformasjonFanerBody';
 import CakeSvg from './CakeSvg';
 import CakeFellesSvg from './CakeFellesSvg';
 import Fane from '../fane/Fane';
 
-import './Informasjonsfaner.less';
+import './informasjonsfaner.less';
 import translate from '../../../../utils/translate';
+
+const cls = BEMHelper('Informasjonsfaner');
 
 interface Fane {
     faneLabel: string;
@@ -50,15 +53,15 @@ class Informasjonsfaner extends React.Component<Props> {
     };
 
     render = () => (
-        <div>
-            <div className={'subFaner-Header'}>
+        <div className={cls.className}>
+            <div className={cls.element('header')}>
                 {translate('subFanerHeader')}
             </div>
             <Tabs
                 tabs={this.props.tabs.map((tab, index) => {
                     const Cake = tab.faneIcon ? CakeSvg : CakeFellesSvg;
                     const color =
-                        index === this.state.currentTab ? 'black' : 'blue';
+                        index === this.state.currentTab ? '#3e3832' : '#0067c5';
 
                     return {
                         label: (
