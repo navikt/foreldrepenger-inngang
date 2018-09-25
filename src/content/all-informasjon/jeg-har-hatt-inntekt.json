@@ -5,8 +5,7 @@
         "children": [
             {
                 "type": "span",
-                "text": "Hva kan du få?",
-                "marks": []
+                "text": "Hva kan du få?"
             }
         ]
     },
@@ -16,8 +15,7 @@
         "children": [
             {
                 "type": "span",
-                "text": "Du kan få ",
-                "marks": []
+                "text": "Du kan få "
             },
             {
                 "type": "span",
@@ -26,8 +24,7 @@
             },
             {
                 "type": "span",
-                "text": " hvis du har hatt inntekt i minst ",
-                "marks": []
+                "text": " hvis du har hatt inntekt i minst "
             },
             {
                 "type": "span",
@@ -36,8 +33,7 @@
             },
             {
                 "type": "span",
-                "text": " før du starter foreldrepengeperioden din. Likestilt med inntekt er perioder du mottar:",
-                "marks": []
+                "text": " før du starter foreldrepengeperioden din. Likestilt med inntekt er perioder du mottar:"
             }
         ],
         "markDefs": [
@@ -49,48 +45,99 @@
         ]
     },
     {
-        "type": "liste",
+        "type": "avsnitt",
         "style": "normaltekst",
+        "level": 1,
+        "listItem": "bullet",
         "children": [
             {
-                "type": "element",
-                "text": "Sykepenger",
-                "marks": []
-            },
+                "type": "span",
+                "text": "Sykepenger"
+            }
+        ]
+    },
+
+        {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "level": 1,
+        "listItem": "bullet",
+        "children": [
             {
-                "type": "element",
-                "text": "Foreldrepenger",
-                "marks": []
-            },
+                "type": "span",
+                "text": "Foreldrepenger"
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "level": 1,
+        "listItem": "bullet",
+        "children": [
             {
-                "type": "element",
-                "text": "Svangerskapspenger",
-                "marks": []
-            },
+                "type": "span",
+                "text": "Svangerskapspenger"
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "level": 1,
+        "listItem": "bullet",
+        "children": [
             {
-                "type": "element",
-                "text": "Omsorgspenger ved sykdom hos barnet eller den som passer barnet",
-                "marks": []
-            },
+                "type": "span",
+                "text": "Omsorgspenger ved sykdom hos barnet eller den som passer barnet"
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "level": 1,
+        "listItem": "bullet",
+        "children": [
             {
-                "type": "element",
-                "text": "Pleie- og opplæringspenger",
-                "marks": []
-            },
+                "type": "span",
+                "text": "Pleie- og opplæringspenger"
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "level": 1,
+        "listItem": "bullet",
+        "children": [
             {
-                "type": "element",
-                "text": "Dagpenger under arbeidsløshet",
-                "marks": []
-            },
+                "type": "span",
+                "text": "Dagpenger under arbeidsløshet"
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "level": 1,
+        "listItem": "bullet",
+        "children": [
             {
-                "type": "element",
-                "text": "Arbeidsavklaringspenger",
-                "marks": []
-            },
+                "type": "span",
+                "text": "Arbeidsavklaringspenger"
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "level": 1,
+        "listItem": "bullet",
+        "children": [
             {
-                "type": "element",
-                "text": "Omsorgsstønad",
-                "marks": []
+                "type": "span",
+                "text": "Omsorgsstønad"
             }
         ]
     },
@@ -100,34 +147,55 @@
         "children": [
             {
                 "type": "span",
-                "text": "Også andre forhold kan likestilles med yrkesaktivitet. Dette kan være:",
-                "marks": []
+                "text": "Også andre forhold kan likestilles med yrkesaktivitet. Dette kan være:"
             }
         ]
     },
     {
-        "type": "liste",
+        "type": "avsnitt",
         "style": "normaltekst",
+        "level": 1,
+        "listItem": "bullet",
         "children": [
             {
-                "type": "element",
-                "text": "lønn fra arbeidsgiver under videre- eller etterutdanning",
-                "marks": []
-            },
+                "type": "span",
+                "text": "lønn fra arbeidsgiver under videre- eller etterutdanning"
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "level": 1,
+        "listItem": "bullet",
+        "children": [
             {
-                "type": "element",
-                "text": "avtjening av militær- eller siviltjeneste eller obligatorisk sivilforsvarstjeneste",
-                "marks": []
-            },
+                "type": "span",
+                "text": "avtjening av militær- eller siviltjeneste eller obligatorisk sivilforsvarstjeneste"
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "level": 1,
+        "listItem": "bullet",
+        "children": [
             {
-                "type": "element",
-                "text": "etterlønn fra arbeidsgiver",
-                "marks": []
-            },
+                "type": "span",
+                "text": "etterlønn fra arbeidsgiver"
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "level": 1,
+        "listItem": "bullet",
+        "children": [
             {
-                "type": "element",
-                "text": "ventelønn",
-                "marks": []
+                "type": "span",
+                "text": "ventelønn"
             }
         ]
     },
@@ -137,8 +205,7 @@
         "children": [
             {
                 "type": "span",
-                "text": "Hvor mye må du ha tjent",
-                "marks": []
+                "text": "Hvor mye må du ha tjent"
             }
         ]
     },
@@ -148,8 +215,7 @@
         "children": [
             {
                 "type": "span",
-                "text": "Årsinntekten din må være minst halvparten av ",
-                "marks": []
+                "text": "Årsinntekten din må være minst halvparten av "
             },
             {
                 "type": "span",
@@ -158,8 +224,7 @@
             },
             {
                 "type": "span",
-                "text": " i folketrygden. Har du hatt flere deltidsstillinger, er det den totale inntekten din som gjelder.",
-                "marks": []
+                "text": " i folketrygden. Har du hatt flere deltidsstillinger, er det den totale inntekten din som gjelder."
             }
         ],
         "markDefs": [
@@ -176,8 +241,7 @@
         "children": [
             {
                 "type": "span",
-                "text": "Dager uten arbeid som teller med",
-                "marks": []
+                "text": "Dager uten arbeid som teller med"
             }
         ]
     },
@@ -187,8 +251,7 @@
         "children": [
             {
                 "type": "span",
-                "text": "Hvis du har vært i jobb i fire uker sammenhengende og det ikke er mer enn fjorten dager mellom hver gang du er på jobb, regnes også dager uten arbeid med i opptjeningstiden.",
-                "marks": []
+                "text": "Hvis du har vært i jobb i fire uker sammenhengende og det ikke er mer enn fjorten dager mellom hver gang du er på jobb, regnes også dager uten arbeid med i opptjeningstiden."
             }
         ]
     },
@@ -198,8 +261,7 @@
         "children": [
             {
                 "type": "span",
-                "text": "Hvis du har en arbeidsavtale om fast turnus, vil dagene du ikke er i jobb regnes med i opptjeningstiden, selv om du jobber sjeldnere enn hver 14. dag.",
-                "marks": []
+                "text": "Hvis du har en arbeidsavtale om fast turnus, vil dagene du ikke er i jobb regnes med i opptjeningstiden, selv om du jobber sjeldnere enn hver 14. dag."
             }
         ]
     },
@@ -209,8 +271,7 @@
         "children": [
             {
                 "type": "span",
-                "text": "Ferie og avspasering teller også med.",
-                "marks": []
+                "text": "Ferie og avspasering teller også med."
             }
         ]
     }

@@ -13,12 +13,14 @@ const PanelMedIllustrasjon = ({
     title,
     svg,
     maskSvg,
+    className,
     children
 }: {
     id?: string;
     title: string;
     svg: any;
     maskSvg?: boolean;
+    className?: string;
     children: React.ReactNode;
 }) => {
     let illustration = <CustomSVG size={100} iconRef={svg} />;
@@ -29,7 +31,7 @@ const PanelMedIllustrasjon = ({
     }
 
     return (
-        <div id={id}>
+        <div id={id} className={className}>
             <PanelBase className={cls.className}>
                 {illustration}
                 <TypografiBase type="systemtittel">{title}</TypografiBase>

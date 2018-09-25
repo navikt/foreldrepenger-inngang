@@ -78,13 +78,13 @@ const translations = {
         hva_er_foreldrepenger_ingress:
             'Foreldrepenger skal erstatte inntekten din når du skal ha foreldrepermisjon. Foreldrepengene kan tas sammenhengende eller kombineres med arbeid eller ferie, men må tas ut før barnet blir 3 år.',
 
-        jobbe: 'Jobbe',
+        jeg_vil_jobbe: 'Jeg vil jobbe',
         beregning: 'Beregning',
         ferie: 'Ferie',
         hjemme_samtidig: 'Hjemme samtidig',
         adopsjon_og_arbeidsgiver: 'Adopsjon og arbeidsgiver',
         sykdom: 'Sykdom',
-        inntekt: 'Inntekt',
+        jeg_har_inntekt: 'Jeg har inntekt',
         arbeidsgiver: 'Arbeidsgiver',
 
         jeg_har_hatt_inntekt: 'Jeg har hatt inntekt',
@@ -127,7 +127,10 @@ const translations = {
         etter_1_juli_2018: 'etter 1. juli 2018',
         barnet_er_født_eller_adoptert: 'Barnet er født eller adoptert',
         nye_regler_body:
-            'Da jeg kom over broen ved oset, begynte solen å helle mot åsranden; snart lånte den aftenskyene sin beste glans, forat de en kort stund kunne fryde seg ved den fremmede prakt.'
+            'Da jeg kom over broen ved oset, begynte solen å helle mot åsranden; snart lånte den aftenskyene sin beste glans, forat de en kort stund kunne fryde seg ved den fremmede prakt.',
+
+        slik_går_du_frem_ved_heltidsjobb: 'Slik går du frem ved heltidsjobb',
+        slik_går_du_frem_ved_deltidsjobb: 'Slik går du frem ved deltidsjobb'
     }
 };
 

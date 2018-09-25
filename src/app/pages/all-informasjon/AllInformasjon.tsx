@@ -9,6 +9,7 @@ import Hurtiglenker from './hurtiglenker/Hurtiglenker';
 import NyeRegler from './nye-regler/NyeRegler';
 import ForÅFåForeldrepenger from './for-å-få-foreldrepenger/ForÅFåForeldrepenger';
 import JegHarHattInntekt from './jeg-har-hatt-inntekt/JegHarHattInntekt';
+import JegVilJobbe from './jeg-vil-jobbe/JegVilJobbe';
 
 import './allInformasjon.less';
 
@@ -23,13 +24,13 @@ const pageSvg = require('../../assets/page.svg').default;
 const sections = [
     'for-å-få-foreldrepenger',
     'hva-er-foreldrepenger',
-    'jobbe',
-    'beregning',
     'ferie',
-    'hjemme-samtidig',
-    'adopsjon-og-arbeidsgiver',
+    'jeg-vil-jobbe',
     'sykdom',
-    'inntekt'
+    'hjemme-samtidig',
+    'jeg_har-hatt-inntekt',
+    'beregning',
+    'adopsjon-og-arbeidsgiver'
 ];
 
 const AllInformasjon: React.StatelessComponent<Props> = ({ location }) => {
@@ -47,7 +48,13 @@ const AllInformasjon: React.StatelessComponent<Props> = ({ location }) => {
                     <ForÅFåForeldrepenger id={sections[0]} />
                     <NyeRegler />
                     <HvaErForeldrepengerWrapper id={sections[1]} />
-                    <JegHarHattInntekt id={sections[8]} />
+                    {/* <Ferie id={sections[2]} /> */}
+                    <JegVilJobbe id={sections[3]} />
+                    {/* <Sykdom id={sections[4]} /> */}
+                    {/* <HjemmeSamtidig id={sections[5]} /> */}
+                    <JegHarHattInntekt id={sections[6]} />
+                    {/* <Beregning id={sections[7]} /> */}
+                    {/* <AdopsjonOgArbeidsgiver id={sections[8]} /> */}
                 </div>
             </div>
         </div>

@@ -21,16 +21,28 @@ const StrukturertTekst: StatelessComponent<Props> = ({ tekst }) => {
 };
 
 const renderAvsnitt = (avsnitt: Avsnitt, index: number) => {
-    const { type, style, markDefs, children } = avsnitt;
+    const { type, style, markDefs, children, listItem, level } = avsnitt;
 
-    if (type === 'liste') {
-        return (
-            <TypografiBase
-                key={index}
-                className={cls.element('liste')}
-                type={style}>
-                <ul>{children.map(renderTekstsnutt(markDefs))}</ul>
-            </TypografiBase>
+    if (level > 0) {
+        const renderListElement = renderTekstsnutt(markDefs);
+        const itemToRender = (
+            <li>
+                <TypografiBase type={style}>
+                    {children.map((tekstsnutt, childIndex) => {
+                        return renderListElement(tekstsnutt, childIndex);
+                    })}
+                </TypografiBase>
+            </li>
+        );
+
+        return listItem === 'number' ? (
+            <div key={index} className={cls.element('navFont')}>
+                <ol start={index}>{itemToRender}</ol>
+            </div>
+        ) : (
+            <div key={index} className={cls.element('navFont')}>
+                <ul>{itemToRender}</ul>
+            </div>
         );
     } else {
         return (
@@ -56,44 +68,43 @@ const renderTekstsnutt = (markDefs: MarkDefinition[]) => (
             toRender = <span>{text}</span>;
             break;
         }
-
-        case 'element': {
-            toRender = <li>{text}</li>;
-            break;
-        }
     }
 
-    marks.forEach((mark) => {
-        switch (mark) {
-            case 'bold': {
-                toRender = <b>{toRender}</b>;
-                break;
-            }
+    if (marks) {
+        marks.forEach((mark) => {
+            switch (mark) {
+                case 'bold': {
+                    toRender = <b>{toRender}</b>;
+                    break;
+                }
 
-            case 'italic': {
-                toRender = <i>{toRender}</i>;
-                break;
-            }
+                case 'italic': {
+                    toRender = <i>{toRender}</i>;
+                    break;
+                }
 
-            case 'external_link': {
-                toRender = <span>{toRender}→</span>;
-                break;
-            }
+                case 'external_link': {
+                    toRender = <span>{toRender}→</span>;
+                    break;
+                }
 
-            default: {
-                if (markDefs) {
-                    const markDefinition = markDefs.find((m) => m.key === mark);
-                    if (markDefinition) {
-                        toRender = (
-                            <MarkWrapper mark={markDefinition}>
-                                {toRender}
-                            </MarkWrapper>
+                default: {
+                    if (markDefs) {
+                        const markDefinition = markDefs.find(
+                            (m) => m.key === mark
                         );
+                        if (markDefinition) {
+                            toRender = (
+                                <MarkWrapper mark={markDefinition}>
+                                    {toRender}
+                                </MarkWrapper>
+                            );
+                        }
                     }
                 }
             }
-        }
-    });
+        });
+    }
 
     return addKeyToComponent(index, toRender);
 };
