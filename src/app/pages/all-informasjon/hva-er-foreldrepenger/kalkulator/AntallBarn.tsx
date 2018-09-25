@@ -1,6 +1,9 @@
 import * as React from 'react';
 import TypografiBase from 'nav-frontend-typografi';
 import { BEMWrapper } from '../../../../utils/bem';
+import CustomSVG from '../../../../utils/CustomSVG';
+
+const babyIcon = require('./baby.svg').default;
 
 const AntallBarn = ({
     parentCls,
@@ -13,7 +16,11 @@ const AntallBarn = ({
 }) => {
     const childCountIllustration = [];
     for (let i = 0; i < childCount; i++) {
-        childCountIllustration.push(<span key={i}>👶</span>);
+        childCountIllustration.push(
+            <span key={i} className={parentCls.element('childContainer')}>
+                <CustomSVG iconRef={babyIcon} size={20} />
+            </span>
+        );
     }
 
     return (

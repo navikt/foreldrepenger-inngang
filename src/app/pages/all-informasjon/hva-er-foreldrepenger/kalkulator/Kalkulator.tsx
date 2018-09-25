@@ -5,7 +5,7 @@ import translate from '../../../../utils/translate';
 import AntallBarn from './AntallBarn';
 import AntallUker from './AntallUker';
 import DinLønn from './din-lønn/DinLønn';
-import { validerMånedslønn, antallUtbetalingsuker } from './utils';
+import { antallUtbetalingsuker } from './utils';
 import './kalkulator.less';
 
 const cls = BEMHelper('kalkulator');
@@ -15,9 +15,6 @@ class Kalkulator extends React.Component {
         selectedNumberOfWeeks: number;
         selectedNumberOfChildren: 1 | 2 | 3;
         selectedPercentage: number;
-        monthlyWage: number | null;
-        monthlyWageError: string;
-        maksForeldrepenger: number;
     };
 
     constructor(props: {}) {
@@ -26,12 +23,7 @@ class Kalkulator extends React.Component {
         this.state = {
             selectedNumberOfWeeks: 49,
             selectedNumberOfChildren: 1,
-            selectedPercentage: 100,
-            monthlyWage: 22000,
-            monthlyWageError: '',
-
-            // TODO: Hente grunnbeløpet (G) fra en ekstern kilde
-            maksForeldrepenger: (6 * 96883) / 12
+            selectedPercentage: 100
         };
     }
 
@@ -59,35 +51,11 @@ class Kalkulator extends React.Component {
         });
     };
 
-    onMonthlyWageChange = (event: any) => {
-        const sum = parseInt(event.currentTarget.value, 10);
-
-        let error = '';
-        let monthlyWage = null;
-
-        if (!isNaN(sum)) {
-            error = validerMånedslønn(sum);
-            monthlyWage = sum;
-        }
-
-        this.setState({
-            monthlyWage,
-            monthlyWageError: error
-        });
-    };
-
     render = () => {
         const AntallUkerWrapper = addAntallUkerAttributes(
             this.state.selectedNumberOfWeeks,
             this.onNumberOfWeeksSelect
         );
-
-        const wageError =
-            this.state.monthlyWageError === ''
-                ? undefined
-                : {
-                      feilmelding: this.state.monthlyWageError
-                  };
 
         return (
             <div className={cls.className}>
@@ -145,10 +113,6 @@ class Kalkulator extends React.Component {
                     grandParentCls={cls}
                     selectedPercentage={this.state.selectedPercentage}
                     onPercentageSelect={this.onPercentageSelect}
-                    onMonthlyWageChange={this.onMonthlyWageChange}
-                    monthlyWage={this.state.monthlyWage}
-                    maximumWage={this.state.maksForeldrepenger}
-                    wageError={wageError}
                 />
             </div>
         );

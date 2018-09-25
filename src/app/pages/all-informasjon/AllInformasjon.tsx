@@ -5,8 +5,11 @@ import BEMHelper from '../../utils/bem';
 import translate from '../../utils/translate';
 import PanelMedIllustrasjon from './panel-med-illustrasjon/PanelMedIllustrasjon';
 import HvaErForeldrepenger from './hva-er-foreldrepenger/HvaErForeldrepenger';
-import SnarveiTilSøknad from './snarvei-til-søknad/SnarveiTilSøknad';
 import Hurtiglenker from './hurtiglenker/Hurtiglenker';
+import NyeRegler from './nye-regler/NyeRegler';
+import ForÅFåForeldrepenger from './for-å-få-foreldrepenger/ForÅFåForeldrepenger';
+import JegHarHattInntekt from './jeg-har-hatt-inntekt/JegHarHattInntekt';
+import JegVilJobbe from './jeg-vil-jobbe/JegVilJobbe';
 
 import './allInformasjon.less';
 
@@ -16,21 +19,18 @@ interface Props {
     location: any;
 }
 
-const foreldrepengerSvg = require('../../assets/familier/familie-3.svg')
-    .default;
-
 const pageSvg = require('../../assets/page.svg').default;
 
 const sections = [
     'for-å-få-foreldrepenger',
     'hva-er-foreldrepenger',
-    'jobbe',
-    'beregning',
     'ferie',
-    'hjemme-samtidig',
-    'adopsjon-og-arbeidsgiver',
+    'jeg-vil-jobbe',
     'sykdom',
-    'inntekt'
+    'hjemme-samtidig',
+    'jeg_har-hatt-inntekt',
+    'beregning',
+    'adopsjon-og-arbeidsgiver'
 ];
 
 const AllInformasjon: React.StatelessComponent<Props> = ({ location }) => {
@@ -45,31 +45,19 @@ const AllInformasjon: React.StatelessComponent<Props> = ({ location }) => {
                 <div className={cls.element('content')}>
                     <Breadcrumbs path={location.pathname} />
                     <Hurtiglenker links={sections} />
-                    <Foreldrepengekrav id={sections[0]} />
-                    <SnarveiTilSøknad />
+                    <ForÅFåForeldrepenger id={sections[0]} />
+                    <NyeRegler />
                     <HvaErForeldrepengerWrapper id={sections[1]} />
+                    {/* <Ferie id={sections[2]} /> */}
+                    <JegVilJobbe id={sections[3]} />
+                    {/* <Sykdom id={sections[4]} /> */}
+                    {/* <HjemmeSamtidig id={sections[5]} /> */}
+                    <JegHarHattInntekt id={sections[6]} />
+                    {/* <Beregning id={sections[7]} /> */}
+                    {/* <AdopsjonOgArbeidsgiver id={sections[8]} /> */}
                 </div>
             </div>
         </div>
-    );
-};
-
-const Foreldrepengekrav = ({ id }: { id: string }) => {
-    return (
-        <PanelMedIllustrasjon
-            id={id}
-            title={translate('for_å_få_foreldrepenger')}
-            svg={foreldrepengerSvg}
-            maskSvg={true}>
-            <div className={cls.element('alignLeft')}>
-                <TypografiBase type="ingress">
-                    {translate('for_å_få_foreldrepenger_ingress')}
-                </TypografiBase>
-                <TypografiBase type="ingress">
-                    {translate('for_å_få_foreldrepenger_ingress2')}
-                </TypografiBase>
-            </div>
-        </PanelMedIllustrasjon>
     );
 };
 

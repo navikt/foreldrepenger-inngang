@@ -42,9 +42,9 @@ const translations = {
         søk_foreldrepenger: 'Søk om foreldrepenger',
         har_søkt_foreldrepenger: 'Jeg har allerede søkt',
         foreldrepenger_inngang:
-            'Du kan tidligst søke om foreldrepenger 6 uker før du skal ta ut foreldrepenger.',
+            'Du kan tidligst sende inn søknad seks uker før du skal ta ut foreldrepengene dine. Skal du vente med å ta ut foreldrepengene dine, gjelder dette også deg.',
         begynn_søknad_om_foreldrepenger: 'Begynn søknad om foreldrepenger',
-        når_starter_du: 'Når starter du?',
+        når_starter_du: 'Når er første dag med uttak eller utsettelse?',
         ugyldig_dato_for_foreldrepenger:
             'Du søker tidligere enn 6 uker før du skal ta ut foreldrepenger. Du kan begynne på søknaden, det vil ikke være mulig å sende den inn før ',
 
@@ -78,14 +78,28 @@ const translations = {
         hva_er_foreldrepenger_ingress:
             'Foreldrepenger skal erstatte inntekten din når du skal ha foreldrepermisjon. Foreldrepengene kan tas sammenhengende eller kombineres med arbeid eller ferie, men må tas ut før barnet blir 3 år.',
 
-        jobbe: 'Jobbe',
+        jeg_vil_jobbe: 'Jeg vil jobbe',
         beregning: 'Beregning',
         ferie: 'Ferie',
         hjemme_samtidig: 'Hjemme samtidig',
         adopsjon_og_arbeidsgiver: 'Adopsjon og arbeidsgiver',
         sykdom: 'Sykdom',
-        inntekt: 'Inntekt',
+        jeg_har_inntekt: 'Jeg har inntekt',
         arbeidsgiver: 'Arbeidsgiver',
+
+        jeg_har_hatt_inntekt: 'Jeg har hatt inntekt',
+
+        // For å få foreldrepenger
+        jeg_har_hatt_inntekt_6_av_10_siste_mnd:
+            'Jeg har hatt inntekt 6 av 10 siste mnd.',
+        jeg_har_hatt_inntekt_6_av_10_siste_mnd_ingress:
+            'Som inntekt regnes også enkelte ytelser fra NAV, arbeidsgiver eller militæret.',
+        jeg_har_tjent_minst: 'Jeg har tjent minst 46 817,- i året',
+        jeg_har_tjent_minst_ingress:
+            'Omregnet til årsinntekt må inntekten din tilsvare et halvt grunnbeløp (G)',
+        jeg_bor_i_norge: 'Jeg bor i Norge',
+        jeg_bor_i_norge_ingress:
+            'Bor du ikke i Norge, kan du være medlem av folketrygden på en annen måte. Se medlemskap',
 
         // Faner i foreldrepengekalkulator
         farOgMor: 'Far og mor',
@@ -94,6 +108,8 @@ const translations = {
         bareFarHarRett: 'Bare far har rett',
         bareMorHarRett: 'Bare mor har rett',
         aleneomsorg: 'Aleneomsorg',
+        eksempelvis_dersom_inntekt_pr_er:
+            'Eksempelvis dersom inntekt per måned er',
 
         lengde_på_foreldreperioden: 'Lengde på foreldreperioden',
         lengde_på_foreldreperioden_body:
@@ -105,8 +121,16 @@ const translations = {
         uker: 'uker',
         din_lønn_per_mnd_ca: 'Din lønn pr. måned (ca)',
         for_lav_lønn_feilmelding: 'For lav lønn',
+        barnet_er_født: 'Barnet er født',
+        nye_regler_fra_1_juli_2018: 'Nye regler fra 1. juli 2018',
+        før_1_juli_2018: 'før 1. juli 2018',
+        etter_1_juli_2018: 'etter 1. juli 2018',
+        barnet_er_født_eller_adoptert: 'Barnet er født eller adoptert',
+        nye_regler_body:
+            'Da jeg kom over broen ved oset, begynte solen å helle mot åsranden; snart lånte den aftenskyene sin beste glans, forat de en kort stund kunne fryde seg ved den fremmede prakt.',
 
-
+        slik_går_du_frem_ved_heltidsjobb: 'Slik går du frem ved heltidsjobb',
+        slik_går_du_frem_ved_deltidsjobb: 'Slik går du frem ved deltidsjobb',
 
         // Sub-faner i foreldrepengekalkulator
 
@@ -146,7 +170,7 @@ const translations = {
         'farOgMor.subFaner.farsDel.linjeToLink': 'adopsjonsdatoen.',
         'farOgMor.subFaner.farsDel.linjeTreDelEn': "Mor kan ",
         'farOgMor.subFaner.farsDel.linjeTreBold':  "overta fars ",
-        'farOgMor.subFaner.farsDel.LinjeTreDelTre': 'del hvis han er så syk at han er heøt avhengig av hjelp til å ta seg av',
+        'farOgMor.subFaner.farsDel.LinjeTreDelTre': 'del hvis han er så syk at han er heøt avhengig av hjelp til å ta seg av'
     }
 };
 

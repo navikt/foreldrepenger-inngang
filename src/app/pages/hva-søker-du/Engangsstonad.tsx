@@ -1,24 +1,17 @@
 import * as React from 'react';
-import TypografiBase from 'nav-frontend-typografi';
-import Lenke from 'nav-frontend-lenker';
+import StrukturertTekst from '../../components/strukturert-tekst/StrukturertTekst';
 
 import ButtonPanel from './button-panel/ButtonPanel';
 import PanelMedTittel from '../../components/panel-med-tittel/PanelMedTittel';
 import translate from '../../utils/translate';
 import externalUrls from '../../utils/externalUrls';
 
+const content = require('../../../content/hva-vil-du-søke-om/engangsstønad.json');
+
 const Engangsstonad = ({ parentCls }: { parentCls: any }) => {
     return (
         <PanelMedTittel title={translate('engangsstønad')}>
-            <TypografiBase type="normaltekst">
-                {translate('engangsstønad_beskrivelse')}
-            </TypografiBase>
-            <div className={parentCls.element('filler', 'tiny')} />
-            <TypografiBase type="normaltekst">
-                <Lenke href={externalUrls.les_mer_engangsstønad}>
-                    {translate('engangsstønad_les_mer')}
-                </Lenke>
-            </TypografiBase>
+            <StrukturertTekst tekst={content} />
             <div className={parentCls.element('filler')} />
             <ButtonPanel
                 parentCls={parentCls}

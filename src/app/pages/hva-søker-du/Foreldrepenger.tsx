@@ -1,16 +1,17 @@
 import React, { StatelessComponent } from 'react';
 import KnappBase from 'nav-frontend-knapper';
-import TypografiBase from 'nav-frontend-typografi';
-import Lenke from 'nav-frontend-lenker';
 import { withRouter } from 'react-router-dom';
 
 import UserHelp from './user-help/UserHelp';
 import PanelMedTittel from '../../components/panel-med-tittel/PanelMedTittel';
 import translate from '../../utils/translate';
 import externalUrls from '../../utils/externalUrls';
+import StrukturertTekst from '../../components/strukturert-tekst/StrukturertTekst';
+
+const content = require('../../../content/hva-vil-du-søke-om/foreldrepenger.json');
 
 interface ForeldrepengerProps {
-        parentCls: any;
+    parentCls: any;
     history: any;
     location: any;
     match: any;
@@ -22,18 +23,8 @@ const Foreldrepenger: StatelessComponent<ForeldrepengerProps> = ({
 }) => {
     return (
         <PanelMedTittel title={translate('foreldrepenger')}>
-            <TypografiBase type="normaltekst">
-                {translate('foreldrepenger_beskrivelse')}
-            </TypografiBase>
-            <div className={parentCls.element('filler', 'tiny')} />
-            <TypografiBase type="normaltekst">
-                <Lenke href={externalUrls.les_mer_foreldrepenger}>
-                    {translate('foreldrepenger_les_mer')}
-                </Lenke>
-            </TypografiBase>
-
+            <StrukturertTekst tekst={content} />
             <div className={parentCls.element('filler')} />
-
             <div className={parentCls.element('two-buttons-navigation')}>
                 <div className={parentCls.element('button-container')}>
                     <KnappBase
