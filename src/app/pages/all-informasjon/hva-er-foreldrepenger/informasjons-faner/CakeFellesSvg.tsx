@@ -28,9 +28,9 @@ const CakeFellesSvg: React.StatelessComponent<Props> = ({
             <g
                 id="Symbols"
                 stroke="none"
-                stroke-width="1"
+                strokeWidth="1"
                 fill="none"
-                fill-rule="evenodd">
+                fillRule="evenodd">
                 <g
                     id="Fakta-hvaer/komponent/morsdel"
                     transform="translate(-518.000000, -100.000000)">
@@ -44,7 +44,7 @@ const CakeFellesSvg: React.StatelessComponent<Props> = ({
                                 <circle
                                     id="Oval-2-Copy-15"
                                     stroke={color}
-                                    stroke-width="0.5"
+                                    strokeWidth="0.5"
                                     cx="10"
                                     cy="19"
                                     r="10"

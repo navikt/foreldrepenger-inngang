@@ -10,7 +10,7 @@ import NyeRegler from './nye-regler/NyeRegler';
 import ForÅFåForeldrepenger from './for-å-få-foreldrepenger/ForÅFåForeldrepenger';
 import JegHarHattInntekt from './jeg-har-hatt-inntekt/JegHarHattInntekt';
 import JegVilJobbe from './jeg-vil-jobbe/JegVilJobbe';
-
+import Sykdom from './sykdom/Sykdom';
 import './allInformasjon.less';
 import Arbeidsgiver from "./arbeidsgiver/Arbeidsgiver";
 
@@ -51,7 +51,7 @@ const AllInformasjon: React.StatelessComponent<Props> = ({ location }) => {
                     <HvaErForeldrepengerWrapper id={sections[1]} />
                     {/* <Ferie id={sections[2]} /> */}
                     <JegVilJobbe id={sections[3]} />
-                    {/* <Sykdom id={sections[4]} /> */}
+                    <Sykdom id={sections[4]} />
                     {/* <HjemmeSamtidig id={sections[5]} /> */}
                      <JegHarHattInntekt id={sections[6]} />
                     {/* <Beregning id={sections[7]} /> */}

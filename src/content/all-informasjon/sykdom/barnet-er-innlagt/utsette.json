@@ -1,0 +1,26 @@
+[
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "level": 1,
+        "listItem": "bullet",
+        "children": [
+            {
+                "type": "span",
+                "text": "Send inn søknad om å utsette foreldrepengene"
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "level": 1,
+        "listItem": "bullet",
+        "children": [
+            {
+                "type": "span",
+                "text": "Legg ved dokumentasjon på innleggelsen fra sykehuset eller helseinstitusjonen"
+            }
+        ]
+    }
+]

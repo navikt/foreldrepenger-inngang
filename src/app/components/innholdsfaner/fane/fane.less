@@ -1,0 +1,65 @@
+.fane {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    width: 120px;
+    height: 120px;
+    cursor: pointer;
+    z-index: 0;
+
+    &__background {
+        position: absolute;
+        z-index: -1;
+        border-radius: 60px;
+        height: 120px;
+        width: 120px;
+    }
+
+    &--most {
+        width: unset;
+        flex: 1;
+    }
+
+    &:focus {
+        outline: none;
+
+        .fane__background {
+            box-shadow: inset 0 0 0 3px #ffbd66;
+        }
+    }
+    .typo-normal {
+        font-size: 0.9rem;
+        height: 2rem;
+        margin-top: 0.3rem;
+        letter-spacing: 0.1px;
+    }
+
+    &--selected {
+        .typo-normal {
+            font-weight: bold;
+            letter-spacing: 0;
+        }
+
+        .fane__background {
+            background-color: #e5f0f9;
+        }
+
+        &:active .fane__background {
+            background-color: #cfe0ee;
+        }
+    }
+
+    &__inner {
+        width: 85%;
+        text-align: balance;
+    }
+
+    &__pointer {
+        position: absolute;
+        z-index: -1;
+        margin-top: 70px;
+    }
+}
