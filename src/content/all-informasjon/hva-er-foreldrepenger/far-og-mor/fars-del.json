@@ -1,0 +1,66 @@
+[
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Far kan ta ut sin del fra "
+            },
+            {
+                "type": "span",
+                "text": "uke syv etter fødselen",
+                "marks": ["bold"]
+            },
+            {
+                "type": "span",
+                "text": " eller vente til barnet er blitt litt større. Ukene kan tas samlet eller deles opp. Far må ta ut sin del senest når fellesdelen er ferdig, eller søke om utsettelse."
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Adopterer dere, kan far ta ut sin del når som helst etter "
+            },
+            {
+                "type": "span",
+                "text": "adopsjonsdatoen",
+                "marks": ["url_adopsjonsdatoen"]
+            },
+          {
+            "type": "span",
+            "text": "."
+          }
+        ],
+      "markDefs": [
+        {
+          "key": "url_adopsjonsdatoen",
+          "type": "link",
+          "href": "#"
+        }
+      ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Mor kan "
+            },
+          {
+            "type": "span",
+            "text": "overta fars",
+            "marks": ["bold"]
+          },
+          {
+            "type": "span",
+            "text": " hvis han er så syk at han er heøt avhengig av hjelp til å ta seg av"
+          }
+        ]
+    }
+]
