@@ -134,7 +134,8 @@ const translations = {
         barnet_er_innlagt: 'Barnet er innlagt',
         en_av_foreldrene_er_syk: 'En av foreldrene er syke',
 
-        din_situasjon: 'Din situasjon:'
+        din_situasjon: 'Din situasjon:',
+        slik_går_du_frem_for_å_utsette: 'Slik går du frem for å utsette'
     }
 };
 
