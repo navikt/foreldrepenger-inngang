@@ -65,7 +65,9 @@ class NyeRegler extends React.Component<Props> {
                     ))}
                 </div>
                 <TypografiBase type="normaltekst">
-                    {translate('nye_regler_body')}
+                    {this.state.selectedRule === 'FØR'
+                        ? translate('nye_regler_før')
+                        : translate('nye_regler_etter')}
                 </TypografiBase>
             </div>
         </div>
