@@ -129,6 +129,9 @@ const translations = {
         nye_regler_body:
             'Da jeg kom over broen ved oset, begynte solen å helle mot åsranden; snart lånte den aftenskyene sin beste glans, forat de en kort stund kunne fryde seg ved den fremmede prakt.',
 
+
+        'menHvaHvis': 'Men hva hvis...'
+
         slik_går_du_frem_ved_heltidsjobb: 'Slik går du frem ved heltidsjobb',
         slik_går_du_frem_ved_deltidsjobb: 'Slik går du frem ved deltidsjobb',
 
@@ -171,6 +174,7 @@ const translations = {
         'farOgMor.subFaner.farsDel.linjeTreDelEn': "Mor kan ",
         'farOgMor.subFaner.farsDel.linjeTreBold':  "overta fars ",
         'farOgMor.subFaner.farsDel.LinjeTreDelTre': 'del hvis han er så syk at han er heøt avhengig av hjelp til å ta seg av'
+
     }
 };
 

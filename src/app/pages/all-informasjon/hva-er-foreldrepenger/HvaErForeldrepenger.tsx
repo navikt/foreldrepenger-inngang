@@ -5,6 +5,7 @@ import translate from '../../../utils/translate';
 import Fane, { FaneType } from './fane/Fane';
 import FarOgMor from './FarOgMor';
 import TabIndicator from './tabIndicator/TabIndicator';
+import MenHvaHvis from './menHvaHvis/MenHvaHvis';
 
 import './hvaErForeldrepenger.less';
 
@@ -101,6 +102,7 @@ class HvaErForeldrepenger extends React.Component<Props> {
             />
 
             <div>{this.state.componentToRender}</div>
+            <MenHvaHvis/>
         </div>
     );
 }
