@@ -170,7 +170,7 @@ const translations = {
         'farOgMor.subFaner.farsDel.linjeToLink': 'adopsjonsdatoen.',
         'farOgMor.subFaner.farsDel.linjeTreDelEn': "Mor kan ",
         'farOgMor.subFaner.farsDel.linjeTreBold':  "overta fars ",
-        'farOgMor.subFaner.farsDel.LinjeTreDelTre': 'del hvis han er så syk at han er heøt avhengig av hjelp til å ta seg av',
+        'farOgMor.subFaner.farsDel.LinjeTreDelTre': 'del hvis han er så syk at han er helt avhengig av hjelp til å ta seg av',
 
         // Arbeidsgiver
         arbeidsgiver_tittel: "Arbeidsgiver",
