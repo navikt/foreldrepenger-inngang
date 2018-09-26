@@ -126,8 +126,10 @@ const translations = {
         før_1_juli_2018: 'før 1. juli 2018',
         etter_1_juli_2018: 'etter 1. juli 2018',
         barnet_er_født_eller_adoptert: 'Barnet er født eller adoptert',
-        nye_regler_body:
-            'Da jeg kom over broen ved oset, begynte solen å helle mot åsranden; snart lånte den aftenskyene sin beste glans, forat de en kort stund kunne fryde seg ved den fremmede prakt.',
+        nye_regler_før:
+            'Av den totale foreldrepengeperioden er 10 uker øremerket hver av foreldrene (kvoten). Får dere flere barn samtidig, får dere fem eller syv uker ekstra for hvert barn mer enn ett.',
+        nye_regler_etter:
+            'Av den totale foreldrepengeperioden er 15 uker øremerket hver av foreldrene (kvoten). Får dere to barn samtidig, får dere 17 eller 21 uker ekstra. Får dere tre eller flere barn, får dere 46 eller 56 uker ekstra.',
 
         slik_går_du_frem_ved_heltidsjobb: 'Slik går du frem ved heltidsjobb',
         slik_går_du_frem_ved_deltidsjobb: 'Slik går du frem ved deltidsjobb',
@@ -135,42 +137,54 @@ const translations = {
         // Sub-faner i foreldrepengekalkulator
 
         // header
-        'subFanerHeader': 'Slik er permisjonen delt mellom dere',
+        subFanerHeader: 'Slik er permisjonen delt mellom dere',
 
         // Mors-del
-        'farOgMor.subFaner.Morsdel.linjeEn': 'De første ukene må mor ta ut etter fødselen. De siste fire ukene kan hun ta ut rett etterpå eller pare til senere',
-        'farOgMor.subFamer.Morsdel.linjeTo': ' dere, kan mor ta ut sin del når som helst etter adopsjonsdatoen.',
+        'farOgMor.subFaner.Morsdel.linjeEn':
+            'De første ukene må mor ta ut etter fødselen. De siste fire ukene kan hun ta ut rett etterpå eller pare til senere',
+        'farOgMor.subFamer.Morsdel.linjeTo':
+            ' dere, kan mor ta ut sin del når som helst etter adopsjonsdatoen.',
         'farOgMor.subFaner.Morsdel.linjeTreDelEn': 'Hvis mor er så ',
-        'farOgMor.subFaner.Morsdel.linjeTreDelTre': ' at hun er helt avhengig av hjelp til å ta seg av barnet, kan far eller medmor overta permisjonen.',
+        'farOgMor.subFaner.Morsdel.linjeTreDelTre':
+            ' at hun er helt avhengig av hjelp til å ta seg av barnet, kan far eller medmor overta permisjonen.',
 
         'farOgMor.subFaner.Morsdel.linkEn': 'Adopterer',
         'farOgMor.subFaner.Morsdel.linkTo': 'Syk',
 
         // Felles-del
-        'farOgMor.subFaner.fellesDel.linjeEn': 'Fellesdelen er permisjonsukene som dere kan dele',
-        'farOgMor.subFaner.fellesDel.linjeTo': 'Når far tar ut foreldrepenger fra fellesdelen, må mor være i jobb, studere eller i annen aktivitet.',
+        'farOgMor.subFaner.fellesDel.linjeEn':
+            'Fellesdelen er permisjonsukene som dere kan dele',
+        'farOgMor.subFaner.fellesDel.linjeTo':
+            'Når far tar ut foreldrepenger fra fellesdelen, må mor være i jobb, studere eller i annen aktivitet.',
 
-        'farOgMor.subFaner.fellesDel.linjeTreDelEn':'Aktivitetskravene',
+        'farOgMor.subFaner.fellesDel.linjeTreDelEn': 'Aktivitetskravene',
         'farOgMor.subFaner.fellesDel.linjeTreDelTo': ' til mor er å enten:',
 
         'farOgMor.subFaner.fellesDel.punktEn': 'være i arbeid',
         'farOgMor.subFaner.fellesDel.punktTo': 'ta utdanning på heltid',
-        'farOgMor.subFaner.fellesDel.punktTre': 'kombinere utdanning med arbeid som til sammen blir heltid',
-        'farOgMor.subFaner.fellesDel.punktFire': 'være helt avhengig av hjelp til å ta seg av barnet på grunn av sykdom eller skade',
-        'farOgMor.subFaner.fellesDel.punktFem': 'være innlagt på sykehus eller helseinstitusjon',
+        'farOgMor.subFaner.fellesDel.punktTre':
+            'kombinere utdanning med arbeid som til sammen blir heltid',
+        'farOgMor.subFaner.fellesDel.punktFire':
+            'være helt avhengig av hjelp til å ta seg av barnet på grunn av sykdom eller skade',
+        'farOgMor.subFaner.fellesDel.punktFem':
+            'være innlagt på sykehus eller helseinstitusjon',
         'farOgMor.subFaner.fellesDel.punktSeks': 'delta i ',
         'farOgMor.subFaner.fellesDel.punktSeksLink': 'kvalifiseringsprogrammet',
-        'farOgMor.subFaner.fellesDel.punktSyv': 'delta på heltid i introduksjonsprogrammet etter kapittel 2. for nyankomne innvandrere',
+        'farOgMor.subFaner.fellesDel.punktSyv':
+            'delta på heltid i introduksjonsprogrammet etter kapittel 2. for nyankomne innvandrere',
 
         // Fars-del
-        'farOgMor.subFaner.farsDel.linjeEnDelEn':'Far kan ta ut sin del fra ',
+        'farOgMor.subFaner.farsDel.linjeEnDelEn': 'Far kan ta ut sin del fra ',
         'farOgMor.subFaner.farsDel.linjeEnBold': 'uke syv etter fødselen ',
-        'farOgMor.subFaner.farsDel.linjeEnDelTre': 'eller vente til barnet er blitt litt større. Ukene kan tas samlet eller deles opp. Far må ta ut sin del senest når fellesdelen er ferdig, eller søke om utsettelse.',
-        'farOgMor.subFaner.farsDel.linjeTo':'Adopterer dere, kan far ta ut sin del når som helst etter ',
+        'farOgMor.subFaner.farsDel.linjeEnDelTre':
+            'eller vente til barnet er blitt litt større. Ukene kan tas samlet eller deles opp. Far må ta ut sin del senest når fellesdelen er ferdig, eller søke om utsettelse.',
+        'farOgMor.subFaner.farsDel.linjeTo':
+            'Adopterer dere, kan far ta ut sin del når som helst etter ',
         'farOgMor.subFaner.farsDel.linjeToLink': 'adopsjonsdatoen.',
-        'farOgMor.subFaner.farsDel.linjeTreDelEn': "Mor kan ",
-        'farOgMor.subFaner.farsDel.linjeTreBold':  "overta fars ",
-        'farOgMor.subFaner.farsDel.LinjeTreDelTre': 'del hvis han er så syk at han er heøt avhengig av hjelp til å ta seg av'
+        'farOgMor.subFaner.farsDel.linjeTreDelEn': 'Mor kan ',
+        'farOgMor.subFaner.farsDel.linjeTreBold': 'overta fars ',
+        'farOgMor.subFaner.farsDel.LinjeTreDelTre':
+            'del hvis han er så syk at han er heøt avhengig av hjelp til å ta seg av'
     }
 };
 
