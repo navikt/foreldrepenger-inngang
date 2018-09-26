@@ -1,0 +1,22 @@
+[
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Nå du blir så syk at du ikke kan ta vare på barnet kan du utsette foreldrepenger med sykemelding som bekrefter at du er for syk til å ivareta barnet."
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "element",
+        "children": [
+            {
+                "type": "span",
+                "text": "Slik vil tidslinjen se ut:"
+            }
+        ]
+    }
+]

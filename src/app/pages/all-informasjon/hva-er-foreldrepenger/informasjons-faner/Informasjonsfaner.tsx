@@ -5,7 +5,6 @@ import InformasjonsFanerLabel from './InformasjonsFanerLabel';
 import InformasjonsFanerBody from './InformasjonFanerBody';
 import CakeSvg from './CakeSvg';
 import CakeFellesSvg from './CakeFellesSvg';
-import Fane from '../fane/Fane';
 
 import './informasjonsfaner.less';
 import translate from '../../../../utils/translate';
