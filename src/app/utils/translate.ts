@@ -129,6 +129,8 @@ const translations = {
         nye_regler_body:
             'Da jeg kom over broen ved oset, begynte solen å helle mot åsranden; snart lånte den aftenskyene sin beste glans, forat de en kort stund kunne fryde seg ved den fremmede prakt.',
 
+        menHvaHvis: 'Men hva hvis...',
+
         slik_går_du_frem_ved_heltidsjobb: 'Slik går du frem ved heltidsjobb',
         slik_går_du_frem_ved_deltidsjobb: 'Slik går du frem ved deltidsjobb',
         barnet_er_innlagt: 'Barnet er innlagt',

@@ -4,6 +4,7 @@ import BEMHelper from '../../../utils/bem';
 import translate from '../../../utils/translate';
 import FarOgMor from './FarOgMor';
 import Foreldrepar from '../../../components/foreldrepar/Foreldrepar';
+import MenHvaHvis from './menHvaHvis/MenHvaHvis';
 
 import './hvaErForeldrepenger.less';
 import Innholdsfaner from '../../../components/innholdsfaner/Innholdsfaner';
@@ -67,6 +68,7 @@ const HvaErForeldrepenger: React.StatelessComponent<Props> = () => {
                 {translate('hva_er_foreldrepenger_ingress')}
             </TypografiBase>
             <Innholdsfaner tabs={tabs} />
+            <MenHvaHvis />
         </div>
     );
 };
