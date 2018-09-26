@@ -65,7 +65,11 @@ const KravTilForeldrepenger = ({
         <div className={cls.element('krav')}>
             <CustomSVG iconRef={checkmarkIcon} size={24} />
             <div className={cls.element('kravtittel')}>
-                <TypografiBase type="undertittel">{tittel}</TypografiBase>
+                <TypografiBase type="undertittel">
+                    <span className={cls.element('kravtittel__innhold')}>
+                        {tittel}
+                    </span>
+                </TypografiBase>
             </div>
             <StrukturertTekst tekst={ingress} />
         </div>
