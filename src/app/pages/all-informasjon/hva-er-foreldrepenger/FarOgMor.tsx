@@ -2,9 +2,12 @@ import * as React from 'react';
 import TypografiBase from 'nav-frontend-typografi';
 import Kalkulator from './kalkulator/Kalkulator';
 import Informasjonsfaner from './informasjons-faner/Informasjonsfaner';
-import FarOgMorSubInformasjonsFaneMorsDel from './informasjons-faner/StrukturertText-komponenter/FarOgMorSubInformasjonsFaneMorsDel';
-import FarOgMorSubInformasjonsFaneFarsDel from './informasjons-faner/StrukturertText-komponenter/FarOgMorSubInformasjonsFaneFarsDel';
-import FarOgMorSubInformasjonsFaneFellesDel from './informasjons-faner/StrukturertText-komponenter/FarOgMorSubInformasjonsFaneFellesDel';
+
+import StrukturertTekst from '../../../components/strukturert-tekst/StrukturertTekst';
+
+const morsdel = require('../../../../content/all-informasjon/hva-er-foreldrepenger/far-og-mor/mors-del.json');
+const f = require('../../../../content/all-informasjon/hva-er-foreldrepenger/far-og-mor/felles-del.json');
+const farsdel = require('../../../../content/all-informasjon/hva-er-foreldrepenger/far-og-mor/fars-del.json');
 
 import translate from '../../../utils/translate';
 
@@ -16,7 +19,7 @@ const informasjonsfaner = [
             tittel: 'til mor',
             icon: 'mor2',
             punktliste: ['Ingen krav til aktivitet', 'Kan ikke overtas av far'],
-            component: <FarOgMorSubInformasjonsFaneMorsDel />
+            component: <StrukturertTekst tekst={morsdel} />
         }
     },
     {
@@ -26,7 +29,7 @@ const informasjonsfaner = [
             tittel: 'til far',
             icon: 'far1',
             punktliste: ['Ingen krav til aktivitet', 'Kan ikke overtas av mor'],
-            component: <FarOgMorSubInformasjonsFaneFellesDel />
+            component: <StrukturertTekst tekst={farsdel} />
         }
     },
     {
@@ -36,7 +39,7 @@ const informasjonsfaner = [
             tittel: 'til begge',
             icon: 'farOgMor2',
             punktliste: ['Aktivitetskrav til mor'],
-            component: <FarOgMorSubInformasjonsFaneFarsDel />
+            component: <StrukturertTekst tekst={f} />
         }
     }
 ];
