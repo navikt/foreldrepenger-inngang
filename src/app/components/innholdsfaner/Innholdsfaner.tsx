@@ -1,8 +1,10 @@
-import * as React from 'react';
+import React from 'react';
 import './innholdsfaner.less';
 import BEMHelper from '../../utils/bem';
 import Fane, { Innholdsfane } from './fane/Fane';
-// import TabIndicator from './tabIndicator/TabIndicator';
+import MediaQuery from 'react-responsive';
+import translate from '../../utils/translate';
+import Select from './select/Select';
 
 const cls = BEMHelper('innholdsfaner');
 
@@ -36,20 +38,34 @@ class Innholdsfaner extends React.Component<Props> {
 
     render = () => (
         <div className={cls.className}>
-            <div className={cls.element('faner')}>
-                {this.props.tabs.map((tab, index) => (
-                    <Fane
-                        tab={tab}
-                        key={tab.label}
-                        mos={this.props.tabs.length > 5}
-                        isSelected={index === this.state.currentTab}
-                        onSelect={() => {
+            <MediaQuery query="(max-width: 799px)">
+                <div className={cls.element('faner')}>
+                    <Select
+                        selected={this.props.tabs[this.state.currentTab].label}
+                        label={translate('din_situasjon')}
+                        choices={this.props.tabs}
+                        onChoiceSelect={(index: number) => {
                             this.onTabSelect(index);
                         }}
                     />
-                ))}
-            </div>
-            <div className={cls.element('tabIndicator')} />
+                </div>
+            </MediaQuery>
+            <MediaQuery query="(min-width: 800px)">
+                <div className={cls.element('faner')}>
+                    {this.props.tabs.map((tab, index) => (
+                        <Fane
+                            tab={tab}
+                            key={tab.label}
+                            mos={this.props.tabs.length > 5}
+                            isSelected={index === this.state.currentTab}
+                            onSelect={() => {
+                                this.onTabSelect(index);
+                            }}
+                        />
+                    ))}
+                </div>
+                <div className={cls.element('tabIndicator')} />
+            </MediaQuery>
             <div>{this.state.componentToRender}</div>
         </div>
     );

@@ -62,14 +62,7 @@ const Chevron = () => (
             fill="#efefef"
         />
         <path d="M0 0h24v24H0z" fill="none" />
-        <line
-            x1="9"
-            x2="15"
-            y1="15"
-            y2="15"
-            stroke="white"
-            stroke-width="2px"
-        />
+        <line x1="9" x2="15" y1="15" y2="15" stroke="white" strokeWidth="2px" />
     </svg>
 );
 

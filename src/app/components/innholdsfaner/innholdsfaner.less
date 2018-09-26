@@ -1,14 +1,17 @@
+@import '../../styles/variables.less';
+
 .innholdsfaner {
     width: 100%;
     max-width: 100%;
-    margin-top: 3rem;
+    margin-top: 1rem;
 
     &__faner {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        margin: 1rem 2rem;
-        max-width: 100%;
+        margin: 1rem 0;
+    }
+
+    &__mobilfane {
+        position: relative;
+        z-index: 1;
     }
 
     &__tabIndicator {
@@ -16,5 +19,26 @@
         background-color: #efefef;
         width: 100%;
         margin: -4px 0 2rem;
+    }
+
+    .skjemaelement__label {
+        font-weight: bold;
+        margin-bottom: 1rem;
+    }
+
+    .skjemaelement .selectContainer {
+        height: 2rem;
+    }
+
+    @media (min-width: @tablet-breakpoint) {
+        margin-top: 3rem;
+
+        &__faner {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            margin: 1rem 2rem;
+            max-width: 100%;
+        }
     }
 }
