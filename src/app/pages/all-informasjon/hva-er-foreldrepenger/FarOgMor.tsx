@@ -6,7 +6,7 @@ import Informasjonsfaner from './informasjons-faner/Informasjonsfaner';
 import StrukturertTekst from '../../../components/strukturert-tekst/StrukturertTekst';
 
 const morsdel = require('../../../../content/all-informasjon/hva-er-foreldrepenger/far-og-mor/mors-del.json');
-const f = require('../../../../content/all-informasjon/hva-er-foreldrepenger/far-og-mor/felles-del.json');
+const fellesdel = require('../../../../content/all-informasjon/hva-er-foreldrepenger/far-og-mor/felles-del.json');
 const farsdel = require('../../../../content/all-informasjon/hva-er-foreldrepenger/far-og-mor/fars-del.json');
 
 import translate from '../../../utils/translate';
@@ -39,7 +39,7 @@ const informasjonsfaner = [
             tittel: 'til begge',
             icon: 'farOgMor2',
             punktliste: ['Aktivitetskrav til mor'],
-            component: <StrukturertTekst tekst={f} />
+            component: <StrukturertTekst tekst={fellesdel} />
         }
     }
 ];
