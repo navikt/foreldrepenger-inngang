@@ -59,7 +59,7 @@
       {
         "key": "url_svangerskap",
         "type": "link",
-        "href": "#"
+        "href": "https://www.nav.no/no/Person/Familie/Venter+du+barn/svangerskapspenger"
       }
     ]
   },
@@ -90,12 +90,12 @@
       {
         "key": "url_inntektsopplysninger",
         "type": "link",
-        "href": "#"
+        "href": "https://www.nav.no/no/Bedrift/Oppfolging/Sykmeldt+arbeidstaker/Sykepenger/Skjemaer+-+inntektsopplysninger+og+refusjon"
       },
       {
         "key": "url_refusjonFraNavTilArbeidsgiver",
         "type": "link",
-        "href": "#"
+        "href": "https://www.nav.no/no/Bedrift/Oppfolging/Sykmeldt+arbeidstaker/Sykepenger/l%C3%B8nn-sykepenger-utover-arbeidsgiverperioden"
       }
     ]
   }
