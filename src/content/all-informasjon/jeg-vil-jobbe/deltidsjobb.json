@@ -1,0 +1,56 @@
+[
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "level": 1,
+        "listItem": "bullet",
+        "children": [
+            {
+                "type": "span",
+                "text": "Avtal med "
+            },
+            {
+                "type": "span",
+                "text": "arbeidsgiveren din",
+                "marks": ["bold"]
+            },
+            {
+                "type": "span",
+                "text": "  når du skal jobbe og stillingsprosenten"
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "level": 1,
+        "listItem": "bullet",
+        "children": [
+            {
+                "type": "span",
+                "text": "Send inn "
+            },
+            {
+                "type": "span",
+                "text": "søknad om å kombinere foreldrepenger",
+                "marks": ["bold"]
+            },
+            {
+                "type": "span",
+                "text": " med delvis jobb"
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "level": 1,
+        "listItem": "bullet",
+        "children": [
+            {
+                "type": "span",
+                "text": "Send inn søknaden før du starter å jobbe"
+            }
+        ]
+    }
+]

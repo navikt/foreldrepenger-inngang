@@ -17,7 +17,7 @@ const AntallBarn = ({
     const childCountIllustration = [];
     for (let i = 0; i < childCount; i++) {
         childCountIllustration.push(
-            <span className={parentCls.element('childContainer')}>
+            <span key={i} className={parentCls.element('childContainer')}>
                 <CustomSVG iconRef={babyIcon} size={20} />
             </span>
         );

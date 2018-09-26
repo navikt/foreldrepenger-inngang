@@ -78,13 +78,13 @@ const translations = {
         hva_er_foreldrepenger_ingress:
             'Foreldrepenger skal erstatte inntekten din når du skal ha foreldrepermisjon. Foreldrepengene kan tas sammenhengende eller kombineres med arbeid eller ferie, men må tas ut før barnet blir 3 år.',
 
-        jobbe: 'Jobbe',
+        jeg_vil_jobbe: 'Jeg vil jobbe',
         beregning: 'Beregning',
         ferie: 'Ferie',
         hjemme_samtidig: 'Hjemme samtidig',
         adopsjon_og_arbeidsgiver: 'Adopsjon og arbeidsgiver',
         sykdom: 'Sykdom',
-        inntekt: 'Inntekt',
+        jeg_har_inntekt: 'Jeg har inntekt',
         arbeidsgiver: 'Arbeidsgiver',
 
         jeg_har_hatt_inntekt: 'Jeg har hatt inntekt',
@@ -129,7 +129,52 @@ const translations = {
         nye_regler_body:
             'Da jeg kom over broen ved oset, begynte solen å helle mot åsranden; snart lånte den aftenskyene sin beste glans, forat de en kort stund kunne fryde seg ved den fremmede prakt.',
 
+
         'menHvaHvis': 'Men hva hvis...'
+
+        slik_går_du_frem_ved_heltidsjobb: 'Slik går du frem ved heltidsjobb',
+        slik_går_du_frem_ved_deltidsjobb: 'Slik går du frem ved deltidsjobb',
+
+        // Sub-faner i foreldrepengekalkulator
+
+        // header
+        'subFanerHeader': 'Slik er permisjonen delt mellom dere',
+
+        // Mors-del
+        'farOgMor.subFaner.Morsdel.linjeEn': 'De første ukene må mor ta ut etter fødselen. De siste fire ukene kan hun ta ut rett etterpå eller pare til senere',
+        'farOgMor.subFamer.Morsdel.linjeTo': ' dere, kan mor ta ut sin del når som helst etter adopsjonsdatoen.',
+        'farOgMor.subFaner.Morsdel.linjeTreDelEn': 'Hvis mor er så ',
+        'farOgMor.subFaner.Morsdel.linjeTreDelTre': ' at hun er helt avhengig av hjelp til å ta seg av barnet, kan far eller medmor overta permisjonen.',
+
+        'farOgMor.subFaner.Morsdel.linkEn': 'Adopterer',
+        'farOgMor.subFaner.Morsdel.linkTo': 'Syk',
+
+        // Felles-del
+        'farOgMor.subFaner.fellesDel.linjeEn': 'Fellesdelen er permisjonsukene som dere kan dele',
+        'farOgMor.subFaner.fellesDel.linjeTo': 'Når far tar ut foreldrepenger fra fellesdelen, må mor være i jobb, studere eller i annen aktivitet.',
+
+        'farOgMor.subFaner.fellesDel.linjeTreDelEn':'Aktivitetskravene',
+        'farOgMor.subFaner.fellesDel.linjeTreDelTo': ' til mor er å enten:',
+
+        'farOgMor.subFaner.fellesDel.punktEn': 'være i arbeid',
+        'farOgMor.subFaner.fellesDel.punktTo': 'ta utdanning på heltid',
+        'farOgMor.subFaner.fellesDel.punktTre': 'kombinere utdanning med arbeid som til sammen blir heltid',
+        'farOgMor.subFaner.fellesDel.punktFire': 'være helt avhengig av hjelp til å ta seg av barnet på grunn av sykdom eller skade',
+        'farOgMor.subFaner.fellesDel.punktFem': 'være innlagt på sykehus eller helseinstitusjon',
+        'farOgMor.subFaner.fellesDel.punktSeks': 'delta i ',
+        'farOgMor.subFaner.fellesDel.punktSeksLink': 'kvalifiseringsprogrammet',
+        'farOgMor.subFaner.fellesDel.punktSyv': 'delta på heltid i introduksjonsprogrammet etter kapittel 2. for nyankomne innvandrere',
+
+        // Fars-del
+        'farOgMor.subFaner.farsDel.linjeEnDelEn':'Far kan ta ut sin del fra ',
+        'farOgMor.subFaner.farsDel.linjeEnBold': 'uke syv etter fødselen ',
+        'farOgMor.subFaner.farsDel.linjeEnDelTre': 'eller vente til barnet er blitt litt større. Ukene kan tas samlet eller deles opp. Far må ta ut sin del senest når fellesdelen er ferdig, eller søke om utsettelse.',
+        'farOgMor.subFaner.farsDel.linjeTo':'Adopterer dere, kan far ta ut sin del når som helst etter ',
+        'farOgMor.subFaner.farsDel.linjeToLink': 'adopsjonsdatoen.',
+        'farOgMor.subFaner.farsDel.linjeTreDelEn': "Mor kan ",
+        'farOgMor.subFaner.farsDel.linjeTreBold':  "overta fars ",
+        'farOgMor.subFaner.farsDel.LinjeTreDelTre': 'del hvis han er så syk at han er heøt avhengig av hjelp til å ta seg av'
+
     }
 };
 
