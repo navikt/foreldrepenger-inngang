@@ -1,3 +1,5 @@
+@import '../../../../styles/variables.less';
+
 .kalkulator {
     background-color: #fbfbfb;
     padding: 2rem;
@@ -6,11 +8,14 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: stretch;
+    flex-wrap: wrap;
 
     &__antallUkerOgBarn {
+        flex: 4;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 1rem;
+        margin-bottom: 2rem;
     }
 
     .typo-normal {
@@ -20,6 +25,14 @@
 
     &__childContainer {
         padding: 0 2px;
+    }
+
+    &__numberOfChildren {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 80px;
     }
 
     &__centerItems {
@@ -43,19 +56,19 @@
         cursor: pointer;
 
         &:focus {
-            box-shadow: 0 0 0 3px #FFBD66;
+            box-shadow: 0 0 0 3px #ffbd66;
             outline: none;
         }
 
         .typo-normal {
             color: black;
         }
-        
+
         .typo-element {
             font-size: 1.25rem;
             font-weight: normal;
         }
-        
+
         &--selected {
             background-color: #dde9f3;
             color: black;
@@ -78,5 +91,11 @@
         width: 56px;
         height: 56px;
         padding: 0.4rem 0;
+    }
+
+    @media (min-width: @mobile-breakpoint) {
+        &__antallUkerOgBarn {
+            margin-bottom: 0;
+        }
     }
 }

@@ -24,7 +24,7 @@ const AntallBarn = ({
     }
 
     return (
-        <div className={parentCls.element('centerItems')}>
+        <div className={parentCls.element('numberOfChildren')}>
             <div>{childCountIllustration}</div>
             <TypografiBase type="normaltekst">{label}</TypografiBase>
         </div>
