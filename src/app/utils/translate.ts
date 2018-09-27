@@ -188,10 +188,21 @@ const translations = {
         'farOgMor.subFaner.farsDel.linjeTo':
             'Adopterer dere, kan far ta ut sin del når som helst etter ',
         'farOgMor.subFaner.farsDel.linjeToLink': 'adopsjonsdatoen.',
+
+        'farOgMor.subFaner.farsDel.linjeTreDelEn': "Mor kan ",
+        'farOgMor.subFaner.farsDel.linjeTreBold':  "overta fars ",
+        'farOgMor.subFaner.farsDel.LinjeTreDelTre': 'del hvis han er så syk at han er helt avhengig av hjelp til å ta seg av',
+
+        // Arbeidsgiver
+        arbeidsgiver_tittel: "Arbeidsgiver",
+        arbeid_skjema_for_inntektsopplysninger_link: "Skjema for inntektsopplysninger for arbeidstaker (pdf)",
+        arbeid_for_refusjoner_fra_nav_link: "Bankkontonummer for refusjoner fra NAV til arbeidsgiver"
+
         'farOgMor.subFaner.farsDel.linjeTreDelEn': 'Mor kan ',
         'farOgMor.subFaner.farsDel.linjeTreBold': 'overta fars ',
         'farOgMor.subFaner.farsDel.LinjeTreDelTre':
             'del hvis han er så syk at han er heøt avhengig av hjelp til å ta seg av'
+
     }
 };
 

@@ -12,6 +12,7 @@ import JegHarHattInntekt from './jeg-har-hatt-inntekt/JegHarHattInntekt';
 import JegVilJobbe from './jeg-vil-jobbe/JegVilJobbe';
 import Sykdom from './sykdom/Sykdom';
 import './allInformasjon.less';
+import Arbeidsgiver from "./arbeidsgiver/Arbeidsgiver";
 
 const cls = BEMHelper('allInformasjon');
 
@@ -52,9 +53,9 @@ const AllInformasjon: React.StatelessComponent<Props> = ({ location }) => {
                     <JegVilJobbe id={sections[3]} />
                     <Sykdom id={sections[4]} />
                     {/* <HjemmeSamtidig id={sections[5]} /> */}
-                    <JegHarHattInntekt id={sections[6]} />
+                     <JegHarHattInntekt id={sections[6]} />
                     {/* <Beregning id={sections[7]} /> */}
-                    {/* <AdopsjonOgArbeidsgiver id={sections[8]} /> */}
+                    <Arbeidsgiver id={sections[8]}/>
                 </div>
             </div>
         </div>

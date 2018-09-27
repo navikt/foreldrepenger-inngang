@@ -1,0 +1,102 @@
+[
+  {
+    "type": "avsnitt",
+    "style": "normaltekst",
+    "children": [
+      {
+        "type": "span",
+        "text": "Arbeidsgiver kan søke om refusjon fra folketrygden dersom han eller hun utbetaler full lønn til deg i permisjonstiden. Dette gjøres ved at arbeidsgiver på skjema for inntektsopplysninger krysser av for at han eller hun krever foreldrepengene utbetalt til seg. "
+      },
+      {
+        "type": "span",
+        "text": "Du må likevel sende egen søknad om foreldrepenger",
+        "marks": ["bold"]
+      },
+      {
+        "type": "span",
+        "text": " for at arbeidsgiveren din skal få refusjon."
+      }
+    ]
+  },
+  {
+    "type": "avsnitt",
+    "style": "normaltekst",
+    "children": [
+      {
+        "type": "span",
+        "text": "Hvis en av dine ansate venter barn, må du kjenne til hva som arbeidsgiver må gjøre:"
+      }
+    ]
+  },
+  {
+    "type": "avsnitt",
+    "style": "normaltekst",
+    "children": [
+      {
+        "type": "span",
+        "text": "På "
+      },
+      {
+        "type": "span",
+        "text": "Altinn.no",
+        "marks": ["external_link"]
+      },
+      {
+        "type": "span",
+        "text": " kan du lese om hvilke plikter du har når en arbeidstaker skal ha permisjon i forbindelse med fødsel eller adopsjon. Du finner også informasjon om "
+      },
+      {
+        "type": "span",
+        "text": "svangerskapspenger",
+        "marks": ["url_svangerskap"]
+      },
+      {
+        "type": "span",
+        "text": " som kan være aktuelt for gravide hvis arbeidet eller forhold på arbeidsplassen medfører risiko for skade på fosteret."
+      }
+    ],
+    "markDefs": [
+      {
+        "key": "url_svangerskap",
+        "type": "link",
+        "href": "https://www.nav.no/no/Person/Familie/Venter+du+barn/svangerskapspenger"
+      }
+    ]
+  },
+  {
+    "type": "avsnitt",
+    "style": "normaltekst",
+    "children": [
+      {
+      "type": "span",
+      "text": "Før NAV kan betale den ansatte eller refundere noe som helst til arbeidsgiver, må du sende inn skjema om "
+      },
+      {
+        "type": "span",
+        "text": "inntektsopplysninger",
+        "marks": ["url_inntektsopplysninger"]
+      },
+      {
+        "type": "span",
+        "text": " til NAV. Se også "
+      },
+      {
+        "type": "span",
+        "text": "Bankkontonummer - refusjoner fra NAV til arbeidsgiver.",
+        "marks": ["url_refusjonFraNavTilArbeidsgiver"]
+      }
+    ],
+    "markDefs": [
+      {
+        "key": "url_inntektsopplysninger",
+        "type": "link",
+        "href": "https://www.nav.no/no/Bedrift/Oppfolging/Sykmeldt+arbeidstaker/Sykepenger/Skjemaer+-+inntektsopplysninger+og+refusjon"
+      },
+      {
+        "key": "url_refusjonFraNavTilArbeidsgiver",
+        "type": "link",
+        "href": "https://www.nav.no/no/Bedrift/Oppfolging/Sykmeldt+arbeidstaker/Sykepenger/l%C3%B8nn-sykepenger-utover-arbeidsgiverperioden"
+      }
+    ]
+  }
+]
