@@ -1,6 +1,9 @@
+@import '../../../../styles/variables.less';
+
 .informasjonsfaner {
+    margin: 0 -1rem;
+
     &__header {
-        margin-top: 32px;
         background-color: #fbfbfb;
         width: 100%;
         font-family: 'Source Sans Pro', sans-serif;
@@ -197,6 +200,14 @@
 
         &__bold {
             font-weight: 900;
+        }
+    }
+
+    @media (min-width: @mobile-breakpoint) {
+        margin: 0;
+
+        &__header {
+            margin-top: 32px;
         }
     }
 }
