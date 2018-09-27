@@ -6,13 +6,15 @@
     grid-gap: 1rem;
     margin-bottom: 2rem;
     padding: 2rem 2rem 2rem 4rem;
+    border-radius: 0;
 
     @media (min-width: @mobile-breakpoint) {
+        border-radius: 4px;
         grid-template-columns: repeat(11, 1fr);
-        
+
         .typo-normal {
             grid-column: span 4;
-    
+
             &:nth-child(3n) {
                 grid-column: span 3;
             }

@@ -1,18 +1,14 @@
+@import '../../../../styles/variables.less';
+
 .informasjonsfaner {
+    margin: 0 -1rem;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #3e3832;
+
     &__header {
-        margin-top: 32px;
         background-color: #fbfbfb;
-        width: 100%;
-        font-family: 'Source Sans Pro', sans-serif;
-        font-size: 16px;
-        font-style: normal;
-        font-stretch: normal;
         line-height: 1.38;
-        letter-spacing: normal;
-        color: #3e3832;
-        padding-top: 32px;
-        padding-bottom: 20px;
-        padding-left: 32px;
+        padding: 2rem 0 1.5rem 2rem;
         font-weight: bold;
         margin-bottom: -4px;
     }
@@ -42,12 +38,10 @@
 
     .nav-frontend-tabs__tab-inner--interaktiv {
         border: solid 0.5px #d9d9d9;
-        border-bottom: none;
+        border-radius: 0;
         width: 100%;
+        top: 1px;
         justify-content: center;
-    }
-
-    .nav-frontend-tabs {
     }
 
     .nav-frontend-tabs__tab-inner--aktiv {
@@ -55,10 +49,10 @@
         width: 100%;
         height: 100%;
         justify-content: center;
-        border-bottom: none;
-        border-left: none;
-        border-right: none;
-        border-top: solid 0.5px #fbfbfb;
+        border-radius: 0;
+        top: 0;
+        border: none;
+        border-top: solid 0.5px transparent;
     }
 
     .InformasjonsfanerBody {
@@ -97,52 +91,29 @@
             font-size: 24px;
             width: 26px;
             height: 31px;
-            font-style: normal;
-            font-stretch: normal;
-            line-height: normal;
-            letter-spacing: normal;
             color: #3e3832;
-            font-family: 'Source Sans Pro', sans-serif;
         }
 
         &__uker {
             width: 29px;
             height: 18px;
-            font-family: 'Source Sans Pro', sans-serif;
             font-size: 14px;
             font-weight: bold;
-            font-style: normal;
-            font-stretch: normal;
-            line-height: normal;
-            letter-spacing: normal;
             text-align: center;
-            color: #3e3832;
         }
 
         &__label {
             width: 58px;
             height: 18px;
-            font-family: 'Source Sans Pro', sans-serif;
             font-size: 14px;
             font-weight: bold;
-            font-style: normal;
-            font-stretch: normal;
-            line-height: normal;
-            letter-spacing: normal;
             text-align: center;
-            color: #3e3832;
             margin-top: 7px;
         }
 
         &__liste {
-            font-family: 'Source Sans Pro', sans-serif;
             font-size: 16px;
             font-weight: 600;
-            font-style: normal;
-            font-stretch: normal;
-            line-height: normal;
-            letter-spacing: normal;
-            color: #3e3832;
         }
     }
 
@@ -150,53 +121,11 @@
         border-bottom: none;
     }
 
-    .FarOgMorSubInformasjonsFaneMorsDel {
-        &__linje {
-            padding-top: 5px;
-            padding-bottom: 5px;
-            font-size: 16px;
-            font-family: 'Source Sans Pro', sans-serif;
-            font-style: normal;
-            font-stretch: normal;
-            line-height: 22px;
-            letter-spacing: normal;
-            color: #3e3832;
-        }
-    }
+    @media (min-width: @mobile-breakpoint) {
+        margin: 0;
 
-    .FarOgMorSubInformasjonsFaneFarsDel {
-        &__linje {
-            padding-top: 5px;
-            padding-bottom: 5px;
-            font-size: 16px;
-            font-family: 'Source Sans Pro', sans-serif;
-            font-style: normal;
-            font-stretch: normal;
-            line-height: 22px;
-            letter-spacing: normal;
-            color: #3e3832;
-        }
-
-        &__bold {
-            font-weight: 900;
-        }
-    }
-
-    .FarOgMorSubInformasjonsFaneFellesDel {
-        &__linje {
-            padding-top: 5px;
-            padding-bottom: 5px;
-            font-size: 16px;
-            font-family: 'Source Sans Pro', sans-serif;
-            font-style: normal;
-            font-stretch: normal;
-            line-height: 22px;
-            letter-spacing: normal;
-            color: #3e3832;
-        }
-
-        &__bold {
-            font-weight: 900;
+        &__header {
+            margin-top: 32px;
         }
     }
 }
