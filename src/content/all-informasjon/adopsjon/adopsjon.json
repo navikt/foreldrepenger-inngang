@@ -1,0 +1,14 @@
+[
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Opptjening av rett til foreldrepenger er den samme som ved fødsel. Det samme gjelder beregningen av foreldrepengene.",
+                "marks": []
+            }
+        ],
+        "markDefs": []
+    }
+]

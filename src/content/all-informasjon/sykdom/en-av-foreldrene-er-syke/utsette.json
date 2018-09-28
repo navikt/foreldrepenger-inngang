@@ -21,14 +21,10 @@
         "level": 1,
         "children": [
             { "type": "span", "text": "Legg ved ", "marks": [] },
+            { "type": "span", "text": "legeerklæring", "marks": ["bold"] },
             {
                 "type": "span",
-                "text": "dokumentasjon på innleggelsen",
-                "marks": ["bold"]
-            },
-            {
-                "type": "span",
-                "text": " fra sykehuset eller helseinstitusjonen",
+                "text": ". Den må beskrive hvordan sykdommen påvirker evnen din til å ta deg av barnet, i hvilken grad du er avhengig av hjelp og hvor lenge sykdommen sannsynligvis vil vare.",
                 "marks": []
             }
         ]
@@ -36,18 +32,13 @@
     {
         "type": "avsnitt",
         "style": "normaltekst",
+        "listItem": "bullet",
+        "level": 1,
         "children": [
             {
                 "type": "span",
-                "text": "Les mer om pleiepenger for pleie av sykt barn",
-                "marks": ["url_Les_mer_om_pleiepenger_for_pleie_av_sykt_barn"]
-            }
-        ],
-        "markDefs": [
-            {
-                "key": "url_Les_mer_om_pleiepenger_for_pleie_av_sykt_barn",
-                "type": "link",
-                "href": "https://www.nav.no/no/Person/Familie/Sykdom+i+familien/pleiepenger+for+pleie+av+sykt+barn#chapter-7"
+                "text": "Hvis du er innlagt, legger du i stedet ved dokumentasjon på innleggelsen fra helseinstitusjonen.",
+                "marks": []
             }
         ]
     }

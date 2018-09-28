@@ -1,0 +1,59 @@
+[
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "listItem": "bullet",
+        "level": 1,
+        "children": [
+            { "type": "span", "text": "Avtal med ", "marks": [] },
+            { "type": "span", "text": "arbeidsgiver", "marks": ["bold"] },
+            {
+                "type": "span",
+                "text": " når du skal avvikle ferien.",
+                "marks": []
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "listItem": "bullet",
+        "level": 1,
+        "children": [
+            { "type": "span", "text": "Skriv inn ", "marks": [] },
+            {
+                "type": "span",
+                "text": "tidspunktet for ferien",
+                "marks": ["bold"]
+            },
+            {
+                "type": "span",
+                "text": " i søknaden din om foreldrepenger.",
+                "marks": []
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "listItem": "bullet",
+        "level": 1,
+        "children": [
+            {
+                "type": "span",
+                "text": "Hvis du ikke vet tidspunktet for ferien når du søker, kan du senere ",
+                "marks": []
+            },
+            {
+                "type": "span",
+                "text": "sende søknad om utsettelse",
+                "marks": ["bold"]
+            },
+            {
+                "type": "span",
+                "text": ". Husk at du må søke utsettelse før ferien din starter.",
+                "marks": []
+            }
+        ]
+    }
+]
