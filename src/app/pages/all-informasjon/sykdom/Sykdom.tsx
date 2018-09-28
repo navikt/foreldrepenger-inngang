@@ -6,29 +6,39 @@ import CustomSVG from '../../../utils/CustomSVG';
 import Foreldrepar from '../../../components/foreldrepar/Foreldrepar';
 import Innholdsfaner from '../../../components/innholdsfaner/Innholdsfaner';
 import StrukturertTekst from '../../../components/strukturert-tekst/StrukturertTekst';
-import Lesmerpanel from 'nav-frontend-lesmerpanel';
-import TypografiBase from 'nav-frontend-typografi';
+import LesMer from '../../../components/les-mer/LesMer';
 
 const pageSvg = require('../../../assets/page.svg').default;
 const cls = BEMHelper('jegVilJobbe');
 const barn = require('../../../assets/barn/barn1.svg').default;
+
 const barnetErInnlagt = require('../../../../content/all-informasjon/sykdom/barnet-er-innlagt/barnet-er-innlagt');
 const barnetErInnlagtForts = require('../../../../content/all-informasjon/sykdom/barnet-er-innlagt/barnet-er-innlagt-fortsettelse');
-const utsette = require('../../../../content/all-informasjon/sykdom/barnet-er-innlagt/utsette');
+const barnetErInnlagtUtsette = require('../../../../content/all-informasjon/sykdom/barnet-er-innlagt/utsette');
+
+const syke = require('../../../../content/all-informasjon/sykdom/en-av-foreldrene-er-syke/en-av-foreldrene-er-syke');
+const sykeUtsette = require('../../../../content/all-informasjon/sykdom/en-av-foreldrene-er-syke/utsette');
+const sykeOverta = require('../../../../content/all-informasjon/sykdom/en-av-foreldrene-er-syke/overta');
 
 const BarnetErInnlagt = () => (
     <div>
         <StrukturertTekst tekst={barnetErInnlagt} />
-        <Lesmerpanel
-            border={true}
-            intro={
-                <TypografiBase type="element">
-                    {translate('slik_går_du_frem_for_å_utsette')}
-                </TypografiBase>
-            }>
-            <StrukturertTekst tekst={utsette} />
-        </Lesmerpanel>
+        <LesMer intro={translate('slik_går_du_frem_for_å_utsette')}>
+            <StrukturertTekst tekst={barnetErInnlagtUtsette} />
+        </LesMer>
         <StrukturertTekst tekst={barnetErInnlagtForts} />
+    </div>
+);
+
+const EnAvForeldreneErSyke = () => (
+    <div>
+        <StrukturertTekst tekst={syke} />
+        <LesMer intro={translate('slik_går_du_frem_for_å_utsette')}>
+            <StrukturertTekst tekst={sykeUtsette} />
+        </LesMer>
+        <LesMer intro={translate('slik_går_du_frem_for_å_overta')}>
+            <StrukturertTekst tekst={sykeOverta} />
+        </LesMer>
     </div>
 );
 
@@ -40,7 +50,7 @@ const tabs = [
     },
     {
         label: 'en_av_foreldrene_er_syk',
-        component: null,
+        component: <EnAvForeldreneErSyke />,
         icon: <Foreldrepar firstParent="far1" secondParent="mor1" />
     }
 ];

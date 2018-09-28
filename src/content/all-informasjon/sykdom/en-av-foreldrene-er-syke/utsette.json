@@ -1,0 +1,45 @@
+[
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "listItem": "bullet",
+        "level": 1,
+        "children": [
+            { "type": "span", "text": "Send inn ", "marks": [] },
+            {
+                "type": "span",
+                "text": "søknad om å utsette",
+                "marks": ["bold"]
+            },
+            { "type": "span", "text": " foreldrepengene", "marks": [] }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "listItem": "bullet",
+        "level": 1,
+        "children": [
+            { "type": "span", "text": "Legg ved ", "marks": [] },
+            { "type": "span", "text": "legeerklæring", "marks": ["bold"] },
+            {
+                "type": "span",
+                "text": ". Den må beskrive hvordan sykdommen påvirker evnen din til å ta deg av barnet, i hvilken grad du er avhengig av hjelp og hvor lenge sykdommen sannsynligvis vil vare.",
+                "marks": []
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "listItem": "bullet",
+        "level": 1,
+        "children": [
+            {
+                "type": "span",
+                "text": "Hvis du er innlagt, legger du i stedet ved dokumentasjon på innleggelsen fra helseinstitusjonen.",
+                "marks": []
+            }
+        ]
+    }
+]

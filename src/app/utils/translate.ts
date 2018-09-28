@@ -210,7 +210,8 @@ const translations = {
             'Eksempel på utsettelse ved uttak av ferie',
         et_annet_eksempel_på_forskyving_av_perioder:
             'Et annet eksempel på forskyving av perioder',
-        ferie_som_gir_rett_til_utsettelse: 'Ferie som gir rett til utsettelse'
+        ferie_som_gir_rett_til_utsettelse: 'Ferie som gir rett til utsettelse',
+        slik_går_du_frem_for_å_overta: 'Slik går du frem for å overta'
     }
 };
 

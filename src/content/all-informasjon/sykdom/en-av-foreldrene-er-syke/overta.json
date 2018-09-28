@@ -1,0 +1,41 @@
+[
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "listItem": "bullet",
+        "level": 1,
+        "children": [
+            {
+                "type": "span",
+                "text": "Send inn søknad om å overta foreldrepengene",
+                "marks": []
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "listItem": "bullet",
+        "level": 1,
+        "children": [
+            {
+                "type": "span",
+                "text": "Legg ved legeerklæring. Den må beskrive hvordan sykdommen påvirker evnen til den andre forelderen til å ta seg av barnet, i hvilken grad han eller hun er avhengig av hjelp og hvor lenge sykdommen sannsynligvis vil vare.",
+                "marks": []
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "listItem": "bullet",
+        "level": 1,
+        "children": [
+            {
+                "type": "span",
+                "text": "Hvis den andre forelderen er innlagt, legger du i stedet ved dokumentasjon på innleggelsen fra helseinstitusjonen.",
+                "marks": []
+            }
+        ]
+    }
+]
