@@ -12,6 +12,7 @@ import JegHarHattInntekt from './jeg-har-hatt-inntekt/JegHarHattInntekt';
 import JegVilJobbe from './jeg-vil-jobbe/JegVilJobbe';
 import Sykdom from './sykdom/Sykdom';
 import Ferie from './ferie/Ferie';
+import Adopsjon from './adopsjon/Adopsjon';
 import './allInformasjon.less';
 import Arbeidsgiver from './arbeidsgiver/Arbeidsgiver';
 
@@ -56,6 +57,7 @@ const AllInformasjon: React.StatelessComponent<Props> = ({ location }) => {
                     {/* <HjemmeSamtidig id={sections[5]} /> */}
                     <JegHarHattInntekt id={sections[6]} />
                     {/* <Beregning id={sections[7]} /> */}
+                    <Adopsjon id={sections[8]} />
                     <Arbeidsgiver id={sections[8]} />
                 </div>
             </div>

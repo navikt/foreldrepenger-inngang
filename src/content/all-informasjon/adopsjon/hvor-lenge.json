@@ -1,0 +1,26 @@
+[
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Foreldrepengeperioden er 46 uker hvis dere velger 100 prosent foreldrepenger, eller 56 uker ved 80 prosent foreldrepenger.",
+                "marks": []
+            }
+        ],
+        "markDefs": []
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Ukene er fordelt mellom foreldrene på samme måte som ved foreldrepenger ved fødsel.",
+                "marks": []
+            }
+        ],
+        "markDefs": []
+    }
+]

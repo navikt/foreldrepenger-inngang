@@ -198,7 +198,7 @@ const translations = {
             'Slik blir permisjonen delt mellom dere',
         slik_blir_din_permisjon: 'Slik blir din permisjon',
 
-        // Arbeidsgiver
+        // Arbeidsgivere
         arbeidsgiver_tittel: 'Arbeidsgiver',
         arbeid_skjema_for_inntektsopplysninger_link:
             'Skjema for inntektsopplysninger for arbeidstaker (pdf)',
@@ -211,7 +211,15 @@ const translations = {
         et_annet_eksempel_på_forskyving_av_perioder:
             'Et annet eksempel på forskyving av perioder',
         ferie_som_gir_rett_til_utsettelse: 'Ferie som gir rett til utsettelse',
-        slik_går_du_frem_for_å_overta: 'Slik går du frem for å overta'
+        slik_går_du_frem_for_å_overta: 'Slik går du frem for å overta',
+
+        // Adopsjon
+        adopsjon: 'Adopsjon',
+        når_starter_foreldrepengeperioden: 'Når starter foreldrepengeperioden',
+        hvor_lenge_kan_du_få_foreldrepenger:
+            'Hvor lenge kan du få foreldrepenger',
+        adopterer_dere_flere_barn: 'Adopterer dere flere barn?',
+        adopsjon_som_ikke_gir_rett: 'Adopsjon som ikke gir rett'
     }
 };
 

@@ -1,7 +1,7 @@
 [
     {
         "type": "tittel",
-        "style": "systemtittel",
+        "style": "undertittel",
         "children": [
             {
                 "type": "span",

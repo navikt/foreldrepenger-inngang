@@ -1,0 +1,60 @@
+[
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Hvis dere adopterer flere barn samtidig, får dere flere uker med foreldrepenger.",
+                "marks": []
+            }
+        ],
+        "markDefs": []
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "listItem": "bullet",
+        "level": 1,
+        "children": [
+            { "type": "span", "text": "Adopterer dere ", "marks": [] },
+            { "type": "span", "text": "to barn", "marks": ["bold"] },
+            {
+                "type": "span",
+                "text": ", får dere 17 uker ekstra ved 100 prosent foreldrepenger og 21 uker ekstra ved 80 prosent foreldrepenger.",
+                "marks": []
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "listItem": "bullet",
+        "level": 1,
+        "children": [
+            { "type": "span", "text": "Adopterer dere ", "marks": [] },
+            {
+                "type": "span",
+                "text": "tre eller flere barn",
+                "marks": ["bold"]
+            },
+            {
+                "type": "span",
+                "text": ", får dere 46 uker ekstra ved 100 prosent foreldrepenger og 56 uker ekstra ved 80 prosent foreldrepenger.",
+                "marks": []
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Det er fellesperioden som utvides.",
+                "marks": []
+            }
+        ],
+        "markDefs": []
+    }
+]

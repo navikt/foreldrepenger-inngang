@@ -2,24 +2,52 @@
     {
         "type": "avsnitt",
         "style": "normaltekst",
-        "level": 1,
         "listItem": "bullet",
+        "level": 1,
         "children": [
+            { "type": "span", "text": "Send inn ", "marks": [] },
             {
                 "type": "span",
-                "text": "Send inn søknad om å utsette foreldrepengene"
+                "text": "søknad om å utsette",
+                "marks": ["bold"]
+            },
+            { "type": "span", "text": " foreldrepengene", "marks": [] }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "listItem": "bullet",
+        "level": 1,
+        "children": [
+            { "type": "span", "text": "Legg ved ", "marks": [] },
+            {
+                "type": "span",
+                "text": "dokumentasjon på innleggelsen",
+                "marks": ["bold"]
+            },
+            {
+                "type": "span",
+                "text": " fra sykehuset eller helseinstitusjonen",
+                "marks": []
             }
         ]
     },
     {
         "type": "avsnitt",
         "style": "normaltekst",
-        "level": 1,
-        "listItem": "bullet",
         "children": [
             {
                 "type": "span",
-                "text": "Legg ved dokumentasjon på innleggelsen fra sykehuset eller helseinstitusjonen"
+                "text": "Les mer om pleiepenger for pleie av sykt barn",
+                "marks": ["url_Les_mer_om_pleiepenger_for_pleie_av_sykt_barn"]
+            }
+        ],
+        "markDefs": [
+            {
+                "key": "url_Les_mer_om_pleiepenger_for_pleie_av_sykt_barn",
+                "type": "link",
+                "href": "https://www.nav.no/no/Person/Familie/Sykdom+i+familien/pleiepenger+for+pleie+av+sykt+barn#chapter-7"
             }
         ]
     }
