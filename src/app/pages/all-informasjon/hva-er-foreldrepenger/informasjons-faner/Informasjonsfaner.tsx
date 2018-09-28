@@ -18,7 +18,8 @@ interface Fane {
 
     bodyProps: {
         tittel: string;
-        icon: string;
+        icon: string | React.ReactNode;
+        antallUker: string;
         punktliste: string[];
         component: ReactNode;
     };
@@ -30,7 +31,6 @@ interface Props {
 
 class Informasjonsfaner extends React.Component<Props> {
     state: {
-        // TabBody: React.ReactNode;
         currentTab: number;
         color: any;
     };
@@ -54,25 +54,31 @@ class Informasjonsfaner extends React.Component<Props> {
     render = () => (
         <div className={cls.className}>
             <div className={cls.element('header')}>
-                {translate('subFanerHeader')}
+                {this.props.tabs.length > 1
+                    ? translate('slik_blir_permisjonen_delt_mellom_dere')
+                    : translate('slik_blir_din_permisjon')}
             </div>
-            <Tabs
-                tabs={this.props.tabs.map((tab, index) => {
-                    const Cake = tab.faneIcon ? CakeSvg : CakeFellesSvg;
-                    const color =
-                        index === this.state.currentTab ? '#3e3832' : '#0067c5';
+            {this.props.tabs.length > 1 && (
+                <Tabs
+                    tabs={this.props.tabs.map((tab, index) => {
+                        const Cake = tab.faneIcon ? CakeSvg : CakeFellesSvg;
+                        const color =
+                            index === this.state.currentTab
+                                ? '#3e3832'
+                                : '#0067c5';
 
-                    return {
-                        label: (
-                            <InformasjonsFanerLabel
-                                label={tab.faneLabel}
-                                icon={<Cake color={color} />}
-                            />
-                        )
-                    };
-                })}
-                onChange={this.onTabChange}
-            />
+                        return {
+                            label: (
+                                <InformasjonsFanerLabel
+                                    label={tab.faneLabel}
+                                    icon={<Cake color={color} />}
+                                />
+                            )
+                        };
+                    })}
+                    onChange={this.onTabChange}
+                />
+            )}
             <InformasjonsFanerBody
                 {...this.props.tabs[this.state.currentTab].bodyProps}
             />

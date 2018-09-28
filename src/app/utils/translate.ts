@@ -194,6 +194,10 @@ const translations = {
         'farOgMor.subFaner.farsDel.LinjeTreDelTre':
             'del hvis han er så syk at han er helt avhengig av hjelp til å ta seg av',
 
+        slik_blir_permisjonen_delt_mellom_dere:
+            'Slik blir permisjonen delt mellom dere',
+        slik_blir_din_permisjon: 'Slik blir din permisjon',
+
         // Arbeidsgiver
         arbeidsgiver_tittel: 'Arbeidsgiver',
         arbeid_skjema_for_inntektsopplysninger_link:

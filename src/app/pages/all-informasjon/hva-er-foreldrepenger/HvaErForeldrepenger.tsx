@@ -3,6 +3,10 @@ import TypografiBase from 'nav-frontend-typografi';
 import BEMHelper from '../../../utils/bem';
 import translate from '../../../utils/translate';
 import FarOgMor from './FarOgMor';
+import MorOgMor from './MorOgMor';
+import BareFarHarRett from './BareFarHarRett';
+import BareMorHarRett from './BareMorHarRett';
+import Aleneomsorg from './Aleneomsorg';
 import Foreldrepar from '../../../components/foreldrepar/Foreldrepar';
 import MenHvaHvis from './menHvaHvis/MenHvaHvis';
 
@@ -11,7 +15,6 @@ import Innholdsfaner from '../../../components/innholdsfaner/Innholdsfaner';
 import { Innholdsfane } from '../../../components/innholdsfaner/fane/Fane';
 
 const cls = BEMHelper('hvaErForeldrepenger');
-
 const tabs: Innholdsfane[] = [
     {
         label: 'farOgMor',
@@ -26,7 +29,7 @@ const tabs: Innholdsfane[] = [
     {
         label: 'morOgMedmor',
         icon: <Foreldrepar firstParent="mor2" secondParent="medmor2" />,
-        component: null
+        component: <MorOgMor />
     },
     {
         label: 'bareFarHarRett',
@@ -37,14 +40,14 @@ const tabs: Innholdsfane[] = [
                 variant={1}
             />
         ),
-        component: null
+        component: <BareFarHarRett />
     },
     {
         label: 'bareMorHarRett',
         icon: (
             <Foreldrepar firstParent="far2" secondParent="mor1" variant={2} />
         ),
-        component: null
+        component: <BareMorHarRett />
     },
     {
         label: 'aleneomsorg',
@@ -55,7 +58,7 @@ const tabs: Innholdsfane[] = [
                 variant={3}
             />
         ),
-        component: null
+        component: <Aleneomsorg />
     }
 ];
 
