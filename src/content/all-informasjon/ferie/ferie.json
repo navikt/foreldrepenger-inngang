@@ -1,0 +1,75 @@
+[
+    {
+        "type": "avsnitt",
+        "style": "undertittel",
+        "children": [
+            {
+                "type": "span",
+                "text": "Hva hvis jeg skal ta ut ferie?",
+                "marks": []
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Du har rett til å ta ut ferie mens du er i foreldrepermisjon. Du kan velge mellom å:",
+                "marks": []
+            }
+        ],
+        "markDefs": []
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "listItem": "bullet",
+        "level": 1,
+        "children": [
+            {
+                "type": "span",
+                "text": "avvikle ferien samtidig som du får foreldrepenger",
+                "marks": []
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "listItem": "bullet",
+        "level": 1,
+        "children": [
+            {
+                "type": "span",
+                "text": "utsette foreldrepengene til ferien din er ferdig",
+                "marks": []
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            { "type": "span", "text": "Bruk ", "marks": [] },
+            {
+                "type": "span",
+                "text": "foreldrepengeplanleggeren",
+                "marks": ["url_foreldrepengeplanleggeren"]
+            },
+            {
+                "type": "span",
+                "text": " for å se hvordan du kan utsette perioder med foreldrepenger.",
+                "marks": []
+            }
+        ],
+        "markDefs": [
+            {
+                "key": "url_foreldrepengeplanleggeren",
+                "type": "link",
+                "href": "https://tjenester.nav.no/foreldrepengeplanlegger"
+            }
+        ]
+    }
+]

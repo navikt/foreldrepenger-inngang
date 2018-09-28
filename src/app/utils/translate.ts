@@ -203,7 +203,14 @@ const translations = {
         arbeid_skjema_for_inntektsopplysninger_link:
             'Skjema for inntektsopplysninger for arbeidstaker (pdf)',
         arbeid_for_refusjoner_fra_nav_link:
-            'Bankkontonummer for refusjoner fra NAV til arbeidsgiver'
+            'Bankkontonummer for refusjoner fra NAV til arbeidsgiver',
+
+        // Ferie
+        eksempel_på_utsettelse_ved_uttak_av_ferie:
+            'Eksempel på utsettelse ved uttak av ferie',
+        et_annet_eksempel_på_forskyving_av_perioder:
+            'Et annet eksempel på forskyving av perioder',
+        ferie_som_gir_rett_til_utsettelse: 'Ferie som gir rett til utsettelse'
     }
 };
 

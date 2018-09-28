@@ -1,0 +1,43 @@
+[
+    {
+        "type": "avsnitt",
+        "style": "undertittel",
+        "children": [
+            {
+                "type": "span",
+                "text": "Feriepenger av foreldrepenger",
+                "marks": []
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Arbeidstakere har rett til feriepenger av foreldrepenger. Hvis arbeidsgiver betaler lønn under permisjon, utbetales feriepengene til arbeidsgiveren.",
+                "marks": []
+            }
+        ],
+        "markDefs": []
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Les mer om feriepenger av foreldrepenger",
+                "marks": ["url_Les_mer_om_feriepenger_av_foreldrepenger"]
+            }
+        ],
+        "markDefs": [
+            {
+                "key": "url_Les_mer_om_feriepenger_av_foreldrepenger",
+                "type": "link",
+                "href": "https://www.nav.no/no/NAV+og+samfunn/Kontakt+NAV/Utbetalinger/Snarveier/ferie-og-feriepenger#chapter-3"
+            }
+        ]
+    }
+]
