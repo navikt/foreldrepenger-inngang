@@ -5,7 +5,7 @@
         "children": [
             {
                 "type": "span",
-                "text": "Far kan ta ut sin del fra ",
+                "text": "Medmor kan ta ut sin del fra ",
                 "marks": []
             },
             {
@@ -15,7 +15,7 @@
             },
             {
                 "type": "span",
-                "text": " eller vente til barnet er blitt litt større. Ukene kan tas samlet, deles opp og kombineres med delvis arbeid. ",
+                "text": " eller vente til barnet er blitt litt større. Ukene kan tas samlet eller deles opp.",
                 "marks": []
             }
         ],
@@ -25,7 +25,7 @@
         "type": "avsnitt",
         "style": "normaltekst",
         "children": [
-            { "type": "span", "text": "Far må ta ut sin del ", "marks": [] },
+            { "type": "span", "text": "Medmor må ta ut sin del ", "marks": [] },
             {
                 "type": "span",
                 "text": "senest når fellesdelen er ferdig",
@@ -44,10 +44,10 @@
         "style": "normaltekst",
         "children": [
             { "type": "span", "text": " ", "marks": [] },
-            { "type": "span", "text": "Adopterer", "marks": ["bold"] },
+            { "type": "span", "text": "Adopterer dere", "marks": ["bold"] },
             {
                 "type": "span",
-                "text": " dere, kan far ta ut sin del når som helt etter adopsjonsdatoen.",
+                "text": ", kan medmor ta ut sin del når som helst etter adopsjonsdatoen.",
                 "marks": []
             }
         ],
@@ -57,11 +57,11 @@
         "type": "avsnitt",
         "style": "normaltekst",
         "children": [
-            { "type": "span", "text": "Hvis far er ", "marks": [] },
+            { "type": "span", "text": "Hvis medmor er ", "marks": [] },
             { "type": "span", "text": "så syk", "marks": ["bold"] },
             {
                 "type": "span",
-                "text": " at han er helt avhengig av hjelp til å ta seg av barnet, kan mor søke om å overta fars del.  ",
+                "text": " at hun er helt avhengig av hjelp til å ta seg av barnet, kan mor søke om å overta mors del.",
                 "marks": []
             }
         ],

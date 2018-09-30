@@ -11,8 +11,10 @@ import ForÅFåForeldrepenger from './for-å-få-foreldrepenger/ForÅFåForeldre
 import JegHarHattInntekt from './jeg-har-hatt-inntekt/JegHarHattInntekt';
 import JegVilJobbe from './jeg-vil-jobbe/JegVilJobbe';
 import Sykdom from './sykdom/Sykdom';
+import Ferie from './ferie/Ferie';
+import Adopsjon from './adopsjon/Adopsjon';
 import './allInformasjon.less';
-import Arbeidsgiver from "./arbeidsgiver/Arbeidsgiver";
+import Arbeidsgiver from './arbeidsgiver/Arbeidsgiver';
 
 const cls = BEMHelper('allInformasjon');
 
@@ -49,13 +51,14 @@ const AllInformasjon: React.StatelessComponent<Props> = ({ location }) => {
                     <ForÅFåForeldrepenger id={sections[0]} />
                     <NyeRegler />
                     <HvaErForeldrepengerWrapper id={sections[1]} />
-                    {/* <Ferie id={sections[2]} /> */}
+                    <Ferie id={sections[2]} />
                     <JegVilJobbe id={sections[3]} />
                     <Sykdom id={sections[4]} />
                     {/* <HjemmeSamtidig id={sections[5]} /> */}
-                     <JegHarHattInntekt id={sections[6]} />
+                    <JegHarHattInntekt id={sections[6]} />
                     {/* <Beregning id={sections[7]} /> */}
-                    <Arbeidsgiver id={sections[8]}/>
+                    <Adopsjon id={sections[8]} />
+                    <Arbeidsgiver id={sections[8]} />
                 </div>
             </div>
         </div>

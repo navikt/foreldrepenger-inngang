@@ -1,0 +1,26 @@
+[
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Foreldrepengeperioden din starter når barnet er født eller på adopsjonsdatoen. ",
+                "marks": []
+            }
+        ],
+        "markDefs": []
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Hvis mor har fått foreldrepenger før du blir alene om omsorgen, kan du få foreldrepenger for perioden som er igjen.",
+                "marks": []
+            }
+        ],
+        "markDefs": []
+    }
+]

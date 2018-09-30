@@ -5,9 +5,21 @@
         "children": [
             {
                 "type": "span",
-                "text": "Fellesdelen er permisjonsukene med foreldrepenger som dere kan dele. ",
+                "text": "Når bare du som far har rett til foreldrepenger, må du starte foreldrepengeperioden din fra ",
                 "marks": []
-            }
+            },
+            {
+                "type": "span",
+                "text": "uke syv etter fødselen",
+                "marks": ["bold"]
+            },
+            {
+                "type": "span",
+                "text": ". Adopterer dere, starter foreldrepengeperioden din fra ",
+                "marks": []
+            },
+            { "type": "span", "text": "adopsjonsdatoen", "marks": ["bold"] },
+            { "type": "span", "text": ". ", "marks": [] }
         ],
         "markDefs": []
     },
@@ -17,7 +29,21 @@
         "children": [
             {
                 "type": "span",
-                "text": "Når far tar ut foreldrepengene fra fellesdelen, må mor jobbe, studere eller være i annen godkjent aktivitet. ",
+                "text": "Starter du senere, mister du dager. Hvis det ikke passer å ta full permisjon, kan du ta ut foreldrepengene dine i kombinasjon med delvis arbeid.  ",
+                "marks": []
+            }
+        ],
+        "markDefs": []
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            { "type": "span", "text": "Hvis mor er ", "marks": [] },
+            { "type": "span", "text": "uføretrygdet", "marks": ["bold"] },
+            {
+                "type": "span",
+                "text": ", kan du ta ut inntil 15 uker med foreldrepenger før det stilles krav til hva mor gjør. ",
                 "marks": []
             }
         ],
@@ -36,7 +62,17 @@
         "children": [
             {
                 "type": "span",
-                "text": "Det er krav til hva mor gjør når far bruker fellesdelen. Mor må enten ",
+                "text": "Både når du tar ut foreldrepenger eller utsetter på grunn av arbeid, er det ",
+                "marks": []
+            },
+            {
+                "type": "span",
+                "text": "krav til hva mor gjør",
+                "marks": ["bold"]
+            },
+            {
+                "type": "span",
+                "text": " i samme periode. Hun må enten",
                 "marks": []
             }
         ],

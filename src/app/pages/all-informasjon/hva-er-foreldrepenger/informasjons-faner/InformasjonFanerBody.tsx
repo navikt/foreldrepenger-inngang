@@ -6,7 +6,8 @@ const cls = BEMHelper('InformasjonsfanerBody');
 
 interface Props {
     tittel: string;
-    icon: string;
+    icon: string | any;
+    antallUker: string;
     punktliste: string[];
     component: ReactNode;
 }
@@ -14,19 +15,34 @@ interface Props {
 const InformasjonsFanerBody: React.StatelessComponent<Props> = ({
     tittel,
     icon,
+    antallUker,
     punktliste,
     component
 }) => {
-    const svg = require(`../../../../assets/foreldre/${icon}.svg`).default;
+    let svg;
+    if (typeof icon === 'string') {
+        svg = require(`../../../../assets/foreldre/${icon}.svg`).default;
+    }
+
     return (
         <div className={cls.className}>
             <div className={cls.element('header')}>
                 <div className={cls.element('tid')}>
-                    <div className={cls.element('antallUker')}>15</div>
+                    <div className={cls.element('antallUker')}>
+                        {antallUker}
+                    </div>
                     <div className={cls.element('uker')}>uker</div>
                 </div>
                 <div className={cls.element('Icon')}>
-                    <CustomSVG className="Icon__svg" iconRef={svg} size={42} />
+                    {svg ? (
+                        <CustomSVG
+                            className="Icon__svg"
+                            iconRef={svg}
+                            size={42}
+                        />
+                    ) : (
+                        icon
+                    )}
                     <div className={cls.element('label')}>{tittel}</div>
                 </div>
 

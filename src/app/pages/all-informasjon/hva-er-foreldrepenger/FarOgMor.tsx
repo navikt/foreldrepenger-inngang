@@ -1,15 +1,13 @@
 import * as React from 'react';
-import TypografiBase from 'nav-frontend-typografi';
 import Kalkulator from './kalkulator/Kalkulator';
 import Informasjonsfaner from './informasjons-faner/Informasjonsfaner';
 
 import StrukturertTekst from '../../../components/strukturert-tekst/StrukturertTekst';
 
+const farOgMorContent = require('../../../../content/all-informasjon/hva-er-foreldrepenger/far-og-mor/far-og-mor.json');
 const morsdel = require('../../../../content/all-informasjon/hva-er-foreldrepenger/far-og-mor/mors-del.json');
 const fellesdel = require('../../../../content/all-informasjon/hva-er-foreldrepenger/far-og-mor/felles-del.json');
 const farsdel = require('../../../../content/all-informasjon/hva-er-foreldrepenger/far-og-mor/fars-del.json');
-
-import translate from '../../../utils/translate';
 
 const informasjonsfaner = [
     {
@@ -18,6 +16,7 @@ const informasjonsfaner = [
         bodyProps: {
             tittel: 'til mor',
             icon: 'mor2',
+            antallUker: '15',
             punktliste: ['Ingen krav til aktivitet', 'Kan ikke overtas av far'],
             component: <StrukturertTekst tekst={morsdel} />
         }
@@ -28,6 +27,7 @@ const informasjonsfaner = [
         bodyProps: {
             tittel: 'til far',
             icon: 'far1',
+            antallUker: '15',
             punktliste: ['Ingen krav til aktivitet', 'Kan ikke overtas av mor'],
             component: <StrukturertTekst tekst={farsdel} />
         }
@@ -38,6 +38,7 @@ const informasjonsfaner = [
         bodyProps: {
             tittel: 'til begge',
             icon: 'farOgMor2',
+            antallUker: '16/26',
             punktliste: ['Aktivitetskrav til mor'],
             component: <StrukturertTekst tekst={fellesdel} />
         }
@@ -47,12 +48,7 @@ const informasjonsfaner = [
 const FarOgMor = () => {
     return (
         <div>
-            <TypografiBase type="undertittel">
-                {translate('lengde_på_foreldreperioden')}
-            </TypografiBase>
-            <TypografiBase type="normaltekst">
-                {translate('lengde_på_foreldreperioden_body')}
-            </TypografiBase>
+            <StrukturertTekst tekst={farOgMorContent} />
             <Kalkulator />
             <Informasjonsfaner tabs={informasjonsfaner} />
         </div>
