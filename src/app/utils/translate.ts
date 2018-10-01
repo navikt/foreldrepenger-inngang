@@ -29,7 +29,7 @@ const translations = {
         // Route translations
         route_: 'Foreldrepenger, engangsstønad og svangerskapspenger',
         'route_hva-soker-du': 'Hva vil du søke om',
-        'route_all-informasjon': 'All informasjon',
+        'route_om-foreldrepenger': 'Om foreldrepenger',
         route_foreldrepenger: 'Foreldrepenger',
 
         hva_vil_du_søke_om: 'Hva vil du søke om?',

@@ -2,7 +2,7 @@ import * as React from 'react';
 import Informasjonstavle from './pages/informasjonstavle/Informasjonstavle';
 import HvaSøkerDu from './pages/hva-søker-du/HvaSøkerDu';
 import SøkForeldrepenger from './pages/søk-foreldrepenger/SøkForeldrepenger';
-import AllInformasjon from './pages/all-informasjon/AllInformasjon';
+import AllInformasjon from './pages/om-foreldrepenger/OmForeldrepenger';
 import { Route, Redirect, Switch, withRouter } from 'react-router-dom';
 
 const App = () => {
@@ -28,11 +28,17 @@ const App = () => {
             />
             <Route
                 exact={true}
-                path="/all-informasjon"
+                path="/om-foreldrepenger"
                 component={AllInformasjon}
-                key="all-informasjon"
+                key="om-foreldrepenger"
             />
-            <Redirect to="/hva-soker-du" />
+            <Route
+                exact={true}
+                path="/om-engangsstonad"
+                component={AllInformasjon}
+                key="om-engangsstonad"
+            />
+            <Redirect to="/" />
         </Switch>
     );
 };
