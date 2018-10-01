@@ -94,6 +94,67 @@
         padding: 0.4rem 0;
     }
 
+
+    @media screen and (-ms-high-contrast: active),
+    (-ms-high-contrast: none) {
+
+        &__antallUkerOgBarn {
+            display: -ms-grid;
+            display: grid;
+            grid-gap: 1rem;
+            -ms-grid-columns: 1fr 1fr 1fr;
+        }
+
+        .typo-normal:nth-child(2) {
+            -ms-grid-column: 2;
+        }
+
+        .typo-normal:nth-child(3) {
+            -ms-grid-column: 3;
+        }
+
+        .kalkulator__numberOfChildren:nth-child(4) {
+            -ms-grid-column: 1;
+            -ms-grid-row: 3;
+        }
+
+        .kalkulator__centerItems:nth-child(5) {
+            -ms-grid-column: 2;
+            -ms-grid-row: 3;
+        }
+        .kalkulator__centerItems:nth-child(6) {
+            -ms-grid-column: 3;
+            -ms-grid-row: 3;
+        }
+        .kalkulator__numberOfChildren:nth-child(7) {
+            -ms-grid-column: 1;
+            -ms-grid-row: 4;
+        }
+
+        .kalkulator__centerItems:nth-child(8) {
+            -ms-grid-column: 2;
+            -ms-grid-row: 4;
+        }
+        .kalkulator__centerItems:nth-child(9) {
+            -ms-grid-column: 3;
+            -ms-grid-row: 4;
+        }
+        .kalkulator__numberOfChildren:nth-child(10) {
+            -ms-grid-column: 1;
+            -ms-grid-row: 5;
+        }
+
+        .kalkulator__centerItems:nth-child(11) {
+            -ms-grid-column: 2;
+            -ms-grid-row: 5;
+        }
+        .kalkulator__centerItems:nth-child(12) {
+            -ms-grid-column: 3;
+            -ms-grid-row: 5;
+        }
+
+    }
+
     @media (min-width: @mobile-breakpoint) {
         margin: 1rem 0 0;
 

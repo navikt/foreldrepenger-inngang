@@ -5,7 +5,7 @@
     flex-direction: column;
     align-items: center;
     margin-bottom: 32px;
-  
+
     &__header {
         display: flex;
         flex-direction: column;
@@ -55,7 +55,7 @@
     }
 
     &__filler {
-            height: 32px;
+        height: 32px;
 
         &--small {
             height: 20px;
@@ -81,7 +81,6 @@
     }
 
     @media (min-width: @mobile-breakpoint) {
-
         &__button-container {
             flex-direction: row;
         }
@@ -99,16 +98,31 @@
                 align-self: flex-start;
             }
         }
-        
 
         &__knapp {
             align-self: center;
+        }
+
+        @media screen and (-ms-high-contrast: active),
+            (-ms-high-contrast: none) {
+            .buttonPanel {
+                max-width: 100%;
+
+                &__knapp {
+                    width: auto;
+                }
+            }
+
+            .buttonPanel > .userHelp {
+                max-width: 100%;
+                padding-right: 80px;
+            }
         }
     }
 
     @media (min-width: @tablet-breakpoint) {
         &__button-container {
-        flex-direction: row;
+            flex-direction: row;
         }
 
         &__body {

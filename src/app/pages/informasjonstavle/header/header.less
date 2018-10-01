@@ -4,13 +4,13 @@
     align-self: stretch;
     background-color: #e0dae7;
     border-bottom: 4px solid #826ba1;
-    
+
     display: flex;
     flex-direction: row;
     align-items: stretch;
     justify-content: center;
     overflow: hidden;
-    
+
     &__content {
         flex: 1;
         max-width: 900px;
@@ -26,7 +26,7 @@
         flex-direction: column;
         justify-content: space-evenly;
         margin: 1rem 1rem 1.4rem;
-        
+
         .typo-sidetittel {
             margin-bottom: 1rem;
             font-size: 2.25rem;
@@ -39,6 +39,35 @@
         display: flex;
         flex-direction: row;
         justify-content: flex-end;
+    }
+
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+        .header {
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -ms-flex-direction: row;
+            -webkit-align-items: center;
+            -ms-flex-align: center;
+            align-items: center;
+
+            -ms-box-orient: horizontal;
+            display: -webkit-box;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: -moz-flex;
+            display: -webkit-flex;
+            display: flex;
+
+            &__content {
+                -webkit-justify-content: space-around;
+                justify-content: center;
+
+                -ms-flex: 1 100%;
+                -webkit-flex: 1;
+                flex-grow: 1;
+            }
+        }
     }
 
     @media (min-width: @mobile-breakpoint) {
