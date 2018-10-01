@@ -1,5 +1,5 @@
 import * as React from 'react';
-import PanelMedIllustrasjon from '../panel-med-illustrasjon/PanelMedIllustrasjon';
+import PanelMedIllustrasjon from '../../../components/panel-med-illustrasjon/PanelMedIllustrasjon';
 import translate from '../../../utils/translate';
 import StrukturertTekst from '../../../components/strukturert-tekst/StrukturertTekst';
 import BEMHelper from '../../../utils/bem';
@@ -24,7 +24,7 @@ const Arbeidsgiver = ({ id }: { id: string }) => {
             <div className={cls.element('links')}>
                 <Lenke
                     href={'#'}
-                    txt={"arbeid_skjema_for_inntektsopplysninger_link"}
+                    txt={'arbeid_skjema_for_inntektsopplysninger_link'}
                 />
                 <Lenke href={'#'} txt={''} />
             </div>

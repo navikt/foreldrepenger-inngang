@@ -1,5 +1,5 @@
 import * as React from 'react';
-import PanelMedIllustrasjon from '../panel-med-illustrasjon/PanelMedIllustrasjon';
+import PanelMedIllustrasjon from '../../../components/panel-med-illustrasjon/PanelMedIllustrasjon';
 import BEMHelper from '../../../utils/bem';
 import translate from '../../../utils/translate';
 import CustomSVG from '../../../utils/CustomSVG';

@@ -30,7 +30,7 @@ const MerInformasjon = () => {
                 <MerInformasjonLink
                     title={translate('engangsstønad')}
                     body={translate('mer_informasjon_engangsstønad')}
-                    url="/om-foreldrepenger"
+                    url="/om-engangsstonad"
                     urlIsExternal={false}
                 />
                 <MerInformasjonLink
