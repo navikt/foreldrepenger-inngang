@@ -189,32 +189,21 @@ const translations = {
             'Adopterer dere, kan far ta ut sin del når som helst etter ',
         'farOgMor.subFaner.farsDel.linjeToLink': 'adopsjonsdatoen.',
 
-
-        'farOgMor.subFaner.farsDel.linjeTreDelEn': "Mor kan ",
-        'farOgMor.subFaner.farsDel.linjeTreBold':  "overta fars ",
-        'farOgMor.subFaner.farsDel.LinjeTreDelTre': 'del hvis han er så syk at han er helt avhengig av hjelp til å ta seg av',
-
-        // Arbeidsgiver
-        arbeidsgiver_tittel: "Arbeidsgiver",
-        arbeid_skjema_for_inntektsopplysninger_link: "Skjema for inntektsopplysninger for arbeidstaker (pdf)",
-        arbeid_for_refusjoner_fra_nav_link: "Bankkontonummer for refusjoner fra NAV til arbeidsgiver",
-
-
         'farOgMor.subFaner.farsDel.linjeTreDelEn': 'Mor kan ',
         'farOgMor.subFaner.farsDel.linjeTreBold': 'overta fars ',
         'farOgMor.subFaner.farsDel.LinjeTreDelTre':
             'del hvis han er så syk at han er helt avhengig av hjelp til å ta seg av',
 
-        slik_blir_permisjonen_delt_mellom_dere:
-            'Slik blir permisjonen delt mellom dere',
-        slik_blir_din_permisjon: 'Slik blir din permisjon',
-
-        // Arbeidsgivere
+        // Arbeidsgiver
         arbeidsgiver_tittel: 'Arbeidsgiver',
         arbeid_skjema_for_inntektsopplysninger_link:
             'Skjema for inntektsopplysninger for arbeidstaker (pdf)',
         arbeid_for_refusjoner_fra_nav_link:
             'Bankkontonummer for refusjoner fra NAV til arbeidsgiver',
+
+        slik_blir_permisjonen_delt_mellom_dere:
+            'Slik blir permisjonen delt mellom dere',
+        slik_blir_din_permisjon: 'Slik blir din permisjon',
 
         // Ferie
         eksempel_på_utsettelse_ved_uttak_av_ferie:
@@ -231,7 +220,6 @@ const translations = {
             'Hvor lenge kan du få foreldrepenger',
         adopterer_dere_flere_barn: 'Adopterer dere flere barn?',
         adopsjon_som_ikke_gir_rett: 'Adopsjon som ikke gir rett'
-
     }
 };
 
