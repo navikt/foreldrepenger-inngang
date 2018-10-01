@@ -1,0 +1,65 @@
+[
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Hvis du vil ha opphold i foreldrepermisjonen mens du har ferie, kan du utsette foreldrepengene dine med:",
+                "marks": []
+            }
+        ],
+        "markDefs": []
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "listItem": "bullet",
+        "level": 1,
+        "children": [
+            { "type": "span", "text": "ferie inntil ", "marks": [] },
+            {
+                "type": "span",
+                "text": "fire uker og én dag",
+                "marks": ["bold"]
+            },
+            { "type": "span", "text": " for hvert kalenderår", "marks": [] }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "listItem": "bullet",
+        "level": 1,
+        "children": [
+            { "type": "span", "text": "overført ferie", "marks": ["bold"] },
+            { "type": "span", "text": " fra i fjor", "marks": [] }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "listItem": "bullet",
+        "level": 1,
+        "children": [
+            { "type": "span", "text": "inntil ti ", "marks": [] },
+            {
+                "type": "span",
+                "text": "feriedager fra neste år",
+                "marks": ["bold"]
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Når du har ferie, stanser utbetalingen av foreldrepenger til ferien din er ferdig.",
+                "marks": []
+            }
+        ],
+        "markDefs": []
+    }
+]

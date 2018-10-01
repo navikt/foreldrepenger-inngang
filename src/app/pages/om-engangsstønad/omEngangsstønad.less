@@ -1,0 +1,32 @@
+@import '../../styles/variables.less';
+
+.omEngangsstønad {
+    &__kravContainer {
+        max-width: 320px;
+    }
+
+    &__krav {
+        text-align: center;
+
+        &:nth-child(2) {
+            margin-top: 2rem;
+        }
+    }
+
+    @media (min-width: @mobile-breakpoint) {
+        &__kravContainer {
+            max-width: unset;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        &__krav {
+            &:nth-child(2) {
+                margin-left: 1rem;
+                margin-top: 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,52 @@
+[
+    {
+        "type": "avsnitt",
+        "style": "systemtittel",
+        "children": [
+            { "type": "span", "text": "Rettigheter ved fødsel", "marks": [] }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Engangsstønad utbetales vanligvis i forbindelse med fødselen eller adopsjon. Ved fødsel, bør stønaden være utbetalt 1 uke etter fødseldato. Hvis aposjon, så kan det ta litt lengre tid.",
+                "marks": []
+            }
+        ],
+        "markDefs": []
+    },
+    {
+        "type": "avsnitt",
+        "style": "systemtittel",
+        "children": [
+            { "type": "span", "text": "Noe annet ved fødsel", "marks": [] }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Mor må legge ved en bekreftelse på termin sammen med søknaden sin. ",
+                "marks": []
+            }
+        ],
+        "markDefs": []
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Må være skrevet ut av lege eller jordmor i svangerskapsuke 26 eller senere.",
+                "marks": []
+            }
+        ],
+        "markDefs": []
+    }
+]

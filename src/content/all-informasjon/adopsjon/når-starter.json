@@ -1,0 +1,64 @@
+[
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Foreldrepenger ved adopsjon starter når dere overtar omsorgen for barnet",
+                "marks": []
+            }
+        ],
+        "markDefs": []
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Adopterer dere i utlandet, kan dere velge når dere vil  begynne å ta ut foreldrepengene:",
+                "marks": []
+            }
+        ],
+        "markDefs": []
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "listItem": "bullet",
+        "level": 1,
+        "children": [
+            {
+                "type": "span",
+                "text": "når dere overtar omsorgen for barnet i utlandet",
+                "marks": []
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "listItem": "bullet",
+        "level": 1,
+        "children": [
+            {
+                "type": "span",
+                "text": "den dagen dere kommer til Norge sammen med barnet",
+                "marks": []
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Dere kan selv velge hvem som skal være hjemme i permisjon.",
+                "marks": []
+            }
+        ],
+        "markDefs": []
+    }
+]

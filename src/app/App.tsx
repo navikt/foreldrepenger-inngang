@@ -2,7 +2,8 @@ import * as React from 'react';
 import Informasjonstavle from './pages/informasjonstavle/Informasjonstavle';
 import HvaSøkerDu from './pages/hva-søker-du/HvaSøkerDu';
 import SøkForeldrepenger from './pages/søk-foreldrepenger/SøkForeldrepenger';
-import AllInformasjon from './pages/all-informasjon/AllInformasjon';
+import OmForeldrepenger from './pages/om-foreldrepenger/OmForeldrepenger';
+import OmEngangsstønad from './pages/om-engangsstønad/OmEngangsstønad';
 import { Route, Redirect, Switch, withRouter } from 'react-router-dom';
 
 const App = () => {
@@ -28,11 +29,17 @@ const App = () => {
             />
             <Route
                 exact={true}
-                path="/all-informasjon"
-                component={AllInformasjon}
-                key="all-informasjon"
+                path="/om-foreldrepenger"
+                component={OmForeldrepenger}
+                key="om-foreldrepenger"
             />
-            <Redirect to="/hva-soker-du" />
+            <Route
+                exact={true}
+                path="/om-engangsstonad"
+                component={OmEngangsstønad}
+                key="om-engangsstonad"
+            />
+            <Redirect to="/" />
         </Switch>
     );
 };

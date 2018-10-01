@@ -1,0 +1,70 @@
+[
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Medmor kan ta ut sin del fra ",
+                "marks": []
+            },
+            {
+                "type": "span",
+                "text": "uke syv etter fødselen",
+                "marks": ["bold"]
+            },
+            {
+                "type": "span",
+                "text": " eller vente til barnet er blitt litt større. Ukene kan tas samlet eller deles opp.",
+                "marks": []
+            }
+        ],
+        "markDefs": []
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            { "type": "span", "text": "Medmor må ta ut sin del ", "marks": [] },
+            {
+                "type": "span",
+                "text": "senest når fellesdelen er ferdig",
+                "marks": ["bold"]
+            },
+            {
+                "type": "span",
+                "text": ", eller søke om utsettelse.",
+                "marks": []
+            }
+        ],
+        "markDefs": []
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            { "type": "span", "text": " ", "marks": [] },
+            { "type": "span", "text": "Adopterer dere", "marks": ["bold"] },
+            {
+                "type": "span",
+                "text": ", kan medmor ta ut sin del når som helst etter adopsjonsdatoen.",
+                "marks": []
+            }
+        ],
+        "markDefs": []
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            { "type": "span", "text": "Hvis medmor er ", "marks": [] },
+            { "type": "span", "text": "så syk", "marks": ["bold"] },
+            {
+                "type": "span",
+                "text": " at hun er helt avhengig av hjelp til å ta seg av barnet, kan mor søke om å overta mors del.",
+                "marks": []
+            }
+        ],
+        "markDefs": []
+    }
+]

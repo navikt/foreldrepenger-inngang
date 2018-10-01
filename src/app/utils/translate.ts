@@ -29,8 +29,10 @@ const translations = {
         // Route translations
         route_: 'Foreldrepenger, engangsstønad og svangerskapspenger',
         'route_hva-soker-du': 'Hva vil du søke om',
-        'route_all-informasjon': 'All informasjon',
+        'route_om-foreldrepenger': 'Om foreldrepenger',
+        'route_om-engangsstonad': 'Om engangsstønad',
         route_foreldrepenger: 'Foreldrepenger',
+        hva_er_engangsstønad: 'Hva er engangsstønad?',
 
         hva_vil_du_søke_om: 'Hva vil du søke om?',
         ingen_elektronisk_id: 'Jeg har ikke elektronisk ID',
@@ -66,6 +68,7 @@ const translations = {
             'Er det foreldrepenger eller engangsstønad du skal søke om? Bruk veilederen for å finne ut!',
 
         all_informasjon_foreldrepenger: 'All informasjon om foreldrepenger',
+        all_informasjon_engangsstønad: 'All informasjon om engangsstønad',
         for_å_få_foreldrepenger: 'For å få foreldrepenger',
         for_å_få_foreldrepenger_ingress:
             'Hvis du har vært i jobb eller hatt annen inntekt, kan du få foreldrepenger når du skal være hjemme i foreldrepermisjon.',
@@ -199,7 +202,42 @@ const translations = {
         arbeid_skjema_for_inntektsopplysninger_link:
             'Skjema for inntektsopplysninger for arbeidstaker (pdf)',
         arbeid_for_refusjoner_fra_nav_link:
-            'Bankkontonummer for refusjoner fra NAV til arbeidsgiver'
+            'Bankkontonummer for refusjoner fra NAV til arbeidsgiver',
+
+        slik_blir_permisjonen_delt_mellom_dere:
+            'Slik blir permisjonen delt mellom dere',
+        slik_blir_din_permisjon: 'Slik blir din permisjon',
+
+        // Ferie
+        eksempel_på_utsettelse_ved_uttak_av_ferie:
+            'Eksempel på utsettelse ved uttak av ferie',
+        et_annet_eksempel_på_forskyving_av_perioder:
+            'Et annet eksempel på forskyving av perioder',
+        ferie_som_gir_rett_til_utsettelse: 'Ferie som gir rett til utsettelse',
+        slik_går_du_frem_for_å_overta: 'Slik går du frem for å overta',
+
+        // Adopsjon
+        adopsjon: 'Adopsjon',
+        når_starter_foreldrepengeperioden: 'Når starter foreldrepengeperioden',
+        hvor_lenge_kan_du_få_foreldrepenger:
+            'Hvor lenge kan du få foreldrepenger',
+        adopterer_dere_flere_barn: 'Adopterer dere flere barn?',
+        adopsjon_som_ikke_gir_rett: 'Adopsjon som ikke gir rett',
+
+        når_kan_du_få_engangsstønad: 'Når kan du få engangsstønad?',
+        utbetaling: 'Utbetaling',
+        søknadsfrist: 'Søknadsfrist',
+        fødsel: 'Fødsel',
+
+        antatt_saksbehandlingstid: 'Antatt saksbehandlingstid',
+        kontakt_oss: 'Kontakt oss',
+        utbetalinger: 'Utbetalinger',
+        foreldrepenger_hvis_utland: 'Foreldrepenger hvis utland',
+        meld_fra_om_endringer: 'Meld fra om endringer',
+        viktige_frister: 'Viktige frister',
+        klager: 'Klager',
+        regelverk: 'Regelverk',
+        andre_lenker: 'Andre lenker'
     }
 };
 

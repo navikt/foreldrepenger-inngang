@@ -1,0 +1,107 @@
+[
+    {
+        "type": "avsnitt",
+        "style": "undertittel",
+        "children": [
+            {
+                "type": "span",
+                "text": "Jeg eller den andre forelderen er syk",
+                "marks": []
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Hvis du eller den andre forelderen blir syk og ikke kan ta seg av barnet, kan dere velge mellom:",
+                "marks": []
+            }
+        ],
+        "markDefs": []
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "listItem": "bullet",
+        "level": 1,
+        "children": [
+            {
+                "type": "span",
+                "text": "Den andre forelderen overtar foreldrepengeperioden",
+                "marks": []
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "listItem": "bullet",
+        "level": 1,
+        "children": [
+            {
+                "type": "span",
+                "text": "Den som er syk utsetter perioden sin med foreldrepenger",
+                "marks": []
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            { "type": "span", "text": "Dere kan ", "marks": [] },
+            {
+                "type": "span",
+                "text": "utsette eller overta",
+                "marks": ["bold"]
+            },
+            {
+                "type": "span",
+                "text": " foreldrepengene på grunn av sykdom når som helst etter at barnet er født. Den forelderen som er syk kan få sykepenger isteden.",
+                "marks": []
+            }
+        ],
+        "markDefs": []
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            { "type": "span", "text": "Hvis du er ", "marks": [] },
+            { "type": "span", "text": "aleneforelder", "marks": ["bold"] },
+            { "type": "span", "text": " eller ", "marks": [] },
+            {
+                "type": "span",
+                "text": "bare du har rett til foreldrepenger",
+                "marks": ["bold"]
+            },
+            {
+                "type": "span",
+                "text": " kan ikke den andre forelderen overta, men du kan utsette.",
+                "marks": []
+            }
+        ],
+        "markDefs": []
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Les mer om sykepenger",
+                "marks": ["url_Les_mer_om_sykepenger"]
+            }
+        ],
+        "markDefs": [
+            {
+                "key": "url_Les_mer_om_sykepenger",
+                "type": "link",
+                "href": "https://www.nav.no/no/Person/Arbeid/Sykmeldt%2C+arbeidsavklaringspenger+og+yrkesskade/Sykepenger/Sykepenger+til+arbeidstakere"
+            }
+        ]
+    }
+]

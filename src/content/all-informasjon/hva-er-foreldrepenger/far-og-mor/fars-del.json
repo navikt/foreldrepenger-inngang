@@ -5,7 +5,8 @@
         "children": [
             {
                 "type": "span",
-                "text": "Far kan ta ut sin del fra "
+                "text": "Far kan ta ut sin del fra ",
+                "marks": []
             },
             {
                 "type": "span",
@@ -14,53 +15,56 @@
             },
             {
                 "type": "span",
-                "text": " eller vente til barnet er blitt litt større. Ukene kan tas samlet eller deles opp. Far må ta ut sin del senest når fellesdelen er ferdig, eller søke om utsettelse."
+                "text": " eller vente til barnet er blitt litt større. Ukene kan tas samlet, deles opp og kombineres med delvis arbeid. ",
+                "marks": []
             }
-        ]
-    },
-    {
-        "type": "avsnitt",
-        "style": "normaltekst",
-        "children": [
-            {
-                "type": "span",
-                "text": "Adopterer dere, kan far ta ut sin del når som helst etter "
-            },
-            {
-                "type": "span",
-                "text": "adopsjonsdatoen",
-                "marks": ["url_adopsjonsdatoen"]
-            },
-          {
-            "type": "span",
-            "text": "."
-          }
         ],
-      "markDefs": [
-        {
-          "key": "url_adopsjonsdatoen",
-          "type": "link",
-          "href": "#"
-        }
-      ]
+        "markDefs": []
     },
     {
         "type": "avsnitt",
         "style": "normaltekst",
         "children": [
+            { "type": "span", "text": "Far må ta ut sin del ", "marks": [] },
             {
                 "type": "span",
-                "text": "Mor kan "
+                "text": "senest når fellesdelen er ferdig",
+                "marks": ["bold"]
             },
-          {
-            "type": "span",
-            "text": "overta fars",
-            "marks": ["bold"]
-          },
-          {
-            "type": "span",
-            "text": " hvis han er så syk at han er heøt avhengig av hjelp til å ta seg av"
-          }
-        ]
+            {
+                "type": "span",
+                "text": ", eller søke om utsettelse.",
+                "marks": []
+            }
+        ],
+        "markDefs": []
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            { "type": "span", "text": " ", "marks": [] },
+            { "type": "span", "text": "Adopterer", "marks": ["bold"] },
+            {
+                "type": "span",
+                "text": " dere, kan far ta ut sin del når som helt etter adopsjonsdatoen.",
+                "marks": []
+            }
+        ],
+        "markDefs": []
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            { "type": "span", "text": "Hvis far er ", "marks": [] },
+            { "type": "span", "text": "så syk", "marks": ["bold"] },
+            {
+                "type": "span",
+                "text": " at han er helt avhengig av hjelp til å ta seg av barnet, kan mor søke om å overta fars del.  ",
+                "marks": []
+            }
+        ],
+        "markDefs": []
     }
 ]

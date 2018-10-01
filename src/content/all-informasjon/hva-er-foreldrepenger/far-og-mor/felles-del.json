@@ -5,8 +5,29 @@
         "children": [
             {
                 "type": "span",
-                "text": "Fellesdelen er permisjonsukene som dere kan dele"
+                "text": "Fellesdelen er permisjonsukene med foreldrepenger som dere kan dele. ",
+                "marks": []
             }
+        ],
+        "markDefs": []
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Når far tar ut foreldrepengene fra fellesdelen, må mor jobbe, studere eller være i annen godkjent aktivitet. ",
+                "marks": []
+            }
+        ],
+        "markDefs": []
+    },
+    {
+        "type": "avsnitt",
+        "style": "element",
+        "children": [
+            { "type": "span", "text": "Aktivitetskravet til mor", "marks": [] }
         ]
     },
     {
@@ -15,110 +36,77 @@
         "children": [
             {
                 "type": "span",
-                "text": "Når far tar ut foreldrepenger fra fellesdelen, må mor være i jobb, studere eller i annen aktivitet."
+                "text": "Det er krav til hva mor gjør når far bruker fellesdelen. Mor må enten ",
+                "marks": []
             }
-        ]
+        ],
+        "markDefs": []
     },
     {
         "type": "avsnitt",
         "style": "normaltekst",
-        "children": [
-            {
-                "type": "span",
-                "text": "Aktivitetskravene",
-                "marks": ["bold"]
-            },
-            {
-                "type": "span",
-                "text": " til mor er å enten:"
-            }
-        ]
-    },
-    {
-        "type": "avsnitt",
-        "style": "normaltekst",
-        "level": 1,
         "listItem": "bullet",
+        "level": 1,
+        "children": [{ "type": "span", "text": "være i arbeid", "marks": [] }]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "listItem": "bullet",
+        "level": 1,
+        "children": [
+            { "type": "span", "text": "ta utdanning på heltid ", "marks": [] }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "listItem": "bullet",
+        "level": 1,
         "children": [
             {
                 "type": "span",
-                "text": "være i arbeid"
+                "text": "kombinere utdanning med arbeid som til sammen blir heltid",
+                "marks": []
             }
         ]
     },
     {
         "type": "avsnitt",
         "style": "normaltekst",
-        "level": 1,
         "listItem": "bullet",
+        "level": 1,
         "children": [
             {
                 "type": "span",
-                "text": "ta utdanning på heltid"
+                "text": "være helt avhengig av hjelp til å ta seg av barnet på grunn av sykdom",
+                "marks": []
             }
         ]
     },
     {
         "type": "avsnitt",
         "style": "normaltekst",
-        "level": 1,
         "listItem": "bullet",
+        "level": 1,
         "children": [
             {
                 "type": "span",
-                "text": "kombinere utdanning med arbeid som til sammen blir heltid"
+                "text": "delta i kvalifiseringsprogrammet",
+                "marks": []
             }
         ]
     },
     {
         "type": "avsnitt",
         "style": "normaltekst",
-        "level": 1,
         "listItem": "bullet",
+        "level": 1,
         "children": [
             {
                 "type": "span",
-                "text": "være helt avhengig av hjelp til å ta seg av barnet på grunn av sykdom eller skade"
-            }
-        ]
-    },
-    {
-        "type": "avsnitt",
-        "style": "normaltekst",
-        "level": 1,
-        "listItem": "bullet",
-        "children": [
-            {
-                "type": "span",
-                "text": "være innlagt på sykehus eller helseinstitusjon"
-            }
-        ]
-    },
-    {
-        "type": "avsnitt",
-        "style": "normaltekst",
-        "level": 1,
-        "listItem": "bullet",
-        "children": [
-            {
-                "type": "span",
-                "text": "delta i "
-            },
-            {
-                "type": "span",
-                "text": "kvalifiseringsprogrammet"
-            }
-        ]
-    },
-    {
-        "type": "avsnitt",
-        "style": "normaltekst",
-        "level": 1,
-        "listItem": "bullet",
-        "children": [
-            {
-                "type": "span",
-                "text": "delta på heltid i introduksjonsprogrammet etter kapittel 2. for nyankomne innvandrere"
+                "text": "delta på heltid i introduksjonsprogrammet etter kapittel 2 for nyankomne innvandrere",
+                "marks": []
             }
         ]
     }

@@ -24,14 +24,14 @@ const MerInformasjon = () => {
                 <MerInformasjonLink
                     title={translate('foreldrepenger')}
                     body={translate('mer_informasjon_foreldrepenger')}
-                    url="/all-informasjon"
+                    url="/om-foreldrepenger"
                     urlIsExternal={false}
                 />
                 <MerInformasjonLink
                     title={translate('engangsstønad')}
                     body={translate('mer_informasjon_engangsstønad')}
-                    url={externalUrls.les_mer_engangsstønad}
-                    urlIsExternal={true}
+                    url="/om-engangsstonad"
+                    urlIsExternal={false}
                 />
                 <MerInformasjonLink
                     title={translate('svangerskapspenger')}
