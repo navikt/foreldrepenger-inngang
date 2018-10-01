@@ -227,7 +227,17 @@ const translations = {
         når_kan_du_få_engangsstønad: 'Når kan du få engangsstønad?',
         utbetaling: 'Utbetaling',
         søknadsfrist: 'Søknadsfrist',
-        fødsel: 'Fødsel'
+        fødsel: 'Fødsel',
+
+        antatt_saksbehandlingstid: 'Antatt saksbehandlingstid',
+        kontakt_oss: 'Kontakt oss',
+        utbetalinger: 'Utbetalinger',
+        foreldrepenger_hvis_utland: 'Foreldrepenger hvis utland',
+        meld_fra_om_endringer: 'Meld fra om endringer',
+        viktige_frister: 'Viktige frister',
+        klager: 'Klager',
+        regelverk: 'Regelverk',
+        andre_lenker: 'Andre lenker'
     }
 };
 

@@ -1,0 +1,53 @@
+@import '../../../styles/variables.less';
+
+.andreLenker {
+    margin-bottom: 2rem;
+    margin-left: 1.5rem;
+
+    &__linkContainer {
+        margin-bottom: 1rem;
+    }
+    
+    &__linkIcon {
+        margin-left: 0.5rem;
+        position: relative;
+        top: 4px;
+    }
+
+    &__links {
+        margin-top: 2rem;
+    }
+
+    .lenke {
+        border: none;
+    }
+
+    .typo-element {
+        font-size: 18px;
+    }
+
+    p {
+        display: inline-block;
+        border-bottom: 1px solid transparent;
+    }
+
+    a {
+        display: inline-block;
+        color: #0067c5;
+
+        &:hover {
+            p {
+                border-bottom: 1px solid #0067c5;
+            }
+        }
+    }
+
+    @media (min-width: @mobile-breakpoint) {
+        display: block;
+
+        &__links {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+}
