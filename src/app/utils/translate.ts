@@ -222,7 +222,12 @@ const translations = {
         hvor_lenge_kan_du_få_foreldrepenger:
             'Hvor lenge kan du få foreldrepenger',
         adopterer_dere_flere_barn: 'Adopterer dere flere barn?',
-        adopsjon_som_ikke_gir_rett: 'Adopsjon som ikke gir rett'
+        adopsjon_som_ikke_gir_rett: 'Adopsjon som ikke gir rett',
+
+        når_kan_du_få_engangsstønad: 'Når kan du få engangsstønad?',
+        utbetaling: 'Utbetaling',
+        søknadsfrist: 'Søknadsfrist',
+        fødsel: 'Fødsel'
     }
 };
 
