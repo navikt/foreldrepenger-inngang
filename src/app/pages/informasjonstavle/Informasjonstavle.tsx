@@ -8,6 +8,7 @@ import externalUrls from '../../utils/externalUrls';
 import PanelMedBilde from '../../components/panel-med-bilde/PanelMedBilde';
 import Header from './header/Header';
 import MerInformasjon from './mer-informasjon/MerInformasjon';
+import AndreLenker from './andre-lenker/AndreLenker';
 import './informasjonstavle.less';
 
 const cls = BEMHelper('informasjonstavle');
@@ -20,6 +21,7 @@ const Informasjonstavle = () => {
                 <div className={cls.element('content')}>
                     <Bildelenker />
                     <MerInformasjon />
+                    <AndreLenker />
                 </div>
             </div>
         </div>
