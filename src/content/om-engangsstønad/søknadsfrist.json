@@ -1,0 +1,43 @@
+[
+    {
+        "type": "avsnitt",
+        "style": "systemtittel",
+        "children": [
+            {
+                "type": "span",
+                "text": "Søknadsfrist for engangsstønad",
+                "marks": []
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Engangsstønad utbetales vanligvis i forbindelse med fødselen eller adopsjon. Ved fødsel, bør stønaden være utbetalt 1 uke etter fødselsdato. Hvis adopsjon, så kan det ta litt lengre tid.",
+                "marks": []
+            }
+        ],
+        "markDefs": []
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Les mer om viktige frister å passe på",
+                "marks": ["url_Les_mer_om_viktige_frister_å_passe_på"]
+            }
+        ],
+        "markDefs": [
+            {
+                "key": "url_Les_mer_om_viktige_frister_å_passe_på",
+                "type": "link",
+                "href": "/#"
+            }
+        ]
+    }
+]

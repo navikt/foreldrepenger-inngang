@@ -1,0 +1,28 @@
+[
+    {
+        "type": "avsnitt",
+        "style": "ingress",
+        "children": [
+            {
+                "type": "span",
+                "text": "Mor kan få engangsstønad hvis hun ikke har rett til foreldrepenger, eller hvis hun velger engangsstønad istedenfor foreldrepenger.",
+                "marks": []
+            }
+        ],
+        "markDefs": []
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            { "type": "span", "text": "Vanligvis er det ", "marks": [] },
+            { "type": "span", "text": "tre", "marks": ["bold"] },
+            {
+                "type": "span",
+                "text": " ting du må tenke på med tanke på engangsstønad. ",
+                "marks": []
+            }
+        ],
+        "markDefs": []
+    }
+]
