@@ -58,9 +58,9 @@ const Chevron = () => (
         <g
             id="Chevron"
             stroke="none"
-            stroke-width="1"
+            strokeWidth="1"
             fill="none"
-            fill-rule="evenodd">
+            fillRule="evenodd">
             <polygon
                 id="Background"
                 fill="#FFFFFF"
