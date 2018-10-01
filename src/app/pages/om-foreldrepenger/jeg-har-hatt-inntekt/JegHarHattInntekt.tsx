@@ -1,7 +1,7 @@
 import React, { StatelessComponent } from 'react';
 import translate from '../../../utils/translate';
 import StrukturertTekst from '../../../components/strukturert-tekst/StrukturertTekst';
-import PanelMedIllustrasjon from '../panel-med-illustrasjon/PanelMedIllustrasjon';
+import PanelMedIllustrasjon from '../../../components/panel-med-illustrasjon/PanelMedIllustrasjon';
 
 const content = require('../../../../content/all-informasjon/jeg-har-hatt-inntekt.json');
 

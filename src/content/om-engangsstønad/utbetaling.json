@@ -1,0 +1,25 @@
+[
+    {
+        "type": "avsnitt",
+        "style": "systemtittel",
+        "children": [
+            {
+                "type": "span",
+                "text": "Når blir pengene utbetalt?",
+                "marks": []
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Engangsstønad utbetales vanligvis i forbindelse med fødselen eller adopsjon. Ved fødsel, bør stønaden være utbetalt 1 uke etter fødselsdato. Hvis adopsjon, så kan det ta litt lengre tid.",
+                "marks": []
+            }
+        ],
+        "markDefs": []
+    }
+]

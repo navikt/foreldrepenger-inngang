@@ -1,9 +1,8 @@
 import * as React from 'react';
-import TypografiBase from 'nav-frontend-typografi';
 import Breadcrumbs from '../../components/breadcrumbs/Breadcrumbs';
 import BEMHelper from '../../utils/bem';
 import translate from '../../utils/translate';
-import PanelMedIllustrasjon from './panel-med-illustrasjon/PanelMedIllustrasjon';
+import PanelMedIllustrasjon from '../../components/panel-med-illustrasjon/PanelMedIllustrasjon';
 import HvaErForeldrepenger from './hva-er-foreldrepenger/HvaErForeldrepenger';
 import Hurtiglenker from './hurtiglenker/Hurtiglenker';
 import NyeRegler from './nye-regler/NyeRegler';
@@ -13,10 +12,11 @@ import JegVilJobbe from './jeg-vil-jobbe/JegVilJobbe';
 import Sykdom from './sykdom/Sykdom';
 import Ferie from './ferie/Ferie';
 import Adopsjon from './adopsjon/Adopsjon';
-import './allInformasjon.less';
+import './omForeldrepenger.less';
 import Arbeidsgiver from './arbeidsgiver/Arbeidsgiver';
+import Sidebanner from '../../components/sidebanner/Sidebanner';
 
-const cls = BEMHelper('allInformasjon');
+const cls = BEMHelper('infosider');
 
 interface Props {
     location: any;
@@ -36,14 +36,10 @@ const sections = [
     'adopsjon-og-arbeidsgiver'
 ];
 
-const AllInformasjon: React.StatelessComponent<Props> = ({ location }) => {
+const OmForeldrepenger: React.StatelessComponent<Props> = ({ location }) => {
     return (
         <div className={cls.className}>
-            <div className={cls.element('header')}>
-                <TypografiBase type="undertittel">
-                    {translate('all_informasjon_foreldrepenger')}
-                </TypografiBase>
-            </div>
+            <Sidebanner text={translate('all_informasjon_foreldrepenger')} />
             <div className={cls.element('body')}>
                 <div className={cls.element('content')}>
                     <Breadcrumbs path={location.pathname} />
@@ -76,4 +72,4 @@ const HvaErForeldrepengerWrapper = ({ id }: { id: string }) => {
     );
 };
 
-export default AllInformasjon;
+export default OmForeldrepenger;

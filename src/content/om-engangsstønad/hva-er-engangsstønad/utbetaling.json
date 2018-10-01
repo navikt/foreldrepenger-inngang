@@ -1,0 +1,25 @@
+[
+    {
+        "type": "avsnitt",
+        "style": "element",
+        "children": [
+            {
+                "type": "span",
+                "text": "Utbetaling av stønad skjer én uke etter innvilgelse",
+                "marks": []
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Utbetalingstiden kan variere utifra hvor i landet du bor. Eksempelet er for Oslo.",
+                "marks": []
+            }
+        ],
+        "markDefs": []
+    }
+]

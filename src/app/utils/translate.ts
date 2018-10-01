@@ -29,8 +29,10 @@ const translations = {
         // Route translations
         route_: 'Foreldrepenger, engangsstønad og svangerskapspenger',
         'route_hva-soker-du': 'Hva vil du søke om',
-        'route_all-informasjon': 'All informasjon',
+        'route_om-foreldrepenger': 'Om foreldrepenger',
+        'route_om-engangsstonad': 'Om engangsstønad',
         route_foreldrepenger: 'Foreldrepenger',
+        hva_er_engangsstønad: 'Hva er engangsstønad?',
 
         hva_vil_du_søke_om: 'Hva vil du søke om?',
         ingen_elektronisk_id: 'Jeg har ikke elektronisk ID',
@@ -66,6 +68,7 @@ const translations = {
             'Er det foreldrepenger eller engangsstønad du skal søke om? Bruk veilederen for å finne ut!',
 
         all_informasjon_foreldrepenger: 'All informasjon om foreldrepenger',
+        all_informasjon_engangsstønad: 'All informasjon om engangsstønad',
         for_å_få_foreldrepenger: 'For å få foreldrepenger',
         for_å_få_foreldrepenger_ingress:
             'Hvis du har vært i jobb eller hatt annen inntekt, kan du få foreldrepenger når du skal være hjemme i foreldrepermisjon.',
@@ -219,7 +222,12 @@ const translations = {
         hvor_lenge_kan_du_få_foreldrepenger:
             'Hvor lenge kan du få foreldrepenger',
         adopterer_dere_flere_barn: 'Adopterer dere flere barn?',
-        adopsjon_som_ikke_gir_rett: 'Adopsjon som ikke gir rett'
+        adopsjon_som_ikke_gir_rett: 'Adopsjon som ikke gir rett',
+
+        når_kan_du_få_engangsstønad: 'Når kan du få engangsstønad?',
+        utbetaling: 'Utbetaling',
+        søknadsfrist: 'Søknadsfrist',
+        fødsel: 'Fødsel'
     }
 };
 

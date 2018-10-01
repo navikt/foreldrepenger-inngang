@@ -1,8 +1,8 @@
 import * as React from 'react';
 import TypografiBase from 'nav-frontend-typografi';
 import PanelBase from 'nav-frontend-paneler';
-import CustomSVG from '../../../utils/CustomSVG';
-import BEMHelper from '../../../utils/bem';
+import CustomSVG from '../../utils/CustomSVG';
+import BEMHelper from '../../utils/bem';
 
 import './panelMedIllustrasjon.less';
 
