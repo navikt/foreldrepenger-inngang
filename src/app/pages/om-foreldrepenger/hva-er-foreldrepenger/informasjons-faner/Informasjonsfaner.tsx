@@ -9,7 +9,7 @@ import CakeFellesSvg from './CakeFellesSvg';
 import './informasjonsfaner.less';
 import translate from '../../../../utils/translate';
 
-const cls = BEMHelper('Informasjonsfaner');
+const cls = BEMHelper('informasjonsfaner');
 
 interface Fane {
     faneLabel: string;
