@@ -1,5 +1,3 @@
-@import "../../../../styles/variables";
-
 .menHvaHvis {
     &__header {
         margin-top: 32px;
@@ -7,19 +5,9 @@
         text-align: center;
     }
 
-    &__noenVilPaFerie {
-        width: 10px;
-        height: 10px;
-    }
-
-    &__jegVilJobbe {
-        width: 10px;
-        height: 10px;
-    }
-    &__enAvOssBlirSyk {
-        width: 10px;
-        height: 10px;
-    }
+    &__noenVilPaFerie,
+    &__jegVilJobbe,
+    &__enAvOssBlirSyk,
     &__hjemmeSamtidig {
         width: 10px;
         height: 10px;
@@ -29,13 +17,8 @@
         display: flex;
         flex-direction: row;
         margin-bottom: 0px;
-        margin-top: 20px;
+        margin-top: 1.5rem;
         justify-content: space-between;
-        padding-left: 70px;
-        padding-right: 70px;
-    }
-
-    @media (min-width: @tablet-breakpoint) {
-
+        padding: 0 4rem;
     }
 }

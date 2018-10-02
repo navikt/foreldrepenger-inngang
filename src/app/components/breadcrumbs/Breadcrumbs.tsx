@@ -71,7 +71,7 @@ class Breadcrumbs extends Component<BreadcrumbsProps> {
                     key="tilbake"
                     type="normaltekst"
                     className={cls.element('item')}>
-                    <Link to={lastUrl}>Tilbake</Link>
+                    <Link to={lastUrl}>{translate('tilbake')}</Link>
                 </TypografiBase>
             );
         } else {

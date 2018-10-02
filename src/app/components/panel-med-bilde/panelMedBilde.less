@@ -1,4 +1,4 @@
-@import '../../styles/variables.less';
+@import '../../styles/index.less';
 
 .panelMedBilde {
     color: black;
@@ -6,10 +6,10 @@
     border-radius: 4px;
 
     &:hover {
-        box-shadow: #B7B1A9 0 2px 1px 0;
+        box-shadow: @navGra40 0 2px 1px 0;
 
         .panelMedBilde__panelOnPanel {
-            color: #0067c5;
+            color: @navBla;
             cursor: pointer;
 
             .typo-undertittel {
@@ -23,8 +23,7 @@
     }
 
     &:focus {
-        box-shadow: 0 0 0 3px #FFBD66;
-        outline: none;
+        .buttonFocus();
     }
 
     &:nth-child(2), &:nth-child(3) {
@@ -33,12 +32,12 @@
 
     &__imageOnPanel {
         background-color: #e0dae7;
-        border-bottom: 4px solid #826ba1;
         border-radius: 4px 4px 0 0;
         height: 100px;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+        .purpleBottomBorder();
     }
 
     &__svgContainer {
