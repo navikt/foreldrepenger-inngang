@@ -54,12 +54,48 @@
 
     &__inner {
         width: 85%;
-        text-align: balance;
+        /* text-align: balance;  */
     }
 
     &__pointer {
         position: absolute;
         z-index: -1;
-        margin-top: 70px;
+        margin-top: 20px;
+
+    }
+    &__indicator {
+        position: relative;
+        margin-right: 23px;
+    }
+
+    &__pointer > span {
+        position: absolute;
+        display: inline-block;
+        padding-bottom: 10px;
+
+    }
+
+    &__pointer > span:before,
+    &__pointer > span:after {
+        content: "";
+        position: absolute;
+        top: 35%;
+
+
+        width: 3000px;
+        height: 1px;
+        background: #efefef;
+        padding-bottom: 2px;
+       /* margin-bottom: 20px;*/
+    }
+
+    &__pointer > span:before {
+        right: 66%;
+        margin-right: 0px;
+    }
+
+    &__pointer > span:after {
+        left: 72%;
+        margin-left: 0px;
     }
 }
