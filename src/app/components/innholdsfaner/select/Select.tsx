@@ -102,36 +102,44 @@ class Select extends React.Component<SelectProps, SelectState> {
                 onClick={this.onClick}
                 onKeyPress={this.onClick}
                 className={classnames(cls.className, {
-                    [cls.element('open')]: this.state.open
+                    [cls.modifier('open')]: this.state.open
                 })}>
                 <TypografiBase type="normaltekst">
                     {translate(this.props.selected)}
                 </TypografiBase>
                 <Chevron type={this.state.open ? 'opp' : 'ned'} />
             </div>
-            <div className={cls.element('popUp')}>
-                {this.state.open &&
-                    this.props.choices.map((choice, index) => (
-                        <Panel
-                            role="option"
-                            key={choice.label}
-                            border={true}
-                            onClick={() => {
-                                this.onChoiceClick(index);
-                            }}
-                            onKeyPress={() => {
-                                this.onChoiceClick(index);
-                            }}
-                            className={classnames(cls.element('choice'), {
-                                [cls.element('choice', 'selected')]:
-                                    this.props.selected === choice.label
-                            })}
-                            tabIndex={0}>
-                            <TypografiBase type="normaltekst">
-                                {translate(choice.label)}
-                            </TypografiBase>
-                        </Panel>
-                    ))}
+            <div
+                className={
+                    this.state.open
+                        ? cls.element('popUp', 'open')
+                        : cls.element('popUp')
+                }>
+                {this.state.open && (
+                    <div className={cls.element('shadow')}>
+                        {this.props.choices.map((choice, index) => (
+                            <Panel
+                                role="option"
+                                key={choice.label}
+                                border={true}
+                                onClick={() => {
+                                    this.onChoiceClick(index);
+                                }}
+                                onKeyPress={() => {
+                                    this.onChoiceClick(index);
+                                }}
+                                className={classnames(cls.element('choice'), {
+                                    [cls.element('choice', 'selected')]:
+                                        this.props.selected === choice.label
+                                })}
+                                tabIndex={0}>
+                                <TypografiBase type="normaltekst">
+                                    {translate(choice.label)}
+                                </TypografiBase>
+                            </Panel>
+                        ))}
+                    </div>
+                )}
             </div>
         </div>
     );
