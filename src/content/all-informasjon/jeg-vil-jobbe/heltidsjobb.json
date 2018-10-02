@@ -34,6 +34,10 @@
                 "type": "span",
                 "text": "søknad om å utsette foreldrepengene",
                 "marks": ["bold"]
+            },
+            {
+                "type": "span",
+                "text": " før du starter å jobbe"
             }
         ]
     },

@@ -17,7 +17,7 @@
         "type": "avsnitt",
         "style": "undertittel",
         "children": [
-            { "type": "span", "text": "Lengden på permisjonen", "marks": [] }
+            { "type": "span", "text": "Lengden på foreldrepengeperioden", "marks": [] }
         ]
     },
     {

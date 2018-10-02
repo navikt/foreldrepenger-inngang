@@ -42,9 +42,7 @@ const DinLønn = ({
                 />
             </div>
             <div className={cls.element('inputContainer')}>
-                {`${translate(
-                    'eksempelvis_dersom_inntekt_pr_er'
-                )} ${monthlyWage},- kr`}
+                {`${translate('eksempel_på_fast_inntekt')} ${monthlyWage},– kr`}
             </div>
         </div>
     );

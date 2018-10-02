@@ -19,16 +19,16 @@ const informasjonsfaner = [
             antallUker: '15',
             punktliste: [
                 'Ingen krav til aktivitet',
-                'Kan ikke overtas av medmor'
+                'Kan ikke overtas av den andre moren'
             ],
             component: <StrukturertTekst tekst={morsDel} />
         }
     },
     {
-        faneLabel: 'Medmors del',
+        faneLabel: 'Mors del',
         faneIcon: true,
         bodyProps: {
-            tittel: 'til medmor',
+            tittel: 'til mor',
             icon: 'medmor2',
             antallUker: '15',
             punktliste: ['Ingen krav til aktivitet', 'Kan ikke overtas av mor'],

@@ -5,7 +5,7 @@
         "children": [
             {
                 "type": "span",
-                "text": "Du kan kombinere foreldrepengene med arbeid. Du kan velge mellom:"
+                "text": "Du kan kombinere foreldrepengene med arbeid. Du kan velge mellom å:"
             }
         ]
     },
@@ -17,11 +17,7 @@
         "children": [
             {
                 "type": "span",
-                "text": "jobbe "
-            },
-            {
-                "type": "span",
-                "text": "heltid og utsette",
+                "text": "Utsette",
                 "marks": ["bold"]
             },
             {
@@ -38,11 +34,7 @@
         "children": [
             {
                 "type": "span",
-                "text": "jobbe "
-            },
-            {
-                "type": "span",
-                "text": "deltid og forlenge",
+                "text": "Forlenge",
                 "marks": ["bold"]
             },
             {
@@ -70,12 +62,12 @@
             },
             {
                 "type": "span",
-                "text": "permisjonen din forlenget",
+                "text": "perioden din med foreldrepenger forlenget",
                 "marks": ["bold"]
             },
             {
                 "type": "span",
-                "text": ". Du kan bare kombinere foreldrepenger med delvis jobb hos "
+                "text": ". Du kan bare bare jobbe hos "
             },
             {
                 "type": "span",
@@ -85,25 +77,6 @@
             {
                 "type": "span",
                 "text": " om gangen."
-            }
-        ]
-    },
-    {
-        "type": "avsnitt",
-        "style": "normaltekst",
-        "children": [
-            {
-                "type": "span",
-                "text": "Hvis dere vil "
-            },
-            {
-                "type": "span",
-                "text": "kombinere foreldrepengene samtidig",
-                "marks": ["bold"]
-            },
-            {
-                "type": "span",
-                "text": ", kan ikke foreldrepengene være mer enn 100 prosent til sammen.  Husk at dere begge må søke."
             }
         ]
     }

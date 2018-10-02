@@ -60,47 +60,6 @@
                 "key": "url_svangerskap",
                 "type": "link",
                 "href": "https://www.nav.no/no/Person/Familie/Venter+du+barn/svangerskapspenger"
-            },
-            {
-                "key": "url_altinn",
-                "type": "link",
-                "href": "https://www.altinn.no/starte-og-drive/arbeidsforhold/permisjoner-og-ferie/lonnet-og-ulonnet-permisjon/"
-            }
-        ]
-    },
-    {
-        "type": "avsnitt",
-        "style": "normaltekst",
-        "children": [
-            {
-                "type": "span",
-                "text": "Før NAV kan betale den ansatte eller refundere noe som helst til arbeidsgiver, må du sende inn skjema om "
-            },
-            {
-                "type": "span",
-                "text": "inntektsopplysninger",
-                "marks": ["url_inntektsopplysninger"]
-            },
-            {
-                "type": "span",
-                "text": " til NAV. Se også "
-            },
-            {
-                "type": "span",
-                "text": "Bankkontonummer - refusjoner fra NAV til arbeidsgiver.",
-                "marks": ["url_refusjonFraNavTilArbeidsgiver"]
-            }
-        ],
-        "markDefs": [
-            {
-                "key": "url_inntektsopplysninger",
-                "type": "link",
-                "href": "https://www.nav.no/no/Bedrift/Oppfolging/Sykmeldt+arbeidstaker/Sykepenger/Skjemaer+-+inntektsopplysninger+og+refusjon"
-            },
-            {
-                "key": "url_refusjonFraNavTilArbeidsgiver",
-                "type": "link",
-                "href": "https://www.nav.no/no/Bedrift/Oppfolging/Sykmeldt+arbeidstaker/Sykepenger/l%C3%B8nn-sykepenger-utover-arbeidsgiverperioden"
             }
         ]
     }

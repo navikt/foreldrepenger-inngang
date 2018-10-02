@@ -35,7 +35,7 @@
         "type": "avsnitt",
         "style": "element",
         "children": [
-            { "type": "span", "text": "Permisjon før fødselen", "marks": [] }
+            { "type": "span", "text": "Foreldrepenger før fødsel", "marks": [] }
         ]
     },
     {

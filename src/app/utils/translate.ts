@@ -81,6 +81,8 @@ const translations = {
         hva_er_foreldrepenger: 'Hva er foreldrepenger?',
         hva_er_foreldrepenger_ingress:
             'Foreldrepenger skal erstatte inntekten din når du skal ha foreldrepermisjon. Foreldrepengene kan tas sammenhengende eller kombineres med arbeid eller ferie, men må tas ut før barnet blir 3 år.',
+        hvor_lenge_kan_jeg_få_foreldrepenger:
+            'Hvor lenge kan jeg få foreldrepenger?',
 
         jeg_vil_jobbe: 'Jeg vil jobbe',
         beregning: 'Beregning',
@@ -98,7 +100,7 @@ const translations = {
             'Jeg har hatt inntekt 6 av 10 siste mnd.',
         jeg_har_hatt_inntekt_6_av_10_siste_mnd_ingress:
             'Som inntekt regnes også enkelte ytelser fra NAV, arbeidsgiver eller militæret.',
-        jeg_har_tjent_minst: 'Jeg har tjent minst 46 817,- i året',
+        jeg_har_tjent_minst: 'Jeg har tjent minst 48 441 kr i året',
         jeg_har_tjent_minst_ingress:
             'Omregnet til årsinntekt må inntekten din tilsvare et halvt grunnbeløp (G)',
         jeg_bor_i_norge: 'Jeg bor i Norge',
@@ -107,13 +109,12 @@ const translations = {
 
         // Faner i foreldrepengekalkulator
         farOgMor: 'Far og mor',
-        farOgMedfar: 'Far og medfar',
-        morOgMedmor: 'Mor og medmor',
+        farOgFar: 'Far og far',
+        morOgMor: 'Mor og mor',
         bareFarHarRett: 'Bare far har rett',
         bareMorHarRett: 'Bare mor har rett',
         aleneomsorg: 'Aleneomsorg',
-        eksempelvis_dersom_inntekt_pr_er:
-            'Eksempelvis dersom inntekt per måned er',
+        eksempel_på_fast_inntekt: 'Eksempel på fast inntekt per måned på',
 
         lengde_på_foreldreperioden: 'Lengde på foreldreperioden',
         lengde_på_foreldreperioden_body:
@@ -208,6 +209,8 @@ const translations = {
         slik_blir_permisjonen_delt_mellom_dere:
             'Slik blir permisjonen delt mellom dere',
         slik_blir_din_permisjon: 'Slik blir din permisjon',
+        slik_er_periodene_fordelt: 'Slik er periodene fordelt',
+        slik_er_foreldrepengeperioden: 'Slik er foreldrepengeperioden',
 
         // Ferie
         eksempel_på_utsettelse_ved_uttak_av_ferie:

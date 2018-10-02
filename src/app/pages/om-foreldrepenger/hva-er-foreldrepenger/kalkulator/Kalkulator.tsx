@@ -64,8 +64,8 @@ class Kalkulator extends React.Component {
                 className={cls.className}>
                 <div className={cls.element('antallUkerOgBarn')}>
                     <div />
-                    <TypografiBase type="normaltekst">100%</TypografiBase>
-                    <TypografiBase type="normaltekst">80%</TypografiBase>
+                    <TypografiBase type="normaltekst">100 %</TypografiBase>
+                    <TypografiBase type="normaltekst">80 %</TypografiBase>
                     <AntallBarn
                         parentCls={cls}
                         childCount={1}

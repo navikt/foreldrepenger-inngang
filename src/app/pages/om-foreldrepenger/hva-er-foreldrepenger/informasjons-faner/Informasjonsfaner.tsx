@@ -55,8 +55,8 @@ class Informasjonsfaner extends React.Component<Props> {
         <div className={cls.className}>
             <div className={cls.element('header')}>
                 {this.props.tabs.length > 1
-                    ? translate('slik_blir_permisjonen_delt_mellom_dere')
-                    : translate('slik_blir_din_permisjon')}
+                    ? translate('slik_er_periodene_fordelt')
+                    : translate('slik_er_foreldrepengeperioden')}
             </div>
             {this.props.tabs.length > 1 && (
                 <Tabs

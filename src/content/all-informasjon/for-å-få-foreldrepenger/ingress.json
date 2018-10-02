@@ -5,17 +5,6 @@
         "children": [
             {
                 "type": "span",
-                "text": "Hvis du har vært i jobb eller hatt annen inntekt, kan du få foreldrepenger når du skal være hjemme i foreldrepermisjon.",
-                "marks": []
-            }
-        ]
-    },
-    {
-        "type": "avsnitt",
-        "style": "ingress",
-        "children": [
-            {
-                "type": "span",
                 "text": "Vanligvis er det ",
                 "marks": []
             },

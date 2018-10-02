@@ -41,7 +41,7 @@
             { "type": "span", "text": "så syk", "marks": ["bold"] },
             {
                 "type": "span",
-                "text": " at hun er helt avhengig av hjelp til å ta seg av barnet, kan medmor søke om å overta mors del.",
+                "text": " at hun er helt avhengig av hjelp til å ta seg av barnet, kan den andre moren søke om å overta mors del.",
                 "marks": []
             }
         ],
@@ -51,7 +51,7 @@
         "type": "avsnitt",
         "style": "element",
         "children": [
-            { "type": "span", "text": "Permisjon før fødselen", "marks": [] }
+            { "type": "span", "text": "Foreldrepenger før fødsel", "marks": [] }
         ]
     },
     {
