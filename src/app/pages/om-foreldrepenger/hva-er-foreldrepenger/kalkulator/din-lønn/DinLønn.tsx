@@ -4,7 +4,7 @@ import BEMHelper, { BEMWrapper } from '../../../../../utils/bem';
 import Prosentvalg from './Prosentvalg';
 
 import './dinLønn.less';
-import translate from '../../../../../utils/translate';
+import translate from '../../../../../intl/translate';
 
 const cls = BEMHelper('dinLønn');
 

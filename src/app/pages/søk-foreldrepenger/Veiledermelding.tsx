@@ -2,7 +2,7 @@ import * as React from 'react';
 import moment from 'moment';
 import Veilederpanel from 'nav-frontend-veilederpanel';
 import CustomSVG from '../../utils/CustomSVG';
-import translate from '../../utils/translate';
+import translate from '../../intl/translate';
 import { BEMWrapper } from '../../utils/bem';
 
 const createDateErrorMessage = (date: Date) => {

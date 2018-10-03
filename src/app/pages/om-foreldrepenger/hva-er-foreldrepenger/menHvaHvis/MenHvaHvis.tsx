@@ -1,6 +1,6 @@
 import * as React from 'react';
 import BEMHelper from '../../../../utils/bem';
-import translate from '../../../../utils/translate';
+import translate from '../../../../intl/translate';
 import TypografiBase from 'nav-frontend-typografi';
 import NoenVilPaFerie from './NoenVilPaFerie';
 import JegVilJobbe from './JegVilJobbe';

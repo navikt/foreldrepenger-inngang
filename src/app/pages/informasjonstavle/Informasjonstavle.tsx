@@ -1,7 +1,7 @@
 import React from 'react';
 import Tekstomrade from 'nav-frontend-tekstomrade';
 
-import translate from '../../utils/translate';
+import translate from '../../intl/translate';
 import BEMHelper from '../../utils/bem';
 import externalUrls from '../../utils/externalUrls';
 
@@ -36,21 +36,15 @@ const Bildelenker = () => {
                 title={translate('informasjonstavle.hva_har_du_rett_på')}
                 urlIsExternal={false}
                 url="/#">
-                <Tekstomrade>
-                    {translate('informasjonstavle.hva_har_du_rett_på_body')}
-                </Tekstomrade>
+                <Tekstomrade>{translate('informasjonstavle.hva_har_du_rett_på_body')}</Tekstomrade>
             </PanelMedBilde>
             <PanelMedBilde
                 svgName="se-over-søknad"
-                title={translate(
-                    'informasjonstavle.hvor_lenge_kan_du_få_permisjon'
-                )}
+                title={translate('informasjonstavle.hvor_lenge_kan_du_få_permisjon')}
                 urlIsExternal={true}
                 url={externalUrls.foreldrepengeplanlegger}>
                 <Tekstomrade>
-                    {translate(
-                        'informasjonstavle.hvor_lenge_kan_du_få_permisjon_body'
-                    )}
+                    {translate('informasjonstavle.hvor_lenge_kan_du_få_permisjon_body')}
                 </Tekstomrade>
             </PanelMedBilde>
             <PanelMedBilde

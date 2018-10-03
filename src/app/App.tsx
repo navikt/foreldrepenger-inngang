@@ -1,47 +1,73 @@
 import * as React from 'react';
-import Informasjonstavle from './pages/informasjonstavle/Informasjonstavle';
-import HvaSøkerDu from './pages/hva-søker-du/HvaSøkerDu';
-import SøkForeldrepenger from './pages/søk-foreldrepenger/SøkForeldrepenger';
-import OmForeldrepenger from './pages/om-foreldrepenger/OmForeldrepenger';
-import OmEngangsstønad from './pages/om-engangsstønad/OmEngangsstønad';
-import { Route, Redirect, Switch, withRouter } from 'react-router-dom';
+import Provider from './intl/intl-context';
+import translate, { Language } from './intl/translate';
+import BEMHelper from './utils/bem';
+import TypografiBase from 'nav-frontend-typografi';
+import Router from './Router';
+import './app.less';
 
-const App = () => {
-    return (
-        <Switch>
-            <Route
-                exact={true}
-                path="/"
-                component={Informasjonstavle}
-                key="informasjonstavle"
-            />
-            <Route
-                exact={true}
-                path="/hva-soker-du"
-                component={HvaSøkerDu}
-                key="hva-soker-du"
-            />
-            <Route
-                exact={true}
-                path="/hva-soker-du/foreldrepenger"
-                component={SøkForeldrepenger}
-                key="foreldrepenger"
-            />
-            <Route
-                exact={true}
-                path="/om-foreldrepenger"
-                component={OmForeldrepenger}
-                key="om-foreldrepenger"
-            />
-            <Route
-                exact={true}
-                path="/om-engangsstonad"
-                component={OmEngangsstønad}
-                key="om-engangsstonad"
-            />
-            <Redirect to="/" />
-        </Switch>
-    );
-};
+interface State {
+    currentLanguage: Language;
+}
 
-export default withRouter(App);
+const cls = BEMHelper('app');
+
+class App extends React.Component<{}, State> {
+    constructor(props: {}) {
+        super(props);
+
+        this.state = {
+            currentLanguage: 'nb'
+        };
+    }
+
+    toggleLanguage = (lang: Language) => {
+        this.setState({
+            currentLanguage: lang
+        });
+    };
+
+    toggleBetweenNbAndNn = () => {
+        this.toggleLanguage(this.getOtherMålform());
+    };
+
+    getOtherMålform = () => {
+        return this.state.currentLanguage === 'nb' ? 'nn' : 'nb';
+    };
+
+    spellLanguage = (languageCode: Language) => {
+        switch (languageCode) {
+            case 'nb':
+                return translate('bokmål');
+            case 'nn':
+                return translate('nynorsk');
+            default:
+                return translate('ukjent');
+        }
+    };
+
+    render = () => {
+        return (
+            <Provider
+                value={{
+                    lang: this.state.currentLanguage,
+                    toggle: this.toggleLanguage
+                }}>
+                <div>
+                    <div className={cls.element('topBanner')}>
+                        <span
+                            onClick={this.toggleBetweenNbAndNn}
+                            className={cls.element('byttSpråkKnapp')}>
+                            <TypografiBase type="normaltekst">{`${translate(
+                                'endre_målform_til'
+                            )} ${this.spellLanguage(this.getOtherMålform())}`}</TypografiBase>
+                        </span>
+                    </div>
+                    <Router />
+                </div>
+            </Provider>
+        );
+    };
+}
+
+export default App;

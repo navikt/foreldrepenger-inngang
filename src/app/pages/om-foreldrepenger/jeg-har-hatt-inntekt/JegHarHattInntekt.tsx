@@ -1,5 +1,5 @@
 import React, { StatelessComponent } from 'react';
-import translate from '../../../utils/translate';
+import translate from '../../../intl/translate';
 import StrukturertTekst from '../../../components/strukturert-tekst/StrukturertTekst';
 import PanelMedIllustrasjon from '../../../components/panel-med-illustrasjon/PanelMedIllustrasjon';
 
@@ -13,10 +13,7 @@ interface Props {
 
 const JegHarHattInntekt: StatelessComponent<Props> = ({ id }) => {
     return (
-        <PanelMedIllustrasjon
-            id={id}
-            title={translate('jeg_har_hatt_inntekt')}
-            svg={pageSvg}>
+        <PanelMedIllustrasjon id={id} title={translate('jeg_har_hatt_inntekt')} svg={pageSvg}>
             <StrukturertTekst tekst={content} />
         </PanelMedIllustrasjon>
     );

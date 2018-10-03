@@ -7,7 +7,7 @@ import KnappBase from 'nav-frontend-knapper';
 
 import Breadcrumbs from '../../components/breadcrumbs/Breadcrumbs';
 import BEMHelper from '../../utils/bem';
-import translate from '../../utils/translate';
+import translate from '../../intl/translate';
 import SvgBanner from '../../components/svg-banner/SvgBanner';
 import PanelMedTittel from '../../components/panel-med-tittel/PanelMedTittel';
 import { datoErOmMindreEnnSeksUker } from '../../utils/datoUtils';

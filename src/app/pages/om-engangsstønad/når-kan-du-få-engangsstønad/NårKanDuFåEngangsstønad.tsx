@@ -3,7 +3,7 @@ import PanelMedIllustrasjon from '../../../components/panel-med-illustrasjon/Pan
 import Innholdsfaner from '../../../components/innholdsfaner/Innholdsfaner';
 import { Innholdsfane } from '../../../components/innholdsfaner/fane/Fane';
 import StrukturertTekst from '../../../components/strukturert-tekst/StrukturertTekst';
-import translate from '../../../utils/translate';
+import translate from '../../../intl/translate';
 
 const nårKanDuFåEngangsstønadContent = require('../../../../content/om-engangsstønad/når-kan-du-få-engangsstønad/når-kan-du-få-engangsstønad');
 const adopsjonContent = require('../../../../content/om-engangsstønad/når-kan-du-få-engangsstønad/adopsjon');

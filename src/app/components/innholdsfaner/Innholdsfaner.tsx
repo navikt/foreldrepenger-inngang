@@ -3,7 +3,7 @@ import './innholdsfaner.less';
 import BEMHelper from '../../utils/bem';
 import Fane, { Innholdsfane } from './fane/Fane';
 import MediaQuery from 'react-responsive';
-import translate from '../../utils/translate';
+import translate from '../../intl/translate';
 import Select from './select/Select';
 
 const cls = BEMHelper('innholdsfaner');

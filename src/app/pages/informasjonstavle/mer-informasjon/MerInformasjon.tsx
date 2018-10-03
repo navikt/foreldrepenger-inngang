@@ -3,7 +3,7 @@ import Tekstomrade from 'nav-frontend-tekstomrade';
 import TypografiBase from 'nav-frontend-typografi';
 import { HoyreChevron } from 'nav-frontend-chevron';
 
-import translate from '../../../utils/translate';
+import translate from '../../../intl/translate';
 import BEMHelper from '../../../utils/bem';
 import externalUrls from '../../../utils/externalUrls';
 import { WithLink } from '../../../utils/withLink';

@@ -12,7 +12,7 @@ import Innholdsfaner from '../../../components/innholdsfaner/Innholdsfaner';
 import { Innholdsfane } from '../../../components/innholdsfaner/fane/Fane';
 import './hvaErForeldrepenger.less';
 import PanelMedIllustrasjon from '../../../components/panel-med-illustrasjon/PanelMedIllustrasjon';
-import translate from '../../../utils/translate';
+import translate from '../../../intl/translate';
 
 const pageSvg = require('../../../assets/page.svg').default;
 const content = require('../../../../content/all-informasjon/hva-er-foreldrepenger/hva-er-foreldrepenger');

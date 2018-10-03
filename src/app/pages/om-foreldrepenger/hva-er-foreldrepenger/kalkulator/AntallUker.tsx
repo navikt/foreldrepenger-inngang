@@ -1,7 +1,7 @@
 import * as React from 'react';
 import classnames from 'classnames';
 import TypografiBase from 'nav-frontend-typografi';
-import translate from '../../../../utils/translate';
+import translate from '../../../../intl/translate';
 import { BEMWrapper } from '../../../../utils/bem';
 
 const AntallUker = ({
@@ -47,11 +47,7 @@ const AntallUker = ({
                 onKeyPress={onSelect}
                 className={combinedClassnames}>
                 <TypografiBase type="element">{numberOfWeeks}</TypografiBase>
-                {isSelected && (
-                    <TypografiBase type="undertekst">
-                        {translate('uker')}
-                    </TypografiBase>
-                )}
+                {isSelected && <TypografiBase type="undertekst">{translate('uker')}</TypografiBase>}
             </div>
         </div>
     );

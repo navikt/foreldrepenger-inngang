@@ -1,7 +1,7 @@
 import * as React from 'react';
 import PanelMedTittel from '../../components/panel-med-tittel/PanelMedTittel';
 import ButtonPanel from './button-panel/ButtonPanel';
-import translate from '../../utils/translate';
+import translate from '../../intl/translate';
 import externalUrls from '../../utils/externalUrls';
 import StrukturertTekst from '../../components/strukturert-tekst/StrukturertTekst';
 

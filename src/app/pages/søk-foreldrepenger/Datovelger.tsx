@@ -3,7 +3,7 @@ import NavDatovelger from 'nav-datovelger';
 import TypografiBase from 'nav-frontend-typografi';
 
 import { BEMWrapper } from '../../utils/bem';
-import translate from '../../utils/translate';
+import translate from '../../intl/translate';
 
 const Datovelger = ({
     date,

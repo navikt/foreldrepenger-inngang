@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Breadcrumbs from '../../components/breadcrumbs/Breadcrumbs';
 import BEMHelper from '../../utils/bem';
-import translate from '../../utils/translate';
+import translate from '../../intl/translate';
 import HvaErForeldrepenger from './hva-er-foreldrepenger/HvaErForeldrepenger';
 import NyeRegler from './nye-regler/NyeRegler';
 import ForÅFåForeldrepenger from './for-å-få-foreldrepenger/ForÅFåForeldrepenger';

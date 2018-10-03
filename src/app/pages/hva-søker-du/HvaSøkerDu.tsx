@@ -6,7 +6,7 @@ import BEMHelper from '../../utils/bem';
 import Foreldrepenger from './Foreldrepenger';
 import Engangsstonad from './Engangsstonad';
 import Svangerskapspenger from './Svangerskapspenger';
-import translate from '../../utils/translate';
+import translate from '../../intl/translate';
 import SvgBanner from '../../components/svg-banner/SvgBanner';
 
 import './hvaSøkerDu.less';
@@ -21,7 +21,7 @@ const HvaSøkerDu: React.StatelessComponent<Props> = ({ location }) => {
     return (
         <div className={cls.className}>
             <div role="heading" className={cls.element('header')}>
-                <TypografiBase type="undertittel">{translate('hva_vil_du_søke_om')}</TypografiBase>
+                <TypografiBase type="undertittel">{translate('hva_søker_du.tittel')}</TypografiBase>
             </div>
             <div className={cls.element('body')}>
                 <div role="main" className={cls.element('content')}>

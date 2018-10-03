@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { RadioPanel } from 'nav-frontend-skjema';
 
-import translate from '../../../utils/translate';
+import translate from '../../../intl/translate';
 import BEMHelper from '../../../utils/bem';
 
 import './nyeRegler.less';

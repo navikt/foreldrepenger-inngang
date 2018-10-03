@@ -1,7 +1,7 @@
 import * as React from 'react';
 import PanelMedIllustrasjon from '../../../components/panel-med-illustrasjon/PanelMedIllustrasjon';
 import BEMHelper from '../../../utils/bem';
-import translate from '../../../utils/translate';
+import translate from '../../../intl/translate';
 import CustomSVG from '../../../utils/CustomSVG';
 import Foreldrepar from '../../../components/foreldrepar/Foreldrepar';
 import Innholdsfaner from '../../../components/innholdsfaner/Innholdsfaner';

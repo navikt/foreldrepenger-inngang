@@ -1,6 +1,6 @@
 import * as React from 'react';
 import PanelMedIllustrasjon from '../../../components/panel-med-illustrasjon/PanelMedIllustrasjon';
-import translate from '../../../utils/translate';
+import translate from '../../../intl/translate';
 import BEMHelper from '../../../utils/bem';
 import CustomSVG from '../../../utils/CustomSVG';
 import StrukturertTekst from '../../../components/strukturert-tekst/StrukturertTekst';

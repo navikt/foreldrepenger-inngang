@@ -7,7 +7,7 @@ import CakeSvg from './CakeSvg';
 import CakeFellesSvg from './CakeFellesSvg';
 
 import './informasjonsfaner.less';
-import translate from '../../../../utils/translate';
+import translate from '../../../../intl/translate';
 
 const cls = BEMHelper('informasjonsfaner');
 

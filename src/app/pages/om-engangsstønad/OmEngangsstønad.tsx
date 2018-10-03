@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Breadcrumbs from '../../components/breadcrumbs/Breadcrumbs';
 import BEMHelper from '../../utils/bem';
-import translate from '../../utils/translate';
+import translate from '../../intl/translate';
 import PanelMedIllustrasjon from '../../components/panel-med-illustrasjon/PanelMedIllustrasjon';
 import Sidebanner from '../../components/sidebanner/Sidebanner';
 import StrukturertTekst from '../../components/strukturert-tekst/StrukturertTekst';

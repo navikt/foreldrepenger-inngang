@@ -4,7 +4,7 @@ import { withRouter } from 'react-router-dom';
 
 import UserHelp from './user-help/UserHelp';
 import PanelMedTittel from '../../components/panel-med-tittel/PanelMedTittel';
-import translate from '../../utils/translate';
+import translate from '../../intl/translate';
 import externalUrls from '../../utils/externalUrls';
 import StrukturertTekst from '../../components/strukturert-tekst/StrukturertTekst';
 

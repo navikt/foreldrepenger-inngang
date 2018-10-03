@@ -1,7 +1,7 @@
 import * as React from 'react';
 import TypografiBase from 'nav-frontend-typografi';
 import BEMHelper from '../../../../utils/bem';
-import translate from '../../../../utils/translate';
+import translate from '../../../../intl/translate';
 import AntallBarn from './AntallBarn';
 import AntallUker from './AntallUker';
 import DinLønn from './din-lønn/DinLønn';
@@ -41,9 +41,7 @@ class Kalkulator extends React.Component {
 
     onPercentageSelect = (selectedPercentage: number) => {
         const selectedNumberOfWeeks =
-            antallUtbetalingsuker[this.state.selectedNumberOfChildren][
-                selectedPercentage
-            ];
+            antallUtbetalingsuker[this.state.selectedNumberOfChildren][selectedPercentage];
 
         this.setState({
             selectedPercentage,
@@ -66,11 +64,7 @@ class Kalkulator extends React.Component {
                     <div />
                     <TypografiBase type="normaltekst">100 %</TypografiBase>
                     <TypografiBase type="normaltekst">80 %</TypografiBase>
-                    <AntallBarn
-                        parentCls={cls}
-                        childCount={1}
-                        label={translate('ett_barn')}
-                    />
+                    <AntallBarn parentCls={cls} childCount={1} label={translate('ett_barn')} />
                     <AntallUkerWrapper
                         numberOfWeeks={antallUtbetalingsuker[1][100]}
                         numberOfChildren={1}
@@ -81,11 +75,7 @@ class Kalkulator extends React.Component {
                         numberOfChildren={1}
                         percentage={80}
                     />
-                    <AntallBarn
-                        parentCls={cls}
-                        childCount={2}
-                        label={translate('tvillinger')}
-                    />
+                    <AntallBarn parentCls={cls} childCount={2} label={translate('tvillinger')} />
                     <AntallUkerWrapper
                         numberOfWeeks={antallUtbetalingsuker[2][100]}
                         numberOfChildren={2}
@@ -96,11 +86,7 @@ class Kalkulator extends React.Component {
                         numberOfChildren={2}
                         percentage={80}
                     />
-                    <AntallBarn
-                        parentCls={cls}
-                        childCount={3}
-                        label={translate('flere_barn')}
-                    />
+                    <AntallBarn parentCls={cls} childCount={3} label={translate('flere_barn')} />
                     <AntallUkerWrapper
                         numberOfWeeks={antallUtbetalingsuker[3][100]}
                         numberOfChildren={3}
@@ -124,11 +110,7 @@ class Kalkulator extends React.Component {
 
 const addAntallUkerAttributes = (
     selectedNumberOfWeeks: number,
-    onSelect: (
-        numberOfWeeks: number,
-        numberOfChildren: number,
-        percentage: number
-    ) => void
+    onSelect: (numberOfWeeks: number, numberOfChildren: number, percentage: number) => void
 ) => ({
     numberOfWeeks,
     numberOfChildren,

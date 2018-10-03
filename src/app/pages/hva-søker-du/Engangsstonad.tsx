@@ -3,7 +3,7 @@ import StrukturertTekst from '../../components/strukturert-tekst/StrukturertTeks
 
 import ButtonPanel from './button-panel/ButtonPanel';
 import PanelMedTittel from '../../components/panel-med-tittel/PanelMedTittel';
-import translate from '../../utils/translate';
+import translate from '../../intl/translate';
 import externalUrls from '../../utils/externalUrls';
 
 const content = require('../../../content/hva-vil-du-søke-om/engangsstønad.json');
