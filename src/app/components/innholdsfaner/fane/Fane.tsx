@@ -43,9 +43,11 @@ const Fane = ({
                 </TypografiBase>
             </div>
             {isSelected && (
-                <div className={cls.element('indicator')}>
-                    <div className={cls.element('pointer')}>
-                        <Chevron />
+                <div className={cls.element('point-wrapper')}>
+                    <div className={cls.element('indicator')}>
+                        <div className={cls.element('pointer')}>
+                            <Chevron />
+                        </div>
                     </div>
                 </div>
             )}
@@ -54,14 +56,20 @@ const Fane = ({
 };
 
 const Chevron = () => (
-
     <span>
-                 <svg  xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-    <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z" fill="#efefef" />
-    <path d="M0 0h24v24H0z" fill="none"/>
-</svg>
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24">
+            <path
+                d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"
+                fill="#efefef"
+            />
+            <path d="M0 0h24v24H0z" fill="none" />
+        </svg>
 
-        { /*
+        {/*
         <svg width="13px" height="9px" viewBox="0 0 13 8" version="1.1">
             <title>Chevron</title>
             <defs />
@@ -84,7 +92,7 @@ const Chevron = () => (
             </g>
         </svg>
 
-        */ }
+        */}
     </span>
 );
 
