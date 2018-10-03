@@ -14,21 +14,18 @@ const pageSvg = require('../../../assets/page.svg').default;
 
 const Adopjson = ({ id }: { id: string }) => {
     return (
-        <PanelMedIllustrasjon
-            id={id}
-            title={translate('adopsjon')}
-            svg={pageSvg}>
+        <PanelMedIllustrasjon id={id} title={translate('adopsjon')} svg={pageSvg}>
             <StrukturertTekst tekst={content} />
-            <LesMer intro={translate('når_starter_foreldrepengeperioden')}>
+            <LesMer intro={translate('om_foreldrepenger.adopsjon.når_starter')}>
                 <StrukturertTekst tekst={nårStarter} />
             </LesMer>
-            <LesMer intro={translate('hvor_lenge_kan_du_få_foreldrepenger')}>
+            <LesMer intro={translate('om_foreldrepenger.adopsjon.hvor_lenge')}>
                 <StrukturertTekst tekst={hvorLenge} />
             </LesMer>
-            <LesMer intro={translate('adopterer_dere_flere_barn')}>
+            <LesMer intro={translate('om_foreldrepenger.adopsjon.flere_barn')}>
                 <StrukturertTekst tekst={flereBarn} />
             </LesMer>
-            <LesMer intro={translate('adopsjon_som_ikke_gir_rett')}>
+            <LesMer intro={translate('om_foreldrepenger.adopsjon.ikke_rett')}>
                 <StrukturertTekst tekst={ikkeRett} />
             </LesMer>
         </PanelMedIllustrasjon>

@@ -44,11 +44,7 @@ class SøkForeldrepenger extends Component<Props> {
 
     render = () => {
         return (
-            <div
-                className={classnames(
-                    hvaSøkerDuCls.className,
-                    foreldrepengerCls.className
-                )}>
+            <div className={classnames(hvaSøkerDuCls.className, foreldrepengerCls.className)}>
                 <div role="header" className={hvaSøkerDuCls.element('header')}>
                     <TypografiBase type="undertittel">
                         {translate('hva_vil_du_søke_om')}
@@ -59,9 +55,7 @@ class SøkForeldrepenger extends Component<Props> {
                         <Breadcrumbs path={location.pathname} />
                         <SvgBanner />
                         <PanelMedTittel title={translate('foreldrepenger')}>
-                            <Tekstomrade>
-                                {translate('foreldrepenger_inngang')}
-                            </Tekstomrade>
+                            <Tekstomrade>{translate('søk_foreldrepenger.informasjon')}</Tekstomrade>
                             <Datovelger
                                 date={this.state.selectedDate}
                                 onChange={(date: Date) => this.setDate(date)}
@@ -77,13 +71,9 @@ class SøkForeldrepenger extends Component<Props> {
                             {this.state.selectedDate && (
                                 <a
                                     tabIndex={-1}
-                                    href={
-                                        externalUrls.søk_foreldrepenger_eller_engangsstønad
-                                    }>
+                                    href={externalUrls.søk_foreldrepenger_eller_engangsstønad}>
                                     <KnappBase type="hoved">
-                                        {translate(
-                                            'begynn_søknad_om_foreldrepenger'
-                                        )}
+                                        {translate('søk_foreldrepenger.knapp')}
                                     </KnappBase>
                                 </a>
                             )}

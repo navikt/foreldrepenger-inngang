@@ -21,10 +21,10 @@ const Header = () => {
             <div className={cls.element('content')}>
                 <div className={cls.element('text')}>
                     <TypografiBase type="sidetittel">
-                        {translate('informasjonstavle_tittel')}
+                        {translate('informasjonstavle.tittel')}
                     </TypografiBase>
                     <TypografiBase type="normaltekst">
-                        {translate('informasjonstavle_ingress')}
+                        {translate('informasjonstavle.ingress')}
                     </TypografiBase>
                 </div>
                 <div className={cls.element('svgContainer')}>

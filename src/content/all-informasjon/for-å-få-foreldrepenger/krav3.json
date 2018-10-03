@@ -1,5 +1,15 @@
 [
     {
+        "type": "avsnitt",
+        "style": "undertittel",
+        "children": [
+            {
+                "type": "span",
+                "text": "Jeg bor i Norge"
+            }
+        ]
+    },
+    {
         "type": "inline",
         "style": "normaltekst",
         "children": [

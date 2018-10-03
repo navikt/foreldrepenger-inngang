@@ -1,5 +1,15 @@
 [
     {
+        "type": "avsnitt",
+        "style": "undertittel",
+        "children": [
+            {
+                "type": "span",
+                "text": "Jeg har tjent minst 48 441,– kr i året"
+            }
+        ]
+    },
+    {
         "type": "inline",
         "style": "normaltekst",
         "children": [

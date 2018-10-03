@@ -10,9 +10,7 @@ const createDateErrorMessage = (date: Date) => {
         .subtract(6, 'weeks')
         .format('dddd D. MMMM');
 
-    return `${translate(
-        'ugyldig_dato_for_foreldrepenger'
-    )} ${sixWeeksEarlier}.`;
+    return `${translate('søk_foreldrepenger.advarselmelding')} ${sixWeeksEarlier}.`;
 };
 
 const Veiledermelding = ({
@@ -23,21 +21,11 @@ const Veiledermelding = ({
     parentCls: BEMWrapper;
 }) => {
     const saraSvg = require(`../../assets/sara.svg`).default;
-    const sara = (
-        <CustomSVG
-            className={parentCls.className}
-            iconRef={saraSvg}
-            size={64}
-        />
-    );
+    const sara = <CustomSVG className={parentCls.className} iconRef={saraSvg} size={64} />;
 
     return (
         <div role="alert">
-            <Veilederpanel
-                kompakt={true}
-                type="normal"
-                svg={sara}
-                fargetema="advarsel">
+            <Veilederpanel kompakt={true} type="normal" svg={sara} fargetema="advarsel">
                 {createDateErrorMessage(selectedDate)}
             </Veilederpanel>
         </div>

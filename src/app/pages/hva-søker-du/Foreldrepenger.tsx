@@ -17,10 +17,7 @@ interface ForeldrepengerProps {
     match: any;
 }
 
-const Foreldrepenger: StatelessComponent<ForeldrepengerProps> = ({
-    parentCls,
-    history
-}) => {
+const Foreldrepenger: StatelessComponent<ForeldrepengerProps> = ({ parentCls, history }) => {
     return (
         <PanelMedTittel title={translate('foreldrepenger')}>
             <StrukturertTekst tekst={content} />
@@ -33,19 +30,15 @@ const Foreldrepenger: StatelessComponent<ForeldrepengerProps> = ({
                         onClick={() => {
                             history.push('/hva-soker-du/foreldrepenger');
                         }}>
-                        {translate('søk_foreldrepenger')}
+                        {translate('hva_søker_du.søk_foreldrepenger')}
                     </KnappBase>
-                    <KnappBase
-                        className={parentCls.element('knapp')}
-                        type="standard">
-                        {translate('har_søkt_foreldrepenger')}
+                    <KnappBase className={parentCls.element('knapp')} type="standard">
+                        {translate('hva_søker_du.har_søkt_foreldrepenger')}
                     </KnappBase>
                 </div>
                 <UserHelp
-                    linkText={translate('ingen_elektronisk_id')}
-                    linkUrl={
-                        externalUrls.søk_foreldrepenger_eller_engangsstønad_papir
-                    }
+                    linkText={translate('hva_søker_du.ingen_elektronisk_id')}
+                    linkUrl={externalUrls.søk_foreldrepenger_eller_engangsstønad_papir}
                     helpText="<Placeholder>"
                 />
             </div>

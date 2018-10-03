@@ -18,13 +18,13 @@ const JegVilJobbe = ({ id }: { id: string }) => {
         <PanelMedIllustrasjon
             id={id}
             className={cls.className}
-            title={translate('jeg_vil_jobbe')}
+            title={translate('om_foreldrepenger.jobbe.tittel')}
             svg={pageSvg}>
             <StrukturertTekst tekst={content} />
-            <LesMer intro={translate('slik_går_du_frem_ved_heltidsjobb')}>
+            <LesMer intro={translate('om_foreldrepenger.jobbe.heltidsjobb')}>
                 <StrukturertTekst tekst={firstPanelContent} />
             </LesMer>
-            <LesMer intro={translate('slik_går_du_frem_ved_deltidsjobb')}>
+            <LesMer intro={translate('om_foreldrepenger.jobbe.deltidsjobb')}>
                 <StrukturertTekst tekst={secondPanelContent} />
             </LesMer>
         </PanelMedIllustrasjon>

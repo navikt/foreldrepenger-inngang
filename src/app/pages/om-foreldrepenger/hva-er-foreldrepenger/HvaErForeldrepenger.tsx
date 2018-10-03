@@ -11,66 +11,62 @@ import StrukturertTekst from '../../../components/strukturert-tekst/StrukturertT
 import Innholdsfaner from '../../../components/innholdsfaner/Innholdsfaner';
 import { Innholdsfane } from '../../../components/innholdsfaner/fane/Fane';
 import './hvaErForeldrepenger.less';
+import PanelMedIllustrasjon from '../../../components/panel-med-illustrasjon/PanelMedIllustrasjon';
+import translate from '../../../utils/translate';
 
+const pageSvg = require('../../../assets/page.svg').default;
 const content = require('../../../../content/all-informasjon/hva-er-foreldrepenger/hva-er-foreldrepenger');
 
 const cls = BEMHelper('hvaErForeldrepenger');
 const tabs: Innholdsfane[] = [
     {
-        label: 'farOgMor',
+        label: 'far_og_mor',
         icon: <Foreldrepar firstParent="far1" secondParent="mor1" />,
         component: <FarOgMor />
     },
     {
-        label: 'farOgFar',
+        label: 'far_og_far',
         icon: <Foreldrepar firstParent="far4" secondParent="far2" />,
         component: null
     },
     {
-        label: 'morOgMor',
+        label: 'mor_og_mor',
         icon: <Foreldrepar firstParent="mor2" secondParent="medmor2" />,
         component: <MorOgMor />
     },
     {
         label: 'bareFarHarRett',
-        icon: (
-            <Foreldrepar
-                firstParent="far3"
-                secondParent="medmor1"
-                variant={1}
-            />
-        ),
+        icon: <Foreldrepar firstParent="far3" secondParent="medmor1" variant={1} />,
         component: <BareFarHarRett />
     },
     {
         label: 'bareMorHarRett',
-        icon: (
-            <Foreldrepar firstParent="far2" secondParent="mor1" variant={2} />
-        ),
+        icon: <Foreldrepar firstParent="far2" secondParent="mor1" variant={2} />,
         component: <BareMorHarRett />
     },
     {
         label: 'aleneomsorg',
-        icon: (
-            <Foreldrepar
-                firstParent="far1"
-                secondParent="medmor1"
-                variant={3}
-            />
-        ),
+        icon: <Foreldrepar firstParent="far1" secondParent="medmor1" variant={3} />,
         component: <Aleneomsorg />
     }
 ];
 
-interface Props {}
+interface Props {
+    id: string;
+}
 
-const HvaErForeldrepenger: React.StatelessComponent<Props> = () => {
+const HvaErForeldrepenger: React.StatelessComponent<Props> = ({ id }) => {
     return (
-        <div className={cls.className}>
-            <StrukturertTekst tekst={content} />
-            <Innholdsfaner tabs={tabs} />
-            <MenHvaHvis />
-        </div>
+        <PanelMedIllustrasjon
+            id={id}
+            title={translate('om_foreldrepenger.hvor_lenge.tittel')}
+            svg={pageSvg}>
+            <div className={cls.className}>
+                <StrukturertTekst tekst={content} />
+                <Innholdsfaner tabs={tabs} />
+                <MenHvaHvis />
+            </div>
+        </PanelMedIllustrasjon>
     );
 };
 

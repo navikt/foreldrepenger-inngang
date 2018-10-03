@@ -1,0 +1,117 @@
+{
+    "adopsjon_og_arbeidsgiver": "Adopsjon og arbeidsgiver",
+    "adopsjon": "Adopsjon",
+    "aleneomsorg": "Aleneomsorg",
+    "andre_lenker": "Andre lenker",
+    "antatt_saksbehandlingstid": "Antatt saksbehandlingstid",
+    "arbeidsgiver": "Arbeidsgiver",
+    "bareFarHarRett": "Bare far har rett",
+    "bareMorHarRett": "Bare mor har rett",
+    "beregning": "Beregning",
+    "engangsstønad": "Engangsstønad",
+    "ett_barn": "Ett barn",
+    "far_og_far": "Far og far",
+    "far_og_mor": "Far og mor",
+    "ferie": "Ferie",
+    "flere_barn": "Flere barn",
+    "fødsel": "Fødsel",
+    "foreldrepenger_hvis_utland": "Foreldrepenger hvis utland",
+    "foreldrepenger": "Foreldrepenger",
+    "hjemme_samtidig": "Hjemme samtidig",
+    "jeg_har_hatt_inntekt": "Jeg har hatt inntekt",
+    "jeg_har_inntekt": "Jeg har inntekt",
+    "klager": "Klager",
+    "kontakt_oss": "Kontakt oss",
+    "meld_fra_om_endringer": "Meld fra om endringer",
+    "mor_og_mor": "Mor og mor",
+    "regelverk": "Regelverk",
+    "søknadsfrist": "Søknadsfrist",
+    "svangerskapspenger": "Svangerskapspenger",
+    "tvillinger": "Tvillinger",
+    "uker": "uker",
+    "utbetaling": "Utbetaling",
+    "utbetalinger": "Utbetalinger",
+    "viktige_frister": "Viktige frister",
+
+
+    "route.": "Foreldrepenger, engangsstønad og svangerskapspenger",
+    "route.hva-soker-du": "Hva vil du søke om",
+    "route.om-foreldrepenger": "Om foreldrepenger",
+    "route.om-engangsstonad": "Om engangsstønad",
+    "route.foreldrepenger": "Foreldrepenger",
+
+
+    "informasjonstavle.tittel": "Foreldrepenger, engangsstønad og svangerskapspenger",
+    "informasjonstavle.ingress": "Her finner du all informasjon for både fødsel og adopsjon.",
+    "informasjonstavle.hva_har_du_rett_på": "Hva har du rett på?",
+    "informasjonstavle.hva_har_du_rett_på_body": "Er det foreldrepenger eller engangsstønad du skal søke om? Bruk veilederen for å finne ut!",
+    "informasjonstavle.hvor_lenge_kan_du_få_permisjon": "Hvor lenge kan du ha permisjon?",
+    "informasjonstavle.hvor_lenge_kan_du_få_permisjon_body": "Foreldrepengeplanleggeren gir deg svar på det meste.",
+    "informasjonstavle.gå_rett_til_søknaden": "Gå rett til søknaden",
+    "informasjonstavle.gå_rett_til_søknaden_body": "Ikke nøl, søk om foreldrepenger, engangsstønad eller svangerskapspenger her!",
+    "informasjonstavle.mer_informasjon.tittel": "All informasjon om",
+    "informasjonstavle.mer_informasjon.foreldrepenger": "Foreldrepenger skal erstatte inntekten din når du skal ha foreldrepermisjon.  Her kan du lese alt om ytelsen.",
+    "informasjonstavle.mer_informasjon.engangsstønad": "Har du ikke hatt inntekt de siste året kan du får en engangssum. Dette skal hjelpe deg i rollen som forelder.",
+    "informasjonstavle.mer_informasjon.svangerskapspenger": "Friske, gravide kvinner som ikke kan fortsette å jobbe under svangerskapet fordi det kan medføre risiko for skade på fosteret.",
+
+
+    "hva_søker_du.tittel": "Hva vil du søke om?",
+    "hva_søker_du.søk_foreldrepenger": "Søk om foreldrepenger",
+    "hva_søker_du.har_søkt_foreldrepenger": "Jeg har allerede søkt",
+    "hva_søker_du.søk_engangsstønad": "Søk om engangsstønad",
+    "hva_søker_du.søk_svangerskapspenger": "Søk om svangerskapspenger",
+    "hva_søker_du.ingen_elektronisk_id": "Jeg har ikke elektronisk ID",
+
+
+    "søk_foreldrepenger.informasjon": "Du kan tidligst sende inn søknad seks uker før du skal ta ut foreldrepengene dine. Skal du vente med å ta ut foreldrepengene dine, gjelder dette også deg.",
+    "søk_foreldrepenger.knapp": "Begynn søknad om foreldrepenger",
+    "søk_foreldrepenger.advarselmelding": "Du søker tidligere enn 6 uker før du skal ta ut foreldrepenger. Du kan begynne på søknaden, men det vil ikke være mulig å sende den inn før ",
+    "søk_foreldrepenger.første_dag_spørsmål": "Når er første dag med uttak eller utsettelse?",
+
+    
+    "om_foreldrepenger.faner.label": "Din situasjon:",
+    "om_foreldrepenger.tittel": "All informasjon om foreldrepenger",
+    "om_foreldrepenger.for_å_få.tittel": "For å få foreldrepenger",
+    
+    "om_foreldrepenger.hvor_lenge.tittel": "Hvor lenge kan jeg få foreldrepenger?",
+    "om_foreldrepenger.hvor_lenge.eksempel": "Eksempel på fast inntekt per måned på",
+    "om_foreldrepenger.hvor_lenge.hurtiglenker": "Men hva hvis ...",
+    "om_foreldrepenger.hvor_lenge.fordeling.tittel": "Slik er periodene fordelt",
+    "om_foreldrepenger.hvor_lenge.fordeling.tittel_alene": "Slik er foreldrepengeperioden",
+    
+    "om_foreldrepenger.ferie.eksempel_label": "Eksempel på utsettelse ved uttak av ferie",
+    "om_foreldrepenger.ferie.eksempel2_label": "Et annet eksempel på forskyving av perioder",
+    "om_foreldrepenger.ferie.rett_til_utsettelse": "Ferie som gir rett til utsettelse",
+    "om_foreldrepenger.ferie.utsette": "Slik går du frem for å utsette",
+    
+    "om_foreldrepenger.nye_regler.tittel": "Nye regler fra 1. juli 2018",
+    "om_foreldrepenger.nye_regler_label": "Barnet er født eller adoptert",
+    "om_foreldrepenger.nye_regler.før": "før 1. juli 2018",
+    "om_foreldrepenger.nye_regler.før_beskrivelse": "Av den totale foreldrepengeperioden er 10 uker øremerket hver av foreldrene (kvoten). Får dere flere barn samtidig, får dere fem eller syv uker ekstra for hvert barn mer enn ett.",
+    "om_foreldrepenger.nye_regler.etter": "etter 1. juli 2018",
+    "om_foreldrepenger.nye_regler.etter_beskrivelse": "Av den totale foreldrepengeperioden er 15 uker øremerket hver av foreldrene (kvoten). Får dere to barn samtidig, får dere 17 eller 21 uker ekstra. Får dere tre eller flere barn, får dere 46 eller 56 uker ekstra.",
+    
+    "om_foreldrepenger.jobbe.tittel": "Jeg vil jobbe",
+    "om_foreldrepenger.jobbe.heltidsjobb": "Slik går du frem ved heltidsjobb",
+    "om_foreldrepenger.jobbe.deltidsjobb": "Slik går du frem ved deltidsjobb",
+
+    "om_foreldrepenger.sykdom.tittel": "Sykdom",
+    "om_foreldrepenger.sykdom.innlagt": "Barnet er innlagt",
+    "om_foreldrepenger.sykdom.foreldre_syke": "En av foreldrene er syke",
+    "om_foreldrepenger.sykdom.innlagt.utsette": "Slik går du frem for å utsette",
+    "om_foreldrepenger.sykdom.innlagt.overta": "Slik går du frem for å overta",
+
+    "om_foreldrepenger.arbeidsgiver.tittel": "Arbeidsgiver",
+    "om_foreldrepenger.arbeidsgiver.link_skjema": "Skjema for inntektsopplysninger for arbeidstaker (pdf)",
+    "om_foreldrepenger.arbeidsgiver.kontonummer": "Bankkontonummer for refusjoner fra NAV til arbeidsgiver",
+    
+    "om_foreldrepenger.adopsjon.når_starter": "Når starter foreldrepengeperioden",
+    "om_foreldrepenger.adopsjon.hvor_lenge": "Hvor lenge kan du få foreldrepenger",
+    "om_foreldrepenger.adopsjon.flere_barn": "Adopterer dere flere barn",
+    "om_foreldrepenger.adopsjon.ikke_rett": "Adopsjon som ikke gir rett",
+
+    
+    "om_engangsstønad.tittel": "All informasjon om engangsstønad",
+    "om_engangsstønad.hva_er.tittel": "Hva er engangsstønad?",
+    "om_engangsstønad.krav_tittel": "Når kan du få engangsstønad?"
+}

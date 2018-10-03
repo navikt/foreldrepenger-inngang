@@ -2,7 +2,6 @@ import * as React from 'react';
 import Breadcrumbs from '../../components/breadcrumbs/Breadcrumbs';
 import BEMHelper from '../../utils/bem';
 import translate from '../../utils/translate';
-import PanelMedIllustrasjon from '../../components/panel-med-illustrasjon/PanelMedIllustrasjon';
 import HvaErForeldrepenger from './hva-er-foreldrepenger/HvaErForeldrepenger';
 import NyeRegler from './nye-regler/NyeRegler';
 import ForÅFåForeldrepenger from './for-å-få-foreldrepenger/ForÅFåForeldrepenger';
@@ -21,8 +20,6 @@ interface Props {
     location: any;
 }
 
-const pageSvg = require('../../assets/page.svg').default;
-
 const sections = [
     'for-å-få-foreldrepenger',
     'hvor-lenge-kan-jeg-få-foreldrepenger',
@@ -38,14 +35,14 @@ const sections = [
 const OmForeldrepenger: React.StatelessComponent<Props> = ({ location }) => {
     return (
         <div className={cls.className}>
-            <Sidebanner text={translate('all_informasjon_foreldrepenger')} />
+            <Sidebanner text={translate('om_foreldrepenger.tittel')} />
             <div className={cls.element('body')}>
                 <div role="main" className={cls.element('content')}>
                     <Breadcrumbs path={location.pathname} />
                     {/* <Hurtiglenker links={sections} /> */}
                     <ForÅFåForeldrepenger id={sections[0]} />
                     <NyeRegler />
-                    <HvaErForeldrepengerWrapper id={sections[1]} />
+                    <HvaErForeldrepenger id={sections[1]} />
                     <Ferie id={sections[2]} />
                     <JegVilJobbe id={sections[3]} />
                     <Sykdom id={sections[4]} />
@@ -57,17 +54,6 @@ const OmForeldrepenger: React.StatelessComponent<Props> = ({ location }) => {
                 </div>
             </div>
         </div>
-    );
-};
-
-const HvaErForeldrepengerWrapper = ({ id }: { id: string }) => {
-    return (
-        <PanelMedIllustrasjon
-            id={id}
-            title={translate('hvor_lenge_kan_jeg_få_foreldrepenger')}
-            svg={pageSvg}>
-            <HvaErForeldrepenger />
-        </PanelMedIllustrasjon>
     );
 };
 

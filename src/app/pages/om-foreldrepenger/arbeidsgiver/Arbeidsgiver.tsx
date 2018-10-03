@@ -23,18 +23,12 @@ const Arbeidsgiver = ({ id }: { id: string }) => {
         <PanelMedIllustrasjon
             className={cls.className}
             id={id}
-            title={translate('arbeidsgiver_tittel')}
+            title={translate('om_foreldrepenger.arbeidsgiver.tittel')}
             svg={pageSvg}>
             <StrukturertTekst tekst={content} />
             <div className={cls.element('links')}>
-                <Lenke
-                    href={skjemaUrl}
-                    txt={'arbeid_skjema_for_inntektsopplysninger_link'}
-                />
-                <Lenke
-                    href={kontonummerUrl}
-                    txt={'arbeid_for_refusjoner_fra_nav_link'}
-                />
+                <Lenke href={skjemaUrl} txt={'om_foreldrepenger.arbeidsgiver.link_skjema'} />
+                <Lenke href={kontonummerUrl} txt={'om_foreldrepenger.arbeidsgiver.kontonummer'} />
             </div>
         </PanelMedIllustrasjon>
     );

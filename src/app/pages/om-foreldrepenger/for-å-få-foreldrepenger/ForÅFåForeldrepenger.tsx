@@ -1,41 +1,28 @@
 import * as React from 'react';
 import PanelMedIllustrasjon from '../../../components/panel-med-illustrasjon/PanelMedIllustrasjon';
-import TypografiBase from 'nav-frontend-typografi';
 import translate from '../../../utils/translate';
 import BEMHelper from '../../../utils/bem';
 import CustomSVG from '../../../utils/CustomSVG';
-
-import './forÅFåForeldrepenger.less';
 import StrukturertTekst from '../../../components/strukturert-tekst/StrukturertTekst';
 import { Avsnitt } from '../../../utils/strukturertTekst';
+import './forÅFåForeldrepenger.less';
 
 const cls = BEMHelper('forÅFåForeldrepenger');
-const foreldrepengerSvg = require('../../../assets/familier/familie-1.svg')
-    .default;
-
+const foreldrepengerSvg = require('../../../assets/familier/familie-1.svg').default;
 const checkmarkIcon = require('./checkmark.svg').default;
 const content = require('../../../../content/all-informasjon/for-å-få-foreldrepenger/ingress');
 
 const kravTilForeldrepenger = [
-    {
-        tittel: translate('jeg_har_hatt_inntekt_6_av_10_siste_mnd'),
-        ingress: require('../../../../content/all-informasjon/for-å-få-foreldrepenger/krav1')
-    },
-    {
-        tittel: translate('jeg_har_tjent_minst'),
-        ingress: require('../../../../content/all-informasjon/for-å-få-foreldrepenger/krav2')
-    },
-    {
-        tittel: translate('jeg_bor_i_norge'),
-        ingress: require('../../../../content/all-informasjon/for-å-få-foreldrepenger/krav3')
-    }
+    require('../../../../content/all-informasjon/for-å-få-foreldrepenger/krav1'),
+    require('../../../../content/all-informasjon/for-å-få-foreldrepenger/krav2'),
+    require('../../../../content/all-informasjon/for-å-få-foreldrepenger/krav3')
 ];
 
 const ForÅFåForeldrepenger = ({ id }: { id: string }) => {
     return (
         <PanelMedIllustrasjon
             id={id}
-            title={translate('for_å_få_foreldrepenger')}
+            title={translate('om_foreldrepenger.for_å_få.tittel')}
             svg={foreldrepengerSvg}
             maskSvg={true}>
             <div className={cls.element('alignLeft')}>
@@ -43,34 +30,17 @@ const ForÅFåForeldrepenger = ({ id }: { id: string }) => {
             </div>
             <div className={cls.element('kravTilForeldrepenger')}>
                 {kravTilForeldrepenger.map((krav) => (
-                    <KravTilForeldrepenger
-                        key={krav.tittel}
-                        tittel={krav.tittel}
-                        ingress={krav.ingress}
-                    />
+                    <KravTilForeldrepenger key={krav} ingress={krav} />
                 ))}
             </div>
         </PanelMedIllustrasjon>
     );
 };
 
-const KravTilForeldrepenger = ({
-    tittel,
-    ingress
-}: {
-    tittel: string;
-    ingress: Avsnitt[];
-}) => {
+const KravTilForeldrepenger = ({ ingress }: { ingress: Avsnitt[] }) => {
     return (
         <div className={cls.element('krav')}>
             <CustomSVG iconRef={checkmarkIcon} size={24} />
-            <div className={cls.element('kravtittel')}>
-                <TypografiBase type="undertittel">
-                    <span className={cls.element('kravtittel__innhold')}>
-                        {tittel}
-                    </span>
-                </TypografiBase>
-            </div>
             <StrukturertTekst tekst={ingress} />
         </div>
     );

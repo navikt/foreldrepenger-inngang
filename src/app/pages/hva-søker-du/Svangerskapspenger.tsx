@@ -14,9 +14,9 @@ const Svangerskapspenger = ({ parentCls }: { parentCls: any }) => {
             <div className={parentCls.element('filler')} />
             <ButtonPanel
                 parentCls={parentCls}
-                buttonText={translate('søk_svangerskapspenger')}
+                buttonText={translate('hva_søker_du.søk_svangerskapspenger')}
                 buttonUrl={externalUrls.søk_svangerskapspenger}
-                linkText={translate('ingen_elektronisk_id')}
+                linkText={translate('hva_søker_du.ingen_elektronisk_id')}
                 linkUrl={externalUrls.søk_svangerskapspenger}
                 helpText="<Placeholder>"
             />

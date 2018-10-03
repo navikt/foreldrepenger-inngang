@@ -23,7 +23,7 @@ const sykeOverta = require('../../../../content/all-informasjon/sykdom/en-av-for
 const BarnetErInnlagt = () => (
     <div>
         <StrukturertTekst tekst={barnetErInnlagt} />
-        <LesMer intro={translate('slik_går_du_frem_for_å_utsette')}>
+        <LesMer intro={translate('om_foreldrepenger.sykdom.innlagt.utsette')}>
             <StrukturertTekst tekst={barnetErInnlagtUtsette} />
         </LesMer>
         <StrukturertTekst tekst={barnetErInnlagtForts} />
@@ -33,10 +33,10 @@ const BarnetErInnlagt = () => (
 const EnAvForeldreneErSyke = () => (
     <div>
         <StrukturertTekst tekst={syke} />
-        <LesMer intro={translate('slik_går_du_frem_for_å_utsette')}>
+        <LesMer intro={translate('om_foreldrepenger.sykdom.innlagt.utsette')}>
             <StrukturertTekst tekst={sykeUtsette} />
         </LesMer>
-        <LesMer intro={translate('slik_går_du_frem_for_å_overta')}>
+        <LesMer intro={translate('om_foreldrepenger.sykdom.innlagt.overta')}>
             <StrukturertTekst tekst={sykeOverta} />
         </LesMer>
     </div>
@@ -44,12 +44,12 @@ const EnAvForeldreneErSyke = () => (
 
 const tabs = [
     {
-        label: 'barnet_er_innlagt',
+        label: 'om_foreldrepenger.sykdom.innlagt',
         component: <BarnetErInnlagt />,
         icon: <CustomSVG iconRef={barn} size={48} />
     },
     {
-        label: 'en_av_foreldrene_er_syk',
+        label: 'om_foreldrepenger.sykdom.foreldre_syke',
         component: <EnAvForeldreneErSyke />,
         icon: <Foreldrepar firstParent="far1" secondParent="mor1" />
     }
@@ -61,7 +61,7 @@ const Sykdom = ({ id }: { id: string }) => {
             id={id}
             className={cls.className}
             svg={pageSvg}
-            title={translate('sykdom')}>
+            title={translate('om_foreldrepenger.sykdom.tittel')}>
             <Innholdsfaner tabs={tabs} />
         </PanelMedIllustrasjon>
     );

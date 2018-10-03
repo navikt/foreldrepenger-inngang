@@ -14,11 +14,7 @@ interface Props {
     onPercentageSelect: (p: number) => void;
 }
 
-const DinLønn = ({
-    grandParentCls,
-    selectedPercentage,
-    onPercentageSelect
-}: Props) => {
+const DinLønn = ({ grandParentCls, selectedPercentage, onPercentageSelect }: Props) => {
     const monthlyWage = 22000;
 
     return (
@@ -42,7 +38,7 @@ const DinLønn = ({
                 />
             </div>
             <div className={cls.element('inputContainer')}>
-                {`${translate('eksempel_på_fast_inntekt')} ${monthlyWage},– kr`}
+                {`${translate('om_foreldrepenger.hvor_lenge.eksempel')} ${monthlyWage},– kr`}
             </div>
         </div>
     );

@@ -25,9 +25,7 @@ const tabs: Innholdsfane[] = [
 ];
 
 const NårKanDuFåEngangsstønad = () => (
-    <PanelMedIllustrasjon
-        title={translate('når_kan_du_få_engangsstønad')}
-        svg={pageSvg}>
+    <PanelMedIllustrasjon title={translate('om_engangsstønad.krav_tittel')} svg={pageSvg}>
         <div>
             <StrukturertTekst tekst={nårKanDuFåEngangsstønadContent} />
             <Innholdsfaner tabs={tabs} />

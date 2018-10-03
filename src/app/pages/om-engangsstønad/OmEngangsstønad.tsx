@@ -27,7 +27,7 @@ const utbetalingShortContent = require('../../../content/om-engangsstønad/hva-e
 const OmEngangsstonad: React.StatelessComponent<Props> = ({ location }) => {
     return (
         <div className={infosiderCls.className}>
-            <Sidebanner text={translate('all_informasjon_engangsstønad')} />
+            <Sidebanner text={translate('om_engangsstønad.tittel')} />
             <div className={infosiderCls.element('body')}>
                 <div className={infosiderCls.element('content')}>
                     <Breadcrumbs path={location.pathname} />
@@ -42,9 +42,7 @@ const OmEngangsstonad: React.StatelessComponent<Props> = ({ location }) => {
 };
 
 const HvaErEngangsstønad = () => (
-    <PanelMedIllustrasjon
-        title={translate('hva_er_engangsstønad')}
-        svg={pageSvg}>
+    <PanelMedIllustrasjon title={translate('om_engangsstønad.hva_er.tittel')} svg={pageSvg}>
         <StrukturertTekst tekst={hvaErEngangsstønadContent} />
         <div className={cls.element('kravContainer')}>
             <div className={cls.element('krav')}>

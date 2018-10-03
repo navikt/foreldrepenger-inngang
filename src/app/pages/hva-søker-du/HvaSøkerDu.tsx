@@ -21,9 +21,7 @@ const HvaSøkerDu: React.StatelessComponent<Props> = ({ location }) => {
     return (
         <div className={cls.className}>
             <div role="heading" className={cls.element('header')}>
-                <TypografiBase type="undertittel">
-                    {translate('hva_vil_du_søke_om')}
-                </TypografiBase>
+                <TypografiBase type="undertittel">{translate('hva_vil_du_søke_om')}</TypografiBase>
             </div>
             <div className={cls.element('body')}>
                 <div role="main" className={cls.element('content')}>

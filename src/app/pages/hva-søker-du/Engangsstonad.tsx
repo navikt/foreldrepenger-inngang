@@ -15,12 +15,10 @@ const Engangsstonad = ({ parentCls }: { parentCls: any }) => {
             <div className={parentCls.element('filler')} />
             <ButtonPanel
                 parentCls={parentCls}
-                buttonText={translate('søk_engangsstønad')}
+                buttonText={translate('hva_søker_du.søk_engangsstønad')}
                 buttonUrl={externalUrls.søk_foreldrepenger_eller_engangsstønad}
-                linkText={translate('ingen_elektronisk_id')}
-                linkUrl={
-                    externalUrls.søk_foreldrepenger_eller_engangsstønad_papir
-                }
+                linkText={translate('hva_søker_du.ingen_elektronisk_id')}
+                linkUrl={externalUrls.søk_foreldrepenger_eller_engangsstønad_papir}
                 helpText="Skaff deg elektronisk ID nå!"
             />
         </PanelMedTittel>

@@ -1,5 +1,15 @@
 [
     {
+        "type": "avsnitt",
+        "style": "undertittel",
+        "children": [
+            {
+                "type": "span",
+                "text": "Jeg har hatt inntekt 6 av 10 siste mnd."
+            }
+        ]
+    },
+    {
         "type": "inline",
         "style": "normaltekst",
         "children": [

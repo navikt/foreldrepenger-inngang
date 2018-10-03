@@ -27,7 +27,7 @@ const parsePath = (path: string) => {
 
         return {
             url,
-            label: translate(`route_${part}`)
+            label: translate(`route.${part}`)
         };
     });
 };

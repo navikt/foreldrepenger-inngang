@@ -20,17 +20,13 @@ const Ferie = ({ id }: { id: string }) => {
         <PanelMedIllustrasjon id={id} svg={pageSvg} title={translate('ferie')}>
             <StrukturertTekst tekst={content} />
 
-            <FerieEksempel
-                title={translate('eksempel_på_utsettelse_ved_uttak_av_ferie')}
-            />
-            <FerieEksempel
-                title={translate('et_annet_eksempel_på_forskyving_av_perioder')}
-            />
+            <FerieEksempel title={translate('om_foreldrepenger.ferie.eksempel_label')} />
+            <FerieEksempel title={translate('om_foreldrepenger.ferie.eksempel2_label')} />
 
-            <LesMer intro={translate('ferie_som_gir_rett_til_utsettelse')}>
+            <LesMer intro={translate('om_foreldrepenger.ferie.rett_til_utsettelse')}>
                 <StrukturertTekst tekst={rettTilUtsettelseContent} />
             </LesMer>
-            <LesMer intro={translate('slik_går_du_frem_for_å_utsette')}>
+            <LesMer intro={translate('om_foreldrepenger.ferie.utsette')}>
                 <StrukturertTekst tekst={fåUtsettelseContent} />
             </LesMer>
 

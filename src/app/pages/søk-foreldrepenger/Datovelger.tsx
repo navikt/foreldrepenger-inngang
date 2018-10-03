@@ -20,7 +20,7 @@ const Datovelger = ({
             aria-haspopup={true}
             className={parentCls.element('datovelger')}>
             <TypografiBase type="element">
-                {translate('når_starter_du')}
+                {translate('søk_foreldrepenger.første_dag_spørsmål')}
             </TypografiBase>
             <NavDatovelger.Datovelger
                 kanVelgeUgyldigDato={true}

@@ -55,17 +55,14 @@ class Informasjonsfaner extends React.Component<Props> {
         <div className={cls.className}>
             <div className={cls.element('header')}>
                 {this.props.tabs.length > 1
-                    ? translate('slik_er_periodene_fordelt')
-                    : translate('slik_er_foreldrepengeperioden')}
+                    ? translate('om_foreldrepenger.hvor_lenge.fordeling.tittel')
+                    : translate('om_foreldrepenger.hvor_lenge.fordeling.tittel_alene')}
             </div>
             {this.props.tabs.length > 1 && (
                 <Tabs
                     tabs={this.props.tabs.map((tab, index) => {
                         const Cake = tab.faneIcon ? CakeSvg : CakeFellesSvg;
-                        const color =
-                            index === this.state.currentTab
-                                ? '#3e3832'
-                                : '#0067c5';
+                        const color = index === this.state.currentTab ? '#3e3832' : '#0067c5';
 
                         return {
                             label: (
@@ -79,9 +76,7 @@ class Informasjonsfaner extends React.Component<Props> {
                     onChange={this.onTabChange}
                 />
             )}
-            <InformasjonsFanerBody
-                {...this.props.tabs[this.state.currentTab].bodyProps}
-            />
+            <InformasjonsFanerBody {...this.props.tabs[this.state.currentTab].bodyProps} />
         </div>
     );
 }

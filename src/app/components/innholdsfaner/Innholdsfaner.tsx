@@ -42,7 +42,7 @@ class Innholdsfaner extends React.Component<Props> {
                 <div className={cls.element('faner')}>
                     <Select
                         selected={this.props.tabs[this.state.currentTab].label}
-                        label={translate('din_situasjon')}
+                        label={translate('om_foreldrepenger.faner.label')}
                         choices={this.props.tabs}
                         onChoiceSelect={(index: number) => {
                             this.onTabSelect(index);
