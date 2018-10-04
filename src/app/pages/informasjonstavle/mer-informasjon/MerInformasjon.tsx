@@ -20,7 +20,7 @@ const MerInformasjon = () => {
                     {translate('mer_informasjon_tittel')}
                 </TypografiBase>
             </div>
-            <div role="navigation" className={cls.element('links')}>
+            <nav className={cls.element('links')}>
                 <MerInformasjonLink
                     title={translate('foreldrepenger')}
                     body={translate('mer_informasjon_foreldrepenger')}
@@ -39,7 +39,7 @@ const MerInformasjon = () => {
                     url={externalUrls.les_mer_svangerskapspenger}
                     urlIsExternal={true}
                 />
-            </div>
+            </nav>
         </div>
     );
 };

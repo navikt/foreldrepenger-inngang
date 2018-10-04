@@ -8,11 +8,11 @@ const cls = BEMHelper('sidebanner');
 
 const Sidebanner = ({ text }: { text: string }) => {
     return (
-        <div role="header" className={cls.className}>
+        <header className={cls.className}>
             <TypografiBase type="undertittel">
                 {translate('all_informasjon_engangsstønad')}
             </TypografiBase>
-        </div>
+        </header>
     );
 };
 

@@ -18,11 +18,11 @@ const Informasjonstavle = () => {
         <div className={cls.className}>
             <Header />
             <div className={cls.element('body')}>
-                <div role="main" className={cls.element('content')}>
+                <main className={cls.element('content')}>
                     <Bildelenker />
                     <MerInformasjon />
                     <AndreLenker />
-                </div>
+                </main>
             </div>
         </div>
     );
@@ -30,7 +30,7 @@ const Informasjonstavle = () => {
 
 const Bildelenker = () => {
     return (
-        <div role="navigation" className={cls.element('bildepaneler')}>
+        <nav className={cls.element('bildepaneler')}>
             <PanelMedBilde
                 svgName="jente-med-imac"
                 title={translate('hva_har_du_rett_på')}
@@ -58,7 +58,7 @@ const Bildelenker = () => {
                     {translate('gå_rett_til_søknaden_body')}
                 </Tekstomrade>
             </PanelMedBilde>
-        </div>
+        </nav>
     );
 };
 

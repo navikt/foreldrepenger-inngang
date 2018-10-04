@@ -51,7 +51,7 @@ class Innholdsfaner extends React.Component<Props> {
                 </div>
             </MediaQuery>
             <MediaQuery query="(min-width: 800px)">
-                <div role="tabpanel" className={cls.element('faner')}>
+                <div role="tablist" className={cls.element('faner')}>
                     {this.props.tabs.map((tab, index) => (
                         <Fane
                             tab={tab}
@@ -66,7 +66,7 @@ class Innholdsfaner extends React.Component<Props> {
                 </div>
                 <div className={cls.element('tabIndicator')} />
             </MediaQuery>
-            <div>{this.state.componentToRender}</div>
+            <div role="tabpanel">{this.state.componentToRender}</div>
         </div>
     );
 }

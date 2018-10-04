@@ -17,7 +17,7 @@ const Header = () => {
         .default;
 
     return (
-        <div role="heading" className={cls.className}>
+        <header className={cls.className}>
             <div className={cls.element('content')}>
                 <div className={cls.element('text')}>
                     <TypografiBase type="sidetittel">
@@ -27,7 +27,9 @@ const Header = () => {
                         {translate('informasjonstavle_ingress')}
                     </TypografiBase>
                 </div>
-                <div className={cls.element('svgContainer')}>
+                <div
+                    role="presentation"
+                    className={cls.element('svgContainer')}>
                     <MediaQuery maxWidth={576}>
                         <FlexibleSvg
                             iconRef={svg}
@@ -41,13 +43,12 @@ const Header = () => {
                             iconRef={svg}
                             height={133}
                             width={300}
-                            aria-label="Illustrasjon av familie"
                             className={cls.element('svg')}
                         />
                     </MediaQuery>
                 </div>
             </div>
-        </div>
+        </header>
     );
 };
 

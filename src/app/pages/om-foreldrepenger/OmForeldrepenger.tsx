@@ -40,8 +40,8 @@ const OmForeldrepenger: React.StatelessComponent<Props> = ({ location }) => {
     return (
         <div className={cls.className}>
             <Sidebanner text={translate('all_informasjon_foreldrepenger')} />
-            <div className={cls.element('body')}>
-                <div role="main" className={cls.element('content')}>
+            <main className={cls.element('body')}>
+                <article className={cls.element('content')}>
                     <Breadcrumbs path={location.pathname} />
                     {/* <Hurtiglenker links={sections} /> */}
                     <ForÅFåForeldrepenger id={sections[0]} />
@@ -55,8 +55,8 @@ const OmForeldrepenger: React.StatelessComponent<Props> = ({ location }) => {
                     {/* <Beregning id={sections[7]} /> */}
                     <Adopsjon id={sections[8]} />
                     <Arbeidsgiver id={sections[8]} />
-                </div>
-            </div>
+                </article>
+            </main>
         </div>
     );
 };

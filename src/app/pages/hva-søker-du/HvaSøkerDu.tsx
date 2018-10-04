@@ -20,20 +20,20 @@ interface Props {
 const HvaSøkerDu: React.StatelessComponent<Props> = ({ location }) => {
     return (
         <div className={cls.className}>
-            <div role="heading" className={cls.element('header')}>
+            <header className={cls.element('header')}>
                 <TypografiBase type="undertittel">
                     {translate('hva_vil_du_søke_om')}
                 </TypografiBase>
-            </div>
-            <div className={cls.element('body')}>
-                <div role="main" className={cls.element('content')}>
+            </header>
+            <main className={cls.element('body')}>
+                <article className={cls.element('content')}>
                     <Breadcrumbs path={location.pathname} />
                     <SvgBanner />
                     <Foreldrepenger parentCls={cls} />
                     <Engangsstonad parentCls={cls} />
                     <Svangerskapspenger parentCls={cls} />
-                </div>
-            </div>
+                </article>
+            </main>
         </div>
     );
 };

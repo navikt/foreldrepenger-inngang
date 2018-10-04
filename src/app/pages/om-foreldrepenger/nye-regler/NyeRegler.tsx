@@ -40,7 +40,7 @@ class NyeRegler extends React.Component<Props> {
     };
 
     render = () => (
-        <div role="region" aria-label="Nye regler" className={cls.className}>
+        <div role="note" aria-label="Nye regler" className={cls.className}>
             <div className={cls.element('header')}>
                 <CustomSVGFromSprite iconRef={infoIcon} size={32} />
                 <TypografiBase type="systemtittel">
@@ -52,7 +52,9 @@ class NyeRegler extends React.Component<Props> {
                 <TypografiBase type="element">{`${translate(
                     'barnet_er_født_eller_adoptert'
                 )}:`}</TypografiBase>
-                <div className={cls.element('radiopanelgruppe')}>
+                <div
+                    role="radiogroup"
+                    className={cls.element('radiopanelgruppe')}>
                     {NyeRegler.radios.map((radio) => (
                         <RadioPanel
                             key={radio.value}
@@ -64,13 +66,13 @@ class NyeRegler extends React.Component<Props> {
                         />
                     ))}
                 </div>
-                <div role="alert">
+                <output>
                     <TypografiBase type="normaltekst">
                         {this.state.selectedRule === 'FØR'
                             ? translate('nye_regler_før')
                             : translate('nye_regler_etter')}
                     </TypografiBase>
-                </div>
+                </output>
             </div>
         </div>
     );
