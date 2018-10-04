@@ -3,15 +3,15 @@ import StrukturertTekst from '../../components/strukturert-tekst/StrukturertTeks
 
 import ButtonPanel from './button-panel/ButtonPanel';
 import PanelMedTittel from '../../components/panel-med-tittel/PanelMedTittel';
-import translate from '../../intl/translate';
+import translate, { Language } from '../../intl/translate';
 import externalUrls from '../../utils/externalUrls';
+import { getContent } from '../../utils/getContent';
+import { withLang } from '../../intl/intl-context';
 
-const content = require('../../../content/hva-vil-du-søke-om/engangsstønad.json');
-
-const Engangsstonad = ({ parentCls }: { parentCls: any }) => {
+const Engangsstonad = ({ parentCls, lang }: { parentCls: any; lang: Language }) => {
     return (
         <PanelMedTittel title={translate('engangsstønad')}>
-            <StrukturertTekst tekst={content} />
+            <StrukturertTekst tekst={getContent('hva-vil-du-søke-om/engangsstønad', lang)} />
             <div className={parentCls.element('filler')} />
             <ButtonPanel
                 parentCls={parentCls}
@@ -25,4 +25,4 @@ const Engangsstonad = ({ parentCls }: { parentCls: any }) => {
     );
 };
 
-export default Engangsstonad;
+export default withLang(Engangsstonad);

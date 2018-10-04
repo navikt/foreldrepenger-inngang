@@ -1,16 +1,16 @@
 import * as React from 'react';
 import PanelMedTittel from '../../components/panel-med-tittel/PanelMedTittel';
 import ButtonPanel from './button-panel/ButtonPanel';
-import translate from '../../intl/translate';
+import translate, { Language } from '../../intl/translate';
 import externalUrls from '../../utils/externalUrls';
 import StrukturertTekst from '../../components/strukturert-tekst/StrukturertTekst';
+import { getContent } from '../../utils/getContent';
+import { withLang } from '../../intl/intl-context';
 
-const content = require('../../../content/hva-vil-du-søke-om/svangerskapspenger.json');
-
-const Svangerskapspenger = ({ parentCls }: { parentCls: any }) => {
+const Svangerskapspenger = ({ parentCls, lang }: { parentCls: any; lang: Language }) => {
     return (
         <PanelMedTittel title={translate('svangerskapspenger')}>
-            <StrukturertTekst tekst={content} />
+            <StrukturertTekst tekst={getContent('hva-vil-du-søke-om/svangerskapspenger', lang)} />
             <div className={parentCls.element('filler')} />
             <ButtonPanel
                 parentCls={parentCls}
@@ -24,4 +24,4 @@ const Svangerskapspenger = ({ parentCls }: { parentCls: any }) => {
     );
 };
 
-export default Svangerskapspenger;
+export default withLang(Svangerskapspenger);

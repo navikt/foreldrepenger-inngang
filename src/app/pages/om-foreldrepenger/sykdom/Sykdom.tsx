@@ -1,46 +1,49 @@
 import * as React from 'react';
 import PanelMedIllustrasjon from '../../../components/panel-med-illustrasjon/PanelMedIllustrasjon';
 import BEMHelper from '../../../utils/bem';
-import translate from '../../../intl/translate';
+import translate, { Language } from '../../../intl/translate';
 import CustomSVG from '../../../utils/CustomSVG';
 import Foreldrepar from '../../../components/foreldrepar/Foreldrepar';
 import Innholdsfaner from '../../../components/innholdsfaner/Innholdsfaner';
 import StrukturertTekst from '../../../components/strukturert-tekst/StrukturertTekst';
 import LesMer from '../../../components/les-mer/LesMer';
+import { withLang } from '../../../intl/intl-context';
+import { getContent } from '../../../utils/getContent';
 
 const pageSvg = require('../../../assets/page.svg').default;
 const cls = BEMHelper('jegVilJobbe');
 const barn = require('../../../assets/barn/barn1.svg').default;
 
-const barnetErInnlagt = require('../../../../content/all-informasjon/sykdom/barnet-er-innlagt/barnet-er-innlagt');
-const barnetErInnlagtForts = require('../../../../content/all-informasjon/sykdom/barnet-er-innlagt/barnet-er-innlagt-fortsettelse');
-const barnetErInnlagtUtsette = require('../../../../content/all-informasjon/sykdom/barnet-er-innlagt/utsette');
+const barnetErInnlagt = 'all-informasjon/sykdom/barnet-er-innlagt/barnet-er-innlagt';
+const barnetErInnlagtForts =
+    'all-informasjon/sykdom/barnet-er-innlagt/barnet-er-innlagt-fortsettelse';
+const barnetErInnlagtUtsette = 'all-informasjon/sykdom/barnet-er-innlagt/utsette';
 
-const syke = require('../../../../content/all-informasjon/sykdom/en-av-foreldrene-er-syke/en-av-foreldrene-er-syke');
-const sykeUtsette = require('../../../../content/all-informasjon/sykdom/en-av-foreldrene-er-syke/utsette');
-const sykeOverta = require('../../../../content/all-informasjon/sykdom/en-av-foreldrene-er-syke/overta');
+const syke = 'all-informasjon/sykdom/en-av-foreldrene-er-syke/en-av-foreldrene-er-syke';
+const sykeUtsette = 'all-informasjon/sykdom/en-av-foreldrene-er-syke/utsette';
+const sykeOverta = 'all-informasjon/sykdom/en-av-foreldrene-er-syke/overta';
 
-const BarnetErInnlagt = () => (
+const BarnetErInnlagt = withLang(({ lang }: { lang: Language }) => (
     <div>
-        <StrukturertTekst tekst={barnetErInnlagt} />
+        <StrukturertTekst tekst={getContent(barnetErInnlagt, lang)} />
         <LesMer intro={translate('om_foreldrepenger.sykdom.innlagt.utsette')}>
-            <StrukturertTekst tekst={barnetErInnlagtUtsette} />
+            <StrukturertTekst tekst={getContent(barnetErInnlagtUtsette, lang)} />
         </LesMer>
-        <StrukturertTekst tekst={barnetErInnlagtForts} />
+        <StrukturertTekst tekst={getContent(barnetErInnlagtForts, lang)} />
     </div>
-);
+));
 
-const EnAvForeldreneErSyke = () => (
+const EnAvForeldreneErSyke = withLang(({ lang }: { lang: Language }) => (
     <div>
-        <StrukturertTekst tekst={syke} />
+        <StrukturertTekst tekst={getContent(syke, lang)} />
         <LesMer intro={translate('om_foreldrepenger.sykdom.innlagt.utsette')}>
-            <StrukturertTekst tekst={sykeUtsette} />
+            <StrukturertTekst tekst={getContent(sykeUtsette, lang)} />
         </LesMer>
         <LesMer intro={translate('om_foreldrepenger.sykdom.innlagt.overta')}>
-            <StrukturertTekst tekst={sykeOverta} />
+            <StrukturertTekst tekst={getContent(sykeOverta, lang)} />
         </LesMer>
     </div>
-);
+));
 
 const tabs = [
     {
@@ -55,7 +58,7 @@ const tabs = [
     }
 ];
 
-const Sykdom = ({ id }: { id: string }) => {
+const Sykdom = ({ id, lang }: { id: string; lang: Language }) => {
     return (
         <PanelMedIllustrasjon
             id={id}
@@ -67,4 +70,4 @@ const Sykdom = ({ id }: { id: string }) => {
     );
 };
 
-export default Sykdom;
+export default withLang(Sykdom);

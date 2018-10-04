@@ -3,13 +3,16 @@ import Kalkulator from './kalkulator/Kalkulator';
 import Informasjonsfaner from './informasjons-faner/Informasjonsfaner';
 import StrukturertTekst from '../../../components/strukturert-tekst/StrukturertTekst';
 import Foreldrepar from '../../../components/foreldrepar/Foreldrepar';
+import { Language } from '../../../intl/translate';
+import { getContent } from '../../../utils/getContent';
+import { withLang } from '../../../intl/intl-context';
 
-const content = require('../../../../content/all-informasjon/hva-er-foreldrepenger/mor-og-mor/mor-og-mor.json');
-const morsDel = require('../../../../content/all-informasjon/hva-er-foreldrepenger/mor-og-mor/mors-del.json');
-const medmorsDel = require('../../../../content/all-informasjon/hva-er-foreldrepenger/mor-og-mor/medmors-del.json');
-const fellesDel = require('../../../../content/all-informasjon/hva-er-foreldrepenger/mor-og-mor/felles-del.json');
+const content = 'all-informasjon/hva-er-foreldrepenger/mor-og-mor/mor-og-mor';
+const morsDel = 'ontent/all-informasjon/hva-er-foreldrepenger/mor-og-mor/mors-del';
+const medmorsDel = 'ontent/all-informasjon/hva-er-foreldrepenger/mor-og-mor/medmors-del';
+const fellesDel = 'ontent/all-informasjon/hva-er-foreldrepenger/mor-og-mor/felles-del';
 
-const informasjonsfaner = [
+const getInformasjonsfaner = (lang: Language) => [
     {
         faneLabel: 'Mors del',
         faneIcon: true,
@@ -17,11 +20,8 @@ const informasjonsfaner = [
             tittel: 'til mor',
             icon: 'mor2',
             antallUker: '15',
-            punktliste: [
-                'Ingen krav til aktivitet',
-                'Kan ikke overtas av den andre moren'
-            ],
-            component: <StrukturertTekst tekst={morsDel} />
+            punktliste: ['Ingen krav til aktivitet', 'Kan ikke overtas av den andre moren'],
+            component: <StrukturertTekst tekst={getContent(morsDel, lang)} />
         }
     },
     {
@@ -32,7 +32,7 @@ const informasjonsfaner = [
             icon: 'medmor2',
             antallUker: '15',
             punktliste: ['Ingen krav til aktivitet', 'Kan ikke overtas av mor'],
-            component: <StrukturertTekst tekst={medmorsDel} />
+            component: <StrukturertTekst tekst={getContent(medmorsDel, lang)} />
         }
     },
     {
@@ -43,19 +43,19 @@ const informasjonsfaner = [
             icon: <Foreldrepar firstParent="mor2" secondParent="medmor2" />,
             antallUker: '16/26',
             punktliste: ['Aktivitetskrav til mor'],
-            component: <StrukturertTekst tekst={fellesDel} />
+            component: <StrukturertTekst tekst={getContent(fellesDel, lang)} />
         }
     }
 ];
 
-const MorogMor = () => {
+const MorogMor = ({ lang }: { lang: Language }) => {
     return (
         <div>
-            <StrukturertTekst tekst={content} />
+            <StrukturertTekst tekst={getContent(content, lang)} />
             <Kalkulator />
-            <Informasjonsfaner tabs={informasjonsfaner} />
+            <Informasjonsfaner tabs={getInformasjonsfaner(lang)} />
         </div>
     );
 };
 
-export default MorogMor;
+export default withLang(MorogMor);

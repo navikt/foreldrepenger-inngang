@@ -4,23 +4,24 @@ import { withRouter } from 'react-router-dom';
 
 import UserHelp from './user-help/UserHelp';
 import PanelMedTittel from '../../components/panel-med-tittel/PanelMedTittel';
-import translate from '../../intl/translate';
+import translate, { Language } from '../../intl/translate';
 import externalUrls from '../../utils/externalUrls';
 import StrukturertTekst from '../../components/strukturert-tekst/StrukturertTekst';
-
-const content = require('../../../content/hva-vil-du-søke-om/foreldrepenger.json');
+import { withLang } from '../../intl/intl-context';
+import { getContent } from '../../utils/getContent';
 
 interface ForeldrepengerProps {
     parentCls: any;
     history: any;
     location: any;
     match: any;
+    lang: Language;
 }
 
-const Foreldrepenger: StatelessComponent<ForeldrepengerProps> = ({ parentCls, history }) => {
+const Foreldrepenger: StatelessComponent<ForeldrepengerProps> = ({ parentCls, history, lang }) => {
     return (
         <PanelMedTittel title={translate('foreldrepenger')}>
-            <StrukturertTekst tekst={content} />
+            <StrukturertTekst tekst={getContent('hva-vil-du-søke-om/foreldrepenger', lang)} />
             <div className={parentCls.element('filler')} />
             <div className={parentCls.element('two-buttons-navigation')}>
                 <div className={parentCls.element('button-container')}>
@@ -46,4 +47,4 @@ const Foreldrepenger: StatelessComponent<ForeldrepengerProps> = ({ parentCls, hi
     );
 };
 
-export default withRouter(Foreldrepenger);
+export default withLang(withRouter(Foreldrepenger));

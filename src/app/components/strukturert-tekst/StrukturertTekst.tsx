@@ -17,7 +17,7 @@ interface Props {
 const cls = BEMHelper('strukturertTekst');
 
 const StrukturertTekst: StatelessComponent<Props> = ({ tekst }) => {
-    return <div className={cls.className}>{tekst.map(renderAvsnitt)}</div>;
+    return <div className={cls.className}>{tekst ? tekst.map(renderAvsnitt) : null}</div>;
 };
 
 const renderAvsnitt = (avsnitt: Avsnitt, index: number) => {
@@ -46,10 +46,7 @@ const renderAvsnitt = (avsnitt: Avsnitt, index: number) => {
         );
     } else {
         return (
-            <TypografiBase
-                key={index}
-                className={cls.element(type)}
-                type={style}>
+            <TypografiBase key={index} className={cls.element(type)} type={style}>
                 {children.map(renderTekstsnutt(markDefs))}
             </TypografiBase>
         );
@@ -90,15 +87,9 @@ const renderTekstsnutt = (markDefs: MarkDefinition[]) => (
 
                 default: {
                     if (markDefs) {
-                        const markDefinition = markDefs.find(
-                            (m) => m.key === mark
-                        );
+                        const markDefinition = markDefs.find((m) => m.key === mark);
                         if (markDefinition) {
-                            toRender = (
-                                <MarkWrapper mark={markDefinition}>
-                                    {toRender}
-                                </MarkWrapper>
-                            );
+                            toRender = <MarkWrapper mark={markDefinition}>{toRender}</MarkWrapper>;
                         }
                     }
                 }
@@ -109,13 +100,7 @@ const renderTekstsnutt = (markDefs: MarkDefinition[]) => (
     return addKeyToComponent(index, toRender);
 };
 
-const MarkWrapper = ({
-    mark,
-    children
-}: {
-    mark: MarkDefinition;
-    children: ReactNode;
-}) => {
+const MarkWrapper = ({ mark, children }: { mark: MarkDefinition; children: ReactNode }) => {
     switch (mark.type) {
         case 'link': {
             return (
@@ -127,7 +112,6 @@ const MarkWrapper = ({
     }
 };
 
-const addKeyToComponent = (key: any, component: any) =>
-    React.cloneElement(component, { key });
+const addKeyToComponent = (key: any, component: any) => React.cloneElement(component, { key });
 
 export default StrukturertTekst;

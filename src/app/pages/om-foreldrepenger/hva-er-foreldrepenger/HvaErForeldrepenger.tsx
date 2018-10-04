@@ -12,10 +12,11 @@ import Innholdsfaner from '../../../components/innholdsfaner/Innholdsfaner';
 import { Innholdsfane } from '../../../components/innholdsfaner/fane/Fane';
 import './hvaErForeldrepenger.less';
 import PanelMedIllustrasjon from '../../../components/panel-med-illustrasjon/PanelMedIllustrasjon';
-import translate from '../../../intl/translate';
+import translate, { Language } from '../../../intl/translate';
+import { getContent } from '../../../utils/getContent';
+import { withLang } from '../../../intl/intl-context';
 
 const pageSvg = require('../../../assets/page.svg').default;
-const content = require('../../../../content/all-informasjon/hva-er-foreldrepenger/hva-er-foreldrepenger');
 
 const cls = BEMHelper('hvaErForeldrepenger');
 const tabs: Innholdsfane[] = [
@@ -53,16 +54,22 @@ const tabs: Innholdsfane[] = [
 
 interface Props {
     id: string;
+    lang: Language;
 }
 
-const HvaErForeldrepenger: React.StatelessComponent<Props> = ({ id }) => {
+const HvaErForeldrepenger: React.StatelessComponent<Props> = ({ id, lang }) => {
     return (
         <PanelMedIllustrasjon
             id={id}
             title={translate('om_foreldrepenger.hvor_lenge.tittel')}
             svg={pageSvg}>
             <div className={cls.className}>
-                <StrukturertTekst tekst={content} />
+                <StrukturertTekst
+                    tekst={getContent(
+                        'all-informasjon/hva-er-foreldrepenger/hva-er-foreldrepenger',
+                        lang
+                    )}
+                />
                 <Innholdsfaner tabs={tabs} />
                 <MenHvaHvis />
             </div>
@@ -70,4 +77,4 @@ const HvaErForeldrepenger: React.StatelessComponent<Props> = ({ id }) => {
     );
 };
 
-export default HvaErForeldrepenger;
+export default withLang(HvaErForeldrepenger);
