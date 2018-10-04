@@ -62,10 +62,10 @@ class MenHvaHvis extends React.Component<Props> {
                 </TypografiBase>
             </div>
             <div className={cls.element('body')}>
-                <NoenVilPaFerie size={this.state.svgSize} />
-                <JegVilJobbe size={this.state.svgSize} />
-                <EnAvOssBlirSyk size={this.state.svgSize} />
-                <HjemmeSamtidig size={this.state.svgSize} />
+                <a href="#ferie" role="button" aria-label="Gå til ferie" ><NoenVilPaFerie size={this.state.svgSize} /></a>
+                <a href="#jeg-vil-jobbe" role="button" aria-label="Gå til jeg vil jobbe" ><JegVilJobbe size={this.state.svgSize} /></a>
+                <a href="#sykdom" role="button" aria-label="Gå til en av oss blir syk" ><EnAvOssBlirSyk size={this.state.svgSize} /></a>
+                <a href="#hjemme-samtidig" role="button" aria-label="Gå til hjemme samtidig"><HjemmeSamtidig size={this.state.svgSize} /></a>
             </div>
         </div>
     );
