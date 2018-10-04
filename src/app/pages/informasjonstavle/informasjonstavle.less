@@ -40,19 +40,6 @@
         align-items: stretch;
     }
 
-    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-        .header {
-            &__content {
-                justify-content: center;
-            }
-        }
-        .panelMedBilde__textOnPanel,
-        .typo-undertittel,
-        .typo-normal {
-            max-width: 100%;
-        }
-    }
-
     @media (min-width: @mobile-breakpoint) {
         &__veilederinnhold {
             flex-direction: row;
@@ -71,6 +58,19 @@
         &__bildepaneler {
             flex-direction: row;
             justify-content: space-between;
+        }
+    }
+
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+        .header {
+            &__content {
+                justify-content: center;
+            }
+        }
+        .panelMedBilde__textOnPanel,
+        .typo-undertittel,
+        .typo-normal {
+            max-width: 100%;
         }
     }
 }

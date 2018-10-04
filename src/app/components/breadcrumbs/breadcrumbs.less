@@ -1,22 +1,29 @@
+@import '~nav-frontend-core/less/_variabler.less';
+
 .breadcrumbs {
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 32px 0px 16px;
+    padding: 2rem 0 1rem;
     align-self: flex-start;
 
     a {
         font-weight: lighter;
-        color: #0067c5;
+        color: @navBla;
+
+        &:focus {
+            outline: none;
+            background-color: @orangeFocus;
+        }
     }
 
     .chevron--hoyre {
-        color: #807870;
+        color: @navGra60;
         transform: scale(0.8) rotate(-90deg);
     }
 
     .chevron--venstre {
-        margin-left: 16px;
+        margin-left: 1rem;
     }
 
     &__item {
@@ -24,11 +31,11 @@
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
-        padding-right: 8px;
+        padding-right: 0.5rem;
         font-weight: bold;
 
         &:not(:first-child) {
-            padding-left: 8px;
+            padding-left: 0.5rem;
         }
     }
 }

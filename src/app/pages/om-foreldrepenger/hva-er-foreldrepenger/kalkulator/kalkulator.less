@@ -94,13 +94,19 @@
         padding: 0.4rem 0;
     }
 
+    @media (min-width: @mobile-breakpoint) {
+        margin: 1rem 0 0;
+
+        &__antallUkerOgBarn {
+            margin-bottom: 0;
+        }
+    }
 
     @media screen and (-ms-high-contrast: active),
     (-ms-high-contrast: none) {
 
         &__antallUkerOgBarn {
             display: -ms-grid;
-            display: grid;
             grid-gap: 1rem;
             -ms-grid-columns: 1fr 1fr 1fr;
         }
@@ -153,13 +159,5 @@
             -ms-grid-row: 5;
         }
 
-    }
-
-    @media (min-width: @mobile-breakpoint) {
-        margin: 1rem 0 0;
-
-        &__antallUkerOgBarn {
-            margin-bottom: 0;
-        }
     }
 }
