@@ -4,7 +4,7 @@ import NavFrontendChevron from 'nav-frontend-chevron';
 import BEMHelper from '../../utils/bem';
 import { Link } from 'react-router-dom';
 import './breadcrumbs.less';
-import translate from '../../utils/translate';
+import translate from '../../intl/translate';
 
 const cls = BEMHelper('breadcrumbs');
 
@@ -22,12 +22,11 @@ const parsePath = (path: string) => {
 
     return parts.map((part, index) => {
         const recombinedParts = parts.slice(0, index + 1);
-        const url =
-            recombinedParts.length === 1 ? '/' : recombinedParts.join('/');
+        const url = recombinedParts.length === 1 ? '/' : recombinedParts.join('/');
 
         return {
             url,
-            label: translate(`route_${part}`)
+            label: translate(`route.${part}`)
         };
     });
 };
@@ -63,11 +62,13 @@ class Breadcrumbs extends Component<BreadcrumbsProps> {
             const routeLength = parsedPath.length;
             const lastUrl = parsedPath[routeLength - 2].url;
 
+            breadcrumbChain.push(<NavFrontendChevron key="chevron" type="venstre" />);
             breadcrumbChain.push(
                 <div aria-hidden={true}>
                     <NavFrontendChevron key="chevron" type="venstre" />
                 </div>
             );
+
             breadcrumbChain.push(
                 <TypografiBase
                     aria-label="Gå til forrige side"
@@ -82,10 +83,7 @@ class Breadcrumbs extends Component<BreadcrumbsProps> {
                 if (index !== 0) {
                     breadcrumbChain.push(
                         <div aria-hidden={true}>
-                            <NavFrontendChevron
-                                key={`chevron${index}`}
-                                type="høyre"
-                            />
+                            <NavFrontendChevron key={`chevron${index}`} type="høyre" />
                         </div>
                     );
                 }
@@ -98,11 +96,7 @@ class Breadcrumbs extends Component<BreadcrumbsProps> {
                         key={`crumb${index}`}
                         type="normaltekst"
                         className={cls.element('item')}>
-                        {current ? (
-                            path.label
-                        ) : (
-                            <Link to={path.url}>{path.label}</Link>
-                        )}
+                        {current ? path.label : <Link to={path.url}>{path.label}</Link>}
                     </TypografiBase>
                 );
             });

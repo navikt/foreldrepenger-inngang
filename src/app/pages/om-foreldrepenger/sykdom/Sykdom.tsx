@@ -1,70 +1,73 @@
 import * as React from 'react';
 import PanelMedIllustrasjon from '../../../components/panel-med-illustrasjon/PanelMedIllustrasjon';
 import BEMHelper from '../../../utils/bem';
-import translate from '../../../utils/translate';
+import translate, { Language } from '../../../intl/translate';
 import CustomSVG from '../../../utils/CustomSVG';
 import Foreldrepar from '../../../components/foreldrepar/Foreldrepar';
 import Innholdsfaner from '../../../components/innholdsfaner/Innholdsfaner';
 import StrukturertTekst from '../../../components/strukturert-tekst/StrukturertTekst';
 import LesMer from '../../../components/les-mer/LesMer';
+import { withLang } from '../../../intl/intl-context';
+import { getContent } from '../../../utils/getContent';
 
 const pageSvg = require('../../../assets/page.svg').default;
 const cls = BEMHelper('jegVilJobbe');
 const barn = require('../../../assets/barn/barn1.svg').default;
 
-const barnetErInnlagt = require('../../../../content/all-informasjon/sykdom/barnet-er-innlagt/barnet-er-innlagt');
-const barnetErInnlagtForts = require('../../../../content/all-informasjon/sykdom/barnet-er-innlagt/barnet-er-innlagt-fortsettelse');
-const barnetErInnlagtUtsette = require('../../../../content/all-informasjon/sykdom/barnet-er-innlagt/utsette');
+const barnetErInnlagt = 'all-informasjon/sykdom/barnet-er-innlagt/barnet-er-innlagt';
+const barnetErInnlagtForts =
+    'all-informasjon/sykdom/barnet-er-innlagt/barnet-er-innlagt-fortsettelse';
+const barnetErInnlagtUtsette = 'all-informasjon/sykdom/barnet-er-innlagt/utsette';
 
-const syke = require('../../../../content/all-informasjon/sykdom/en-av-foreldrene-er-syke/en-av-foreldrene-er-syke');
-const sykeUtsette = require('../../../../content/all-informasjon/sykdom/en-av-foreldrene-er-syke/utsette');
-const sykeOverta = require('../../../../content/all-informasjon/sykdom/en-av-foreldrene-er-syke/overta');
+const syke = 'all-informasjon/sykdom/en-av-foreldrene-er-syke/en-av-foreldrene-er-syke';
+const sykeUtsette = 'all-informasjon/sykdom/en-av-foreldrene-er-syke/utsette';
+const sykeOverta = 'all-informasjon/sykdom/en-av-foreldrene-er-syke/overta';
 
-const BarnetErInnlagt = () => (
+const BarnetErInnlagt = withLang(({ lang }: { lang: Language }) => (
     <div>
-        <StrukturertTekst tekst={barnetErInnlagt} />
-        <LesMer intro={translate('slik_går_du_frem_for_å_utsette')}>
-            <StrukturertTekst tekst={barnetErInnlagtUtsette} />
+        <StrukturertTekst tekst={getContent(barnetErInnlagt, lang)} />
+        <LesMer intro={translate('om_foreldrepenger.sykdom.innlagt.utsette')}>
+            <StrukturertTekst tekst={getContent(barnetErInnlagtUtsette, lang)} />
         </LesMer>
-        <StrukturertTekst tekst={barnetErInnlagtForts} />
+        <StrukturertTekst tekst={getContent(barnetErInnlagtForts, lang)} />
     </div>
-);
+));
 
-const EnAvForeldreneErSyke = () => (
+const EnAvForeldreneErSyke = withLang(({ lang }: { lang: Language }) => (
     <div>
-        <StrukturertTekst tekst={syke} />
-        <LesMer intro={translate('slik_går_du_frem_for_å_utsette')}>
-            <StrukturertTekst tekst={sykeUtsette} />
+        <StrukturertTekst tekst={getContent(syke, lang)} />
+        <LesMer intro={translate('om_foreldrepenger.sykdom.innlagt.utsette')}>
+            <StrukturertTekst tekst={getContent(sykeUtsette, lang)} />
         </LesMer>
-        <LesMer intro={translate('slik_går_du_frem_for_å_overta')}>
-            <StrukturertTekst tekst={sykeOverta} />
+        <LesMer intro={translate('om_foreldrepenger.sykdom.innlagt.overta')}>
+            <StrukturertTekst tekst={getContent(sykeOverta, lang)} />
         </LesMer>
     </div>
-);
+));
 
 const tabs = [
     {
-        label: 'barnet_er_innlagt',
+        label: 'om_foreldrepenger.sykdom.innlagt',
         component: <BarnetErInnlagt />,
         icon: <CustomSVG iconRef={barn} size={48} />
     },
     {
-        label: 'en_av_foreldrene_er_syk',
+        label: 'om_foreldrepenger.sykdom.foreldre_syke',
         component: <EnAvForeldreneErSyke />,
         icon: <Foreldrepar firstParent="far1" secondParent="mor1" />
     }
 ];
 
-const Sykdom = ({ id }: { id: string }) => {
+const Sykdom = ({ id, lang }: { id: string; lang: Language }) => {
     return (
         <PanelMedIllustrasjon
             id={id}
             className={cls.className}
             svg={pageSvg}
-            title={translate('sykdom')}>
+            title={translate('om_foreldrepenger.sykdom.tittel')}>
             <Innholdsfaner tabs={tabs} />
         </PanelMedIllustrasjon>
     );
 };
 
-export default Sykdom;
+export default withLang(Sykdom);

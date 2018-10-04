@@ -1,13 +1,15 @@
 import * as React from 'react';
 import Breadcrumbs from '../../components/breadcrumbs/Breadcrumbs';
 import BEMHelper from '../../utils/bem';
-import translate from '../../utils/translate';
+import translate, { Language } from '../../intl/translate';
 import PanelMedIllustrasjon from '../../components/panel-med-illustrasjon/PanelMedIllustrasjon';
 import Sidebanner from '../../components/sidebanner/Sidebanner';
 import StrukturertTekst from '../../components/strukturert-tekst/StrukturertTekst';
 import NårKanDuFåEngangsstønad from './når-kan-du-få-engangsstønad/NårKanDuFåEngangsstønad';
 import '../infosider.less';
 import './omEngangsstønad.less';
+import { getContent } from '../../utils/getContent';
+import { withLang } from '../../intl/intl-context';
 
 const infosiderCls = BEMHelper('infosider');
 const cls = BEMHelper('omEngangsstønad');
@@ -18,16 +20,16 @@ interface Props {
 
 const pageSvg = require('../../assets/page.svg').default;
 
-const hvaErEngangsstønadContent = require('../../../content/om-engangsstønad/hva-er-engangsstønad/hva-er-engangsstønad');
-const utbetalingContent = require('../../../content/om-engangsstønad/utbetaling');
-const søknadsfristContent = require('../../../content/om-engangsstønad/søknadsfrist');
-const engangssumContent = require('../../../content/om-engangsstønad/hva-er-engangsstønad/engangssum');
-const utbetalingShortContent = require('../../../content/om-engangsstønad/hva-er-engangsstønad/utbetaling');
+const hvaErEngangsstønadContent = 'om-engangsstønad/hva-er-engangsstønad/hva-er-engangsstønad';
+const utbetalingContent = 'om-engangsstønad/utbetaling';
+const søknadsfristContent = 'om-engangsstønad/søknadsfrist';
+const engangssumContent = 'om-engangsstønad/hva-er-engangsstønad/engangssum';
+const utbetalingShortContent = 'om-engangsstønad/hva-er-engangsstønad/utbetaling';
 
 const OmEngangsstonad: React.StatelessComponent<Props> = ({ location }) => {
     return (
         <div className={infosiderCls.className}>
-            <Sidebanner text={translate('all_informasjon_engangsstønad')} />
+            <Sidebanner text={translate('om_engangsstønad.tittel')} />
             <div className={infosiderCls.element('body')}>
                 <div className={infosiderCls.element('content')}>
                     <Breadcrumbs path={location.pathname} />
@@ -41,32 +43,30 @@ const OmEngangsstonad: React.StatelessComponent<Props> = ({ location }) => {
     );
 };
 
-const HvaErEngangsstønad = () => (
-    <PanelMedIllustrasjon
-        title={translate('hva_er_engangsstønad')}
-        svg={pageSvg}>
-        <StrukturertTekst tekst={hvaErEngangsstønadContent} />
+const HvaErEngangsstønad = withLang(({ lang }: { lang: Language }) => (
+    <PanelMedIllustrasjon title={translate('om_engangsstønad.hva_er.tittel')} svg={pageSvg}>
+        <StrukturertTekst tekst={getContent(hvaErEngangsstønadContent, lang)} />
         <div className={cls.element('kravContainer')}>
             <div className={cls.element('krav')}>
-                <StrukturertTekst tekst={engangssumContent} />
+                <StrukturertTekst tekst={getContent(engangssumContent, lang)} />
             </div>
             <div className={cls.element('krav')}>
-                <StrukturertTekst tekst={utbetalingShortContent} />
+                <StrukturertTekst tekst={getContent(utbetalingShortContent, lang)} />
             </div>
         </div>
     </PanelMedIllustrasjon>
-);
+));
 
-const Utbetaling = () => (
+const Utbetaling = withLang(({ lang }: { lang: Language }) => (
     <PanelMedIllustrasjon title={translate('utbetaling')} svg={pageSvg}>
-        <StrukturertTekst tekst={utbetalingContent} />
+        <StrukturertTekst tekst={getContent(utbetalingContent, lang)} />
     </PanelMedIllustrasjon>
-);
+));
 
-const Søknadsfrist = () => (
+const Søknadsfrist = withLang(({ lang }: { lang: Language }) => (
     <PanelMedIllustrasjon title={translate('søknadsfrist')} svg={pageSvg}>
-        <StrukturertTekst tekst={søknadsfristContent} />
+        <StrukturertTekst tekst={getContent(søknadsfristContent, lang)} />
     </PanelMedIllustrasjon>
-);
+));
 
-export default OmEngangsstonad;
+export default withLang(OmEngangsstonad);

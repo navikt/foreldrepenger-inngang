@@ -4,7 +4,7 @@ import BEMHelper, { BEMWrapper } from '../../../../../utils/bem';
 import Prosentvalg from './Prosentvalg';
 
 import './dinLønn.less';
-import translate from '../../../../../utils/translate';
+import translate from '../../../../../intl/translate';
 
 const cls = BEMHelper('dinLønn');
 
@@ -14,11 +14,7 @@ interface Props {
     onPercentageSelect: (p: number) => void;
 }
 
-const DinLønn = ({
-    grandParentCls,
-    selectedPercentage,
-    onPercentageSelect
-}: Props) => {
+const DinLønn = ({ grandParentCls, selectedPercentage, onPercentageSelect }: Props) => {
     const monthlyWage = 22000;
 
     return (
@@ -42,9 +38,7 @@ const DinLønn = ({
                 />
             </div>
             <div className={cls.element('inputContainer')}>
-                {`${translate(
-                    'eksempelvis_dersom_inntekt_pr_er'
-                )} ${monthlyWage},- kr`}
+                {`${translate('om_foreldrepenger.hvor_lenge.eksempel')} ${monthlyWage},– kr`}
             </div>
         </div>
     );

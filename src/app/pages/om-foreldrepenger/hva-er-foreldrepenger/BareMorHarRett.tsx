@@ -2,11 +2,14 @@ import * as React from 'react';
 import Kalkulator from './kalkulator/Kalkulator';
 import Informasjonsfaner from './informasjons-faner/Informasjonsfaner';
 import StrukturertTekst from '../../../components/strukturert-tekst/StrukturertTekst';
+import { Language } from '../../../intl/translate';
+import { getContent } from '../../../utils/getContent';
+import { withLang } from '../../../intl/intl-context';
 
-const content = require('../../../../content/all-informasjon/hva-er-foreldrepenger/bare-mor-har-rett/bare-mor-har-rett.json');
-const morsDel = require('../../../../content/all-informasjon/hva-er-foreldrepenger/bare-mor-har-rett/mors-del.json');
+const content = 'all-informasjon/hva-er-foreldrepenger/bare-mor-har-rett/bare-mor-har-rett';
+const morsDel = 'all-informasjon/hva-er-foreldrepenger/bare-mor-har-rett/mors-del';
 
-const informasjonsfaner = [
+const getInformasjonsfaner = (lang: Language) => [
     {
         faneLabel: 'Mors del',
         faneIcon: true,
@@ -15,19 +18,19 @@ const informasjonsfaner = [
             icon: 'mor1',
             antallUker: '49/59',
             punktliste: ['Ingen aktivitetskrav for den andre forelderen'],
-            component: <StrukturertTekst tekst={morsDel} />
+            component: <StrukturertTekst tekst={getContent(morsDel, lang)} />
         }
     }
 ];
 
-const BareMorHarRett = () => {
+const BareMorHarRett = ({ lang }: { lang: Language }) => {
     return (
         <div>
-            <StrukturertTekst tekst={content} />
+            <StrukturertTekst tekst={getContent(content, lang)} />
             <Kalkulator />
-            <Informasjonsfaner tabs={informasjonsfaner} />
+            <Informasjonsfaner tabs={getInformasjonsfaner(lang)} />
         </div>
     );
 };
 
-export default BareMorHarRett;
+export default withLang(BareMorHarRett);

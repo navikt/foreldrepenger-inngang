@@ -1,0 +1,69 @@
+[
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            { "type": "span", "text": "De første ", "marks": [] },
+            { "type": "span", "text": "seks ukene", "marks": ["bold"] },
+            {
+                "type": "span",
+                "text": " må mor ta ut rett etter fødselen. De siste ",
+                "marks": []
+            },
+            { "type": "span", "text": "ni ukene", "marks": ["bold"] },
+            {
+                "type": "span",
+                "text": " kan hun ta ut rett etterpå eller spare til senere.",
+                "marks": []
+            }
+        ],
+        "markDefs": []
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            { "type": "span", "text": " ", "marks": [] },
+            { "type": "span", "text": "Adopterer dere", "marks": ["bold"] },
+            {
+                "type": "span",
+                "text": ", kan mor ta ut sin del når som helst etter adopsjonsdatoen.",
+                "marks": []
+            }
+        ],
+        "markDefs": []
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            { "type": "span", "text": "Hvis mor er ", "marks": [] },
+            { "type": "span", "text": "så syk", "marks": ["bold"] },
+            {
+                "type": "span",
+                "text": " at hun er helt avhengig av hjelp til å ta seg av barnet, kan den andre moren søke om å overta mors del.",
+                "marks": []
+            }
+        ],
+        "markDefs": []
+    },
+    {
+        "type": "avsnitt",
+        "style": "element",
+        "children": [
+            { "type": "span", "text": "Foreldrepenger før fødsel", "marks": [] }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Mor får foreldrepenger fra tre uker før terminen. Hvis mor ønsker det kan hun ta ut foreldrepenger inntil 12 uker før termin, men da blir det færre uker av fellesdelen.",
+                "marks": []
+            }
+        ],
+        "markDefs": []
+    }
+]

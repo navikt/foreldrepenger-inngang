@@ -2,7 +2,7 @@ import * as React from 'react';
 import classnames from 'classnames';
 import TypografiBase from 'nav-frontend-typografi';
 import BEMHelper from '../../../utils/bem';
-import translate from '../../../utils/translate';
+import translate from '../../../intl/translate';
 
 import './fane.less';
 
@@ -39,9 +39,7 @@ const Fane = ({
             <div className={cls.element('background')} />
             <div className={cls.element('inner')}>
                 {tab.icon}
-                <TypografiBase type="normaltekst">
-                    {translate(tab.label)}
-                </TypografiBase>
+                <TypografiBase type="normaltekst">{translate(tab.label)}</TypografiBase>
             </div>
             {isSelected && (
                 <div className={cls.element('pointer')}>
@@ -56,12 +54,7 @@ const Chevron = () => (
     <svg width="13px" height="9px" viewBox="0 0 13 8" version="1.1">
         <title>Chevron</title>
         <defs />
-        <g
-            id="Chevron"
-            stroke="none"
-            strokeWidth="1"
-            fill="none"
-            fillRule="evenodd">
+        <g id="Chevron" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
             <polygon
                 id="Background"
                 fill="#FFFFFF"

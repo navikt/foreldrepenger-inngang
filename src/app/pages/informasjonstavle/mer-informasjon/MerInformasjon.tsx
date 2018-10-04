@@ -3,7 +3,7 @@ import Tekstomrade from 'nav-frontend-tekstomrade';
 import TypografiBase from 'nav-frontend-typografi';
 import { HoyreChevron } from 'nav-frontend-chevron';
 
-import translate from '../../../utils/translate';
+import translate from '../../../intl/translate';
 import BEMHelper from '../../../utils/bem';
 import externalUrls from '../../../utils/externalUrls';
 import { WithLink } from '../../../utils/withLink';
@@ -17,25 +17,25 @@ const MerInformasjon = () => {
         <div className={cls.className}>
             <div className={cls.element('title')}>
                 <TypografiBase type="undertittel">
-                    {translate('mer_informasjon_tittel')}
+                    {translate('informasjonstavle.mer_informasjon.tittel')}
                 </TypografiBase>
             </div>
             <nav className={cls.element('links')}>
                 <MerInformasjonLink
                     title={translate('foreldrepenger')}
-                    body={translate('mer_informasjon_foreldrepenger')}
+                    body={translate('informasjonstavle.mer_informasjon.foreldrepenger')}
                     url="/om-foreldrepenger"
                     urlIsExternal={false}
                 />
                 <MerInformasjonLink
                     title={translate('engangsstønad')}
-                    body={translate('mer_informasjon_engangsstønad')}
+                    body={translate('informasjonstavle.mer_informasjon.engangsstønad')}
                     url="/om-engangsstonad"
                     urlIsExternal={false}
                 />
                 <MerInformasjonLink
                     title={translate('svangerskapspenger')}
-                    body={translate('mer_informasjon_svangerskapspenger')}
+                    body={translate('informasjonstavle.mer_informasjon.svangerskapspenger')}
                     url={externalUrls.les_mer_svangerskapspenger}
                     urlIsExternal={true}
                 />

@@ -1,13 +1,3 @@
-import translate from '../../../../utils/translate';
-
-export const validerMånedslønn = (monthlyWage: number) => {
-    if (monthlyWage < 5000) {
-        return translate('for_lav_lønn_feilmelding');
-    } else {
-        return '';
-    }
-};
-
 export const antallUtbetalingsuker = {
     1: {
         100: 49,

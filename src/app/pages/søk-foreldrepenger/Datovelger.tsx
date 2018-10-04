@@ -3,7 +3,7 @@ import NavDatovelger from 'nav-datovelger';
 import TypografiBase from 'nav-frontend-typografi';
 
 import { BEMWrapper } from '../../utils/bem';
-import translate from '../../utils/translate';
+import translate from '../../intl/translate';
 
 const Datovelger = ({
     date,
@@ -20,7 +20,7 @@ const Datovelger = ({
             aria-haspopup={true}
             className={parentCls.element('datovelger')}>
             <TypografiBase type="element">
-                {translate('når_starter_du')}
+                {translate('søk_foreldrepenger.første_dag_spørsmål')}
             </TypografiBase>
             <NavDatovelger.Datovelger
                 kanVelgeUgyldigDato={true}

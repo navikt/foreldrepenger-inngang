@@ -2,16 +2,17 @@ import * as React from 'react';
 import TypografiBase from 'nav-frontend-typografi';
 import { FlexibleSvg } from '../../../utils/CustomSVG';
 import BEMHelper from '../../../utils/bem';
-import translate from '../../../utils/translate';
+import translate from '../../../intl/translate';
 import './header.less';
 import MediaQuery from 'react-responsive';
 import { getRandomInt } from '../../../utils/random';
+import { withLang } from '../../../intl/intl-context';
 
 const cls = BEMHelper('header');
 
 const NUM_FAMILIES = 5;
 
-const Header = () => {
+const Header = (props: any) => {
     const randomFamilyAtHome = getRandomInt(1, NUM_FAMILIES);
     const svg = require(`../../../assets/familier-hjemme/familie-hjemme-${randomFamilyAtHome}.svg`)
         .default;
@@ -21,10 +22,10 @@ const Header = () => {
             <div className={cls.element('content')}>
                 <div className={cls.element('text')}>
                     <TypografiBase type="sidetittel">
-                        {translate('informasjonstavle_tittel')}
+                        {translate('informasjonstavle.tittel')}
                     </TypografiBase>
                     <TypografiBase type="normaltekst">
-                        {translate('informasjonstavle_ingress')}
+                        {translate('informasjonstavle.ingress', props.lang)}
                     </TypografiBase>
                 </div>
                 <div
@@ -52,4 +53,4 @@ const Header = () => {
     );
 };
 
-export default Header;
+export default withLang(Header);

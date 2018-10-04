@@ -3,7 +3,7 @@ import './innholdsfaner.less';
 import BEMHelper from '../../utils/bem';
 import Fane, { Innholdsfane } from './fane/Fane';
 import MediaQuery from 'react-responsive';
-import translate from '../../utils/translate';
+import translate from '../../intl/translate';
 import Select from './select/Select';
 
 const cls = BEMHelper('innholdsfaner');
@@ -42,7 +42,7 @@ class Innholdsfaner extends React.Component<Props> {
                 <div className={cls.element('faner')}>
                     <Select
                         selected={this.props.tabs[this.state.currentTab].label}
-                        label={translate('din_situasjon')}
+                        label={translate('om_foreldrepenger.faner.label')}
                         choices={this.props.tabs}
                         onChoiceSelect={(index: number) => {
                             this.onTabSelect(index);
