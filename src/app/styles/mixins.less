@@ -1,6 +1,13 @@
+@import '~nav-frontend-core/less/_variabler.less';
+
 .buttonFocus() {
     outline: none;
     box-shadow: 0 0 0 3px @orangeFocus;
+}
+
+.buttonFocusInset() {
+    outline: none;
+    box-shadow: inset 0 0 0 3px @orangeFocus;
 }
 
 .borderButton() {
@@ -21,4 +28,8 @@
     -webkit-backface-visibility: hidden;
     -webkit-transform: translateZ(0) scale(1, 1);
     transform: translateZ(0);
+}
+
+.purpleBottomBorder() {
+    border-bottom: 4px solid @navLillaLighten20;
 }

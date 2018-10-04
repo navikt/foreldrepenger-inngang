@@ -33,6 +33,7 @@ const translations = {
         'route_om-engangsstonad': 'Om engangsstønad',
         route_foreldrepenger: 'Foreldrepenger',
         hva_er_engangsstønad: 'Hva er engangsstønad?',
+        tilbake: 'Tilbake',
 
         hva_vil_du_søke_om: 'Hva vil du søke om?',
         ingen_elektronisk_id: 'Jeg har ikke elektronisk ID',

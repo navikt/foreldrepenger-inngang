@@ -1,35 +1,30 @@
-.arbeidsgiver{
+.arbeidsgiver {
+    &__links {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+    }
 
-  .lenke {
-      text-decoration: none;
-      border-bottom: 0;
-  }
+    &__linkContent {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        
+        &:nth-child(2) {
+            padding-top: 1.5rem;
+        }
+    }
 
-  &__links{
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-      margin-top: 15px;
-      margin-bottom: 30px;
+    &__placeholderSVG {
+        width: 20px;
+        height: 20px;
+        margin-right: 1.25rem;
+    }
 
-  }
-
-  &__link_content {
-      display: flex;
-      flex-direction: row;
-      width: 100%;
-      padding-top: 12px;
-      padding-bottom: 12px;
-  }
-
-  &__placeholderSVG {
-      width: 20px;
-      height: 20px;
-      margin-right: 20px;
-  }
-
-  &__link {
-      text-decoration: none;
-  }
+    &__link a {
+        text-decoration: none;
+        border-bottom: none;
+    }
 }
-

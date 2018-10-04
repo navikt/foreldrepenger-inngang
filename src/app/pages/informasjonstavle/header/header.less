@@ -1,9 +1,9 @@
-@import '../../../styles/variables.less';
+@import '../../../styles/index.less';
 
 .header {
     align-self: stretch;
     background-color: #e0dae7;
-    border-bottom: 4px solid #826ba1;
+    .purpleBottomBorder();
 
     display: flex;
     flex-direction: row;
@@ -35,10 +35,27 @@
 
     &__svgContainer {
         align-self: flex-start;
-        margin: 0 1rem 0 48px;
+        margin: 0 1rem 0 3rem;
         display: flex;
         flex-direction: row;
         justify-content: flex-end;
+    }
+
+    @media (min-width: @mobile-breakpoint) {
+        &__content {
+            flex-direction: row;
+            margin-top: 1rem;
+        }
+
+        &__text {
+            flex: 3;
+        }
+
+        &__svgContainer {
+            align-self: flex-end;
+            margin: 0 1rem;
+            flex: 1;
+        }
     }
 
     @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
@@ -62,23 +79,6 @@
                 -webkit-flex: 1;
                 flex-grow: 1;
             }
-        }
-    }
-
-    @media (min-width: @mobile-breakpoint) {
-        &__content {
-            flex-direction: row;
-            margin-top: 1rem;
-        }
-
-        &__text {
-            flex: 3;
-        }
-
-        &__svgContainer {
-            align-self: flex-end;
-            margin: 0 1rem;
-            flex: 1;
         }
     }
 }
