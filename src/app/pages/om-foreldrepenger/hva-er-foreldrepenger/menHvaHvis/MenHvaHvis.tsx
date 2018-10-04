@@ -15,19 +15,18 @@ const cls = BEMHelper('menHvaHvis');
 interface Props {}
 
 class MenHvaHvis extends React.Component<Props> {
-
     state: {
         Size?: any;
-        svgSize: string
+        svgSize: string;
     };
 
     constructor(props: Props) {
-      super(props);
-      this.state = {
-          svgSize: "109px",
-          Size: window.innerWidth
-      };
-    };
+        super(props);
+        this.state = {
+            svgSize: '109px',
+            Size: window.innerWidth
+        };
+    }
 
     componentWillMount = () => {
         this.updateWindowSize();
@@ -41,15 +40,14 @@ class MenHvaHvis extends React.Component<Props> {
     };
 
     updateWindowSize = () => {
-
-        if(window.innerWidth < 799) {
+        if (window.innerWidth < 799) {
             this.setState({
-                svgSize: "70px"
-            })
-        }else if (window.innerWidth >= 800) {
+                svgSize: '70px'
+            });
+        } else if (window.innerWidth >= 800) {
             this.setState({
-                svgSize: "109px"
-            })
+                svgSize: '109px'
+            });
         }
     };
 
@@ -62,10 +60,30 @@ class MenHvaHvis extends React.Component<Props> {
                 </TypografiBase>
             </div>
             <div className={cls.element('body')}>
-                <a href="#ferie" role="button" aria-label="Gå til ferie" ><NoenVilPaFerie size={this.state.svgSize} /></a>
-                <a href="#jeg-vil-jobbe" role="button" aria-label="Gå til jeg vil jobbe" ><JegVilJobbe size={this.state.svgSize} /></a>
-                <a href="#sykdom" role="button" aria-label="Gå til en av oss blir syk" ><EnAvOssBlirSyk size={this.state.svgSize} /></a>
-                <a href="#hjemme-samtidig" role="button" aria-label="Gå til hjemme samtidig"><HjemmeSamtidig size={this.state.svgSize} /></a>
+                <a
+                    style={{ height: this.state.svgSize }}
+                    href="#ferie"
+                    aria-label="Gå til ferie">
+                    <NoenVilPaFerie size={this.state.svgSize} />
+                </a>
+                <a
+                    style={{ height: this.state.svgSize }}
+                    href="#jeg-vil-jobbe"
+                    aria-label="Gå til jeg vil jobbe">
+                    <JegVilJobbe size={this.state.svgSize} />
+                </a>
+                <a
+                    style={{ height: this.state.svgSize }}
+                    href="#sykdom"
+                    aria-label="Gå til en av oss blir syk">
+                    <EnAvOssBlirSyk size={this.state.svgSize} />
+                </a>
+                <a
+                    style={{ height: this.state.svgSize }}
+                    href="#hjemme-samtidig"
+                    aria-label="Gå til hjemme samtidig">
+                    <HjemmeSamtidig size={this.state.svgSize} />
+                </a>
             </div>
         </div>
     );
