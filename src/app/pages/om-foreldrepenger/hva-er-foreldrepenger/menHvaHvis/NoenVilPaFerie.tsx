@@ -13,8 +13,7 @@ const NoenVilPaFerie: React.StatelessComponent<Props> = ({ size }) => {
             version="1.1"
             xmlns="http://www.w3.org/2000/svg"
             xmlnsXlink="http://www.w3.org/1999/xlink">
-            <title>Toggle Copy 2</title>
-            <desc>Created with Sketch.</desc>
+            <title>Noen vil på ferie</title>
             <defs />
             <g
                 id="Symbols"

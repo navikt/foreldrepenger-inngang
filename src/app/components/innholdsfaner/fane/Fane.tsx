@@ -29,6 +29,7 @@ const Fane = ({
         <div
             tabIndex={0}
             role="tab"
+            aria-selected={isSelected}
             onClick={onSelect}
             onKeyPress={onSelect}
             className={classnames(cls.className, {

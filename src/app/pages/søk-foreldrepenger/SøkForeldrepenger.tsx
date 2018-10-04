@@ -45,12 +45,12 @@ class SøkForeldrepenger extends Component<Props> {
     render = () => {
         return (
             <div className={classnames(hvaSøkerDuCls.className, foreldrepengerCls.className)}>
-                <div role="header" className={hvaSøkerDuCls.element('header')}>
+                <header className={hvaSøkerDuCls.element('header')}>
                     <TypografiBase type="undertittel">
                         {translate('hva_vil_du_søke_om')}
                     </TypografiBase>
-                </div>
-                <div role="main" className={hvaSøkerDuCls.element('body')}>
+                </header>
+                <main className={hvaSøkerDuCls.element('body')}>
                     <div className={hvaSøkerDuCls.element('content')}>
                         <Breadcrumbs path={location.pathname} />
                         <SvgBanner />
@@ -72,14 +72,14 @@ class SøkForeldrepenger extends Component<Props> {
                                 <a
                                     tabIndex={-1}
                                     href={externalUrls.søk_foreldrepenger_eller_engangsstønad}>
-                                    <KnappBase type="hoved">
+                                    <KnappBase type="hoved" role="link">
                                         {translate('søk_foreldrepenger.knapp')}
                                     </KnappBase>
                                 </a>
                             )}
                         </PanelMedTittel>
                     </div>
-                </div>
+                </main>
             </div>
         );
     };

@@ -14,17 +14,14 @@ const PanelMedTittel = ({
     children: ReactNode;
 }) => {
     return (
-        <div
-            role="region"
-            aria-label={`Seksjon for ${title}`}
-            className={cls.className}>
+        <section aria-label={title} className={cls.className}>
             <PanelBase>
                 <div className={cls.element('title')}>
                     <TypografiBase type="systemtittel">{title}</TypografiBase>
                 </div>
                 {children}
             </PanelBase>
-        </div>
+        </section>
     );
 };
 

@@ -62,9 +62,7 @@ const AndreLenker = () => {
     return (
         <div className={cls.className}>
             <TypografiBase type="undertittel">{translate('andre_lenker')}</TypografiBase>
-            <div role="navigation" className={cls.element('links')}>
-                {otherLinks}
-            </div>
+            <nav className={cls.element('links')}>{otherLinks}</nav>
         </div>
     );
 };

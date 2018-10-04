@@ -103,9 +103,9 @@ class Breadcrumbs extends Component<BreadcrumbsProps> {
         }
 
         return (
-            <div role="navigation" aria-label="breadcrumb" className={cls.className}>
+            <nav aria-label="Du er her" className={cls.className}>
                 {breadcrumbChain}
-            </div>
+            </nav>
         );
     }
 }
