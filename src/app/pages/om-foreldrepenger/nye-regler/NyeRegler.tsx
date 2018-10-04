@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { RadioPanel } from 'nav-frontend-skjema';
 
-import translate from '../../../utils/translate';
+import translate from '../../../intl/translate';
 import BEMHelper from '../../../utils/bem';
 
 import './nyeRegler.less';
@@ -17,8 +17,8 @@ type ValgtRegel = 'FØR' | 'ETTER';
 
 class NyeRegler extends React.Component<Props> {
     static radios = [
-        { label: 'før_1_juli_2018', value: 'FØR' },
-        { label: 'etter_1_juli_2018', value: 'ETTER' }
+        { label: translate('om_foreldrepenger.nye_regler.før'), value: 'FØR' },
+        { label: translate('om_foreldrepenger.nye_regler.etter'), value: 'ETTER' }
     ];
 
     state: {
@@ -44,33 +44,31 @@ class NyeRegler extends React.Component<Props> {
             <div className={cls.element('header')}>
                 <CustomSVGFromSprite iconRef={infoIcon} size={32} />
                 <TypografiBase type="systemtittel">
-                    {translate('nye_regler_fra_1_juli_2018')}
+                    {translate('om_foreldrepenger.nye_regler.tittel')}
                 </TypografiBase>
             </div>
             <div className={cls.element('divider')} />
             <div className={cls.element('content')}>
                 <TypografiBase type="element">{`${translate(
-                    'barnet_er_født_eller_adoptert'
+                    'om_foreldrepenger.nye_regler_label'
                 )}:`}</TypografiBase>
                 <div className={cls.element('radiopanelgruppe')}>
                     {NyeRegler.radios.map((radio) => (
                         <RadioPanel
                             key={radio.value}
                             checked={this.state.selectedRule === radio.value}
-                            label={translate(radio.label)}
+                            label={radio.label}
                             name={radio.label}
                             onChange={this.onRuleSelected}
                             value={radio.value}
                         />
                     ))}
                 </div>
-                <div role="alert">
-                    <TypografiBase type="normaltekst">
-                        {this.state.selectedRule === 'FØR'
-                            ? translate('nye_regler_før')
-                            : translate('nye_regler_etter')}
-                    </TypografiBase>
-                </div>
+                <TypografiBase type="normaltekst">
+                    {this.state.selectedRule === 'FØR'
+                        ? translate('om_foreldrepenger.nye_regler.før_beskrivelse')
+                        : translate('om_foreldrepenger.nye_regler.etter_beskrivelse')}
+                </TypografiBase>
             </div>
         </div>
     );

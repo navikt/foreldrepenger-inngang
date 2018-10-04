@@ -1,0 +1,14 @@
+[
+    {
+        "type": "avsnitt",
+        "style": "ingress",
+        "children": [
+            {
+                "type": "span",
+                "text": "Foreldrepengene kan tas sammenhengende eller kombineres med arbeid eller ferie, men må tas ut før barnet blir 3 år.",
+                "marks": []
+            }
+        ],
+        "markDefs": []
+    }
+]

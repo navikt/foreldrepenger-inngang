@@ -1,0 +1,23 @@
+[
+    {
+        "type": "avsnitt",
+        "style": "ingress",
+        "children": [
+            {
+                "type": "span",
+                "text": "Vanligvis er det ",
+                "marks": []
+            },
+            {
+                "type": "span",
+                "text": "tre",
+                "marks": ["bold"]
+            },
+            {
+                "type": "span",
+                "text": " krav må du fylle for å få foreldrepenger. Men det er noen unntak du må være klar over.",
+                "marks": []
+            }
+        ]
+    }
+]

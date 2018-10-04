@@ -1,6 +1,6 @@
 import * as React from 'react';
 import BEMHelper from '../../../../utils/bem';
-import translate from '../../../../utils/translate';
+import translate from '../../../../intl/translate';
 import TypografiBase from 'nav-frontend-typografi';
 import NoenVilPaFerie from './NoenVilPaFerie';
 import JegVilJobbe from './JegVilJobbe';
@@ -15,19 +15,18 @@ const cls = BEMHelper('menHvaHvis');
 interface Props {}
 
 class MenHvaHvis extends React.Component<Props> {
-
     state: {
         Size?: any;
-        svgSize: string
+        svgSize: string;
     };
 
     constructor(props: Props) {
-      super(props);
-      this.state = {
-          svgSize: "109px",
-          Size: window.innerWidth
-      };
-    };
+        super(props);
+        this.state = {
+            svgSize: '109px',
+            Size: window.innerWidth
+        };
+    }
 
     componentWillMount = () => {
         this.updateWindowSize();
@@ -41,15 +40,14 @@ class MenHvaHvis extends React.Component<Props> {
     };
 
     updateWindowSize = () => {
-
-        if(window.innerWidth < 799) {
+        if (window.innerWidth < 799) {
             this.setState({
-                svgSize: "70px"
-            })
-        }else if (window.innerWidth >= 800) {
+                svgSize: '70px'
+            });
+        } else if (window.innerWidth >= 800) {
             this.setState({
-                svgSize: "109px"
-            })
+                svgSize: '109px'
+            });
         }
     };
 
@@ -58,7 +56,7 @@ class MenHvaHvis extends React.Component<Props> {
             <ScaleSize query="(max-width: 799px)" />
             <div className={cls.element('header')}>
                 <TypografiBase type="element">
-                    {translate('menHvaHvis')}
+                    {translate('om_foreldrepenger.hvor_lenge.hurtiglenker')}
                 </TypografiBase>
             </div>
             <div className={cls.element('body')}>

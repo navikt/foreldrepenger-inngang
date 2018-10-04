@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './select.less';
 import BEMHelper from '../../../utils/bem';
 import { Innholdsfane } from '../fane/Fane';
-import translate from '../../../utils/translate';
+import translate from '../../../intl/translate';
 import { Panel } from 'nav-frontend-paneler';
 import TypografiBase from 'nav-frontend-typografi';
 import Chevron from 'nav-frontend-chevron';
@@ -45,11 +45,7 @@ class Select extends React.Component<SelectProps, SelectState> {
     componentWillUnmount = () => {
         this.mounted = false;
 
-        document.removeEventListener(
-            'keydown',
-            this.handleKeyPressEvent,
-            false
-        );
+        document.removeEventListener('keydown', this.handleKeyPressEvent, false);
         document.removeEventListener('click', this.handleDocumentClick, false);
     };
 
@@ -104,9 +100,7 @@ class Select extends React.Component<SelectProps, SelectState> {
                 className={classnames(cls.className, {
                     [cls.modifier('open')]: this.state.open
                 })}>
-                <TypografiBase type="normaltekst">
-                    {translate(this.props.selected)}
-                </TypografiBase>
+                <TypografiBase type="normaltekst">{translate(this.props.selected)}</TypografiBase>
                 <Chevron type={this.state.open ? 'opp' : 'ned'} />
             </div>
             <div

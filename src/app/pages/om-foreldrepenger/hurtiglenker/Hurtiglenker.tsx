@@ -3,7 +3,7 @@ import PanelBase from 'nav-frontend-paneler';
 import Lenke from 'nav-frontend-lenker';
 
 import BEMHelper from '../../../utils/bem';
-import translate from '../../../utils/translate';
+import translate from '../../../intl/translate';
 
 import './hurtiglenker.less';
 import TypografiBase from 'nav-frontend-typografi';
@@ -14,16 +14,11 @@ const Hurtiglenker = ({ links }: { links: string[] }) => {
     return (
         <PanelBase className={cls.className}>
             {links.map((link) => {
-                const stringToTranslate = link.replace(
-                    new RegExp('-', 'g'),
-                    '_'
-                );
+                const stringToTranslate = link.replace(new RegExp('-', 'g'), '_');
 
                 return (
                     <TypografiBase key={link} type="normaltekst">
-                        <Lenke href={`#${link}`}>
-                            {translate(stringToTranslate)}
-                        </Lenke>
+                        <Lenke href={`#${link}`}>{translate(stringToTranslate)}</Lenke>
                     </TypografiBase>
                 );
             })}

@@ -1,0 +1,65 @@
+[
+    {
+        "type": "avsnitt",
+        "style": "element",
+        "children": [{ "type": "span", "text": "Alene som far", "marks": [] }]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Når du er alene om omsorgen for barnet får du hele foreldrepengeperioden, unntatt tre uker som er forbeholdt mor før fødselen.",
+                "marks": []
+            }
+        ],
+        "markDefs": []
+    },
+    {
+        "type": "avsnitt",
+        "style": "element",
+        "children": [{ "type": "span", "text": "Alene som mor", "marks": [] }]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Når du er alene om omsorgen for barnet får du hele foreldrepengeperioden, inkludert fars del.",
+                "marks": []
+            }
+        ],
+        "markDefs": []
+    },
+    {
+        "type": "avsnitt",
+        "style": "undertittel",
+        "children": [
+            { "type": "span", "text": "Lengden på foreldrepengeperioden.", "marks": [] }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Hvor mange barn du venter og om du tar ",
+                "marks": []
+            },
+            {
+                "type": "span",
+                "text": "100 eller 80 prosent foreldrepenger",
+                "marks": ["bold"]
+            },
+            {
+                "type": "span",
+                "text": ", bestemmer hvor mange uker du kan få. Den totale utbetalingen blir høyere ved å velge 100 prosent.",
+                "marks": []
+            }
+        ],
+        "markDefs": []
+    }
+]

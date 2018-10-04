@@ -1,7 +1,7 @@
 import * as React from 'react';
 import PlaceholderSVG from './PlaceholderSVG';
 import TypografiBase from 'nav-frontend-typografi';
-import translate from '../../../utils/translate';
+import translate from '../../../intl/translate';
 import BEMHelper from '../../../utils/bem';
 import NavLenke from 'nav-frontend-lenker';
 

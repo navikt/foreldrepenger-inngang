@@ -1,34 +1,36 @@
 import * as React from 'react';
 import PanelMedIllustrasjon from '../../../components/panel-med-illustrasjon/PanelMedIllustrasjon';
-import translate from '../../../utils/translate';
+import translate, { Language } from '../../../intl/translate';
 import StrukturertTekst from '../../../components/strukturert-tekst/StrukturertTekst';
 import BEMHelper from '../../../utils/bem';
 import './jegVilJobbe.less';
 import LesMer from '../../../components/les-mer/LesMer';
+import { withLang } from '../../../intl/intl-context';
+import { getContent } from '../../../utils/getContent';
 
-const content = require('../../../../content/all-informasjon/jeg-vil-jobbe/jeg-vil-jobbe.json');
-const firstPanelContent = require('../../../../content/all-informasjon/jeg-vil-jobbe/heltidsjobb.json');
-const secondPanelContent = require('../../../../content/all-informasjon/jeg-vil-jobbe/deltidsjobb.json');
+const content = 'all-informasjon/jeg-vil-jobbe/jeg-vil-jobbe';
+const firstPanelContent = 'all-informasjon/jeg-vil-jobbe/heltidsjobb';
+const secondPanelContent = 'all-informasjon/jeg-vil-jobbe/deltidsjobb';
 
 const pageSvg = require('../../../assets/page.svg').default;
 const cls = BEMHelper('jegVilJobbe');
 
-const JegVilJobbe = ({ id }: { id: string }) => {
+const JegVilJobbe = ({ id, lang }: { id: string; lang: Language }) => {
     return (
         <PanelMedIllustrasjon
             id={id}
             className={cls.className}
-            title={translate('jeg_vil_jobbe')}
+            title={translate('om_foreldrepenger.jobbe.tittel')}
             svg={pageSvg}>
-            <StrukturertTekst tekst={content} />
-            <LesMer intro={translate('slik_går_du_frem_ved_heltidsjobb')}>
-                <StrukturertTekst tekst={firstPanelContent} />
+            <StrukturertTekst tekst={getContent(content, lang)} />
+            <LesMer intro={translate('om_foreldrepenger.jobbe.heltidsjobb')}>
+                <StrukturertTekst tekst={getContent(firstPanelContent, lang)} />
             </LesMer>
-            <LesMer intro={translate('slik_går_du_frem_ved_deltidsjobb')}>
-                <StrukturertTekst tekst={secondPanelContent} />
+            <LesMer intro={translate('om_foreldrepenger.jobbe.deltidsjobb')}>
+                <StrukturertTekst tekst={getContent(secondPanelContent, lang)} />
             </LesMer>
         </PanelMedIllustrasjon>
     );
 };
 
-export default JegVilJobbe;
+export default withLang(JegVilJobbe);
