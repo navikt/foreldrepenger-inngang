@@ -4,7 +4,7 @@ import BEMHelper from '../../utils/bem';
 import translate from '../../utils/translate';
 import PanelMedIllustrasjon from '../../components/panel-med-illustrasjon/PanelMedIllustrasjon';
 import HvaErForeldrepenger from './hva-er-foreldrepenger/HvaErForeldrepenger';
-import Hurtiglenker from './hurtiglenker/Hurtiglenker';
+// import Hurtiglenker from './hurtiglenker/Hurtiglenker';
 import NyeRegler from './nye-regler/NyeRegler';
 import ForÅFåForeldrepenger from './for-å-få-foreldrepenger/ForÅFåForeldrepenger';
 import JegHarHattInntekt from './jeg-har-hatt-inntekt/JegHarHattInntekt';
@@ -41,9 +41,9 @@ const OmForeldrepenger: React.StatelessComponent<Props> = ({ location }) => {
         <div className={cls.className}>
             <Sidebanner text={translate('all_informasjon_foreldrepenger')} />
             <div className={cls.element('body')}>
-                <div className={cls.element('content')}>
+                <div role="main" className={cls.element('content')}>
                     <Breadcrumbs path={location.pathname} />
-                    <Hurtiglenker links={sections} />
+                    {/* <Hurtiglenker links={sections} /> */}
                     <ForÅFåForeldrepenger id={sections[0]} />
                     <NyeRegler />
                     <HvaErForeldrepengerWrapper id={sections[1]} />

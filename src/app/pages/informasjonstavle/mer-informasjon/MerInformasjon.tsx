@@ -20,7 +20,7 @@ const MerInformasjon = () => {
                     {translate('mer_informasjon_tittel')}
                 </TypografiBase>
             </div>
-            <div className={cls.element('links')}>
+            <div role="navigation" className={cls.element('links')}>
                 <MerInformasjonLink
                     title={translate('foreldrepenger')}
                     body={translate('mer_informasjon_foreldrepenger')}
@@ -62,7 +62,7 @@ const MerInformasjonLink = ({
             noStyling={true}
             className={cls.element('link')}>
             <div>
-                <TypografiBase type="element">{title}</TypografiBase>
+                <TypografiBase type="undertittel">{title}</TypografiBase>
                 <Tekstomrade>{body}</Tekstomrade>
             </div>
             <div className={cls.element('chevron')}>

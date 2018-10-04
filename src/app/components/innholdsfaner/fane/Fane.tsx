@@ -28,7 +28,7 @@ const Fane = ({
     return (
         <div
             tabIndex={0}
-            role="button"
+            role="tab"
             onClick={onSelect}
             onKeyPress={onSelect}
             className={classnames(cls.className, {

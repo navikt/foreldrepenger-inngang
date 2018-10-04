@@ -40,7 +40,7 @@ class NyeRegler extends React.Component<Props> {
     };
 
     render = () => (
-        <div className={cls.className}>
+        <div role="region" aria-label="Nye regler" className={cls.className}>
             <div className={cls.element('header')}>
                 <CustomSVGFromSprite iconRef={infoIcon} size={32} />
                 <TypografiBase type="systemtittel">
@@ -64,11 +64,13 @@ class NyeRegler extends React.Component<Props> {
                         />
                     ))}
                 </div>
-                <TypografiBase type="normaltekst">
-                    {this.state.selectedRule === 'FØR'
-                        ? translate('nye_regler_før')
-                        : translate('nye_regler_etter')}
-                </TypografiBase>
+                <div role="alert">
+                    <TypografiBase type="normaltekst">
+                        {this.state.selectedRule === 'FØR'
+                            ? translate('nye_regler_før')
+                            : translate('nye_regler_etter')}
+                    </TypografiBase>
+                </div>
             </div>
         </div>
     );

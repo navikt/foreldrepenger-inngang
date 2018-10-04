@@ -18,7 +18,7 @@ const Informasjonstavle = () => {
         <div className={cls.className}>
             <Header />
             <div className={cls.element('body')}>
-                <div className={cls.element('content')}>
+                <div role="main" className={cls.element('content')}>
                     <Bildelenker />
                     <MerInformasjon />
                     <AndreLenker />
@@ -30,7 +30,7 @@ const Informasjonstavle = () => {
 
 const Bildelenker = () => {
     return (
-        <div className={cls.element('bildepaneler')}>
+        <div role="navigation" className={cls.element('bildepaneler')}>
             <PanelMedBilde
                 svgName="jente-med-imac"
                 title={translate('hva_har_du_rett_på')}

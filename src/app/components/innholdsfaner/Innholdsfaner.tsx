@@ -51,7 +51,7 @@ class Innholdsfaner extends React.Component<Props> {
                 </div>
             </MediaQuery>
             <MediaQuery query="(min-width: 800px)">
-                <div className={cls.element('faner')}>
+                <div role="tabpanel" className={cls.element('faner')}>
                     {this.props.tabs.map((tab, index) => (
                         <Fane
                             tab={tab}

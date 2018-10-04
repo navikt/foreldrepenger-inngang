@@ -58,7 +58,10 @@ class Kalkulator extends React.Component {
         );
 
         return (
-            <div className={cls.className}>
+            <div
+                role="section"
+                aria-label="Kalkulator for foreldrepengeperiode"
+                className={cls.className}>
                 <div className={cls.element('antallUkerOgBarn')}>
                     <div />
                     <TypografiBase type="normaltekst">100%</TypografiBase>
