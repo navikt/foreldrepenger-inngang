@@ -31,7 +31,11 @@ const PanelMedIllustrasjon = ({
     }
 
     return (
-        <div id={id} className={className}>
+        <div
+            role="region"
+            aria-label={`Seksjon: ${title}`}
+            id={id}
+            className={className}>
             <PanelBase className={cls.className}>
                 {illustration}
                 <TypografiBase type="systemtittel">{title}</TypografiBase>

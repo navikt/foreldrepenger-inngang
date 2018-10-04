@@ -64,10 +64,13 @@ class Breadcrumbs extends Component<BreadcrumbsProps> {
             const lastUrl = parsedPath[routeLength - 2].url;
 
             breadcrumbChain.push(
-                <NavFrontendChevron key="chevron" type="venstre" />
+                <div aria-hidden={true}>
+                    <NavFrontendChevron key="chevron" type="venstre" />
+                </div>
             );
             breadcrumbChain.push(
                 <TypografiBase
+                    aria-label="Gå til forrige side"
                     key="tilbake"
                     type="normaltekst"
                     className={cls.element('item')}>
@@ -78,19 +81,24 @@ class Breadcrumbs extends Component<BreadcrumbsProps> {
             parsedPath.forEach((path, index) => {
                 if (index !== 0) {
                     breadcrumbChain.push(
-                        <NavFrontendChevron
-                            key={`chevron${index}`}
-                            type="høyre"
-                        />
+                        <div aria-hidden={true}>
+                            <NavFrontendChevron
+                                key={`chevron${index}`}
+                                type="høyre"
+                            />
+                        </div>
                     );
                 }
 
+                const current = index === parsedPath.length - 1;
                 breadcrumbChain.push(
                     <TypografiBase
+                        aria-label={current ? 'Denne siden' : 'Tidligere side'}
+                        aria-current={current ? 'page' : ''}
                         key={`crumb${index}`}
                         type="normaltekst"
                         className={cls.element('item')}>
-                        {index === parsedPath.length - 1 ? (
+                        {current ? (
                             path.label
                         ) : (
                             <Link to={path.url}>{path.label}</Link>
@@ -100,7 +108,14 @@ class Breadcrumbs extends Component<BreadcrumbsProps> {
             });
         }
 
-        return <div className={cls.className}>{breadcrumbChain}</div>;
+        return (
+            <div
+                role="navigation"
+                aria-label="breadcrumb"
+                className={cls.className}>
+                {breadcrumbChain}
+            </div>
+        );
     }
 }
 

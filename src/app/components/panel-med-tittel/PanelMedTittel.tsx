@@ -14,7 +14,10 @@ const PanelMedTittel = ({
     children: ReactNode;
 }) => {
     return (
-        <div className={cls.className}>
+        <div
+            role="region"
+            aria-label={`Seksjon for ${title}`}
+            className={cls.className}>
             <PanelBase>
                 <div className={cls.element('title')}>
                     <TypografiBase type="systemtittel">{title}</TypografiBase>

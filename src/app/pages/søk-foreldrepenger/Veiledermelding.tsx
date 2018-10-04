@@ -32,13 +32,15 @@ const Veiledermelding = ({
     );
 
     return (
-        <Veilederpanel
-            kompakt={true}
-            type="normal"
-            svg={sara}
-            fargetema="advarsel">
-            {createDateErrorMessage(selectedDate)}
-        </Veilederpanel>
+        <div role="alert">
+            <Veilederpanel
+                kompakt={true}
+                type="normal"
+                svg={sara}
+                fargetema="advarsel">
+                {createDateErrorMessage(selectedDate)}
+            </Veilederpanel>
+        </div>
     );
 };
 

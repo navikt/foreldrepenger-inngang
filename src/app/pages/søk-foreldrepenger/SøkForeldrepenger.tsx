@@ -49,12 +49,12 @@ class SøkForeldrepenger extends Component<Props> {
                     hvaSøkerDuCls.className,
                     foreldrepengerCls.className
                 )}>
-                <div className={hvaSøkerDuCls.element('header')}>
+                <div role="header" className={hvaSøkerDuCls.element('header')}>
                     <TypografiBase type="undertittel">
                         {translate('hva_vil_du_søke_om')}
                     </TypografiBase>
                 </div>
-                <div className={hvaSøkerDuCls.element('body')}>
+                <div role="main" className={hvaSøkerDuCls.element('body')}>
                     <div className={hvaSøkerDuCls.element('content')}>
                         <Breadcrumbs path={location.pathname} />
                         <SvgBanner />

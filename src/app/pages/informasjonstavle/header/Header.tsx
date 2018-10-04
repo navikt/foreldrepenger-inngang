@@ -17,7 +17,7 @@ const Header = () => {
         .default;
 
     return (
-        <div className={cls.className}>
+        <div role="heading" className={cls.className}>
             <div className={cls.element('content')}>
                 <div className={cls.element('text')}>
                     <TypografiBase type="sidetittel">
@@ -41,6 +41,7 @@ const Header = () => {
                             iconRef={svg}
                             height={133}
                             width={300}
+                            aria-label="Illustrasjon av familie"
                             className={cls.element('svg')}
                         />
                     </MediaQuery>

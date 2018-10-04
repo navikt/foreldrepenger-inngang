@@ -15,7 +15,10 @@ const Datovelger = ({
     parentCls: BEMWrapper;
 }) => {
     return (
-        <div className={parentCls.element('datovelger')}>
+        <div
+            aria-label="Datovelger"
+            aria-haspopup={true}
+            className={parentCls.element('datovelger')}>
             <TypografiBase type="element">
                 {translate('når_starter_du')}
             </TypografiBase>
