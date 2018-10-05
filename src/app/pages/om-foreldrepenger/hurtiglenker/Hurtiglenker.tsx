@@ -3,7 +3,7 @@ import PanelBase from 'nav-frontend-paneler';
 import Lenke from 'nav-frontend-lenker';
 
 import BEMHelper from '../../../utils/bem';
-import translate from '../../../intl/translate';
+import { getTranslation } from '../../../intl/intl';
 
 import './hurtiglenker.less';
 import TypografiBase from 'nav-frontend-typografi';
@@ -18,7 +18,7 @@ const Hurtiglenker = ({ links }: { links: string[] }) => {
 
                 return (
                     <TypografiBase key={link} type="normaltekst">
-                        <Lenke href={`#${link}`}>{translate(stringToTranslate)}</Lenke>
+                        <Lenke href={`#${link}`}>{getTranslation(stringToTranslate)}</Lenke>
                     </TypografiBase>
                 );
             })}

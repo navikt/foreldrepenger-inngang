@@ -2,7 +2,7 @@ import * as React from 'react';
 import { WithLink } from '../../../utils/withLink';
 import BEMHelper from '../../../utils/bem';
 import TypografiBase from 'nav-frontend-typografi';
-import translate from '../../../intl/translate';
+import { getTranslation, IntlProps, withIntl } from '../../../intl/intl';
 import './andreLenker.less';
 import CustomSVG from '../../../utils/CustomSVG';
 
@@ -45,11 +45,11 @@ const links = [
 const externalLinkIcon = require('../../../assets/icons/external.svg').default;
 const cls = BEMHelper('andreLenker');
 
-const AndreLenker = () => {
+const AndreLenker: React.StatelessComponent<IntlProps> = ({ lang }) => {
     const otherLinks = links.map((link) => (
         <div key={link.label} className={cls.element('linkContainer')}>
             <WithLink url={link.href} urlIsExternal={!link.internal}>
-                <TypografiBase type="normaltekst">{translate(link.label)}</TypografiBase>
+                <TypografiBase type="normaltekst">{getTranslation(link.label, lang)}</TypografiBase>
                 {!link.internal && (
                     <span className={cls.element('linkIcon')}>
                         <CustomSVG size={18} iconRef={externalLinkIcon} />
@@ -61,10 +61,10 @@ const AndreLenker = () => {
 
     return (
         <div className={cls.className}>
-            <TypografiBase type="undertittel">{translate('andre_lenker')}</TypografiBase>
+            <TypografiBase type="undertittel">{getTranslation('andre_lenker', lang)}</TypografiBase>
             <nav className={cls.element('links')}>{otherLinks}</nav>
         </div>
     );
 };
 
-export default AndreLenker;
+export default withIntl(AndreLenker);

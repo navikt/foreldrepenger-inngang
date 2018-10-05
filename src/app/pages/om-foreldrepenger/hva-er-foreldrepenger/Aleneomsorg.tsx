@@ -2,8 +2,7 @@ import * as React from 'react';
 import Kalkulator from './kalkulator/Kalkulator';
 import Informasjonsfaner from './informasjons-faner/Informasjonsfaner';
 import StrukturertTekst from '../../../components/strukturert-tekst/StrukturertTekst';
-import { Language } from '../../../intl/translate';
-import { withLang } from '../../../intl/intl-context';
+import { Language, withIntl } from '../../../intl/intl';
 import { getContent } from '../../../utils/getContent';
 
 const content = 'all-informasjon/hva-er-foreldrepenger/aleneomsorg/aleneomsorg.json';
@@ -45,4 +44,4 @@ const Aleneomsorg = ({ lang }: { lang: Language }) => {
     );
 };
 
-export default withLang(Aleneomsorg);
+export default withIntl(Aleneomsorg);

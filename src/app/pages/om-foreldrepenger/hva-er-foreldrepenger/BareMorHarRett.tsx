@@ -2,9 +2,8 @@ import * as React from 'react';
 import Kalkulator from './kalkulator/Kalkulator';
 import Informasjonsfaner from './informasjons-faner/Informasjonsfaner';
 import StrukturertTekst from '../../../components/strukturert-tekst/StrukturertTekst';
-import { Language } from '../../../intl/translate';
+import { Language, withIntl } from '../../../intl/intl';
 import { getContent } from '../../../utils/getContent';
-import { withLang } from '../../../intl/intl-context';
 
 const content = 'all-informasjon/hva-er-foreldrepenger/bare-mor-har-rett/bare-mor-har-rett';
 const morsDel = 'all-informasjon/hva-er-foreldrepenger/bare-mor-har-rett/mors-del';
@@ -33,4 +32,4 @@ const BareMorHarRett = ({ lang }: { lang: Language }) => {
     );
 };
 
-export default withLang(BareMorHarRett);
+export default withIntl(BareMorHarRett);

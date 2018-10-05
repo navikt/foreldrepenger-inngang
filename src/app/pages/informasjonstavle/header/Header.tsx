@@ -2,17 +2,16 @@ import * as React from 'react';
 import TypografiBase from 'nav-frontend-typografi';
 import { FlexibleSvg } from '../../../utils/CustomSVG';
 import BEMHelper from '../../../utils/bem';
-import translate from '../../../intl/translate';
 import './header.less';
 import MediaQuery from 'react-responsive';
 import { getRandomInt } from '../../../utils/random';
-import { withLang } from '../../../intl/intl-context';
+import { getTranslation, withIntl, IntlProps } from '../../../intl/intl';
 
 const cls = BEMHelper('header');
 
 const NUM_FAMILIES = 5;
 
-const Header = (props: any) => {
+const Header: React.StatelessComponent<IntlProps> = ({ lang }) => {
     const randomFamilyAtHome = getRandomInt(1, NUM_FAMILIES);
     const svg = require(`../../../assets/familier-hjemme/familie-hjemme-${randomFamilyAtHome}.svg`)
         .default;
@@ -22,15 +21,13 @@ const Header = (props: any) => {
             <div className={cls.element('content')}>
                 <div className={cls.element('text')}>
                     <TypografiBase type="sidetittel">
-                        {translate('informasjonstavle.tittel')}
+                        {getTranslation('informasjonstavle.tittel', lang)}
                     </TypografiBase>
                     <TypografiBase type="normaltekst">
-                        {translate('informasjonstavle.ingress', props.lang)}
+                        {getTranslation('informasjonstavle.ingress', lang)}
                     </TypografiBase>
                 </div>
-                <div
-                    role="presentation"
-                    className={cls.element('svgContainer')}>
+                <div role="presentation" className={cls.element('svgContainer')}>
                     <MediaQuery maxWidth={576}>
                         <FlexibleSvg
                             iconRef={svg}
@@ -53,4 +50,4 @@ const Header = (props: any) => {
     );
 };
 
-export default withLang(Header);
+export default withIntl(Header);

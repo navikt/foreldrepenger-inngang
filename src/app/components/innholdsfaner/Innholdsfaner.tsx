@@ -3,14 +3,16 @@ import './innholdsfaner.less';
 import BEMHelper from '../../utils/bem';
 import Fane, { Innholdsfane } from './fane/Fane';
 import MediaQuery from 'react-responsive';
-import translate from '../../intl/translate';
+import { getTranslation, IntlProps, withIntl } from '../../intl/intl';
 import Select from './select/Select';
 
 const cls = BEMHelper('innholdsfaner');
 
-interface Props {
+interface TabProps {
     tabs: Innholdsfane[];
 }
+
+type Props = TabProps & IntlProps;
 
 class Innholdsfaner extends React.Component<Props> {
     state: {
@@ -42,7 +44,7 @@ class Innholdsfaner extends React.Component<Props> {
                 <div className={cls.element('faner')}>
                     <Select
                         selected={this.props.tabs[this.state.currentTab].label}
-                        label={translate('om_foreldrepenger.faner.label')}
+                        label={getTranslation('om_foreldrepenger.faner.label', this.props.lang)}
                         choices={this.props.tabs}
                         onChoiceSelect={(index: number) => {
                             this.onTabSelect(index);
@@ -71,4 +73,4 @@ class Innholdsfaner extends React.Component<Props> {
     );
 }
 
-export default Innholdsfaner;
+export default withIntl(Innholdsfaner);

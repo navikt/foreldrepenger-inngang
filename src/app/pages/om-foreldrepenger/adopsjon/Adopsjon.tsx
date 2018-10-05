@@ -1,33 +1,36 @@
 import * as React from 'react';
 import PanelMedIllustrasjon from '../../../components/panel-med-illustrasjon/PanelMedIllustrasjon';
-import translate, { Language } from '../../../intl/translate';
+import { getTranslation, withIntl, IntlProps } from '../../../intl/intl';
 import StrukturertTekst from '../../../components/strukturert-tekst/StrukturertTekst';
 import LesMer from '../../../components/les-mer/LesMer';
 import { getContent } from '../../../utils/getContent';
-import { withLang } from '../../../intl/intl-context';
 
 const pageSvg = require('../../../assets/page.svg').default;
 
-const Adopjson = ({ id, lang }: { id: string; lang: Language }) => {
+interface Props {
+    id: string;
+}
+
+const Adopjson: React.StatelessComponent<Props & IntlProps> = ({ id, lang }) => {
     return (
-        <PanelMedIllustrasjon id={id} title={translate('adopsjon')} svg={pageSvg}>
+        <PanelMedIllustrasjon id={id} title={getTranslation('adopsjon', lang)} svg={pageSvg}>
             <StrukturertTekst tekst={getContent('all-informasjon/adopsjon/adopsjon', lang)} />
-            <LesMer intro={translate('om_foreldrepenger.adopsjon.når_starter')}>
+            <LesMer intro={getTranslation('om_foreldrepenger.adopsjon.når_starter', lang)}>
                 <StrukturertTekst
                     tekst={getContent('all-informasjon/adopsjon/når-starter', lang)}
                 />
             </LesMer>
-            <LesMer intro={translate('om_foreldrepenger.adopsjon.hvor_lenge')}>
+            <LesMer intro={getTranslation('om_foreldrepenger.adopsjon.hvor_lenge', lang)}>
                 <StrukturertTekst tekst={getContent('all-informasjon/adopsjon/hvor-lenge', lang)} />
             </LesMer>
-            <LesMer intro={translate('om_foreldrepenger.adopsjon.flere_barn')}>
+            <LesMer intro={getTranslation('om_foreldrepenger.adopsjon.flere_barn', lang)}>
                 <StrukturertTekst tekst={getContent('all-informasjon/adopsjon/flere-barn', lang)} />
             </LesMer>
-            <LesMer intro={translate('om_foreldrepenger.adopsjon.ikke_rett')}>
+            <LesMer intro={getTranslation('om_foreldrepenger.adopsjon.ikke_rett', lang)}>
                 <StrukturertTekst tekst={getContent('all-informasjon/adopsjon/ikke-rett', lang)} />
             </LesMer>
         </PanelMedIllustrasjon>
     );
 };
 
-export default withLang(Adopjson);
+export default withIntl(Adopjson);

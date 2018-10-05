@@ -4,7 +4,7 @@ import NavFrontendChevron from 'nav-frontend-chevron';
 import BEMHelper from '../../utils/bem';
 import { Link } from 'react-router-dom';
 import './breadcrumbs.less';
-import translate from '../../intl/translate';
+import { getTranslation, Language, IntlProps, withIntl } from '../../intl/intl';
 
 const cls = BEMHelper('breadcrumbs');
 
@@ -12,7 +12,7 @@ interface BreadcrumbsProps {
     path: string;
 }
 
-const parsePath = (path: string) => {
+const parsePath = (path: string, lang: Language) => {
     const parts = path.split('/');
 
     // Remove any trailing slash ("/")
@@ -26,12 +26,12 @@ const parsePath = (path: string) => {
 
         return {
             url,
-            label: translate(`route.${part}`)
+            label: getTranslation(`route.${part}`, lang)
         };
     });
 };
 
-class Breadcrumbs extends Component<BreadcrumbsProps> {
+class Breadcrumbs extends Component<BreadcrumbsProps & IntlProps> {
     state: {
         windowWidth?: number;
     } = {
@@ -56,7 +56,7 @@ class Breadcrumbs extends Component<BreadcrumbsProps> {
 
     render() {
         const breadcrumbChain: ReactNodeArray = [];
-        const parsedPath = parsePath(this.props.path);
+        const parsedPath = parsePath(this.props.path, this.props.lang);
 
         if (this.state.windowWidth && this.state.windowWidth < 576) {
             const routeLength = parsedPath.length;
@@ -75,7 +75,7 @@ class Breadcrumbs extends Component<BreadcrumbsProps> {
                     key="tilbake"
                     type="normaltekst"
                     className={cls.element('item')}>
-                    <Link to={lastUrl}>{translate('tilbake')}</Link>
+                    <Link to={lastUrl}>{getTranslation('tilbake', this.props.lang)}</Link>
                 </TypografiBase>
             );
         } else {
@@ -110,4 +110,4 @@ class Breadcrumbs extends Component<BreadcrumbsProps> {
     }
 }
 
-export default Breadcrumbs;
+export default withIntl(Breadcrumbs);

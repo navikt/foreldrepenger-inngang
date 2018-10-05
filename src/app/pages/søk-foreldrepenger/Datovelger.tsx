@@ -3,24 +3,23 @@ import NavDatovelger from 'nav-datovelger';
 import TypografiBase from 'nav-frontend-typografi';
 
 import { BEMWrapper } from '../../utils/bem';
-import translate from '../../intl/translate';
+import { getTranslation, withIntl, IntlProps } from '../../intl/intl';
+import { StatelessComponent } from 'enzyme';
 
-const Datovelger = ({
-    date,
-    onChange,
-    parentCls
-}: {
+interface Props {
     date: any;
     onChange: (date: Date) => void;
     parentCls: BEMWrapper;
-}) => {
+}
+
+const Datovelger: StatelessComponent<Props & IntlProps> = ({ date, onChange, parentCls, lang }) => {
     return (
         <div
             aria-label="Datovelger"
             aria-haspopup={true}
             className={parentCls.element('datovelger')}>
             <TypografiBase type="element">
-                {translate('søk_foreldrepenger.første_dag_spørsmål')}
+                {getTranslation('søk_foreldrepenger.første_dag_spørsmål', lang)}
             </TypografiBase>
             <NavDatovelger.Datovelger
                 kanVelgeUgyldigDato={true}
@@ -37,4 +36,4 @@ const Datovelger = ({
     );
 };
 
-export default Datovelger;
+export default withIntl(Datovelger);

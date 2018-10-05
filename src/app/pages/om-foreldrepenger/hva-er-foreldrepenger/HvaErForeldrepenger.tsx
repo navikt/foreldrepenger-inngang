@@ -12,9 +12,8 @@ import Innholdsfaner from '../../../components/innholdsfaner/Innholdsfaner';
 import { Innholdsfane } from '../../../components/innholdsfaner/fane/Fane';
 import './hvaErForeldrepenger.less';
 import PanelMedIllustrasjon from '../../../components/panel-med-illustrasjon/PanelMedIllustrasjon';
-import translate, { Language } from '../../../intl/translate';
+import { getTranslation, withIntl, IntlProps } from '../../../intl/intl';
 import { getContent } from '../../../utils/getContent';
-import { withLang } from '../../../intl/intl-context';
 
 const pageSvg = require('../../../assets/page.svg').default;
 
@@ -54,14 +53,13 @@ const tabs: Innholdsfane[] = [
 
 interface Props {
     id: string;
-    lang: Language;
 }
 
-const HvaErForeldrepenger: React.StatelessComponent<Props> = ({ id, lang }) => {
+const HvaErForeldrepenger: React.StatelessComponent<Props & IntlProps> = ({ id, lang }) => {
     return (
         <PanelMedIllustrasjon
             id={id}
-            title={translate('om_foreldrepenger.hvor_lenge.tittel')}
+            title={getTranslation('om_foreldrepenger.hvor_lenge.tittel', lang)}
             svg={pageSvg}>
             <div className={cls.className}>
                 <StrukturertTekst
@@ -77,4 +75,4 @@ const HvaErForeldrepenger: React.StatelessComponent<Props> = ({ id, lang }) => {
     );
 };
 
-export default withLang(HvaErForeldrepenger);
+export default withIntl(HvaErForeldrepenger);

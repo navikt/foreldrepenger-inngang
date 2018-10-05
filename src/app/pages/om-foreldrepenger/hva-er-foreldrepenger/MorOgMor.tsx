@@ -3,9 +3,8 @@ import Kalkulator from './kalkulator/Kalkulator';
 import Informasjonsfaner from './informasjons-faner/Informasjonsfaner';
 import StrukturertTekst from '../../../components/strukturert-tekst/StrukturertTekst';
 import Foreldrepar from '../../../components/foreldrepar/Foreldrepar';
-import { Language } from '../../../intl/translate';
+import { Language, withIntl } from '../../../intl/intl';
 import { getContent } from '../../../utils/getContent';
-import { withLang } from '../../../intl/intl-context';
 
 const content = 'all-informasjon/hva-er-foreldrepenger/mor-og-mor/mor-og-mor';
 const morsDel = 'ontent/all-informasjon/hva-er-foreldrepenger/mor-og-mor/mors-del';
@@ -48,7 +47,7 @@ const getInformasjonsfaner = (lang: Language) => [
     }
 ];
 
-const MorogMor = ({ lang }: { lang: Language }) => {
+const MorOgMor = ({ lang }: { lang: Language }) => {
     return (
         <div>
             <StrukturertTekst tekst={getContent(content, lang)} />
@@ -58,4 +57,4 @@ const MorogMor = ({ lang }: { lang: Language }) => {
     );
 };
 
-export default withLang(MorogMor);
+export default withIntl(MorOgMor);

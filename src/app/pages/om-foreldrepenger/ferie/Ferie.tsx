@@ -1,11 +1,10 @@
 import * as React from 'react';
 import PanelMedIllustrasjon from '../../../components/panel-med-illustrasjon/PanelMedIllustrasjon';
-import translate, { Language } from '../../../intl/translate';
+import { getTranslation, withIntl, IntlProps } from '../../../intl/intl';
 import StrukturertTekst from '../../../components/strukturert-tekst/StrukturertTekst';
 import LesMer from '../../../components/les-mer/LesMer';
 import TypografiBase from 'nav-frontend-typografi';
 import BEMHelper from '../../../utils/bem';
-import { withLang } from '../../../intl/intl-context';
 import { getContent } from '../../../utils/getContent';
 import './ferie.less';
 
@@ -17,18 +16,24 @@ const rettTilUtsettelseContent = 'all-informasjon/ferie/rett-til-utsettelse';
 const fåUtsettelseContent = 'all-informasjon/ferie/få-utsettelse';
 const feriepenger = 'all-informasjon/ferie/feriepenger';
 
-const Ferie = ({ id, lang }: { id: string; lang: Language }) => {
+interface Props {
+    id: string;
+}
+
+const Ferie: React.StatelessComponent<Props & IntlProps> = ({ id, lang }) => {
     return (
-        <PanelMedIllustrasjon id={id} svg={pageSvg} title={translate('ferie')}>
+        <PanelMedIllustrasjon id={id} svg={pageSvg} title={getTranslation('ferie', lang)}>
             <StrukturertTekst tekst={getContent(content, lang)} />
 
-            <FerieEksempel title={translate('om_foreldrepenger.ferie.eksempel_label')} />
-            <FerieEksempel title={translate('om_foreldrepenger.ferie.eksempel2_label')} />
+            <FerieEksempel title={getTranslation('om_foreldrepenger.ferie.eksempel_label', lang)} />
+            <FerieEksempel
+                title={getTranslation('om_foreldrepenger.ferie.eksempel2_label', lang)}
+            />
 
-            <LesMer intro={translate('om_foreldrepenger.ferie.rett_til_utsettelse')}>
+            <LesMer intro={getTranslation('om_foreldrepenger.ferie.rett_til_utsettelse', lang)}>
                 <StrukturertTekst tekst={getContent(rettTilUtsettelseContent, lang)} />
             </LesMer>
-            <LesMer intro={translate('om_foreldrepenger.ferie.utsette')}>
+            <LesMer intro={getTranslation('om_foreldrepenger.ferie.utsette', lang)}>
                 <StrukturertTekst tekst={getContent(fåUtsettelseContent, lang)} />
             </LesMer>
 
@@ -43,4 +48,4 @@ const FerieEksempel = ({ title }: { title: string }) => (
     </div>
 );
 
-export default withLang(Ferie);
+export default withIntl(Ferie);
