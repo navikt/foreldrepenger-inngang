@@ -62,10 +62,9 @@ class Breadcrumbs extends Component<BreadcrumbsProps & IntlProps> {
             const routeLength = parsedPath.length;
             const lastUrl = parsedPath[routeLength - 2].url;
 
-            breadcrumbChain.push(<NavFrontendChevron key="chevron" type="venstre" />);
             breadcrumbChain.push(
-                <div aria-hidden={true}>
-                    <NavFrontendChevron key="chevron" type="venstre" />
+                <div key="chevron" aria-hidden={true}>
+                    <NavFrontendChevron type="venstre" />
                 </div>
             );
 
@@ -82,8 +81,8 @@ class Breadcrumbs extends Component<BreadcrumbsProps & IntlProps> {
             parsedPath.forEach((path, index) => {
                 if (index !== 0) {
                     breadcrumbChain.push(
-                        <div aria-hidden={true}>
-                            <NavFrontendChevron key={`chevron${index}`} type="høyre" />
+                        <div key={`chevron${index}`} aria-hidden={true}>
+                            <NavFrontendChevron type="høyre" />
                         </div>
                     );
                 }
