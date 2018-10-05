@@ -5,8 +5,8 @@ import StrukturertTekst from '../../../components/strukturert-tekst/StrukturertT
 import { Language, withIntl } from '../../../intl/intl';
 import { getContent } from '../../../utils/getContent';
 
-const content = 'all-informasjon/hva-er-foreldrepenger/bare-far-har-rett/bare-far-har-rett.json';
-const farsDel = 'all-informasjon/hva-er-foreldrepenger/bare-far-har-rett/fars-del.json';
+const content = 'all-informasjon/hva-er-foreldrepenger/bare-far-har-rett/bare-far-har-rett';
+const farsDel = 'all-informasjon/hva-er-foreldrepenger/bare-far-har-rett/fars-del';
 
 const getInformasjonsfaner = (lang: Language) => [
     {

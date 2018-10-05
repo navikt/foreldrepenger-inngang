@@ -5,9 +5,9 @@ import StrukturertTekst from '../../../components/strukturert-tekst/StrukturertT
 import { Language, withIntl } from '../../../intl/intl';
 import { getContent } from '../../../utils/getContent';
 
-const content = 'all-informasjon/hva-er-foreldrepenger/aleneomsorg/aleneomsorg.json';
-const farsDel = 'all-informasjon/hva-er-foreldrepenger/aleneomsorg/fars-del.json';
-const morsDel = 'all-informasjon/hva-er-foreldrepenger/aleneomsorg/mors-del.json';
+const content = 'all-informasjon/hva-er-foreldrepenger/aleneomsorg/aleneomsorg';
+const farsDel = 'all-informasjon/hva-er-foreldrepenger/aleneomsorg/fars-del';
+const morsDel = 'all-informasjon/hva-er-foreldrepenger/aleneomsorg/mors-del';
 
 const getInformasjonsfaner = (lang: Language) => [
     {
