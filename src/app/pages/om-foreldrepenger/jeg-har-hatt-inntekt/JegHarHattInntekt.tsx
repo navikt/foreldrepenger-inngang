@@ -1,9 +1,8 @@
 import React, { StatelessComponent } from 'react';
-import translate from '../../../utils/translate';
+import { getTranslation, withIntl, IntlProps } from '../../../intl/intl';
 import StrukturertTekst from '../../../components/strukturert-tekst/StrukturertTekst';
 import PanelMedIllustrasjon from '../../../components/panel-med-illustrasjon/PanelMedIllustrasjon';
-
-const content = require('../../../../content/all-informasjon/jeg-har-hatt-inntekt.json');
+import { getContent } from '../../../utils/getContent';
 
 const pageSvg = require('../../../assets/page.svg').default;
 
@@ -11,15 +10,15 @@ interface Props {
     id: string;
 }
 
-const JegHarHattInntekt: StatelessComponent<Props> = ({ id }) => {
+const JegHarHattInntekt: StatelessComponent<Props & IntlProps> = ({ id, lang }) => {
     return (
         <PanelMedIllustrasjon
             id={id}
-            title={translate('jeg_har_hatt_inntekt')}
+            title={getTranslation('jeg_har_hatt_inntekt', lang)}
             svg={pageSvg}>
-            <StrukturertTekst tekst={content} />
+            <StrukturertTekst tekst={getContent('all-informasjon/jeg-har-hatt-inntekt', lang)} />
         </PanelMedIllustrasjon>
     );
 };
 
-export default JegHarHattInntekt;
+export default withIntl(JegHarHattInntekt);

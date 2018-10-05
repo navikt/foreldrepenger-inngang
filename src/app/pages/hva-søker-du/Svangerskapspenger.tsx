@@ -1,22 +1,21 @@
 import * as React from 'react';
 import PanelMedTittel from '../../components/panel-med-tittel/PanelMedTittel';
 import ButtonPanel from './button-panel/ButtonPanel';
-import translate from '../../utils/translate';
+import { getTranslation, Language, withIntl } from '../../intl/intl';
 import externalUrls from '../../utils/externalUrls';
 import StrukturertTekst from '../../components/strukturert-tekst/StrukturertTekst';
+import { getContent } from '../../utils/getContent';
 
-const content = require('../../../content/hva-vil-du-søke-om/svangerskapspenger.json');
-
-const Svangerskapspenger = ({ parentCls }: { parentCls: any }) => {
+const Svangerskapspenger = ({ parentCls, lang }: { parentCls: any; lang: Language }) => {
     return (
-        <PanelMedTittel title={translate('svangerskapspenger')}>
-            <StrukturertTekst tekst={content} />
+        <PanelMedTittel title={getTranslation('svangerskapspenger', lang)}>
+            <StrukturertTekst tekst={getContent('hva-vil-du-søke-om/svangerskapspenger', lang)} />
             <div className={parentCls.element('filler')} />
             <ButtonPanel
                 parentCls={parentCls}
-                buttonText={translate('søk_svangerskapspenger')}
+                buttonText={getTranslation('hva_søker_du.søk_svangerskapspenger', lang)}
                 buttonUrl={externalUrls.søk_svangerskapspenger}
-                linkText={translate('ingen_elektronisk_id')}
+                linkText={getTranslation('hva_søker_du.ingen_elektronisk_id', lang)}
                 linkUrl={externalUrls.søk_svangerskapspenger}
                 helpText="<Placeholder>"
             />
@@ -24,4 +23,4 @@ const Svangerskapspenger = ({ parentCls }: { parentCls: any }) => {
     );
 };
 
-export default Svangerskapspenger;
+export default withIntl(Svangerskapspenger);

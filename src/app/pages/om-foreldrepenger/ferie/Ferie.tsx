@@ -1,40 +1,43 @@
 import * as React from 'react';
 import PanelMedIllustrasjon from '../../../components/panel-med-illustrasjon/PanelMedIllustrasjon';
-import translate from '../../../utils/translate';
+import { getTranslation, withIntl, IntlProps } from '../../../intl/intl';
 import StrukturertTekst from '../../../components/strukturert-tekst/StrukturertTekst';
 import LesMer from '../../../components/les-mer/LesMer';
 import TypografiBase from 'nav-frontend-typografi';
 import BEMHelper from '../../../utils/bem';
+import { getContent } from '../../../utils/getContent';
 import './ferie.less';
 
 const cls = BEMHelper('ferie');
 
 const pageSvg = require('../../../assets/page.svg').default;
-const content = require('../../../../content/all-informasjon/ferie/ferie');
-const rettTilUtsettelseContent = require('../../../../content/all-informasjon/ferie/rett-til-utsettelse');
-const fåUtsettelseContent = require('../../../../content/all-informasjon/ferie/få-utsettelse');
-const feriepenger = require('../../../../content/all-informasjon/ferie/feriepenger');
+const content = 'all-informasjon/ferie/ferie';
+const rettTilUtsettelseContent = 'all-informasjon/ferie/rett-til-utsettelse';
+const fåUtsettelseContent = 'all-informasjon/ferie/få-utsettelse';
+const feriepenger = 'all-informasjon/ferie/feriepenger';
 
-const Ferie = ({ id }: { id: string }) => {
+interface Props {
+    id: string;
+}
+
+const Ferie: React.StatelessComponent<Props & IntlProps> = ({ id, lang }) => {
     return (
-        <PanelMedIllustrasjon id={id} svg={pageSvg} title={translate('ferie')}>
-            <StrukturertTekst tekst={content} />
+        <PanelMedIllustrasjon id={id} svg={pageSvg} title={getTranslation('ferie', lang)}>
+            <StrukturertTekst tekst={getContent(content, lang)} />
 
+            <FerieEksempel title={getTranslation('om_foreldrepenger.ferie.eksempel_label', lang)} />
             <FerieEksempel
-                title={translate('eksempel_på_utsettelse_ved_uttak_av_ferie')}
-            />
-            <FerieEksempel
-                title={translate('et_annet_eksempel_på_forskyving_av_perioder')}
+                title={getTranslation('om_foreldrepenger.ferie.eksempel2_label', lang)}
             />
 
-            <LesMer intro={translate('ferie_som_gir_rett_til_utsettelse')}>
-                <StrukturertTekst tekst={rettTilUtsettelseContent} />
+            <LesMer intro={getTranslation('om_foreldrepenger.ferie.rett_til_utsettelse', lang)}>
+                <StrukturertTekst tekst={getContent(rettTilUtsettelseContent, lang)} />
             </LesMer>
-            <LesMer intro={translate('slik_går_du_frem_for_å_utsette')}>
-                <StrukturertTekst tekst={fåUtsettelseContent} />
+            <LesMer intro={getTranslation('om_foreldrepenger.ferie.utsette', lang)}>
+                <StrukturertTekst tekst={getContent(fåUtsettelseContent, lang)} />
             </LesMer>
 
-            <StrukturertTekst tekst={feriepenger} />
+            <StrukturertTekst tekst={getContent(feriepenger, lang)} />
         </PanelMedIllustrasjon>
     );
 };
@@ -45,4 +48,4 @@ const FerieEksempel = ({ title }: { title: string }) => (
     </div>
 );
 
-export default Ferie;
+export default withIntl(Ferie);

@@ -1,38 +1,36 @@
 import * as React from 'react';
 import PanelMedIllustrasjon from '../../../components/panel-med-illustrasjon/PanelMedIllustrasjon';
-import translate from '../../../utils/translate';
+import { getTranslation, withIntl, IntlProps } from '../../../intl/intl';
 import StrukturertTekst from '../../../components/strukturert-tekst/StrukturertTekst';
 import LesMer from '../../../components/les-mer/LesMer';
-
-const content = require('../../../../content/all-informasjon/adopsjon/adopsjon.json');
-const nårStarter = require('../../../../content/all-informasjon/adopsjon/når-starter.json');
-const hvorLenge = require('../../../../content/all-informasjon/adopsjon/hvor-lenge.json');
-const flereBarn = require('../../../../content/all-informasjon/adopsjon/flere-barn.json');
-const ikkeRett = require('../../../../content/all-informasjon/adopsjon/ikke-rett.json');
+import { getContent } from '../../../utils/getContent';
 
 const pageSvg = require('../../../assets/page.svg').default;
 
-const Adopjson = ({ id }: { id: string }) => {
+interface Props {
+    id: string;
+}
+
+const Adopjson: React.StatelessComponent<Props & IntlProps> = ({ id, lang }) => {
     return (
-        <PanelMedIllustrasjon
-            id={id}
-            title={translate('adopsjon')}
-            svg={pageSvg}>
-            <StrukturertTekst tekst={content} />
-            <LesMer intro={translate('når_starter_foreldrepengeperioden')}>
-                <StrukturertTekst tekst={nårStarter} />
+        <PanelMedIllustrasjon id={id} title={getTranslation('adopsjon', lang)} svg={pageSvg}>
+            <StrukturertTekst tekst={getContent('all-informasjon/adopsjon/adopsjon', lang)} />
+            <LesMer intro={getTranslation('om_foreldrepenger.adopsjon.når_starter', lang)}>
+                <StrukturertTekst
+                    tekst={getContent('all-informasjon/adopsjon/når-starter', lang)}
+                />
             </LesMer>
-            <LesMer intro={translate('hvor_lenge_kan_du_få_foreldrepenger')}>
-                <StrukturertTekst tekst={hvorLenge} />
+            <LesMer intro={getTranslation('om_foreldrepenger.adopsjon.hvor_lenge', lang)}>
+                <StrukturertTekst tekst={getContent('all-informasjon/adopsjon/hvor-lenge', lang)} />
             </LesMer>
-            <LesMer intro={translate('adopterer_dere_flere_barn')}>
-                <StrukturertTekst tekst={flereBarn} />
+            <LesMer intro={getTranslation('om_foreldrepenger.adopsjon.flere_barn', lang)}>
+                <StrukturertTekst tekst={getContent('all-informasjon/adopsjon/flere-barn', lang)} />
             </LesMer>
-            <LesMer intro={translate('adopsjon_som_ikke_gir_rett')}>
-                <StrukturertTekst tekst={ikkeRett} />
+            <LesMer intro={getTranslation('om_foreldrepenger.adopsjon.ikke_rett', lang)}>
+                <StrukturertTekst tekst={getContent('all-informasjon/adopsjon/ikke-rett', lang)} />
             </LesMer>
         </PanelMedIllustrasjon>
     );
 };
 
-export default Adopjson;
+export default withIntl(Adopjson);

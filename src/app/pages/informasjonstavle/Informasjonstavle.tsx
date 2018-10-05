@@ -1,7 +1,6 @@
 import React from 'react';
 import Tekstomrade from 'nav-frontend-tekstomrade';
-
-import translate from '../../utils/translate';
+import { withIntl, IntlProps, getTranslation } from '../../intl/intl';
 import BEMHelper from '../../utils/bem';
 import externalUrls from '../../utils/externalUrls';
 
@@ -10,6 +9,7 @@ import Header from './header/Header';
 import MerInformasjon from './mer-informasjon/MerInformasjon';
 import AndreLenker from './andre-lenker/AndreLenker';
 import './informasjonstavle.less';
+import { StatelessComponent } from 'enzyme';
 
 const cls = BEMHelper('informasjonstavle');
 
@@ -18,48 +18,50 @@ const Informasjonstavle = () => {
         <div className={cls.className}>
             <Header />
             <div className={cls.element('body')}>
-                <div className={cls.element('content')}>
+                <main className={cls.element('content')}>
                     <Bildelenker />
                     <MerInformasjon />
                     <AndreLenker />
-                </div>
+                </main>
             </div>
         </div>
     );
 };
 
-const Bildelenker = () => {
+const BildelenkerWithoutIntl: StatelessComponent<IntlProps> = ({ lang }) => {
     return (
-        <div className={cls.element('bildepaneler')}>
+        <nav className={cls.element('bildepaneler')}>
             <PanelMedBilde
                 svgName="jente-med-imac"
-                title={translate('hva_har_du_rett_på')}
+                title={getTranslation('informasjonstavle.hva_har_du_rett_på', lang)}
                 urlIsExternal={false}
                 url="/#">
                 <Tekstomrade>
-                    {translate('Hva_har_du_rett_på_body')}
+                    {getTranslation('informasjonstavle.hva_har_du_rett_på_body', lang)}
                 </Tekstomrade>
             </PanelMedBilde>
             <PanelMedBilde
                 svgName="se-over-søknad"
-                title={translate('hvor_lenge_kan_du_få_permisjon')}
+                title={getTranslation('informasjonstavle.hvor_lenge_kan_du_få_permisjon', lang)}
                 urlIsExternal={true}
                 url={externalUrls.foreldrepengeplanlegger}>
                 <Tekstomrade>
-                    {translate('hvor_lenge_kan_du_få_permisjon_body')}
+                    {getTranslation('informasjonstavle.hvor_lenge_kan_du_få_permisjon_body', lang)}
                 </Tekstomrade>
             </PanelMedBilde>
             <PanelMedBilde
                 svgName="fylle-ut-søknad"
-                title={translate('gå_rett_til_søknaden')}
+                title={getTranslation('informasjonstavle.gå_rett_til_søknaden', lang)}
                 urlIsExternal={false}
                 url="/hva-soker-du">
                 <Tekstomrade>
-                    {translate('gå_rett_til_søknaden_body')}
+                    {getTranslation('informasjonstavle.gå_rett_til_søknaden_body', lang)}
                 </Tekstomrade>
             </PanelMedBilde>
-        </div>
+        </nav>
     );
 };
+
+const Bildelenker = withIntl(BildelenkerWithoutIntl);
 
 export default Informasjonstavle;

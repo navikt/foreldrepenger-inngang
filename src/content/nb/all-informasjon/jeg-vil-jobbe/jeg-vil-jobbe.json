@@ -1,0 +1,83 @@
+[
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Du kan kombinere foreldrepengene med arbeid. Du kan velge mellom å:"
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "level": 1,
+        "listItem": "bullet",
+        "children": [
+            {
+                "type": "span",
+                "text": "Utsette",
+                "marks": ["bold"]
+            },
+            {
+                "type": "span",
+                "text": " foreldrepengeperioden din"
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "level": 1,
+        "listItem": "bullet",
+        "children": [
+            {
+                "type": "span",
+                "text": "Forlenge",
+                "marks": ["bold"]
+            },
+            {
+                "type": "span",
+                "text": " foreldrepengeperioden din"
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Jobber du delvis blir "
+            },
+            {
+                "type": "span",
+                "text": "foreldrepengene redusert",
+                "marks": ["bold"]
+            },
+            {
+                "type": "span",
+                "text": " etter hvor mye du jobber. Samtidig blir "
+            },
+            {
+                "type": "span",
+                "text": "perioden din med foreldrepenger forlenget",
+                "marks": ["bold"]
+            },
+            {
+                "type": "span",
+                "text": ". Du kan bare bare jobbe hos "
+            },
+            {
+                "type": "span",
+                "text": "én arbeidsgiver",
+                "marks": ["bold"]
+            },
+            {
+                "type": "span",
+                "text": " om gangen."
+            }
+        ]
+    }
+]

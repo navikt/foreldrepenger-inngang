@@ -14,7 +14,7 @@ const UserHelp = ({
     helpText: string;
 }) => {
     return (
-        <div className="userHelp">
+        <div role="link" className="userHelp">
             <TypografiBase type="normaltekst">
                 <Lenke href={linkUrl}>{linkText}</Lenke>
             </TypografiBase>

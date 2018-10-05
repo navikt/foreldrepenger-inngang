@@ -27,7 +27,7 @@ class SvgBanner extends Component<Props> {
         }.svg`).default;
 
         return (
-            <div className="svgBanner">
+            <div role="banner" className="svgBanner">
                 {this.state && (
                     <CustomSVG
                         className="svgBanner__svg"

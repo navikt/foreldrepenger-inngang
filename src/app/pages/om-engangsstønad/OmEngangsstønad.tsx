@@ -1,11 +1,12 @@
 import * as React from 'react';
 import Breadcrumbs from '../../components/breadcrumbs/Breadcrumbs';
 import BEMHelper from '../../utils/bem';
-import translate from '../../utils/translate';
+import { getTranslation, withIntl, IntlProps } from '../../intl/intl';
 import PanelMedIllustrasjon from '../../components/panel-med-illustrasjon/PanelMedIllustrasjon';
 import Sidebanner from '../../components/sidebanner/Sidebanner';
 import StrukturertTekst from '../../components/strukturert-tekst/StrukturertTekst';
 import NårKanDuFåEngangsstønad from './når-kan-du-få-engangsstønad/NårKanDuFåEngangsstønad';
+import { getContent } from '../../utils/getContent';
 import '../infosider.less';
 import './omEngangsstønad.less';
 
@@ -18,16 +19,16 @@ interface Props {
 
 const pageSvg = require('../../assets/page.svg').default;
 
-const hvaErEngangsstønadContent = require('../../../content/om-engangsstønad/hva-er-engangsstønad/hva-er-engangsstønad');
-const utbetalingContent = require('../../../content/om-engangsstønad/utbetaling');
-const søknadsfristContent = require('../../../content/om-engangsstønad/søknadsfrist');
-const engangssumContent = require('../../../content/om-engangsstønad/hva-er-engangsstønad/engangssum');
-const utbetalingShortContent = require('../../../content/om-engangsstønad/hva-er-engangsstønad/utbetaling');
+const hvaErEngangsstønadContent = 'om-engangsstønad/hva-er-engangsstønad/hva-er-engangsstønad';
+const utbetalingContent = 'om-engangsstønad/utbetaling';
+const søknadsfristContent = 'om-engangsstønad/søknadsfrist';
+const engangssumContent = 'om-engangsstønad/hva-er-engangsstønad/engangssum';
+const utbetalingShortContent = 'om-engangsstønad/hva-er-engangsstønad/utbetaling';
 
-const OmEngangsstonad: React.StatelessComponent<Props> = ({ location }) => {
+const OmEngangsstonad: React.StatelessComponent<Props & IntlProps> = ({ location, lang }) => {
     return (
         <div className={infosiderCls.className}>
-            <Sidebanner text={translate('all_informasjon_engangsstønad')} />
+            <Sidebanner text={getTranslation('om_engangsstønad.tittel', lang)} />
             <div className={infosiderCls.element('body')}>
                 <div className={infosiderCls.element('content')}>
                     <Breadcrumbs path={location.pathname} />
@@ -41,32 +42,36 @@ const OmEngangsstonad: React.StatelessComponent<Props> = ({ location }) => {
     );
 };
 
-const HvaErEngangsstønad = () => (
+const HvaErEngangsstønadWithoutIntl: React.StatelessComponent<IntlProps> = ({ lang }) => (
     <PanelMedIllustrasjon
-        title={translate('hva_er_engangsstønad')}
+        title={getTranslation('om_engangsstønad.hva_er.tittel', lang)}
         svg={pageSvg}>
-        <StrukturertTekst tekst={hvaErEngangsstønadContent} />
+        <StrukturertTekst tekst={getContent(hvaErEngangsstønadContent, lang)} />
         <div className={cls.element('kravContainer')}>
             <div className={cls.element('krav')}>
-                <StrukturertTekst tekst={engangssumContent} />
+                <StrukturertTekst tekst={getContent(engangssumContent, lang)} />
             </div>
             <div className={cls.element('krav')}>
-                <StrukturertTekst tekst={utbetalingShortContent} />
+                <StrukturertTekst tekst={getContent(utbetalingShortContent, lang)} />
             </div>
         </div>
     </PanelMedIllustrasjon>
 );
 
-const Utbetaling = () => (
-    <PanelMedIllustrasjon title={translate('utbetaling')} svg={pageSvg}>
-        <StrukturertTekst tekst={utbetalingContent} />
+const UtbetalingWithoutIntl: React.StatelessComponent<IntlProps> = ({ lang }) => (
+    <PanelMedIllustrasjon title={getTranslation('utbetaling', lang)} svg={pageSvg}>
+        <StrukturertTekst tekst={getContent(utbetalingContent, lang)} />
     </PanelMedIllustrasjon>
 );
 
-const Søknadsfrist = () => (
-    <PanelMedIllustrasjon title={translate('søknadsfrist')} svg={pageSvg}>
-        <StrukturertTekst tekst={søknadsfristContent} />
+const SøknadsfristWithoutIntl: React.StatelessComponent<IntlProps> = ({ lang }) => (
+    <PanelMedIllustrasjon title={getTranslation('søknadsfrist', lang)} svg={pageSvg}>
+        <StrukturertTekst tekst={getContent(søknadsfristContent, lang)} />
     </PanelMedIllustrasjon>
 );
 
-export default OmEngangsstonad;
+const HvaErEngangsstønad = withIntl(HvaErEngangsstønadWithoutIntl);
+const Utbetaling = withIntl(UtbetalingWithoutIntl);
+const Søknadsfrist = withIntl(SøknadsfristWithoutIntl);
+
+export default withIntl(OmEngangsstonad);

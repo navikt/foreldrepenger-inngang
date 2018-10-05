@@ -6,7 +6,7 @@ import BEMHelper from '../../utils/bem';
 import Foreldrepenger from './Foreldrepenger';
 import Engangsstonad from './Engangsstonad';
 import Svangerskapspenger from './Svangerskapspenger';
-import translate from '../../utils/translate';
+import { getTranslation, withIntl, IntlProps } from '../../intl/intl';
 import SvgBanner from '../../components/svg-banner/SvgBanner';
 
 import './hvaSøkerDu.less';
@@ -17,25 +17,25 @@ interface Props {
     location: any;
 }
 
-const HvaSøkerDu: React.StatelessComponent<Props> = ({ location }) => {
+const HvaSøkerDu: React.StatelessComponent<Props & IntlProps> = ({ location, lang }) => {
     return (
         <div className={cls.className}>
-            <div className={cls.element('header')}>
+            <header className={cls.element('header')}>
                 <TypografiBase type="undertittel">
-                    {translate('hva_vil_du_søke_om')}
+                    {getTranslation('hva_søker_du.tittel', lang)}
                 </TypografiBase>
-            </div>
-            <div className={cls.element('body')}>
-                <div className={cls.element('content')}>
+            </header>
+            <main className={cls.element('body')}>
+                <article className={cls.element('content')}>
                     <Breadcrumbs path={location.pathname} />
                     <SvgBanner />
                     <Foreldrepenger parentCls={cls} />
                     <Engangsstonad parentCls={cls} />
                     <Svangerskapspenger parentCls={cls} />
-                </div>
-            </div>
+                </article>
+            </main>
         </div>
     );
 };
 
-export default HvaSøkerDu;
+export default withIntl(HvaSøkerDu);

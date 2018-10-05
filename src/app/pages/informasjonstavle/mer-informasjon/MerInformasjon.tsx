@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { StatelessComponent } from 'react';
 import Tekstomrade from 'nav-frontend-tekstomrade';
 import TypografiBase from 'nav-frontend-typografi';
 import { HoyreChevron } from 'nav-frontend-chevron';
 
-import translate from '../../../utils/translate';
+import { getTranslation, IntlProps, withIntl } from '../../../intl/intl';
 import BEMHelper from '../../../utils/bem';
 import externalUrls from '../../../utils/externalUrls';
 import { WithLink } from '../../../utils/withLink';
@@ -12,34 +12,37 @@ import './merInformasjon.less';
 
 const cls = BEMHelper('merInformasjon');
 
-const MerInformasjon = () => {
+const MerInformasjon: StatelessComponent<IntlProps> = ({ lang }) => {
     return (
         <div className={cls.className}>
             <div className={cls.element('title')}>
                 <TypografiBase type="undertittel">
-                    {translate('mer_informasjon_tittel')}
+                    {getTranslation('informasjonstavle.mer_informasjon.tittel', lang)}
                 </TypografiBase>
             </div>
-            <div className={cls.element('links')}>
+            <nav className={cls.element('links')}>
                 <MerInformasjonLink
-                    title={translate('foreldrepenger')}
-                    body={translate('mer_informasjon_foreldrepenger')}
+                    title={getTranslation('foreldrepenger', lang)}
+                    body={getTranslation('informasjonstavle.mer_informasjon.foreldrepenger', lang)}
                     url="/om-foreldrepenger"
                     urlIsExternal={false}
                 />
                 <MerInformasjonLink
-                    title={translate('engangsstønad')}
-                    body={translate('mer_informasjon_engangsstønad')}
+                    title={getTranslation('engangsstønad', lang)}
+                    body={getTranslation('informasjonstavle.mer_informasjon.engangsstønad', lang)}
                     url="/om-engangsstonad"
                     urlIsExternal={false}
                 />
                 <MerInformasjonLink
-                    title={translate('svangerskapspenger')}
-                    body={translate('mer_informasjon_svangerskapspenger')}
+                    title={getTranslation('svangerskapspenger', lang)}
+                    body={getTranslation(
+                        'informasjonstavle.mer_informasjon.svangerskapspenger',
+                        lang
+                    )}
                     url={externalUrls.les_mer_svangerskapspenger}
                     urlIsExternal={true}
                 />
-            </div>
+            </nav>
         </div>
     );
 };
@@ -62,7 +65,7 @@ const MerInformasjonLink = ({
             noStyling={true}
             className={cls.element('link')}>
             <div>
-                <TypografiBase type="element">{title}</TypografiBase>
+                <TypografiBase type="undertittel">{title}</TypografiBase>
                 <Tekstomrade>{body}</Tekstomrade>
             </div>
             <div className={cls.element('chevron')}>
@@ -72,4 +75,4 @@ const MerInformasjonLink = ({
     );
 };
 
-export default MerInformasjon;
+export default withIntl(MerInformasjon);

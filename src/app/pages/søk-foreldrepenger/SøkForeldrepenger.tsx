@@ -7,7 +7,7 @@ import KnappBase from 'nav-frontend-knapper';
 
 import Breadcrumbs from '../../components/breadcrumbs/Breadcrumbs';
 import BEMHelper from '../../utils/bem';
-import translate from '../../utils/translate';
+import { getTranslation, IntlProps, withIntl } from '../../intl/intl';
 import SvgBanner from '../../components/svg-banner/SvgBanner';
 import PanelMedTittel from '../../components/panel-med-tittel/PanelMedTittel';
 import { datoErOmMindreEnnSeksUker } from '../../utils/datoUtils';
@@ -24,7 +24,7 @@ interface Props {
     route: any;
 }
 
-class SøkForeldrepenger extends Component<Props> {
+class SøkForeldrepenger extends Component<Props & IntlProps> {
     state: {
         selectedDate?: Date;
         dateIsValid: boolean;
@@ -44,23 +44,19 @@ class SøkForeldrepenger extends Component<Props> {
 
     render = () => {
         return (
-            <div
-                className={classnames(
-                    hvaSøkerDuCls.className,
-                    foreldrepengerCls.className
-                )}>
-                <div className={hvaSøkerDuCls.element('header')}>
+            <div className={classnames(hvaSøkerDuCls.className, foreldrepengerCls.className)}>
+                <header className={hvaSøkerDuCls.element('header')}>
                     <TypografiBase type="undertittel">
-                        {translate('hva_vil_du_søke_om')}
+                        {getTranslation('søk_foreldrepenger.tittel', this.props.lang)}
                     </TypografiBase>
-                </div>
-                <div className={hvaSøkerDuCls.element('body')}>
+                </header>
+                <main className={hvaSøkerDuCls.element('body')}>
                     <div className={hvaSøkerDuCls.element('content')}>
                         <Breadcrumbs path={location.pathname} />
                         <SvgBanner />
-                        <PanelMedTittel title={translate('foreldrepenger')}>
+                        <PanelMedTittel title={getTranslation('foreldrepenger', this.props.lang)}>
                             <Tekstomrade>
-                                {translate('foreldrepenger_inngang')}
+                                {getTranslation('søk_foreldrepenger.informasjon', this.props.lang)}
                             </Tekstomrade>
                             <Datovelger
                                 date={this.state.selectedDate}
@@ -77,22 +73,21 @@ class SøkForeldrepenger extends Component<Props> {
                             {this.state.selectedDate && (
                                 <a
                                     tabIndex={-1}
-                                    href={
-                                        externalUrls.søk_foreldrepenger_eller_engangsstønad
-                                    }>
-                                    <KnappBase type="hoved">
-                                        {translate(
-                                            'begynn_søknad_om_foreldrepenger'
+                                    href={externalUrls.søk_foreldrepenger_eller_engangsstønad}>
+                                    <KnappBase type="hoved" role="link">
+                                        {getTranslation(
+                                            'søk_foreldrepenger.knapp',
+                                            this.props.lang
                                         )}
                                     </KnappBase>
                                 </a>
                             )}
                         </PanelMedTittel>
                     </div>
-                </div>
+                </main>
             </div>
         );
     };
 }
 
-export default SøkForeldrepenger;
+export default withIntl(SøkForeldrepenger);

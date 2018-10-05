@@ -3,14 +3,16 @@ import './innholdsfaner.less';
 import BEMHelper from '../../utils/bem';
 import Fane, { Innholdsfane } from './fane/Fane';
 import MediaQuery from 'react-responsive';
-import translate from '../../utils/translate';
+import { getTranslation, IntlProps, withIntl } from '../../intl/intl';
 import Select from './select/Select';
 
 const cls = BEMHelper('innholdsfaner');
 
-interface Props {
+interface TabProps {
     tabs: Innholdsfane[];
 }
+
+type Props = TabProps & IntlProps;
 
 class Innholdsfaner extends React.Component<Props> {
     state: {
@@ -42,7 +44,7 @@ class Innholdsfaner extends React.Component<Props> {
                 <div className={cls.element('faner')}>
                     <Select
                         selected={this.props.tabs[this.state.currentTab].label}
-                        label={translate('din_situasjon')}
+                        label={getTranslation('om_foreldrepenger.faner.label', this.props.lang)}
                         choices={this.props.tabs}
                         onChoiceSelect={(index: number) => {
                             this.onTabSelect(index);
@@ -51,7 +53,7 @@ class Innholdsfaner extends React.Component<Props> {
                 </div>
             </MediaQuery>
             <MediaQuery query="(min-width: 800px)">
-                <div className={cls.element('faner')}>
+                <div role="tablist" className={cls.element('faner')}>
                     {this.props.tabs.map((tab, index) => (
                         <Fane
                             tab={tab}
@@ -65,9 +67,9 @@ class Innholdsfaner extends React.Component<Props> {
                     ))}
                 </div>
             </MediaQuery>
-            <div>{this.state.componentToRender}</div>
+            <div role="tabpanel">{this.state.componentToRender}</div>
         </div>
     );
 }
 
-export default Innholdsfaner;
+export default withIntl(Innholdsfaner);

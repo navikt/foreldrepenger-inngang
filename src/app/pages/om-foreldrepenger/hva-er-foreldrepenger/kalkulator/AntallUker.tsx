@@ -1,30 +1,33 @@
 import * as React from 'react';
 import classnames from 'classnames';
 import TypografiBase from 'nav-frontend-typografi';
-import translate from '../../../../utils/translate';
+import { getTranslation, IntlProps, withIntl } from '../../../../intl/intl';
 import { BEMWrapper } from '../../../../utils/bem';
 
-const AntallUker = ({
-    parentCls,
-    numberOfWeeks,
-    numberOfChildren,
-    percentage,
-    isSelected,
-    onSelect
-}: {
+interface Props {
     parentCls: BEMWrapper;
     numberOfWeeks: number;
     numberOfChildren: number;
     percentage: number;
     isSelected: boolean;
     onSelect: () => void;
+}
+
+const AntallUker: React.StatelessComponent<Props & IntlProps> = ({
+    parentCls,
+    numberOfWeeks,
+    numberOfChildren,
+    percentage,
+    isSelected,
+    onSelect,
+    lang
 }) => {
     const numberOfChildrenSpelled =
         numberOfChildren === 1
-            ? translate('ett_barn')
+            ? getTranslation('ett_barn', lang)
             : numberOfChildren === 2
-                ? translate('tvillinger')
-                : translate('flere_barn');
+                ? getTranslation('tvillinger', lang)
+                : getTranslation('flere_barn', lang);
 
     const combinedClassnames = classnames(
         parentCls.element('flexDownwards'),
@@ -48,13 +51,11 @@ const AntallUker = ({
                 className={combinedClassnames}>
                 <TypografiBase type="element">{numberOfWeeks}</TypografiBase>
                 {isSelected && (
-                    <TypografiBase type="undertekst">
-                        {translate('uker')}
-                    </TypografiBase>
+                    <TypografiBase type="undertekst">{getTranslation('uker', lang)}</TypografiBase>
                 )}
             </div>
         </div>
     );
 };
 
-export default AntallUker;
+export default withIntl(AntallUker);

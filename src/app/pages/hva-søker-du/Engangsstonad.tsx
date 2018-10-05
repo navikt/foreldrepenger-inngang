@@ -3,28 +3,25 @@ import StrukturertTekst from '../../components/strukturert-tekst/StrukturertTeks
 
 import ButtonPanel from './button-panel/ButtonPanel';
 import PanelMedTittel from '../../components/panel-med-tittel/PanelMedTittel';
-import translate from '../../utils/translate';
+import { getTranslation, Language, withIntl } from '../../intl/intl';
 import externalUrls from '../../utils/externalUrls';
+import { getContent } from '../../utils/getContent';
 
-const content = require('../../../content/hva-vil-du-søke-om/engangsstønad.json');
-
-const Engangsstonad = ({ parentCls }: { parentCls: any }) => {
+const Engangsstonad = ({ parentCls, lang }: { parentCls: any; lang: Language }) => {
     return (
-        <PanelMedTittel title={translate('engangsstønad')}>
-            <StrukturertTekst tekst={content} />
+        <PanelMedTittel title={getTranslation('engangsstønad', lang)}>
+            <StrukturertTekst tekst={getContent('hva-vil-du-søke-om/engangsstønad', lang)} />
             <div className={parentCls.element('filler')} />
             <ButtonPanel
                 parentCls={parentCls}
-                buttonText={translate('søk_engangsstønad')}
+                buttonText={getTranslation('hva_søker_du.søk_engangsstønad', lang)}
                 buttonUrl={externalUrls.søk_foreldrepenger_eller_engangsstønad}
-                linkText={translate('ingen_elektronisk_id')}
-                linkUrl={
-                    externalUrls.søk_foreldrepenger_eller_engangsstønad_papir
-                }
+                linkText={getTranslation('hva_søker_du.ingen_elektronisk_id', lang)}
+                linkUrl={externalUrls.søk_foreldrepenger_eller_engangsstønad_papir}
                 helpText="Skaff deg elektronisk ID nå!"
             />
         </PanelMedTittel>
     );
 };
 
-export default Engangsstonad;
+export default withIntl(Engangsstonad);

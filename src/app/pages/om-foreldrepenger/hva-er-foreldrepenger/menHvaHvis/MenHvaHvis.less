@@ -1,3 +1,5 @@
+@import '../../../../styles/index.less';
+
 .menHvaHvis {
     &__header {
         margin-top: 32px;
@@ -5,12 +7,12 @@
         text-align: center;
     }
 
-    &__noenVilPaFerie,
-    &__jegVilJobbe,
-    &__enAvOssBlirSyk,
-    &__hjemmeSamtidig {
-        width: 10px;
-        height: 10px;
+    a {
+        border-radius: 50%;
+        
+        &:focus {
+            .buttonFocus()
+        }
     }
 
     &__body {

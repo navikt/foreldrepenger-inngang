@@ -2,12 +2,14 @@ import * as React from 'react';
 import Kalkulator from './kalkulator/Kalkulator';
 import Informasjonsfaner from './informasjons-faner/Informasjonsfaner';
 import StrukturertTekst from '../../../components/strukturert-tekst/StrukturertTekst';
+import { Language, withIntl } from '../../../intl/intl';
+import { getContent } from '../../../utils/getContent';
 
-const content = require('../../../../content/all-informasjon/hva-er-foreldrepenger/aleneomsorg/aleneomsorg.json');
-const farsDel = require('../../../../content/all-informasjon/hva-er-foreldrepenger/aleneomsorg/fars-del.json');
-const morsDel = require('../../../../content/all-informasjon/hva-er-foreldrepenger/aleneomsorg/mors-del.json');
+const content = 'all-informasjon/hva-er-foreldrepenger/aleneomsorg/aleneomsorg.json';
+const farsDel = 'all-informasjon/hva-er-foreldrepenger/aleneomsorg/fars-del.json';
+const morsDel = 'all-informasjon/hva-er-foreldrepenger/aleneomsorg/mors-del.json';
 
-const informasjonsfaner = [
+const getInformasjonsfaner = (lang: Language) => [
     {
         faneLabel: 'Som mor',
         faneIcon: true,
@@ -16,7 +18,7 @@ const informasjonsfaner = [
             icon: 'mor1',
             antallUker: '49/59',
             punktliste: [],
-            component: <StrukturertTekst tekst={morsDel} />
+            component: <StrukturertTekst tekst={getContent(morsDel, lang)} />
         }
     },
     {
@@ -27,19 +29,19 @@ const informasjonsfaner = [
             icon: 'far1',
             antallUker: '49/59',
             punktliste: [],
-            component: <StrukturertTekst tekst={farsDel} />
+            component: <StrukturertTekst tekst={getContent(farsDel, lang)} />
         }
     }
 ];
 
-const Aleneomsorg = () => {
+const Aleneomsorg = ({ lang }: { lang: Language }) => {
     return (
         <div>
-            <StrukturertTekst tekst={content} />
+            <StrukturertTekst tekst={getContent(content, lang)} />
             <Kalkulator />
-            <Informasjonsfaner tabs={informasjonsfaner} />
+            <Informasjonsfaner tabs={getInformasjonsfaner(lang)} />
         </div>
     );
 };
 
-export default Aleneomsorg;
+export default withIntl(Aleneomsorg);

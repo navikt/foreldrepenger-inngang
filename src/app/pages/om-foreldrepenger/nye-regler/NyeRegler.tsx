@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { RadioPanel } from 'nav-frontend-skjema';
 
-import translate from '../../../utils/translate';
+import { getTranslation, IntlProps, withIntl } from '../../../intl/intl';
 import BEMHelper from '../../../utils/bem';
 
 import './nyeRegler.less';
@@ -11,21 +11,25 @@ import TypografiBase from 'nav-frontend-typografi';
 const infoIcon = require('./check_circle_filled.svg').default;
 const cls = BEMHelper('nyeRegler');
 
-interface Props {}
-
 type ValgtRegel = 'FØR' | 'ETTER';
 
-class NyeRegler extends React.Component<Props> {
-    static radios = [
-        { label: 'før_1_juli_2018', value: 'FØR' },
-        { label: 'etter_1_juli_2018', value: 'ETTER' }
+class NyeRegler extends React.Component<IntlProps> {
+    radios = [
+        {
+            label: getTranslation('om_foreldrepenger.nye_regler.før', this.props.lang),
+            value: 'FØR'
+        },
+        {
+            label: getTranslation('om_foreldrepenger.nye_regler.etter', this.props.lang),
+            value: 'ETTER'
+        }
     ];
 
     state: {
         selectedRule: ValgtRegel;
     };
 
-    constructor(props: Props) {
+    constructor(props: IntlProps) {
         super(props);
 
         this.state = {
@@ -40,38 +44,47 @@ class NyeRegler extends React.Component<Props> {
     };
 
     render = () => (
-        <div className={cls.className}>
+        <div role="note" aria-label="Nye regler" className={cls.className}>
             <div className={cls.element('header')}>
                 <CustomSVGFromSprite iconRef={infoIcon} size={32} />
                 <TypografiBase type="systemtittel">
-                    {translate('nye_regler_fra_1_juli_2018')}
+                    {getTranslation('om_foreldrepenger.nye_regler.tittel', this.props.lang)}
                 </TypografiBase>
             </div>
             <div className={cls.element('divider')} />
             <div className={cls.element('content')}>
-                <TypografiBase type="element">{`${translate(
-                    'barnet_er_født_eller_adoptert'
+                <TypografiBase type="element">{`${getTranslation(
+                    'om_foreldrepenger.nye_regler_label',
+                    this.props.lang
                 )}:`}</TypografiBase>
-                <div className={cls.element('radiopanelgruppe')}>
-                    {NyeRegler.radios.map((radio) => (
+                <div role="radiogroup" className={cls.element('radiopanelgruppe')}>
+                    {this.radios.map((radio) => (
                         <RadioPanel
                             key={radio.value}
                             checked={this.state.selectedRule === radio.value}
-                            label={translate(radio.label)}
+                            label={radio.label}
                             name={radio.label}
                             onChange={this.onRuleSelected}
                             value={radio.value}
                         />
                     ))}
                 </div>
-                <TypografiBase type="normaltekst">
-                    {this.state.selectedRule === 'FØR'
-                        ? translate('nye_regler_før')
-                        : translate('nye_regler_etter')}
-                </TypografiBase>
+                <output>
+                    <TypografiBase type="normaltekst">
+                        {this.state.selectedRule === 'FØR'
+                            ? getTranslation(
+                                  'om_foreldrepenger.nye_regler.før_beskrivelse',
+                                  this.props.lang
+                              )
+                            : getTranslation(
+                                  'om_foreldrepenger.nye_regler.etter_beskrivelse',
+                                  this.props.lang
+                              )}
+                    </TypografiBase>
+                </output>
             </div>
         </div>
     );
 }
 
-export default NyeRegler;
+export default withIntl(NyeRegler);

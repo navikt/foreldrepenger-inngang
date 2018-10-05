@@ -1,0 +1,56 @@
+[
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "level": 1,
+        "listItem": "bullet",
+        "children": [
+            {
+                "type": "span",
+                "text": "Avtal med "
+            },
+            {
+                "type": "span",
+                "text": "arbeidsgiveren din",
+                "marks": ["bold"]
+            },
+            {
+                "type": "span",
+                "text": "  når du skal jobbe heltid"
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "level": 1,
+        "listItem": "bullet",
+        "children": [
+            {
+                "type": "span",
+                "text": "Send inn "
+            },
+            {
+                "type": "span",
+                "text": "søknad om å utsette foreldrepengene",
+                "marks": ["bold"]
+            },
+            {
+                "type": "span",
+                "text": " før du starter å jobbe"
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "level": 1,
+        "listItem": "bullet",
+        "children": [
+            {
+                "type": "span",
+                "text": "Send inn søknaden før du starter å jobbe"
+            }
+        ]
+    }
+]

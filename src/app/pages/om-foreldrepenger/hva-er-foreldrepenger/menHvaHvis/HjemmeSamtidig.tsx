@@ -12,11 +12,9 @@ const HjemmeSamtidig: React.StatelessComponent<Props> = ({ size }) => {
             viewBox="0 0 109 109"
             version="1.1"
             xmlns="http://www.w3.org/2000/svg"
-            xmlnsXlink="http://www.w3.org/1999/xlink"
-        >
-            <title>Toggle Copy 3</title>
-            <desc>Created with Sketch.</desc>
-            <defs/>
+            xmlnsXlink="http://www.w3.org/1999/xlink">
+            <title>Vi er hjemme samtidig</title>
+            <defs />
             <g
                 id="Symbols"
                 stroke="none"
@@ -103,5 +101,5 @@ const HjemmeSamtidig: React.StatelessComponent<Props> = ({ size }) => {
             </g>
         </svg>
     );
-}
+};
 export default HjemmeSamtidig;

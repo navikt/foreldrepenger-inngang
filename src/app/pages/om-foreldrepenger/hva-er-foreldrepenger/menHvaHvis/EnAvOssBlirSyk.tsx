@@ -12,11 +12,9 @@ const EnAvOssBlirSyk: React.StatelessComponent<Props> = ({ size }) => {
             viewBox="0 0 109 109"
             version="1.1"
             xmlns="http://www.w3.org/2000/svg"
-            xmlnsXlink="http://www.w3.org/1999/xlink"
-        >
-            <title>Toggle Copy</title>
-            <desc>Created with Sketch.</desc>
-            <defs/>
+            xmlnsXlink="http://www.w3.org/1999/xlink">
+            <title>En av oss blir syke</title>
+            <defs />
             <g
                 id="Symbols"
                 stroke="none"
@@ -170,5 +168,5 @@ const EnAvOssBlirSyk: React.StatelessComponent<Props> = ({ size }) => {
             </g>
         </svg>
     );
-}
+};
 export default EnAvOssBlirSyk;

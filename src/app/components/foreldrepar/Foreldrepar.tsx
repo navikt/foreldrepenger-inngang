@@ -37,7 +37,7 @@ const Foreldrepar: React.StatelessComponent<Props> = ({
         .default;
 
     return (
-        <div className={cls.className}>
+        <div role="presentation" className={cls.className}>
             <Forelder svg={firstSvg} lessOpacity={variant === 2} />
             {variant &&
                 variant === 3 && (

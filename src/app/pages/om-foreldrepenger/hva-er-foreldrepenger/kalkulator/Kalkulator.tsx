@@ -1,7 +1,7 @@
 import * as React from 'react';
 import TypografiBase from 'nav-frontend-typografi';
 import BEMHelper from '../../../../utils/bem';
-import translate from '../../../../utils/translate';
+import { getTranslation, IntlProps, withIntl } from '../../../../intl/intl';
 import AntallBarn from './AntallBarn';
 import AntallUker from './AntallUker';
 import DinLønn from './din-lønn/DinLønn';
@@ -10,14 +10,14 @@ import './kalkulator.less';
 
 const cls = BEMHelper('kalkulator');
 
-class Kalkulator extends React.Component {
+class Kalkulator extends React.Component<IntlProps> {
     state: {
         selectedNumberOfWeeks: number;
         selectedNumberOfChildren: 1 | 2 | 3;
         selectedPercentage: number;
     };
 
-    constructor(props: {}) {
+    constructor(props: IntlProps) {
         super(props);
 
         this.state = {
@@ -41,9 +41,7 @@ class Kalkulator extends React.Component {
 
     onPercentageSelect = (selectedPercentage: number) => {
         const selectedNumberOfWeeks =
-            antallUtbetalingsuker[this.state.selectedNumberOfChildren][
-                selectedPercentage
-            ];
+            antallUtbetalingsuker[this.state.selectedNumberOfChildren][selectedPercentage];
 
         this.setState({
             selectedPercentage,
@@ -58,15 +56,18 @@ class Kalkulator extends React.Component {
         );
 
         return (
-            <div className={cls.className}>
+            <div
+                role="section"
+                aria-label="Kalkulator for foreldrepengeperiode"
+                className={cls.className}>
                 <div className={cls.element('antallUkerOgBarn')}>
                     <div />
-                    <TypografiBase type="normaltekst">100%</TypografiBase>
-                    <TypografiBase type="normaltekst">80%</TypografiBase>
+                    <TypografiBase type="normaltekst">100 %</TypografiBase>
+                    <TypografiBase type="normaltekst">80 %</TypografiBase>
                     <AntallBarn
                         parentCls={cls}
                         childCount={1}
-                        label={translate('ett_barn')}
+                        label={getTranslation('ett_barn', this.props.lang)}
                     />
                     <AntallUkerWrapper
                         numberOfWeeks={antallUtbetalingsuker[1][100]}
@@ -81,7 +82,7 @@ class Kalkulator extends React.Component {
                     <AntallBarn
                         parentCls={cls}
                         childCount={2}
-                        label={translate('tvillinger')}
+                        label={getTranslation('tvillinger', this.props.lang)}
                     />
                     <AntallUkerWrapper
                         numberOfWeeks={antallUtbetalingsuker[2][100]}
@@ -96,7 +97,7 @@ class Kalkulator extends React.Component {
                     <AntallBarn
                         parentCls={cls}
                         childCount={3}
-                        label={translate('flere_barn')}
+                        label={getTranslation('flere_barn', this.props.lang)}
                     />
                     <AntallUkerWrapper
                         numberOfWeeks={antallUtbetalingsuker[3][100]}
@@ -121,11 +122,7 @@ class Kalkulator extends React.Component {
 
 const addAntallUkerAttributes = (
     selectedNumberOfWeeks: number,
-    onSelect: (
-        numberOfWeeks: number,
-        numberOfChildren: number,
-        percentage: number
-    ) => void
+    onSelect: (numberOfWeeks: number, numberOfChildren: number, percentage: number) => void
 ) => ({
     numberOfWeeks,
     numberOfChildren,
@@ -149,4 +146,4 @@ const addAntallUkerAttributes = (
     );
 };
 
-export default Kalkulator;
+export default withIntl(Kalkulator);

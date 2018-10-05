@@ -4,7 +4,7 @@ import NavFrontendChevron from 'nav-frontend-chevron';
 import BEMHelper from '../../utils/bem';
 import { Link } from 'react-router-dom';
 import './breadcrumbs.less';
-import translate from '../../utils/translate';
+import { getTranslation, Language, IntlProps, withIntl } from '../../intl/intl';
 
 const cls = BEMHelper('breadcrumbs');
 
@@ -12,7 +12,7 @@ interface BreadcrumbsProps {
     path: string;
 }
 
-const parsePath = (path: string) => {
+const parsePath = (path: string, lang: Language) => {
     const parts = path.split('/');
 
     // Remove any trailing slash ("/")
@@ -22,17 +22,16 @@ const parsePath = (path: string) => {
 
     return parts.map((part, index) => {
         const recombinedParts = parts.slice(0, index + 1);
-        const url =
-            recombinedParts.length === 1 ? '/' : recombinedParts.join('/');
+        const url = recombinedParts.length === 1 ? '/' : recombinedParts.join('/');
 
         return {
             url,
-            label: translate(`route_${part}`)
+            label: getTranslation(`route.${part}`, lang)
         };
     });
 };
 
-class Breadcrumbs extends Component<BreadcrumbsProps> {
+class Breadcrumbs extends Component<BreadcrumbsProps & IntlProps> {
     state: {
         windowWidth?: number;
     } = {
@@ -57,51 +56,58 @@ class Breadcrumbs extends Component<BreadcrumbsProps> {
 
     render() {
         const breadcrumbChain: ReactNodeArray = [];
-        const parsedPath = parsePath(this.props.path);
+        const parsedPath = parsePath(this.props.path, this.props.lang);
 
         if (this.state.windowWidth && this.state.windowWidth < 576) {
             const routeLength = parsedPath.length;
             const lastUrl = parsedPath[routeLength - 2].url;
 
+            breadcrumbChain.push(<NavFrontendChevron key="chevron" type="venstre" />);
             breadcrumbChain.push(
-                <NavFrontendChevron key="chevron" type="venstre" />
+                <div aria-hidden={true}>
+                    <NavFrontendChevron key="chevron" type="venstre" />
+                </div>
             );
+
             breadcrumbChain.push(
                 <TypografiBase
+                    aria-label="Gå til forrige side"
                     key="tilbake"
                     type="normaltekst"
                     className={cls.element('item')}>
-                    <Link to={lastUrl}>{translate('tilbake')}</Link>
+                    <Link to={lastUrl}>{getTranslation('tilbake', this.props.lang)}</Link>
                 </TypografiBase>
             );
         } else {
             parsedPath.forEach((path, index) => {
                 if (index !== 0) {
                     breadcrumbChain.push(
-                        <NavFrontendChevron
-                            key={`chevron${index}`}
-                            type="høyre"
-                        />
+                        <div aria-hidden={true}>
+                            <NavFrontendChevron key={`chevron${index}`} type="høyre" />
+                        </div>
                     );
                 }
 
+                const current = index === parsedPath.length - 1;
                 breadcrumbChain.push(
                     <TypografiBase
+                        aria-label={current ? 'Denne siden' : 'Tidligere side'}
+                        aria-current={current ? 'page' : ''}
                         key={`crumb${index}`}
                         type="normaltekst"
                         className={cls.element('item')}>
-                        {index === parsedPath.length - 1 ? (
-                            path.label
-                        ) : (
-                            <Link to={path.url}>{path.label}</Link>
-                        )}
+                        {current ? path.label : <Link to={path.url}>{path.label}</Link>}
                     </TypografiBase>
                 );
             });
         }
 
-        return <div className={cls.className}>{breadcrumbChain}</div>;
+        return (
+            <nav aria-label="Du er her" className={cls.className}>
+                {breadcrumbChain}
+            </nav>
+        );
     }
 }
 
-export default Breadcrumbs;
+export default withIntl(Breadcrumbs);

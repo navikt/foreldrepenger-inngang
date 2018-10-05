@@ -1,15 +1,13 @@
 import * as React from 'react';
 import PanelMedIllustrasjon from '../../../components/panel-med-illustrasjon/PanelMedIllustrasjon';
-import translate from '../../../utils/translate';
+import { getTranslation, withIntl, IntlProps } from '../../../intl/intl';
 import StrukturertTekst from '../../../components/strukturert-tekst/StrukturertTekst';
 import BEMHelper from '../../../utils/bem';
-
-const pageSvg = require('../../../assets/page.svg').default;
-const content = require('../../../../content/all-informasjon/arbeidsgiver/arbeidsgiver.json');
-
+import Lenke from './Lenke';
+import { getContent } from '../../../utils/getContent';
 import './arbeidsgiver.less';
 
-import Lenke from './Lenke';
+const pageSvg = require('../../../assets/page.svg').default;
 
 const skjemaUrl =
     'https://www.nav.no/no/Bedrift/Skjemaer-for-arbeidsgivere/Skjemaer/Lonns-+og+personalskjemaer+for+din+bedrift/Inntekt+og+trekk';
@@ -18,26 +16,26 @@ const kontonummerUrl =
 
 const cls = BEMHelper('arbeidsgiver');
 
-const Arbeidsgiver = ({ id }: { id: string }) => {
+interface Props {
+    id: string;
+}
+
+const Arbeidsgiver: React.StatelessComponent<Props & IntlProps> = ({ id, lang }) => {
     return (
         <PanelMedIllustrasjon
             className={cls.className}
             id={id}
-            title={translate('arbeidsgiver_tittel')}
+            title={getTranslation('om_foreldrepenger.arbeidsgiver.tittel', lang)}
             svg={pageSvg}>
-            <StrukturertTekst tekst={content} />
+            <StrukturertTekst
+                tekst={getContent('all-informasjon/arbeidsgiver/arbeidsgiver', lang)}
+            />
             <div className={cls.element('links')}>
-                <Lenke
-                    href={skjemaUrl}
-                    txt={'arbeid_skjema_for_inntektsopplysninger_link'}
-                />
-                <Lenke
-                    href={kontonummerUrl}
-                    txt={'arbeid_for_refusjoner_fra_nav_link'}
-                />
+                <Lenke href={skjemaUrl} txt={'om_foreldrepenger.arbeidsgiver.link_skjema'} />
+                <Lenke href={kontonummerUrl} txt={'om_foreldrepenger.arbeidsgiver.kontonummer'} />
             </div>
         </PanelMedIllustrasjon>
     );
 };
 
-export default Arbeidsgiver;
+export default withIntl(Arbeidsgiver);

@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './select.less';
 import BEMHelper from '../../../utils/bem';
 import { Innholdsfane } from '../fane/Fane';
-import translate from '../../../utils/translate';
+import { getTranslation } from '../../../intl/intl';
 import { Panel } from 'nav-frontend-paneler';
 import TypografiBase from 'nav-frontend-typografi';
 import Chevron from 'nav-frontend-chevron';
@@ -45,11 +45,7 @@ class Select extends React.Component<SelectProps, SelectState> {
     componentWillUnmount = () => {
         this.mounted = false;
 
-        document.removeEventListener(
-            'keydown',
-            this.handleKeyPressEvent,
-            false
-        );
+        document.removeEventListener('keydown', this.handleKeyPressEvent, false);
         document.removeEventListener('click', this.handleDocumentClick, false);
     };
 
@@ -105,16 +101,11 @@ class Select extends React.Component<SelectProps, SelectState> {
                     [cls.modifier('open')]: this.state.open
                 })}>
                 <TypografiBase type="normaltekst">
-                    {translate(this.props.selected)}
+                    {getTranslation(this.props.selected)}
                 </TypografiBase>
                 <Chevron type={this.state.open ? 'opp' : 'ned'} />
             </div>
-            <div
-                className={
-                    this.state.open
-                        ? cls.element('popUp', 'open')
-                        : cls.element('popUp')
-                }>
+            <div className={this.state.open ? cls.element('popUp', 'open') : cls.element('popUp')}>
                 {this.state.open && (
                     <div className={cls.element('shadow')}>
                         {this.props.choices.map((choice, index) => (
@@ -134,7 +125,7 @@ class Select extends React.Component<SelectProps, SelectState> {
                                 })}
                                 tabIndex={0}>
                                 <TypografiBase type="normaltekst">
-                                    {translate(choice.label)}
+                                    {getTranslation(choice.label)}
                                 </TypografiBase>
                             </Panel>
                         ))}

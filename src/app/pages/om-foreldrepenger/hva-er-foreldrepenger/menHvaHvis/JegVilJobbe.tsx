@@ -2,7 +2,6 @@ import React from 'react';
 
 interface Props {
     size: string;
-
 }
 
 const JegVilJobbe: React.StatelessComponent<Props> = ({ size }) => {
@@ -13,10 +12,8 @@ const JegVilJobbe: React.StatelessComponent<Props> = ({ size }) => {
             viewBox="0 0 109 109"
             version="1.1"
             xmlns="http://www.w3.org/2000/svg"
-            xmlnsXlink="http://www.w3.org/1999/xlink"
-            >
-            <title>Toggle</title>
-            <desc>Created with Sketch.</desc>
+            xmlnsXlink="http://www.w3.org/1999/xlink">
+            <title>Jeg vil jobbe</title>
             <defs />
             <g
                 id="Symbols"

@@ -1,0 +1,35 @@
+[
+    {
+        "type": "avsnitt",
+        "style": "undertittel",
+        "children": [
+            {
+                "type": "span",
+                "text": "Jeg har tjent minst 48 441,– kr i året"
+            }
+        ]
+    },
+    {
+        "type": "inline",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Omregnet til årsinntekt må inntekten din tilsvare et halvt ",
+                "marks": []
+            },
+            {
+                "type": "span",
+                "text": "grunnbeløp (G)",
+                "marks": ["external_link", "url_grunnbeløp"]
+            }
+        ],
+        "markDefs": [
+            {
+                "key": "url_grunnbeløp",
+                "type": "link",
+                "href": "https://www.nav.no/no/NAV+og+samfunn/Kontakt+NAV/Utbetalinger/Grunnbelopet+i+folketrygden"
+            }
+        ]
+    }
+]

@@ -26,19 +26,21 @@ const PanelMedIllustrasjon = ({
     let illustration = <CustomSVG size={100} iconRef={svg} />;
     if (maskSvg) {
         illustration = (
-            <div className={cls.element('roundSvgMask')}>{illustration}</div>
+            <div role="presentation" className={cls.element('roundSvgMask')}>
+                {illustration}
+            </div>
         );
     }
 
     return (
-        <div id={id} className={className}>
+        <section aria-label={title} id={id} className={className}>
             <PanelBase className={cls.className}>
                 {illustration}
                 <TypografiBase type="systemtittel">{title}</TypografiBase>
                 <div className={cls.element('divider')} />
                 {children}
             </PanelBase>
-        </div>
+        </section>
     );
 };
 

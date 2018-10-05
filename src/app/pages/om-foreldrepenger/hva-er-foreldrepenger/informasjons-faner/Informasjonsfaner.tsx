@@ -7,7 +7,7 @@ import CakeSvg from './CakeSvg';
 import CakeFellesSvg from './CakeFellesSvg';
 
 import './informasjonsfaner.less';
-import translate from '../../../../utils/translate';
+import { getTranslation, IntlProps, withIntl } from '../../../../intl/intl';
 
 const cls = BEMHelper('informasjonsfaner');
 
@@ -25,9 +25,11 @@ interface Fane {
     };
 }
 
-interface Props {
+interface TabProps {
     tabs: Fane[];
 }
+
+type Props = TabProps & IntlProps;
 
 class Informasjonsfaner extends React.Component<Props> {
     state: {
@@ -55,17 +57,20 @@ class Informasjonsfaner extends React.Component<Props> {
         <div className={cls.className}>
             <div className={cls.element('header')}>
                 {this.props.tabs.length > 1
-                    ? translate('slik_blir_permisjonen_delt_mellom_dere')
-                    : translate('slik_blir_din_permisjon')}
+                    ? getTranslation(
+                          'om_foreldrepenger.hvor_lenge.fordeling.tittel',
+                          this.props.lang
+                      )
+                    : getTranslation(
+                          'om_foreldrepenger.hvor_lenge.fordeling.tittel_alene',
+                          this.props.lang
+                      )}
             </div>
             {this.props.tabs.length > 1 && (
                 <Tabs
                     tabs={this.props.tabs.map((tab, index) => {
                         const Cake = tab.faneIcon ? CakeSvg : CakeFellesSvg;
-                        const color =
-                            index === this.state.currentTab
-                                ? '#3e3832'
-                                : '#0067c5';
+                        const color = index === this.state.currentTab ? '#3e3832' : '#0067c5';
 
                         return {
                             label: (
@@ -79,11 +84,9 @@ class Informasjonsfaner extends React.Component<Props> {
                     onChange={this.onTabChange}
                 />
             )}
-            <InformasjonsFanerBody
-                {...this.props.tabs[this.state.currentTab].bodyProps}
-            />
+            <InformasjonsFanerBody {...this.props.tabs[this.state.currentTab].bodyProps} />
         </div>
     );
 }
 
-export default Informasjonsfaner;
+export default withIntl(Informasjonsfaner);
