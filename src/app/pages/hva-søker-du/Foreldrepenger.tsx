@@ -4,10 +4,9 @@ import { withRouter } from 'react-router-dom';
 
 import UserHelp from './user-help/UserHelp';
 import PanelMedTittel from '../../components/panel-med-tittel/PanelMedTittel';
-import translate, { Language } from '../../intl/translate';
+import { getTranslation, withIntl, Language } from '../../intl/intl';
 import externalUrls from '../../utils/externalUrls';
 import StrukturertTekst from '../../components/strukturert-tekst/StrukturertTekst';
-import { withLang } from '../../intl/intl-context';
 import { getContent } from '../../utils/getContent';
 
 interface ForeldrepengerProps {
@@ -20,7 +19,7 @@ interface ForeldrepengerProps {
 
 const Foreldrepenger: StatelessComponent<ForeldrepengerProps> = ({ parentCls, history, lang }) => {
     return (
-        <PanelMedTittel title={translate('foreldrepenger')}>
+        <PanelMedTittel title={getTranslation('foreldrepenger', lang)}>
             <StrukturertTekst tekst={getContent('hva-vil-du-søke-om/foreldrepenger', lang)} />
             <div className={parentCls.element('filler')} />
             <div className={parentCls.element('two-buttons-navigation')}>
@@ -29,16 +28,16 @@ const Foreldrepenger: StatelessComponent<ForeldrepengerProps> = ({ parentCls, hi
                         className={parentCls.element('knapp')}
                         type="hoved"
                         onClick={() => {
-                            history.push('/hva-soker-du/foreldrepenger');
+                            history.push('/hva-soker-du/foreldrepenger', lang);
                         }}>
-                        {translate('hva_søker_du.søk_foreldrepenger')}
+                        {getTranslation('hva_søker_du.søk_foreldrepenger', lang)}
                     </KnappBase>
                     <KnappBase className={parentCls.element('knapp')} type="standard">
-                        {translate('hva_søker_du.har_søkt_foreldrepenger')}
+                        {getTranslation('hva_søker_du.har_søkt_foreldrepenger', lang)}
                     </KnappBase>
                 </div>
                 <UserHelp
-                    linkText={translate('hva_søker_du.ingen_elektronisk_id')}
+                    linkText={getTranslation('hva_søker_du.ingen_elektronisk_id', lang)}
                     linkUrl={externalUrls.søk_foreldrepenger_eller_engangsstønad_papir}
                     helpText="<Placeholder>"
                 />
@@ -47,4 +46,4 @@ const Foreldrepenger: StatelessComponent<ForeldrepengerProps> = ({ parentCls, hi
     );
 };
 
-export default withLang(withRouter(Foreldrepenger));
+export default withIntl(withRouter(Foreldrepenger));

@@ -2,7 +2,7 @@ import * as React from 'react';
 import classnames from 'classnames';
 import TypografiBase from 'nav-frontend-typografi';
 import BEMHelper from '../../../utils/bem';
-import translate from '../../../intl/translate';
+import { getTranslation, IntlProps, withIntl } from '../../../intl/intl';
 
 import './fane.less';
 
@@ -14,16 +14,19 @@ export interface Innholdsfane {
     component: React.ReactNode;
 }
 
-const Fane = ({
-    tab,
-    isSelected,
-    onSelect,
-    mos
-}: {
+interface Props {
     tab: Innholdsfane;
     isSelected: boolean;
     onSelect: () => void;
     mos?: boolean;
+}
+
+const Fane: React.StatelessComponent<Props & IntlProps> = ({
+    tab,
+    isSelected,
+    onSelect,
+    mos,
+    lang
 }) => {
     return (
         <div
@@ -39,7 +42,7 @@ const Fane = ({
             <div className={cls.element('background')} />
             <div className={cls.element('inner')}>
                 {tab.icon}
-                <TypografiBase type="normaltekst">{translate(tab.label)}</TypografiBase>
+                <TypografiBase type="normaltekst">{getTranslation(tab.label, lang)}</TypografiBase>
             </div>
             {isSelected && (
                 <div className={cls.element('pointer')}>
@@ -69,4 +72,4 @@ const Chevron = () => (
     </svg>
 );
 
-export default Fane;
+export default withIntl(Fane);

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Breadcrumbs from '../../components/breadcrumbs/Breadcrumbs';
 import BEMHelper from '../../utils/bem';
-import translate from '../../intl/translate';
+import { getTranslation, IntlProps, withIntl } from '../../intl/intl';
 import HvaErForeldrepenger from './hva-er-foreldrepenger/HvaErForeldrepenger';
 import NyeRegler from './nye-regler/NyeRegler';
 import ForÅFåForeldrepenger from './for-å-få-foreldrepenger/ForÅFåForeldrepenger';
@@ -32,10 +32,10 @@ const sections = [
     'adopsjon-og-arbeidsgiver'
 ];
 
-const OmForeldrepenger: React.StatelessComponent<Props> = ({ location }) => {
+const OmForeldrepenger: React.StatelessComponent<Props & IntlProps> = ({ location, lang }) => {
     return (
         <div className={cls.className}>
-            <Sidebanner text={translate('om_foreldrepenger.tittel')} />
+            <Sidebanner text={getTranslation('om_foreldrepenger.tittel', lang)} />
             <main className={cls.element('body')}>
                 <article className={cls.element('content')}>
                     <Breadcrumbs path={location.pathname} />
@@ -57,4 +57,4 @@ const OmForeldrepenger: React.StatelessComponent<Props> = ({ location }) => {
     );
 };
 
-export default OmForeldrepenger;
+export default withIntl(OmForeldrepenger);

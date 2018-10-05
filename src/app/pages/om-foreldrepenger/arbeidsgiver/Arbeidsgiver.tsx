@@ -1,12 +1,11 @@
 import * as React from 'react';
 import PanelMedIllustrasjon from '../../../components/panel-med-illustrasjon/PanelMedIllustrasjon';
-import translate, { Language } from '../../../intl/translate';
+import { getTranslation, withIntl, IntlProps } from '../../../intl/intl';
 import StrukturertTekst from '../../../components/strukturert-tekst/StrukturertTekst';
 import BEMHelper from '../../../utils/bem';
 import Lenke from './Lenke';
 import { getContent } from '../../../utils/getContent';
 import './arbeidsgiver.less';
-import { withLang } from '../../../intl/intl-context';
 
 const pageSvg = require('../../../assets/page.svg').default;
 
@@ -17,12 +16,16 @@ const kontonummerUrl =
 
 const cls = BEMHelper('arbeidsgiver');
 
-const Arbeidsgiver = ({ id, lang }: { id: string; lang: Language }) => {
+interface Props {
+    id: string;
+}
+
+const Arbeidsgiver: React.StatelessComponent<Props & IntlProps> = ({ id, lang }) => {
     return (
         <PanelMedIllustrasjon
             className={cls.className}
             id={id}
-            title={translate('om_foreldrepenger.arbeidsgiver.tittel')}
+            title={getTranslation('om_foreldrepenger.arbeidsgiver.tittel', lang)}
             svg={pageSvg}>
             <StrukturertTekst
                 tekst={getContent('all-informasjon/arbeidsgiver/arbeidsgiver', lang)}
@@ -35,4 +38,4 @@ const Arbeidsgiver = ({ id, lang }: { id: string; lang: Language }) => {
     );
 };
 
-export default withLang(Arbeidsgiver);
+export default withIntl(Arbeidsgiver);

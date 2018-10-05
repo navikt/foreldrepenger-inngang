@@ -1,6 +1,6 @@
 import * as React from 'react';
-import Provider from './intl/intl-context';
-import translate, { Language } from './intl/translate';
+import IntlContext from './intl/IntlContext';
+import { getTranslation, Language } from './intl/intl';
 import BEMHelper from './utils/bem';
 import TypografiBase from 'nav-frontend-typografi';
 import Router from './Router';
@@ -21,14 +21,14 @@ class App extends React.Component<{}, State> {
         };
     }
 
-    toggleLanguage = (lang: Language) => {
+    setLanguage = (lang: Language) => {
         this.setState({
             currentLanguage: lang
         });
     };
 
     toggleBetweenNbAndNn = () => {
-        this.toggleLanguage(this.getOtherMålform());
+        this.setLanguage(this.getOtherMålform());
     };
 
     getOtherMålform = () => {
@@ -38,34 +38,38 @@ class App extends React.Component<{}, State> {
     spellLanguage = (languageCode: Language) => {
         switch (languageCode) {
             case 'nb':
-                return translate('bokmål');
+                return 'bokmål';
             case 'nn':
-                return translate('nynorsk');
+                return 'nynorsk';
             default:
-                return translate('ukjent');
+                return 'ukjent';
         }
     };
 
     render = () => {
+        const otherMålform = this.spellLanguage(this.getOtherMålform());
+        const languageChangeText = `${getTranslation(
+            'endre_målform_til',
+            this.state.currentLanguage
+        )} ${getTranslation(otherMålform, this.state.currentLanguage)}`;
+
         return (
-            <Provider
+            <IntlContext.Provider
                 value={{
                     lang: this.state.currentLanguage,
-                    toggle: this.toggleLanguage
+                    setLanguage: this.setLanguage
                 }}>
                 <div>
                     <div className={cls.element('topBanner')}>
                         <span
                             onClick={this.toggleBetweenNbAndNn}
                             className={cls.element('byttSpråkKnapp')}>
-                            <TypografiBase type="normaltekst">{`${translate(
-                                'endre_målform_til'
-                            )} ${this.spellLanguage(this.getOtherMålform())}`}</TypografiBase>
+                            <TypografiBase type="normaltekst">{languageChangeText}</TypografiBase>
                         </span>
                     </div>
                     <Router />
                 </div>
-            </Provider>
+            </IntlContext.Provider>
         );
     };
 }

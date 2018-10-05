@@ -1,7 +1,7 @@
 import * as React from 'react';
 import PlaceholderSVG from './PlaceholderSVG';
 import TypografiBase from 'nav-frontend-typografi';
-import translate from '../../../intl/translate';
+import { getTranslation } from '../../../intl/intl';
 import BEMHelper from '../../../utils/bem';
 import NavLenke from 'nav-frontend-lenker';
 
@@ -15,7 +15,7 @@ const Lenke = ({ href, txt }: { href: string; txt: string }) => {
             </span>
             <span className={cls.element('link')}>
                 <TypografiBase type="element">
-                    <NavLenke href={href}>{translate(txt)}</NavLenke>
+                    <NavLenke href={href}>{getTranslation(txt)}</NavLenke>
                 </TypografiBase>
             </span>
         </div>

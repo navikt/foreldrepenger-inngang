@@ -4,7 +4,7 @@ import BEMHelper, { BEMWrapper } from '../../../../../utils/bem';
 import Prosentvalg from './Prosentvalg';
 
 import './dinLønn.less';
-import translate from '../../../../../intl/translate';
+import { getTranslation, withIntl, IntlProps } from '../../../../../intl/intl';
 
 const cls = BEMHelper('dinLønn');
 
@@ -14,7 +14,12 @@ interface Props {
     onPercentageSelect: (p: number) => void;
 }
 
-const DinLønn = ({ grandParentCls, selectedPercentage, onPercentageSelect }: Props) => {
+const DinLønn: React.StatelessComponent<Props & IntlProps> = ({
+    grandParentCls,
+    selectedPercentage,
+    onPercentageSelect,
+    lang
+}) => {
     const monthlyWage = 22000;
 
     return (
@@ -38,10 +43,13 @@ const DinLønn = ({ grandParentCls, selectedPercentage, onPercentageSelect }: Pr
                 />
             </div>
             <div className={cls.element('inputContainer')}>
-                {`${translate('om_foreldrepenger.hvor_lenge.eksempel')} ${monthlyWage},– kr`}
+                {`${getTranslation(
+                    'om_foreldrepenger.hvor_lenge.eksempel',
+                    lang
+                )} ${monthlyWage},– kr`}
             </div>
         </div>
     );
 };
 
-export default DinLønn;
+export default withIntl(DinLønn);

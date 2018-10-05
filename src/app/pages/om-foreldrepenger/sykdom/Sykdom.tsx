@@ -1,13 +1,12 @@
 import * as React from 'react';
 import PanelMedIllustrasjon from '../../../components/panel-med-illustrasjon/PanelMedIllustrasjon';
 import BEMHelper from '../../../utils/bem';
-import translate, { Language } from '../../../intl/translate';
+import { getTranslation, withIntl, IntlProps } from '../../../intl/intl';
 import CustomSVG from '../../../utils/CustomSVG';
 import Foreldrepar from '../../../components/foreldrepar/Foreldrepar';
 import Innholdsfaner from '../../../components/innholdsfaner/Innholdsfaner';
 import StrukturertTekst from '../../../components/strukturert-tekst/StrukturertTekst';
 import LesMer from '../../../components/les-mer/LesMer';
-import { withLang } from '../../../intl/intl-context';
 import { getContent } from '../../../utils/getContent';
 
 const pageSvg = require('../../../assets/page.svg').default;
@@ -23,27 +22,30 @@ const syke = 'all-informasjon/sykdom/en-av-foreldrene-er-syke/en-av-foreldrene-e
 const sykeUtsette = 'all-informasjon/sykdom/en-av-foreldrene-er-syke/utsette';
 const sykeOverta = 'all-informasjon/sykdom/en-av-foreldrene-er-syke/overta';
 
-const BarnetErInnlagt = withLang(({ lang }: { lang: Language }) => (
+const BarnetErInnlagtWithoutIntl: React.StatelessComponent<IntlProps> = ({ lang }) => (
     <div>
         <StrukturertTekst tekst={getContent(barnetErInnlagt, lang)} />
-        <LesMer intro={translate('om_foreldrepenger.sykdom.innlagt.utsette')}>
+        <LesMer intro={getTranslation('omforeldrepenger.sykdom.innlagt.utsette', lang)}>
             <StrukturertTekst tekst={getContent(barnetErInnlagtUtsette, lang)} />
         </LesMer>
         <StrukturertTekst tekst={getContent(barnetErInnlagtForts, lang)} />
     </div>
-));
+);
 
-const EnAvForeldreneErSyke = withLang(({ lang }: { lang: Language }) => (
+const EnAvForeldreneErSykeWithoutIntl: React.StatelessComponent<IntlProps> = ({ lang }) => (
     <div>
         <StrukturertTekst tekst={getContent(syke, lang)} />
-        <LesMer intro={translate('om_foreldrepenger.sykdom.innlagt.utsette')}>
+        <LesMer intro={getTranslation('om_foreldrepenger.sykdom.innlagt.utsette', lang)}>
             <StrukturertTekst tekst={getContent(sykeUtsette, lang)} />
         </LesMer>
-        <LesMer intro={translate('om_foreldrepenger.sykdom.innlagt.overta')}>
+        <LesMer intro={getTranslation('om_foreldrepenger.sykdom.innlagt.overta', lang)}>
             <StrukturertTekst tekst={getContent(sykeOverta, lang)} />
         </LesMer>
     </div>
-));
+);
+
+const BarnetErInnlagt = withIntl(BarnetErInnlagtWithoutIntl);
+const EnAvForeldreneErSyke = withIntl(EnAvForeldreneErSykeWithoutIntl);
 
 const tabs = [
     {
@@ -58,16 +60,20 @@ const tabs = [
     }
 ];
 
-const Sykdom = ({ id, lang }: { id: string; lang: Language }) => {
+interface Props {
+    id: string;
+}
+
+const Sykdom: React.StatelessComponent<Props & IntlProps> = ({ id, lang }) => {
     return (
         <PanelMedIllustrasjon
             id={id}
             className={cls.className}
             svg={pageSvg}
-            title={translate('om_foreldrepenger.sykdom.tittel')}>
+            title={getTranslation('om_foreldrepenger.sykdom.tittel', lang)}>
             <Innholdsfaner tabs={tabs} />
         </PanelMedIllustrasjon>
     );
 };
 
-export default withLang(Sykdom);
+export default withIntl(Sykdom);

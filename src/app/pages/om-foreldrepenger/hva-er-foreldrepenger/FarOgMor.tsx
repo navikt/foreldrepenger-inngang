@@ -3,9 +3,8 @@ import Kalkulator from './kalkulator/Kalkulator';
 import Informasjonsfaner from './informasjons-faner/Informasjonsfaner';
 
 import StrukturertTekst from '../../../components/strukturert-tekst/StrukturertTekst';
-import { Language } from '../../../intl/translate';
+import { Language, withIntl } from '../../../intl/intl';
 import { getContent } from '../../../utils/getContent';
-import { withLang } from '../../../intl/intl-context';
 
 const farOgMorContent = 'all-informasjon/hva-er-foreldrepenger/far-og-mor/far-og-mor';
 const morsdel = 'all-informasjon/hva-er-foreldrepenger/far-og-mor/mors-del';
@@ -58,4 +57,4 @@ const FarOgMor = ({ lang }: { lang: Language }) => {
     );
 };
 
-export default withLang(FarOgMor);
+export default withIntl(FarOgMor);

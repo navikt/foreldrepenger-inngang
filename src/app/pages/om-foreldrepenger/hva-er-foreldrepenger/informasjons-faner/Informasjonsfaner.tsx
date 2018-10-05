@@ -7,7 +7,7 @@ import CakeSvg from './CakeSvg';
 import CakeFellesSvg from './CakeFellesSvg';
 
 import './informasjonsfaner.less';
-import translate from '../../../../intl/translate';
+import { getTranslation, IntlProps, withIntl } from '../../../../intl/intl';
 
 const cls = BEMHelper('informasjonsfaner');
 
@@ -25,9 +25,11 @@ interface Fane {
     };
 }
 
-interface Props {
+interface TabProps {
     tabs: Fane[];
 }
+
+type Props = TabProps & IntlProps;
 
 class Informasjonsfaner extends React.Component<Props> {
     state: {
@@ -55,8 +57,14 @@ class Informasjonsfaner extends React.Component<Props> {
         <div className={cls.className}>
             <div className={cls.element('header')}>
                 {this.props.tabs.length > 1
-                    ? translate('om_foreldrepenger.hvor_lenge.fordeling.tittel')
-                    : translate('om_foreldrepenger.hvor_lenge.fordeling.tittel_alene')}
+                    ? getTranslation(
+                          'om_foreldrepenger.hvor_lenge.fordeling.tittel',
+                          this.props.lang
+                      )
+                    : getTranslation(
+                          'om_foreldrepenger.hvor_lenge.fordeling.tittel_alene',
+                          this.props.lang
+                      )}
             </div>
             {this.props.tabs.length > 1 && (
                 <Tabs
@@ -81,4 +89,4 @@ class Informasjonsfaner extends React.Component<Props> {
     );
 }
 
-export default Informasjonsfaner;
+export default withIntl(Informasjonsfaner);

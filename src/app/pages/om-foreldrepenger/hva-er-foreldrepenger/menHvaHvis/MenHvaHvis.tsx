@@ -1,6 +1,6 @@
 import * as React from 'react';
 import BEMHelper from '../../../../utils/bem';
-import translate from '../../../../intl/translate';
+import { getTranslation } from '../../../../intl/intl';
 import TypografiBase from 'nav-frontend-typografi';
 import NoenVilPaFerie from './NoenVilPaFerie';
 import JegVilJobbe from './JegVilJobbe';
@@ -56,14 +56,11 @@ class MenHvaHvis extends React.Component<Props> {
             <ScaleSize query="(max-width: 799px)" />
             <div className={cls.element('header')}>
                 <TypografiBase type="element">
-                    {translate('om_foreldrepenger.hvor_lenge.hurtiglenker')}
+                    {getTranslation('om_foreldrepenger.hvor_lenge.hurtiglenker')}
                 </TypografiBase>
             </div>
             <div className={cls.element('body')}>
-                <a
-                    style={{ height: this.state.svgSize }}
-                    href="#ferie"
-                    aria-label="Gå til ferie">
+                <a style={{ height: this.state.svgSize }} href="#ferie" aria-label="Gå til ferie">
                     <NoenVilPaFerie size={this.state.svgSize} />
                 </a>
                 <a

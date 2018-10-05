@@ -2,9 +2,8 @@ import * as React from 'react';
 import PanelMedIllustrasjon from '../../../components/panel-med-illustrasjon/PanelMedIllustrasjon';
 import Innholdsfaner from '../../../components/innholdsfaner/Innholdsfaner';
 import StrukturertTekst from '../../../components/strukturert-tekst/StrukturertTekst';
-import translate, { Language } from '../../../intl/translate';
+import { getTranslation, Language, IntlProps, withIntl } from '../../../intl/intl';
 import { getContent } from '../../../utils/getContent';
-import { withLang } from '../../../intl/intl-context';
 
 const nårKanDuFåEngangsstønadContent =
     'om-engangsstønad/når-kan-du-få-engangsstønad/når-kan-du-få-engangsstønad';
@@ -26,8 +25,14 @@ const getTabs = (lang: Language) => [
     }
 ];
 
-const NårKanDuFåEngangsstønad = ({ lang }: { lang: Language }) => (
-    <PanelMedIllustrasjon title={translate('om_engangsstønad.krav_tittel')} svg={pageSvg}>
+const NårKanDuFåEngangsstønad: React.StatelessComponent<IntlProps> = ({
+    lang
+}: {
+    lang: Language;
+}) => (
+    <PanelMedIllustrasjon
+        title={getTranslation('om_engangsstønad.krav_tittel', lang)}
+        svg={pageSvg}>
         <div>
             <StrukturertTekst tekst={getContent(nårKanDuFåEngangsstønadContent, lang)} />
             <Innholdsfaner tabs={getTabs(lang)} />
@@ -35,4 +40,4 @@ const NårKanDuFåEngangsstønad = ({ lang }: { lang: Language }) => (
     </PanelMedIllustrasjon>
 );
 
-export default withLang(NårKanDuFåEngangsstønad);
+export default withIntl(NårKanDuFåEngangsstønad);

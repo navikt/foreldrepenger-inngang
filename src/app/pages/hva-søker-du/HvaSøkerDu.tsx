@@ -6,7 +6,7 @@ import BEMHelper from '../../utils/bem';
 import Foreldrepenger from './Foreldrepenger';
 import Engangsstonad from './Engangsstonad';
 import Svangerskapspenger from './Svangerskapspenger';
-import translate from '../../intl/translate';
+import { getTranslation, withIntl, IntlProps } from '../../intl/intl';
 import SvgBanner from '../../components/svg-banner/SvgBanner';
 
 import './hvaSøkerDu.less';
@@ -17,11 +17,13 @@ interface Props {
     location: any;
 }
 
-const HvaSøkerDu: React.StatelessComponent<Props> = ({ location }) => {
+const HvaSøkerDu: React.StatelessComponent<Props & IntlProps> = ({ location, lang }) => {
     return (
         <div className={cls.className}>
             <header className={cls.element('header')}>
-                <TypografiBase type="undertittel">{translate('hva_søker_du.tittel')}</TypografiBase>
+                <TypografiBase type="undertittel">
+                    {getTranslation('hva_søker_du.tittel', lang)}
+                </TypografiBase>
             </header>
             <main className={cls.element('body')}>
                 <article className={cls.element('content')}>
@@ -36,4 +38,4 @@ const HvaSøkerDu: React.StatelessComponent<Props> = ({ location }) => {
     );
 };
 
-export default HvaSøkerDu;
+export default withIntl(HvaSøkerDu);
