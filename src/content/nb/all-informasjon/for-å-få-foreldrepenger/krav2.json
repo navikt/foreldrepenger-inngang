@@ -5,7 +5,15 @@
         "children": [
             {
                 "type": "span",
-                "text": "Jeg har tjent minst 48 441,– kr i året"
+                "text": "Jeg har tjent minst "
+            },
+            {
+                "type": "span_nowrap",
+                "text": "48 441,– kr"
+            },
+            {
+                "type": "span",
+                "text": " i året"
             }
         ]
     },

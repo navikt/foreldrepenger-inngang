@@ -5,7 +5,15 @@
         "children": [
             {
                 "type": "span",
-                "text": "Jeg har hatt inntekt 6 av 10 siste mnd."
+                "text": "Jeg har hatt inntekt "
+            },
+            {
+                "type": "span_nowrap",
+                "text": "6 av 10"
+            },
+            {
+                "type": "span",
+                "text": " siste mnd."
             }
         ]
     },
@@ -15,8 +23,20 @@
         "children": [
             {
                 "type": "span",
-                "text": "Som inntekt regnes også enkelte ytelser fra NAV, arbeidsgiver eller militæret.",
+                "text": "Som inntekt regnes også enkelte ytelser fra NAV, arbeidsgiver eller militæret. ",
                 "marks": []
+            },
+            {
+                "type": "span",
+                "text": "Les mer",
+                "marks": ["url_arbeidsgiver"]
+            }
+        ],
+        "markDefs": [
+            {
+                "key": "url_arbeidsgiver",
+                "type": "link",
+                "href": "#arbeidsgiver"
             }
         ]
     }
