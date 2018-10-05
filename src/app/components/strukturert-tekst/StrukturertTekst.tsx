@@ -65,6 +65,13 @@ const renderTekstsnutt = (markDefs: MarkDefinition[]) => (
             toRender = <span>{text}</span>;
             break;
         }
+        case 'span_nowrap': {
+            toRender = <span className={cls.element('unbreakable')}>{text}</span>;
+            break;
+        }
+        default: {
+            toRender = <span>{text}</span>;
+        }
     }
 
     if (marks) {
