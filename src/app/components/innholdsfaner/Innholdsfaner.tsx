@@ -64,7 +64,6 @@ class Innholdsfaner extends React.Component<Props> {
                         />
                     ))}
                 </div>
-                {/* <div className={cls.element('tabIndicator')} /> */}
             </MediaQuery>
             <div>{this.state.componentToRender}</div>
         </div>
