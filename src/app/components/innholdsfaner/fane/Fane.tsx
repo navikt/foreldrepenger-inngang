@@ -45,8 +45,12 @@ const Fane: React.StatelessComponent<Props & IntlProps> = ({
                 <TypografiBase type="normaltekst">{getTranslation(tab.label, lang)}</TypografiBase>
             </div>
             {isSelected && (
-                <div className={cls.element('pointer')}>
-                    <Chevron />
+                <div className={cls.element('point-wrapper')}>
+                    <div className={cls.element('indicator')}>
+                        <div className={cls.element('pointer')}>
+                            <Chevron />
+                        </div>
+                    </div>
                 </div>
             )}
         </div>
