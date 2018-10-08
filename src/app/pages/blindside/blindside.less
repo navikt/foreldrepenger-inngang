@@ -1,0 +1,39 @@
+@import '../../styles/index.less';
+
+.blindside {
+    width: 100%;
+
+    &__body {
+        max-width: 800px;
+        margin: 1rem auto 4rem;
+        padding: 0 1rem;
+    }
+
+    .nav-veilederpanel {
+        margin-top: 2rem;
+        background-color: transparent;
+        
+        p {
+            white-space: pre-line;
+        }
+    }
+
+    &__tilbake {
+        margin-top: 1rem;
+        display: inline-block;
+
+        &:focus {
+            .buttonFocus();    
+        }
+    }
+
+    .nav-frontend-chevron {
+        bottom: 1px;
+    }
+
+    .typo-element {
+        display: inline-block;
+        cursor: pointer;
+        margin-left: 0.5rem;
+    }
+}
