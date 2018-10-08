@@ -4,7 +4,6 @@ import BEMHelper from '../../../utils/bem';
 import TypografiBase from 'nav-frontend-typografi';
 import { getTranslation, IntlProps, withIntl } from '../../../intl/intl';
 import './andreLenker.less';
-import CustomSVG from '../../../utils/CustomSVG';
 
 const links = [
     {
@@ -42,19 +41,13 @@ const links = [
     }
 ];
 
-const externalLinkIcon = require('../../../assets/icons/external.svg').default;
 const cls = BEMHelper('andreLenker');
 
 const AndreLenker: React.StatelessComponent<IntlProps> = ({ lang }) => {
     const otherLinks = links.map((link) => (
         <div key={link.label} className={cls.element('linkContainer')}>
-            <WithLink url={link.href} urlIsExternal={!link.internal}>
+            <WithLink url={link.href} urlIsExternal={!link.internal} addExternalIcon={true}>
                 <TypografiBase type="normaltekst">{getTranslation(link.label, lang)}</TypografiBase>
-                {!link.internal && (
-                    <span className={cls.element('linkIcon')}>
-                        <CustomSVG size={18} iconRef={externalLinkIcon} />
-                    </span>
-                )}
             </WithLink>
         </div>
     ));

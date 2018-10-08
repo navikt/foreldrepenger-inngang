@@ -5,6 +5,8 @@ import Prosentvalg from './Prosentvalg';
 
 import './dinLønn.less';
 import { getTranslation, withIntl, IntlProps } from '../../../../../intl/intl';
+import TypografiBase from 'nav-frontend-typografi';
+import { WithLink } from '../../../../../utils/withLink';
 
 const cls = BEMHelper('dinLønn');
 
@@ -42,11 +44,18 @@ const DinLønn: React.StatelessComponent<Props & IntlProps> = ({
                     sum={monthlyWage}
                 />
             </div>
-            <div className={cls.element('inputContainer')}>
+            <TypografiBase type="normaltekst" className={cls.element('eksempeltekst')}>
                 {`${getTranslation(
                     'om_foreldrepenger.hvor_lenge.eksempel',
                     lang
                 )} ${monthlyWage},– kr`}
+            </TypografiBase>
+            <div className={cls.element('kalkulatorlenke')}>
+                <TypografiBase type="normaltekst">
+                    <WithLink urlIsExternal={true} addExternalIcon={true} url="www.nav.no">
+                        {getTranslation('om_foreldrepenger.hvor_lenge.kalkulatorlenke', lang)}
+                    </WithLink>
+                </TypografiBase>
             </div>
         </div>
     );

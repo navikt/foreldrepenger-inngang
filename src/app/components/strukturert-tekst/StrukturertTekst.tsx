@@ -87,16 +87,15 @@ const renderTekstsnutt = (markDefs: MarkDefinition[]) => (
                     break;
                 }
 
-                case 'external_link': {
-                    toRender = <span>{toRender}→</span>;
-                    break;
-                }
-
                 default: {
                     if (markDefs) {
                         const markDefinition = markDefs.find((m) => m.key === mark);
                         if (markDefinition) {
-                            toRender = <MarkWrapper mark={markDefinition}>{toRender}</MarkWrapper>;
+                            toRender = (
+                                <MarkWrapper mark={markDefinition} otherMarks={marks}>
+                                    {toRender}
+                                </MarkWrapper>
+                            );
                         }
                     }
                 }
@@ -107,11 +106,21 @@ const renderTekstsnutt = (markDefs: MarkDefinition[]) => (
     return addKeyToComponent(index, toRender);
 };
 
-const MarkWrapper = ({ mark, children }: { mark: MarkDefinition; children: ReactNode }) => {
+const MarkWrapper = ({
+    mark,
+    otherMarks,
+    children
+}: {
+    mark: MarkDefinition;
+    otherMarks: string[];
+    children: ReactNode;
+}) => {
     switch (mark.type) {
         case 'link': {
+            const external = otherMarks.includes('external_link');
+
             return (
-                <WithLink urlIsExternal={true} url={mark.href || '/#'}>
+                <WithLink urlIsExternal={true} addExternalIcon={external} url={mark.href || '/#'}>
                     {children}
                 </WithLink>
             );
