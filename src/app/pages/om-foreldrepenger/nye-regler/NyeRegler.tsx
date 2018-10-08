@@ -16,12 +16,12 @@ type ValgtRegel = 'FØR' | 'ETTER';
 class NyeRegler extends React.Component<IntlProps> {
     radios = [
         {
-            label: getTranslation('om_foreldrepenger.nye_regler.før', this.props.lang),
-            value: 'FØR'
-        },
-        {
             label: getTranslation('om_foreldrepenger.nye_regler.etter', this.props.lang),
             value: 'ETTER'
+        },
+        {
+            label: getTranslation('om_foreldrepenger.nye_regler.før', this.props.lang),
+            value: 'FØR'
         }
     ];
 
