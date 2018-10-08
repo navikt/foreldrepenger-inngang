@@ -4,6 +4,7 @@
     color: black;
     text-decoration: none;
     border-radius: 4px;
+    .containText();
 
     &:hover {
         box-shadow: @navGra40 0 2px 1px 0;
@@ -54,14 +55,20 @@
         justify-content: space-between;
         align-items: flex-start;
         border-radius: 0 0 4px 4px;
+        .containText();
     }
 
     &__textOnPanel {
         display: flex;
         flex-direction: column;
+        width: 100%;
 
         .typo-normal {
-            margin-top: 8px;
+            .containText();
+        }
+
+        .typo-undertittel, .typo-normal {
+            .containText();
         }
     }
 
