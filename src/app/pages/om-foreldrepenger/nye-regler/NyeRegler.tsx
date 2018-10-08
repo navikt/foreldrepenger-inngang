@@ -45,13 +45,6 @@ class NyeRegler extends React.Component<IntlProps> {
 
     render = () => (
         <div role="note" aria-label="Nye regler" className={cls.className}>
-            <div className={cls.element('header')}>
-                <CustomSVGFromSprite iconRef={infoIcon} size={32} />
-                <TypografiBase type="systemtittel">
-                    {getTranslation('om_foreldrepenger.nye_regler.tittel', this.props.lang)}
-                </TypografiBase>
-            </div>
-            <div className={cls.element('divider')} />
             <div className={cls.element('content')}>
                 <TypografiBase type="element">{`${getTranslation(
                     'om_foreldrepenger.nye_regler_label',
@@ -69,6 +62,22 @@ class NyeRegler extends React.Component<IntlProps> {
                         />
                     ))}
                 </div>
+                {this.state.selectedRule === 'FØR' && (
+                    <div
+                        role="alert"
+                        aria-describedby="førBeskrivelse"
+                        className={cls.element('header')}>
+                        <CustomSVGFromSprite iconRef={infoIcon} size={32} />
+                        <TypografiBase type="systemtittel">
+                            <span id="førBeskrivelse">
+                                {getTranslation(
+                                    'om_foreldrepenger.nye_regler.tittel',
+                                    this.props.lang
+                                )}
+                            </span>
+                        </TypografiBase>
+                    </div>
+                )}
                 <output>
                     <TypografiBase type="normaltekst">
                         {this.state.selectedRule === 'FØR'

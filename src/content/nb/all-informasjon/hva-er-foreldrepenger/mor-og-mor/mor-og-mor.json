@@ -15,13 +15,6 @@
     },
     {
         "type": "avsnitt",
-        "style": "undertittel",
-        "children": [
-            { "type": "span", "text": "Lengden på foreldrepengeperioden", "marks": [] }
-        ]
-    },
-    {
-        "type": "avsnitt",
         "style": "normaltekst",
         "children": [
             {

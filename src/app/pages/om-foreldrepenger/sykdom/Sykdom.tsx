@@ -25,7 +25,7 @@ const sykeOverta = 'all-informasjon/sykdom/en-av-foreldrene-er-syke/overta';
 const BarnetErInnlagtWithoutIntl: React.StatelessComponent<IntlProps> = ({ lang }) => (
     <div>
         <StrukturertTekst tekst={getContent(barnetErInnlagt, lang)} />
-        <LesMer intro={getTranslation('omforeldrepenger.sykdom.innlagt.utsette', lang)}>
+        <LesMer intro={getTranslation('om_foreldrepenger.sykdom.innlagt.utsette', lang)}>
             <StrukturertTekst tekst={getContent(barnetErInnlagtUtsette, lang)} />
         </LesMer>
         <StrukturertTekst tekst={getContent(barnetErInnlagtForts, lang)} />

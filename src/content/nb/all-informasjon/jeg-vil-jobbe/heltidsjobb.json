@@ -28,6 +28,36 @@
         "children": [
             {
                 "type": "span",
+                "text": "Er du "
+            },
+            {
+                "type": "span",
+                "text": "selvstendig næringsdrivende",
+                "marks": ["bold"]
+            },
+            {
+                "type": "span",
+                "text": " eller "
+            },
+            {
+                "type": "span",
+                "text": "frilanser",
+                "marks": ["bold"]
+            },
+            {
+                "type": "span",
+                "text": ", er det en avtale mellom deg og NAV."
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "level": 1,
+        "listItem": "bullet",
+        "children": [
+            {
+                "type": "span",
                 "text": "Send inn "
             },
             {

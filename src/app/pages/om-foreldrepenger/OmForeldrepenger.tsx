@@ -27,9 +27,10 @@ const sections = [
     'jeg-vil-jobbe',
     'sykdom',
     'hjemme-samtidig',
-    'jeg_har-hatt-inntekt',
+    'jeg-har-hatt-inntekt',
     'beregning',
-    'adopsjon-og-arbeidsgiver'
+    'adopsjon',
+    'arbeidsgiver'
 ];
 
 const OmForeldrepenger: React.StatelessComponent<Props & IntlProps> = ({ location, lang }) => {
@@ -50,7 +51,7 @@ const OmForeldrepenger: React.StatelessComponent<Props & IntlProps> = ({ locatio
                     <JegHarHattInntekt id={sections[6]} />
                     {/* <Beregning id={sections[7]} /> */}
                     <Adopsjon id={sections[8]} />
-                    <Arbeidsgiver id={sections[8]} />
+                    <Arbeidsgiver id={sections[9]} />
                 </article>
             </main>
         </div>

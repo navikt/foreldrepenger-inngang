@@ -1,3 +1,5 @@
+@import '../../../../../styles/index.less';
+
 .dinLønn {
     flex: 5;
     display: flex;
@@ -28,9 +30,19 @@
         }
     }
 
-    &__inputContainer {
-        margin-top: 2rem;
-        font-style: italic;
+    &__eksempeltekst, &__kalkulatorlenke {
         max-width: 200px;
+
+        .containText();
+    }
+
+    a {
+        text-decoration: underline;
+        border: none;
+    }
+
+    &__eksempeltekst {
+        margin: 1rem 0;
+        font-style: italic;
     }
 }

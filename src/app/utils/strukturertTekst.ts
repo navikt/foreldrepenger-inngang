@@ -10,12 +10,8 @@ type TypografiType =
     | 'undertekstBold'
     | 'undertekst';
 
-export type AvsnittType =
-    | 'avsnitt'
-    | 'tittel'
-    | 'liste'
-    | 'avsnitt-uten-padding';
-export type TekstsnuttType = 'span' | 'element';
+export type AvsnittType = 'avsnitt' | 'tittel' | 'liste' | 'avsnitt-uten-padding';
+export type TekstsnuttType = 'span' | 'element' | 'span_nowrap';
 export type MarkReference = string;
 export type Mark = 'link';
 export type ListItem = 'bullet' | 'number';
