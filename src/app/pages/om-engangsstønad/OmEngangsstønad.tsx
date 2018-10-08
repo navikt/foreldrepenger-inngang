@@ -9,6 +9,7 @@ import NårKanDuFåEngangsstønad from './når-kan-du-få-engangsstønad/NårKan
 import { getContent } from '../../utils/getContent';
 import '../infosider.less';
 import './omEngangsstønad.less';
+import CustomSVGFromSprite from '../../utils/CustomSVG';
 
 const infosiderCls = BEMHelper('infosider');
 const cls = BEMHelper('omEngangsstønad');
@@ -17,7 +18,11 @@ interface Props {
     location: any;
 }
 
-const pageSvg = require('../../assets/page.svg').default;
+const engangsstønadSvg = require('../../assets/engangsstønad.svg').default;
+const utbetalingArkSvg = require('../../assets/ark/utbetaling.svg').default;
+const søknadsfristSvg = require('../../assets/ark/søknadsfrist.svg').default;
+const utbetalingSvg = require('../../assets/icons/utbetaling-til-deg.svg').default;
+const utbetalingstidSvg = require('../../assets/icons/utbetalingstid.svg').default;
 
 const hvaErEngangsstønadContent = 'om-engangsstønad/hva-er-engangsstønad/hva-er-engangsstønad';
 const utbetalingContent = 'om-engangsstønad/utbetaling';
@@ -45,13 +50,15 @@ const OmEngangsstonad: React.StatelessComponent<Props & IntlProps> = ({ location
 const HvaErEngangsstønadWithoutIntl: React.StatelessComponent<IntlProps> = ({ lang }) => (
     <PanelMedIllustrasjon
         title={getTranslation('om_engangsstønad.hva_er.tittel', lang)}
-        svg={pageSvg}>
+        svg={engangsstønadSvg}>
         <StrukturertTekst tekst={getContent(hvaErEngangsstønadContent, lang)} />
         <div className={cls.element('kravContainer')}>
             <div className={cls.element('krav')}>
+                <CustomSVGFromSprite iconRef={utbetalingSvg} size={32} />
                 <StrukturertTekst tekst={getContent(engangssumContent, lang)} />
             </div>
             <div className={cls.element('krav')}>
+                <CustomSVGFromSprite iconRef={utbetalingstidSvg} size={32} />
                 <StrukturertTekst tekst={getContent(utbetalingShortContent, lang)} />
             </div>
         </div>
@@ -59,13 +66,13 @@ const HvaErEngangsstønadWithoutIntl: React.StatelessComponent<IntlProps> = ({ l
 );
 
 const UtbetalingWithoutIntl: React.StatelessComponent<IntlProps> = ({ lang }) => (
-    <PanelMedIllustrasjon title={getTranslation('utbetaling', lang)} svg={pageSvg}>
+    <PanelMedIllustrasjon title={getTranslation('utbetaling', lang)} svg={utbetalingArkSvg}>
         <StrukturertTekst tekst={getContent(utbetalingContent, lang)} />
     </PanelMedIllustrasjon>
 );
 
 const SøknadsfristWithoutIntl: React.StatelessComponent<IntlProps> = ({ lang }) => (
-    <PanelMedIllustrasjon title={getTranslation('søknadsfrist', lang)} svg={pageSvg}>
+    <PanelMedIllustrasjon title={getTranslation('søknadsfrist', lang)} svg={søknadsfristSvg}>
         <StrukturertTekst tekst={getContent(søknadsfristContent, lang)} />
     </PanelMedIllustrasjon>
 );
