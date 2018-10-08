@@ -73,7 +73,7 @@ const Sykdom: React.StatelessComponent<Props & IntlProps> = ({ id, lang }) => {
             className={cls.className}
             svg={sykdomSvg}
             title={getTranslation('om_foreldrepenger.sykdom.tittel', lang)}>
-            <Innholdsfaner tabs={tabs} />
+            <Innholdsfaner tabs={tabs} section={"jegVilJobbe"} />
         </PanelMedIllustrasjon>
     );
 };

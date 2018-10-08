@@ -19,15 +19,21 @@ interface Props {
     isSelected: boolean;
     onSelect: () => void;
     mos?: boolean;
+    before: any;
+    after: any;
 }
+
 
 const Fane: React.StatelessComponent<Props & IntlProps> = ({
     tab,
     isSelected,
     onSelect,
     mos,
+    before,
+    after,
     lang
 }) => {
+
     return (
         <div
             tabIndex={0}
@@ -48,7 +54,14 @@ const Fane: React.StatelessComponent<Props & IntlProps> = ({
                 <div className={cls.element('point-wrapper')}>
                     <div className={cls.element('indicator')}>
                         <div className={cls.element('pointer')}>
+                            <span className={cls.element('pointerBefore')} style={{
+                                width: before,
+                                left: -1*before,
+                            }} />
                             <Chevron />
+                            <span className={cls.element('pointerAfter')} style={{
+                                width: after,
+                            }} />
                         </div>
                     </div>
                 </div>
@@ -58,6 +71,7 @@ const Fane: React.StatelessComponent<Props & IntlProps> = ({
 };
 
 const Chevron = () => (
+    <span>
     <svg width="13px" height="9px" viewBox="0 0 13 8" version="1.1">
         <title>Chevron</title>
         <defs />
@@ -74,6 +88,7 @@ const Chevron = () => (
             />
         </g>
     </svg>
+    </span>
 );
 
 export default withIntl(Fane);

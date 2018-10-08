@@ -12,25 +12,54 @@ interface TabProps {
     tabs: Innholdsfane[];
 }
 
-type Props = TabProps & IntlProps;
+interface Section {
+    section?: string;
+}
+
+type Props = TabProps & Section & IntlProps;
+
+function calcBeforeWidth(width: number, index: number) {
+    return width / 2 + width * index + 32;
+}
+function calcAfterWidth(width: number, index: number) {
+    return 588 + 32 - (width / 2 + width * index);
+}
 
 class Innholdsfaner extends React.Component<Props> {
     state: {
         currentTab: number;
         componentToRender: React.ReactNode;
+        tabWidth: number;
+        beforeWidth: number;
+        afterWidth: number;
     };
 
     constructor(props: Props) {
         super(props);
 
+        const width = document.querySelector('.'+this.props.section+' .fane');
+
         this.state = {
             currentTab: 0,
-            componentToRender: props.tabs[0].component
+            componentToRender: props.tabs[0].component,
+            tabWidth: 100,
+            beforeWidth: calcBeforeWidth(120, 0),
+            afterWidth: calcAfterWidth(120, 0)
         };
+        if (width) {
+            this.state.beforeWidth = calcBeforeWidth((this.state.tabWidth = width.scrollWidth), 0);
+            this.state.afterWidth = calcAfterWidth((this.state.tabWidth = width.scrollWidth), 0);
+        }
     }
 
     onTabSelect = (tabIndex: number) => {
         const componentToRender = this.props.tabs[tabIndex].component;
+        const currentClass = document.querySelector('.'+this.props.section+' .fane');
+        if (currentClass) {
+            this.state.tabWidth = currentClass.scrollWidth;
+            this.state.beforeWidth = calcBeforeWidth(this.state.tabWidth, tabIndex);
+            this.state.afterWidth = calcAfterWidth(this.state.tabWidth, tabIndex);
+        }
 
         this.setState({
             currentTab: tabIndex,
@@ -60,6 +89,8 @@ class Innholdsfaner extends React.Component<Props> {
                             key={tab.label}
                             mos={this.props.tabs.length > 5}
                             isSelected={index === this.state.currentTab}
+                            before={this.state.beforeWidth}
+                            after={this.state.afterWidth}
                             onSelect={() => {
                                 this.onTabSelect(index);
                             }}
