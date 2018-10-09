@@ -47,10 +47,9 @@ export const WithLink = ({
                     <span
                         style={{
                             marginLeft: '0.5rem',
-                            position: 'relative',
-                            top: '4px'
+                            position: 'relative'
                         }}>
-                        <CustomSVGFromSprite size={18} iconRef={externalLinkIcon} />
+                        <CustomSVGFromSprite size={15} iconRef={externalLinkIcon} />
                     </span>
                 )}
             </Lenke>
