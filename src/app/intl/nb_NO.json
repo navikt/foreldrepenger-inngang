@@ -44,6 +44,7 @@
     "route.om-foreldrepenger": "Om foreldrepenger",
     "route.om-engangsstonad": "Om engangsstønad",
     "route.foreldrepenger": "Foreldrepenger",
+    "route.blindside": "Uferdig side!",
 
 
     "informasjonstavle.tittel": "Foreldrepenger, engangsstønad og svangerskapspenger",
@@ -119,5 +120,8 @@
     
     "om_engangsstønad.tittel": "All informasjon om engangsstønad",
     "om_engangsstønad.hva_er.tittel": "Hva er engangsstønad?",
-    "om_engangsstønad.krav_tittel": "Når kan du få engangsstønad?"
+    "om_engangsstønad.krav_tittel": "Når kan du få engangsstønad?",
+
+    "blindside.veileder": "Så fint å ha deg her!\nDu har klikket deg inn på en side som vi fremdeles holder på med å lage.\nKlikk deg tilbake for å utforske mer :)",
+    "blindside.tittel": "Under arbeid"
 }

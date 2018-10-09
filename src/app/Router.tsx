@@ -5,6 +5,7 @@ import HvaSøkerDu from './pages/hva-søker-du/HvaSøkerDu';
 import SøkForeldrepenger from './pages/søk-foreldrepenger/SøkForeldrepenger';
 import OmForeldrepenger from './pages/om-foreldrepenger/OmForeldrepenger';
 import OmEngangsstønad from './pages/om-engangsstønad/OmEngangsstønad';
+import Blindside from './pages/blindside/Blindside';
 
 const Router = () => (
     <Switch>
@@ -28,6 +29,7 @@ const Router = () => (
             component={OmEngangsstønad}
             key="om-engangsstonad"
         />
+        <Route exact={true} path="/under-arbeid" component={Blindside} key="under-arbeid" />
         <Redirect to="/" />
     </Switch>
 );

@@ -28,7 +28,7 @@ const links = [
     },
     {
         label: 'viktige_frister',
-        href: 'www.nav.no',
+        href: '/under-arbeid',
         internal: true
     },
     {

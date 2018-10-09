@@ -35,7 +35,7 @@ const BildelenkerWithoutIntl: StatelessComponent<IntlProps> = ({ lang }) => {
                 svgName="jente-med-imac"
                 title={getTranslation('informasjonstavle.hva_har_du_rett_på', lang)}
                 urlIsExternal={false}
-                url="/#">
+                url="/under-arbeid">
                 <Tekstomrade>
                     {getTranslation('informasjonstavle.hva_har_du_rett_på_body', lang)}
                 </Tekstomrade>
