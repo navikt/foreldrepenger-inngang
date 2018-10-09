@@ -7,7 +7,7 @@ import Lenke from './Lenke';
 import { getContent } from '../../../utils/getContent';
 import './arbeidsgiver.less';
 
-const arbeidsgiverSvg = require('../../../assets/ark/arbeidsgiver-og-deg.svg').default;
+const arbeidsgiverSvg = require('../../../assets/ark/arbeidsgiver.svg').default;
 
 const skjemaUrl =
     'https://www.nav.no/no/Bedrift/Skjemaer-for-arbeidsgivere/Skjemaer/Lonns-+og+personalskjemaer+for+din+bedrift/Inntekt+og+trekk';

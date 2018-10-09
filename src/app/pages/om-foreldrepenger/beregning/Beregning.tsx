@@ -13,11 +13,11 @@ import PoliceOfficerIkon from './ikoner/PoliceOfficerIkon';
 import Arbeidstaker from './innhold/Arbeidstaker';
 
 import './beregning.less';
-import Selvstendig from "./innhold/Selvstendig";
-import HarYtelser from "./innhold/HarYtelser";
-import AndreInntekskilder from "./innhold/AndreInntekskilder";
+import Selvstendig from './innhold/Selvstendig';
+import HarYtelser from './innhold/HarYtelser';
+import AndreInntekskilder from './innhold/AndreInntekskilder';
 
-const pageSvg = require('../../../assets/page.svg').default;
+const beregningSvg = require('../../../assets/ark/beregning.svg').default;
 const cls = BEMHelper('beregning');
 
 const tabs: Innholdsfane[] = [
@@ -55,7 +55,7 @@ const Beregning: React.StatelessComponent<Props & IntlProps> = ({ id, lang }) =>
             className={cls.className}
             id={id}
             title={getTranslation('beregning', lang)}
-            svg={pageSvg}>
+            svg={beregningSvg}>
             <StrukturertTekst tekst={getContent('all-informasjon/beregning/beregning', lang)} />
             <Innholdsfaner tabs={tabs} section={section} />
         </PanelMedIllustrasjon>

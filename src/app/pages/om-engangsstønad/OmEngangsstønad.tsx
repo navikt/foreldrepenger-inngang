@@ -19,8 +19,8 @@ interface Props {
 }
 
 const engangsstønadSvg = require('../../assets/engangsstønad.svg').default;
-const utbetalingArkSvg = require('../../assets/ark/utbetaling.svg').default;
-const søknadsfristSvg = require('../../assets/ark/søknadsfrist.svg').default;
+const arbeidstakerSvg = require('../../assets/ark/arbeidstaker.svg').default;
+const søknadsfristSvg = require('../../assets/ark/frister.svg').default;
 const utbetalingSvg = require('../../assets/icons/utbetaling-til-deg.svg').default;
 const utbetalingstidSvg = require('../../assets/icons/utbetalingstid.svg').default;
 
@@ -66,7 +66,7 @@ const HvaErEngangsstønadWithoutIntl: React.StatelessComponent<IntlProps> = ({ l
 );
 
 const UtbetalingWithoutIntl: React.StatelessComponent<IntlProps> = ({ lang }) => (
-    <PanelMedIllustrasjon title={getTranslation('utbetaling', lang)} svg={utbetalingArkSvg}>
+    <PanelMedIllustrasjon title={getTranslation('utbetaling', lang)} svg={arbeidstakerSvg}>
         <StrukturertTekst tekst={getContent(utbetalingContent, lang)} />
     </PanelMedIllustrasjon>
 );
