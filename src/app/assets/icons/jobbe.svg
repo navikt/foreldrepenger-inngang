@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="62px" height="80px" viewBox="0 0 62 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.1 (67048) - http://www.bohemiancoding.com/sketch -->
+    <title>Illustrations/jobbe</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M-1.13686838e-13,13.3217227 L-1.13686838e-13,75.9572312 C-1.13686838e-13,78.1898902 1.80341708,80 4.02895891,80 L57.9733167,80 C60.1965829,80 62,78.1898902 62,75.9572312 L62,4.04276884 C62,1.81010978 60.1965829,0 57.9733167,0 L14.0211411,0 L-1.13686838e-13,13.3217227 Z" id="path-1"></path>
+    </defs>
+    <g id="Illustrations/jobbe" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <mask id="mask-2" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <g id="Mask"></g>
+        <g id="farger/-ark/-lys-grå" mask="url(#mask-2)" fill="#E4E4DB">
+            <g transform="translate(-9.185185, -11.428571)">
+                <rect x="0" y="0" width="79" height="102"></rect>
+            </g>
+        </g>
+        <g id="briefcase-24" mask="url(#mask-2)" stroke="#0A0A0A" stroke-linecap="round" stroke-linejoin="round">
+            <g transform="translate(19.000000, 29.000000)">
+                <polyline id="Path" points="8.26666667 3.3255814 8.26666667 0.255813953 15.7333333 0.255813953 15.7333333 3.3255814"></polyline>
+                <path d="M9.33333333,14.5813953 L0.266666667,14.5813953 L0.266666667,4.34883721 C0.266666667,3.78348837 0.744,3.3255814 1.33333333,3.3255814 L22.6666667,3.3255814 C23.256,3.3255814 23.7333333,3.78348837 23.7333333,4.34883721 L23.7333333,14.5813953 L14.6666667,14.5813953" id="Path"></path>
+                <path d="M22.6666667,17.1395349 L22.6666667,20.7209302 C22.6666667,21.2862791 22.1893333,21.744186 21.6,21.744186 L2.4,21.744186 C1.81066667,21.744186 1.33333333,21.2862791 1.33333333,20.7209302 L1.33333333,17.1395349" id="Path"></path>
+                <rect id="Rectangle" x="9.33333333" y="12.5348837" width="5.33333333" height="4.09302326"></rect>
+            </g>
+        </g>
+        <path d="M14.1486296,0 L14.1486296,9.28457143 C14.1486296,11.52 12.3288148,13.3314286 10.083037,13.3314286 L0,13.3314286 L14.1486296,0 Z" id="Fill-59" fill="#C9C9C9" mask="url(#mask-2)"></path>
+    </g>
+</svg>

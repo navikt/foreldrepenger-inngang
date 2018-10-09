@@ -11,7 +11,7 @@ const content = 'all-informasjon/jeg-vil-jobbe/jeg-vil-jobbe';
 const firstPanelContent = 'all-informasjon/jeg-vil-jobbe/heltidsjobb';
 const secondPanelContent = 'all-informasjon/jeg-vil-jobbe/deltidsjobb';
 
-const pageSvg = require('../../../assets/page.svg').default;
+const jobbeSvg = require('../../../assets/ark/jobbe.svg').default;
 const cls = BEMHelper('jegVilJobbe');
 
 interface Props {
@@ -24,7 +24,7 @@ const JegVilJobbe: React.StatelessComponent<Props & IntlProps> = ({ id, lang }) 
             id={id}
             className={cls.className}
             title={getTranslation('om_foreldrepenger.jobbe.tittel', lang)}
-            svg={pageSvg}>
+            svg={jobbeSvg}>
             <StrukturertTekst tekst={getContent(content, lang)} />
             <LesMer intro={getTranslation('om_foreldrepenger.jobbe.heltidsjobb', lang)}>
                 <StrukturertTekst tekst={getContent(firstPanelContent, lang)} />

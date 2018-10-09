@@ -4,7 +4,7 @@ import StrukturertTekst from '../../../components/strukturert-tekst/StrukturertT
 import PanelMedIllustrasjon from '../../../components/panel-med-illustrasjon/PanelMedIllustrasjon';
 import { getContent } from '../../../utils/getContent';
 
-const pageSvg = require('../../../assets/page.svg').default;
+const inntektSvg = require('../../../assets/ark/hatt-inntekt.svg').default;
 
 interface Props {
     id: string;
@@ -15,7 +15,7 @@ const JegHarHattInntekt: StatelessComponent<Props & IntlProps> = ({ id, lang }) 
         <PanelMedIllustrasjon
             id={id}
             title={getTranslation('jeg_har_hatt_inntekt', lang)}
-            svg={pageSvg}>
+            svg={inntektSvg}>
             <StrukturertTekst tekst={getContent('all-informasjon/jeg-har-hatt-inntekt', lang)} />
         </PanelMedIllustrasjon>
     );

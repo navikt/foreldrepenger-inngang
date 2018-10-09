@@ -5,7 +5,7 @@ import StrukturertTekst from '../../../components/strukturert-tekst/StrukturertT
 import LesMer from '../../../components/les-mer/LesMer';
 import { getContent } from '../../../utils/getContent';
 
-const pageSvg = require('../../../assets/page.svg').default;
+const adopsjonSvg = require('../../../assets/ark/adopsjon.svg').default;
 
 interface Props {
     id: string;
@@ -13,7 +13,7 @@ interface Props {
 
 const Adopjson: React.StatelessComponent<Props & IntlProps> = ({ id, lang }) => {
     return (
-        <PanelMedIllustrasjon id={id} title={getTranslation('adopsjon', lang)} svg={pageSvg}>
+        <PanelMedIllustrasjon id={id} title={getTranslation('adopsjon', lang)} svg={adopsjonSvg}>
             <StrukturertTekst tekst={getContent('all-informasjon/adopsjon/adopsjon', lang)} />
             <LesMer intro={getTranslation('om_foreldrepenger.adopsjon.når_starter', lang)}>
                 <StrukturertTekst

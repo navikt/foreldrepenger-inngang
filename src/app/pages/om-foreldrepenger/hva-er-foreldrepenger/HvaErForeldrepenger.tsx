@@ -15,7 +15,7 @@ import PanelMedIllustrasjon from '../../../components/panel-med-illustrasjon/Pan
 import { getTranslation, withIntl, IntlProps } from '../../../intl/intl';
 import { getContent } from '../../../utils/getContent';
 
-const pageSvg = require('../../../assets/page.svg').default;
+const infoSvg = require('../../../assets/ark/info.svg').default;
 
 const cls = BEMHelper('hvaErForeldrepenger');
 const tabs: Innholdsfane[] = [
@@ -60,7 +60,7 @@ const HvaErForeldrepenger: React.StatelessComponent<Props & IntlProps> = ({ id, 
         <PanelMedIllustrasjon
             id={id}
             title={getTranslation('om_foreldrepenger.hvor_lenge.tittel', lang)}
-            svg={pageSvg}>
+            svg={infoSvg}>
             <div className={cls.className}>
                 <StrukturertTekst
                     tekst={getContent(

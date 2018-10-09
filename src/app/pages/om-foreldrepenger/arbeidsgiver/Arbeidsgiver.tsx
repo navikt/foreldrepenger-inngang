@@ -7,7 +7,7 @@ import Lenke from './Lenke';
 import { getContent } from '../../../utils/getContent';
 import './arbeidsgiver.less';
 
-const pageSvg = require('../../../assets/page.svg').default;
+const arbeidsgiverSvg = require('../../../assets/ark/arbeidsgiver-og-deg.svg').default;
 
 const skjemaUrl =
     'https://www.nav.no/no/Bedrift/Skjemaer-for-arbeidsgivere/Skjemaer/Lonns-+og+personalskjemaer+for+din+bedrift/Inntekt+og+trekk';
@@ -26,7 +26,7 @@ const Arbeidsgiver: React.StatelessComponent<Props & IntlProps> = ({ id, lang })
             className={cls.className}
             id={id}
             title={getTranslation('om_foreldrepenger.arbeidsgiver.tittel', lang)}
-            svg={pageSvg}>
+            svg={arbeidsgiverSvg}>
             <StrukturertTekst
                 tekst={getContent('all-informasjon/arbeidsgiver/arbeidsgiver', lang)}
             />

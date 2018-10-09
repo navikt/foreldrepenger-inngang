@@ -11,7 +11,7 @@ import './ferie.less';
 
 const cls = BEMHelper('ferie');
 
-const pageSvg = require('../../../assets/page.svg').default;
+const ferieSvg = require('../../../assets/ark/ferie.svg').default;
 const content = 'all-informasjon/ferie/ferie';
 const rettTilUtsettelseContent = 'all-informasjon/ferie/rett-til-utsettelse';
 const fåUtsettelseContent = 'all-informasjon/ferie/få-utsettelse';
@@ -23,7 +23,7 @@ interface Props {
 
 const Ferie: React.StatelessComponent<Props & IntlProps> = ({ id, lang }) => {
     return (
-        <PanelMedIllustrasjon id={id} svg={pageSvg} title={getTranslation('ferie', lang)}>
+        <PanelMedIllustrasjon id={id} svg={ferieSvg} title={getTranslation('ferie', lang)}>
             <StrukturertTekst tekst={getContent(content, lang)} />
             <div className={cls.element('eksempel')}>
                 <TypografiBase type="element">

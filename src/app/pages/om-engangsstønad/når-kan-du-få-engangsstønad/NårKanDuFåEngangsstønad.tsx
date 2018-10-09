@@ -4,23 +4,25 @@ import Innholdsfaner from '../../../components/innholdsfaner/Innholdsfaner';
 import StrukturertTekst from '../../../components/strukturert-tekst/StrukturertTekst';
 import { getTranslation, Language, IntlProps, withIntl } from '../../../intl/intl';
 import { getContent } from '../../../utils/getContent';
+import CustomSVGFromSprite from '../../../utils/CustomSVG';
 
 const nårKanDuFåEngangsstønadContent =
     'om-engangsstønad/når-kan-du-få-engangsstønad/når-kan-du-få-engangsstønad';
 const adopsjonContent = 'om-engangsstønad/når-kan-du-få-engangsstønad/adopsjon';
 const fødselContent = 'om-engangsstønad/når-kan-du-få-engangsstønad/fødsel';
 
-const pageSvg = require('../../../assets/page.svg').default;
+const infoSvg = require('../../../assets/ark/info.svg').default;
+const barnevognSvg = require('../../../assets/icons/barnevogn.svg').default;
 
 const getTabs = (lang: Language) => [
     {
         label: 'fødsel',
-        icon: null,
+        icon: <CustomSVGFromSprite size={30} iconRef={barnevognSvg} />,
         component: <StrukturertTekst tekst={getContent(fødselContent, lang)} />
     },
     {
         label: 'adopsjon',
-        icon: null,
+        icon: <CustomSVGFromSprite size={30} iconRef={barnevognSvg} />,
         component: <StrukturertTekst tekst={getContent(adopsjonContent, lang)} />
     }
 ];
@@ -32,7 +34,7 @@ const NårKanDuFåEngangsstønad: React.StatelessComponent<IntlProps> = ({
 }) => (
     <PanelMedIllustrasjon
         title={getTranslation('om_engangsstønad.krav_tittel', lang)}
-        svg={pageSvg}>
+        svg={infoSvg}>
         <div>
             <StrukturertTekst tekst={getContent(nårKanDuFåEngangsstønadContent, lang)} />
             <Innholdsfaner tabs={getTabs(lang)} />

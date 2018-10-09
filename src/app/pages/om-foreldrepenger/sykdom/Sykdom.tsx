@@ -9,7 +9,7 @@ import StrukturertTekst from '../../../components/strukturert-tekst/StrukturertT
 import LesMer from '../../../components/les-mer/LesMer';
 import { getContent } from '../../../utils/getContent';
 
-const pageSvg = require('../../../assets/page.svg').default;
+const sykdomSvg = require('../../../assets/ark/sykdom.svg').default;
 const cls = BEMHelper('jegVilJobbe');
 const barn = require('../../../assets/barn/barn1.svg').default;
 
@@ -69,7 +69,7 @@ const Sykdom: React.StatelessComponent<Props & IntlProps> = ({ id, lang }) => {
         <PanelMedIllustrasjon
             id={id}
             className={cls.className}
-            svg={pageSvg}
+            svg={sykdomSvg}
             title={getTranslation('om_foreldrepenger.sykdom.tittel', lang)}>
             <Innholdsfaner tabs={tabs} />
         </PanelMedIllustrasjon>
