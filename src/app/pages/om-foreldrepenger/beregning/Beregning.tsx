@@ -22,22 +22,22 @@ const cls = BEMHelper('beregning');
 
 const tabs: Innholdsfane[] = [
     {
-        label: 'arbeidstaker_eller_frilanser',
+        label: 'om_foreldrepenger.beregning.arbeidstaker',
         icon: <ArbeidstakerIkon />,
         component: <Arbeidstaker />
     },
     {
-        label: 'selvstendig_næringsdrivende',
+        label: 'om_foreldrepenger.beregning.selvstendig',
         icon: <SelvstendigIkon />,
         component: <Selvstendig />
     },
     {
-        label: 'har_ytelse_fra_nav',
+        label: 'om_foreldrepenger.beregning.harYtelse',
         icon: <YtelseFraNavIkon />,
         component: <HarYtelser />
     },
     {
-        label: 'andre_inntektskilder',
+        label: 'om_foreldrepenger.beregning.andreInntektskilder',
         icon: <PoliceOfficerIkon />,
         component: <AndreInntekskilder />
     }

@@ -117,7 +117,11 @@
     "om_foreldrepenger.adopsjon.flere_barn": "Adopterer dere flere barn",
     "om_foreldrepenger.adopsjon.ikke_rett": "Adopsjon som ikke gir rett",
 
-    
+    "om_foreldrepenger.beregning.arbeidstaker":"Arbeidstaker eller frilanser",
+    "om_foreldrepenger.beregning.selvstendig":"Selvstendig næringsdrivende",
+    "om_foreldrepenger.beregning.harYtelse":"Har ytelser fra NAV",
+    "om_foreldrepenger.beregning.andreInntektskilder":"Andre inntektskilder",
+
     "om_engangsstønad.tittel": "All informasjon om engangsstønad",
     "om_engangsstønad.hva_er.tittel": "Hva er engangsstønad?",
     "om_engangsstønad.krav_tittel": "Når kan du få engangsstønad?",

@@ -13,6 +13,7 @@ import Adopsjon from './adopsjon/Adopsjon';
 import './omForeldrepenger.less';
 import Arbeidsgiver from './arbeidsgiver/Arbeidsgiver';
 import Sidebanner from '../../components/sidebanner/Sidebanner';
+import Beregning from './beregning/Beregning';
 
 const cls = BEMHelper('infosider');
 
@@ -49,7 +50,7 @@ const OmForeldrepenger: React.StatelessComponent<Props & IntlProps> = ({ locatio
                     <Sykdom id={sections[4]} />
                     {/* <HjemmeSamtidig id={sections[5]} /> */}
                     <JegHarHattInntekt id={sections[6]} />
-                    {/* <Beregning id={sections[7]} /> */}
+                    <Beregning id={sections[7]} />
                     <Adopsjon id={sections[8]} />
                     <Arbeidsgiver id={sections[9]} />
                 </article>
