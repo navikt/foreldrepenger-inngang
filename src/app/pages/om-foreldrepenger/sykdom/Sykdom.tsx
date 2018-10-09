@@ -8,6 +8,7 @@ import Innholdsfaner from '../../../components/innholdsfaner/Innholdsfaner';
 import StrukturertTekst from '../../../components/strukturert-tekst/StrukturertTekst';
 import LesMer from '../../../components/les-mer/LesMer';
 import { getContent } from '../../../utils/getContent';
+import Illustrasjon from './Illustrasjon';
 
 const sykdomSvg = require('../../../assets/ark/sykdom.svg').default;
 const cls = BEMHelper('jegVilJobbe');
@@ -29,6 +30,7 @@ const BarnetErInnlagtWithoutIntl: React.StatelessComponent<IntlProps> = ({ lang 
             <StrukturertTekst tekst={getContent(barnetErInnlagtUtsette, lang)} />
         </LesMer>
         <StrukturertTekst tekst={getContent(barnetErInnlagtForts, lang)} />
+        <Illustrasjon />
     </div>
 );
 
