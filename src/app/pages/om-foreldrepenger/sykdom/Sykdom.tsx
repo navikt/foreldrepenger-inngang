@@ -51,7 +51,7 @@ const tabs = [
     {
         label: 'om_foreldrepenger.sykdom.innlagt',
         component: <BarnetErInnlagt />,
-        icon: <CustomSVG iconRef={barn} size={48} />
+        icon: <CustomSVG iconRef={barn} size={32} />
     },
     {
         label: 'om_foreldrepenger.sykdom.foreldre_syke',
