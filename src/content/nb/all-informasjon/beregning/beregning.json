@@ -1,0 +1,39 @@
+[
+  {
+    "type": "avsnitt",
+    "style": "normaltekst",
+    "children": [
+      {
+        "type": "span",
+        "text": "Foreldrepengene skal dekke inntekten du vanligvis har, opptil "
+      },
+      {
+        "type": "span",
+        "text": "561 804 kroner",
+        "marks": ["bold"]
+      },
+      {
+        "type": "span",
+        "text": " ("
+      },
+      {
+        "type": "span",
+        "text": "6 ganger grunnbeløpet",
+        "marks": ["url_seks_ganger_grunnbeløpet"]
+      },
+      {
+        "type": "span",
+        "text": "). Her kan du lese om hvordan foreldrepengene beregnes."
+      }
+    ],
+    "markDefs": [
+      {
+        "key": "url_seks_ganger_grunnbeløpet",
+        "type": "link",
+        "href": "https://www.nav.no/no/NAV+og+samfunn/Kontakt+NAV/Utbetalinger/Snarveier/satser--380089?kap=383506"
+      }
+    ]
+  }
+
+
+]

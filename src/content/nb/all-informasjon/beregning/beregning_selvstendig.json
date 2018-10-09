@@ -1,0 +1,31 @@
+[
+  {
+    "type": "tittel",
+    "style": "undertittel",
+    "children": [
+      {
+      "type": "span",
+        "text": "Hvis du er selvstendig næringsdrivende eller frilanser"
+    }
+    ]
+  },
+  {
+    "type": "avsnitt",
+    "style": "normaltekst",
+    "children": [
+      {
+        "type": "span",
+        "text": "Foreldrepengene beregnes vanligvis etter "
+      },
+      {
+        "type": "span",
+        "text": "gjennomsnittet av inntekten din de tre siste årene. ",
+        "marks": ["bold"]
+      },
+      {
+        "type": "span",
+        "text": "Hvis virksomheten din eller arbeidssituasjonen er varig endret, kan inntekten du har når du går ut i permisjon brukes istedenfor de tre siste årene."
+      }
+    ]
+  }
+]

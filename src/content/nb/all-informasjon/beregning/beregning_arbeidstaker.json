@@ -1,0 +1,89 @@
+[
+  {
+    "type": "tittel",
+    "style": "undertittel",
+    "children": [
+      {
+        "type": "span",
+        "text": "Hvis du er arbeidstaker"
+      }
+    ]
+  },
+  {
+    "type": "avsnitt",
+    "style": "normaltekst",
+    "children": [
+      {
+        "type": "span",
+        "text": "Foreldrepengene dine beregnes vanligvis ut ifra "
+      },
+      {
+        "type": "span",
+        "text": "inntekten",
+        "marks": ["bold"]
+      },
+      {
+        "type": "span",
+        "text": " du har når foreldrepermisjonen din begynner. Hvis du har:"
+      }
+    ]
+  } ,
+  {
+    "type": "avsnitt",
+    "style": "normaltekst",
+    "level": 1,
+    "listItem": "bullet",
+    "children": [
+      {
+        "type": "span",
+        "text": "fast arbeidstid og månedslønn, brukes den siste måneden"
+      }
+    ]
+  },
+  {
+    "type": "avsnitt",
+    "style": "normaltekst",
+    "level": 1,
+    "listItem": "bullet",
+    "children": [
+      {
+        "type": "span",
+        "text": "fast arbeidstid og timelønn, brukes de siste fire ukene"
+      }
+    ]
+  },
+  {
+    "type": "avsnitt",
+    "style": "normaltekst",
+    "level": 1,
+    "listItem": "bullet",
+    "children": [
+      {
+        "type": "span",
+        "text": "varierende inntekt og/eller stillingsprosent, brukes et gjennomsnitt av de siste tre, seks eller ni månedene"
+      }
+    ]
+  },
+  {
+    "type": "avsnitt",
+    "style": "normaltekst",
+    "level": 1,
+    "listItem": "bullet",
+    "children": [
+      {
+        "type": "span",
+        "text": "nylig fått jobb eller endret lønn, brukes inntekten din etter endringen"
+      }
+    ]
+  },
+  {
+    "type": "avsnitt",
+    "style": "normaltekst",
+    "children": [
+      {
+        "type": "span",
+        "text": "Hvis inntekten din er 25 prosent større eller mindre enn det du har tjent de tre siste årene, vil enten den nåværende inntekten din brukes eller gjennomsnittet av de tre siste årene."
+      }
+    ]
+  }
+]
