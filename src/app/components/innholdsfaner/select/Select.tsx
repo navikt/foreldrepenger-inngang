@@ -12,8 +12,7 @@ import classnames from 'classnames';
 const cls = BEMHelper('select');
 
 interface SelectProps {
-    selected: string;
-    label: string;
+    selected: Innholdsfane;
     onChoiceSelect: (choice: number) => void;
     choices: Innholdsfane[];
 }
@@ -100,9 +99,12 @@ class Select extends React.Component<SelectProps, SelectState> {
                 className={classnames(cls.className, {
                     [cls.modifier('open')]: this.state.open
                 })}>
-                <TypografiBase type="normaltekst">
-                    {getTranslation(this.props.selected)}
-                </TypografiBase>
+                <div className={cls.element('selected')}>
+                    <div className={cls.element('selectedIcon')}>{this.props.selected.icon}</div>
+                    <TypografiBase type="normaltekst">
+                        {getTranslation(this.props.selected.label)}
+                    </TypografiBase>
+                </div>
                 <Chevron type={this.state.open ? 'opp' : 'ned'} />
             </div>
             <div className={this.state.open ? cls.element('popUp', 'open') : cls.element('popUp')}>
@@ -121,7 +123,7 @@ class Select extends React.Component<SelectProps, SelectState> {
                                 }}
                                 className={classnames(cls.element('choice'), {
                                     [cls.element('choice', 'selected')]:
-                                        this.props.selected === choice.label
+                                        this.props.selected.label === choice.label
                                 })}
                                 tabIndex={0}>
                                 <TypografiBase type="normaltekst">

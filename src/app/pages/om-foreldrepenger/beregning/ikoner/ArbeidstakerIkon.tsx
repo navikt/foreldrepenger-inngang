@@ -7,8 +7,8 @@ const ArbeidstakerIkon = () => {
     return (
         <div className={cls.className}>
             <svg
-                width="45px"
-                height="44px"
+                width="36px"
+                height="36px"
                 viewBox="0 0 45 44"
                 version="1.1"
                 xmlns="http://www.w3.org/2000/svg"
