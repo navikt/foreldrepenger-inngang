@@ -1,0 +1,40 @@
+[
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            { "type": "span", "text": "Hvis du er ", "marks": [] },
+            { "type": "span", "text": "aleneforelder", "marks": ["bold"] },
+            { "type": "span", "text": " eller ", "marks": [] },
+            {
+                "type": "span",
+                "text": "bare du har rett til foreldrepenger",
+                "marks": ["bold"]
+            },
+            {
+                "type": "span",
+                "text": " kan ikke den andre forelderen overta, men du kan utsette.",
+                "marks": []
+            }
+        ],
+        "markDefs": []
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Les mer om sykepenger",
+                "marks": ["url_Les_mer_om_sykepenger"]
+            }
+        ],
+        "markDefs": [
+            {
+                "key": "url_Les_mer_om_sykepenger",
+                "type": "link",
+                "href": "https://www.nav.no/no/Person/Arbeid/Sykmeldt%2C+arbeidsavklaringspenger+og+yrkesskade/Sykepenger/Sykepenger+til+arbeidstakere"
+            }
+        ]
+    }
+]
