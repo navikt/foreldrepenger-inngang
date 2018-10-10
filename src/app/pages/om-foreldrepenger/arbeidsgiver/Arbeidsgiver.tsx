@@ -11,8 +11,6 @@ const arbeidsgiverSvg = require('../../../assets/ark/arbeidsgiver.svg').default;
 
 const skjemaUrl =
     'https://www.nav.no/no/Bedrift/Skjemaer-for-arbeidsgivere/Skjemaer/Lonns-+og+personalskjemaer+for+din+bedrift/Inntekt+og+trekk';
-const kontonummerUrl =
-    'https://www.nav.no/no/Person/Skjemaer-for-privatpersoner/Skjemaer/Diverse/Endre+opplysninger+om+bankkontonummer';
 
 const cls = BEMHelper('arbeidsgiver');
 
@@ -32,7 +30,6 @@ const Arbeidsgiver: React.StatelessComponent<Props & IntlProps> = ({ id, lang })
             />
             <div className={cls.element('links')}>
                 <Lenke href={skjemaUrl} txt={'om_foreldrepenger.arbeidsgiver.link_skjema'} />
-                <Lenke href={kontonummerUrl} txt={'om_foreldrepenger.arbeidsgiver.kontonummer'} />
             </div>
         </PanelMedIllustrasjon>
     );
