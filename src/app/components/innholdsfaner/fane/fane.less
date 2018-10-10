@@ -11,28 +11,9 @@
     height: 120px;
     cursor: pointer;
     z-index: 0;
+
     @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
         z-index: 2;
-    }
-
-    &__background {
-        position: absolute;
-        z-index: -1;
-        border-radius: 50%;
-        height: 120px;
-        width: 120px;
-
-        @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-            z-index: 1;
-            margin-left: -62px;
-            margin-top: -17px;
-        }
-    }
-
-    @supports (-ms-ime-align: auto) {
-        &__background {
-            z-index: 1;
-        }
     }
 
     &--most {
@@ -75,66 +56,13 @@
     }
 
     &__pointer {
-        position: absolute;
+        visibility: hidden;
         z-index: -1;
-
-        @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-            z-index: 1;
-            margin-left: -8px;
-        }
-    }
-
-    &__pointerBefore {
         position: absolute;
-        height: 2px;
-        width: 80px;
-        left: -80px;
-        background: #efefef;
-        margin-top: 22px;
+        padding-top: 179px;
     }
 
-    &__pointerAfter {
-        position: absolute;
-        height: 2px;
-        width: 559px;
-        left: 10px;
-        background: #efefef;
-        margin-top: 22px;
-    }
-
-    @supports (-ms-ime-align: auto) {
-        &__pointer {
-            z-index: 1;
-        }
-    }
-    &__point-wrapper {
-        position: absolute;
-    }
-
-    &__indicator {
-        position: relative;
-        max-width: 100%;
-        margin-right: 23px;
-        margin-top: 120px;
-
-        @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-            margin-top: 20px;
-        }
-    }
-
-    &__pointer > svg {
-        position: absolute;
-        display: inline-block;
-        /*  padding-bottom: 10px; */
-
-        @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-            margin-top: 0px;
-        }
-    }
-}
-
-@supports (-ms-ime-align: auto) {
-    .fane {
-        z-index: 2;
+    &__pointer--selected {
+        visibility: visible;
     }
 }
