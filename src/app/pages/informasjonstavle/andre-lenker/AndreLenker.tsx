@@ -11,10 +11,6 @@ const links = [
         href: 'www.nav.no'
     },
     {
-        label: 'kontakt_oss',
-        href: 'www.nav.no'
-    },
-    {
         label: 'utbetalinger',
         href: 'www.nav.no'
     },
@@ -27,13 +23,13 @@ const links = [
         href: 'www.nav.no'
     },
     {
+        label: 'klager',
+        href: 'www.nav.no'
+    },
+    {
         label: 'viktige_frister',
         href: '/under-arbeid',
         internal: true
-    },
-    {
-        label: 'klager',
-        href: 'www.nav.no'
     },
     {
         label: 'regelverk',
