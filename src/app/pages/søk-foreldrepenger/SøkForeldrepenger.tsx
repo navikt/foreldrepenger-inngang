@@ -60,6 +60,7 @@ class SøkForeldrepenger extends Component<Props & IntlProps> {
                             </Tekstomrade>
                             <Datovelger
                                 date={this.state.selectedDate}
+                                dateIsValid={this.state.selectedDate && this.state.dateIsValid}
                                 onChange={(date: Date) => this.setDate(date)}
                                 parentCls={foreldrepengerCls}
                             />
