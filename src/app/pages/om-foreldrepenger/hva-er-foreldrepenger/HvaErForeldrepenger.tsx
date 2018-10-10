@@ -51,6 +51,8 @@ const tabs: Innholdsfane[] = [
     }
 ];
 
+const section = "hvaErForeldrepenger";
+
 interface Props {
     id: string;
 }
@@ -68,7 +70,7 @@ const HvaErForeldrepenger: React.StatelessComponent<Props & IntlProps> = ({ id, 
                         lang
                     )}
                 />
-                <Innholdsfaner tabs={tabs} />
+                <Innholdsfaner tabs={tabs} section={section} />
                 <MenHvaHvis />
             </div>
         </PanelMedIllustrasjon>

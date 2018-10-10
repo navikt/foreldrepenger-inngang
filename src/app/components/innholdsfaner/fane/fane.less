@@ -84,6 +84,24 @@
         }
     }
 
+    &__pointerBefore {
+        position: absolute;
+        height: 2px;
+        width: 80px;
+        left: -80px;
+        background: #efefef;
+        margin-top: 22px;
+    }
+
+    &__pointerAfter {
+        position: absolute;
+        height: 2px;
+        width: 559px;
+        left: 10px;
+        background: #efefef;
+        margin-top: 22px;
+    }
+
     @supports (-ms-ime-align: auto) {
         &__pointer {
             z-index: 1;
@@ -98,15 +116,19 @@
         max-width: 100%;
         margin-right: 23px;
         margin-top: 120px;
-    }
-
-    &__pointer > span {
-        position: absolute;
-        display: inline-block;
-        padding-bottom: 10px;
 
         @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-            margin-top: -99px;
+            margin-top: 20px;
+        }
+    }
+
+    &__pointer > svg {
+        position: absolute;
+        display: inline-block;
+        /*  padding-bottom: 10px; */
+
+        @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+            margin-top: 0px;
         }
     }
 }
