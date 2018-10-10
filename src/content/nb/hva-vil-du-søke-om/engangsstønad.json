@@ -20,23 +20,5 @@
                 "marks": []
             }
         ]
-    },
-    {
-        "type": "avsnitt",
-        "style": "normaltekst",
-        "children": [
-            {
-                "type": "span",
-                "text": "Les mer om hvem som kan få engangsstønad",
-                "marks": ["url_engangsstønad"]
-            }
-        ],
-        "markDefs": [
-            {
-                "key": "url_engangsstønad",
-                "type": "link",
-                "href": "https://www.nav.no/no/Person/Familie/Venter+du+barn/engangsst%C3%B8nad-ved-f%C3%B8dsel-og-adopsjon" 
-            }
-        ]
     }
 ]

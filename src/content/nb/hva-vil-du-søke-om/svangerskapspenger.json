@@ -9,23 +9,5 @@
                 "marks": []
             }
         ]
-    },
-    {
-        "type": "avsnitt",
-        "style": "normaltekst",
-        "children": [
-            {
-                "type": "span",
-                "text": "Les mer om hvem som kan få svangerskapspenger",
-                "marks": ["url_svangerskapspenger"]
-            }
-        ],
-        "markDefs": [
-            {
-                "key": "url_svangerskapspenger",
-                "type": "link",
-                "href": "https://www.nav.no/no/Person/Familie/Venter+du+barn/svangerskapspenger" 
-            }
-        ]
     }
 ]

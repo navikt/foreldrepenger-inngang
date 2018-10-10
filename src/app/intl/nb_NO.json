@@ -72,6 +72,7 @@
     "søk_foreldrepenger.tittel": "Søk om foreldrepenger",
     "søk_foreldrepenger.informasjon": "Du kan tidligst sende inn søknad seks uker før du skal ta ut foreldrepengene dine. Skal du vente med å ta ut foreldrepengene dine, gjelder dette også deg.",
     "søk_foreldrepenger.knapp": "Begynn søknad om foreldrepenger",
+    "søk_foreldrepenger.knappMobil": "Begynn søknad",
     "søk_foreldrepenger.advarselmelding": "Du søker tidligere enn 6 uker før du skal ta ut foreldrepenger. Du kan begynne på søknaden, men det vil ikke være mulig å sende den inn før ",
     "søk_foreldrepenger.første_dag_spørsmål": "Når er første dag med uttak eller utsettelse?",
 
@@ -118,6 +119,7 @@
     "om_foreldrepenger.adopsjon.flere_barn": "Adopterer dere flere barn",
     "om_foreldrepenger.adopsjon.ikke_rett": "Adopsjon som ikke gir rett",
 
+    "om_foreldrepenger.beregning.tittel": "Hva kan jeg få?",
     "om_foreldrepenger.beregning.arbeidstaker":"Arbeidstaker eller frilanser",
     "om_foreldrepenger.beregning.selvstendig":"Selvstendig næringsdrivende",
     "om_foreldrepenger.beregning.harYtelse":"Har ytelser fra NAV",

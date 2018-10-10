@@ -14,6 +14,7 @@ import { datoErOmMindreEnnSeksUker } from '../../utils/datoUtils';
 import VeilederMessage from './Veiledermelding';
 import Datovelger from './Datovelger';
 import externalUrls from '../../utils/externalUrls';
+import MediaQuery from 'react-responsive';
 
 import './søkForeldrepenger.less';
 
@@ -60,6 +61,7 @@ class SøkForeldrepenger extends Component<Props & IntlProps> {
                             </Tekstomrade>
                             <Datovelger
                                 date={this.state.selectedDate}
+                                dateIsValid={this.state.selectedDate && this.state.dateIsValid}
                                 onChange={(date: Date) => this.setDate(date)}
                                 parentCls={foreldrepengerCls}
                             />
@@ -75,10 +77,18 @@ class SøkForeldrepenger extends Component<Props & IntlProps> {
                                     tabIndex={-1}
                                     href={externalUrls.søk_foreldrepenger_eller_engangsstønad}>
                                     <KnappBase type="hoved" role="link">
-                                        {getTranslation(
-                                            'søk_foreldrepenger.knapp',
-                                            this.props.lang
-                                        )}
+                                        <MediaQuery query="(max-width: 575px)">
+                                            {getTranslation(
+                                                'søk_foreldrepenger.knappMobil',
+                                                this.props.lang
+                                            )}
+                                        </MediaQuery>
+                                        <MediaQuery query="(min-width: 576px)">
+                                            {getTranslation(
+                                                'søk_foreldrepenger.knapp',
+                                                this.props.lang
+                                            )}
+                                        </MediaQuery>
                                     </KnappBase>
                                 </a>
                             )}

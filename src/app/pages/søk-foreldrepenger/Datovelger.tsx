@@ -5,14 +5,24 @@ import TypografiBase from 'nav-frontend-typografi';
 import { BEMWrapper } from '../../utils/bem';
 import { getTranslation, withIntl, IntlProps } from '../../intl/intl';
 import { StatelessComponent } from 'enzyme';
+import CustomSVGFromSprite from 'app/utils/CustomSVG';
+
+const okIcon = require('nav-frontend-ikoner-assets/assets/ok-sirkel.svg').default;
 
 interface Props {
     date: any;
+    dateIsValid: boolean;
     onChange: (date: Date) => void;
     parentCls: BEMWrapper;
 }
 
-const Datovelger: StatelessComponent<Props & IntlProps> = ({ date, onChange, parentCls, lang }) => {
+const Datovelger: StatelessComponent<Props & IntlProps> = ({
+    date,
+    dateIsValid,
+    onChange,
+    parentCls,
+    lang
+}) => {
     return (
         <div
             aria-label="Datovelger"
@@ -21,17 +31,19 @@ const Datovelger: StatelessComponent<Props & IntlProps> = ({ date, onChange, par
             <TypografiBase type="element">
                 {getTranslation('søk_foreldrepenger.første_dag_spørsmål', lang)}
             </TypografiBase>
-            <NavDatovelger.Datovelger
-                kanVelgeUgyldigDato={true}
-                id="foreldrepenger-startdato"
-                locale="no"
-                dato={date}
-                onChange={(newDate: Date) => onChange(newDate)}
-                input={{
-                    placeholder: 'dd.mm.åååå'
-                }}
-            />
-            {}
+            <div className={parentCls.element('container')}>
+                <NavDatovelger.Datovelger
+                    kanVelgeUgyldigDato={true}
+                    id="foreldrepenger-startdato"
+                    locale="no"
+                    dato={date}
+                    onChange={(newDate: Date) => onChange(newDate)}
+                    input={{
+                        placeholder: 'dd.mm.åååå'
+                    }}
+                />
+                {dateIsValid && <CustomSVGFromSprite iconRef={okIcon} size={24} />}
+            </div>
         </div>
     );
 };
