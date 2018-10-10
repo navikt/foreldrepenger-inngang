@@ -29,7 +29,7 @@ const sections = [
     'sykdom',
     'hjemme-samtidig',
     'jeg-har-hatt-inntekt',
-    'beregning',
+    'hva-kan-jeg-fa',
     'adopsjon',
     'arbeidsgiver'
 ];

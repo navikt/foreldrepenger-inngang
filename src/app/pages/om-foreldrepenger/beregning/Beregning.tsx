@@ -54,7 +54,7 @@ const Beregning: React.StatelessComponent<Props & IntlProps> = ({ id, lang }) =>
         <PanelMedIllustrasjon
             className={cls.className}
             id={id}
-            title={getTranslation('beregning', lang)}
+            title={getTranslation('om_foreldrepenger.beregning.tittel', lang)}
             svg={beregningSvg}>
             <StrukturertTekst tekst={getContent('all-informasjon/beregning/beregning', lang)} />
             <Innholdsfaner tabs={tabs} section={section} />
