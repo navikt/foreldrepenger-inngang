@@ -107,6 +107,7 @@
     "om_foreldrepenger.sykdom.foreldre_syke": "En av foreldrene er syke",
     "om_foreldrepenger.sykdom.innlagt.utsette": "Slik går du frem for å utsette",
     "om_foreldrepenger.sykdom.innlagt.overta": "Slik går du frem for å overta",
+    "om_foreldrepenger.sykdom.innlagt.eksempeltittel": "Slik vil tidslinjen se ut:",
 
     "om_foreldrepenger.arbeidsgiver.tittel": "Arbeidsgiver og deg",
     "om_foreldrepenger.arbeidsgiver.link_skjema": "Skjema for inntektsopplysninger for arbeidstaker (pdf)",

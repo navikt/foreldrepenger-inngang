@@ -9,6 +9,7 @@ import StrukturertTekst from '../../../components/strukturert-tekst/StrukturertT
 import LesMer from '../../../components/les-mer/LesMer';
 import { getContent } from '../../../utils/getContent';
 import Illustrasjon from './Illustrasjon';
+import TypografiBase from 'nav-frontend-typografi';
 
 const sykdomSvg = require('../../../assets/ark/sykdom.svg').default;
 const cls = BEMHelper('jegVilJobbe');
@@ -30,7 +31,6 @@ const BarnetErInnlagtWithoutIntl: React.StatelessComponent<IntlProps> = ({ lang 
             <StrukturertTekst tekst={getContent(barnetErInnlagtUtsette, lang)} />
         </LesMer>
         <StrukturertTekst tekst={getContent(barnetErInnlagtForts, lang)} />
-        <Illustrasjon />
     </div>
 );
 
@@ -43,6 +43,10 @@ const EnAvForeldreneErSykeWithoutIntl: React.StatelessComponent<IntlProps> = ({ 
         <LesMer intro={getTranslation('om_foreldrepenger.sykdom.innlagt.overta', lang)}>
             <StrukturertTekst tekst={getContent(sykeOverta, lang)} />
         </LesMer>
+        <TypografiBase className={cls.element('eksempeltekst')} type="element">
+            {getTranslation('om_foreldrepenger.sykdom.innlagt.eksempeltittel')}
+        </TypografiBase>
+        <Illustrasjon />
     </div>
 );
 
