@@ -59,7 +59,7 @@ class App extends React.Component<{}, State> {
                     lang: this.state.currentLanguage,
                     setLanguage: this.setLanguage
                 }}>
-                <div>
+                <div lang={this.state.currentLanguage}>
                     <div className={cls.element('topBanner')}>
                         <span
                             onClick={this.toggleBetweenNbAndNn}

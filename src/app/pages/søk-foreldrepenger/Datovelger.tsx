@@ -33,6 +33,7 @@ const Datovelger: StatelessComponent<Props & IntlProps> = ({
             </TypografiBase>
             <div className={parentCls.element('container')}>
                 <NavDatovelger.Datovelger
+                    aria-label="datovelger"
                     kanVelgeUgyldigDato={true}
                     id="foreldrepenger-startdato"
                     locale="no"
