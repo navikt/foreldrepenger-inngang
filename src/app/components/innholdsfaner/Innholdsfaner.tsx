@@ -5,6 +5,7 @@ import Fane, { Innholdsfane } from './fane/Fane';
 import MediaQuery from 'react-responsive';
 import { getTranslation, IntlProps, withIntl } from '../../intl/intl';
 import Select from './select/Select';
+import TypografiBase from 'nav-frontend-typografi';
 
 const cls = BEMHelper('innholdsfaner');
 
@@ -71,9 +72,11 @@ class Innholdsfaner extends React.Component<Props> {
         <div className={cls.className}>
             <MediaQuery query="(max-width: 799px)">
                 <div className={cls.element('faner')}>
+                    <TypografiBase className={cls.element('fanetittel')} type="element">
+                        {getTranslation('om_foreldrepenger.faner.label', this.props.lang)}
+                    </TypografiBase>
                     <Select
-                        selected={this.props.tabs[this.state.currentTab].label}
-                        label={getTranslation('om_foreldrepenger.faner.label', this.props.lang)}
+                        selected={this.props.tabs[this.state.currentTab]}
                         choices={this.props.tabs}
                         onChoiceSelect={(index: number) => {
                             this.onTabSelect(index);
