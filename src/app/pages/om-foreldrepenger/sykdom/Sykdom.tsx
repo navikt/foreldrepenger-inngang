@@ -21,6 +21,7 @@ const barnetErInnlagtForts =
 const barnetErInnlagtUtsette = 'all-informasjon/sykdom/barnet-er-innlagt/utsette';
 
 const syke = 'all-informasjon/sykdom/en-av-foreldrene-er-syke/en-av-foreldrene-er-syke';
+const syke2 = 'all-informasjon/sykdom/en-av-foreldrene-er-syke/en-av-foreldrene-er-syke-del2';
 const sykeUtsette = 'all-informasjon/sykdom/en-av-foreldrene-er-syke/utsette';
 const sykeOverta = 'all-informasjon/sykdom/en-av-foreldrene-er-syke/overta';
 
@@ -37,16 +38,17 @@ const BarnetErInnlagtWithoutIntl: React.StatelessComponent<IntlProps> = ({ lang 
 const EnAvForeldreneErSykeWithoutIntl: React.StatelessComponent<IntlProps> = ({ lang }) => (
     <div>
         <StrukturertTekst tekst={getContent(syke, lang)} />
+        <TypografiBase className={cls.element('eksempeltekst')} type="element">
+            {getTranslation('om_foreldrepenger.sykdom.innlagt.eksempeltittel')}
+        </TypografiBase>
+        <Illustrasjon />
+        <StrukturertTekst tekst={getContent(syke2, lang)} />
         <LesMer intro={getTranslation('om_foreldrepenger.sykdom.innlagt.utsette', lang)}>
             <StrukturertTekst tekst={getContent(sykeUtsette, lang)} />
         </LesMer>
         <LesMer intro={getTranslation('om_foreldrepenger.sykdom.innlagt.overta', lang)}>
             <StrukturertTekst tekst={getContent(sykeOverta, lang)} />
         </LesMer>
-        <TypografiBase className={cls.element('eksempeltekst')} type="element">
-            {getTranslation('om_foreldrepenger.sykdom.innlagt.eksempeltittel')}
-        </TypografiBase>
-        <Illustrasjon />
     </div>
 );
 
