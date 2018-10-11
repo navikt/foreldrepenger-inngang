@@ -7,33 +7,29 @@ import './andreLenker.less';
 
 const links = [
     {
-        label: 'antatt_saksbehandlingstid',
-        href: 'www.nav.no'
+        label: 'informasjonstavle.andre_lenker.i_utlandet',
+        href:
+            'https://www.nav.no/no/Person/Familie/Venter+du+barn/Relatert+informasjon/foreldrepenger-og-utland'
     },
     {
-        label: 'utbetalinger',
-        href: 'www.nav.no'
+        label: 'informasjonstavle.andre_lenker.meld_fra',
+        href:
+            'https://www.nav.no/no/NAV+og+samfunn/Om+NAV/Relatert+informasjon/du-har-plikt-til-%C3%A5-gi-nav-riktige-opplysningerhttps:/www.nav.no/no/NAV+og+samfunn/Om+NAV/Relatert+informasjon/du-har-plikt-til-%C3%A5-gi-nav-riktige-opplysninger'
     },
     {
-        label: 'foreldrepenger_hvis_utland',
-        href: 'www.nav.no'
-    },
-    {
-        label: 'meld_fra_om_endringer',
-        href: 'www.nav.no'
-    },
-    {
-        label: 'klager',
-        href: 'www.nav.no'
-    },
-    {
-        label: 'viktige_frister',
+        label: 'informasjonstavle.andre_lenker.søke_i_rett_tid',
         href: '/under-arbeid',
         internal: true
     },
     {
-        label: 'regelverk',
-        href: 'www.nav.no'
+        label: 'informasjonstavle.andre_lenker.klage',
+        href:
+            'https://www.nav.no/no/NAV+og+samfunn/Kontakt+NAV/Klage+ris+og+ros/Klagerettigheterhttps:/www.nav.no/no/NAV+og+samfunn/Kontakt+NAV/Klage+ris+og+ros/Klagerettigheter'
+    },
+    {
+        label: 'informasjonstavle.andre_lenker.regelverk',
+        href:
+            'https://www.nav.no/rettskildene/Forside/Folketrygdloven/kapittel-14-ytelser-ved-svangerskap-f%C3%B8dsel-og-adopsjon'
     }
 ];
 
@@ -50,7 +46,9 @@ const AndreLenker: React.StatelessComponent<IntlProps> = ({ lang }) => {
 
     return (
         <div className={cls.className}>
-            <TypografiBase type="undertittel">{getTranslation('andre_lenker', lang)}</TypografiBase>
+            <TypografiBase type="undertittel">
+                {getTranslation('informasjonstavle.andre_lenker.tittel', lang)}
+            </TypografiBase>
             <nav className={cls.element('links')}>{otherLinks}</nav>
         </div>
     );
