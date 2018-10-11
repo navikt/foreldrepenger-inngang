@@ -39,7 +39,13 @@ export const WithLink = ({
     children: ReactNode;
 }) => {
     if (urlIsExternal) {
-        if (navlab) {
+        if (noStyling) {
+            return (
+                <a className={className} href={navlab ? '/under-arbeid' : url}>
+                    {children}
+                </a>
+            );
+        } else if (navlab) {
             return (
                 <span
                     title="Lenke under arbeid"
@@ -49,13 +55,6 @@ export const WithLink = ({
             );
         }
 
-        if (noStyling) {
-            return (
-                <a className={className} href={url}>
-                    {children}
-                </a>
-            );
-        }
         return (
             <Lenke className={classnames(cls.className, className)} href={url}>
                 {children}
