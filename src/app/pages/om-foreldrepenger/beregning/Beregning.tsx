@@ -17,7 +17,7 @@ import Selvstendig from './innhold/Selvstendig';
 import HarYtelser from './innhold/HarYtelser';
 import AndreInntekskilder from './innhold/AndreInntekskilder';
 
-const beregningSvg = require('../../../assets/ark/beregning.svg').default;
+const beregningSvg = require('../../../assets/ark/ark-beregning.svg').default;
 const cls = BEMHelper('beregning');
 
 const tabs: Innholdsfane[] = [

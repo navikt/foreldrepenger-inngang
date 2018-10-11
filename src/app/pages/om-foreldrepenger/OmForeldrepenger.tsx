@@ -31,7 +31,7 @@ const sections = [
     'jeg-har-hatt-inntekt',
     'hva-kan-jeg-fa',
     'adopsjon',
-    'arbeidsgiver'
+    'arbeidsgiver-og-deg'
 ];
 
 const OmForeldrepenger: React.StatelessComponent<Props & IntlProps> = ({ location, lang }) => {

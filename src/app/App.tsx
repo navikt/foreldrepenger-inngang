@@ -59,19 +59,26 @@ class App extends React.Component<{}, State> {
                     lang: this.state.currentLanguage,
                     setLanguage: this.setLanguage
                 }}>
-                <div>
-                    <div className={cls.element('topBanner')}>
-                        <span
+                <div lang={this.state.currentLanguage}>
+                    {process.env.NODE_ENV !== 'navlab' && (
+                        <Språkbanner
                             onClick={this.toggleBetweenNbAndNn}
-                            className={cls.element('byttSpråkKnapp')}>
-                            <TypografiBase type="normaltekst">{languageChangeText}</TypografiBase>
-                        </span>
-                    </div>
+                            label={languageChangeText}
+                        />
+                    )}
                     <Router />
                 </div>
             </IntlContext.Provider>
         );
     };
 }
+
+const Språkbanner = ({ onClick, label }: { onClick: () => void; label: string }) => (
+    <div className={cls.element('topBanner')}>
+        <span onClick={onClick} className={cls.element('byttSpråkKnapp')}>
+            <TypografiBase type="normaltekst">{label}</TypografiBase>
+        </span>
+    </div>
+);
 
 export default App;

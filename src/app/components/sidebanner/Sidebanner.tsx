@@ -8,7 +8,7 @@ const cls = BEMHelper('sidebanner');
 const Sidebanner = ({ text }: { text: string }) => {
     return (
         <header className={cls.className}>
-            <TypografiBase type="undertittel">{text}</TypografiBase>
+            <TypografiBase type="sidetittel">{text}</TypografiBase>
         </header>
     );
 };

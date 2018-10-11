@@ -40,7 +40,7 @@
             {
                 "type": "span",
                 "text": "Les mer om pleiepenger for pleie av sykt barn",
-                "marks": ["url_Les_mer_om_pleiepenger_for_pleie_av_sykt_barn"]
+                "marks": ["url_Les_mer_om_pleiepenger_for_pleie_av_sykt_barn", "external_link"]
             }
         ],
         "markDefs": [

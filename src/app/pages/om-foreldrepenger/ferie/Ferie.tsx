@@ -11,7 +11,7 @@ import './ferie.less';
 
 const cls = BEMHelper('ferie');
 
-const ferieSvg = require('../../../assets/ark/ferie.svg').default;
+const ferieSvg = require('../../../assets/ark/ark-ferie.svg').default;
 const content = 'all-informasjon/ferie/ferie';
 const rettTilUtsettelseContent = 'all-informasjon/ferie/rett-til-utsettelse';
 const fåUtsettelseContent = 'all-informasjon/ferie/få-utsettelse';

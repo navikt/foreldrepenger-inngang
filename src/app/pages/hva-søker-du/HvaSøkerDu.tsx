@@ -1,5 +1,4 @@
 import * as React from 'react';
-import TypografiBase from 'nav-frontend-typografi';
 import Breadcrumbs from '../../components/breadcrumbs/Breadcrumbs';
 import BEMHelper from '../../utils/bem';
 
@@ -8,6 +7,7 @@ import Engangsstonad from './Engangsstonad';
 import Svangerskapspenger from './Svangerskapspenger';
 import { getTranslation, withIntl, IntlProps } from '../../intl/intl';
 import SvgBanner from '../../components/svg-banner/SvgBanner';
+import Sidebanner from 'app/components/sidebanner/Sidebanner';
 
 import './hvaSøkerDu.less';
 
@@ -20,11 +20,7 @@ interface Props {
 const HvaSøkerDu: React.StatelessComponent<Props & IntlProps> = ({ location, lang }) => {
     return (
         <div className={cls.className}>
-            <header className={cls.element('header')}>
-                <TypografiBase type="undertittel">
-                    {getTranslation('hva_søker_du.tittel', lang)}
-                </TypografiBase>
-            </header>
+            <Sidebanner text={getTranslation('hva_søker_du.tittel', lang)} />
             <main className={cls.element('body')}>
                 <article className={cls.element('content')}>
                     <Breadcrumbs path={location.pathname} />

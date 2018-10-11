@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
 import classnames from 'classnames';
-
-import TypografiBase from 'nav-frontend-typografi';
 import Tekstomrade from 'nav-frontend-tekstomrade';
 import KnappBase from 'nav-frontend-knapper';
-
 import Breadcrumbs from '../../components/breadcrumbs/Breadcrumbs';
 import BEMHelper from '../../utils/bem';
 import { getTranslation, IntlProps, withIntl } from '../../intl/intl';
@@ -15,6 +12,7 @@ import VeilederMessage from './Veiledermelding';
 import Datovelger from './Datovelger';
 import externalUrls from '../../utils/externalUrls';
 import MediaQuery from 'react-responsive';
+import Sidebanner from 'app/components/sidebanner/Sidebanner';
 
 import './søkForeldrepenger.less';
 
@@ -46,11 +44,7 @@ class SøkForeldrepenger extends Component<Props & IntlProps> {
     render = () => {
         return (
             <div className={classnames(hvaSøkerDuCls.className, foreldrepengerCls.className)}>
-                <header className={hvaSøkerDuCls.element('header')}>
-                    <TypografiBase type="undertittel">
-                        {getTranslation('søk_foreldrepenger.tittel', this.props.lang)}
-                    </TypografiBase>
-                </header>
+                <Sidebanner text={getTranslation('søk_foreldrepenger.tittel', this.props.lang)} />
                 <main className={hvaSøkerDuCls.element('body')}>
                     <div className={hvaSøkerDuCls.element('content')}>
                         <Breadcrumbs path={location.pathname} />
@@ -75,7 +69,11 @@ class SøkForeldrepenger extends Component<Props & IntlProps> {
                             {this.state.selectedDate && (
                                 <a
                                     tabIndex={-1}
-                                    href={externalUrls.søk_foreldrepenger_eller_engangsstønad}>
+                                    href={
+                                        process.env.NODE_ENV === 'navlab'
+                                            ? '/under-arbeid'
+                                            : externalUrls.søk_foreldrepenger_eller_engangsstønad
+                                    }>
                                     <KnappBase type="hoved" role="link">
                                         <MediaQuery query="(max-width: 575px)">
                                             {getTranslation(

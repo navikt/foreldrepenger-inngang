@@ -120,7 +120,10 @@ const MarkWrapper = ({
             const external = otherMarks.includes('external_link');
 
             return (
-                <WithLink urlIsExternal={true} addExternalIcon={external} url={mark.href || '/#'}>
+                <WithLink
+                    urlIsExternal={external}
+                    addExternalIcon={external}
+                    url={mark.href || '/#'}>
                     {children}
                 </WithLink>
             );

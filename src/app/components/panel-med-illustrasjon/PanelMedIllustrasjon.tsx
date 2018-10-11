@@ -32,11 +32,15 @@ const PanelMedIllustrasjon = ({
         );
     }
 
+    if (id === 'sykdom') {
+        console.warn('sykdomSvg:', svg);
+    }
+
     return (
         <section aria-label={title} id={id} className={className}>
             <PanelBase className={cls.className}>
                 {illustration}
-                <TypografiBase type="systemtittel">{title}</TypografiBase>
+                <TypografiBase type="innholdstittel">{title}</TypografiBase>
                 <div className={cls.element('divider')} />
                 {children}
             </PanelBase>

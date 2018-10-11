@@ -2,7 +2,7 @@ import * as React from 'react';
 
 const Illustrasjon = () => (
     <svg height="65px" width="100%" version="1.1" viewBox="0 0 622 65">
-        <g id="Illustrasjon/Sykdom" fill="none" stroke="none" strokeWidth="1">
+        <g id="sykdomstidslinje" fill="none" stroke="none" strokeWidth="1">
             <rect height="65" width="622" fill="#FFFFFF" x="0" y="0" />
             <rect
                 height="27"
