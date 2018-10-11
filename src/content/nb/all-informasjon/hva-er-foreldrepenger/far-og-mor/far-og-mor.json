@@ -3,11 +3,9 @@
         "type": "avsnitt",
         "style": "normaltekst",
         "children": [
-            { "type": "span", "text": "Når ", "marks": [] },
-            { "type": "span", "text": "begge foreldrene", "marks": ["bold"] },
             {
                 "type": "span",
-                "text": " har rett til foreldrepenger består foreldrepengeperioden av mors del, medmors del og en felles del som dere kan dele.",
+                "text": "Når begge foreldrene har rett til foreldrepenger består foreldrepengeperioden av mødrekvoten, fedrekvoten og en fellesperiode som dere kan dele.",
                 "marks": []
             }
         ],
@@ -19,17 +17,7 @@
         "children": [
             {
                 "type": "span",
-                "text": "Hvor mange barn dere venter og om dere tar ",
-                "marks": []
-            },
-            {
-                "type": "span",
-                "text": "100 eller 80 prosent foreldrepenger",
-                "marks": ["bold"]
-            },
-            {
-                "type": "span",
-                "text": ", bestemmer hvor mange uker dere kan få. Den totale utbetalingen blir høyere ved å velge 100 prosent.",
+                "text": "Hvor mange barn dere venter og om dere velger 100 eller 80 prosent foreldrepenger, avgjør hvor mange uker dere kan få. Den totale utbetalingen blir høyere ved å velge 100 prosent.",
                 "marks": []
             }
         ],

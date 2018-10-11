@@ -10,10 +10,14 @@
 
     @media (min-width: @mobile-breakpoint) {
         border-radius: 4px;
-        grid-template-columns: repeat(11, 1fr);
+        grid-template-columns: repeat(12, 1fr);
 
         .typo-normal {
             grid-column: span 4;
+
+            &:nth-child(3n-1) {
+                grid-column: span 5;
+            }
 
             &:nth-child(3n) {
                 grid-column: span 3;

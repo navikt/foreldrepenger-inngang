@@ -1,0 +1,80 @@
+[
+  {
+      "type": "avsnitt",
+      "style": "normaltekst",
+      "children": [
+          {
+              "type": "span",
+              "text": "Foreldrepengene beregnes vanligvis til det samme som det du får utbetalt allerede. Hvis du mottar:",
+              "marks": []
+          }
+      ],
+      "markDefs": []
+  },
+  {
+      "type": "avsnitt",
+      "style": "normaltekst",
+      "listItem": "bullet",
+      "level": 1,
+      "children": [
+          { "type": "span", "text": "Dagpenger", "marks": ["bold"] },
+          {
+              "type": "span",
+              "text": " beregnes foreldrepengene lik det du får utbetalt i dagpenger. Jobber du i tillegg beregnes foreldrepengene utfra både arbeidsinntekten din og dagpengene.",
+              "marks": []
+          }
+      ]
+  },
+  {
+      "type": "avsnitt",
+      "style": "normaltekst",
+      "listItem": "bullet",
+      "level": 1,
+      "children": [
+          {
+              "type": "span",
+              "text": "Arbeidsavklaringspenger",
+              "marks": ["bold"]
+          },
+          {
+              "type": "span",
+              "text": ", beregnes foreldrepengene lik det du får utbetalt i arbeidsavklaringspenger.",
+              "marks": []
+          }
+      ]
+  },
+  {
+      "type": "avsnitt",
+      "style": "normaltekst",
+      "listItem": "bullet",
+      "level": 1,
+      "children": [
+          {
+              "type": "span",
+              "text": "Sykepenger, svangerskapspenger",
+              "marks": ["bold"]
+          },
+          { "type": "span", "text": " eller ", "marks": [] },
+          { "type": "span", "text": "pleiepenger", "marks": ["bold"] },
+          {
+              "type": "span",
+              "text": ", beregnes foreldrepengene etter samme inntektsgrunnlag som for disse ytelsene.",
+              "marks": []
+          }
+      ]
+  },
+  {
+      "type": "avsnitt",
+      "style": "normaltekst",
+      "listItem": "bullet",
+      "level": 1,
+      "children": [
+          { "type": "span", "text": "Foreldrepenger", "marks": ["bold"] },
+          {
+              "type": "span",
+              "text": ", beregnes foreldrepengene lik det du fikk utbetalt i forrige foreldrepengeperiode.",
+              "marks": []
+          }
+      ]
+  }
+]

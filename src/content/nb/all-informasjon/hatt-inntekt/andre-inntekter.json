@@ -2,10 +2,82 @@
     {
         "type": "avsnitt",
         "style": "normaltekst",
+        "listItem": "bullet",
+        "level": 1,
+        "children": [{ "type": "span", "text": "Sykepenger", "marks": [] }]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "listItem": "bullet",
+        "level": 1,
+        "children": [{ "type": "span", "text": "Foreldrepenger", "marks": [] }]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "listItem": "bullet",
+        "level": 1,
+        "children": [
+            { "type": "span", "text": "Svangerskapspenger", "marks": [] }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "listItem": "bullet",
+        "level": 1,
         "children": [
             {
                 "type": "span",
-                "text": "Fellesdelen er ukene med foreldrepenger som dere kan dele. ",
+                "text": "Omsorgspenger ved sykdom hos barnet eller den som passer barnet",
+                "marks": []
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "listItem": "bullet",
+        "level": 1,
+        "children": [
+            {
+                "type": "span",
+                "text": "Pleie- og opplæringspenger",
+                "marks": []
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "listItem": "bullet",
+        "level": 1,
+        "children": [{ "type": "span", "text": "Dagpenger ", "marks": [] }]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "listItem": "bullet",
+        "level": 1,
+        "children": [
+            { "type": "span", "text": "Arbeidsavklaringspenger", "marks": [] }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "listItem": "bullet",
+        "level": 1,
+        "children": [{ "type": "span", "text": "Omsorgsstønad", "marks": [] }]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Også andre situasjoner kan gi deg rett til foreldrepenger. Dette kan være:",
                 "marks": []
             }
         ],
@@ -14,59 +86,12 @@
     {
         "type": "avsnitt",
         "style": "normaltekst",
-        "children": [
-            {
-                "type": "span",
-                "text": "Når medmor tar ut foreldrepengene fra fellesdelen, må mor jobbe, studere eller være i annen godkjent aktivitet. ",
-                "marks": []
-            }
-        ],
-        "markDefs": []
-    },
-    {
-        "type": "avsnitt",
-        "style": "element",
-        "children": [
-            { "type": "span", "text": "Aktivitetskravet til mor", "marks": [] }
-        ]
-    },
-    {
-        "type": "avsnitt",
-        "style": "normaltekst",
-        "children": [
-            {
-                "type": "span",
-                "text": "Mor må enten ",
-                "marks": []
-            }
-        ],
-        "markDefs": []
-    },
-    {
-        "type": "avsnitt",
-        "style": "normaltekst",
-        "listItem": "bullet",
-        "level": 1,
-        "children": [{ "type": "span", "text": "være i arbeid", "marks": [] }]
-    },
-    {
-        "type": "avsnitt",
-        "style": "normaltekst",
-        "listItem": "bullet",
-        "level": 1,
-        "children": [
-            { "type": "span", "text": "ta utdanning på heltid ", "marks": [] }
-        ]
-    },
-    {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "listItem": "bullet",
         "level": 1,
         "children": [
             {
                 "type": "span",
-                "text": "kombinere utdanning med arbeid som til sammen blir heltid",
+                "text": "lønn fra arbeidsgiver under videre- eller etterutdanning",
                 "marks": []
             }
         ]
@@ -79,7 +104,7 @@
         "children": [
             {
                 "type": "span",
-                "text": "være helt avhengig av hjelp til å ta seg av barnet på grunn av sykdom",
+                "text": "avtjening av militær- eller siviltjeneste eller obligatorisk sivilforsvarstjeneste",
                 "marks": []
             }
         ]
@@ -92,7 +117,7 @@
         "children": [
             {
                 "type": "span",
-                "text": "delta i kvalifiseringsprogrammet",
+                "text": "etterlønn fra arbeidsgiver",
                 "marks": []
             }
         ]
@@ -102,12 +127,6 @@
         "style": "normaltekst",
         "listItem": "bullet",
         "level": 1,
-        "children": [
-            {
-                "type": "span",
-                "text": "delta på heltid i introduksjonsprogrammet etter kapittel 2 for nyankomne innvandrere",
-                "marks": []
-            }
-        ]
+        "children": [{ "type": "span", "text": "ventelønn", "marks": [] }]
     }
 ]

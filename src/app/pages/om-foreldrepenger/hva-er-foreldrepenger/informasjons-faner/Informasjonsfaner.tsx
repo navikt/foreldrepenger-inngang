@@ -14,8 +14,6 @@ const cls = BEMHelper('informasjonsfaner');
 interface Fane {
     faneLabel: string;
     faneIcon: ReactNode;
-    // flere props
-
     bodyProps: {
         tittel: string;
         icon: string | React.ReactNode;

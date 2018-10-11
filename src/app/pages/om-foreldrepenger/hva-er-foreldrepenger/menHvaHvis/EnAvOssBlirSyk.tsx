@@ -15,22 +15,13 @@ const EnAvOssBlirSyk: React.StatelessComponent<Props> = ({ size }) => {
             xmlnsXlink="http://www.w3.org/1999/xlink">
             <title>En av oss blir syke</title>
             <defs />
-            <g
-                id="Symbols"
-                stroke="none"
-                strokeWidth="1"
-                fill="none"
-                fillRule="evenodd">
+            <g id="Symbols" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
                 <g
                     id="Fakta-hvaer/komponent/periode/1"
                     transform="translate(-331.000000, -49.000000)">
                     <g id="Group-3" transform="translate(74.000000, -5.000000)">
-                        <g
-                            id="Stacked-Group"
-                            transform="translate(0.000000, 59.000000)">
-                            <g
-                                id="Toggle/av"
-                                transform="translate(262.000000, 0.000000)">
+                        <g id="Stacked-Group" transform="translate(0.000000, 59.000000)">
+                            <g id="Toggle/av" transform="translate(262.000000, 0.000000)">
                                 <circle
                                     id="Background"
                                     stroke="#0067C5"
@@ -49,11 +40,11 @@ const EnAvOssBlirSyk: React.StatelessComponent<Props> = ({ size }) => {
                                         fontWeight="normal"
                                         line-spacing="22"
                                         fill="#0067C5">
-                                        <tspan x="7.148" y="44">
-                                            en av oss{' '}
+                                        <tspan x="8.148" y="44">
+                                            En av oss{' '}
                                         </tspan>
-                                        <tspan x="10.34" y="66">
-                                            blir syk?
+                                        <tspan x="8.34" y="66">
+                                            blir syke?
                                         </tspan>
                                     </text>
                                     <g

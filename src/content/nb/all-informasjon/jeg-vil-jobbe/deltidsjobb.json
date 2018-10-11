@@ -2,85 +2,40 @@
     {
         "type": "avsnitt",
         "style": "normaltekst",
-        "level": 1,
         "listItem": "bullet",
+        "level": 1,
         "children": [
+            { "type": "span", "text": "Avtal med ", "marks": [] },
+            { "type": "span", "text": "arbeidsgiveren", "marks": ["bold"] },
             {
                 "type": "span",
-                "text": "Avtal med "
-            },
-            {
-                "type": "span",
-                "text": "arbeidsgiveren din",
-                "marks": ["bold"]
-            },
-            {
-                "type": "span",
-                "text": " når du skal jobbe og stillingsprosenten"
+                "text": " din når du skal jobbe og stillingsprosenten.",
+                "marks": []
             }
         ]
     },
     {
         "type": "avsnitt",
         "style": "normaltekst",
-        "level": 1,
         "listItem": "bullet",
+        "level": 1,
         "children": [
             {
                 "type": "span",
-                "text": "Er du "
-            },
-            {
-                "type": "span",
-                "text": "selvstendig næringsdrivende",
-                "marks": ["bold"]
-            },
-            {
-                "type": "span",
-                "text": " eller "
-            },
-            {
-                "type": "span",
-                "text": "frilanser",
-                "marks": ["bold"]
-            },
-            {
-                "type": "span",
-                "text": ", er det en avtale mellom deg og NAV."
+                "text": "Er du selvstendig næringsdrivende eller frilanser, er det en avtale mellom deg og NAV.",
+                "marks": []
             }
         ]
     },
     {
         "type": "avsnitt",
         "style": "normaltekst",
-        "level": 1,
         "listItem": "bullet",
-        "children": [
-            {
-                "type": "span",
-                "text": "Send inn "
-            },
-            {
-                "type": "span",
-                "text": "søknad om å kombinere foreldrepenger",
-                "marks": ["bold"]
-            },
-            {
-                "type": "span",
-                "text": " med delvis jobb"
-            }
-        ]
-    },
-    {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "level": 1,
-        "listItem": "bullet",
         "children": [
-            {
-                "type": "span",
-                "text": "Send inn søknaden før du starter å jobbe"
-            }
+            { "type": "span", "text": "Send inn ", "marks": [] },
+            { "type": "span", "text": "søknaden", "marks": ["bold"] },
+            { "type": "span", "text": " før du starter å jobbe.", "marks": [] }
         ]
     }
 ]

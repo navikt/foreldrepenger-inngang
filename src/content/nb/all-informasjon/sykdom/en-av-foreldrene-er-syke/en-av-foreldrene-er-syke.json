@@ -1,17 +1,6 @@
 [
     {
         "type": "avsnitt",
-        "style": "undertittel",
-        "children": [
-            {
-                "type": "span",
-                "text": "Jeg eller den andre forelderen er syk",
-                "marks": []
-            }
-        ]
-    },
-    {
-        "type": "avsnitt",
         "style": "normaltekst",
         "children": [
             {
@@ -60,10 +49,28 @@
             },
             {
                 "type": "span",
-                "text": " foreldrepengene på grunn av sykdom når som helst etter at barnet er født. Den forelderen som er syk kan få sykepenger isteden.",
+                "text": " foreldrepengene på grunn av sykdom når som helst etter at barnet er født. Den forelderen som er syk kan få sykepenger i stedet.",
                 "marks": []
             }
         ],
         "markDefs": []
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Les mer om sykepenger",
+                "marks": ["url_Les_mer_om_sykepenger", "external_link"]
+            }
+        ],
+        "markDefs": [
+            {
+                "key": "url_Les_mer_om_sykepenger",
+                "type": "link",
+                "href": "https://www.nav.no/no/Person/Arbeid/Sykmeldt%2C+arbeidsavklaringspenger+og+yrkesskade/Sykepenger/Sykepenger+til+arbeidstakere"
+            }
+        ]
     }
 ]

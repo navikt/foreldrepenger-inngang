@@ -5,18 +5,6 @@
         "children": [
             {
                 "type": "span",
-                "text": "Foreldrepenger ved adopsjon starter når dere overtar omsorgen for barnet",
-                "marks": []
-            }
-        ],
-        "markDefs": []
-    },
-    {
-        "type": "avsnitt",
-        "style": "normaltekst",
-        "children": [
-            {
-                "type": "span",
                 "text": "Adopterer dere i utlandet, kan dere velge når dere vil  begynne å ta ut foreldrepengene:",
                 "marks": []
             }

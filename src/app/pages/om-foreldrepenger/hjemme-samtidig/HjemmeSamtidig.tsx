@@ -8,7 +8,7 @@ import LesMer from '../../../components/les-mer/LesMer';
 import './hjemmeSamtidig.less';
 
 const cls = BEMHelper('hjemmeSamtidig');
-const hjemmeSamtidigSvg = require('../../../assets/ark/hjemme-samtidig.svg').default;
+const hjemmeSamtidigSvg = require('../../../assets/ark/ark-hjemme-samtidig.svg').default;
 const ingress = 'all-informasjon/hjemme-samtidig/ingress';
 const hjemmeFulltid = 'all-informasjon/hjemme-samtidig/hjemme-fulltid';
 const delePaHjemme = 'all-informasjon/hjemme-samtidig/dele-pa-hjemme';
@@ -24,32 +24,29 @@ const HjemmeSamtidig: React.StatelessComponent<Props & IntlProps> = ({ id, lang 
         <PanelMedIllustrasjon
             className={cls.className}
             id={id}
-            title={getTranslation('om_foreldrepenger.hjemmeSamtidig.tittel')}
+            title={getTranslation('om_foreldrepenger.hjemme_samtidig.tittel')}
             svg={hjemmeSamtidigSvg}>
-            <div className={cls.element('header')}>
-                <StrukturertTekst tekst={getContent(ingress, lang)} />
-            </div>
-
+            <StrukturertTekst tekst={getContent(ingress, lang)} />
             <div className={cls.element('content')}>
                 <LesMer
                     intro={getTranslation(
-                        'om_foreldrepenger.hjemmeSamtidig.enHjemmeFulltid',
+                        'om_foreldrepenger.hjemme_samtidig.enHjemmeFulltid',
                         lang
                     )}>
                     <StrukturertTekst tekst={getContent(hjemmeFulltid, lang)} />
                 </LesMer>
 
                 <LesMer
-                    intro={getTranslation('om_foreldrepenger.hjemmeSamtidig.delePaHjemme', lang)}>
+                    intro={getTranslation('om_foreldrepenger.hjemme_samtidig.delePaHjemme', lang)}>
                     <StrukturertTekst tekst={getContent(delePaHjemme, lang)} />
                 </LesMer>
 
                 <LesMer
-                    intro={getTranslation('om_foreldrepenger.hjemmeSamtidig.farTvillinger', lang)}>
+                    intro={getTranslation('om_foreldrepenger.hjemme_samtidig.farTvillinger', lang)}>
                     <StrukturertTekst tekst={getContent(narFarTvillinger, lang)} />
                 </LesMer>
 
-                <LesMer intro={getTranslation('om_foreldrepenger.hjemmeSamtidig.permisjon', lang)}>
+                <LesMer intro={getTranslation('om_foreldrepenger.hjemme_samtidig.permisjon', lang)}>
                     <StrukturertTekst tekst={getContent(permisjonVedFodsel, lang)} />
                 </LesMer>
             </div>

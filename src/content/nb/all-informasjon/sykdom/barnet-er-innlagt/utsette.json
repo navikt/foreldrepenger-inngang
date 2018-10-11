@@ -8,10 +8,10 @@
             { "type": "span", "text": "Send inn ", "marks": [] },
             {
                 "type": "span",
-                "text": "søknad om å utsette",
+                "text": "søknad",
                 "marks": ["bold"]
             },
-            { "type": "span", "text": " foreldrepengene", "marks": [] }
+            { "type": "span", "text": " om å utsette foreldrepengene", "marks": [] }
         ]
     },
     {
@@ -30,24 +30,6 @@
                 "type": "span",
                 "text": " fra sykehuset eller helseinstitusjonen",
                 "marks": []
-            }
-        ]
-    },
-    {
-        "type": "avsnitt",
-        "style": "normaltekst",
-        "children": [
-            {
-                "type": "span",
-                "text": "Les mer om pleiepenger for pleie av sykt barn",
-                "marks": ["url_Les_mer_om_pleiepenger_for_pleie_av_sykt_barn", "external_link"]
-            }
-        ],
-        "markDefs": [
-            {
-                "key": "url_Les_mer_om_pleiepenger_for_pleie_av_sykt_barn",
-                "type": "link",
-                "href": "https://www.nav.no/no/Person/Familie/Sykdom+i+familien/pleiepenger+for+pleie+av+sykt+barn#chapter-7"
             }
         ]
     }

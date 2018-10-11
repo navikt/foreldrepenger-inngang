@@ -45,10 +45,7 @@ const DinLønn: React.StatelessComponent<Props & IntlProps> = ({
                 />
             </div>
             <TypografiBase type="normaltekst" className={cls.element('eksempeltekst')}>
-                {`${getTranslation(
-                    'om_foreldrepenger.hvor_lenge.eksempel',
-                    lang
-                )} ${monthlyWage},– kr`}
+                {getTranslation('om_foreldrepenger.hvor_lenge.eksempel', lang)}
             </TypografiBase>
             <div className={cls.element('kalkulatorlenke')}>
                 <TypografiBase type="normaltekst">

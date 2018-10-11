@@ -10,5 +10,17 @@
             }
         ],
         "markDefs": []
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Foreldrepenger ved adopsjon starter når dere overtar omsorgen for barnet.",
+                "marks": []
+            }
+        ],
+        "markDefs": []
     }
 ]

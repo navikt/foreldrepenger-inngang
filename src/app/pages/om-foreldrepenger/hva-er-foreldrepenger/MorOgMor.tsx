@@ -3,31 +3,31 @@ import Kalkulator from './kalkulator/Kalkulator';
 import Informasjonsfaner from './informasjons-faner/Informasjonsfaner';
 import StrukturertTekst from '../../../components/strukturert-tekst/StrukturertTekst';
 import Foreldrepar from '../../../components/foreldrepar/Foreldrepar';
-import { Language, withIntl } from '../../../intl/intl';
+import { Language, withIntl, getTranslation } from '../../../intl/intl';
 import { getContent } from '../../../utils/getContent';
 
 const content = 'all-informasjon/hva-er-foreldrepenger/mor-og-mor/mor-og-mor';
-const morsDel = 'ontent/all-informasjon/hva-er-foreldrepenger/mor-og-mor/mors-del';
-const medmorsDel = 'ontent/all-informasjon/hva-er-foreldrepenger/mor-og-mor/medmors-del';
-const fellesDel = 'ontent/all-informasjon/hva-er-foreldrepenger/mor-og-mor/felles-del';
+const morsDel = 'all-informasjon/hva-er-foreldrepenger/mor-og-mor/mors-del';
+const medmorsDel = 'all-informasjon/hva-er-foreldrepenger/mor-og-mor/medmors-del';
+const fellesDel = 'all-informasjon/hva-er-foreldrepenger/mor-og-mor/felles-del';
 
 const getInformasjonsfaner = (lang: Language) => [
     {
-        faneLabel: 'Mors del',
+        faneLabel: getTranslation('om_foreldrepenger.hvor_lenge.fordeling.mødrekvote', lang),
         faneIcon: true,
         bodyProps: {
             tittel: 'til mor',
             icon: 'mor2',
             antallUker: '15',
-            punktliste: ['Ingen krav til aktivitet', 'Kan ikke overtas av den andre moren'],
+            punktliste: ['Ingen krav til aktivitet', 'Kan ikke overtas av medmor'],
             component: <StrukturertTekst tekst={getContent(morsDel, lang)} />
         }
     },
     {
-        faneLabel: 'Mors del',
+        faneLabel: getTranslation('om_foreldrepenger.hvor_lenge.fordeling.medmorkvote', lang),
         faneIcon: true,
         bodyProps: {
-            tittel: 'til mor',
+            tittel: 'til medmor',
             icon: 'medmor2',
             antallUker: '15',
             punktliste: ['Ingen krav til aktivitet', 'Kan ikke overtas av mor'],
@@ -35,7 +35,7 @@ const getInformasjonsfaner = (lang: Language) => [
         }
     },
     {
-        faneLabel: 'Felles del',
+        faneLabel: getTranslation('om_foreldrepenger.hvor_lenge.fordeling.fellesperiode', lang),
         faneIcon: false,
         bodyProps: {
             tittel: 'til begge',

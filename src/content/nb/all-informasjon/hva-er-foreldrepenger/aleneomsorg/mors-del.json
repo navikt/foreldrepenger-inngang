@@ -8,10 +8,10 @@
                 "text": "Foreldrepengeperioden din starter senest ",
                 "marks": []
             },
-            { "type": "span", "text": "tre uker", "marks": ["bold"] },
+            { "type": "span", "text": "tre uker før terminen", "marks": ["bold"] },
             {
                 "type": "span",
-                "text": " før terminen. Du kan velge å starte så tidlig som 12 uker før, men får du færre uker etter fødselen.  ",
+                "text": ". Du kan velge å starte så tidlig som 12 uker før, men du får færre uker etter fødselen.",
                 "marks": []
             }
         ],
@@ -23,7 +23,17 @@
         "children": [
             {
                 "type": "span",
-                "text": "Adopterer du, starter foreldrepengeperioden din ved adopsjonsdatoen.",
+                "text": "Adopterer du, starter foreldrepengeperioden din ved ",
+                "marks": []
+            },
+            {
+                "type": "span",
+                "text": "adopsjonsdatoen",
+                "marks": ["bold"]
+            },
+            {
+                "type": "span",
+                "text": ".",
                 "marks": []
             }
         ],
