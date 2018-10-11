@@ -3,7 +3,7 @@ import Kalkulator from './kalkulator/Kalkulator';
 import Informasjonsfaner from './informasjons-faner/Informasjonsfaner';
 
 import StrukturertTekst from '../../../components/strukturert-tekst/StrukturertTekst';
-import { Language, withIntl } from '../../../intl/intl';
+import { Language, withIntl, getTranslation } from '../../../intl/intl';
 import { getContent } from '../../../utils/getContent';
 
 const farOgMorContent = 'all-informasjon/hva-er-foreldrepenger/far-og-mor/far-og-mor';
@@ -13,7 +13,7 @@ const farsdel = 'all-informasjon/hva-er-foreldrepenger/far-og-mor/fars-del';
 
 const getInformasjonsfaner = (lang: Language) => [
     {
-        faneLabel: 'Mors del',
+        faneLabel: getTranslation('om_foreldrepenger.hvor_lenge.fordeling.mødrekvote', lang),
         faneIcon: true,
         bodyProps: {
             tittel: 'til mor',
@@ -24,7 +24,7 @@ const getInformasjonsfaner = (lang: Language) => [
         }
     },
     {
-        faneLabel: 'Fars del',
+        faneLabel: getTranslation('om_foreldrepenger.hvor_lenge.fordeling.fedrekvote', lang),
         faneIcon: true,
         bodyProps: {
             tittel: 'til far',
@@ -35,7 +35,7 @@ const getInformasjonsfaner = (lang: Language) => [
         }
     },
     {
-        faneLabel: 'Felles del',
+        faneLabel: getTranslation('om_foreldrepenger.hvor_lenge.fordeling.fellesperiode', lang),
         faneIcon: false,
         bodyProps: {
             tittel: 'til begge',

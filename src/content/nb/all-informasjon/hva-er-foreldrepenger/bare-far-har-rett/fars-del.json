@@ -5,21 +5,17 @@
         "children": [
             {
                 "type": "span",
-                "text": "Når bare du som far har rett til foreldrepenger, må du starte foreldrepengeperioden din fra ",
+                "text": "Når bare du har rett til foreldrepenger, må du starte foreldrepengeperioden din fra ",
                 "marks": []
             },
+            { "type": "span", "text": "uke syv", "marks": ["bold"] },
             {
                 "type": "span",
-                "text": "uke syv etter fødselen",
-                "marks": ["bold"]
-            },
-            {
-                "type": "span",
-                "text": ". Adopterer dere, starter foreldrepengeperioden din fra ",
+                "text": " etter fødselen. Adopterer dere, starter foreldrepengeperioden din fra ",
                 "marks": []
             },
             { "type": "span", "text": "adopsjonsdatoen", "marks": ["bold"] },
-            { "type": "span", "text": ". ", "marks": [] }
+            { "type": "span", "text": ".", "marks": [] }
         ],
         "markDefs": []
     },
@@ -29,7 +25,7 @@
         "children": [
             {
                 "type": "span",
-                "text": "Starter du senere, mister du dager. Hvis det ikke passer å ta full permisjon, kan du ta ut foreldrepengene dine i kombinasjon med delvis arbeid.  ",
+                "text": "Hvis det ikke passer å ta full permisjon, kan du ta ut foreldrepengene dine i kombinasjon med delvis arbeid eller utsette fordi du jobber heltid.",
                 "marks": []
             }
         ],
@@ -43,7 +39,7 @@
             { "type": "span", "text": "uføretrygdet", "marks": ["bold"] },
             {
                 "type": "span",
-                "text": ", kan du ta ut inntil 15 uker med foreldrepenger før det stilles krav til hva mor gjør. ",
+                "text": ", kan du ta ut inntil 15 uker med foreldrepenger før det stilles krav til hva mor gjør.",
                 "marks": []
             }
         ],
@@ -62,17 +58,7 @@
         "children": [
             {
                 "type": "span",
-                "text": "Både når du tar ut foreldrepenger eller utsetter på grunn av arbeid, er det ",
-                "marks": []
-            },
-            {
-                "type": "span",
-                "text": "krav til hva mor gjør",
-                "marks": ["bold"]
-            },
-            {
-                "type": "span",
-                "text": " i samme periode. Hun må enten",
+                "text": "Både når du tar ut foreldrepenger eller utsetter på grunn av arbeid, må mor enten",
                 "marks": []
             }
         ],
@@ -91,7 +77,7 @@
         "listItem": "bullet",
         "level": 1,
         "children": [
-            { "type": "span", "text": "ta utdanning på heltid ", "marks": [] }
+            { "type": "span", "text": "ta utdanning på heltid", "marks": [] }
         ]
     },
     {

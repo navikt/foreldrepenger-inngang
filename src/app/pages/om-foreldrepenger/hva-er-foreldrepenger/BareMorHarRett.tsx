@@ -2,7 +2,7 @@ import * as React from 'react';
 import Kalkulator from './kalkulator/Kalkulator';
 import Informasjonsfaner from './informasjons-faner/Informasjonsfaner';
 import StrukturertTekst from '../../../components/strukturert-tekst/StrukturertTekst';
-import { Language, withIntl } from '../../../intl/intl';
+import { Language, withIntl, getTranslation } from '../../../intl/intl';
 import { getContent } from '../../../utils/getContent';
 
 const content = 'all-informasjon/hva-er-foreldrepenger/bare-mor-har-rett/bare-mor-har-rett';
@@ -10,7 +10,7 @@ const morsDel = 'all-informasjon/hva-er-foreldrepenger/bare-mor-har-rett/mors-de
 
 const getInformasjonsfaner = (lang: Language) => [
     {
-        faneLabel: 'Mors del',
+        faneLabel: getTranslation('om_foreldrepenger.hvor_lenge.fordeling.mødrekvote', lang),
         faneIcon: true,
         bodyProps: {
             tittel: 'til mor',
