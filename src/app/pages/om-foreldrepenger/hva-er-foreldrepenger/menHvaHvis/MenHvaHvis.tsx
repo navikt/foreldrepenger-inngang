@@ -63,7 +63,7 @@ class MenHvaHvis extends React.Component<Props> {
                 <a style={{ height: this.state.svgSize }} href="#ta-ut-ferie">
                     <NoenVilPaFerie size={this.state.svgSize} />
                 </a>
-                <a style={{ height: this.state.svgSize }} href="#noen-vil-jobbe">
+                <a style={{ height: this.state.svgSize }} href="#jobbe-i-perioden">
                     <JegVilJobbe size={this.state.svgSize} />
                 </a>
                 <a style={{ height: this.state.svgSize }} href="#noen-blir-syke">
