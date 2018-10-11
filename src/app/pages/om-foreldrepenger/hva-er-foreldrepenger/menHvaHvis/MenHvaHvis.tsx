@@ -42,7 +42,7 @@ class MenHvaHvis extends React.Component<Props> {
     updateWindowSize = () => {
         if (window.innerWidth < 799) {
             this.setState({
-                svgSize: '70px'
+                svgSize: '80px'
             });
         } else if (window.innerWidth >= 800) {
             this.setState({

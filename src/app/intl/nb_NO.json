@@ -110,6 +110,13 @@
     "om_foreldrepenger.sykdom.innlagt.overta": "Slik går du frem for å overta",
     "om_foreldrepenger.sykdom.innlagt.eksempeltittel": "Slik vil tidslinjen se ut:",
 
+    "om_foreldrepenger.hjemmeSamtidig.tittel":"Hjemme Samtidig",
+    "om_foreldrepenger.hjemmeSamtidig.ingress": "Hvis dere vil være hjemme med barnet samtidig eller bytte på, har dere flere muligheter.",
+    "om_foreldrepenger.hjemmeSamtidig.enHjemmeFulltid":" En er hjemme fulltid, den andre inntil 50 prosent",
+    "om_foreldrepenger.hjemmeSamtidig.delePaHjemme":"Dele på å være hjemme",
+    "om_foreldrepenger.hjemmeSamtidig.farTvillinger":"Når dere får tvillinger eller flere barn",
+    "om_foreldrepenger.hjemmeSamtidig.permisjon":"Permisjon ved fødselen",
+
     "om_foreldrepenger.arbeidsgiver.tittel": "Arbeidsgiver og deg",
     "om_foreldrepenger.arbeidsgiver.link_skjema": "Skjema for inntektsopplysninger for arbeidstaker (pdf)",
     "om_foreldrepenger.arbeidsgiver.kontonummer": "Bankkontonummer for refusjoner fra NAV til arbeidsgiver",
