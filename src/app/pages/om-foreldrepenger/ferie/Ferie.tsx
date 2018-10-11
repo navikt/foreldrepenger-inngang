@@ -23,10 +23,13 @@ interface Props {
 
 const Ferie: React.StatelessComponent<Props & IntlProps> = ({ id, lang }) => {
     return (
-        <PanelMedIllustrasjon id={id} svg={ferieSvg} title={getTranslation('ferie', lang)}>
+        <PanelMedIllustrasjon
+            id={id}
+            svg={ferieSvg}
+            title={getTranslation('om_foreldrepenger.ferie.tittel', lang)}>
             <StrukturertTekst tekst={getContent(content, lang)} />
             <div className={cls.element('eksempel')}>
-                <TypografiBase type="element">
+                <TypografiBase type="normaltekst">
                     {getTranslation('om_foreldrepenger.ferie.eksempel_label')}
                 </TypografiBase>
                 <Ferieforskyvning />

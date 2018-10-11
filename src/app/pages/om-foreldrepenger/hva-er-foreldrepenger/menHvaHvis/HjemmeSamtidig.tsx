@@ -15,22 +15,13 @@ const HjemmeSamtidig: React.StatelessComponent<Props> = ({ size }) => {
             xmlnsXlink="http://www.w3.org/1999/xlink">
             <title>Vi er hjemme samtidig</title>
             <defs />
-            <g
-                id="Symbols"
-                stroke="none"
-                strokeWidth="1"
-                fill="none"
-                fillRule="evenodd">
+            <g id="Symbols" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
                 <g
                     id="Fakta-hvaer/komponent/periode/1"
                     transform="translate(-462.000000, -49.000000)">
                     <g id="Group-3" transform="translate(74.000000, -5.000000)">
-                        <g
-                            id="Stacked-Group"
-                            transform="translate(0.000000, 59.000000)">
-                            <g
-                                id="Toggle/av"
-                                transform="translate(393.000000, 0.000000)">
+                        <g id="Stacked-Group" transform="translate(0.000000, 59.000000)">
+                            <g id="Toggle/av" transform="translate(393.000000, 0.000000)">
                                 <circle
                                     id="Background"
                                     stroke="#0067C5"
@@ -50,7 +41,7 @@ const HjemmeSamtidig: React.StatelessComponent<Props> = ({ size }) => {
                                         line-spacing="22"
                                         fill="#0067C5">
                                         <tspan x="9.972" y="44">
-                                            hjemme{' '}
+                                            Hjemme{' '}
                                         </tspan>
                                         <tspan x="5.26" y="66">
                                             samtidig?

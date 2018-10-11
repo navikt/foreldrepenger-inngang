@@ -60,13 +60,13 @@ class MenHvaHvis extends React.Component<Props> {
                 </TypografiBase>
             </div>
             <div className={cls.element('body')}>
-                <a style={{ height: this.state.svgSize }} href="#ferie">
+                <a style={{ height: this.state.svgSize }} href="#ta-ut-ferie">
                     <NoenVilPaFerie size={this.state.svgSize} />
                 </a>
-                <a style={{ height: this.state.svgSize }} href="#jeg-vil-jobbe">
+                <a style={{ height: this.state.svgSize }} href="#noen-vil-jobbe">
                     <JegVilJobbe size={this.state.svgSize} />
                 </a>
-                <a style={{ height: this.state.svgSize }} href="#sykdom">
+                <a style={{ height: this.state.svgSize }} href="#noen-blir-syke">
                     <EnAvOssBlirSyk size={this.state.svgSize} />
                 </a>
                 <a style={{ height: this.state.svgSize }} href="#hjemme-samtidig">

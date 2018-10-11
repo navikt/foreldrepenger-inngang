@@ -1,22 +1,11 @@
 [
     {
         "type": "avsnitt",
-        "style": "element",
-        "children": [
-            {
-                "type": "span",
-                "text": "Feriepenger av foreldrepenger",
-                "marks": []
-            }
-        ]
-    },
-    {
-        "type": "avsnitt",
         "style": "normaltekst",
         "children": [
             {
                 "type": "span",
-                "text": "Hvis du er arbeidstaker har du rett til feriepenger av foreldrepenger. Hvis arbeidsgiveren betaler lønn under permisjonen, utbetales feriepengene til arbeidsgiveren. ",
+                "text": "Hvis du har vært i jobb i fire uker sammenhengende og det ikke er mer enn fjorten dager mellom hver gang du er på jobb, regnes også dager uten arbeid med i opptjeningstiden.",
                 "marks": []
             }
         ],
@@ -28,7 +17,19 @@
         "children": [
             {
                 "type": "span",
-                "text": "Feriepengene utgjør 10,2 prosent av det som er utbetalt de første 12 eller 15 ukene av foreldrepengeperioden, før skatt. ",
+                "text": "Hvis du har en arbeidsavtale om fast turnus, vil dagene du ikke er i jobb regnes med i opptjeningstiden, selv om du jobber sjeldnere enn hver 14. dag.",
+                "marks": []
+            }
+        ],
+        "markDefs": []
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Ferie og avspasering teller også med.",
                 "marks": []
             }
         ],

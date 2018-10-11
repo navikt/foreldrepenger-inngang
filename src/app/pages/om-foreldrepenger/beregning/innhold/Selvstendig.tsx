@@ -1,19 +1,19 @@
 import * as React from 'react';
 import BEMHelper from './../../../../utils/bem';
-import {  withIntl, IntlProps } from '../../../../intl/intl';
-import StrukturertTekst from "../../../../components/strukturert-tekst/StrukturertTekst";
-import {getContent} from "../../../../utils/getContent";
+import { withIntl, IntlProps } from '../../../../intl/intl';
+import StrukturertTekst from '../../../../components/strukturert-tekst/StrukturertTekst';
+import { getContent } from '../../../../utils/getContent';
 
 const cls = BEMHelper('selvstendigInnhold');
 
-const beregningTekstPath = 'all-informasjon/beregning/beregning_selvstendig';
+const beregningTekstPath = 'all-informasjon/beregning/selvstendig';
 
-const Selvstendig: React.StatelessComponent<IntlProps> = ({lang}) => {
+const Selvstendig: React.StatelessComponent<IntlProps> = ({ lang }) => {
     return (
         <div className={cls.className}>
-            <StrukturertTekst tekst={getContent(beregningTekstPath, lang)}/>
+            <StrukturertTekst tekst={getContent(beregningTekstPath, lang)} />
         </div>
-    )
+    );
 };
 
 export default withIntl(Selvstendig);

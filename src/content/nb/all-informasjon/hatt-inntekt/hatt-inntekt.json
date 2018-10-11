@@ -1,0 +1,24 @@
+[
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Du må ha hatt inntekt i minst ",
+                "marks": []
+            },
+            {
+                "type": "span",
+                "text": "seks av de ti siste månedene",
+                "marks": ["bold"]
+            },
+            {
+                "type": "span",
+                "text": " før du starter foreldrepengeperioden din. ",
+                "marks": []
+            }
+        ],
+        "markDefs": []
+    }
+]

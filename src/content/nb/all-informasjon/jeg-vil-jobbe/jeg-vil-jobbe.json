@@ -5,41 +5,35 @@
         "children": [
             {
                 "type": "span",
-                "text": "Du kan kombinere foreldrepengene med arbeid. Du kan velge mellom å:"
+                "text": "Du kan kombinere foreldrepengene med arbeid. Du kan velge mellom:",
+                "marks": []
             }
-        ]
+        ],
+        "markDefs": []
     },
     {
         "type": "avsnitt",
         "style": "normaltekst",
-        "level": 1,
         "listItem": "bullet",
-        "children": [
-            {
-                "type": "span",
-                "text": "Utsette",
-                "marks": ["bold"]
-            },
-            {
-                "type": "span",
-                "text": " foreldrepengeperioden din"
-            }
-        ]
-    },
-    {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "level": 1,
-        "listItem": "bullet",
         "children": [
             {
                 "type": "span",
-                "text": "Forlenge",
-                "marks": ["bold"]
-            },
+                "text": "Utsette foreldrepengeperioden din når du jobber heltid",
+                "marks": []
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "listItem": "bullet",
+        "level": 1,
+        "children": [
             {
                 "type": "span",
-                "text": " foreldrepengeperioden din"
+                "text": "Kombinere foreldrepenger når du jobber delvis ",
+                "marks": []
             }
         ]
     },
@@ -49,35 +43,10 @@
         "children": [
             {
                 "type": "span",
-                "text": "Jobber du delvis blir "
-            },
-            {
-                "type": "span",
-                "text": "foreldrepengene redusert",
-                "marks": ["bold"]
-            },
-            {
-                "type": "span",
-                "text": " etter hvor mye du jobber. Samtidig blir "
-            },
-            {
-                "type": "span",
-                "text": "perioden din med foreldrepenger forlenget",
-                "marks": ["bold"]
-            },
-            {
-                "type": "span",
-                "text": ". Du kan bare bare jobbe hos "
-            },
-            {
-                "type": "span",
-                "text": "én arbeidsgiver",
-                "marks": ["bold"]
-            },
-            {
-                "type": "span",
-                "text": " om gangen."
+                "text": "Jobber du delvis blir foreldrepengene redusert etter hvor mye du jobber. Samtidig blir perioden din med foreldrepenger forlenget. Du kan bare jobbe hos én arbeidsgiver om gangen.",
+                "marks": []
             }
-        ]
+        ],
+        "markDefs": []
     }
 ]

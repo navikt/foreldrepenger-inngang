@@ -1,13 +1,15 @@
 [
     {
         "type": "avsnitt",
-        "style": "undertittel",
+        "style": "normaltekst",
         "children": [
             {
                 "type": "span",
-                "text": "Barnet er sykt eller innlagt"
+                "text": "Hvis barnet blir innlagt på sykehus eller helseinstitusjon, kan den som er sammen med barnet utsette foreldrepengeperioden sin og få pleiepenger i stedet.",
+                "marks": []
             }
-        ]
+        ],
+        "markDefs": []
     },
     {
         "type": "avsnitt",
@@ -15,21 +17,13 @@
         "children": [
             {
                 "type": "span",
-                "text": "Hvis barnet blir innlagt, kan den som er sammen med barnet på sykehuset eller helseinstitusjonen utsette foreldrepengeperioden sin og få "
-            },
-            {
-                "type": "span",
-                "text": "pleiepenger",
-                "marks": ["url_pleiepenger", "external_link"]
-            },
-            {
-                "type": "span",
-                "text": " i stedet."
+                "text": "Les mer om pleiepenger for sykt barn",
+                "marks": ["url_Les_mer_om_pleiepenger_for_sykt_barn", "external_link"]
             }
         ],
         "markDefs": [
             {
-                "key": "url_pleiepenger",
+                "key": "url_Les_mer_om_pleiepenger_for_sykt_barn",
                 "type": "link",
                 "href": "https://www.nav.no/no/Person/Familie/Sykdom+i+familien/pleiepenger+for+pleie+av+sykt+barn"
             }

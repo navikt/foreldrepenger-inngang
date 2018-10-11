@@ -1,0 +1,100 @@
+[
+  {
+      "type": "avsnitt",
+      "style": "normaltekst",
+      "children": [
+          {
+              "type": "span",
+              "text": "Hvis du har vært i militæret, siviltjeneste eller sivilforsvaret, beregnes foreldrepengene til minst 280 902 kroner (tre ganger grunnbeløpet).",
+              "marks": []
+          }
+      ],
+      "markDefs": []
+  },
+  {
+      "type": "avsnitt",
+      "style": "element",
+      "children": [
+          {
+              "type": "span",
+              "text": "Inntekter som tas med i beregningen",
+              "marks": []
+          }
+      ]
+  },
+  {
+      "type": "avsnitt",
+      "style": "normaltekst",
+      "listItem": "bullet",
+      "level": 1,
+      "children": [
+          {
+              "type": "span",
+              "text": "Lønnsinntekt og ytelser som er likestilt med lønnsinntekt",
+              "marks": []
+          }
+      ]
+  },
+  {
+      "type": "avsnitt",
+      "style": "normaltekst",
+      "listItem": "bullet",
+      "level": 1,
+      "children": [
+          {
+              "type": "span",
+              "text": "Godtgjørelser fra egen arbeidsinnsats, for eksempel bonus og honorar",
+              "marks": []
+          }
+      ]
+  },
+  {
+      "type": "avsnitt",
+      "style": "normaltekst",
+      "listItem": "bullet",
+      "level": 1,
+      "children": [
+          {
+              "type": "span",
+              "text": "Goder som du mottar i annet enn penger, for eksempel fri bil, mobiltelefon og internett, hvis disse faller bort under foreldrepengeperioden",
+              "marks": []
+          }
+      ]
+  },
+  {
+      "type": "avsnitt",
+      "style": "element",
+      "children": [
+          { "type": "span", "text": "Inntekt som ikke tas med", "marks": [] }
+      ]
+  },
+  {
+      "type": "avsnitt",
+      "style": "normaltekst",
+      "listItem": "bullet",
+      "level": 1,
+      "children": [
+          { "type": "span", "text": "Lønn for overtid", "marks": [] }
+      ]
+  },
+  {
+      "type": "avsnitt",
+      "style": "normaltekst",
+      "listItem": "bullet",
+      "level": 1,
+      "children": [{ "type": "span", "text": "Feriepenger", "marks": [] }]
+  },
+  {
+      "type": "avsnitt",
+      "style": "normaltekst",
+      "listItem": "bullet",
+      "level": 1,
+      "children": [
+          {
+              "type": "span",
+              "text": "Godtgjørelser som dekker utgifter i forbindelse med arbeidet, for eksempel diettgodtgjørelse, bilgodtgjørelse, verktøygodtgjørelse og smussgodtgjørelse",
+              "marks": []
+          }
+      ]
+  }
+]

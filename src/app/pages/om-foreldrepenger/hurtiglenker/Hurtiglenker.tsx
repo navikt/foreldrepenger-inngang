@@ -18,7 +18,9 @@ const Hurtiglenker = ({ links }: { links: string[] }) => {
 
                 return (
                     <TypografiBase key={link} type="normaltekst">
-                        <Lenke href={`#${link}`}>{getTranslation(stringToTranslate)}</Lenke>
+                        <Lenke href={`#${link}`}>
+                            {getTranslation(`hurtiglenke.${stringToTranslate}`)}
+                        </Lenke>
                     </TypografiBase>
                 );
             })}
