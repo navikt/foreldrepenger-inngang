@@ -20,7 +20,7 @@
             {
                 "type": "span",
                 "text": "foreldrepenger",
-                "marks": ["url_foreldrepenger"]
+                "marks": ["url_foreldrepenger", "external_link"]
             },
             {
                 "type": "span",
@@ -220,7 +220,7 @@
             {
                 "type": "span",
                 "text": "grunnbeløpet (G)",
-                "marks": ["url_grunnbeløpet"]
+                "marks": ["url_grunnbeløpet", "external_link"]
             },
             {
                 "type": "span",

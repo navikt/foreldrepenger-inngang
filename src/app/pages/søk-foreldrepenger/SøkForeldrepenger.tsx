@@ -69,7 +69,11 @@ class SøkForeldrepenger extends Component<Props & IntlProps> {
                             {this.state.selectedDate && (
                                 <a
                                     tabIndex={-1}
-                                    href={externalUrls.søk_foreldrepenger_eller_engangsstønad}>
+                                    href={
+                                        process.env.NODE_ENV === 'navlab'
+                                            ? '/under-arbeid'
+                                            : externalUrls.søk_foreldrepenger_eller_engangsstønad
+                                    }>
                                     <KnappBase type="hoved" role="link">
                                         <MediaQuery query="(max-width: 575px)">
                                             {getTranslation(

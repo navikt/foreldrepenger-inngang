@@ -19,8 +19,8 @@ interface Props {
 }
 
 const engangsstønadSvg = require('../../assets/engangsstønad.svg').default;
-const arbeidstakerSvg = require('../../assets/ark/arbeidstaker.svg').default;
-const søknadsfristSvg = require('../../assets/ark/frister.svg').default;
+const arbeidstakerSvg = require('../../assets/ark/ark-arbeidstaker.svg').default;
+const søknadsfristSvg = require('../../assets/ark/ark-frister.svg').default;
 const utbetalingSvg = require('../../assets/icons/utbetaling-til-deg.svg').default;
 const utbetalingstidSvg = require('../../assets/icons/utbetalingstid.svg').default;
 

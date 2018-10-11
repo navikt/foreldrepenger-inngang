@@ -16,19 +16,7 @@ const CustomSVGFromSprite: React.StatelessComponent<Props> = ({
     size,
     className,
     ...other
-}) => {
-    const viewBox = { 'view-box': iconRef.viewBox };
-    return (
-        <svg
-            className={className}
-            height={size}
-            width={size}
-            {...viewBox}
-            {...other}>
-            <use xlinkHref={`#${iconRef.id}`} />
-        </svg>
-    );
-};
+}) => <FlexibleSvg iconRef={iconRef} height={size} width={size} className={className} {...other} />;
 
 interface FlexibleProps {
     iconRef: IconRef;
@@ -46,12 +34,7 @@ export const FlexibleSvg: React.StatelessComponent<FlexibleProps> = ({
 }) => {
     const viewBox = { 'view-box': iconRef.viewBox };
     return (
-        <svg
-            className={className}
-            height={height}
-            width={width}
-            {...viewBox}
-            {...other}>
+        <svg className={className} height={height} width={width} {...viewBox} {...other}>
             <use xlinkHref={`#${iconRef.id}`} />
         </svg>
     );

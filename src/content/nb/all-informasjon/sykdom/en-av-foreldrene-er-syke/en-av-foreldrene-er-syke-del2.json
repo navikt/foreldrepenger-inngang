@@ -26,7 +26,7 @@
             {
                 "type": "span",
                 "text": "Les mer om sykepenger",
-                "marks": ["url_Les_mer_om_sykepenger"]
+                "marks": ["url_Les_mer_om_sykepenger", "external_link"]
             }
         ],
         "markDefs": [

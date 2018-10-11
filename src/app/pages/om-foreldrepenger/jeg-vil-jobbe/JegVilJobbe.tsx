@@ -11,7 +11,7 @@ const content = 'all-informasjon/jeg-vil-jobbe/jeg-vil-jobbe';
 const firstPanelContent = 'all-informasjon/jeg-vil-jobbe/heltidsjobb';
 const secondPanelContent = 'all-informasjon/jeg-vil-jobbe/deltidsjobb';
 
-const jobbeSvg = require('../../../assets/ark/jobbe.svg').default;
+const jobbeSvg = require('../../../assets/ark/ark-jobbe.svg').default;
 const cls = BEMHelper('jegVilJobbe');
 
 interface Props {

@@ -32,6 +32,10 @@ const PanelMedIllustrasjon = ({
         );
     }
 
+    if (id === 'sykdom') {
+        console.warn('sykdomSvg:', svg);
+    }
+
     return (
         <section aria-label={title} id={id} className={className}>
             <PanelBase className={cls.className}>

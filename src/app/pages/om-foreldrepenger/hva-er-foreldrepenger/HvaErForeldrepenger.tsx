@@ -15,7 +15,7 @@ import PanelMedIllustrasjon from '../../../components/panel-med-illustrasjon/Pan
 import { getTranslation, withIntl, IntlProps } from '../../../intl/intl';
 import { getContent } from '../../../utils/getContent';
 
-const infoSvg = require('../../../assets/ark/info.svg').default;
+const infoSvg = require('../../../assets/ark/ark-info.svg').default;
 
 const cls = BEMHelper('hvaErForeldrepenger');
 const tabs: Innholdsfane[] = [
@@ -51,7 +51,7 @@ const tabs: Innholdsfane[] = [
     }
 ];
 
-const section = "hvaErForeldrepenger";
+const section = 'hvaErForeldrepenger';
 
 interface Props {
     id: string;

@@ -19,7 +19,7 @@
       {
         "type": "span",
         "text": "6 ganger grunnbeløpet",
-        "marks": ["url_seks_ganger_grunnbeløpet"]
+        "marks": ["url_seks_ganger_grunnbeløpet", "external_link"]
       },
       {
         "type": "span",

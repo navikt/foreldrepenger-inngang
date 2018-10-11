@@ -48,7 +48,7 @@
             {
                 "type": "span",
                 "text": "svangerskapspenger",
-                "marks": ["url_svangerskap"]
+                "marks": ["url_svangerskap", "external_link"]
             },
             {
                 "type": "span",

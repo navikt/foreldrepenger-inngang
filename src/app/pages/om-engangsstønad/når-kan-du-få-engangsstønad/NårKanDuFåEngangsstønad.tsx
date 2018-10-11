@@ -11,7 +11,7 @@ const nårKanDuFåEngangsstønadContent =
 const adopsjonContent = 'om-engangsstønad/når-kan-du-få-engangsstønad/adopsjon';
 const fødselContent = 'om-engangsstønad/når-kan-du-få-engangsstønad/fødsel';
 
-const infoSvg = require('../../../assets/ark/info.svg').default;
+const infoSvg = require('../../../assets/ark/ark-info.svg').default;
 const barnevognSvg = require('../../../assets/icons/barnevogn.svg').default;
 
 const getTabs = (lang: Language) => [

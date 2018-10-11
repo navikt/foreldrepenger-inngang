@@ -4,7 +4,7 @@ import StrukturertTekst from '../../../components/strukturert-tekst/StrukturertT
 import PanelMedIllustrasjon from '../../../components/panel-med-illustrasjon/PanelMedIllustrasjon';
 import { getContent } from '../../../utils/getContent';
 
-const inntektSvg = require('../../../assets/ark/hatt-inntekt.svg').default;
+const inntektSvg = require('../../../assets/ark/ark-hatt-inntekt.svg').default;
 
 interface Props {
     id: string;

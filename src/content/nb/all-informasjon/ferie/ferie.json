@@ -56,7 +56,7 @@
             {
                 "type": "span",
                 "text": "foreldrepengeplanleggeren",
-                "marks": ["url_foreldrepengeplanleggeren"]
+                "marks": ["url_foreldrepengeplanleggeren", "external_link"]
             },
             {
                 "type": "span",

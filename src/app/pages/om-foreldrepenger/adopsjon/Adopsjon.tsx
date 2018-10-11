@@ -5,7 +5,7 @@ import StrukturertTekst from '../../../components/strukturert-tekst/StrukturertT
 import LesMer from '../../../components/les-mer/LesMer';
 import { getContent } from '../../../utils/getContent';
 
-const adopsjonSvg = require('../../../assets/ark/adopsjon.svg').default;
+const adopsjonSvg = require('../../../assets/ark/ark-adopsjon.svg').default;
 
 interface Props {
     id: string;

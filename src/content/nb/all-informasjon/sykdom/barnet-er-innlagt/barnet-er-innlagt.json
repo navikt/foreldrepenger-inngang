@@ -20,7 +20,7 @@
             {
                 "type": "span",
                 "text": "pleiepenger",
-                "marks": ["url_pleiepenger"]
+                "marks": ["url_pleiepenger", "external_link"]
             },
             {
                 "type": "span",

@@ -11,7 +11,7 @@ import { getContent } from '../../../utils/getContent';
 import Illustrasjon from './Illustrasjon';
 import TypografiBase from 'nav-frontend-typografi';
 
-const sykdomSvg = require('../../../assets/ark/sykdom.svg').default;
+const sykdomSvg = require('../../../assets/ark/ark-sykdom.svg').default;
 const cls = BEMHelper('jegVilJobbe');
 const barn = require('../../../assets/barn/barn1.svg').default;
 
@@ -79,7 +79,7 @@ const Sykdom: React.StatelessComponent<Props & IntlProps> = ({ id, lang }) => {
             className={cls.className}
             svg={sykdomSvg}
             title={getTranslation('om_foreldrepenger.sykdom.tittel', lang)}>
-            <Innholdsfaner tabs={tabs} section={"jegVilJobbe"} />
+            <Innholdsfaner tabs={tabs} section={'jegVilJobbe'} />
         </PanelMedIllustrasjon>
     );
 };
