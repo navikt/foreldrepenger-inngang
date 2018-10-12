@@ -158,8 +158,10 @@
     "om_foreldrepenger.beregning.andreInntektskilder":"Andre inntektskilder",
 
     "om_engangsstønad.tittel": "All informasjon om engangsstønad",
-    "om_engangsstønad.hva_er.tittel": "Hva er engangsstønad?",
-    "om_engangsstønad.krav_tittel": "Når kan du få engangsstønad?",
+    "om_engangsstønad.hva_er.tittel": "Hvem kan få engangsstønad?",
+    "om_engangsstønad.hva_kan_du_få.tittel": "Hva kan du få?",
+    "om_engangsstønad.utbetaling.tittel": "Når blir pengene utbetalt?",
+    "om_engangsstønad.til_far.tittel": "Engangsstønad til far",
 
     "blindside.veileder": "Så fint å ha deg her!\nDu har klikket deg inn på en side som vi fremdeles holder på med å lage.\nKlikk deg tilbake for å utforske mer :)",
     "blindside.tittel": "Under arbeid"

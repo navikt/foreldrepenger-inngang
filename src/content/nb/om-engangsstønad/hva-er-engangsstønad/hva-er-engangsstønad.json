@@ -5,21 +5,23 @@
         "children": [
             {
                 "type": "span",
-                "text": "Mor kan få engangsstønad hvis hun ikke har rett til foreldrepenger, eller hvis hun velger engangsstønad istedenfor foreldrepenger.",
+                "text": "Du kan få engangsstønad hvis du ",
                 "marks": []
-            }
-        ],
-        "markDefs": []
-    },
-    {
-        "type": "avsnitt",
-        "style": "normaltekst",
-        "children": [
-            { "type": "span", "text": "Vanligvis er det ", "marks": [] },
-            { "type": "span", "text": "tre", "marks": ["bold"] },
+            },
             {
                 "type": "span",
-                "text": " ting du må tenke på med tanke på engangsstønad. ",
+                "text": "ikke har hatt inntekt",
+                "marks": ["bold"]
+            },
+            {
+                "type": "span",
+                "text": " som gir deg rett til foreldrepenger. Vanligvis er det ",
+                "marks": []
+            },
+            { "type": "span", "text": "to krav", "marks": ["bold"] },
+            {
+                "type": "span",
+                "text": " du må oppfylle for å få engangsstønad. Men det er noen unntak du må være klar over.",
                 "marks": []
             }
         ],

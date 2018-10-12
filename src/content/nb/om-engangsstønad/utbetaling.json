@@ -1,14 +1,15 @@
 [
     {
         "type": "avsnitt",
-        "style": "systemtittel",
+        "style": "normaltekst",
         "children": [
             {
                 "type": "span",
-                "text": "Når blir pengene utbetalt?",
+                "text": "Du får vanligvis utbetalt engangsstønaden én uke etter at søknaden din er innvilget. Stønaden er skattefri. ",
                 "marks": []
             }
-        ]
+        ],
+        "markDefs": []
     },
     {
         "type": "avsnitt",
@@ -16,7 +17,7 @@
         "children": [
             {
                 "type": "span",
-                "text": "Engangsstønad utbetales vanligvis i forbindelse med fødselen eller adopsjon. Ved fødsel, bør stønaden være utbetalt 1 uke etter fødselsdato. Hvis adopsjon, så kan det ta litt lengre tid.",
+                "text": "Saksbehandlingstiden er inntil seks uker. ",
                 "marks": []
             }
         ],

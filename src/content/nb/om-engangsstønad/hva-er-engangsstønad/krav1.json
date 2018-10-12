@@ -1,0 +1,24 @@
+[
+    {
+        "type": "avsnitt",
+        "style": "element",
+        "children": [
+            { "type": "span", "text": "Være mor til barnet", "marks": [] }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "I noen tilfeller kan far få stønaden. ",
+                "marks": []
+            },
+            { "type": "span", "text": "Les mer", "marks": ["url_Les_mer", "external_link"] }
+        ],
+        "markDefs": [
+            { "key": "url_Les_mer", "type": "link", "href": "www.nav.no" }
+        ]
+    }
+]
