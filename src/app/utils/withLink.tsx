@@ -83,13 +83,13 @@ export class WithLink extends React.Component<Props> {
             );
         } else if (url.charAt(0) === '#') {
             return (
-                <a
+                <Lenke
                     className={className}
                     style={style}
                     onClick={(e) => this.goToSection(e, url)}
                     href={url}>
                     {children}
-                </a>
+                </Lenke>
             );
         } else {
             return (
