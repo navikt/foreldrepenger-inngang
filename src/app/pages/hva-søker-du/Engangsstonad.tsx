@@ -11,7 +11,6 @@ const Engangsstonad = ({ parentCls, lang }: { parentCls: any; lang: Language }) 
     return (
         <PanelMedTittel title={getTranslation('engangsstønad', lang)}>
             <StrukturertTekst tekst={getContent('hva-vil-du-søke-om/engangsstønad', lang)} />
-            <div className={parentCls.element('filler')} />
             <ButtonPanel
                 parentCls={parentCls}
                 buttonText={getTranslation('hva_søker_du.søk_engangsstønad', lang)}
