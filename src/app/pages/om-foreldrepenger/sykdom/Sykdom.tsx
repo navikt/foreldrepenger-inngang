@@ -9,8 +9,10 @@ import StrukturertTekst from '../../../components/strukturert-tekst/StrukturertT
 import LesMer from '../../../components/les-mer/LesMer';
 import { getContent } from '../../../utils/getContent';
 import Illustrasjon from './Illustrasjon';
+import IllustrasjonMobil from './IllustrasjonMobil';
 import TypografiBase from 'nav-frontend-typografi';
 import './sykdom.less';
+import MediaQuery from 'react-responsive';
 
 const sykdomSvg = require('../../../assets/ark/ark-sykdom.svg').default;
 const cls = BEMHelper('sykdom');
@@ -39,7 +41,12 @@ const EnAvForeldreneErSykeWithoutIntl: React.StatelessComponent<IntlProps> = ({ 
             <TypografiBase type="normaltekst">
                 {getTranslation('om_foreldrepenger.sykdom.innlagt.eksempeltittel')}
             </TypografiBase>
-            <Illustrasjon />
+            <MediaQuery query="(min-width: 576px)">
+                <Illustrasjon />
+            </MediaQuery>
+            <MediaQuery query="(max-width: 575px)">
+                <IllustrasjonMobil />
+            </MediaQuery>
         </div>
         <LesMer intro={getTranslation('om_foreldrepenger.sykdom.innlagt.utsette', lang)}>
             <StrukturertTekst tekst={getContent(sykeUtsette, lang)} />
