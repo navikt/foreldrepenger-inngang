@@ -1,0 +1,14 @@
+[
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Du kan tidligst sende inn søknad seks uker før du skal ta ut foreldrepengene dine. Skal du vente med å ta ut foreldrepengene dine, gjelder dette også deg.",
+                "marks": []
+            }
+        ],
+        "markDefs": []
+    }
+]
