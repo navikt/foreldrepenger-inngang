@@ -23,55 +23,82 @@ const withLink = (url: string, componentToRender: ReactNode, urlIsExternal?: boo
 const navlab = process.env.NODE_ENV === 'navlab';
 const cls = BEMHelper('withLink');
 
-export const WithLink = ({
-    url,
-    urlIsExternal,
-    addExternalIcon,
-    noStyling,
-    className,
-    children
-}: {
+interface Props {
     url: string;
     urlIsExternal?: boolean;
     addExternalIcon?: boolean;
     noStyling?: boolean;
     className?: string;
+    style?: any;
     children: ReactNode;
-}) => {
-    if (urlIsExternal) {
-        if (noStyling) {
+}
+
+export class WithLink extends React.Component<Props> {
+    goToSection = (e: any, id: string): void => {
+        e.preventDefault();
+        window.history.replaceState(null, '', id);
+        const target = document.querySelector(id);
+        if (target) {
+            target.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
+    render = () => {
+        const {
+            urlIsExternal,
+            url,
+            addExternalIcon,
+            noStyling,
+            className,
+            style,
+            children
+        } = this.props;
+
+        if (urlIsExternal) {
+            if (noStyling) {
+                return (
+                    <a className={className} href={navlab ? '/under-arbeid' : url}>
+                        {children}
+                    </a>
+                );
+            } else if (navlab) {
+                return (
+                    <span
+                        title="Lenke under arbeid"
+                        className={classnames(cls.className, cls.modifier('disabled'), className)}>
+                        {children}
+                    </span>
+                );
+            }
+
             return (
-                <a className={className} href={navlab ? '/under-arbeid' : url}>
+                <Lenke className={classnames(cls.className, className)} href={url}>
                     {children}
-                </a>
+                    {addExternalIcon && (
+                        <span className={cls.element('icon')}>
+                            <CustomSVGFromSprite size={15} iconRef={externalLinkIcon} />
+                        </span>
+                    )}
+                </Lenke>
             );
-        } else if (navlab) {
+        } else if (url.charAt(0) === '#') {
             return (
-                <span
-                    title="Lenke under arbeid"
-                    className={classnames(cls.className, cls.modifier('disabled'), className)}>
+                <Lenke
+                    className={className}
+                    style={style}
+                    onClick={(e) => this.goToSection(e, url)}
+                    href={url}>
                     {children}
-                </span>
+                </Lenke>
+            );
+        } else {
+            return (
+                <Link className={classnames(cls.className, className)} to={url}>
+                    {children}
+                </Link>
             );
         }
-
-        return (
-            <Lenke className={classnames(cls.className, className)} href={url}>
-                {children}
-                {addExternalIcon && (
-                    <span className={cls.element('icon')}>
-                        <CustomSVGFromSprite size={15} iconRef={externalLinkIcon} />
-                    </span>
-                )}
-            </Lenke>
-        );
-    } else {
-        return (
-            <Link className={classnames(cls.className, className)} to={url}>
-                {children}
-            </Link>
-        );
-    }
-};
+    };
+}
 
 export default withLink;
