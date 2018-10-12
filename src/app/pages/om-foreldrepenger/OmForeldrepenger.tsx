@@ -16,6 +16,7 @@ import HjemmeSamtidig from './hjemme-samtidig/HjemmeSamtidig';
 import Hurtiglenker from './hurtiglenker/Hurtiglenker';
 import MediaQuery from 'react-responsive';
 import './omForeldrepenger.less';
+import Hjelp from './hjelp/Hjelp';
 
 const cls = BEMHelper('infosider');
 
@@ -32,7 +33,8 @@ const sections = [
     'noen-blir-syke',
     'hjemme-samtidig',
     'dette-gir-deg-ogsa-rett',
-    'adoptere'
+    'adoptere',
+    'hjelp'
 ];
 
 const OmForeldrepenger: React.StatelessComponent<Props & IntlProps> = ({ location, lang }) => {
@@ -55,6 +57,7 @@ const OmForeldrepenger: React.StatelessComponent<Props & IntlProps> = ({ locatio
                     <HjemmeSamtidig id={sections[6]} />
                     <JegHarHattInntekt id={sections[7]} />
                     <Adopsjon id={sections[8]} />
+                    <Hjelp id={sections[9]} />
                 </article>
             </main>
         </div>

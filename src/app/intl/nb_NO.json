@@ -33,6 +33,9 @@
     "ukjent": "ukjent",
     "endre_målform_til": "Endre målform til",
     "tilbake": "Tilbake",
+    "facebook": "Facebook",
+    "chat": "Chat",
+    "telefon": "Telefon",
     "under_utvikling": "DENNE SIDEN ER UNDER UTVIKLING",
 
 
@@ -156,6 +159,8 @@
     "om_foreldrepenger.beregning.selvstendig":"Selvstendig næringsdrivende",
     "om_foreldrepenger.beregning.harYtelse":"Har ytelser fra NAV",
     "om_foreldrepenger.beregning.andreInntektskilder":"Andre inntektskilder",
+
+    "om_foreldrepenger.hjelp.tittel": "Fant du ikke det du lette etter?",
 
     "om_engangsstønad.tittel": "All informasjon om engangsstønad",
     "om_engangsstønad.hva_er.tittel": "Hva er engangsstønad?",

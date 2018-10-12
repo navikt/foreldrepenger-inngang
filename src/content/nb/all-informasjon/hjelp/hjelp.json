@@ -1,0 +1,14 @@
+[
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Ta gjerne kontakt med oss på",
+                "marks": []
+            }
+        ],
+        "markDefs": []
+    }
+]

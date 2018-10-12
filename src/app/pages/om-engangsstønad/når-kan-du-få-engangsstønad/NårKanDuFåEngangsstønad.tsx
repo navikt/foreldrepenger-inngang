@@ -13,6 +13,7 @@ const fødselContent = 'om-engangsstønad/når-kan-du-få-engangsstønad/fødsel
 
 const infoSvg = require('../../../assets/ark/ark-info.svg').default;
 const barnevognSvg = require('../../../assets/icons/barnevogn.svg').default;
+const adopsjonSvg = require('../../../assets/icons/adopsjon.svg').default;
 
 const getTabs = (lang: Language) => [
     {
@@ -22,7 +23,7 @@ const getTabs = (lang: Language) => [
     },
     {
         label: 'adopsjon',
-        icon: <CustomSVGFromSprite size={30} iconRef={barnevognSvg} />,
+        icon: <CustomSVGFromSprite size={30} iconRef={adopsjonSvg} />,
         component: <StrukturertTekst tekst={getContent(adopsjonContent, lang)} />
     }
 ];
