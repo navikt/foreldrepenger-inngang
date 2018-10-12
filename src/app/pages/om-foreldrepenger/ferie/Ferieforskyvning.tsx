@@ -24,7 +24,7 @@ const Ferieforskyvning = () => (
                 width="233"
                 rx="8"
                 stroke="#634887"
-                strokeWidth="0.5"
+                strokeWidth="1"
                 x="30"
                 y="46"
             />
@@ -34,16 +34,20 @@ const Ferieforskyvning = () => (
                 width="104"
                 rx="8"
                 stroke="#634887"
-                strokeWidth="0.5"
+                strokeWidth="1"
                 x="369"
                 y="46"
             />
-            <path
-                id="Rectangle-2-Copy"
-                d="M477,46 L573,46 C575.209139,46 577,47.790861 577,50 L577,69 C577,71.209139 575.209139,73 573,73 L477,73 C474.790861,73 473,71.209139 473,69 L473,50 C473,47.790861 474.790861,46 477,46 Z"
+            <rect
+                height="27"
+                id="Rectangle-2"
+                width="104"
+                rx="8"
                 stroke="#634887"
+                strokeWidth="1"
                 strokeDasharray="3,3"
-                strokeWidth="0.5"
+                x="473"
+                y="46"
             />
             <rect
                 height="27"
@@ -51,7 +55,7 @@ const Ferieforskyvning = () => (
                 width="27"
                 rx="8"
                 stroke="#634887"
-                strokeWidth="0.5"
+                strokeWidth="1"
                 x="1"
                 y="46"
             />
@@ -104,7 +108,7 @@ const Ferieforskyvning = () => (
                 id="Triangle-Copy-6"
                 fill="#4A4A4A"
                 points="473.5 38 477 43 470 43"
-                transform="translate(473.500000, 40.500000) rotate(180.000000) translate(-473.500000, -40.500000) "
+                transform="translate(473, 40.500000) rotate(180.000000) translate(-473.500000, -40.500000) "
             />
             <g id="Component/planner/icon" transform="translate(5.000000, 50.000000)">
                 <mask id="mask-2" fill="white">

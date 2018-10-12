@@ -10,7 +10,7 @@ const Illustrasjon = () => (
                 width="233"
                 rx="8"
                 stroke="#634887"
-                strokeWidth="0.5"
+                strokeWidth="1"
                 x="30"
                 y="37"
             />
@@ -20,16 +20,20 @@ const Illustrasjon = () => (
                 width="104"
                 rx="8"
                 stroke="#634887"
-                strokeWidth="0.5"
+                strokeWidth="1"
                 x="369"
                 y="37"
             />
-            <path
-                id="Rectangle-2-Copy"
-                d="M477,37 L573,37 C575.209139,37 577,38.790861 577,41 L577,60 C577,62.209139 575.209139,64 573,64 L477,64 C474.790861,64 473,62.209139 473,60 L473,41 C473,38.790861 474.790861,37 477,37 Z"
+            <rect
+                height="27"
+                id="Rectangle-2"
+                width="104"
+                rx="8"
                 stroke="#634887"
+                strokeWidth="1"
                 strokeDasharray="3,3"
-                strokeWidth="0.5"
+                x="473"
+                y="37"
             />
             <rect
                 height="27"
@@ -37,7 +41,7 @@ const Illustrasjon = () => (
                 width="28"
                 rx="8"
                 stroke="#634887"
-                strokeWidth="0.5"
+                strokeWidth="1"
                 x="0"
                 y="37"
             />
@@ -56,7 +60,7 @@ const Illustrasjon = () => (
                 fill="#931515"
                 fontFamily="SourceSansPro-Bold, Source Sans Pro"
                 fontSize="12">
-                <tspan x="288.108" y="9">
+                <tspan fontWeight="bold" x="288.108" y="9">
                     Sykemeldt
                 </tspan>
                 <tspan fontFamily="SourceSansPro-Regular, Source Sans Pro" x="344.892" y="9" />
@@ -74,7 +78,7 @@ const Illustrasjon = () => (
                 fill="#3E3832"
                 fontFamily="SourceSansPro-Bold, Source Sans Pro"
                 fontSize="12">
-                <tspan x="544.16" y="9">
+                <tspan fontWeight="bold" x="544.16" y="9">
                     Sluttdato
                 </tspan>
                 <tspan fontFamily="SourceSansPro-Regular, Source Sans Pro" x="525.242" y="24">
@@ -91,7 +95,7 @@ const Illustrasjon = () => (
                 id="Triangle-Copy-6"
                 fill="#4A4A4A"
                 points="473.5 29 477 34 470 34"
-                transform="translate(473.500000, 31.500000) rotate(180.000000) translate(-473.500000, -31.500000) "
+                transform="translate(473, 31.500000) rotate(180.000000) translate(-473.500000, -31.500000) "
             />
             <g id="Babystroller3" transform="translate(4.000000, 41.000000)">
                 <path
