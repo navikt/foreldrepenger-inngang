@@ -1,0 +1,30 @@
+[
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Årsinntekten din må være minst halvparten av ",
+                "marks": []
+            },
+            {
+                "type": "span",
+                "text": "grunnbeløpet (G)",
+                "marks": ["url_grunnbeløpet_G", "external_link"]
+            },
+            {
+                "type": "span",
+                "text": " i folketrygden. Har du hatt flere deltidsstillinger, er det den totale inntekten din som gjelder.",
+                "marks": []
+            }
+        ],
+        "markDefs": [
+            {
+                "key": "url_grunnbeløpet_G",
+                "type": "link",
+                "href": "https://www.nav.no/no/NAV+og+samfunn/Kontakt+NAV/Utbetalinger/Snarveier/satser--380089?kap=383506"
+            }
+        ]
+    }
+]

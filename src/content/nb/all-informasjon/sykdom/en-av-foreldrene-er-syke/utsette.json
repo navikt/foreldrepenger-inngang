@@ -6,12 +6,12 @@
         "level": 1,
         "children": [
             { "type": "span", "text": "Send inn ", "marks": [] },
+            { "type": "span", "text": "søknad", "marks": ["bold"] },
             {
                 "type": "span",
-                "text": "søknad om å utsette",
-                "marks": ["bold"]
-            },
-            { "type": "span", "text": " foreldrepengene", "marks": [] }
+                "text": " om å utsette foreldrepengene.",
+                "marks": []
+            }
         ]
     },
     {
@@ -24,7 +24,7 @@
             { "type": "span", "text": "legeerklæring", "marks": ["bold"] },
             {
                 "type": "span",
-                "text": ". Den må beskrive hvordan sykdommen påvirker evnen din til å ta deg av barnet, i hvilken grad du er avhengig av hjelp og hvor lenge sykdommen sannsynligvis vil vare.",
+                "text": ". Den må beskrive hvordan sykdommen gjør deg helt avhengig av hjelp til å ta deg av barnet, og hvor lenge sykdommen vil vare.",
                 "marks": []
             }
         ]
@@ -37,9 +37,15 @@
         "children": [
             {
                 "type": "span",
-                "text": "Hvis du er innlagt, legger du i stedet ved dokumentasjon på innleggelsen fra helseinstitusjonen.",
+                "text": "Hvis du er innlagt, legger du i stedet ved ",
                 "marks": []
-            }
+            },
+            {
+                "type": "span",
+                "text": "dokumentasjon på innleggelsen",
+                "marks": ["bold"]
+            },
+            { "type": "span", "text": " fra helseinstitusjonen.", "marks": [] }
         ]
     }
 ]

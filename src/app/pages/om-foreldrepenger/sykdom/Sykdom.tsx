@@ -16,12 +16,9 @@ const cls = BEMHelper('jegVilJobbe');
 const barn = require('../../../assets/barn/barn1.svg').default;
 
 const barnetErInnlagt = 'all-informasjon/sykdom/barnet-er-innlagt/barnet-er-innlagt';
-const barnetErInnlagtForts =
-    'all-informasjon/sykdom/barnet-er-innlagt/barnet-er-innlagt-fortsettelse';
 const barnetErInnlagtUtsette = 'all-informasjon/sykdom/barnet-er-innlagt/utsette';
 
 const syke = 'all-informasjon/sykdom/en-av-foreldrene-er-syke/en-av-foreldrene-er-syke';
-const syke2 = 'all-informasjon/sykdom/en-av-foreldrene-er-syke/en-av-foreldrene-er-syke-del2';
 const sykeUtsette = 'all-informasjon/sykdom/en-av-foreldrene-er-syke/utsette';
 const sykeOverta = 'all-informasjon/sykdom/en-av-foreldrene-er-syke/overta';
 
@@ -31,18 +28,16 @@ const BarnetErInnlagtWithoutIntl: React.StatelessComponent<IntlProps> = ({ lang 
         <LesMer intro={getTranslation('om_foreldrepenger.sykdom.innlagt.utsette', lang)}>
             <StrukturertTekst tekst={getContent(barnetErInnlagtUtsette, lang)} />
         </LesMer>
-        <StrukturertTekst tekst={getContent(barnetErInnlagtForts, lang)} />
     </div>
 );
 
 const EnAvForeldreneErSykeWithoutIntl: React.StatelessComponent<IntlProps> = ({ lang }) => (
     <div>
         <StrukturertTekst tekst={getContent(syke, lang)} />
-        <TypografiBase className={cls.element('eksempeltekst')} type="element">
+        <TypografiBase className={cls.element('eksempeltekst')} type="normaltekst">
             {getTranslation('om_foreldrepenger.sykdom.innlagt.eksempeltittel')}
         </TypografiBase>
         <Illustrasjon />
-        <StrukturertTekst tekst={getContent(syke2, lang)} />
         <LesMer intro={getTranslation('om_foreldrepenger.sykdom.innlagt.utsette', lang)}>
             <StrukturertTekst tekst={getContent(sykeUtsette, lang)} />
         </LesMer>

@@ -9,7 +9,7 @@
             },
             {
                 "type": "span_nowrap",
-                "text": "6 av 10"
+                "text": "6 av de 10"
             },
             {
                 "type": "span",
@@ -29,7 +29,7 @@
             {
                 "type": "span",
                 "text": "Les mer",
-                "marks": ["url_arbeidsgiver"]
+                "marks": ["url_arbeidsgiver", "external_link"]
             }
         ],
         "markDefs": [

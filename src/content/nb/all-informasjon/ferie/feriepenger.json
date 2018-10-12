@@ -1,7 +1,7 @@
 [
     {
         "type": "avsnitt",
-        "style": "undertittel",
+        "style": "element",
         "children": [
             {
                 "type": "span",
@@ -16,7 +16,7 @@
         "children": [
             {
                 "type": "span",
-                "text": "Arbeidstakere har rett til feriepenger av foreldrepenger. Hvis arbeidsgiver betaler lønn under permisjon, utbetales feriepengene til arbeidsgiveren.",
+                "text": "Hvis du er arbeidstaker har du rett til feriepenger av foreldrepenger. Hvis arbeidsgiveren betaler lønn under permisjonen, utbetales feriepengene til arbeidsgiveren. ",
                 "marks": []
             }
         ],
@@ -28,16 +28,10 @@
         "children": [
             {
                 "type": "span",
-                "text": "Les mer om feriepenger av foreldrepenger",
-                "marks": ["url_Les_mer_om_feriepenger_av_foreldrepenger", "external_link"]
+                "text": "Feriepengene utgjør 10,2 prosent av det som er utbetalt de første 12 eller 15 ukene av foreldrepengeperioden, før skatt. ",
+                "marks": []
             }
         ],
-        "markDefs": [
-            {
-                "key": "url_Les_mer_om_feriepenger_av_foreldrepenger",
-                "type": "link",
-                "href": "https://www.nav.no/no/NAV+og+samfunn/Kontakt+NAV/Utbetalinger/Snarveier/ferie-og-feriepenger#chapter-3"
-            }
-        ]
+        "markDefs": []
     }
 ]

@@ -1,17 +1,6 @@
 [
     {
         "type": "avsnitt",
-        "style": "undertittel",
-        "children": [
-            {
-                "type": "span",
-                "text": "Hva hvis jeg skal ta ut ferie?",
-                "marks": []
-            }
-        ]
-    },
-    {
-        "type": "avsnitt",
         "style": "normaltekst",
         "children": [
             {
@@ -30,7 +19,7 @@
         "children": [
             {
                 "type": "span",
-                "text": "avvikle ferien samtidig som du får foreldrepenger",
+                "text": "ta ut ferien samtidig som du får foreldrepenger",
                 "marks": []
             }
         ]
@@ -43,7 +32,7 @@
         "children": [
             {
                 "type": "span",
-                "text": "utsette foreldrepengene til ferien din er ferdig",
+                "text": "ha et opphold i foreldrepengene dine til ferien din er ferdig",
                 "marks": []
             }
         ]
@@ -60,7 +49,7 @@
             },
             {
                 "type": "span",
-                "text": " for å se hvordan du kan utsette perioder med foreldrepenger.",
+                "text": " for å se hvordan du kan ha et opphold i perioden med foreldrepenger når du tar ferie.",
                 "marks": []
             }
         ],

@@ -2,7 +2,7 @@ import * as React from 'react';
 import Kalkulator from './kalkulator/Kalkulator';
 import Informasjonsfaner from './informasjons-faner/Informasjonsfaner';
 import StrukturertTekst from '../../../components/strukturert-tekst/StrukturertTekst';
-import { Language, withIntl } from '../../../intl/intl';
+import { Language, withIntl, getTranslation } from '../../../intl/intl';
 import { getContent } from '../../../utils/getContent';
 
 const content = 'all-informasjon/hva-er-foreldrepenger/aleneomsorg/aleneomsorg';
@@ -11,7 +11,7 @@ const morsDel = 'all-informasjon/hva-er-foreldrepenger/aleneomsorg/mors-del';
 
 const getInformasjonsfaner = (lang: Language) => [
     {
-        faneLabel: 'Som mor',
+        faneLabel: getTranslation('om_foreldrepenger.hvor_lenge.fordeling.alenemor', lang),
         faneIcon: true,
         bodyProps: {
             tittel: 'til mor',
@@ -22,7 +22,7 @@ const getInformasjonsfaner = (lang: Language) => [
         }
     },
     {
-        faneLabel: 'Som far',
+        faneLabel: getTranslation('om_foreldrepenger.hvor_lenge.fordeling.alenefar', lang),
         faneIcon: true,
         bodyProps: {
             tittel: 'til far',

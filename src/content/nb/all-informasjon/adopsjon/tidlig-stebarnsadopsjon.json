@@ -1,0 +1,14 @@
+[
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Dersom det gjelder tidlig stebarnsadopsjon, les mer her.",
+                "marks": []
+            }
+        ],
+        "markDefs": []
+    }
+]

@@ -10,10 +10,12 @@ import JegVilJobbe from './jeg-vil-jobbe/JegVilJobbe';
 import Sykdom from './sykdom/Sykdom';
 import Ferie from './ferie/Ferie';
 import Adopsjon from './adopsjon/Adopsjon';
-import './omForeldrepenger.less';
-import Arbeidsgiver from './arbeidsgiver/Arbeidsgiver';
 import Sidebanner from '../../components/sidebanner/Sidebanner';
 import Beregning from './beregning/Beregning';
+import HjemmeSamtidig from './hjemme-samtidig/HjemmeSamtidig';
+import Hurtiglenker from './hurtiglenker/Hurtiglenker';
+import MediaQuery from 'react-responsive';
+import './omForeldrepenger.less';
 
 const cls = BEMHelper('infosider');
 
@@ -22,16 +24,15 @@ interface Props {
 }
 
 const sections = [
-    'for-å-få-foreldrepenger',
-    'hvor-lenge-kan-jeg-få-foreldrepenger',
-    'ferie',
-    'jeg-vil-jobbe',
-    'sykdom',
-    'hjemme-samtidig',
-    'jeg-har-hatt-inntekt',
+    'hvem-kan-fa-foreldrepenger',
+    'hvor-lenge-kan-jeg-fa-foreldrepenger',
     'hva-kan-jeg-fa',
-    'adopsjon',
-    'arbeidsgiver-og-deg'
+    'ta-ut-ferie',
+    'jobbe-i-perioden',
+    'noen-blir-syke',
+    'hjemme-samtidig',
+    'dette-gir-deg-ogsa-rett',
+    'adoptere'
 ];
 
 const OmForeldrepenger: React.StatelessComponent<Props & IntlProps> = ({ location, lang }) => {
@@ -41,18 +42,19 @@ const OmForeldrepenger: React.StatelessComponent<Props & IntlProps> = ({ locatio
             <main className={cls.element('body')}>
                 <article className={cls.element('content')}>
                     <Breadcrumbs path={location.pathname} />
-                    {/* <Hurtiglenker links={sections} /> */}
+                    <MediaQuery query="(min-width: 800px)">
+                        <Hurtiglenker links={sections} />
+                    </MediaQuery>
                     <ForÅFåForeldrepenger id={sections[0]} />
-                    <NyeRegler />
                     <HvaErForeldrepenger id={sections[1]} />
-                    <Ferie id={sections[2]} />
-                    <JegVilJobbe id={sections[3]} />
-                    <Sykdom id={sections[4]} />
-                    {/* <HjemmeSamtidig id={sections[5]} /> */}
-                    <JegHarHattInntekt id={sections[6]} />
-                    <Beregning id={sections[7]} />
+                    <NyeRegler />
+                    <Beregning id={sections[2]} />
+                    <Ferie id={sections[3]} />
+                    <JegVilJobbe id={sections[4]} />
+                    <Sykdom id={sections[5]} />
+                    <HjemmeSamtidig id={sections[6]} />
+                    <JegHarHattInntekt id={sections[7]} />
                     <Adopsjon id={sections[8]} />
-                    <Arbeidsgiver id={sections[9]} />
                 </article>
             </main>
         </div>

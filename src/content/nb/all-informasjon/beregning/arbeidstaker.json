@@ -1,0 +1,103 @@
+[
+  {
+      "type": "avsnitt",
+      "style": "element",
+      "children": [
+          { "type": "span", "text": "Hvis du er arbeidstaker", "marks": [] }
+      ]
+  },
+  {
+      "type": "avsnitt",
+      "style": "normaltekst",
+      "children": [
+          {
+              "type": "span",
+              "text": "Foreldrepengene dine beregnes vanligvis ut ifra inntekten du har når foreldrepermisjonen din begynner. Hvis du har:",
+              "marks": []
+          }
+      ],
+      "markDefs": []
+  },
+  {
+      "type": "avsnitt",
+      "style": "normaltekst",
+      "listItem": "bullet",
+      "level": 1,
+      "children": [
+          {
+              "type": "span",
+              "text": "fast arbeidstid og månedslønn, brukes den siste måneden",
+              "marks": []
+          }
+      ]
+  },
+  {
+      "type": "avsnitt",
+      "style": "normaltekst",
+      "listItem": "bullet",
+      "level": 1,
+      "children": [
+          {
+              "type": "span",
+              "text": "fast arbeidstid og timelønn, brukes de siste tre eller seks månedene",
+              "marks": []
+          }
+      ]
+  },
+  {
+      "type": "avsnitt",
+      "style": "normaltekst",
+      "listItem": "bullet",
+      "level": 1,
+      "children": [
+          {
+              "type": "span",
+              "text": "varierende inntekt eller stillingsprosent, brukes et gjennomsnitt av de siste tre, seks eller ni månedene",
+              "marks": []
+          }
+      ]
+  },
+  {
+      "type": "avsnitt",
+      "style": "normaltekst",
+      "listItem": "bullet",
+      "level": 1,
+      "children": [
+          {
+              "type": "span",
+              "text": "nylig fått jobb eller endret lønn, brukes inntekten din etter endringen",
+              "marks": []
+          }
+      ]
+  },
+  {
+      "type": "avsnitt",
+      "style": "normaltekst",
+      "children": [
+          {
+              "type": "span",
+              "text": "Hvis inntekten din er 25 prosent større eller mindre enn det du har tjent de tre siste årene, vil enten den nåværende inntekten din brukes eller gjennomsnittet av de tre siste årene.",
+              "marks": []
+          }
+      ],
+      "markDefs": []
+  },
+  {
+      "type": "avsnitt",
+      "style": "normaltekst",
+      "children": [
+          {
+              "type": "span",
+              "text": "Les om nye beregningsregler fra 1. januar",
+              "marks": ["url_Les_om_nye_beregningsregler_fra_1._januar", "external_link"]
+          }
+      ],
+      "markDefs": [
+          {
+              "key": "url_Les_om_nye_beregningsregler_fra_1._januar",
+              "type": "link",
+              "href": "https://www.nav.no/no/Person/Familie/Venter+du+barn/Relatert+informasjon/beregning-av-foreldrepenger"
+          }
+      ]
+  }
+]

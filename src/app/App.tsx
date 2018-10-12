@@ -4,6 +4,7 @@ import { getTranslation, Language } from './intl/intl';
 import BEMHelper from './utils/bem';
 import TypografiBase from 'nav-frontend-typografi';
 import Router from './Router';
+import classnames from 'classnames';
 import './app.less';
 
 interface State {
@@ -60,7 +61,11 @@ class App extends React.Component<{}, State> {
                     setLanguage: this.setLanguage
                 }}>
                 <div lang={this.state.currentLanguage}>
-                    {process.env.NODE_ENV !== 'navlab' && (
+                    {process.env.NODE_ENV === 'navlab' ? (
+                        <UnderUtviklingBanner
+                            label={getTranslation('under_utvikling', this.state.currentLanguage)}
+                        />
+                    ) : (
                         <Språkbanner
                             onClick={this.toggleBetweenNbAndNn}
                             label={languageChangeText}
@@ -78,6 +83,16 @@ const Språkbanner = ({ onClick, label }: { onClick: () => void; label: string }
         <span onClick={onClick} className={cls.element('byttSpråkKnapp')}>
             <TypografiBase type="normaltekst">{label}</TypografiBase>
         </span>
+    </div>
+);
+
+const UnderUtviklingBanner = ({ label }: { label: string }) => (
+    <div
+        className={classnames(
+            cls.element('topBanner'),
+            cls.element('topBanner', 'underUtvikling')
+        )}>
+        <TypografiBase type="normaltekst">{label}</TypografiBase>
     </div>
 );
 

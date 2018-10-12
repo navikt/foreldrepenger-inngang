@@ -13,7 +13,10 @@ interface Props {
 
 const Adopjson: React.StatelessComponent<Props & IntlProps> = ({ id, lang }) => {
     return (
-        <PanelMedIllustrasjon id={id} title={getTranslation('adopsjon', lang)} svg={adopsjonSvg}>
+        <PanelMedIllustrasjon
+            id={id}
+            title={getTranslation('om_foreldrepenger.adopsjon.tittel', lang)}
+            svg={adopsjonSvg}>
             <StrukturertTekst tekst={getContent('all-informasjon/adopsjon/adopsjon', lang)} />
             <LesMer intro={getTranslation('om_foreldrepenger.adopsjon.når_starter', lang)}>
                 <StrukturertTekst
@@ -28,6 +31,12 @@ const Adopjson: React.StatelessComponent<Props & IntlProps> = ({ id, lang }) => 
             </LesMer>
             <LesMer intro={getTranslation('om_foreldrepenger.adopsjon.ikke_rett', lang)}>
                 <StrukturertTekst tekst={getContent('all-informasjon/adopsjon/ikke-rett', lang)} />
+            </LesMer>
+            <LesMer
+                intro={getTranslation('om_foreldrepenger.adopsjon.tidlig_stebarnsadopsjon', lang)}>
+                <StrukturertTekst
+                    tekst={getContent('all-informasjon/adopsjon/tidlig-stebarnsadopsjon', lang)}
+                />
             </LesMer>
         </PanelMedIllustrasjon>
     );

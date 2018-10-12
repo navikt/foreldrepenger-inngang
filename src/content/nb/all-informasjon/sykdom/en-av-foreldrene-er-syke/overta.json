@@ -5,9 +5,26 @@
         "listItem": "bullet",
         "level": 1,
         "children": [
+            { "type": "span", "text": "Send inn ", "marks": [] },
+            { "type": "span", "text": "søknad", "marks": ["bold"] },
             {
                 "type": "span",
-                "text": "Send inn søknad om å overta foreldrepengene",
+                "text": " om å overta foreldrepengene.",
+                "marks": []
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "listItem": "bullet",
+        "level": 1,
+        "children": [
+            { "type": "span", "text": "Legg ved ", "marks": [] },
+            { "type": "span", "text": "legeerklæring", "marks": ["bold"] },
+            {
+                "type": "span",
+                "text": ". Den må beskrive hvordan sykdommen gjør den andre forelderen helt avhengig av hjelp til å ta seg av barnet, og hvor lenge sykdommen vil vare.",
                 "marks": []
             }
         ]
@@ -20,22 +37,15 @@
         "children": [
             {
                 "type": "span",
-                "text": "Legg ved legeerklæring. Den må beskrive hvordan sykdommen påvirker evnen til den andre forelderen til å ta seg av barnet, i hvilken grad han eller hun er avhengig av hjelp og hvor lenge sykdommen sannsynligvis vil vare.",
+                "text": "Hvis den andre forelderen er innlagt, legger du i stedet ved ",
                 "marks": []
-            }
-        ]
-    },
-    {
-        "type": "avsnitt",
-        "style": "normaltekst",
-        "listItem": "bullet",
-        "level": 1,
-        "children": [
+            },
             {
                 "type": "span",
-                "text": "Hvis den andre forelderen er innlagt, legger du i stedet ved dokumentasjon på innleggelsen fra helseinstitusjonen.",
-                "marks": []
-            }
+                "text": "dokumentasjon på innleggelsen",
+                "marks": ["bold"]
+            },
+            { "type": "span", "text": " fra helseinstitusjonen.", "marks": [] }
         ]
     }
 ]

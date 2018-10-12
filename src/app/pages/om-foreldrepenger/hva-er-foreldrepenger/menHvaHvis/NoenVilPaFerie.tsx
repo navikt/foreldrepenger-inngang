@@ -15,19 +15,12 @@ const NoenVilPaFerie: React.StatelessComponent<Props> = ({ size }) => {
             xmlnsXlink="http://www.w3.org/1999/xlink">
             <title>Noen vil på ferie</title>
             <defs />
-            <g
-                id="Symbols"
-                stroke="none"
-                strokeWidth="1"
-                fill="none"
-                fillRule="evenodd">
+            <g id="Symbols" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
                 <g
                     id="Fakta-hvaer/komponent/periode/1"
                     transform="translate(-69.000000, -49.000000)">
                     <g id="Group-3" transform="translate(74.000000, -5.000000)">
-                        <g
-                            id="Stacked-Group"
-                            transform="translate(0.000000, 59.000000)">
+                        <g id="Stacked-Group" transform="translate(0.000000, 59.000000)">
                             <g id="Toggle/av">
                                 <circle
                                     id="Background"
@@ -47,8 +40,8 @@ const NoenVilPaFerie: React.StatelessComponent<Props> = ({ size }) => {
                                         fontWeight="normal"
                                         line-spacing="22"
                                         fill="#0067C5">
-                                        <tspan x="1.14" y="44">
-                                            noen vil på{' '}
+                                        <tspan x="7.14" y="44">
+                                            Jeg vil på{' '}
                                         </tspan>
                                         <tspan x="19.22" y="66">
                                             ferie?
@@ -64,10 +57,7 @@ const NoenVilPaFerie: React.StatelessComponent<Props> = ({ size }) => {
                                             d="M23.5,16.4844 L17.5,16.4844 C15.049,16.4844 12.879,17.2724 11.51,18.4844"
                                             id="Stroke-8244"
                                         />
-                                        <path
-                                            d="M17.5,16.5 L14.184,8.133"
-                                            id="Stroke-8245"
-                                        />
+                                        <path d="M17.5,16.5 L14.184,8.133" id="Stroke-8245" />
                                         <path
                                             d="M11.6055,1.6245 L11.2365,0.6955"
                                             id="Stroke-8246"

@@ -5,17 +5,13 @@
         "children": [
             {
                 "type": "span",
-                "text": "Far kan ta ut sin del fra ",
+                "text": "Du kan ta ut fedrekvoten fra ",
                 "marks": []
             },
+            { "type": "span", "text": "uke syv", "marks": ["bold"] },
             {
                 "type": "span",
-                "text": "uke syv etter fødselen",
-                "marks": ["bold"]
-            },
-            {
-                "type": "span",
-                "text": " eller vente til barnet er blitt litt større. Ukene kan tas samlet, deles opp og kombineres med delvis arbeid. ",
+                "text": " etter fødselen eller vente til barnet er blitt litt større. Ukene kan du ta samlet, dele opp eller kombinere med delvis arbeid.",
                 "marks": []
             }
         ],
@@ -25,15 +21,9 @@
         "type": "avsnitt",
         "style": "normaltekst",
         "children": [
-            { "type": "span", "text": "Far må ta ut sin del ", "marks": [] },
             {
                 "type": "span",
-                "text": "senest når fellesdelen er ferdig",
-                "marks": ["bold"]
-            },
-            {
-                "type": "span",
-                "text": ", eller søke om utsettelse.",
+                "text": "Du må ta ut fedrekvoten senest når fellesperioden er ferdig, eller søke om utsettelse.",
                 "marks": []
             }
         ],
@@ -43,11 +33,9 @@
         "type": "avsnitt",
         "style": "normaltekst",
         "children": [
-            { "type": "span", "text": " ", "marks": [] },
-            { "type": "span", "text": "Adopterer", "marks": ["bold"] },
             {
                 "type": "span",
-                "text": " dere, kan far ta ut sin del når som helt etter adopsjonsdatoen.",
+                "text": "Adopterer dere, kan du ta ut fedrekvoten når som helt etter adopsjonsdatoen.",
                 "marks": []
             }
         ],
@@ -57,11 +45,9 @@
         "type": "avsnitt",
         "style": "normaltekst",
         "children": [
-            { "type": "span", "text": "Hvis far er ", "marks": [] },
-            { "type": "span", "text": "så syk", "marks": ["bold"] },
             {
                 "type": "span",
-                "text": " at han er helt avhengig av hjelp til å ta seg av barnet, kan mor søke om å overta fars del.  ",
+                "text": "Hvis du blir så syk at du er helt avhengig av hjelp til å ta deg av barnet, kan mor søke om å overta fedrekvoten din.",
                 "marks": []
             }
         ],
