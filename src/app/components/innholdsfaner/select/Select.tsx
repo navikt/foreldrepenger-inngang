@@ -91,7 +91,9 @@ class Select extends React.Component<SelectProps, SelectState> {
     render = () => (
         <div style={{ position: 'relative' }}>
             <div
-                role="select"
+                role="menu"
+                aria-haspopup={true}
+                aria-expanded={this.state.open}
                 tabIndex={0}
                 ref={this.selectRef}
                 onClick={this.onClick}
@@ -112,7 +114,7 @@ class Select extends React.Component<SelectProps, SelectState> {
                     <div className={cls.element('shadow')}>
                         {this.props.choices.map((choice, index) => (
                             <Panel
-                                role="option"
+                                role="menuitem"
                                 key={choice.label}
                                 border={true}
                                 onClick={() => {
