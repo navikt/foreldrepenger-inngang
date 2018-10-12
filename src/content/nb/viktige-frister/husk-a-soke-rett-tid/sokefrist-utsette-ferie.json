@@ -1,0 +1,12 @@
+[
+  {
+    "type": "avsnitt",
+    "style": "normaltekst",
+    "children": [
+      {
+        "type": "span",
+        "text": "Hvis du skal søke om utsettelse på grunn av ferie, må NAV ha mottatt søknaden din før ferien starter. Du må be arbeidsgiveren din bekrefte ferien, og legge denne samme med søknaden. "
+      }
+    ]
+  }
+]

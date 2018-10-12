@@ -44,6 +44,7 @@
     "route.om-foreldrepenger": "Om foreldrepenger",
     "route.om-engangsstonad": "Om engangsstønad",
     "route.foreldrepenger": "Foreldrepenger",
+    "route.viktige-frister": "viktige frister",
     "route.blindside": "Uferdig side!",
 
 
@@ -60,6 +61,15 @@
     "informasjonstavle.mer_informasjon.engangsstønad": "Har du ikke hatt inntekt de siste året kan du får en engangssum. Dette skal hjelpe deg i rollen som forelder.",
     "informasjonstavle.mer_informasjon.svangerskapspenger": "Friske, gravide kvinner som ikke kan fortsette å jobbe under svangerskapet fordi det kan medføre risiko for skade på fosteret.",
 
+    "viktige_frister.banner":"Viktige frister",
+    "viktige_frister.header": "Husk å søke til rett tid",
+    "viktige_frister.nar_kan_du_soke": "Viktige frister",
+    "viktige_frister.hva_hvis": "Hva hvis du søker for sent?",
+    "viktige_frister.sokefrist_nar_utsette": "Søkefrist når du vil utsette fedrekvoten din eller medmorkvote",
+    "viktige_frister.sokefrist_nar_utsette_ferie": "Søkefrist når du vil utsette på grunn av ferie",
+    "viktige_frister.sokefrist_nar_kombinere_peng_arbeid": "Søkefrist når du vil kombinere foreldrepenger med arbeid",
+    "viktige_frister.hvis_hatt_arbeidsinntekt_eller_jobb": "Hvis du har hatt arbeidsinntekt eller er i jobb",
+    "viktige_frister.du_skal_legge_dok_pa_termindato": "Du skal legge ved dokumentasjon på termindatoen din hvis du er gravid og",
 
     "hva_søker_du.tittel": "Hva vil du søke om?",
     "hva_søker_du.søk_foreldrepenger": "Søk om foreldrepenger",

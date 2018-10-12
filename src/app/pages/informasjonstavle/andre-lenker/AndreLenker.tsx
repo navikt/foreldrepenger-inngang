@@ -28,7 +28,7 @@ const links = [
     },
     {
         label: 'viktige_frister',
-        href: '/under-arbeid',
+        href: '/viktige-frister',
         internal: true
     },
     {

@@ -1,0 +1,26 @@
+[
+  {
+    "type": "avsnitt",
+    "style": "normaltekst",
+    "level": 1,
+    "listItem": "bullet",
+    "children": [
+      {
+        "type": "span",
+        "text": "Skal du starte foreldrepengeperioden din i 2018, må du be arbeidsgiver sende papirskjema NAV-08.xx.xx til NAV. Du kan også få skjemaet hos arbeidsgiveren din og laste det opp sammen med søknaden din. "
+      }
+    ]
+  },
+  {
+    "type": "avsnitt",
+    "style": "normaltekst",
+    "level": 1,
+    "listItem": "bullet",
+    "children": [
+      {
+        "type": "span",
+        "text": "Skal du starte foreldrepengeperioden din i 2019, må du be arbeidsgiveren din sende digital inntektsmelding &lt;lenke&gt; til NAV. Inntektsmeldingen kan arbeidsgiver sende inn tidligst fire uker før foreldrepengeperioden din starter."
+      }
+    ]
+  }
+]
