@@ -1,0 +1,26 @@
+[
+    {
+        "type": "avsnitt",
+        "style": "element",
+        "children": [{ "type": "span", "text": "Bo i Norge", "marks": [] }]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Bor du ikke i Norge, kan du være medlem av folketrygden på andre måter. ",
+                "marks": []
+            },
+            {
+                "type": "span",
+                "text": "Se medlemskap",
+                "marks": ["url_Se_medlemskap", "external_link"]
+            }
+        ],
+        "markDefs": [
+            { "key": "url_Se_medlemskap", "type": "link", "href": "www.nav.no" }
+        ]
+    }
+]
