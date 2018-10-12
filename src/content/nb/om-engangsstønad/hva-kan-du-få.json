@@ -1,14 +1,15 @@
 [
     {
         "type": "avsnitt",
-        "style": "element",
+        "style": "normaltekst",
         "children": [
             {
                 "type": "span",
-                "text": "Utbetaling av stønad skjer én uke etter innvilgelse",
+                "text": "Du får en engangssum på 63 240 kroner for hvert barn du føder eller adopterer. ",
                 "marks": []
             }
-        ]
+        ],
+        "markDefs": []
     },
     {
         "type": "avsnitt",
@@ -16,7 +17,7 @@
         "children": [
             {
                 "type": "span",
-                "text": "Utbetalingstiden kan variere utifra hvor i landet du bor. Eksempelet er for Oslo.",
+                "text": "Adopterer du barnet til ektefellen din, har du ikke rett til engangsstønad. Det samme gjelder hvis du adopterer barn over 15 år. ",
                 "marks": []
             }
         ],

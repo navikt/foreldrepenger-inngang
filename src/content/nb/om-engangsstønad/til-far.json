@@ -1,0 +1,73 @@
+[
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Hvis du er far til barnet, kan du i noen tilfeller få engangsstønad. Det kan gjelde",
+                "marks": []
+            }
+        ],
+        "markDefs": []
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "listItem": "bullet",
+        "level": 1,
+        "children": [
+            { "type": "span", "text": "for hvert barn du ", "marks": [] },
+            { "type": "span", "text": "adopterer alene", "marks": ["bold"] }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "listItem": "bullet",
+        "level": 1,
+        "children": [
+            { "type": "span", "text": "når du får ", "marks": [] },
+            { "type": "span", "text": "foreldreansvar", "marks": ["bold"] },
+            {
+                "type": "span",
+                "text": " når den andre av foreldrene dør",
+                "marks": []
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "listItem": "bullet",
+        "level": 1,
+        "children": [
+            {
+                "type": "span",
+                "text": "når du får tildelt foreldreansvar",
+                "marks": []
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "listItem": "bullet",
+        "level": 1,
+        "children": [
+            { "type": "span", "text": "hvis du ", "marks": [] },
+            { "type": "span", "text": "innen 56 uker", "marks": ["bold"] },
+            {
+                "type": "span",
+                "text": " etter barnet ble født eller adoptert, har ",
+                "marks": []
+            },
+            { "type": "span", "text": "overtatt omsorgen", "marks": ["bold"] },
+            {
+                "type": "span",
+                "text": " for barnet med sikte på å overta foreldreansvaret alene",
+                "marks": []
+            }
+        ]
+    }
+]
