@@ -1,12 +1,10 @@
 import * as React from 'react';
 import PanelBase from 'nav-frontend-paneler';
-import Lenke from 'nav-frontend-lenker';
-
 import BEMHelper from '../../../utils/bem';
 import { getTranslation } from '../../../intl/intl';
-
 import './hurtiglenker.less';
 import TypografiBase from 'nav-frontend-typografi';
+import { WithLink } from '../../../utils/withLink';
 
 const cls = BEMHelper('hurtiglenker');
 
@@ -18,9 +16,9 @@ const Hurtiglenker = ({ links }: { links: string[] }) => {
 
                 return (
                     <TypografiBase key={link} type="normaltekst">
-                        <Lenke href={`#${link}`}>
+                        <WithLink className={cls.element('lenke')} url={`#${link}`}>
                             {getTranslation(`hurtiglenke.${stringToTranslate}`)}
-                        </Lenke>
+                        </WithLink>
                     </TypografiBase>
                 );
             })}

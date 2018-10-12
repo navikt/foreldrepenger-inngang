@@ -9,6 +9,7 @@ import HjemmeSamtidig from './HjemmeSamtidig';
 import ScaleSize from 'react-responsive';
 
 import './MenHvaHvis.less';
+import { WithLink } from '../../../../utils/withLink';
 
 const cls = BEMHelper('menHvaHvis');
 
@@ -60,18 +61,29 @@ class MenHvaHvis extends React.Component<Props> {
                 </TypografiBase>
             </div>
             <div className={cls.element('body')}>
-                <a style={{ height: this.state.svgSize }} href="#ta-ut-ferie">
+                <WithLink
+                    style={{ height: this.state.svgSize, width: this.state.svgSize }}
+                    url={'#ta-ut-ferie'}>
                     <NoenVilPaFerie size={this.state.svgSize} />
-                </a>
-                <a style={{ height: this.state.svgSize }} href="#jobbe-i-perioden">
+                </WithLink>
+
+                <WithLink
+                    style={{ height: this.state.svgSize, width: this.state.svgSize }}
+                    url={'#jobbe-i-perioden'}>
                     <JegVilJobbe size={this.state.svgSize} />
-                </a>
-                <a style={{ height: this.state.svgSize }} href="#noen-blir-syke">
+                </WithLink>
+
+                <WithLink
+                    style={{ height: this.state.svgSize, width: this.state.svgSize }}
+                    url={'#noen-blir-syke'}>
                     <EnAvOssBlirSyk size={this.state.svgSize} />
-                </a>
-                <a style={{ height: this.state.svgSize }} href="#hjemme-samtidig">
+                </WithLink>
+
+                <WithLink
+                    style={{ height: this.state.svgSize, width: this.state.svgSize }}
+                    url={'#hjemme-samtidig'}>
                     <HjemmeSamtidig size={this.state.svgSize} />
-                </a>
+                </WithLink>
             </div>
         </div>
     );
