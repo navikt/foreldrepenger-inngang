@@ -1,0 +1,33 @@
+[
+  {
+    "type": "avsnitt",
+    "style": "undertittel",
+    "children": [
+      {
+        "type": "span",
+        "text": "Hva skal du legge ved av dokumentasjon?"
+      }
+    ]
+  },
+  {
+    "type": "avsnitt",
+    "style": "normaltekst",
+    "children": [
+      {
+        "type": "span",
+        "text": "Dokumentasjon på inntekt",
+        "marks": ["bold"]
+      }
+    ]
+  },
+  {
+    "type": "avsnitt",
+    "style": "normaltekst",
+    "children": [
+      {
+        "type": "span",
+        "text": "For å kunne beregne hva du skal ha utbetalt, må vi ha informasjon om hvilken inntekt du har når du starter foreldrepengeperioden."
+      }
+    ]
+  }
+]

@@ -1,0 +1,30 @@
+[
+  {
+    "type": "avsnitt",
+    "style": "normaltekst",
+    "children": [
+      {
+        "type": "span",
+        "text": "Du kan søke om utsettelse senest "
+      },
+      {
+        "type": "span",
+        "text": "innen siste dag i fellesperioden. ",
+        "marks": ["bold"]
+      },
+      {
+        "type": "span",
+        "text": "Hvis du søker senere, mister du dager. Du må be arbeidsgiveren din sende inntektsopplysninger til NAV, siden foreldrepengene dine skal beregnes etter "
+      },
+      {
+        "type": "span",
+        "text": "inntekten du har fra tidspunktet ",
+        "marks": ["bold"]
+      },
+      {
+        "type": "span",
+        "text": "du skulle ha startet permisjonen."
+      }
+    ]
+  }
+]

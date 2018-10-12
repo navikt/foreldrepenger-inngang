@@ -6,6 +6,7 @@ import SøkForeldrepenger from './pages/søk-foreldrepenger/SøkForeldrepenger';
 import OmForeldrepenger from './pages/om-foreldrepenger/OmForeldrepenger';
 import OmEngangsstønad from './pages/om-engangsstønad/OmEngangsstønad';
 import Blindside from './pages/blindside/Blindside';
+import ViktigeFrister from './pages/viktige-frister/ViktigeFrister';
 
 const Router = () => (
     <Switch>
@@ -30,6 +31,12 @@ const Router = () => (
             key="om-engangsstonad"
         />
         <Route exact={true} path="/under-arbeid" component={Blindside} key="under-arbeid" />
+        <Route
+            exact={true}
+            path="/viktige-frister"
+            component={ViktigeFrister}
+            key="viktige-frister"
+        />
         <Redirect to="/" />
     </Switch>
 );

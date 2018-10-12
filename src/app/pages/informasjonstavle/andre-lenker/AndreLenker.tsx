@@ -18,7 +18,7 @@ const links = [
     },
     {
         label: 'informasjonstavle.andre_lenker.søke_i_rett_tid',
-        href: '/under-arbeid',
+        href: '/viktige-frister',
         internal: true
     },
     {
