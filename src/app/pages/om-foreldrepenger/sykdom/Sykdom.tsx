@@ -9,10 +9,13 @@ import StrukturertTekst from '../../../components/strukturert-tekst/StrukturertT
 import LesMer from '../../../components/les-mer/LesMer';
 import { getContent } from '../../../utils/getContent';
 import Illustrasjon from './Illustrasjon';
+import IllustrasjonMobil from './IllustrasjonMobil';
 import TypografiBase from 'nav-frontend-typografi';
+import './sykdom.less';
+import MediaQuery from 'react-responsive';
 
 const sykdomSvg = require('../../../assets/ark/ark-sykdom.svg').default;
-const cls = BEMHelper('jegVilJobbe');
+const cls = BEMHelper('sykdom');
 const barn = require('../../../assets/barn/barn1.svg').default;
 
 const barnetErInnlagt = 'all-informasjon/sykdom/barnet-er-innlagt/barnet-er-innlagt';
@@ -34,10 +37,17 @@ const BarnetErInnlagtWithoutIntl: React.StatelessComponent<IntlProps> = ({ lang 
 const EnAvForeldreneErSykeWithoutIntl: React.StatelessComponent<IntlProps> = ({ lang }) => (
     <div>
         <StrukturertTekst tekst={getContent(syke, lang)} />
-        <TypografiBase className={cls.element('eksempeltekst')} type="normaltekst">
-            {getTranslation('om_foreldrepenger.sykdom.innlagt.eksempeltittel')}
-        </TypografiBase>
-        <Illustrasjon />
+        <div className={cls.element('eksempeltekst')}>
+            <TypografiBase type="normaltekst">
+                {getTranslation('om_foreldrepenger.sykdom.innlagt.eksempeltittel')}
+            </TypografiBase>
+            <MediaQuery query="(min-width: 576px)">
+                <Illustrasjon />
+            </MediaQuery>
+            <MediaQuery query="(max-width: 575px)">
+                <IllustrasjonMobil />
+            </MediaQuery>
+        </div>
         <LesMer intro={getTranslation('om_foreldrepenger.sykdom.innlagt.utsette', lang)}>
             <StrukturertTekst tekst={getContent(sykeUtsette, lang)} />
         </LesMer>
