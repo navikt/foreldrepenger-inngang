@@ -1,12 +1,32 @@
 [
   {
-    "type": "avsnitt",
-    "style": "normaltekst",
-    "children": [
-      {
-        "type": "span",
-        "text": "Hvis du skal utsette foreldrepengene dine fordi du skal jobbe fulltid, eller være delvis i jobb og delvis i permisjon, må du søke før du begynner i arbeid. Søker du for sent, får du færre dager du kan fordele over en lengre periode. Eksempel: Om du starter i jobb 1. juni og du ikke sender søknad før 15. juni, vil du ikke kunne forlenge foreldrepengeperioden med de 15 dagene du både har fått foreldrepenger og vært i delvis jobb. NAV kan i tillegg kreve tilbakebetaling for den tiden du har vært delvis i jobb med full utbetaling av foreldrepenger. I dette tilfellet må du altså søke før 1. juni."
-      }
-    ]
+      "type": "avsnitt",
+      "style": "normaltekst",
+      "children": [
+          { "type": "span", "text": "Du må søke ", "marks": [] },
+          { "type": "span", "text": "før", "marks": ["bold"] },
+          {
+              "type": "span",
+              "text": " du begynner å jobbe. Det gjelder både hvis du skal utsette foreldrepengene dine fordi du skal ",
+              "marks": []
+          },
+          { "type": "span", "text": "jobbe fulltid", "marks": ["bold"] },
+          { "type": "span", "text": ", eller være ", "marks": [] },
+          { "type": "span", "text": "delvis i jobb", "marks": ["bold"] },
+          { "type": "span", "text": " og delvis i permisjon. ", "marks": [] }
+      ],
+      "markDefs": []
+  },
+  {
+      "type": "avsnitt",
+      "style": "normaltekst",
+      "children": [
+          {
+              "type": "span",
+              "text": "Søker du for sent, får du færre dager du kan fordele over en lengre periode. Du kan også risikere å måtte betale tilbake penger til NAV. ",
+              "marks": []
+          }
+      ],
+      "markDefs": []
   }
 ]

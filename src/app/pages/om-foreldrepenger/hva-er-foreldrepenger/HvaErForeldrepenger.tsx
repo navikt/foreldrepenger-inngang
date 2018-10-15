@@ -14,6 +14,7 @@ import './hvaErForeldrepenger.less';
 import PanelMedIllustrasjon from '../../../components/panel-med-illustrasjon/PanelMedIllustrasjon';
 import { getTranslation, withIntl, IntlProps } from '../../../intl/intl';
 import { getContent } from '../../../utils/getContent';
+import FarOgFar from './FarOgFar';
 
 const infoSvg = require('../../../assets/ark/ark-info.svg').default;
 
@@ -27,7 +28,7 @@ const tabs: Innholdsfane[] = [
     {
         label: 'far_og_far',
         icon: <Foreldrepar firstParent="far4" secondParent="far2" />,
-        component: null
+        component: <FarOgFar />
     },
     {
         label: 'mor_og_mor',

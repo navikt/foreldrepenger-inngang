@@ -67,9 +67,10 @@
     "viktige_frister.nar_kan_du_soke": "Viktige frister",
     "viktige_frister.hva_hvis": "Hva hvis du søker for sent?",
     "viktige_frister.sokefrist_nar_utsette": "Søkefrist når du vil utsette fedrekvoten din eller medmorkvote",
+    "viktige_frister.søkefrist_bare_far_eller_medmor_har_rett": "Søkefrist når bare far eller medmor har rett",
     "viktige_frister.sokefrist_nar_utsette_ferie": "Søkefrist når du vil utsette på grunn av ferie",
     "viktige_frister.sokefrist_nar_kombinere_peng_arbeid": "Søkefrist når du vil kombinere foreldrepenger med arbeid",
-    "viktige_frister.hvis_hatt_arbeidsinntekt_eller_jobb": "Hvis du har hatt arbeidsinntekt eller er i jobb",
+    "viktige_frister.hvis_hatt_arbeidsinntekt_eller_jobb": "Hvis du har hatt arbeidsinntekt",
     "viktige_frister.du_skal_legge_dok_pa_termindato": "Du skal legge ved dokumentasjon på termindatoen din hvis du er gravid og",
 
     "informasjonstavle.andre_lenker.tittel": "Relatert informasjon",
@@ -93,7 +94,7 @@
     "søk_foreldrepenger.knapp": "Begynn søknad om foreldrepenger",
     "søk_foreldrepenger.knappMobil": "Begynn søknad",
     "søk_foreldrepenger.advarselmelding": "Du søker tidligere enn 6 uker før du skal ta ut foreldrepenger. Du kan begynne på søknaden, men det vil ikke være mulig å sende den inn før ",
-    "søk_foreldrepenger.første_dag_spørsmål": "Når er første dag med uttak eller utsettelse?",
+    "søk_foreldrepenger.første_dag_spørsmål": "Når er første dag med foreldrepenger eller utsettelse?",
 
     
     "hurtiglenke.hvem_kan_fa_foreldrepenger": "Hvem kan få foreldrepenger?",
@@ -124,6 +125,8 @@
     "om_foreldrepenger.hvor_lenge.fordeling.medmorkvote": "Medmorkvoten",
     "om_foreldrepenger.hvor_lenge.fordeling.alenemor": "Som mor",
     "om_foreldrepenger.hvor_lenge.fordeling.alenefar": "Som far",
+    "om_foreldrepenger.hvor_lenge.fordeling.første_fedrekvote": "Far 1",
+    "om_foreldrepenger.hvor_lenge.fordeling.andre_fedrekvote": "Far 2",
     
     "om_foreldrepenger.ferie.tittel": "Ta ut ferie",
     "om_foreldrepenger.ferie.eksempel_label": "Eksempel på hvordan du kan forlenge foreldrepengeperioden din når du utsetter:",

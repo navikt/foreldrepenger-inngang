@@ -1,21 +1,20 @@
 [
   {
-    "type": "avsnitt",
-    "style": "normaltekst",
-    "children": [
-      {
-        "type": "span",
-        "text": "Du kan få utbetalt foreldrepenger på etterskudd i opptil "
-      },
-      {
-        "type": "span",
-        "text": "tre måneder ",
-        "marks": ["bold"]
-      },
-      {
-        "type": "span",
-        "text": "fra NAV mottok søknaden din. Du får ikke foreldrepenger på etterskudd hvis du har søkt for sent. Du kan også søke tilbake i tid, hvis du har vært syk bla bla bla."
-      }
-    ]
+      "type": "avsnitt",
+      "style": "normaltekst",
+      "children": [
+          {
+              "type": "span",
+              "text": "Du kan få utbetalt foreldrepenger på etterskudd i ",
+              "marks": []
+          },
+          { "type": "span", "text": "opptil tre måneder", "marks": ["bold"] },
+          {
+              "type": "span",
+              "text": " fra NAV mottok søknaden din. Du får ikke foreldrepenger på etterskudd hvis du har søkt for sent.",
+              "marks": []
+          }
+      ],
+      "markDefs": []
   }
 ]
