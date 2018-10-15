@@ -22,13 +22,7 @@ const JegVilJobbe: React.StatelessComponent<Props> = ({ size }) => {
                     <g id="Group-3" transform="translate(74.000000, -5.000000)">
                         <g id="Stacked-Group" transform="translate(0.000000, 59.000000)">
                             <g id="Toggle/av" transform="translate(131.000000, 0.000000)">
-                                <circle
-                                    id="Background"
-                                    stroke="#0067C5"
-                                    cx="49.5"
-                                    cy="49.5"
-                                    r="53.5"
-                                />
+                                <circle stroke="#0067C5" cx="49.5" cy="49.5" r="53.5" />
                                 <g
                                     id="Group"
                                     fillRule="evenodd"

@@ -15,7 +15,7 @@ const getInformasjonsfaner = (lang: Language) => [
         faneIcon: true,
         bodyProps: {
             tittel: 'til mor',
-            icon: 'mor1',
+            icon: 'medmor1',
             antallUker: '49/59',
             punktliste: [],
             component: <StrukturertTekst tekst={getContent(morsDel, lang)} />
