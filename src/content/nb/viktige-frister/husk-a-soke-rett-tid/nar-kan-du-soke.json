@@ -1,22 +1,32 @@
 [
   {
-    "type": "avsnitt",
-    "style": "normaltekst",
-    "children": [
-      {
-        "type": "span",
-        "text": "Du kan søke om foreldrepenger fra Nav tidligst "
-      },
-      {
-        "type": "span",
-        "text": "seks uker før ",
-        "marks": ["bold"]
-      },
-      {
-        "type": "span",
-        "text": "foreldrepengeperioden din starter."
-      }
-
-    ]
+      "type": "avsnitt",
+      "style": "normaltekst",
+      "children": [
+          {
+              "type": "span",
+              "text": "Du kan søke om foreldrepenger fra NAV tidligst ",
+              "marks": []
+          },
+          { "type": "span", "text": "seks uker før", "marks": ["bold"] },
+          {
+              "type": "span",
+              "text": " foreldrepengeperioden din starter.",
+              "marks": []
+          }
+      ],
+      "markDefs": []
+  },
+  {
+      "type": "avsnitt",
+      "style": "normaltekst",
+      "children": [
+          {
+              "type": "span",
+              "text": "Les om søkefrister når du vil utsette eller bare far eller medmor har rett",
+              "marks": []
+          }
+      ],
+      "markDefs": []
   }
 ]

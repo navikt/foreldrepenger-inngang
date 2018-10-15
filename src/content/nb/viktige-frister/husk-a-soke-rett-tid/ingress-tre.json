@@ -1,23 +1,21 @@
 [
   {
-    "type": "avsnitt",
-    "style": "normaltekst",
-    "children": [
-      {
-        "style": "span",
-        "text": "Bekreftelse på terminen",
-        "marks": ["bold"]
-      }
-    ]
+      "type": "avsnitt",
+      "style": "element",
+      "children": [
+          { "type": "span", "text": "Bekreftelse på terminen", "marks": [] }
+      ]
   },
   {
-    "type": "avsnitt",
-    "style": "normaltekst",
-    "children": [
-      {
-        "style": "span",
-        "text": "Er du fast ansatt hos en arbeidsgiver, trenger du ikke sende terminbekreftelse til NAV."
-      }
-    ]
+      "type": "avsnitt",
+      "style": "normaltekst",
+      "children": [
+          {
+              "type": "span",
+              "text": "Har du en arbeidsgiver, trenger du vanligvis ikke sende terminbekreftelse til NAV.",
+              "marks": []
+          }
+      ],
+      "markDefs": []
   }
 ]
