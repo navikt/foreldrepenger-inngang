@@ -43,7 +43,7 @@ class MenHvaHvis extends React.Component<Props> {
     updateWindowSize = () => {
         if (window.innerWidth < 799) {
             this.setState({
-                svgSize: '80px'
+                svgSize: '70px'
             });
         } else if (window.innerWidth >= 800) {
             this.setState({
@@ -63,25 +63,33 @@ class MenHvaHvis extends React.Component<Props> {
             <div className={cls.element('body')}>
                 <WithLink
                     style={{ height: this.state.svgSize, width: this.state.svgSize }}
-                    url={'#ta-ut-ferie'}>
+                    url={'#ta-ut-ferie'}
+                    noStyling={true}
+                    ariaLabel={getTranslation('om_foreldrepenger.menHvaHvis.ferie')}>
                     <NoenVilPaFerie size={this.state.svgSize} />
                 </WithLink>
 
                 <WithLink
                     style={{ height: this.state.svgSize, width: this.state.svgSize }}
-                    url={'#jobbe-i-perioden'}>
+                    url={'#jobbe-i-perioden'}
+                    noStyling={true}
+                    ariaLabel={getTranslation('om_foreldrepenger.menHvaHvis.jobb_i_periode')}>
                     <JegVilJobbe size={this.state.svgSize} />
                 </WithLink>
 
                 <WithLink
                     style={{ height: this.state.svgSize, width: this.state.svgSize }}
-                    url={'#noen-blir-syke'}>
+                    url={'#noen-blir-syke'}
+                    noStyling={true}
+                    ariaLabel={getTranslation('om_foreldrepenger.menHvaHvis.blirSyk')}>
                     <EnAvOssBlirSyk size={this.state.svgSize} />
                 </WithLink>
 
                 <WithLink
                     style={{ height: this.state.svgSize, width: this.state.svgSize }}
-                    url={'#hjemme-samtidig'}>
+                    url={'#hjemme-samtidig'}
+                    noStyling={true}
+                    ariaLabel={getTranslation('om_foreldrepenger.menHvaHvis.hjemmeSamtidig')}>
                     <HjemmeSamtidig size={this.state.svgSize} />
                 </WithLink>
             </div>
