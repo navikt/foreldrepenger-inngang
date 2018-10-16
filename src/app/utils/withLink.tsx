@@ -5,6 +5,8 @@ import CustomSVGFromSprite from './CustomSVG';
 import BEMHelper from './bem';
 import classnames from 'classnames';
 import './withLink.less';
+import { getContent } from './getContent';
+import { getTranslation } from '../intl/intl';
 
 const externalLinkIcon = require('../assets/icons/external.svg').default;
 
@@ -30,6 +32,7 @@ interface Props {
     noStyling?: boolean;
     className?: string;
     style?: any;
+    ariaLabel?: string;
     children: ReactNode;
 }
 
@@ -51,6 +54,7 @@ export class WithLink extends React.Component<Props> {
             noStyling,
             className,
             style,
+            ariaLabel,
             children
         } = this.props;
 
@@ -86,15 +90,28 @@ export class WithLink extends React.Component<Props> {
                 </Lenke>
             );
         } else if (url.charAt(0) === '#') {
-            return (
-                <Lenke
-                    className={className}
-                    style={style}
-                    onClick={(e) => this.goToSection(e, url)}
-                    href={url}>
-                    {children}
-                </Lenke>
-            );
+            if (noStyling) {
+                return (
+                    <span
+                        role="link"
+                        aria-label={ariaLabel}
+                        className={className + ' anchorLink'}
+                        style={style}
+                        onClick={(e) => this.goToSection(e, url)}>
+                        {children}
+                    </span>
+                );
+            } else {
+                return (
+                    <Lenke
+                        className={className + ' anchorLink'}
+                        style={style}
+                        onClick={(e) => this.goToSection(e, url)}
+                        href={url}>
+                        {children}
+                    </Lenke>
+                );
+            }
         } else {
             return (
                 <Link className={classnames(cls.className, className)} to={url}>
