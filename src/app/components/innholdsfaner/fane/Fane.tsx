@@ -23,7 +23,6 @@ interface Props {
     after: any;
 }
 
-
 const Fane: React.StatelessComponent<Props & IntlProps> = ({
     tab,
     isSelected,
@@ -33,7 +32,6 @@ const Fane: React.StatelessComponent<Props & IntlProps> = ({
     after,
     lang
 }) => {
-
     return (
         <div
             tabIndex={0}
@@ -54,14 +52,20 @@ const Fane: React.StatelessComponent<Props & IntlProps> = ({
                 <div className={cls.element('point-wrapper')}>
                     <div className={cls.element('indicator')}>
                         <div className={cls.element('pointer')}>
-                            <span className={cls.element('pointerBefore')} style={{
-                                width: before,
-                                left: -1*before,
-                            }} />
+                            <span
+                                className={cls.element('pointerBefore')}
+                                style={{
+                                    width: before,
+                                    left: -1 * before
+                                }}
+                            />
                             <Chevron />
-                            <span className={cls.element('pointerAfter')} style={{
-                                width: after,
-                            }} />
+                            <span
+                                className={cls.element('pointerAfter')}
+                                style={{
+                                    width: after
+                                }}
+                            />
                         </div>
                     </div>
                 </div>
@@ -72,22 +76,20 @@ const Fane: React.StatelessComponent<Props & IntlProps> = ({
 
 const Chevron = () => (
     <span>
-    <svg width="13px" height="9px" viewBox="0 0 13 8" version="1.1">
-        <title>Chevron</title>
-        <defs />
-        <g id="Chevron" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
-            <polygon
-                id="Background"
-                fill="#FFFFFF"
-                points="6.5 2.82842712 11.4497475 7.77817459 1.55025253 7.77817459"
-            />
-            <polygon
-                id="Arrow"
-                fill="#EFEFEF"
-                points="6.5 1.64757097e-13 12.863961 6.36396103 11.4497475 7.77817459 6.5 2.82842712 1.55025253 7.77817459 0.136038969 6.36396103"
-            />
-        </g>
-    </svg>
+        <svg width="13px" height="9px" viewBox="0 0 13 8" version="1.1">
+            <title>Chevron</title>
+            <defs />
+            <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
+                <polygon
+                    fill="#FFFFFF"
+                    points="6.5 2.82842712 11.4497475 7.77817459 1.55025253 7.77817459"
+                />
+                <polygon
+                    fill="#EFEFEF"
+                    points="6.5 1.64757097e-13 12.863961 6.36396103 11.4497475 7.77817459 6.5 2.82842712 1.55025253 7.77817459 0.136038969 6.36396103"
+                />
+            </g>
+        </svg>
     </span>
 );
 
