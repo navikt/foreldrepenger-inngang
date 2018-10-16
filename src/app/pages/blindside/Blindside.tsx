@@ -1,15 +1,13 @@
 import * as React from 'react';
-import Veilederpanel from 'nav-frontend-veilederpanel';
 import TypografiBase from 'nav-frontend-typografi';
 import { getTranslation, IntlProps, withIntl, Language } from '../../intl/intl';
-import CustomSVGFromSprite from '../../utils/CustomSVG';
 import BEMHelper from '../../utils/bem';
 import { withRouter } from 'react-router';
 import './blindside.less';
 import { VenstreChevron } from 'nav-frontend-chevron';
 import Sidebanner from '../../components/sidebanner/Sidebanner';
+import Veileder from 'app/components/veileder/Veileder';
 
-const frida = require('../../assets/sara.svg').default;
 const cls = BEMHelper('blindside');
 
 interface Props {
@@ -22,14 +20,11 @@ const Blindside: React.StatelessComponent<Props & IntlProps> = ({ history, lang 
             <Sidebanner text={getTranslation('blindside.tittel', lang)} />
             <main className={cls.element('body')}>
                 <Tilbakeknapp goBack={history.goBack} />
-                <Veilederpanel
-                    svg={<CustomSVGFromSprite iconRef={frida} />}
-                    fargetema="normal"
-                    kompakt={true}>
+                <Veileder ansikt="glad">
                     <TypografiBase type="normaltekst">
                         {getTranslation('blindside.veileder', lang)}
                     </TypografiBase>
-                </Veilederpanel>
+                </Veileder>
             </main>
         </div>
     );
