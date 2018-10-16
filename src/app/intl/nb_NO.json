@@ -87,6 +87,7 @@
     "hva_søker_du.søk_engangsstønad": "Søk om engangsstønad",
     "hva_søker_du.søk_svangerskapspenger": "Søk om svangerskapspenger",
     "hva_søker_du.ingen_elektronisk_id": "Jeg har ikke elektronisk ID",
+    "hva_søker_du.ingen_elektronisk_id_hjelp": "For å søke på nett må du ha BankID fra banken din eller en annen elektronisk ID.",
 
 
     "søk_foreldrepenger.tittel": "Søk om foreldrepenger",

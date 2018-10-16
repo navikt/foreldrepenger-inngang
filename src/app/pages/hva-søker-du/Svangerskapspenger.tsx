@@ -16,7 +16,7 @@ const Svangerskapspenger = ({ parentCls, lang }: { parentCls: any; lang: Languag
                 buttonUrl={externalUrls.søk_svangerskapspenger}
                 linkText={getTranslation('hva_søker_du.ingen_elektronisk_id', lang)}
                 linkUrl={externalUrls.søk_svangerskapspenger}
-                helpText="<Placeholder>"
+                helpText={getTranslation('hva_søker_du.ingen_elektronisk_id_hjelp', lang)}
             />
         </PanelMedTittel>
     );
