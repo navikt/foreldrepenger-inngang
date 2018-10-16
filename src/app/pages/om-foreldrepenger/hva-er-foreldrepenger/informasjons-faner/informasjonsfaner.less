@@ -24,7 +24,7 @@
             background-color: #fbfbfb;
             height: 100px;
         }
-    
+
         &__tab-outer {
             height: 100px;
             width: 100%;
@@ -33,7 +33,7 @@
             margin: 0 0 0 0;
             background-color: white;
         }
-    
+
         &__tab-inner {
             &:focus {
                 .buttonFocusInset();
@@ -65,11 +65,17 @@
         width: inherit;
     }
 
+    .nav-frontend-tabs__tab-inner {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
     .InformasjonsfanerBody {
         background-color: #fbfbfb;
         padding: 2rem;
 
         &__header {
+            display: -webkit-flex;
             display: flex;
             flex-direction: row;
             margin-top: 20px;
@@ -77,6 +83,7 @@
         }
 
         &__tid {
+            display: -webkit-flex;
             display: flex;
             flex-direction: column;
             font-weight: 900;
@@ -86,6 +93,7 @@
         }
 
         &__Icon {
+            display: -webkit-flex;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -124,11 +132,29 @@
         }
     }
 
+    .nav-frontend-tabs {
+        border-bottom: none;
+
+        &__tab-outer,
+        &__tab-label {
+            overflow: hidden;
+        }
+
+        .fanelabel__label {
+            .containText();
+        }
+    }
+
     @media (min-width: @mobile-breakpoint) {
         margin: 0;
 
         &__header {
             margin-top: 2rem;
+        }
+
+        .nav-frontend-tabs__tab-inner {
+            padding-left: 1rem;
+            padding-right: 1rem;
         }
     }
 }
