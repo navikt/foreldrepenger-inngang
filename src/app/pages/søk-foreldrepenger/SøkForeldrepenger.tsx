@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import classnames from 'classnames';
-import Tekstomrade from 'nav-frontend-tekstomrade';
 import KnappBase from 'nav-frontend-knapper';
 import Breadcrumbs from '../../components/breadcrumbs/Breadcrumbs';
 import BEMHelper from '../../utils/bem';
@@ -15,6 +14,8 @@ import MediaQuery from 'react-responsive';
 import Sidebanner from 'app/components/sidebanner/Sidebanner';
 
 import './søkForeldrepenger.less';
+import StrukturertTekst from 'app/components/strukturert-tekst/StrukturertTekst';
+import { getContent } from 'app/utils/getContent';
 
 const hvaSøkerDuCls = BEMHelper('hvaSøkerDu');
 const foreldrepengerCls = BEMHelper('søkForeldrepenger');
@@ -50,9 +51,12 @@ class SøkForeldrepenger extends Component<Props & IntlProps> {
                         <Breadcrumbs path={location.pathname} />
                         <SvgBanner />
                         <PanelMedTittel title={getTranslation('foreldrepenger', this.props.lang)}>
-                            <Tekstomrade>
-                                {getTranslation('søk_foreldrepenger.informasjon', this.props.lang)}
-                            </Tekstomrade>
+                            <StrukturertTekst
+                                tekst={getContent(
+                                    'hva-vil-du-søke-om/søk-foreldrepenger',
+                                    this.props.lang
+                                )}
+                            />
                             <Datovelger
                                 date={this.state.selectedDate}
                                 dateIsValid={this.state.selectedDate && this.state.dateIsValid}

@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="180" height="115" viewBox="0 0 180 115">
     <defs>
-        <path id="a" d="M0 8.16v38.364A2.473 2.473 0 0 0 2.47 49h33.062A2.472 2.472 0 0 0 38 46.524V2.476A2.472 2.472 0 0 0 35.532 0H8.594L0 8.16z"/>
+        <path  d="M0 8.16v38.364A2.473 2.473 0 0 0 2.47 49h33.062A2.472 2.472 0 0 0 38 46.524V2.476A2.472 2.472 0 0 0 35.532 0H8.594L0 8.16z"/>
     </defs>
     <g fill="none" fill-rule="evenodd">
         <g fill-rule="nonzero">

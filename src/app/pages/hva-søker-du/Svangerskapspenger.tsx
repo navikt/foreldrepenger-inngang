@@ -10,14 +10,13 @@ const Svangerskapspenger = ({ parentCls, lang }: { parentCls: any; lang: Languag
     return (
         <PanelMedTittel title={getTranslation('svangerskapspenger', lang)}>
             <StrukturertTekst tekst={getContent('hva-vil-du-søke-om/svangerskapspenger', lang)} />
-            <div className={parentCls.element('filler')} />
             <ButtonPanel
                 parentCls={parentCls}
                 buttonText={getTranslation('hva_søker_du.søk_svangerskapspenger', lang)}
                 buttonUrl={externalUrls.søk_svangerskapspenger}
                 linkText={getTranslation('hva_søker_du.ingen_elektronisk_id', lang)}
                 linkUrl={externalUrls.søk_svangerskapspenger}
-                helpText="<Placeholder>"
+                helpText={getTranslation('hva_søker_du.ingen_elektronisk_id_hjelp', lang)}
             />
         </PanelMedTittel>
     );

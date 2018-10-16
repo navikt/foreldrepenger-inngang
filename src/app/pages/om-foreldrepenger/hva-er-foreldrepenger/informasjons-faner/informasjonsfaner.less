@@ -13,46 +13,56 @@
         margin-bottom: -0.25rem;
     }
 
-    .nav-frontend-tabs__tab-label {
-        padding-bottom: 0;
+    .nav-frontend-tabs {
+        border-bottom: none;
+
+        &__tab-label {
+            padding-bottom: 0;
+        }
+
+        &__tab-list {
+            background-color: #fbfbfb;
+            height: 100px;
+        }
+    
+        &__tab-outer {
+            height: 100px;
+            width: 100%;
+            justify-content: center;
+            border-bottom: none;
+            margin: 0 0 0 0;
+            background-color: white;
+        }
+    
+        &__tab-inner {
+            &:focus {
+                .buttonFocusInset();
+            }
+
+            &--interaktiv {
+                border: solid 0.5px #d9d9d9;
+                border-radius: 0;
+                width: 100%;
+                top: 1px;
+                justify-content: center;
+            }
+
+            &--aktiv {
+                background-color: #fbfbfb;
+                width: 100%;
+                height: 100%;
+                justify-content: center;
+                border-radius: 0;
+                top: 0;
+                border: none;
+                border-top: solid 0.5px transparent;
+            }
+        }
     }
 
     .InformasjonsfanerBody {
         background-color: #fbfbfb;
         width: inherit;
-    }
-
-    .nav-frontend-tabs__tab-list {
-        background-color: #fbfbfb;
-        height: 100px;
-    }
-
-    .nav-frontend-tabs__tab-outer {
-        height: 100px;
-        width: 100%;
-        justify-content: center;
-        border-bottom: none;
-        margin: 0 0 0 0;
-        background-color: white;
-    }
-
-    .nav-frontend-tabs__tab-inner--interaktiv {
-        border: solid 0.5px #d9d9d9;
-        border-radius: 0;
-        width: 100%;
-        top: 1px;
-        justify-content: center;
-    }
-
-    .nav-frontend-tabs__tab-inner--aktiv {
-        background-color: #fbfbfb;
-        width: 100%;
-        height: 100%;
-        justify-content: center;
-        border-radius: 0;
-        top: 0;
-        border: none;
-        border-top: solid 0.5px transparent;
     }
 
     .nav-frontend-tabs__tab-inner {
@@ -121,7 +131,7 @@
             font-weight: 600;
         }
     }
-
+  
     .nav-frontend-tabs {
         border-bottom: none;
 
