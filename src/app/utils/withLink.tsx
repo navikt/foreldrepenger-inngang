@@ -56,8 +56,12 @@ export class WithLink extends React.Component<Props> {
 
         if (urlIsExternal) {
             if (noStyling) {
-                return (
-                    <a className={className} href={navlab ? '/under-arbeid' : url}>
+                return navlab ? (
+                    <Link className={className} to="/under-arbeid">
+                        {children}
+                    </Link>
+                ) : (
+                    <a className={className} href={url}>
                         {children}
                     </a>
                 );
