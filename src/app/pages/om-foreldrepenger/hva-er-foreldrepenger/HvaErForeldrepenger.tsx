@@ -22,7 +22,7 @@ const cls = BEMHelper('hvaErForeldrepenger');
 const tabs: Innholdsfane[] = [
     {
         label: 'far_og_mor',
-        icon: <Foreldrepar firstParent="far1" secondParent="mor1" />,
+        icon: <Foreldrepar firstParent="far1" secondParent="mor2" />,
         component: <FarOgMor />
     },
     {

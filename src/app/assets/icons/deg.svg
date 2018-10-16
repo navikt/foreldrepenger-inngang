@@ -3,10 +3,10 @@
     <!-- Generator: Sketch 52.1 (67048) - http://www.bohemiancoding.com/sketch -->
     <title>Group 20</title>
     <desc>Created with Sketch.</desc>
-    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
-        <g id="Group-20" stroke="#0A0A0A">
-            <path d="M10.5,11.5 C7.739,11.5 5.5,9.261 5.5,6.5 L5.5,5.5 C5.5,2.739 7.739,0.5 10.5,0.5 C13.261,0.5 15.5,2.739 15.5,5.5 L15.5,6.5 C15.5,9.261 13.261,11.5 10.5,11.5 Z" id="Path"></path>
-            <path d="M20.5,20.408 C20.5,18.608 19.303,17.025 17.566,16.552 C15.672,16.035 13.086,15.5 10.5,15.5 C7.914,15.5 5.328,16.035 3.434,16.552 C1.697,17.025 0.5,18.608 0.5,20.408 L0.5,22.5 L20.5,22.5 L20.5,20.408 Z" id="Path"></path>
+    <g  stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g stroke="#0A0A0A">
+            <path d="M10.5,11.5 C7.739,11.5 5.5,9.261 5.5,6.5 L5.5,5.5 C5.5,2.739 7.739,0.5 10.5,0.5 C13.261,0.5 15.5,2.739 15.5,5.5 L15.5,6.5 C15.5,9.261 13.261,11.5 10.5,11.5 Z" ></path>
+            <path d="M20.5,20.408 C20.5,18.608 19.303,17.025 17.566,16.552 C15.672,16.035 13.086,15.5 10.5,15.5 C7.914,15.5 5.328,16.035 3.434,16.552 C1.697,17.025 0.5,18.608 0.5,20.408 L0.5,22.5 L20.5,22.5 L20.5,20.408 Z" ></path>
         </g>
     </g>
 </svg>

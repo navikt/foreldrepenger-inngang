@@ -1,9 +1,8 @@
 import * as React from 'react';
 import moment from 'moment';
-import Veilederpanel from 'nav-frontend-veilederpanel';
-import CustomSVG from '../../utils/CustomSVG';
 import { getTranslation, Language, IntlProps, withIntl } from '../../intl/intl';
 import { BEMWrapper } from '../../utils/bem';
+import Veileder from 'app/components/veileder/Veileder';
 
 const createDateErrorMessage = (date: Date, lang: Language) => {
     const sixWeeksEarlier = moment(date)
@@ -23,14 +22,11 @@ const Veiledermelding: React.StatelessComponent<Props & IntlProps> = ({
     parentCls,
     lang
 }) => {
-    const saraSvg = require(`../../assets/sara.svg`).default;
-    const sara = <CustomSVG className={parentCls.className} iconRef={saraSvg} size={64} />;
-
     return (
         <div role="alert">
-            <Veilederpanel kompakt={true} type="normal" svg={sara} fargetema="advarsel">
+            <Veileder className={parentCls} ansikt="undrende" fargetema="advarsel" kompakt={true}>
                 {createDateErrorMessage(selectedDate, lang)}
-            </Veilederpanel>
+            </Veileder>
         </div>
     );
 };
