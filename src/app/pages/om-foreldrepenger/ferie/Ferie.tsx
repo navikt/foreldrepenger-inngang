@@ -8,6 +8,8 @@ import BEMHelper from '../../../utils/bem';
 import { getContent } from '../../../utils/getContent';
 import Ferieforskyvning from './Ferieforskyvning';
 import './ferie.less';
+import FerieforskyvningMobil from './FerieforskyvningMobil';
+import MediaQuery from 'react-responsive';
 
 const cls = BEMHelper('ferie');
 
@@ -32,7 +34,12 @@ const Ferie: React.StatelessComponent<Props & IntlProps> = ({ id, lang }) => {
                 <TypografiBase type="normaltekst">
                     {getTranslation('om_foreldrepenger.ferie.eksempel_label')}
                 </TypografiBase>
-                <Ferieforskyvning />
+                <MediaQuery query="(min-width: 576px)">
+                    <Ferieforskyvning />
+                </MediaQuery>
+                <MediaQuery query="(max-width: 575px)">
+                    <FerieforskyvningMobil />
+                </MediaQuery>
             </div>
             <LesMer intro={getTranslation('om_foreldrepenger.ferie.rett_til_utsettelse', lang)}>
                 <StrukturertTekst tekst={getContent(rettTilUtsettelseContent, lang)} />

@@ -27,29 +27,22 @@ const HjemmeSamtidig: React.StatelessComponent<Props & IntlProps> = ({ id, lang 
             title={getTranslation('om_foreldrepenger.hjemme_samtidig.tittel')}
             svg={hjemmeSamtidigSvg}>
             <StrukturertTekst tekst={getContent(ingress, lang)} />
-            <div className={cls.element('content')}>
-                <LesMer
-                    intro={getTranslation(
-                        'om_foreldrepenger.hjemme_samtidig.enHjemmeFulltid',
-                        lang
-                    )}>
-                    <StrukturertTekst tekst={getContent(hjemmeFulltid, lang)} />
-                </LesMer>
+            <LesMer
+                intro={getTranslation('om_foreldrepenger.hjemme_samtidig.enHjemmeFulltid', lang)}>
+                <StrukturertTekst tekst={getContent(hjemmeFulltid, lang)} />
+            </LesMer>
 
-                <LesMer
-                    intro={getTranslation('om_foreldrepenger.hjemme_samtidig.delePaHjemme', lang)}>
-                    <StrukturertTekst tekst={getContent(delePaHjemme, lang)} />
-                </LesMer>
+            <LesMer intro={getTranslation('om_foreldrepenger.hjemme_samtidig.delePaHjemme', lang)}>
+                <StrukturertTekst tekst={getContent(delePaHjemme, lang)} />
+            </LesMer>
 
-                <LesMer
-                    intro={getTranslation('om_foreldrepenger.hjemme_samtidig.farTvillinger', lang)}>
-                    <StrukturertTekst tekst={getContent(narFarTvillinger, lang)} />
-                </LesMer>
+            <LesMer intro={getTranslation('om_foreldrepenger.hjemme_samtidig.farTvillinger', lang)}>
+                <StrukturertTekst tekst={getContent(narFarTvillinger, lang)} />
+            </LesMer>
 
-                <LesMer intro={getTranslation('om_foreldrepenger.hjemme_samtidig.permisjon', lang)}>
-                    <StrukturertTekst tekst={getContent(permisjonVedFodsel, lang)} />
-                </LesMer>
-            </div>
+            <LesMer intro={getTranslation('om_foreldrepenger.hjemme_samtidig.permisjon', lang)}>
+                <StrukturertTekst tekst={getContent(permisjonVedFodsel, lang)} />
+            </LesMer>
         </PanelMedIllustrasjon>
     );
 };

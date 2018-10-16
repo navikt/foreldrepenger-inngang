@@ -14,6 +14,7 @@ import './hvaErForeldrepenger.less';
 import PanelMedIllustrasjon from '../../../components/panel-med-illustrasjon/PanelMedIllustrasjon';
 import { getTranslation, withIntl, IntlProps } from '../../../intl/intl';
 import { getContent } from '../../../utils/getContent';
+import FarOgFar from './FarOgFar';
 
 const infoSvg = require('../../../assets/ark/ark-info.svg').default;
 
@@ -21,13 +22,13 @@ const cls = BEMHelper('hvaErForeldrepenger');
 const tabs: Innholdsfane[] = [
     {
         label: 'far_og_mor',
-        icon: <Foreldrepar firstParent="far1" secondParent="mor1" />,
+        icon: <Foreldrepar firstParent="far1" secondParent="mor2" />,
         component: <FarOgMor />
     },
     {
         label: 'far_og_far',
         icon: <Foreldrepar firstParent="far4" secondParent="far2" />,
-        component: null
+        component: <FarOgFar />
     },
     {
         label: 'mor_og_mor',

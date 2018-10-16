@@ -14,7 +14,7 @@ const getInformasjonsfaner = (lang: Language) => [
         faneIcon: true,
         bodyProps: {
             tittel: 'til far',
-            icon: 'far1',
+            icon: 'far3',
             antallUker: '40/50',
             punktliste: ['Aktivitetskrav til mor'],
             component: <StrukturertTekst tekst={getContent(farsDel, lang)} />

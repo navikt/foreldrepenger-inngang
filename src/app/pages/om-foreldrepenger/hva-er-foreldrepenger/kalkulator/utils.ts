@@ -4,8 +4,8 @@ export const antallUtbetalingsuker = {
         80: 59
     },
     2: {
-        100: 54,
-        80: 66
+        100: 66,
+        80: 80
     },
     3: {
         100: 95,

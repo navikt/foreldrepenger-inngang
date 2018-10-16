@@ -22,6 +22,8 @@ const dokPaTermindatoTittel = 'viktige_frister.du_skal_legge_dok_pa_termindato';
 // getContent strings
 const ingress = 'viktige-frister/husk-a-soke-rett-tid/ingress';
 const viktigefristerInnhold = 'viktige-frister/husk-a-soke-rett-tid/nar-kan-du-soke';
+const søkefristBareFarEllerMedmorHarRettInnhold =
+    'viktige-frister/husk-a-soke-rett-tid/søkefrist-når-bare-far-eller-medmor-har-rett';
 const hvisSokerSentInnhold = 'viktige-frister/husk-a-soke-rett-tid/hva-hvis-soker-for-sent';
 const sokefristKvoteInnhold = 'viktige-frister/husk-a-soke-rett-tid/sokefrist-utsette-kvote';
 const sokefristFerieInnhold = 'viktige-frister/husk-a-soke-rett-tid/sokefrist-utsette-ferie';
@@ -62,6 +64,16 @@ const ViktigeFrister: React.StatelessComponent<Props & IntlProps> = ({ location,
 
                         <LesMer intro={getTranslation(sokefristKvoteTittel, lang)}>
                             <StrukturertTekst tekst={getContent(sokefristKvoteInnhold, lang)} />
+                        </LesMer>
+
+                        <LesMer
+                            intro={getTranslation(
+                                'viktige_frister.søkefrist_bare_far_eller_medmor_har_rett',
+                                lang
+                            )}>
+                            <StrukturertTekst
+                                tekst={getContent(søkefristBareFarEllerMedmorHarRettInnhold, lang)}
+                            />
                         </LesMer>
 
                         <LesMer intro={getTranslation(sokefristFerieTittel, lang)}>

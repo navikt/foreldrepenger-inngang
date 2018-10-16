@@ -5,6 +5,7 @@ import Informasjonsfaner from './informasjons-faner/Informasjonsfaner';
 import StrukturertTekst from '../../../components/strukturert-tekst/StrukturertTekst';
 import { Language, withIntl, getTranslation } from '../../../intl/intl';
 import { getContent } from '../../../utils/getContent';
+import Foreldrepar from 'app/components/foreldrepar/Foreldrepar';
 
 const farOgMorContent = 'all-informasjon/hva-er-foreldrepenger/far-og-mor/far-og-mor';
 const morsdel = 'all-informasjon/hva-er-foreldrepenger/far-og-mor/mors-del';
@@ -39,7 +40,7 @@ const getInformasjonsfaner = (lang: Language) => [
         faneIcon: false,
         bodyProps: {
             tittel: 'til begge',
-            icon: 'farOgMor2',
+            icon: <Foreldrepar firstParent="mor2" secondParent="far1" />,
             antallUker: '16/26',
             punktliste: ['Aktivitetskrav til mor'],
             component: <StrukturertTekst tekst={getContent(fellesdel, lang)} />
