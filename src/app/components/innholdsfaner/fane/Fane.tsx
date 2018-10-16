@@ -56,7 +56,7 @@ const Fane: React.StatelessComponent<Props & IntlProps> = ({
                                 className={cls.element('pointerBefore')}
                                 style={{
                                     width: before,
-                                    left: -1 * before
+                                    left: -1 * (before - 2)
                                 }}
                             />
                             <Chevron />

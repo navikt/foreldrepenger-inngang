@@ -20,7 +20,7 @@ interface Section {
 type Props = TabProps & Section & IntlProps;
 
 function calcBeforeWidth(width: number, index: number) {
-    return width / 2 + width * index + 32;
+    return width / 2 + width * index + 22;
 }
 function calcAfterWidth(width: number, index: number) {
     return 588 + 32 - (width / 2 + width * index);
@@ -38,24 +38,19 @@ class Innholdsfaner extends React.Component<Props> {
     constructor(props: Props) {
         super(props);
 
-        const width = document.querySelector('.'+this.props.section+' .fane');
-
         this.state = {
             currentTab: 0,
             componentToRender: props.tabs[0].component,
             tabWidth: 100,
-            beforeWidth: calcBeforeWidth(120, 0),
-            afterWidth: calcAfterWidth(120, 0)
+            beforeWidth:
+                this.props.tabs.length > 5 ? calcBeforeWidth(100, 0) : calcBeforeWidth(120, 0),
+            afterWidth: this.props.tabs.length > 5 ? calcAfterWidth(100, 0) : calcAfterWidth(120, 0)
         };
-        if (width) {
-            this.state.beforeWidth = calcBeforeWidth((this.state.tabWidth = width.scrollWidth), 0);
-            this.state.afterWidth = calcAfterWidth((this.state.tabWidth = width.scrollWidth), 0);
-        }
     }
 
     onTabSelect = (tabIndex: number) => {
         const componentToRender = this.props.tabs[tabIndex].component;
-        const currentClass = document.querySelector('.'+this.props.section+' .fane');
+        const currentClass = document.querySelector('.' + this.props.section + ' .fane');
         if (currentClass) {
             this.state.tabWidth = currentClass.scrollWidth;
             this.state.beforeWidth = calcBeforeWidth(this.state.tabWidth, tabIndex);
