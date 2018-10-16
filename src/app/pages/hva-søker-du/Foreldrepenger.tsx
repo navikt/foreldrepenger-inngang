@@ -38,7 +38,7 @@ const Foreldrepenger: StatelessComponent<ForeldrepengerProps> = ({ parentCls, hi
                 <UserHelp
                     linkText={getTranslation('hva_søker_du.ingen_elektronisk_id', lang)}
                     linkUrl={externalUrls.søk_foreldrepenger_eller_engangsstønad_papir}
-                    helpText="<Placeholder>"
+                    helpText={getTranslation('hva_søker_du.ingen_elektronisk_id_hjelp', lang)}
                 />
             </div>
         </PanelMedTittel>

@@ -4,6 +4,9 @@ import HjelpetekstBase from 'nav-frontend-hjelpetekst';
 import TypografiBase from 'nav-frontend-typografi';
 import './userHelp.less';
 import { WithLink } from 'app/utils/withLink';
+import BEMHelper from 'app/utils/bem';
+
+const cls = BEMHelper('userHelp');
 
 const UserHelp = ({
     linkText,
@@ -15,13 +18,15 @@ const UserHelp = ({
     helpText: string;
 }) => {
     return (
-        <div role="link" className="userHelp">
+        <div role="link" className={cls.className}>
             <TypografiBase type="normaltekst">
                 <WithLink url={linkUrl} urlIsExternal={true}>
                     {linkText}
                 </WithLink>
             </TypografiBase>
-            <HjelpetekstBase id="hjelpetekst">{helpText}</HjelpetekstBase>
+            <HjelpetekstBase className={cls.element('popup')} id="hjelpetekst">
+                {helpText}
+            </HjelpetekstBase>
         </div>
     );
 };

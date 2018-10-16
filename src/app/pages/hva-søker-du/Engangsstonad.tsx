@@ -17,7 +17,7 @@ const Engangsstonad = ({ parentCls, lang }: { parentCls: any; lang: Language }) 
                 buttonUrl={externalUrls.søk_foreldrepenger_eller_engangsstønad}
                 linkText={getTranslation('hva_søker_du.ingen_elektronisk_id', lang)}
                 linkUrl={externalUrls.søk_foreldrepenger_eller_engangsstønad_papir}
-                helpText="Skaff deg elektronisk ID nå!"
+                helpText={getTranslation('hva_søker_du.ingen_elektronisk_id_hjelp', lang)}
             />
         </PanelMedTittel>
     );
