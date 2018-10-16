@@ -36,6 +36,7 @@
         align-self: stretch;
         flex-direction: column;
         align-items: stretch;
+        overflow: hidden;
     }
 
     &__two-buttons-navigation {
@@ -58,7 +59,8 @@
     &__knapp {
         height: @button-height;
         align-self: stretch;
-        padding: 0 1.5rem;
+        padding: 0 1rem;
+        .containText();
     }
 
     .typografi--undertittel {
@@ -110,10 +112,6 @@
     }
 
     @media (min-width: @tablet-breakpoint) {
-        &__button-container {
-            flex-direction: row;
-        }
-
         &__body {
             padding: 0 1rem;
         }
@@ -126,11 +124,6 @@
                 padding-left: 1rem;
                 align-self: center;
                 margin-top: 0;
-            }
-
-            .hvaSøkerDu__knapp:nth-child(1) {
-                margin-bottom: 0;
-                margin-right: 0.5rem;
             }
         }
     }
