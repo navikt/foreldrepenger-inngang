@@ -67,6 +67,7 @@ const webpackConfig = {
         ]
     },
     plugins: [
+        new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /nb|nn|en/),
         new CaseSensitivePathsPlugin(),
         new ExtractTextPlugin({
             filename: 'css/[name].css?[hash]-[chunkhash]-[name]',
