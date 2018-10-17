@@ -1,6 +1,5 @@
 const path = require('path');
 const webpack = require('webpack');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
 const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
 
@@ -11,7 +10,8 @@ const webpackConfig = {
     output: {
         path: path.resolve(__dirname, './../../../dist'),
         filename: 'js/[name].js',
-        publicPath: '/dist'
+        chunkFilename: 'js/[name].js',
+        publicPath: '/dist/'
     },
     resolve: {
         extensions: ['.ts', '.tsx', '.js', '.json', '.jsx'],
@@ -31,34 +31,10 @@ const webpackConfig = {
                 include: [path.resolve(__dirname, './../../app')],
                 loader: require.resolve('awesome-typescript-loader')
             },
-
             {
                 test: /\.js$/,
                 use: [{ loader: 'babel-loader' }],
                 exclude: /node_modules/
-            },
-            {
-                test: /\.less$/,
-                use: ExtractTextPlugin.extract({
-                    fallback: 'style-loader',
-                    use: [
-                        {
-                            loader: 'css-loader'
-                        },
-                        // {
-                        //     loader: 'postcss-loader'
-                        // },
-                        {
-                            loader: 'less-loader',
-                            options: {
-                                globalVars: {
-                                    coreModulePath: '"~"',
-                                    nodeModulesPath: '"~"'
-                                }
-                            }
-                        }
-                    ]
-                })
             },
             {
                 test: /\.svg$/,
@@ -69,11 +45,6 @@ const webpackConfig = {
     plugins: [
         new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /nb|nn|en/),
         new CaseSensitivePathsPlugin(),
-        new ExtractTextPlugin({
-            filename: 'css/[name].css?[hash]-[chunkhash]-[name]',
-            disable: false,
-            allChunks: true
-        }),
         new SpriteLoaderPlugin({
             plainSprite: true
         }),

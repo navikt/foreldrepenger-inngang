@@ -2,8 +2,14 @@ const webpack = require('webpack');
 const webpackConfig = require('./webpack.config.global.js');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 webpackConfig.mode = 'production';
+
+webpackConfig.module.rules.push({
+    test: /\.less$/,
+    use: [MiniCssExtractPlugin.loader, 'css-loader', 'less-loader']
+});
 
 webpackConfig.plugins.push(
     new HtmlWebpackPlugin({
@@ -11,6 +17,9 @@ webpackConfig.plugins.push(
         inject: 'body'
     })
 );
+
+webpackConfig.output.filename = 'js/[name].[contenthash].js';
+webpackConfig.output.chunkFilename = 'js/[name].[contenthash].js';
 
 webpackConfig.plugins.push(
     new UglifyJsPlugin({
@@ -25,6 +34,15 @@ webpackConfig.plugins.push(
                 keep_classnames: true
             }
         }
+    })
+);
+
+webpackConfig.plugins.push(
+    new MiniCssExtractPlugin({
+        filename: 'css/[name].[contenthash].css',
+        chunkFilename: 'css/[name].[contenthash].css',
+        disable: false,
+        allChunks: true
     })
 );
 
