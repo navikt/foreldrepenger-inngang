@@ -8,6 +8,7 @@ import { getTranslation, withIntl, Language } from '../../intl/intl';
 import externalUrls from '../../utils/externalUrls';
 import StrukturertTekst from '../../components/strukturert-tekst/StrukturertTekst';
 import { getContent } from '../../utils/getContent';
+import { WithLink } from 'app/utils/withLink';
 
 interface ForeldrepengerProps {
     parentCls: any;
@@ -31,9 +32,11 @@ const Foreldrepenger: StatelessComponent<ForeldrepengerProps> = ({ parentCls, hi
                         }}>
                         {getTranslation('hva_søker_du.søk_foreldrepenger', lang)}
                     </KnappBase>
-                    <KnappBase className={parentCls.element('knapp')} type="standard">
-                        {getTranslation('hva_søker_du.har_søkt_foreldrepenger', lang)}
-                    </KnappBase>
+                    <WithLink url={'/under-arbeid'} urlIsExternal={true} noStyling={true}>
+                        <KnappBase className={parentCls.element('knapp')} type="standard">
+                            {getTranslation('hva_søker_du.har_søkt_foreldrepenger', lang)}
+                        </KnappBase>
+                    </WithLink>
                 </div>
                 <UserHelp
                     linkText={getTranslation('hva_søker_du.ingen_elektronisk_id', lang)}

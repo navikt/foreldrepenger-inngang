@@ -4,7 +4,7 @@ import KnappBase from 'nav-frontend-knapper';
 import UserHelp from '../user-help/UserHelp';
 import BEMHelper, { BEMWrapper } from '../../../utils/bem';
 import './buttonPanel.less';
-import Lenke from 'nav-frontend-lenker';
+import { WithLink } from 'app/utils/withLink';
 
 const cls = BEMHelper('buttonPanel');
 
@@ -25,21 +25,18 @@ const ButtonPanel = ({
 }) => {
     return (
         <div className={cls.className}>
-            <Lenke className={cls.element('noBorder')} href={buttonUrl}>
+            <WithLink
+                urlIsExternal={true}
+                noStyling={true}
+                className={cls.element('noBorder')}
+                url={buttonUrl}>
                 <KnappBase
-                    className={classnames(
-                        cls.element('knapp'),
-                        parentCls.element('knapp')
-                    )}
+                    className={classnames(cls.element('knapp'), parentCls.element('knapp'))}
                     type="hoved">
                     {buttonText}
                 </KnappBase>
-            </Lenke>
-            <UserHelp
-                linkText={linkText}
-                linkUrl={linkUrl}
-                helpText={helpText}
-            />
+            </WithLink>
+            <UserHelp linkText={linkText} linkUrl={linkUrl} helpText={helpText} />
         </div>
     );
 };
