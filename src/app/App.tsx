@@ -5,24 +5,29 @@ import BEMHelper from './utils/bem';
 import TypografiBase from 'nav-frontend-typografi';
 import Router from './Router';
 import classnames from 'classnames';
+import moment from 'moment';
 import './app.less';
+
+const cls = BEMHelper('app');
+const DEFAULT_LANG: Language = 'nb';
 
 interface State {
     currentLanguage: Language;
 }
-
-const cls = BEMHelper('app');
 
 class App extends React.Component<{}, State> {
     constructor(props: {}) {
         super(props);
 
         this.state = {
-            currentLanguage: 'nb'
+            currentLanguage: DEFAULT_LANG
         };
+
+        moment.locale(DEFAULT_LANG);
     }
 
     setLanguage = (lang: Language) => {
+        moment.locale(lang);
         this.setState({
             currentLanguage: lang
         });
