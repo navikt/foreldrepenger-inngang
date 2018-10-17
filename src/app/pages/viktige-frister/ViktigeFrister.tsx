@@ -6,8 +6,6 @@ import Breadcrumbs from '../../components/breadcrumbs/Breadcrumbs';
 import BEMHelper from '../../utils/bem';
 import StrukturertTekst from '../../components/strukturert-tekst/StrukturertTekst';
 import { getContent } from '../../utils/getContent';
-
-import './viktigeFrister.less';
 import LesMer from '../../components/les-mer/LesMer';
 
 // getTranslation strings
@@ -39,15 +37,15 @@ interface Props {
     location: any;
 }
 
-const cls = BEMHelper('viktige-frister');
+const infosiderCls = BEMHelper('infosider');
 const pageSvg = require('./../../assets/ark/ark-viktige-frister.svg').default;
 
 const ViktigeFrister: React.StatelessComponent<Props & IntlProps> = ({ location, lang }) => {
     return (
-        <div className={cls.className}>
+        <div className={infosiderCls.className}>
             <Sidebanner text={getTranslation('viktige_frister.banner', lang)} />
-            <div className={cls.element('body')}>
-                <div className={cls.element('content')}>
+            <div className={infosiderCls.element('body')}>
+                <div className={infosiderCls.element('content')}>
                     <Breadcrumbs path={location.pathname} />
                     <PanelMedIllustrasjon
                         title={getTranslation('viktige_frister.header', lang)}
