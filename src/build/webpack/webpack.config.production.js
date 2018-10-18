@@ -21,6 +21,19 @@ webpackConfig.plugins.push(
 webpackConfig.output.filename = 'js/[name].[contenthash].js';
 webpackConfig.output.chunkFilename = 'js/[name].[contenthash].js';
 
+webpackConfig.optimization = {
+    runtimeChunk: 'single',
+    splitChunks: {
+        cacheGroups: {
+            vendor: {
+                test: /[\\/]node_modules[\\/]/,
+                name: 'vendors',
+                chunks: 'all'
+            }
+        }
+    }
+};
+
 webpackConfig.plugins.push(
     new UglifyJsPlugin({
         sourceMap: true,
