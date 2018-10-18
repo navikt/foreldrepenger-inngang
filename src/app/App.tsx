@@ -6,6 +6,7 @@ import TypografiBase from 'nav-frontend-typografi';
 import Router from './Router';
 import classnames from 'classnames';
 import moment from 'moment';
+import NAVLAB from './utils/navlab';
 import './app.less';
 
 const cls = BEMHelper('app');
@@ -66,7 +67,7 @@ class App extends React.Component<{}, State> {
                     setLanguage: this.setLanguage
                 }}>
                 <div lang={this.state.currentLanguage}>
-                    {process.env.NODE_ENV === 'navlab' ? (
+                    {NAVLAB ? (
                         <UnderUtviklingBanner
                             label={getTranslation('under_utvikling', this.state.currentLanguage)}
                         />

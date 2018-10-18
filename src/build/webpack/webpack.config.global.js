@@ -51,11 +51,6 @@ const webpackConfig = {
         new CaseSensitivePathsPlugin(),
         new SpriteLoaderPlugin({
             plainSprite: true
-        }),
-        new webpack.DefinePlugin({
-            'process.env': {
-                NODE_ENV: '"navlab"'
-            }
         })
     ]
 };

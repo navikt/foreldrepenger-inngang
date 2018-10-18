@@ -16,6 +16,7 @@ import Sidebanner from 'app/components/sidebanner/Sidebanner';
 import './søkForeldrepenger.less';
 import StrukturertTekst from 'app/components/strukturert-tekst/StrukturertTekst';
 import { getContent } from 'app/utils/getContent';
+import NAVLAB from 'app/utils/navlab';
 
 const hvaSøkerDuCls = BEMHelper('hvaSøkerDu');
 const foreldrepengerCls = BEMHelper('søkForeldrepenger');
@@ -74,7 +75,7 @@ class SøkForeldrepenger extends Component<Props & IntlProps> {
                                 <a
                                     tabIndex={-1}
                                     href={
-                                        process.env.NODE_ENV === 'navlab'
+                                        NAVLAB
                                             ? '/under-arbeid'
                                             : externalUrls.søk_foreldrepenger_eller_engangsstønad
                                     }>
