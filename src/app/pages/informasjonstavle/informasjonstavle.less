@@ -40,6 +40,45 @@
         align-items: stretch;
     }
 
+    &__underArbeid {
+        position: relative;
+        z-index: 3;
+    }
+
+    &__underArbeid-ikon_mainTable {
+        margin-top: -0.1rem;
+        margin-bottom: -8em;
+        z-index: 4;
+        width: unset;
+        float: right;
+    }
+
+    &__underArbeid-ikon_secTable {
+        margin-top: -0.1rem;
+        margin-bottom: -10em;
+        z-index: 4;
+        float: right;
+    }
+
+    .disabled {
+        pointer-events: none;
+    }
+
+    .stop-sign {
+        cursor: not-allowed;
+    }
+
+    .disabled .typo-normal,
+    .disabled .typo-undertittel,
+    .disabled .nav-frontend-chevron {
+        color: #78706a;
+        text-decoration: none;
+    }
+
+    a:link {
+        text-decoration: none;
+    }
+
     @media (min-width: @mobile-breakpoint) {
         &__veilederinnhold {
             flex-direction: row;
