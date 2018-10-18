@@ -15,40 +15,54 @@ const PanelMedBilde = ({
     title,
     url,
     urlIsExternal,
-    children
+    children,
+    disabled,
+    stopSign,
+    underArbeid
 }: {
     svgName: any;
     title: string;
     urlIsExternal?: boolean;
     url: string;
     children: ReactNode;
+    disabled?: boolean;
+    stopSign?: boolean;
+    underArbeid?: ReactNode;
 }) => {
     const svgFile = require(`./${svgName}.svg`).default;
 
     return (
-        <WithLink
-            className={cls.className}
-            url={url}
-            noStyling={true}
-            urlIsExternal={urlIsExternal}>
-            <div className={cls.element('imageOnPanel')}>
-                <div className={cls.element('svgContainer')}>
-                    <FlexibleSvg
-                        className={cls.element('svg')}
-                        iconRef={svgFile}
-                        height={115}
-                        width="100%"
-                    />
-                </div>
+        <div className={stopSign ? cls.className + ' stop-sign' : cls.className}>
+            <div className={cls.element('underArbeid')}>{underArbeid}</div>
+            <div className={disabled ? '' + ' disabled' : ''}>
+                <WithLink
+                    // className={cls.className}
+                    url={url}
+                    noStyling={true}
+                    urlIsExternal={urlIsExternal}>
+                    <div className={cls.element('imageOnPanel')}>
+                        <div className={cls.element('svgContainer')}>
+                            <FlexibleSvg
+                                className={cls.element('svg')}
+                                iconRef={svgFile}
+                                height={115}
+                                width="100%"
+                            />
+                        </div>
+                    </div>
+                    <PanelBase border={false} className={cls.element('panelOnPanel')}>
+                        <div
+                            className={cls.element(
+                                disabled ? 'textOnPanel disabled' : 'textOnPanel'
+                            )}>
+                            <TypografiBase type="undertittel">{title}</TypografiBase>
+                            {children}
+                        </div>
+                        <HoyreChevron className={cls.element('panelChevron')} />
+                    </PanelBase>
+                </WithLink>
             </div>
-            <PanelBase border={false} className={cls.element('panelOnPanel')}>
-                <div className={cls.element('textOnPanel')}>
-                    <TypografiBase type="undertittel">{title}</TypografiBase>
-                    {children}
-                </div>
-                <HoyreChevron className={cls.element('panelChevron')} />
-            </PanelBase>
-        </WithLink>
+        </div>
     );
 };
 
