@@ -1,62 +1,60 @@
-const webpackConfig = require('./webpack.config.global.js');
+const merge = require('webpack-merge');
+const common = require('./webpack.config.global.js');
+
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
-webpackConfig.mode = 'production';
-webpackConfig.devtool = 'source-map';
-
-webpackConfig.module.rules.push({
-    test: /\.less$/,
-    use: [MiniCssExtractPlugin.loader, 'css-loader', 'less-loader']
+module.exports = merge(common, {
+    mode: 'production',
+    devtool: 'source-map',
+    output: {
+        filename: 'js/[name].[contenthash].js',
+        chunkFilename: 'js/[name].[contenthash].js'
+    },
+    module: {
+        rules: [
+            {
+                test: /\.less$/,
+                use: [MiniCssExtractPlugin.loader, 'css-loader', 'less-loader']
+            }
+        ]
+    },
+    optimization: {
+        runtimeChunk: 'single',
+        splitChunks: {
+            cacheGroups: {
+                vendor: {
+                    test: /[\\/]node_modules[\\/]/,
+                    name: 'vendors',
+                    chunks: 'all'
+                }
+            }
+        }
+    },
+    plugins: [
+        new HtmlWebpackPlugin({
+            template: `${__dirname}/../../app/index.html`,
+            inject: 'body'
+        }),
+        new UglifyJsPlugin({
+            sourceMap: true,
+            uglifyOptions: {
+                mangle: {
+                    keep_classnames: true,
+                    keep_fnames: true
+                },
+                compress: {
+                    keep_fnames: true,
+                    keep_classnames: true
+                }
+            }
+        }),
+        new MiniCssExtractPlugin({
+            filename: 'css/[name].[contenthash].css',
+            chunkFilename: 'css/[name].[contenthash].css',
+            disable: false,
+            allChunks: true
+        })
+    ]
 });
-
-webpackConfig.plugins.push(
-    new HtmlWebpackPlugin({
-        template: `${__dirname}/../../app/index.html`,
-        inject: 'body'
-    })
-);
-
-webpackConfig.output.filename = 'js/[name].[contenthash].js';
-webpackConfig.output.chunkFilename = 'js/[name].[contenthash].js';
-
-webpackConfig.optimization = {
-    runtimeChunk: 'single',
-    splitChunks: {
-        cacheGroups: {
-            vendor: {
-                test: /[\\/]node_modules[\\/]/,
-                name: 'vendors',
-                chunks: 'all'
-            }
-        }
-    }
-};
-
-webpackConfig.plugins.push(
-    new UglifyJsPlugin({
-        sourceMap: true,
-        uglifyOptions: {
-            mangle: {
-                keep_classnames: true,
-                keep_fnames: true
-            },
-            compress: {
-                keep_fnames: true,
-                keep_classnames: true
-            }
-        }
-    })
-);
-
-webpackConfig.plugins.push(
-    new MiniCssExtractPlugin({
-        filename: 'css/[name].[contenthash].css',
-        chunkFilename: 'css/[name].[contenthash].css',
-        disable: false,
-        allChunks: true
-    })
-);
-
-module.exports = webpackConfig;
