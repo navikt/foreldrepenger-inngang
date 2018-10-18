@@ -1,27 +1,39 @@
 const path = require('path');
-const webpack = require('webpack');
+const merge = require('webpack-merge');
+const common = require('./webpack.config.global.js');
+
 const HtmlWebpackHarddiskPlugin = require('html-webpack-harddisk-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const webpackConfig = require('./webpack.config.global.js');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 require('dotenv').config();
 
-webpackConfig.mode = 'development';
+module.exports = merge(common, {
+    mode: 'development',
+    devtool: 'inline-source-map',
+    module: {
+        rules: [
+            {
+                test: /\.less$/,
+                use: ['style-loader', 'css-loader', 'less-loader']
+            }
+        ]
+    },
 
-webpackConfig.plugins.push(
-    new HtmlWebpackPlugin({
-        template: './src/app/index.html',
-        inject: 'body',
-        alwaysWriteToDisk: true
-    })
-);
-
-webpackConfig.plugins.push(
-    new HtmlWebpackHarddiskPlugin({
-        outputPath: path.resolve(__dirname, '../../../dist/dev')
-    })
-);
-
-module.exports = Object.assign(webpackConfig, {
-    devtool: 'inline-source-map'
+    plugins: [
+        new HtmlWebpackPlugin({
+            template: './src/app/index.html',
+            inject: 'body',
+            alwaysWriteToDisk: true
+        }),
+        new HtmlWebpackHarddiskPlugin({
+            outputPath: path.resolve(__dirname, '../../../dist/dev')
+        }),
+        new MiniCssExtractPlugin({
+            filename: 'css/[name].css',
+            chunkFilename: 'css/[name].css',
+            disable: false,
+            allChunks: true
+        })
+    ]
 });

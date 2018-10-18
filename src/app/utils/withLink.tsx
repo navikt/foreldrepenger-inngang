@@ -5,6 +5,7 @@ import CustomSVGFromSprite from './CustomSVG';
 import BEMHelper from './bem';
 import classnames from 'classnames';
 import './withLink.less';
+import NAVLAB from './navlab';
 
 const externalLinkIcon = require('../assets/icons/external.svg').default;
 
@@ -20,7 +21,6 @@ const withLink = (url: string, componentToRender: ReactNode, urlIsExternal?: boo
     }
 };
 
-const navlab = process.env.NODE_ENV === 'navlab';
 const cls = BEMHelper('withLink');
 
 interface Props {
@@ -58,7 +58,7 @@ export class WithLink extends React.Component<Props> {
 
         if (urlIsExternal) {
             if (noStyling) {
-                return navlab ? (
+                return NAVLAB ? (
                     <Link className={className} to="/under-arbeid">
                         {children}
                     </Link>
@@ -67,7 +67,7 @@ export class WithLink extends React.Component<Props> {
                         {children}
                     </a>
                 );
-            } else if (navlab) {
+            } else if (NAVLAB) {
                 return (
                     <span
                         title="Lenke under arbeid"
