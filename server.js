@@ -1,5 +1,6 @@
 require('dotenv').config();
 
+const fs = require('fs');
 const express = require('express');
 const path = require('path');
 const mustacheExpress = require('mustache-express');
@@ -7,18 +8,18 @@ const Promise = require('promise');
 const getDecorator = require('./src/build/scripts/decorator');
 const createEnvSettingsFile = require('./src/build/scripts/envSettings');
 
-const server = express();
+const serveGzipped = (contentType) => (req, res, next) => {
+    const acceptedEncodings = req.acceptsEncodings();
+    const gZippedFile = `${__dirname}${req.url}.gz`;
 
-server.set('views', `${__dirname}/dist`);
-server.set('view engine', 'mustache');
-server.engine('html', mustacheExpress());
+    if (acceptedEncodings.includes('gzip') && fs.existsSync(gZippedFile)) {
+        req.url = `${req.url}.gz`;
+        res.set('Content-Encoding', 'gzip');
+        res.set('Content-Type', contentType);
+    }
 
-createEnvSettingsFile(path.resolve(`${__dirname}/dist/js/settings.js`));
-
-server.use((req, res, next) => {
-    res.removeHeader('X-Powered-By');
     next();
-});
+};
 
 const renderApp = (decoratorFragments) =>
     new Promise((resolve, reject) => {
@@ -33,10 +34,7 @@ const renderApp = (decoratorFragments) =>
 
 const startServer = (html) => {
     server.use('/dist/js', express.static(path.resolve(__dirname, 'dist/js')));
-    server.use(
-        '/dist/css',
-        express.static(path.resolve(__dirname, 'dist/css'))
-    );
+    server.use('/dist/css', express.static(path.resolve(__dirname, 'dist/css')));
 
     server.get(['/dist/js/settings.js'], (req, res) => {
         res.sendFile(path.resolve(`../../dist/js/settings.js`));
@@ -57,6 +55,24 @@ const startServer = (html) => {
 
 const logError = (errorMessage, details) => console.log(errorMessage, details);
 
+// Konfigurer server
+const server = express();
+
+server.set('views', `${__dirname}/dist`);
+server.set('view engine', 'mustache');
+server.engine('html', mustacheExpress());
+
+server.use((req, res, next) => {
+    res.removeHeader('X-Powered-By');
+    next();
+});
+
+server.get('*.js', serveGzipped('text/javascript'));
+server.get('*.css', serveGzipped('text/css'));
+
+createEnvSettingsFile(path.resolve(`${__dirname}/dist/js/settings.js`));
+
+// Start server
 getDecorator()
     .then(renderApp, (error) => {
         logError('Failed to get decorator', error);
