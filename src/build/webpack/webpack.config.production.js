@@ -5,6 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 webpackConfig.mode = 'production';
+webpackConfig.devtool = 'source-map';
 
 webpackConfig.module.rules.push({
     test: /\.less$/,

@@ -2,6 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
 const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 const webpackConfig = {
     entry: {
@@ -43,6 +44,9 @@ const webpackConfig = {
         ]
     },
     plugins: [
+        new CleanWebpackPlugin(['dist'], {
+            root: `${__dirname}/../../../`
+        }),
         new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /nb|nn|en/),
         new CaseSensitivePathsPlugin(),
         new SpriteLoaderPlugin({
