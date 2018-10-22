@@ -4,6 +4,7 @@ const common = require('./webpack.config.global.js');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CompressionPlugin = require('compression-webpack-plugin');
 
 module.exports = merge(common, {
     mode: 'production',
@@ -55,6 +56,7 @@ module.exports = merge(common, {
             chunkFilename: 'css/[name].[contenthash].css',
             disable: false,
             allChunks: true
-        })
+        }),
+        new CompressionPlugin()
     ]
 });
