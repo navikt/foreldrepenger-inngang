@@ -46,7 +46,7 @@ const BildelenkerWithoutIntl: StatelessComponent<IntlProps> = ({ lang }) => {
             </PanelMedBilde>
 
             <PanelMedBilde
-                svgName="se-over-søknad"
+                svgName="permisjon-sjekkliste"
                 title={getTranslation('informasjonstavle.hvor_lenge_kan_du_få_permisjon', lang)}
                 urlIsExternal={true}
                 url={externalUrls.foreldrepengeplanlegger}
