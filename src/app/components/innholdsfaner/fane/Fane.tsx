@@ -39,16 +39,11 @@ const Fane: React.StatelessComponent<Props & IntlProps> = ({
                 [cls.modifier('selected')]: isSelected,
                 [cls.modifier('most')]: mos
             })}>
-            <div className={cls.element('background')} />
             <div className={cls.element('inner')}>
                 {tab.icon}
                 <TypografiBase type="normaltekst">{getTranslation(tab.label, lang)}</TypografiBase>
             </div>
-            <div
-                className={classnames(cls.element('pointer'), {
-                    [cls.element('pointer', 'selected')]: isSelected
-                })}
-            />
+            <div className={cls.element('selector')} />
         </div>
     );
 };

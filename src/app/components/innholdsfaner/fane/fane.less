@@ -1,15 +1,15 @@
 @import '../../../styles/index.less';
 
 .fane {
+    padding: 1rem 0;
+    border-radius: 0.5rem;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     font-size: 1.5rem;
     width: 120px;
-    height: 120px;
-    cursor: pointer;
     z-index: 0;
 
     @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
@@ -21,48 +21,48 @@
         flex: 1;
     }
 
-    &:focus {
-        outline: none;
+    &:hover:not(.fane--selected) {
+        cursor: pointer;
 
-        .fane__background {
-            .buttonFocus();
+        .typo-normal {
+            text-decoration: underline;
         }
     }
 
+    &:focus {
+        .buttonFocus();
+    }
+
     .typo-normal {
+        color: @navBla;
         font-size: 0.9rem;
-        height: 2rem;
         margin-top: 0.3rem;
         letter-spacing: 0.1px;
+        white-space: pre-wrap;
+    }
+
+    &__selector {
+        margin-top: 0.5rem;
+        height: 6px;
+        width: 80%;
+        background-color: #005177;
+        border-radius: 3px;
+        visibility: hidden;
     }
 
     &--selected {
         .typo-normal {
+            color: black;
             font-weight: bold;
             letter-spacing: 0;
         }
 
-        .fane__background {
-            background-color: @fane;
-        }
-
-        &:active .fane__background {
-            background-color: @faneAktiv;
+        .fane__selector {
+            visibility: visible;
         }
     }
 
     &__inner {
         width: 85%;
-    }
-
-    &__pointer {
-        visibility: hidden;
-        z-index: -1;
-        position: absolute;
-        padding-top: 179px;
-    }
-
-    &__pointer--selected {
-        visibility: visible;
     }
 }
