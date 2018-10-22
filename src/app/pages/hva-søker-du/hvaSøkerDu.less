@@ -85,6 +85,7 @@
 
             .userHelp {
                 padding-top: 1rem;
+                padding-left: 0.1rem;
                 align-self: flex-start;
             }
         }
@@ -98,7 +99,10 @@
                 max-width: 100%;
 
                 &__knapp {
-                    width: auto;
+                    /* width: auto; */
+                    max-width: 220px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
                 }
             }
 
@@ -110,6 +114,11 @@
     }
 
     @media (min-width: @tablet-breakpoint) {
+        &__knapp {
+            max-width: 248px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
         &__body {
             padding: 0 1rem;
         }
@@ -119,7 +128,7 @@
 
             .userHelp {
                 padding-top: 0;
-                padding-left: 1rem;
+                padding-left: 0.5rem;
                 align-self: center;
                 margin-top: 0;
             }
