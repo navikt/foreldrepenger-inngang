@@ -18,6 +18,7 @@ const PanelMedBilde = ({
     children,
     disabled,
     stopSign,
+    bypassNavlab,
     underArbeid
 }: {
     svgName: any;
@@ -27,6 +28,7 @@ const PanelMedBilde = ({
     children: ReactNode;
     disabled?: boolean;
     stopSign?: boolean;
+    bypassNavlab?: boolean;
     underArbeid?: ReactNode;
 }) => {
     const svgFile = require(`./${svgName}.svg`).default;
@@ -39,6 +41,7 @@ const PanelMedBilde = ({
                     // className={cls.className}
                     url={url}
                     noStyling={true}
+                    bypassNavlab={bypassNavlab}
                     urlIsExternal={urlIsExternal}>
                     <div className={cls.element('imageOnPanel')}>
                         <div className={cls.element('svgContainer')}>
