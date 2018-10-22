@@ -31,7 +31,7 @@ class SvgBanner extends Component<Props> {
         return (
             <div role="banner" className="svgBanner">
                 {this.state && <CustomSVG className="svgBanner__svg" iconRef={svg} size={200} />}
-                <CustomSVG className="svgBanner__cribSvg" iconRef={cribSvg} size={145} />
+                <CustomSVG className="svgBanner__cribSvg" iconRef={cribSvg} size={140} />
             </div>
         );
     };
