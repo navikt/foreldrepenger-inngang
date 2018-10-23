@@ -1,0 +1,77 @@
+[
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Krav om svangerskapspenger til selvstendig næringsdrivende og frilanser",
+                "marks": []
+            }
+        ],
+        "markDefs": []
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            { "type": "span", "text": "Skjema på: ", "marks": [] },
+            { "type": "span", "text": "Bokmål", "marks": ["url_krav_bokmål", "external_link"] },
+            { "type": "span", "text": "Nynorsk", "marks": ["url_krav_nynorsk", "external_link"] }
+        ],
+        "markDefs": [
+            { "key": "url_krav_bokmål", "type": "link", "href": "https://www.nav.no/no/Person/Skjemaer-for-privatpersoner/skjemaveileder/vedlegg?key=233606&languagecode=53&veiledertype=privatperson" },
+            { "key": "url_krav_nynorsk", "type": "link", "href": "https://www.nav.no/no/Person/Skjemaer-for-privatpersoner/skjemaveileder/vedlegg?key=233606&languagecode=54&veiledertype=privatperson" }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Arbeidstakere som skal ha sykepenger, foreldrepenger, svangerskapspenger, pleie-/opplæringspenger og omsorgspenger",
+                "marks": []
+            }
+        ],
+        "markDefs": []
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            { "type": "span", "text": "Skjema på: ", "marks": [] },
+            { "type": "span", "text": "Bokmål", "marks": ["url_arbeidstakere_bokmål", "external_link"] },
+            { "type": "span", "text": "Nynorsk", "marks": ["url_arbeidstakere_nynorsk", "external_link"] }
+        ],
+        "markDefs": [
+            { "key": "url_arbeidstakere_bokmål", "type": "link", "href": "https://www.nav.no/no/Person/Familie/Venter+du+barn/_attachment/1073750932?_ts=158b47d3008&download=true" },
+            { "key": "url_arbeidstakere_nynorsk", "type": "link", "href": "https://www.nav.no/no/Person/Familie/Venter+du+barn/_attachment/1073750928?_ts=158b47cab38&download=true" }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Selvstendig næringsdrivende og/eller frilansere som skal ha foreldrepenger eller svangerskapspenger",
+                "marks": []
+            }
+        ],
+        "markDefs": []
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            { "type": "span", "text": "Skjema på: ", "marks": [] },
+            { "type": "span", "text": "Bokmål", "marks": ["url_selvstendig_bokmål", "external_link"] },
+            { "type": "span", "text": "Nynorsk", "marks": ["url_selvstendig_nynorsk", "external_link"] }
+        ],
+        "markDefs": [
+            { "key": "url_selvstendig_bokmål", "type": "link", "href": "https://www.nav.no/no/Person/Skjemaer-for-privatpersoner/skjemaveileder/vedlegg?key=422066&languagecode=53&veiledertype=privatperson" },
+            { "key": "url_selvstendig_nynorsk", "type": "link", "href": "https://www.nav.no/no/Person/Skjemaer-for-privatpersoner/skjemaveileder/vedlegg?key=422066&languagecode=54&veiledertype=privatperson" }
+        ]
+    }
+]

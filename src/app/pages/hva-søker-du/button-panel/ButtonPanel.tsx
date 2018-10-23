@@ -14,6 +14,7 @@ const ButtonPanel = ({
     buttonUrl,
     linkText,
     linkUrl,
+    externalLink,
     helpText
 }: {
     parentCls: BEMWrapper;
@@ -21,12 +22,13 @@ const ButtonPanel = ({
     buttonUrl: string;
     linkText: string;
     linkUrl: string;
+    externalLink?: boolean;
     helpText: string;
 }) => {
     return (
         <div className={cls.className}>
             <WithLink
-                urlIsExternal={true}
+                urlIsExternal={externalLink}
                 noStyling={true}
                 className={cls.element('noBorder')}
                 url={buttonUrl}>
