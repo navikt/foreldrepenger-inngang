@@ -6,6 +6,7 @@ import { Language, withIntl, getTranslation } from '../../../intl/intl';
 import { getContent } from '../../../utils/getContent';
 
 const content = 'all-informasjon/hva-er-foreldrepenger/bare-far-har-rett/bare-far-har-rett';
+const content2 = 'all-informasjon/hva-er-foreldrepenger/bare-far-har-rett/bare-far-har-rett-del2';
 const farsDel = 'all-informasjon/hva-er-foreldrepenger/bare-far-har-rett/fars-del';
 
 const getInformasjonsfaner = (lang: Language) => [
@@ -31,8 +32,9 @@ const BareFarHarRett = ({ lang }: { lang: Language }) => {
     return (
         <div>
             <StrukturertTekst tekst={getContent(content, lang)} />
-            <Kalkulator />
             <Informasjonsfaner tabs={getInformasjonsfaner(lang)} />
+            <StrukturertTekst tekst={getContent(content2, lang)} />
+            <Kalkulator />
         </div>
     );
 };

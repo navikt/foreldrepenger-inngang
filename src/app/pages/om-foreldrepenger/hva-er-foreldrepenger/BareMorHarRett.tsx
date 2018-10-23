@@ -6,6 +6,7 @@ import { Language, withIntl, getTranslation } from '../../../intl/intl';
 import { getContent } from '../../../utils/getContent';
 
 const content = 'all-informasjon/hva-er-foreldrepenger/bare-mor-har-rett/bare-mor-har-rett';
+const content2 = 'all-informasjon/hva-er-foreldrepenger/bare-mor-har-rett/bare-mor-har-rett-del2';
 const morsDel = 'all-informasjon/hva-er-foreldrepenger/bare-mor-har-rett/mors-del';
 
 const getInformasjonsfaner = (lang: Language) => [
@@ -31,8 +32,9 @@ const BareMorHarRett = ({ lang }: { lang: Language }) => {
     return (
         <div>
             <StrukturertTekst tekst={getContent(content, lang)} />
-            <Kalkulator />
             <Informasjonsfaner tabs={getInformasjonsfaner(lang)} />
+            <StrukturertTekst tekst={getContent(content2, lang)} />
+            <Kalkulator />
         </div>
     );
 };

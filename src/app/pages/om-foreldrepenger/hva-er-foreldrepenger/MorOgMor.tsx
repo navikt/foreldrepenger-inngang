@@ -7,6 +7,7 @@ import { Language, withIntl, getTranslation } from '../../../intl/intl';
 import { getContent } from '../../../utils/getContent';
 
 const content = 'all-informasjon/hva-er-foreldrepenger/mor-og-mor/mor-og-mor';
+const content2 = 'all-informasjon/hva-er-foreldrepenger/mor-og-mor/mor-og-mor-del2';
 const morsDel = 'all-informasjon/hva-er-foreldrepenger/mor-og-mor/mors-del';
 const medmorsDel = 'all-informasjon/hva-er-foreldrepenger/mor-og-mor/medmors-del';
 const fellesDel = 'all-informasjon/hva-er-foreldrepenger/mor-og-mor/felles-del';
@@ -68,8 +69,9 @@ const MorOgMor = ({ lang }: { lang: Language }) => {
     return (
         <div>
             <StrukturertTekst tekst={getContent(content, lang)} />
-            <Kalkulator />
             <Informasjonsfaner tabs={getInformasjonsfaner(lang)} />
+            <StrukturertTekst tekst={getContent(content2, lang)} />
+            <Kalkulator />
         </div>
     );
 };

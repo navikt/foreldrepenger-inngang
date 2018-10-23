@@ -66,7 +66,7 @@ class Informasjonsfaner extends React.Component<Props> {
             </TypografiBase>
             {this.props.tabs.length > 1 && (
                 <Tabs
-                    kompakt
+                    kompakt={true}
                     tabs={this.props.tabs.map((tab) => ({
                         label: tab.faneLabel
                     }))}
