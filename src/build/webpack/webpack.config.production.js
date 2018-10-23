@@ -34,6 +34,9 @@ module.exports = merge(common, {
         }
     },
     plugins: [
+        new CleanWebpackPlugin(['dist'], {
+            root: `${__dirname}/../../../`
+        }),
         new HtmlWebpackPlugin({
             template: `${__dirname}/../../app/index.html`,
             inject: 'body'

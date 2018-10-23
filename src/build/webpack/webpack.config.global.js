@@ -44,9 +44,6 @@ const webpackConfig = {
         ]
     },
     plugins: [
-        new CleanWebpackPlugin(['dist'], {
-            root: `${__dirname}/../../../`
-        }),
         new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /nb|nn|en/),
         new CaseSensitivePathsPlugin(),
         new SpriteLoaderPlugin({
