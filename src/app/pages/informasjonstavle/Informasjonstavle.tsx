@@ -33,7 +33,7 @@ const BildelenkerWithoutIntl: StatelessComponent<IntlProps> = ({ lang }) => {
     return (
         <nav className={cls.element('bildepaneler')}>
             <PanelMedBilde
-                svgName="jente-med-imac"
+                svgName="hender-sjekkliste"
                 title={getTranslation('informasjonstavle.hva_har_du_rett_på', lang)}
                 urlIsExternal={false}
                 url="/under-arbeid"
@@ -46,7 +46,7 @@ const BildelenkerWithoutIntl: StatelessComponent<IntlProps> = ({ lang }) => {
             </PanelMedBilde>
 
             <PanelMedBilde
-                svgName="se-over-søknad"
+                svgName="permisjon-sjekkliste"
                 title={getTranslation('informasjonstavle.hvor_lenge_kan_du_få_permisjon', lang)}
                 urlIsExternal={true}
                 url={externalUrls.foreldrepengeplanlegger}
@@ -59,7 +59,7 @@ const BildelenkerWithoutIntl: StatelessComponent<IntlProps> = ({ lang }) => {
             </PanelMedBilde>
 
             <PanelMedBilde
-                svgName="fylle-ut-søknad"
+                svgName="illustration"
                 title={getTranslation('informasjonstavle.gå_rett_til_søknaden', lang)}
                 urlIsExternal={false}
                 url="/hva-soker-du"

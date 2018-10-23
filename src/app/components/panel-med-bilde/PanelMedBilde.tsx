@@ -29,7 +29,7 @@ const PanelMedBilde = ({
     stopSign?: boolean;
     underArbeid?: ReactNode;
 }) => {
-    const svgFile = require(`./${svgName}.svg`).default;
+    const svgFile = require(`./img/${svgName}.svg`).default;
 
     return (
         <div className={stopSign ? cls.className + ' stop-sign' : cls.className}>
