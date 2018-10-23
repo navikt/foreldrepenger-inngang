@@ -30,6 +30,7 @@ interface Props {
     noStyling?: boolean;
     className?: string;
     style?: any;
+    bypassNavlab?: boolean;
     ariaLabel?: string;
     children: ReactNode;
 }
@@ -52,13 +53,14 @@ export class WithLink extends React.Component<Props> {
             noStyling,
             className,
             style,
+            bypassNavlab,
             ariaLabel,
             children
         } = this.props;
 
         if (urlIsExternal) {
             if (noStyling) {
-                return NAVLAB ? (
+                return NAVLAB && !bypassNavlab ? (
                     <Link className={className} to="/under-arbeid">
                         {children}
                     </Link>

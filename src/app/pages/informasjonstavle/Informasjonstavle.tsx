@@ -49,10 +49,8 @@ const BildelenkerWithoutIntl: StatelessComponent<IntlProps> = ({ lang }) => {
                 svgName="permisjon-sjekkliste"
                 title={getTranslation('informasjonstavle.hvor_lenge_kan_du_få_permisjon', lang)}
                 urlIsExternal={true}
-                url={externalUrls.foreldrepengeplanlegger}
-                underArbeid={<UnderProduksjon group={'_mainTable'} />}
-                disabled={true}
-                stopSign={true}>
+                bypassNavlab={true}
+                url={externalUrls.foreldrepengeplanlegger}>
                 <Tekstomrade>
                     {getTranslation('informasjonstavle.hvor_lenge_kan_du_få_permisjon_body', lang)}
                 </Tekstomrade>
