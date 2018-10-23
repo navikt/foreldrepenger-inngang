@@ -11,9 +11,10 @@ const Svangerskapspenger = ({ parentCls, lang }: { parentCls: any; lang: Languag
         <PanelMedTittel title={getTranslation('svangerskapspenger', lang)}>
             <StrukturertTekst tekst={getContent('hva-vil-du-søke-om/svangerskapspenger', lang)} />
             <ButtonPanel
+                externalLink={false}
                 parentCls={parentCls}
                 buttonText={getTranslation('hva_søker_du.søk_svangerskapspenger', lang)}
-                buttonUrl={externalUrls.søk_svangerskapspenger}
+                buttonUrl="/hva-soker-du/svangerskapspenger"
                 linkText={getTranslation('hva_søker_du.ingen_elektronisk_id', lang)}
                 linkUrl={externalUrls.søk_svangerskapspenger}
                 helpText={getTranslation('hva_søker_du.ingen_elektronisk_id_hjelp', lang)}

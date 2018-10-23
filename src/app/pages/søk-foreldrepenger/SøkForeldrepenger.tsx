@@ -46,7 +46,7 @@ class SøkForeldrepenger extends Component<Props & IntlProps> {
     render = () => {
         return (
             <div className={classnames(hvaSøkerDuCls.className, foreldrepengerCls.className)}>
-                <Sidebanner text={getTranslation('søk_foreldrepenger.tittel', this.props.lang)} />
+                <Sidebanner text={getTranslation('hva_søker_du.tittel', this.props.lang)} />
                 <main className={hvaSøkerDuCls.element('body')}>
                     <div className={hvaSøkerDuCls.element('content')}>
                         <Breadcrumbs path={location.pathname} />
