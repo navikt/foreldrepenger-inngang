@@ -128,6 +128,9 @@
     "om_foreldrepenger.hvor_lenge.fordeling.alenefar": "Som far",
     "om_foreldrepenger.hvor_lenge.fordeling.første_fedrekvote": "Far 1",
     "om_foreldrepenger.hvor_lenge.fordeling.andre_fedrekvote": "Far 2",
+    "om_foreldrepenger.hvor_lenge.fordeling.krav.ingen_krav": "Ingen krav til aktivitet",
+    "om_foreldrepenger.hvor_lenge.fordeling.krav.kan_ikke_overtas_av": "Kan ikke overtas av",
+    "om_foreldrepenger.hvor_lenge.fordeling.krav.aktivitetskrav_til": "Aktivitetskrav til",
     
     "om_foreldrepenger.ferie.tittel": "Ta ut ferie",
     "om_foreldrepenger.ferie.eksempel_label": "Eksempel på hvordan du kan forlenge foreldrepengeperioden din når du utsetter:",
