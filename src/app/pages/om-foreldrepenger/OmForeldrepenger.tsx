@@ -16,7 +16,7 @@ import HjemmeSamtidig from './hjemme-samtidig/HjemmeSamtidig';
 import Hurtiglenker from './hurtiglenker/Hurtiglenker';
 import MediaQuery from 'react-responsive';
 import './omForeldrepenger.less';
-import Hjelp from './hjelp/Hjelp';
+import Hjelp from '../../components/hjelpe-seksjon/HjelpeSeksjon';
 
 const cls = BEMHelper('infosider');
 

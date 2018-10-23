@@ -10,7 +10,7 @@ import { getContent } from '../../utils/getContent';
 import '../infosider.less';
 import './omEngangsstønad.less';
 import CustomSVGFromSprite from '../../utils/CustomSVG';
-
+import Hjelp from '../../components/hjelpe-seksjon/HjelpeSeksjon';
 const infosiderCls = BEMHelper('infosider');
 const cls = BEMHelper('omEngangsstønad');
 
@@ -39,6 +39,7 @@ const OmEngangsstonad: React.StatelessComponent<Props & IntlProps> = ({ location
                     <HvaKanDuFå />
                     <NårBlirPengeneUtbetalt />
                     <EngangsstønadTilFar />
+                    <Hjelp />
                 </div>
             </div>
         </div>
