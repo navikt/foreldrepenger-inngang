@@ -20,7 +20,13 @@ const getInformasjonsfaner = (lang: Language) => [
             tittel: 'til far 1',
             icon: 'far4',
             antallUker: '15',
-            punktliste: ['Ingen krav til aktivitet', 'Kan ikke overtas av far 2'],
+            punktliste: [
+                getTranslation('om_foreldrepenger.hvor_lenge.fordeling.krav.ingen_krav', lang),
+                `${getTranslation(
+                    'om_foreldrepenger.hvor_lenge.fordeling.krav.kan_ikke_overtas_av',
+                    lang
+                )} far 2`
+            ],
             component: <StrukturertTekst tekst={getContent(førsteFarsDel, lang)} />
         }
     },
@@ -31,7 +37,13 @@ const getInformasjonsfaner = (lang: Language) => [
             tittel: 'til far 2',
             icon: 'far2',
             antallUker: '15',
-            punktliste: ['Ingen krav til aktivitet', 'Kan ikke overtas av far 1'],
+            punktliste: [
+                getTranslation('om_foreldrepenger.hvor_lenge.fordeling.krav.ingen_krav', lang),
+                `${getTranslation(
+                    'om_foreldrepenger.hvor_lenge.fordeling.krav.kan_ikke_overtas_av',
+                    lang
+                )} far 1`
+            ],
             component: <StrukturertTekst tekst={getContent(andreFarsDel, lang)} />
         }
     },
@@ -40,9 +52,14 @@ const getInformasjonsfaner = (lang: Language) => [
         faneIcon: false,
         bodyProps: {
             tittel: 'til begge',
-            icon: <Foreldrepar firstParent="far4" secondParent="far2" />,
+            icon: <Foreldrepar firstParent="far4" secondParent="far2" variant={4} />,
             antallUker: '16/26',
-            punktliste: ['Aktivitetskrav til far 1'],
+            punktliste: [
+                `${getTranslation(
+                    'om_foreldrepenger.hvor_lenge.fordeling.krav.aktivitetskrav_til',
+                    lang
+                )} far 1`
+            ],
             component: <StrukturertTekst tekst={getContent(fellesdel, lang)} />
         }
     }

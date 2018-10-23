@@ -20,7 +20,13 @@ const getInformasjonsfaner = (lang: Language) => [
             tittel: 'til mor',
             icon: 'mor2',
             antallUker: '15',
-            punktliste: ['Ingen krav til aktivitet', 'Kan ikke overtas av far'],
+            punktliste: [
+                getTranslation('om_foreldrepenger.hvor_lenge.fordeling.krav.ingen_krav', lang),
+                `${getTranslation(
+                    'om_foreldrepenger.hvor_lenge.fordeling.krav.kan_ikke_overtas_av',
+                    lang
+                )} far`
+            ],
             component: <StrukturertTekst tekst={getContent(morsdel, lang)} />
         }
     },
@@ -31,7 +37,13 @@ const getInformasjonsfaner = (lang: Language) => [
             tittel: 'til far',
             icon: 'far1',
             antallUker: '15',
-            punktliste: ['Ingen krav til aktivitet', 'Kan ikke overtas av mor'],
+            punktliste: [
+                getTranslation('om_foreldrepenger.hvor_lenge.fordeling.krav.ingen_krav', lang),
+                `${getTranslation(
+                    'om_foreldrepenger.hvor_lenge.fordeling.krav.kan_ikke_overtas_av',
+                    lang
+                )} mor`
+            ],
             component: <StrukturertTekst tekst={getContent(farsdel, lang)} />
         }
     },
@@ -40,9 +52,14 @@ const getInformasjonsfaner = (lang: Language) => [
         faneIcon: false,
         bodyProps: {
             tittel: 'til begge',
-            icon: <Foreldrepar firstParent="mor2" secondParent="far1" />,
+            icon: <Foreldrepar variant={4} firstParent="mor2" secondParent="far1" />,
             antallUker: '16/26',
-            punktliste: ['Aktivitetskrav til mor'],
+            punktliste: [
+                `${getTranslation(
+                    'om_foreldrepenger.hvor_lenge.fordeling.krav.aktivitetskrav_til',
+                    lang
+                )} mor`
+            ],
             component: <StrukturertTekst tekst={getContent(fellesdel, lang)} />
         }
     }
