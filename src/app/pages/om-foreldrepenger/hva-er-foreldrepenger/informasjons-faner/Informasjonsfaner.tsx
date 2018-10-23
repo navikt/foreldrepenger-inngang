@@ -51,8 +51,8 @@ class Informasjonsfaner extends React.Component<Props> {
 
     render = () => (
         <div className={cls.className}>
-            <TypografiBase type="element">
-                <div className={cls.element('header')}>
+            <div className={cls.element('header')}>
+                <TypografiBase type="element">
                     {this.props.tabs.length > 1
                         ? getTranslation(
                               'om_foreldrepenger.hvor_lenge.fordeling.tittel',
@@ -62,8 +62,8 @@ class Informasjonsfaner extends React.Component<Props> {
                               'om_foreldrepenger.hvor_lenge.fordeling.tittel_alene',
                               this.props.lang
                           )}
-                </div>
-            </TypografiBase>
+                </TypografiBase>
+            </div>
             {this.props.tabs.length > 1 && (
                 <Tabs
                     kompakt={true}

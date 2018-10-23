@@ -15,8 +15,37 @@ interface Props {
     component: ReactNode;
 }
 
-const InformasjonsfanerBody = withIntl(
-    ({ tittel, icon, antallUker, punktliste, component, lang }: Props & IntlProps) => {
+class InformasjonsfanerBody extends React.Component<Props & IntlProps> {
+    state: {
+        veilederposisjon: 'høyre' | 'bunn';
+    };
+
+    constructor(props: Props & IntlProps) {
+        super(props);
+
+        this.state = {
+            veilederposisjon: this.getVeilederposisjon()
+        };
+    }
+
+    componentDidMount = () => {
+        window.addEventListener('resize', this.resizeHandler);
+    };
+
+    componentWillUnmount = () => {
+        window.removeEventListener('resize', this.resizeHandler);
+    };
+
+    resizeHandler = () => {
+        this.setState({
+            veilederposisjon: this.getVeilederposisjon()
+        });
+    };
+
+    getVeilederposisjon = () => (window.innerWidth > 576 ? 'høyre' : 'bunn');
+
+    render = () => {
+        const { tittel, icon, antallUker, punktliste, component, lang } = this.props;
         let svg;
         if (typeof icon === 'string') {
             svg = require(`../../../../assets/foreldre/${icon}.svg`).default;
@@ -24,11 +53,12 @@ const InformasjonsfanerBody = withIntl(
 
         return (
             <div className={cls.className}>
-                <div style={{ display: 'flex' }}>
+                <div style={this.state.veilederposisjon === 'høyre' ? { display: 'flex' } : {}}>
                     <Veileder
                         fargetema="normal"
-                        posisjon="høyre"
+                        posisjon={this.state.veilederposisjon}
                         storrelse="M"
+                        center={true}
                         tekst={
                             <Snakkeboble
                                 tittel={`${antallUker} uker ${tittel}`}
@@ -42,8 +72,8 @@ const InformasjonsfanerBody = withIntl(
                 <div className={cls.element('bodyTxt')}>{component}</div>
             </div>
         );
-    }
-);
+    };
+}
 
 const Snakkeboble = ({
     tittel,
@@ -70,4 +100,4 @@ const Snakkeboble = ({
     </div>
 );
 
-export default InformasjonsfanerBody;
+export default withIntl(InformasjonsfanerBody);
