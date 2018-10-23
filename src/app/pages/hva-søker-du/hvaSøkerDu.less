@@ -43,7 +43,7 @@
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        margin-right: 0.125;
+        margin-right: 0.125rem;
 
         .hvaSøkerDu__knapp:nth-child(1) {
             margin-bottom: 1rem;
@@ -85,6 +85,7 @@
 
             .userHelp {
                 padding-top: 1rem;
+                padding-left: 0.1rem;
                 align-self: flex-start;
             }
         }
@@ -94,13 +95,15 @@
             align-self: center;
         }
 
-        @media screen and (-ms-high-contrast: active),
-            (-ms-high-contrast: none) {
+        @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
             .buttonPanel {
                 max-width: 100%;
 
                 &__knapp {
-                    width: auto;
+                    /* width: auto; */
+                    max-width: 220px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
                 }
             }
 
@@ -112,6 +115,11 @@
     }
 
     @media (min-width: @tablet-breakpoint) {
+        &__knapp {
+            max-width: 248px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
         &__body {
             padding: 0 1rem;
         }
@@ -121,7 +129,7 @@
 
             .userHelp {
                 padding-top: 0;
-                padding-left: 1rem;
+                padding-left: 0.5rem;
                 align-self: center;
                 margin-top: 0;
             }
