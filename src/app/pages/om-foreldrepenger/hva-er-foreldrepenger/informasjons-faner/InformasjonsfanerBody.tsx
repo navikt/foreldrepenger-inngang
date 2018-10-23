@@ -5,7 +5,7 @@ import Veileder from 'nav-frontend-veileder';
 import TypografiBase from 'nav-frontend-typografi';
 import { Language, getTranslation, withIntl, IntlProps } from 'app/intl/intl';
 
-const cls = BEMHelper('InformasjonsfanerBody');
+const cls = BEMHelper('informasjonsfanerBody');
 
 interface Props {
     tittel: string;
