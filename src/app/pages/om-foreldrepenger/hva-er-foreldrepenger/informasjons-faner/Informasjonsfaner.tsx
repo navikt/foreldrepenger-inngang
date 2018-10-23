@@ -2,7 +2,7 @@ import React, { ReactNode } from 'react';
 import Tabs from 'nav-frontend-tabs';
 import BEMHelper from '../../../../utils/bem';
 import InformasjonsFanerLabel from './InformasjonsFanerLabel';
-import InformasjonsFanerBody from './InformasjonFanerBody';
+import InformasjonsfanerBody from './InformasjonsfanerBody';
 import CakeSvg from './CakeSvg';
 import CakeFellesSvg from './CakeFellesSvg';
 
@@ -82,7 +82,7 @@ class Informasjonsfaner extends React.Component<Props> {
                     onChange={this.onTabChange}
                 />
             )}
-            <InformasjonsFanerBody {...this.props.tabs[this.state.currentTab].bodyProps} />
+            <InformasjonsfanerBody {...this.props.tabs[this.state.currentTab].bodyProps} />
         </div>
     );
 }

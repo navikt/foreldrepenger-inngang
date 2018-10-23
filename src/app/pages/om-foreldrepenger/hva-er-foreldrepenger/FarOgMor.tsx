@@ -40,7 +40,7 @@ const getInformasjonsfaner = (lang: Language) => [
         faneIcon: false,
         bodyProps: {
             tittel: 'til begge',
-            icon: <Foreldrepar firstParent="mor2" secondParent="far1" />,
+            icon: <Foreldrepar variant={4} firstParent="mor2" secondParent="far1" />,
             antallUker: '16/26',
             punktliste: ['Aktivitetskrav til mor'],
             component: <StrukturertTekst tekst={getContent(fellesdel, lang)} />
