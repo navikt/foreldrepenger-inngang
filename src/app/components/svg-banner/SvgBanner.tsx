@@ -22,19 +22,16 @@ class SvgBanner extends Component<Props> {
     }
 
     render = () => {
-        const svg = require(`../../assets/familier/familie-${
+        const svg = require(`../../assets/familier-hjemme/familie-hjemme-${
             this.state.svgIndex
         }.svg`).default;
 
+        const cribSvg = require('../../assets/icons/babyCrib.svg').default;
+
         return (
             <div role="banner" className="svgBanner">
-                {this.state && (
-                    <CustomSVG
-                        className="svgBanner__svg"
-                        iconRef={svg}
-                        size={120}
-                    />
-                )}
+                {this.state && <CustomSVG className="svgBanner__svg" iconRef={svg} size={200} />}
+                <CustomSVG className="svgBanner__cribSvg" iconRef={cribSvg} size={140} />
             </div>
         );
     };

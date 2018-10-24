@@ -1,9 +1,9 @@
 import * as React from 'react';
 import TypografiBase from 'nav-frontend-typografi';
 import { BEMWrapper } from '../../../../utils/bem';
-import CustomSVG from '../../../../utils/CustomSVG';
+import { FlexibleSvg } from 'app/utils/CustomSVG';
 
-const babyIcon = require('./baby.svg').default;
+const icon = require('../../../../assets/icons/tåteflaske.svg').default;
 
 const AntallBarn = ({
     parentCls,
@@ -18,7 +18,7 @@ const AntallBarn = ({
     for (let i = 0; i < childCount; i++) {
         childCountIllustration.push(
             <span key={i} className={parentCls.element('childContainer')}>
-                <CustomSVG iconRef={babyIcon} size={20} />
+                <FlexibleSvg iconRef={icon} height={27} width={18} />
             </span>
         );
     }

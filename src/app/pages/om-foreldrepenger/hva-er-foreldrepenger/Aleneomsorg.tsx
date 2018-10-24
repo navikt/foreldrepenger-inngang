@@ -6,6 +6,7 @@ import { Language, withIntl, getTranslation } from '../../../intl/intl';
 import { getContent } from '../../../utils/getContent';
 
 const content = 'all-informasjon/hva-er-foreldrepenger/aleneomsorg/aleneomsorg';
+const content2 = 'all-informasjon/hva-er-foreldrepenger/aleneomsorg/aleneomsorg-del2';
 const farsDel = 'all-informasjon/hva-er-foreldrepenger/aleneomsorg/fars-del';
 const morsDel = 'all-informasjon/hva-er-foreldrepenger/aleneomsorg/mors-del';
 
@@ -38,8 +39,9 @@ const Aleneomsorg = ({ lang }: { lang: Language }) => {
     return (
         <div>
             <StrukturertTekst tekst={getContent(content, lang)} />
-            <Kalkulator />
             <Informasjonsfaner tabs={getInformasjonsfaner(lang)} />
+            <StrukturertTekst tekst={getContent(content2, lang)} />
+            <Kalkulator />
         </div>
     );
 };

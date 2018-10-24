@@ -15,9 +15,9 @@ import Beregning from './beregning/Beregning';
 import HjemmeSamtidig from './hjemme-samtidig/HjemmeSamtidig';
 import Hurtiglenker from './hurtiglenker/Hurtiglenker';
 import MediaQuery from 'react-responsive';
-import './omForeldrepenger.less';
 import Hjelp from './hjelp/Hjelp';
-import { Helmet } from 'react-helmet';
+import HeaderInformasjon from '../../components/header-informasjon/HeaderInformasjon';
+import './omForeldrepenger.less';
 
 const cls = BEMHelper('infosider');
 
@@ -37,24 +37,24 @@ const sections = [
     'adoptere'
 ];
 
+const OmForeldrepengerHeader = () => {
+    return (
+        <HeaderInformasjon
+            title={'Om foreldrepenger - wwww.nav.no'}
+            siteDescription={"finn ut hva du har rett til av foreldrepenger"}
+            propTitle={"om foreldrepenger"}
+            propDescription={"finn ut hva du har rett til av foreldrepenger"}
+            imageUrl={"/dist/assets/tmp_omForeldrepenger.png"}
+            siteUrl={"https://familie.nav.no/om-foreldrepenger"}
+            imageLargeUrl={"/dist/assets/tmp_omForeldrepenger-large.png"}
+        />
+    );
+};
+
 const OmForeldrepenger: React.StatelessComponent<Props & IntlProps> = ({ location, lang }) => {
     return (
-        <div>
-            <Helmet>
-                <title>Om foreldrepenger - wwww.nav.no</title>
-                <meta charSet="utf-8" />
-                <meta name="description" content="finn ut hva du har rett til av foreldrepenger" />
-
-                <meta property="og:title" content="om foreldrepenger" />
-                <meta
-                    property="og:description"
-                    content="finn ut hva du har rett til av foreldrepenger"
-                />
-                <meta property="og:image" content="/dist/assets/tmp_omForeldrepenger.png" />
-                <meta property="og:url" content="https://familie.nav.no/om-foreldrepenger" />
-                <meta name="twitter:card" content="/dist/assets/tmp_omForeldrepenger-large.png" />
-            </Helmet>
             <div className={cls.className}>
+                <OmForeldrepengerHeader/>
                 <Sidebanner text={getTranslation('om_foreldrepenger.tittel', lang)} />
                 <main className={cls.element('body')}>
                     <article className={cls.element('content')}>
@@ -76,7 +76,6 @@ const OmForeldrepenger: React.StatelessComponent<Props & IntlProps> = ({ locatio
                     </article>
                 </main>
             </div>
-        </div>
     );
 };
 

@@ -1,147 +1,62 @@
 @import '../../../../styles/index.less';
 
 .informasjonsfaner {
-    margin: 0 -1rem;
     font-family: 'Source Sans Pro', sans-serif;
     color: #3e3832;
 
     &__header {
-        background-color: #fbfbfb;
-        line-height: 1.38;
-        padding: 2rem 0 1.5rem 2rem;
-        font-weight: bold;
-        margin-bottom: -0.25rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 2rem;
     }
 
     .nav-frontend-tabs {
-        border-bottom: none;
-
-        &__tab-label {
-            padding-bottom: 0;
-        }
-
-        &__tab-list {
-            background-color: #fbfbfb;
-            height: 100px;
-        }
-
         &__tab-outer {
-            height: 100px;
             width: 100%;
-            justify-content: center;
-            border-bottom: none;
-            margin: 0 0 0 0;
-            background-color: white;
         }
 
         &__tab-inner {
+            margin: 0 auto;
+
             &:focus {
-                .buttonFocusInset();
-            }
-
-            &--interaktiv {
-                border: solid 0.5px #d9d9d9;
-                border-radius: 0;
-                width: 100%;
-                top: 1px;
-                justify-content: center;
-            }
-
-            &--aktiv {
-                background-color: #fbfbfb;
-                width: 100%;
-                height: 100%;
-                justify-content: center;
-                border-radius: 0;
-                top: 0;
-                border: none;
-                border-top: solid 0.5px transparent;
+                .buttonFocus();
             }
         }
     }
 
-    .InformasjonsfanerBody {
+    .informasjonsfanerBody {
         background-color: #fbfbfb;
+        padding: 1rem;
+        margin: 1rem -1rem;
         width: inherit;
-    }
-
-    .nav-frontend-tabs__tab-inner {
-        padding-left: 0;
-        padding-right: 0;
-    }
-
-    .InformasjonsfanerBody {
-        background-color: #fbfbfb;
-        padding: 2rem;
-
-        &__header {
-            display: -webkit-flex;
-            display: flex;
-            flex-direction: row;
-            margin-top: 20px;
-            align-items: center;
-        }
-
-        &__tid {
-            display: -webkit-flex;
-            display: flex;
-            flex-direction: column;
-            font-weight: 900;
-            width: 4rem;
-            padding-top: 17.5px;
-            text-align: center;
-        }
-
-        &__Icon {
-            display: -webkit-flex;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-left: 1rem;
-        }
 
         &__bodyTxt {
-            padding-top: 2rem;
+            margin-top: 1rem;
         }
 
-        &__antallUker {
-            align-self: center;
-            font-size: 1.5rem;
-            height: 2rem;
-            color: #3e3832;
+        li {
+            font-size: 0.75rem;
+            margin-top: 0.25rem;
         }
 
-        &__uker {
-            height: 18px;
-            font-size: 14px;
-            font-weight: bold;
-            text-align: center;
+        ul {
+            margin: 0.5rem;
         }
 
-        &__label {
-            width: 58px;
-            height: 18px;
-            font-size: 0.875rem;
-            font-weight: bold;
-            text-align: center;
-            margin-top: 7px;
-        }
+        .nav-veileder {
+            &__snakkeboble {
+                padding: 0.5rem 1.25rem;
+            }
 
-        &__liste {
-            font-weight: 600;
-        }
-    }
+            &__frame {
+                background-color: @lavender;
+            }
 
-    .nav-frontend-tabs {
-        border-bottom: none;
-
-        &__tab-outer,
-        &__tab-label {
-            overflow: hidden;
-        }
-
-        .fanelabel__label {
-            .containText();
+            .foreldrepar {
+                transform: scale(2);
+                margin-top: 1.4rem;
+            }
         }
     }
 
@@ -152,9 +67,14 @@
             margin-top: 2rem;
         }
 
-        .nav-frontend-tabs__tab-inner {
-            padding-left: 1rem;
-            padding-right: 1rem;
+        .informasjonsfanerBody {
+            padding: 2rem;
+            margin-left: 0;
+            margin-right: 0;
+
+            .veilederposisjon {
+                display: flex;
+            }
         }
     }
 }

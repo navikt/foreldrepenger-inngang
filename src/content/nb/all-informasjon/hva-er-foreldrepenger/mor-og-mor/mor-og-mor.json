@@ -10,17 +10,5 @@
             }
         ],
         "markDefs": []
-    },
-    {
-        "type": "avsnitt",
-        "style": "normaltekst",
-        "children": [
-            {
-                "type": "span",
-                "text": "Hvor mange barn dere venter og om dere tar 100 eller 80 prosent foreldrepenger, bestemmer hvor mange uker dere kan få. Den totale utbetalingen blir høyere ved å velge 100 prosent. ",
-                "marks": []
-            }
-        ],
-        "markDefs": []
     }
 ]

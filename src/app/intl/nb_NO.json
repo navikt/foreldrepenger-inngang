@@ -3,8 +3,8 @@
     "adopsjon": "Adopsjon",
     "aleneomsorg": "Aleneomsorg",
     "arbeidsgiver": "Arbeidsgiver",
-    "bareFarHarRett": "Bare far har rett",
-    "bareMorHarRett": "Bare mor har rett",
+    "bareFarHarRett": "Bare far\nhar rett",
+    "bareMorHarRett": "Bare mor\nhar rett",
     "beregning": "Beregning",
     "engangsstønad": "Engangsstønad",
     "ett_barn": "Ett barn",
@@ -44,6 +44,7 @@
     "route.om-foreldrepenger": "Om foreldrepenger",
     "route.om-engangsstonad": "Om engangsstønad",
     "route.foreldrepenger": "Foreldrepenger",
+    "route.svangerskapspenger": "Svangerskapspenger",
     "route.viktige-frister": "Viktige frister",
     "route.blindside": "Uferdig side!",
 
@@ -96,7 +97,7 @@
     "søk_foreldrepenger.knappMobil": "Begynn søknad",
     "søk_foreldrepenger.advarselmelding": "Du søker tidligere enn 6 uker før du skal ta ut foreldrepenger. Du kan begynne på søknaden, men det vil ikke være mulig å sende den inn før ",
     "søk_foreldrepenger.første_dag_spørsmål": "Når er første dag med foreldrepenger eller utsettelse?",
-
+    "søk_svangerskapspenger.tittel": "Søk svangerskapspenger",
     
     "hurtiglenke.hvem_kan_fa_foreldrepenger": "Hvem kan få foreldrepenger?",
     "hurtiglenke.hvor_lenge_kan_jeg_fa_foreldrepenger": "Hvor lenge kan jeg få foreldrepenger?",
@@ -128,6 +129,9 @@
     "om_foreldrepenger.hvor_lenge.fordeling.alenefar": "Som far",
     "om_foreldrepenger.hvor_lenge.fordeling.første_fedrekvote": "Far 1",
     "om_foreldrepenger.hvor_lenge.fordeling.andre_fedrekvote": "Far 2",
+    "om_foreldrepenger.hvor_lenge.fordeling.krav.ingen_krav": "Ingen krav til aktivitet",
+    "om_foreldrepenger.hvor_lenge.fordeling.krav.kan_ikke_overtas_av": "Kan ikke overtas av",
+    "om_foreldrepenger.hvor_lenge.fordeling.krav.aktivitetskrav_til": "Aktivitetskrav til",
     
     "om_foreldrepenger.ferie.tittel": "Ta ut ferie",
     "om_foreldrepenger.ferie.eksempel_label": "Eksempel på hvordan du kan forlenge foreldrepengeperioden din når du utsetter:",
@@ -179,7 +183,7 @@
     "om_foreldrepenger.beregning.tittel": "Hva kan jeg få?",
     "om_foreldrepenger.beregning.arbeidstaker":"Arbeidstaker eller frilanser",
     "om_foreldrepenger.beregning.selvstendig":"Selvstendig næringsdrivende",
-    "om_foreldrepenger.beregning.harYtelse":"Har ytelser fra NAV",
+    "om_foreldrepenger.beregning.harYtelse":"Har ytelser\nfra NAV",
     "om_foreldrepenger.beregning.andreInntektskilder":"Andre inntektskilder",
 
     "om_foreldrepenger.hjelp.tittel": "Fant du ikke det du lette etter?",

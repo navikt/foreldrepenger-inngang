@@ -7,7 +7,7 @@ import BEMHelper from '../../utils/bem';
 import StrukturertTekst from '../../components/strukturert-tekst/StrukturertTekst';
 import { getContent } from '../../utils/getContent';
 import LesMer from '../../components/les-mer/LesMer';
-import Helmet from 'react-helmet';
+import HeaderInformasjon from '../../components/header-informasjon/HeaderInformasjon';
 
 // getTranslation strings
 const viktigefristerTittel = 'viktige_frister.nar_kan_du_soke';
@@ -43,79 +43,76 @@ const pageSvg = require('./../../assets/ark/ark-viktige-frister.svg').default;
 
 const ViktigeFrister: React.StatelessComponent<Props & IntlProps> = ({ location, lang }) => {
     return (
-        <div>
-            <Helmet>
-                <title>Viktige frister - www.nav.no</title>
-                <meta charSet="utf-8" />
-                <meta name="description" content="Viktige frister angående foreldrepenger" />
+        <div className={infosiderCls.className}>
+            <ViktigeFristerHeader/>
+            <Sidebanner text={getTranslation('viktige_frister.banner', lang)} />
+            <div className={infosiderCls.element('body')}>
+                <div className={infosiderCls.element('content')}>
+                    <Breadcrumbs path={location.pathname} />
+                    <PanelMedIllustrasjon
+                        title={getTranslation('viktige_frister.header', lang)}
+                        svg={pageSvg}>
+                        <StrukturertTekst tekst={getContent(ingress, lang)} />
 
-                <meta property="og:title" content="nav.no Viktige-frister" />
-                <meta property="og:description" content="Viktige frister angående foreldrepenger" />
-                <meta property="og:image" content="/dist/assets/tmp_viktigeFrister.png" />
-                <meta property="og:url" content="https://familie.nav.no/viktige-frister" />
-                <meta name="twitter:card" content="/dist/assets/tmp_viktigeFrister .png" />
-            </Helmet>
-            <div className={infosiderCls.className}>
-                <Sidebanner text={getTranslation('viktige_frister.banner', lang)} />
-                <div className={infosiderCls.element('body')}>
-                    <div className={infosiderCls.element('content')}>
-                        <Breadcrumbs path={location.pathname} />
-                        <PanelMedIllustrasjon
-                            title={getTranslation('viktige_frister.header', lang)}
-                            svg={pageSvg}>
-                            <StrukturertTekst tekst={getContent(ingress, lang)} />
+                        <LesMer intro={getTranslation(viktigefristerTittel, lang)}>
+                            <StrukturertTekst tekst={getContent(viktigefristerInnhold, lang)} />
+                        </LesMer>
 
-                            <LesMer intro={getTranslation(viktigefristerTittel, lang)}>
-                                <StrukturertTekst tekst={getContent(viktigefristerInnhold, lang)} />
-                            </LesMer>
+                        <LesMer intro={getTranslation(hvisSokerSentTittel, lang)}>
+                            <StrukturertTekst tekst={getContent(hvisSokerSentInnhold, lang)} />
+                        </LesMer>
 
-                            <LesMer intro={getTranslation(hvisSokerSentTittel, lang)}>
-                                <StrukturertTekst tekst={getContent(hvisSokerSentInnhold, lang)} />
-                            </LesMer>
+                        <LesMer intro={getTranslation(sokefristKvoteTittel, lang)}>
+                            <StrukturertTekst tekst={getContent(sokefristKvoteInnhold, lang)} />
+                        </LesMer>
 
-                            <LesMer intro={getTranslation(sokefristKvoteTittel, lang)}>
-                                <StrukturertTekst tekst={getContent(sokefristKvoteInnhold, lang)} />
-                            </LesMer>
+                        <LesMer
+                            intro={getTranslation(
+                                'viktige_frister.søkefrist_bare_far_eller_medmor_har_rett',
+                                lang
+                            )}>
+                            <StrukturertTekst
+                                tekst={getContent(søkefristBareFarEllerMedmorHarRettInnhold, lang)}
+                            />
+                        </LesMer>
 
-                            <LesMer
-                                intro={getTranslation(
-                                    'viktige_frister.søkefrist_bare_far_eller_medmor_har_rett',
-                                    lang
-                                )}>
-                                <StrukturertTekst
-                                    tekst={getContent(
-                                        søkefristBareFarEllerMedmorHarRettInnhold,
-                                        lang
-                                    )}
-                                />
-                            </LesMer>
+                        <LesMer intro={getTranslation(sokefristFerieTittel, lang)}>
+                            <StrukturertTekst tekst={getContent(sokefristFerieInnhold, lang)} />
+                        </LesMer>
 
-                            <LesMer intro={getTranslation(sokefristFerieTittel, lang)}>
-                                <StrukturertTekst tekst={getContent(sokefristFerieInnhold, lang)} />
-                            </LesMer>
+                        <LesMer intro={getTranslation(sokefristKombiTittel, lang)}>
+                            <StrukturertTekst tekst={getContent(sokefristKombiInnhold, lang)} />
+                        </LesMer>
 
-                            <LesMer intro={getTranslation(sokefristKombiTittel, lang)}>
-                                <StrukturertTekst tekst={getContent(sokefristKombiInnhold, lang)} />
-                            </LesMer>
+                        <StrukturertTekst tekst={getContent(ingressTo, lang)} />
 
-                            <StrukturertTekst tekst={getContent(ingressTo, lang)} />
+                        <LesMer intro={getTranslation(harInntektJobbTittel, lang)}>
+                            <StrukturertTekst tekst={getContent(harInntektJobbInnhold, lang)} />
+                        </LesMer>
 
-                            <LesMer intro={getTranslation(harInntektJobbTittel, lang)}>
-                                <StrukturertTekst tekst={getContent(harInntektJobbInnhold, lang)} />
-                            </LesMer>
+                        <StrukturertTekst tekst={getContent(ingressTre, lang)} />
 
-                            <StrukturertTekst tekst={getContent(ingressTre, lang)} />
-
-                            <LesMer intro={getTranslation(dokPaTermindatoTittel, lang)}>
-                                <StrukturertTekst
-                                    tekst={getContent(dokPaTermindatoInnhold, lang)}
-                                />
-                            </LesMer>
-                        </PanelMedIllustrasjon>
-                    </div>
+                        <LesMer intro={getTranslation(dokPaTermindatoTittel, lang)}>
+                            <StrukturertTekst tekst={getContent(dokPaTermindatoInnhold, lang)} />
+                        </LesMer>
+                    </PanelMedIllustrasjon>
                 </div>
             </div>
         </div>
+    );
+};
+
+const ViktigeFristerHeader = () => {
+    return (
+        <HeaderInformasjon
+            title={'Viktige frister - www.nav.no'}
+            siteDescription={'Viktige frister angående foreldrepenger'}
+            propTitle={'nav.no Viktige-frister'}
+            propDescription={'Viktige frister angående foreldrepenger'}
+            imageUrl={'/dist/assets/tmp_viktigeFrister.png'}
+            siteUrl={'https://familie.nav.no/viktige-frister'}
+            imageLargeUrl={'/dist/assets/tmp_viktigeFrister .png'}
+        />
     );
 };
 

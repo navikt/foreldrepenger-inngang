@@ -3,6 +3,7 @@ import { Route, Redirect, Switch, withRouter } from 'react-router-dom';
 import Informasjonstavle from './pages/informasjonstavle/Informasjonstavle';
 import HvaSøkerDu from './pages/hva-søker-du/HvaSøkerDu';
 import SøkForeldrepenger from './pages/søk-foreldrepenger/SøkForeldrepenger';
+import SøkSvangerskapspenger from './pages/søk-svangerskapspenger/SøkSvangerskapspenger';
 import OmForeldrepenger from './pages/om-foreldrepenger/OmForeldrepenger';
 import OmEngangsstønad from './pages/om-engangsstønad/OmEngangsstønad';
 import Blindside from './pages/blindside/Blindside';
@@ -17,6 +18,12 @@ const Router = () => (
             path="/hva-soker-du/foreldrepenger"
             component={SøkForeldrepenger}
             key="foreldrepenger"
+        />
+        <Route
+            exact={true}
+            path="/hva-soker-du/svangerskapspenger"
+            component={SøkSvangerskapspenger}
+            key="svangerskapspenger"
         />
         <Route
             exact={true}

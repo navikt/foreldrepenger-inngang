@@ -5,6 +5,7 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = merge(common, {
     mode: 'production',
@@ -34,6 +35,9 @@ module.exports = merge(common, {
         }
     },
     plugins: [
+        new CleanWebpackPlugin(['dist'], {
+            root: `${__dirname}/../../../`
+        }),
         new HtmlWebpackPlugin({
             template: `${__dirname}/../../app/index.html`,
             inject: 'body'

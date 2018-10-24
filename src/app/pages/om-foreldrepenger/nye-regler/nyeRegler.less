@@ -55,6 +55,12 @@
         }
     }
 
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+        &__content > output {
+            max-width: 100%;
+        }
+    }
+
     @media (min-width: @mobile-breakpoint) {
         flex-direction: row;
         align-items: flex-start;
@@ -79,8 +85,7 @@
             }
         }
 
-        @media screen and (-ms-high-contrast: active),
-            (-ms-high-contrast: none) {
+        @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
             .typo-normal {
                 max-width: 100%;
             }

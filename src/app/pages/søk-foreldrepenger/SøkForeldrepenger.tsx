@@ -12,12 +12,12 @@ import Datovelger from './Datovelger';
 import externalUrls from '../../utils/externalUrls';
 import MediaQuery from 'react-responsive';
 import Sidebanner from 'app/components/sidebanner/Sidebanner';
-
-import './søkForeldrepenger.less';
 import StrukturertTekst from 'app/components/strukturert-tekst/StrukturertTekst';
 import { getContent } from 'app/utils/getContent';
 import NAVLAB from 'app/utils/navlab';
-import Helmet from 'react-helmet';
+import HeaderInformasjon from '../../components/header-informasjon/HeaderInformasjon';
+import './søkForeldrepenger.less';
+
 
 const hvaSøkerDuCls = BEMHelper('hvaSøkerDu');
 const foreldrepengerCls = BEMHelper('søkForeldrepenger');
@@ -46,87 +46,77 @@ class SøkForeldrepenger extends Component<Props & IntlProps> {
 
     render = () => {
         return (
-            <div>
-                <Helmet>
-                    <title>foreldrepenger - www.nav.no</title>
-                    <meta charSet="utf-8" />
-                    <meta name="description" content="nav.no Søk om foreldrepenger" />
-                    <meta property="og:title" content="nav.no foreldrepenger" />
-                    <meta property="og:description" content="nav.no Søk om foreldrepenger" />
-                    <meta
-                        property="og:image"
-                        content="/dist/assets/tmp_hva-soker-du/sokForeldrepenger.png"
-                    />
-                    <meta
-                        property="og:url"
-                        content="https://familie.nav.no/hva-soker-du/foreldrepenger"
-                    />
-                    <meta
-                        name="twitter:card"
-                        content="/dist/assets/tmp_hva-soker-du/sokForeldrepenger-large.png"
-                    />
-                    content="/dist/assets/tmp_hva-soker-du/foreldrepenger-large.png" />
-                </Helmet>
-                <div className={classnames(hvaSøkerDuCls.className, foreldrepengerCls.className)}>
-                    <Sidebanner
-                        text={getTranslation('søk_foreldrepenger.tittel', this.props.lang)}
-                    />
-                    <main className={hvaSøkerDuCls.element('body')}>
-                        <div className={hvaSøkerDuCls.element('content')}>
-                            <Breadcrumbs path={location.pathname} />
-                            <SvgBanner />
-                            <PanelMedTittel
-                                title={getTranslation('foreldrepenger', this.props.lang)}>
-                                <StrukturertTekst
-                                    tekst={getContent(
-                                        'hva-vil-du-søke-om/søk-foreldrepenger',
-                                        this.props.lang
-                                    )}
-                                />
-                                <Datovelger
-                                    date={this.state.selectedDate}
-                                    dateIsValid={this.state.selectedDate && this.state.dateIsValid}
-                                    onChange={(date: Date) => this.setDate(date)}
-                                    parentCls={foreldrepengerCls}
-                                />
-                                {this.state.selectedDate &&
-                                    !this.state.dateIsValid && (
-                                        <VeilederMessage
-                                            parentCls={foreldrepengerCls}
-                                            selectedDate={this.state.selectedDate}
-                                        />
-                                    )}
-                                {this.state.selectedDate && (
-                                    <a
-                                        tabIndex={-1}
-                                        href={
-                                            NAVLAB
-                                                ? '/under-arbeid'
-                                                : externalUrls.søk_foreldrepenger_eller_engangsstønad
-                                        }>
-                                        <KnappBase type="hoved" role="link">
-                                            <MediaQuery query="(max-width: 575px)">
-                                                {getTranslation(
-                                                    'søk_foreldrepenger.knappMobil',
-                                                    this.props.lang
-                                                )}
-                                            </MediaQuery>
-                                            <MediaQuery query="(min-width: 576px)">
-                                                {getTranslation(
-                                                    'søk_foreldrepenger.knapp',
-                                                    this.props.lang
-                                                )}
-                                            </MediaQuery>
-                                        </KnappBase>
-                                    </a>
+            <div className={classnames(hvaSøkerDuCls.className, foreldrepengerCls.className)}>
+                <SøkForeldrepengerHeader />
+                <Sidebanner text={getTranslation('hva_søker_du.tittel', this.props.lang)} />
+                <main className={hvaSøkerDuCls.element('body')}>
+                    <div className={hvaSøkerDuCls.element('content')}>
+                        <Breadcrumbs path={location.pathname} />
+                        <SvgBanner />
+                        <PanelMedTittel title={getTranslation('foreldrepenger', this.props.lang)}>
+                            <StrukturertTekst
+                                tekst={getContent(
+                                    'hva-vil-du-søke-om/søk-foreldrepenger',
+                                    this.props.lang
                                 )}
-                            </PanelMedTittel>
-                        </div>
-                    </main>
-                </div>
+                            />
+                            <Datovelger
+                                date={this.state.selectedDate}
+                                dateIsValid={this.state.selectedDate && this.state.dateIsValid}
+                                onChange={(date: Date) => this.setDate(date)}
+                                parentCls={foreldrepengerCls}
+                            />
+                            {this.state.selectedDate &&
+                                !this.state.dateIsValid && (
+                                    <VeilederMessage
+                                        parentCls={foreldrepengerCls}
+                                        selectedDate={this.state.selectedDate}
+                                    />
+                                )}
+                            {this.state.selectedDate && (
+                                <a
+                                    tabIndex={-1}
+                                    href={
+                                        NAVLAB
+                                            ? '/under-arbeid'
+                                            : externalUrls.søk_foreldrepenger_eller_engangsstønad
+                                    }>
+                                    <KnappBase type="hoved" role="link">
+                                        <MediaQuery query="(max-width: 575px)">
+                                            {getTranslation(
+                                                'søk_foreldrepenger.knappMobil',
+                                                this.props.lang
+                                            )}
+                                        </MediaQuery>
+                                        <MediaQuery query="(min-width: 576px)">
+                                            {getTranslation(
+                                                'søk_foreldrepenger.knapp',
+                                                this.props.lang
+                                            )}
+                                        </MediaQuery>
+                                    </KnappBase>
+                                </a>
+                            )}
+                        </PanelMedTittel>
+                    </div>
+                </main>
             </div>
         );
     };
 }
+
+const SøkForeldrepengerHeader = () => {
+    return (
+        <HeaderInformasjon
+            title={'foreldrepenger - www.nav.no'}
+            siteDescription={'nav.no Søk om foreldrepenger'}
+            propTitle={'nav.no foreldrepenger'}
+            propDescription={'nav.no Søk om foreldrepenger'}
+            imageUrl={'/dist/assets/tmp_hva-soker-du/sokForeldrepenger.png'}
+            siteUrl={'https://familie.nav.no/hva-soker-du/foreldrepenger'}
+            imageLargeUrl={'/dist/assets/tmp_hva-soker-du/sokForeldrepenger-large.png'}
+        />
+    );
+};
 
 export default withIntl(SøkForeldrepenger);

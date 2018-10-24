@@ -1,13 +1,11 @@
 import React, { ReactNode } from 'react';
 import Tabs from 'nav-frontend-tabs';
 import BEMHelper from '../../../../utils/bem';
-import InformasjonsFanerLabel from './InformasjonsFanerLabel';
-import InformasjonsFanerBody from './InformasjonFanerBody';
-import CakeSvg from './CakeSvg';
-import CakeFellesSvg from './CakeFellesSvg';
+import InformasjonsfanerBody from './InformasjonsfanerBody';
 
 import './informasjonsfaner.less';
 import { getTranslation, IntlProps, withIntl } from '../../../../intl/intl';
+import TypografiBase from 'nav-frontend-typografi';
 
 const cls = BEMHelper('informasjonsfaner');
 
@@ -54,35 +52,28 @@ class Informasjonsfaner extends React.Component<Props> {
     render = () => (
         <div className={cls.className}>
             <div className={cls.element('header')}>
-                {this.props.tabs.length > 1
-                    ? getTranslation(
-                          'om_foreldrepenger.hvor_lenge.fordeling.tittel',
-                          this.props.lang
-                      )
-                    : getTranslation(
-                          'om_foreldrepenger.hvor_lenge.fordeling.tittel_alene',
-                          this.props.lang
-                      )}
+                <TypografiBase type="element">
+                    {this.props.tabs.length > 1
+                        ? getTranslation(
+                              'om_foreldrepenger.hvor_lenge.fordeling.tittel',
+                              this.props.lang
+                          )
+                        : getTranslation(
+                              'om_foreldrepenger.hvor_lenge.fordeling.tittel_alene',
+                              this.props.lang
+                          )}
+                </TypografiBase>
             </div>
             {this.props.tabs.length > 1 && (
                 <Tabs
-                    tabs={this.props.tabs.map((tab, index) => {
-                        const Cake = tab.faneIcon ? CakeSvg : CakeFellesSvg;
-                        const color = index === this.state.currentTab ? '#3e3832' : '#0067c5';
-
-                        return {
-                            label: (
-                                <InformasjonsFanerLabel
-                                    label={tab.faneLabel}
-                                    icon={<Cake color={color} />}
-                                />
-                            )
-                        };
-                    })}
+                    kompakt={true}
+                    tabs={this.props.tabs.map((tab) => ({
+                        label: tab.faneLabel
+                    }))}
                     onChange={this.onTabChange}
                 />
             )}
-            <InformasjonsFanerBody {...this.props.tabs[this.state.currentTab].bodyProps} />
+            <InformasjonsfanerBody {...this.props.tabs[this.state.currentTab].bodyProps} />
         </div>
     );
 }

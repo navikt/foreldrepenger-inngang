@@ -2,21 +2,27 @@ import * as React from 'react';
 import Kalkulator from './kalkulator/Kalkulator';
 import Informasjonsfaner from './informasjons-faner/Informasjonsfaner';
 import StrukturertTekst from '../../../components/strukturert-tekst/StrukturertTekst';
-import { Language, withIntl } from '../../../intl/intl';
+import { Language, withIntl, getTranslation } from '../../../intl/intl';
 import { getContent } from '../../../utils/getContent';
 
 const content = 'all-informasjon/hva-er-foreldrepenger/bare-far-har-rett/bare-far-har-rett';
+const content2 = 'all-informasjon/hva-er-foreldrepenger/bare-far-har-rett/bare-far-har-rett-del2';
 const farsDel = 'all-informasjon/hva-er-foreldrepenger/bare-far-har-rett/fars-del';
 
 const getInformasjonsfaner = (lang: Language) => [
     {
-        faneLabel: 'Fars del',
+        faneLabel: getTranslation('om_foreldrepenger.hvor_lenge.fordeling.fedrekvote', lang),
         faneIcon: true,
         bodyProps: {
             tittel: 'til far',
             icon: 'far3',
             antallUker: '40/50',
-            punktliste: ['Aktivitetskrav til mor'],
+            punktliste: [
+                `${getTranslation(
+                    'om_foreldrepenger.hvor_lenge.fordeling.krav.aktivitetskrav_til',
+                    lang
+                )} mor`
+            ],
             component: <StrukturertTekst tekst={getContent(farsDel, lang)} />
         }
     }
@@ -26,8 +32,9 @@ const BareFarHarRett = ({ lang }: { lang: Language }) => {
     return (
         <div>
             <StrukturertTekst tekst={getContent(content, lang)} />
-            <Kalkulator />
             <Informasjonsfaner tabs={getInformasjonsfaner(lang)} />
+            <StrukturertTekst tekst={getContent(content2, lang)} />
+            <Kalkulator />
         </div>
     );
 };
