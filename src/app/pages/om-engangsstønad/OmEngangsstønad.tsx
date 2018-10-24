@@ -10,6 +10,7 @@ import { getContent } from '../../utils/getContent';
 import '../infosider.less';
 import './omEngangsstønad.less';
 import CustomSVGFromSprite from '../../utils/CustomSVG';
+import Helmet from "react-helmet";
 
 const infosiderCls = BEMHelper('infosider');
 const cls = BEMHelper('omEngangsstønad');
@@ -30,15 +31,28 @@ const utbetalingShortContent = 'om-engangsstønad/hva-er-engangsstønad/krav2';
 
 const OmEngangsstonad: React.StatelessComponent<Props & IntlProps> = ({ location, lang }) => {
     return (
-        <div className={infosiderCls.className}>
-            <Sidebanner text={getTranslation('om_engangsstønad.tittel', lang)} />
-            <div className={infosiderCls.element('body')}>
-                <div className={infosiderCls.element('content')}>
-                    <Breadcrumbs path={location.pathname} />
-                    <HvaErEngangsstønad />
-                    <HvaKanDuFå />
-                    <NårBlirPengeneUtbetalt />
-                    <EngangsstønadTilFar />
+        <div>
+            <Helmet>
+                <title>Om engangsstønad - www.nav.no</title>
+                <meta charSet="utf-8" />
+                <meta name="description" content="Vilkår og informasjon rundt engangsstønad" />
+
+                <meta property="og:title" content="nav.no engangstønad-informasjon"/>
+                <meta property="og:description" content="Vilkår og informasjon rundt engangsstønad"/>
+                <meta property="og:image" content="/dist/assets/tmp_omEngangsstonad.png" />
+                <meta property="og:url" content="https://familie.nav.no/om-engangsstonad" />
+                <meta name="twitter:card" content="/dist/assets/tmp_tmp_omEngangsstonad.png" />
+            </Helmet>
+            <div className={infosiderCls.className}>
+                <Sidebanner text={getTranslation('om_engangsstønad.tittel', lang)} />
+                <div className={infosiderCls.element('body')}>
+                    <div className={infosiderCls.element('content')}>
+                        <Breadcrumbs path={location.pathname} />
+                        <HvaErEngangsstønad />
+                        <HvaKanDuFå />
+                        <NårBlirPengeneUtbetalt />
+                        <EngangsstønadTilFar />
+                    </div>
                 </div>
             </div>
         </div>

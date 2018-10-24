@@ -1,6 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
@@ -51,7 +52,8 @@ const webpackConfig = {
         new CaseSensitivePathsPlugin(),
         new SpriteLoaderPlugin({
             plainSprite: true
-        })
+        }),
+        new CopyWebpackPlugin([{from: path.resolve(__dirname, './../../../static/images'), to: './assets'}])
     ]
 };
 

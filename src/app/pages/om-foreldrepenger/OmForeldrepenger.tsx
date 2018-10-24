@@ -17,6 +17,7 @@ import Hurtiglenker from './hurtiglenker/Hurtiglenker';
 import MediaQuery from 'react-responsive';
 import './omForeldrepenger.less';
 import Hjelp from './hjelp/Hjelp';
+import { Helmet } from 'react-helmet';
 
 const cls = BEMHelper('infosider');
 
@@ -38,27 +39,43 @@ const sections = [
 
 const OmForeldrepenger: React.StatelessComponent<Props & IntlProps> = ({ location, lang }) => {
     return (
-        <div className={cls.className}>
-            <Sidebanner text={getTranslation('om_foreldrepenger.tittel', lang)} />
-            <main className={cls.element('body')}>
-                <article className={cls.element('content')}>
-                    <Breadcrumbs path={location.pathname} />
-                    <MediaQuery query="(min-width: 800px)">
-                        <Hurtiglenker links={sections} />
-                    </MediaQuery>
-                    <ForÅFåForeldrepenger id={sections[0]} />
-                    <HvaErForeldrepenger id={sections[1]} />
-                    <NyeRegler />
-                    <Beregning id={sections[2]} />
-                    <Ferie id={sections[3]} />
-                    <JegVilJobbe id={sections[4]} />
-                    <Sykdom id={sections[5]} />
-                    <HjemmeSamtidig id={sections[6]} />
-                    <JegHarHattInntekt id={sections[7]} />
-                    <Adopsjon id={sections[8]} />
-                    <Hjelp />
-                </article>
-            </main>
+        <div>
+            <Helmet>
+                <title>Om foreldrepenger - wwww.nav.no</title>
+                <meta charSet="utf-8" />
+                <meta name="description" content="finn ut hva du har rett til av foreldrepenger" />
+
+                <meta property="og:title" content="om foreldrepenger" />
+                <meta
+                    property="og:description"
+                    content="finn ut hva du har rett til av foreldrepenger"
+                />
+                <meta property="og:image" content="/dist/assets/tmp_omForeldrepenger.png" />
+                <meta property="og:url" content="https://familie.nav.no/om-foreldrepenger" />
+                <meta name="twitter:card" content="/dist/assets/tmp_omForeldrepenger-large.png" />
+            </Helmet>
+            <div className={cls.className}>
+                <Sidebanner text={getTranslation('om_foreldrepenger.tittel', lang)} />
+                <main className={cls.element('body')}>
+                    <article className={cls.element('content')}>
+                        <Breadcrumbs path={location.pathname} />
+                        <MediaQuery query="(min-width: 800px)">
+                            <Hurtiglenker links={sections} />
+                        </MediaQuery>
+                        <ForÅFåForeldrepenger id={sections[0]} />
+                        <HvaErForeldrepenger id={sections[1]} />
+                        <NyeRegler />
+                        <Beregning id={sections[2]} />
+                        <Ferie id={sections[3]} />
+                        <JegVilJobbe id={sections[4]} />
+                        <Sykdom id={sections[5]} />
+                        <HjemmeSamtidig id={sections[6]} />
+                        <JegHarHattInntekt id={sections[7]} />
+                        <Adopsjon id={sections[8]} />
+                        <Hjelp />
+                    </article>
+                </main>
+            </div>
         </div>
     );
 };
