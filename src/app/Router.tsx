@@ -9,10 +9,12 @@ import OmEngangsstønad from './pages/om-engangsstønad/OmEngangsstønad';
 import Blindside from './pages/blindside/Blindside';
 import ViktigeFrister from './pages/viktige-frister/ViktigeFrister';
 import NyeBeregningsregler from './pages/nye-beregningsregler/NyeBeregningsregler';
+import Planlegger from './pages/planlegger/Planlegger';
 
 const Router = () => (
     <Switch>
         <Route exact={true} path="/" component={Informasjonstavle} key="informasjonstavle" />
+        <Route exact={true} path="/planlegger" component={Planlegger} key="planlegger" />
         <Route exact={true} path="/hva-soker-du" component={HvaSøkerDu} key="hva-soker-du" />
         <Route
             exact={true}

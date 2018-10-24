@@ -40,6 +40,7 @@
 
 
     "route.": "Foreldrepenger, engangsstønad og svangerskapspenger",
+    "route.planlegger": "Hvor lenge kan du ha permisjon?",
     "route.hva-soker-du": "Hva vil du søke om",
     "route.om-foreldrepenger": "Om foreldrepenger",
     "route.om-engangsstonad": "Om engangsstønad",
@@ -63,6 +64,11 @@
     "informasjonstavle.mer_informasjon.engangsstønad": "Hvis du venter barn og ikke hatt inntekt det siste året, kan du få en engangssum istedenfor foreldrepenger.",
     "informasjonstavle.mer_informasjon.svangerskapspenger": "Hvis du er gravid men ikke kan fortsette å jobbe under svangerskapet, kan du ha rett til svangerskapspenger.",
 
+    "planlegger.tittel": "Hvor lenge kan du ha permisjon?",
+    "planlegger.beregning_tittel": "Beregning av foreldrepenger",
+    "planlegger.beregning_knapp": "Gå til kalkulatoren",
+    "planlegger.planlegger_tittel": "Foreldrepengeplanleggeren",
+    "planlegger.planlegger_knapp": "Gå til planleggeren",
 
     "viktige_frister.banner":"Viktige frister",
     "viktige_frister.header": "Husk å søke til rett tid",
