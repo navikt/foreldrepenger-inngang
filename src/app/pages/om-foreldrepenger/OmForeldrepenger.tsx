@@ -15,9 +15,9 @@ import Beregning from './beregning/Beregning';
 import HjemmeSamtidig from './hjemme-samtidig/HjemmeSamtidig';
 import Hurtiglenker from './hurtiglenker/Hurtiglenker';
 import MediaQuery from 'react-responsive';
-import Hjelp from './hjelp/Hjelp';
 import HeaderInformasjon from '../../components/header-informasjon/HeaderInformasjon';
 import './omForeldrepenger.less';
+import Hjelp from '../../components/hjelpe-seksjon/HjelpeSeksjon';
 
 const cls = BEMHelper('infosider');
 
@@ -41,41 +41,41 @@ const OmForeldrepengerHeader = () => {
     return (
         <HeaderInformasjon
             title={'Om foreldrepenger - wwww.nav.no'}
-            siteDescription={"finn ut hva du har rett til av foreldrepenger"}
-            propTitle={"om foreldrepenger"}
-            propDescription={"finn ut hva du har rett til av foreldrepenger"}
-            imageUrl={"/dist/assets/tmp_omForeldrepenger.png"}
-            siteUrl={"https://familie.nav.no/om-foreldrepenger"}
-            imageLargeUrl={"/dist/assets/tmp_omForeldrepenger-large.png"}
+            siteDescription={'finn ut hva du har rett til av foreldrepenger'}
+            propTitle={'om foreldrepenger'}
+            propDescription={'finn ut hva du har rett til av foreldrepenger'}
+            imageUrl={'/dist/assets/tmp_omForeldrepenger.png'}
+            siteUrl={'https://familie.nav.no/om-foreldrepenger'}
+            imageLargeUrl={'/dist/assets/tmp_omForeldrepenger-large.png'}
         />
     );
 };
 
 const OmForeldrepenger: React.StatelessComponent<Props & IntlProps> = ({ location, lang }) => {
     return (
-            <div className={cls.className}>
-                <OmForeldrepengerHeader/>
-                <Sidebanner text={getTranslation('om_foreldrepenger.tittel', lang)} />
-                <main className={cls.element('body')}>
-                    <article className={cls.element('content')}>
-                        <Breadcrumbs path={location.pathname} />
-                        <MediaQuery query="(min-width: 800px)">
-                            <Hurtiglenker links={sections} />
-                        </MediaQuery>
-                        <ForÅFåForeldrepenger id={sections[0]} />
-                        <HvaErForeldrepenger id={sections[1]} />
-                        <NyeRegler />
-                        <Beregning id={sections[2]} />
-                        <Ferie id={sections[3]} />
-                        <JegVilJobbe id={sections[4]} />
-                        <Sykdom id={sections[5]} />
-                        <HjemmeSamtidig id={sections[6]} />
-                        <JegHarHattInntekt id={sections[7]} />
-                        <Adopsjon id={sections[8]} />
-                        <Hjelp />
-                    </article>
-                </main>
-            </div>
+        <div className={cls.className}>
+            <OmForeldrepengerHeader />
+            <Sidebanner text={getTranslation('om_foreldrepenger.tittel', lang)} />
+            <main className={cls.element('body')}>
+                <article className={cls.element('content')}>
+                    <Breadcrumbs path={location.pathname} />
+                    <MediaQuery query="(min-width: 800px)">
+                        <Hurtiglenker links={sections} />
+                    </MediaQuery>
+                    <ForÅFåForeldrepenger id={sections[0]} />
+                    <HvaErForeldrepenger id={sections[1]} />
+                    <NyeRegler />
+                    <Beregning id={sections[2]} />
+                    <Ferie id={sections[3]} />
+                    <JegVilJobbe id={sections[4]} />
+                    <Sykdom id={sections[5]} />
+                    <HjemmeSamtidig id={sections[6]} />
+                    <JegHarHattInntekt id={sections[7]} />
+                    <Adopsjon id={sections[8]} />
+                    <Hjelp />
+                </article>
+            </main>
+        </div>
     );
 };
 

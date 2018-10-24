@@ -9,7 +9,10 @@ import { getContent } from '../../utils/getContent';
 import '../infosider.less';
 import './omEngangsstønad.less';
 import CustomSVGFromSprite from '../../utils/CustomSVG';
+
 import HeaderInformasjon from '../../components/header-informasjon/HeaderInformasjon';
+
+import Hjelp from '../../components/hjelpe-seksjon/HjelpeSeksjon';
 
 const infosiderCls = BEMHelper('infosider');
 const cls = BEMHelper('omEngangsstønad');
@@ -30,19 +33,20 @@ const utbetalingShortContent = 'om-engangsstønad/hva-er-engangsstønad/krav2';
 
 const OmEngangsstonad: React.StatelessComponent<Props & IntlProps> = ({ location, lang }) => {
     return (
-            <div className={infosiderCls.className}>
-                <OmEngangsstønadHeader/>
-                <Sidebanner text={getTranslation('om_engangsstønad.tittel', lang)} />
-                <div className={infosiderCls.element('body')}>
-                    <div className={infosiderCls.element('content')}>
-                        <Breadcrumbs path={location.pathname} />
-                        <HvaErEngangsstønad />
-                        <HvaKanDuFå />
-                        <NårBlirPengeneUtbetalt />
-                        <EngangsstønadTilFar />
-                    </div>
+        <div className={infosiderCls.className}>
+            <OmEngangsstønadHeader />
+            <Sidebanner text={getTranslation('om_engangsstønad.tittel', lang)} />
+            <div className={infosiderCls.element('body')}>
+                <div className={infosiderCls.element('content')}>
+                    <Breadcrumbs path={location.pathname} />
+                    <HvaErEngangsstønad />
+                    <HvaKanDuFå />
+                    <NårBlirPengeneUtbetalt />
+                    <EngangsstønadTilFar />
+                    <Hjelp />
                 </div>
             </div>
+        </div>
     );
 };
 
@@ -51,11 +55,11 @@ const OmEngangsstønadHeader = () => {
         <HeaderInformasjon
             title={'Om engangsstønad - www.nav.no'}
             siteDescription={'Vilkår og informasjon rundt engangsstønad'}
-            propTitle={"nav.no engangstønad-informasjon"}
-            propDescription={"Vilkår og informasjon rundt engangsstønad"}
-            imageUrl={"/dist/assets/tmp_omEngangsstonad.png"}
-            siteUrl={"https://familie.nav.no/om-engangsstonad"}
-            imageLargeUrl={"/dist/assets/tmp_tmp_omEngangsstonad.png"}
+            propTitle={'nav.no engangstønad-informasjon'}
+            propDescription={'Vilkår og informasjon rundt engangsstønad'}
+            imageUrl={'/dist/assets/tmp_omEngangsstonad.png'}
+            siteUrl={'https://familie.nav.no/om-engangsstonad'}
+            imageLargeUrl={'/dist/assets/tmp_tmp_omEngangsstonad.png'}
         />
     );
 };

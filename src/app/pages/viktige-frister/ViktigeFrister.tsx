@@ -44,7 +44,7 @@ const pageSvg = require('./../../assets/ark/ark-viktige-frister.svg').default;
 const ViktigeFrister: React.StatelessComponent<Props & IntlProps> = ({ location, lang }) => {
     return (
         <div className={infosiderCls.className}>
-            <ViktigeFristerHeader/>
+            <ViktigeFristerHeader />
             <Sidebanner text={getTranslation('viktige_frister.banner', lang)} />
             <div className={infosiderCls.element('body')}>
                 <div className={infosiderCls.element('content')}>

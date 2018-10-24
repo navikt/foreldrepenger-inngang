@@ -17,7 +17,7 @@ const cls = BEMHelper('informasjonstavle');
 const Informasjonstavle = () => {
     return (
         <div className={cls.className}>
-            <InformasjonstavleHeader/>
+            <InformasjonstavleHeader />
             <Header />
             <div className={cls.element('body')}>
                 <main className={cls.element('content')}>
@@ -34,7 +34,7 @@ const BildelenkerWithoutIntl: StatelessComponent<IntlProps> = ({ lang }) => {
     return (
         <nav className={cls.element('bildepaneler')}>
             <PanelMedBilde
-                svgName="jente-med-imac"
+                svgName="hender-sjekkliste"
                 title={getTranslation('informasjonstavle.hva_har_du_rett_på', lang)}
                 urlIsExternal={false}
                 url="/under-arbeid"
@@ -47,7 +47,7 @@ const BildelenkerWithoutIntl: StatelessComponent<IntlProps> = ({ lang }) => {
             </PanelMedBilde>
 
             <PanelMedBilde
-                svgName="permisjon-sjekkliste"
+                svgName="illustration"
                 title={getTranslation('informasjonstavle.hvor_lenge_kan_du_få_permisjon', lang)}
                 urlIsExternal={true}
                 bypassNavlab={true}
@@ -77,11 +77,11 @@ const InformasjonstavleHeader = () => {
         <HeaderInformasjon
             title={'Foreldrepengesidene - www.nav.no'}
             siteDescription={'Foreldrepengesidene til nav.no'}
-            propTitle={"Foreldrepengesidene til nav.no"}
-            propDescription={"Forsiden for foreldrepenger, engangsstønad og svangerskapspenger"}
-            imageUrl={"/dist/assets/tmp_forsiden.png"}
-            siteUrl={"https://familie.nav.no"}
-            imageLargeUrl={"/dist/assets/tmp_forsiden-large.png"}
+            propTitle={'Foreldrepengesidene til nav.no'}
+            propDescription={'Forsiden for foreldrepenger, engangsstønad og svangerskapspenger'}
+            imageUrl={'/dist/assets/tmp_forsiden.png'}
+            siteUrl={'https://familie.nav.no'}
+            imageLargeUrl={'/dist/assets/tmp_forsiden-large.png'}
         />
     );
 };
