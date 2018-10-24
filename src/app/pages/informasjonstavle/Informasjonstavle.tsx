@@ -3,20 +3,21 @@ import Tekstomrade from 'nav-frontend-tekstomrade';
 import { withIntl, IntlProps, getTranslation } from '../../intl/intl';
 import BEMHelper from '../../utils/bem';
 import externalUrls from '../../utils/externalUrls';
-
 import PanelMedBilde from '../../components/panel-med-bilde/PanelMedBilde';
 import Header from './header/Header';
 import MerInformasjon from './mer-informasjon/MerInformasjon';
 import AndreLenker from './andre-lenker/AndreLenker';
-import './informasjonstavle.less';
 import { StatelessComponent } from 'enzyme';
 import UnderProduksjon from './UnderProduksjon';
+import HeaderInformasjon from '../../components/header-informasjon/HeaderInformasjon';
+import './informasjonstavle.less';
 
 const cls = BEMHelper('informasjonstavle');
 
 const Informasjonstavle = () => {
     return (
         <div className={cls.className}>
+            <InformasjonstavleHeader />
             <Header />
             <div className={cls.element('body')}>
                 <main className={cls.element('content')}>
@@ -46,7 +47,7 @@ const BildelenkerWithoutIntl: StatelessComponent<IntlProps> = ({ lang }) => {
             </PanelMedBilde>
 
             <PanelMedBilde
-                svgName="permisjon-sjekkliste"
+                svgName="illustration"
                 title={getTranslation('informasjonstavle.hvor_lenge_kan_du_få_permisjon', lang)}
                 urlIsExternal={true}
                 bypassNavlab={true}
@@ -57,7 +58,7 @@ const BildelenkerWithoutIntl: StatelessComponent<IntlProps> = ({ lang }) => {
             </PanelMedBilde>
 
             <PanelMedBilde
-                svgName="illustration"
+                svgName="fylle-ut-søknad"
                 title={getTranslation('informasjonstavle.gå_rett_til_søknaden', lang)}
                 urlIsExternal={false}
                 url="/hva-soker-du"
@@ -68,6 +69,20 @@ const BildelenkerWithoutIntl: StatelessComponent<IntlProps> = ({ lang }) => {
                 </Tekstomrade>
             </PanelMedBilde>
         </nav>
+    );
+};
+
+const InformasjonstavleHeader = () => {
+    return (
+        <HeaderInformasjon
+            title={'Foreldrepengesidene - www.nav.no'}
+            siteDescription={'Foreldrepengesidene til nav.no'}
+            propTitle={'Foreldrepengesidene til nav.no'}
+            propDescription={'Forsiden for foreldrepenger, engangsstønad og svangerskapspenger'}
+            imageUrl={'/dist/assets/tmp_forsiden.png'}
+            siteUrl={'https://familie.nav.no'}
+            imageLargeUrl={'/dist/assets/tmp_forsiden-large.png'}
+        />
     );
 };
 

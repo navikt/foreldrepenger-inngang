@@ -1,3 +1,4 @@
+const path = require('path');
 const merge = require('webpack-merge');
 const common = require('./webpack.config.global.js');
 
@@ -6,6 +7,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = merge(common, {
     mode: 'production',
@@ -61,6 +63,9 @@ module.exports = merge(common, {
             disable: false,
             allChunks: true
         }),
-        new CompressionPlugin()
+        new CompressionPlugin(),
+        new CopyWebpackPlugin([
+            { from: path.resolve(__dirname, './../../../static/images'), to: './assets' }
+        ])
     ]
 });

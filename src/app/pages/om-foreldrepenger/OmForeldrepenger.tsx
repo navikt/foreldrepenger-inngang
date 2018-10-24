@@ -15,6 +15,7 @@ import Beregning from './beregning/Beregning';
 import HjemmeSamtidig from './hjemme-samtidig/HjemmeSamtidig';
 import Hurtiglenker from './hurtiglenker/Hurtiglenker';
 import MediaQuery from 'react-responsive';
+import HeaderInformasjon from '../../components/header-informasjon/HeaderInformasjon';
 import './omForeldrepenger.less';
 import Hjelp from '../../components/hjelpe-seksjon/HjelpeSeksjon';
 
@@ -36,9 +37,24 @@ const sections = [
     'adoptere'
 ];
 
+const OmForeldrepengerHeader = () => {
+    return (
+        <HeaderInformasjon
+            title={'Om foreldrepenger - wwww.nav.no'}
+            siteDescription={'finn ut hva du har rett til av foreldrepenger'}
+            propTitle={'om foreldrepenger'}
+            propDescription={'finn ut hva du har rett til av foreldrepenger'}
+            imageUrl={'/dist/assets/tmp_omForeldrepenger.png'}
+            siteUrl={'https://familie.nav.no/om-foreldrepenger'}
+            imageLargeUrl={'/dist/assets/tmp_omForeldrepenger-large.png'}
+        />
+    );
+};
+
 const OmForeldrepenger: React.StatelessComponent<Props & IntlProps> = ({ location, lang }) => {
     return (
         <div className={cls.className}>
+            <OmForeldrepengerHeader />
             <Sidebanner text={getTranslation('om_foreldrepenger.tittel', lang)} />
             <main className={cls.element('body')}>
                 <article className={cls.element('content')}>

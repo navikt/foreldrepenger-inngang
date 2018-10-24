@@ -7,6 +7,7 @@ import BEMHelper from '../../utils/bem';
 import StrukturertTekst from '../../components/strukturert-tekst/StrukturertTekst';
 import { getContent } from '../../utils/getContent';
 import LesMer from '../../components/les-mer/LesMer';
+import HeaderInformasjon from '../../components/header-informasjon/HeaderInformasjon';
 
 // getTranslation strings
 const viktigefristerTittel = 'viktige_frister.nar_kan_du_soke';
@@ -43,6 +44,7 @@ const pageSvg = require('./../../assets/ark/ark-viktige-frister.svg').default;
 const ViktigeFrister: React.StatelessComponent<Props & IntlProps> = ({ location, lang }) => {
     return (
         <div className={infosiderCls.className}>
+            <ViktigeFristerHeader />
             <Sidebanner text={getTranslation('viktige_frister.banner', lang)} />
             <div className={infosiderCls.element('body')}>
                 <div className={infosiderCls.element('content')}>
@@ -97,6 +99,20 @@ const ViktigeFrister: React.StatelessComponent<Props & IntlProps> = ({ location,
                 </div>
             </div>
         </div>
+    );
+};
+
+const ViktigeFristerHeader = () => {
+    return (
+        <HeaderInformasjon
+            title={'Viktige frister - www.nav.no'}
+            siteDescription={'Viktige frister angående foreldrepenger'}
+            propTitle={'nav.no Viktige-frister'}
+            propDescription={'Viktige frister angående foreldrepenger'}
+            imageUrl={'/dist/assets/tmp_viktigeFrister.png'}
+            siteUrl={'https://familie.nav.no/viktige-frister'}
+            imageLargeUrl={'/dist/assets/tmp_viktigeFrister .png'}
+        />
     );
 };
 

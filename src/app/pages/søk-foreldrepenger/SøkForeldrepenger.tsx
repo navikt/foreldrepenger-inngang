@@ -12,11 +12,12 @@ import Datovelger from './Datovelger';
 import externalUrls from '../../utils/externalUrls';
 import MediaQuery from 'react-responsive';
 import Sidebanner from 'app/components/sidebanner/Sidebanner';
-
-import './søkForeldrepenger.less';
 import StrukturertTekst from 'app/components/strukturert-tekst/StrukturertTekst';
 import { getContent } from 'app/utils/getContent';
 import NAVLAB from 'app/utils/navlab';
+import HeaderInformasjon from '../../components/header-informasjon/HeaderInformasjon';
+import './søkForeldrepenger.less';
+
 
 const hvaSøkerDuCls = BEMHelper('hvaSøkerDu');
 const foreldrepengerCls = BEMHelper('søkForeldrepenger');
@@ -46,6 +47,7 @@ class SøkForeldrepenger extends Component<Props & IntlProps> {
     render = () => {
         return (
             <div className={classnames(hvaSøkerDuCls.className, foreldrepengerCls.className)}>
+                <SøkForeldrepengerHeader />
                 <Sidebanner text={getTranslation('hva_søker_du.tittel', this.props.lang)} />
                 <main className={hvaSøkerDuCls.element('body')}>
                     <div className={hvaSøkerDuCls.element('content')}>
@@ -102,5 +104,19 @@ class SøkForeldrepenger extends Component<Props & IntlProps> {
         );
     };
 }
+
+const SøkForeldrepengerHeader = () => {
+    return (
+        <HeaderInformasjon
+            title={'foreldrepenger - www.nav.no'}
+            siteDescription={'nav.no Søk om foreldrepenger'}
+            propTitle={'nav.no foreldrepenger'}
+            propDescription={'nav.no Søk om foreldrepenger'}
+            imageUrl={'/dist/assets/tmp_hva-soker-du/sokForeldrepenger.png'}
+            siteUrl={'https://familie.nav.no/hva-soker-du/foreldrepenger'}
+            imageLargeUrl={'/dist/assets/tmp_hva-soker-du/sokForeldrepenger-large.png'}
+        />
+    );
+};
 
 export default withIntl(SøkForeldrepenger);
