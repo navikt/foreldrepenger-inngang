@@ -2,6 +2,7 @@ import * as React from 'react';
 import classnames from 'classnames';
 import TypografiBase from 'nav-frontend-typografi';
 import { BEMWrapper } from '../../../../../utils/bem';
+import { withIntl, Language } from 'app/intl/intl';
 
 const Prosentvalg = ({
     parentCls,
@@ -9,7 +10,8 @@ const Prosentvalg = ({
     percentage,
     onSelect,
     sum,
-    isSelected
+    isSelected,
+    lang
 }: {
     parentCls: BEMWrapper;
     grandParentCls: BEMWrapper;
@@ -17,6 +19,7 @@ const Prosentvalg = ({
     onSelect: (percentage: number) => void;
     sum: number;
     isSelected: boolean;
+    lang: Language;
 }) => {
     const combinedClassnames = classnames(
         grandParentCls.element('option'),
@@ -36,9 +39,9 @@ const Prosentvalg = ({
             onKeyPress={() => onSelect(percentage)}
             className={combinedClassnames}>
             <TypografiBase type="normaltekst">{`${percentage} %`}</TypografiBase>
-            <TypografiBase type="element">{`${sumToShow}`}</TypografiBase>
+            <TypografiBase type="element">{`${sumToShow.toLocaleString(lang)}`}</TypografiBase>
         </div>
     );
 };
 
-export default Prosentvalg;
+export default withIntl(Prosentvalg);
