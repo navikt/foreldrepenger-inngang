@@ -19,7 +19,7 @@
         "children": [
             {
                 "type": "span",
-                "text": "Den andre forelderen overtar foreldrepengeperioden",
+                "text": "Den andre forelderen kan overta foreldrepengeperioden til den som er syk",
                 "marks": []
             }
         ]
@@ -32,7 +32,7 @@
         "children": [
             {
                 "type": "span",
-                "text": "Den som er syk utsetter perioden sin med foreldrepenger",
+                "text": "Den som er syk kan utsette perioden sin med foreldrepenger",
                 "marks": []
             }
         ]

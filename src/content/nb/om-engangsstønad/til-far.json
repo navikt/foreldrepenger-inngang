@@ -27,11 +27,11 @@
         "listItem": "bullet",
         "level": 1,
         "children": [
-            { "type": "span", "text": "når du får ", "marks": [] },
+            { "type": "span", "text": "om du overtar ", "marks": [] },
             { "type": "span", "text": "foreldreansvar", "marks": ["bold"] },
             {
                 "type": "span",
-                "text": " når den andre av foreldrene dør",
+                "text": " eller dersom den andre forelderen dør",
                 "marks": []
             }
         ]

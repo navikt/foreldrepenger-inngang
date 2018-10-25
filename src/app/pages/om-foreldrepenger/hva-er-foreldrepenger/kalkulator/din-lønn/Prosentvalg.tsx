@@ -36,7 +36,7 @@ const Prosentvalg = ({
             onKeyPress={() => onSelect(percentage)}
             className={combinedClassnames}>
             <TypografiBase type="normaltekst">{`${percentage} %`}</TypografiBase>
-            <TypografiBase type="element">{`${sumToShow},–`}</TypografiBase>
+            <TypografiBase type="element">{`${sumToShow}`}</TypografiBase>
         </div>
     );
 };

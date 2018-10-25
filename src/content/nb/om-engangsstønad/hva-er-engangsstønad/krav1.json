@@ -1,7 +1,7 @@
 [
     {
         "type": "avsnitt",
-        "style": "element",
+        "style": "undertittel",
         "children": [
             { "type": "span", "text": "Være mor til barnet", "marks": [] }
         ]

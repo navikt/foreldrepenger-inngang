@@ -28,9 +28,9 @@ const sections = [
     'hvem-kan-fa-foreldrepenger',
     'hvor-lenge-kan-jeg-fa-foreldrepenger',
     'hva-kan-jeg-fa',
-    'ta-ut-ferie',
-    'jobbe-i-perioden',
-    'noen-blir-syke',
+    'hvis-du-skal-pa-ferie',
+    'hvis-du-vil-jobbe',
+    'hvis_noen_av_dere_blir_syke',
     'hjemme-samtidig',
     'dette-gir-deg-ogsa-rett',
     'adoptere'
