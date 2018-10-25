@@ -42,7 +42,7 @@ const OmEngangsstonad: React.StatelessComponent<Props & IntlProps> = ({ location
                     <HvaErEngangsstønad />
                     <HvaKanDuFå />
                     <NårBlirPengeneUtbetalt />
-                    <EngangsstønadTilFar />
+                    <EngangsstønadTilFar id="far-eller-medmor" />
                     <Hjelp />
                 </div>
             </div>
@@ -98,8 +98,12 @@ const NårBlirPengeneUtbetaltW: React.StatelessComponent<IntlProps> = ({ lang })
     </PanelMedIllustrasjon>
 );
 
-const EngangsstønadTilFarW: React.StatelessComponent<IntlProps> = ({ lang }) => (
+const EngangsstønadTilFarW: React.StatelessComponent<IntlProps & { id: string }> = ({
+    id,
+    lang
+}) => (
     <PanelMedIllustrasjon
+        id={id}
         title={getTranslation('om_engangsstønad.til_far.tittel', lang)}
         svg={farSvg}>
         <StrukturertTekst tekst={getContent('om-engangsstønad/til-far', lang)} />

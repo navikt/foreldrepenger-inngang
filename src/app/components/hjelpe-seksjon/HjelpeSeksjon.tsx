@@ -8,6 +8,7 @@ import BEMHelper from 'app/utils/bem';
 import CustomSVGFromSprite from 'app/utils/CustomSVG';
 import TypografiBase from 'nav-frontend-typografi';
 import { WithLink } from 'app/utils/withLink';
+import externalUrls from 'app/utils/externalUrls';
 
 const svg = require('../../assets/ark/ark-hjelp.svg').default;
 const facebookSvg = require('../../assets/icons/facebook.svg').default;
@@ -36,14 +37,22 @@ const Ferie: React.StatelessComponent<Props & IntlProps> = ({ id, lang }) => {
 
 const Kontaktvalg = ({ lang }: { lang: Language }) => (
     <div className={cls.element('kontaktvalg')}>
-        <Valg icon={facebookSvg} label={getTranslation('facebook', lang)} />
-        <Valg icon={chatSvg} label={getTranslation('chat', lang)} />
-        <Valg icon={telefonSvg} label={getTranslation('telefon', lang)} />
+        <Valg
+            icon={facebookSvg}
+            href={externalUrls.facebook}
+            label={getTranslation('facebook', lang)}
+        />
+        <Valg icon={chatSvg} href={externalUrls.chat} label={getTranslation('chat', lang)} />
+        <Valg
+            icon={telefonSvg}
+            href={externalUrls.telefon}
+            label={getTranslation('telefon', lang)}
+        />
     </div>
 );
 
-const Valg = ({ icon, label }: { icon: any; label: string }) => (
-    <WithLink url={''} urlIsExternal={true} className={cls.element('valg')}>
+const Valg = ({ icon, label, href }: { icon: any; label: string; href: string }) => (
+    <WithLink url={href} urlIsExternal={true} className={cls.element('valg')}>
         <CustomSVGFromSprite size={24} iconRef={icon} />
         <TypografiBase type="normaltekst">{label}</TypografiBase>
     </WithLink>
