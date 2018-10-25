@@ -40,7 +40,8 @@
 
 
     "route.": "Foreldrepenger, engangsstønad og svangerskapspenger",
-    "route.planlegger": "Hvor lenge kan du ha permisjon?",
+    "route.planlegging": "Hvor lenge kan du ha permisjon?",
+    "route.beregning": "Beregning av foreldrepenger",
     "route.hva-soker-du": "Hva vil du søke om",
     "route.om-foreldrepenger": "Om foreldrepenger",
     "route.om-engangsstonad": "Om engangsstønad",
@@ -64,11 +65,19 @@
     "informasjonstavle.mer_informasjon.engangsstønad": "Hvis du venter barn og ikke hatt inntekt det siste året, kan du få en engangssum istedenfor foreldrepenger.",
     "informasjonstavle.mer_informasjon.svangerskapspenger": "Hvis du er gravid men ikke kan fortsette å jobbe under svangerskapet, kan du ha rett til svangerskapspenger.",
 
-    "planlegger.tittel": "Hvor lenge kan du ha permisjon?",
-    "planlegger.beregning_tittel": "Beregning av foreldrepenger",
-    "planlegger.beregning_knapp": "Gå til kalkulatoren",
-    "planlegger.planlegger_tittel": "Foreldrepengeplanleggeren",
-    "planlegger.planlegger_knapp": "Gå til planleggeren",
+    "planlegging.tittel": "Hvor lenge kan du ha permisjon?",
+    "planlegging.beregning_tittel": "Beregning av foreldrepenger",
+    "planlegging.lenke_beregning": "Beregn hvor mye du har rett på",
+    "planlegging.planlegger_tittel": "Foreldrepengeplanleggeren",
+    "planlegging.lenke_planlegger": "Planlegg for hvor lenge du kan være hjemme med barnet ditt",
+
+    "beregning.bannertekst": "Beregning av foreldrepenger",
+    "beregning.tittel": "Finn ut hvor mye du kan få",
+    "beregning.velg_din_situasjon": "Velg din situasjon ...",
+    "beregning.situasjon.arbeidstaker": "Arbeidstaker",
+    "beregning.situasjon.frilanser": "Frilanser",
+    "beregning.situasjon.selvstendig_næringsdrivende": "Selvstendig næringsdrivende",
+    "beregning.skriv_inn_lønn": "Skriv inn lønn de siste 3 årene (netto)",
 
     "viktige_frister.banner":"Viktige frister",
     "viktige_frister.header": "Husk å søke til rett tid",

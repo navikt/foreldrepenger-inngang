@@ -1,0 +1,58 @@
+@import '../../styles/index.less';
+
+.beregning {
+    &__headerPanel {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 2rem;
+
+        .strukturertTekst {
+            margin: 0rem 1rem;
+        }
+    }
+
+    .beregning__headerIcon {
+        margin: 0.5rem;
+    }
+
+    &__flexDownwards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .typo-undertittel {
+            margin-top: 3rem;
+            margin-bottom: 1rem;
+        }
+    }
+
+    &__situasjonsvalg {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+
+        .storToggle:not(:nth-child(1)) {
+            margin-top: 1.5rem;
+        }
+    }
+
+    &__lønnskalkulator {
+        background: white;
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+        padding: 2px;
+    }
+
+    @media (min-width: @mobile-breakpoint) {
+        &__situasjonsvalg {
+            flex-direction: row;
+
+            .storToggle:not(:nth-child(1)) {
+                margin-top: 0;
+                margin-left: 1.5rem;
+            }
+        }
+    }
+}

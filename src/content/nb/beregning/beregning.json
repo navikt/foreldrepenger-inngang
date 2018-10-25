@@ -1,0 +1,25 @@
+[
+    {
+        "type": "avsnitt",
+        "style": "systemtittel",
+        "children": [
+            {
+                "type": "span",
+                "text": "Finn ut hvor mye du kan få",
+                "marks": []
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Kalkulatoren hjelper deg å finne ut!",
+                "marks": []
+            }
+        ],
+        "markDefs": []
+    }
+]
