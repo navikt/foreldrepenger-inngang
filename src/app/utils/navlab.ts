@@ -1,3 +1,3 @@
-const NAVLAB = true;
+const NAVLAB = false;
 
 export default NAVLAB;

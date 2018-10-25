@@ -32,7 +32,10 @@ const Foreldrepenger: StatelessComponent<ForeldrepengerProps> = ({ parentCls, hi
                         }}>
                         {getTranslation('hva_søker_du.søk_foreldrepenger', lang)}
                     </KnappBase>
-                    <WithLink url={'/under-arbeid'} urlIsExternal={true} noStyling={true}>
+                    <WithLink
+                        url={externalUrls.søk_foreldrepenger_eller_engangsstønad}
+                        urlIsExternal={true}
+                        noStyling={true}>
                         <KnappBase className={parentCls.element('knapp')} type="standard">
                             {getTranslation('hva_søker_du.har_søkt_foreldrepenger', lang)}
                         </KnappBase>
