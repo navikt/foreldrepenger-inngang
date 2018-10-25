@@ -1,8 +1,8 @@
 [
     {
         "type": "avsnitt",
-        "style": "element",
-        "children": [{ "type": "span", "text": "Bo i Norge", "marks": [] }]
+        "style": "undertittel",
+        "children": [{ "type": "span", "text": "Jeg bor i Norge", "marks": [] }]
     },
     {
         "type": "avsnitt",
@@ -10,7 +10,7 @@
         "children": [
             {
                 "type": "span",
-                "text": "Bor du ikke i Norge, kan du være medlem av folketrygden på andre måter. ",
+                "text": "Bor du i Norge, er du vanligvis medlem av folketrygden. Bor du ikke i Norge, kan du være medlem av folketrygden på andre måter. ",
                 "marks": []
             },
             {

@@ -29,14 +29,14 @@
             {
                 "type": "span",
                 "text": "Les mer",
-                "marks": ["url_arbeidsgiver", "external_link"]
+                "marks": ["url_arbeidsgiver"]
             }
         ],
         "markDefs": [
             {
                 "key": "url_arbeidsgiver",
                 "type": "link",
-                "href": "#arbeidsgiver-og-deg"
+                "href": "#dette-gir-deg-ogsa-rett"
             }
         ]
     }

@@ -5,7 +5,7 @@
       "children": [
           {
               "type": "span",
-              "text": "Foreldrepengene beregnes vanligvis til det samme som det du får utbetalt allerede. Hvis du mottar:",
+              "text": "Foreldrepengene beregnes vanligvis til det samme som det du får utbetalt allerede. Her er en oversikt over hvor mye du får i foreldrepenger om du mottar en ytelse:",
               "marks": []
           }
       ],
@@ -17,10 +17,10 @@
       "listItem": "bullet",
       "level": 1,
       "children": [
-          { "type": "span", "text": "Dagpenger", "marks": ["bold"] },
+          { "type": "span", "text": "Dagpenger:", "marks": ["bold"] },
           {
               "type": "span",
-              "text": " beregnes foreldrepengene lik det du får utbetalt i dagpenger. Jobber du i tillegg beregnes foreldrepengene utfra både arbeidsinntekten din og dagpengene.",
+              "text": " Foreldrepengene blir det samme som du får utbetalt i dagpenger. Jobber du i tillegg beregnes foreldrepengene utfra både arbeidsinntekten din og dagpengene.",
               "marks": []
           }
       ]
@@ -33,12 +33,12 @@
       "children": [
           {
               "type": "span",
-              "text": "Arbeidsavklaringspenger",
+              "text": "Arbeidsavklaringspenger:",
               "marks": ["bold"]
           },
           {
               "type": "span",
-              "text": ", beregnes foreldrepengene lik det du får utbetalt i arbeidsavklaringspenger.",
+              "text": " Foreldrepengene blir det samme som du får utbetalt i arbeidsavklaringspenger.",
               "marks": []
           }
       ]
@@ -55,10 +55,10 @@
               "marks": ["bold"]
           },
           { "type": "span", "text": " eller ", "marks": [] },
-          { "type": "span", "text": "pleiepenger", "marks": ["bold"] },
+          { "type": "span", "text": "pleiepenger:", "marks": ["bold"] },
           {
               "type": "span",
-              "text": ", beregnes foreldrepengene etter samme inntektsgrunnlag som for disse ytelsene.",
+              "text": " Foreldrepengene beregnes etter samme inntektsgrunnlag som du får med en av disse ytelsene.",
               "marks": []
           }
       ]
@@ -69,10 +69,10 @@
       "listItem": "bullet",
       "level": 1,
       "children": [
-          { "type": "span", "text": "Foreldrepenger", "marks": ["bold"] },
+          { "type": "span", "text": "Foreldrepenger:", "marks": ["bold"] },
           {
               "type": "span",
-              "text": ", beregnes foreldrepengene lik det du fikk utbetalt i forrige foreldrepengeperiode.",
+              "text": " Du får det samme i foreldrepenger som du fikk utbetalt i forrige foreldrepengeperiode.",
               "marks": []
           }
       ]
