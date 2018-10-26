@@ -5,10 +5,10 @@ import { withRouter } from 'react-router-dom';
 import UserHelp from './user-help/UserHelp';
 import PanelMedTittel from '../../components/panel-med-tittel/PanelMedTittel';
 import { getTranslation, withIntl, Language } from '../../intl/intl';
-import externalUrls from '../../utils/externalUrls';
 import StrukturertTekst from '../../components/strukturert-tekst/StrukturertTekst';
 import { getContent } from '../../utils/getContent';
 import { WithLink } from 'app/utils/withLink';
+import Environment from 'app/Environment';
 
 interface ForeldrepengerProps {
     parentCls: any;
@@ -33,7 +33,7 @@ const Foreldrepenger: StatelessComponent<ForeldrepengerProps> = ({ parentCls, hi
                         {getTranslation('hva_søker_du.søk_foreldrepenger', lang)}
                     </KnappBase>
                     <WithLink
-                        url={externalUrls.søk_foreldrepenger_eller_engangsstønad}
+                        url={Environment.ENDRE_SOKNAD_FORELDREPENGER_URL}
                         urlIsExternal={true}
                         noStyling={true}>
                         <KnappBase className={parentCls.element('knapp')} type="standard">
@@ -43,7 +43,7 @@ const Foreldrepenger: StatelessComponent<ForeldrepengerProps> = ({ parentCls, hi
                 </div>
                 <UserHelp
                     linkText={getTranslation('hva_søker_du.ingen_elektronisk_id', lang)}
-                    linkUrl={externalUrls.søk_foreldrepenger_eller_engangsstønad_papir}
+                    linkUrl={Environment.SOK_FORELDREPENGER_PAPIR_URL}
                     helpText={getTranslation('hva_søker_du.ingen_elektronisk_id_hjelp', lang)}
                 />
             </div>
