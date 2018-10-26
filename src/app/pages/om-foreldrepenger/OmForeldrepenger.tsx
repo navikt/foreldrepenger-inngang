@@ -33,7 +33,7 @@ const sections = [
     'hvis-du-vil-jobbe',
     'hvis_noen_av_dere_blir_syke',
     'hjemme-samtidig',
-    'dette-gir-deg-ogsa-rett',
+    'andre-inntekter-som-gir-rett',
     'adoptere'
 ];
 

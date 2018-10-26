@@ -5,13 +5,7 @@
         "children": [
             {
                 "type": "span",
-                "text": "Du kan tidligst sende inn søknad ",
-                "marks": []
-            },
-            { "type": "span", "text": "seks uker før", "marks": ["bold"] },
-            {
-                "type": "span",
-                "text": " du skal ta ut foreldrepengene dine eller utsette.",
+                "text": "Skal du ta ut foreldrepenger i 2019, kan du tidligst søke seks uker før du skal ta ut foreldrepengene dine eller utsette.",
                 "marks": []
             }
         ],
