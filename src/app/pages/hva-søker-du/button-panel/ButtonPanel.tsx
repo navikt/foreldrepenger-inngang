@@ -30,6 +30,7 @@ const ButtonPanel = ({
             <WithLink
                 urlIsExternal={externalLink}
                 noStyling={true}
+                noTabbing={true}
                 className={cls.element('noBorder')}
                 url={buttonUrl}>
                 <KnappBase

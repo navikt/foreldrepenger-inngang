@@ -7,7 +7,6 @@ import PanelMedTittel from '../../components/panel-med-tittel/PanelMedTittel';
 import { getTranslation, withIntl, Language } from '../../intl/intl';
 import StrukturertTekst from '../../components/strukturert-tekst/StrukturertTekst';
 import { getContent } from '../../utils/getContent';
-import { WithLink } from 'app/utils/withLink';
 import Environment from 'app/Environment';
 
 interface ForeldrepengerProps {
@@ -32,14 +31,11 @@ const Foreldrepenger: StatelessComponent<ForeldrepengerProps> = ({ parentCls, hi
                         }}>
                         {getTranslation('hva_søker_du.søk_foreldrepenger', lang)}
                     </KnappBase>
-                    <WithLink
-                        url={Environment.ENDRE_SOKNAD_FORELDREPENGER_URL}
-                        urlIsExternal={true}
-                        noStyling={true}>
+                    <a tabIndex={-1} href={Environment.ENDRE_SOKNAD_FORELDREPENGER_URL}>
                         <KnappBase className={parentCls.element('knapp')} type="standard">
                             {getTranslation('hva_søker_du.har_søkt_foreldrepenger', lang)}
                         </KnappBase>
-                    </WithLink>
+                    </a>
                 </div>
                 <UserHelp
                     linkText={getTranslation('hva_søker_du.ingen_elektronisk_id', lang)}
