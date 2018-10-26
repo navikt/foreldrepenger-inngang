@@ -1,5 +1,6 @@
 name: foreldrepenger-inngang
 image: repo.adeo.no:5443/foreldrepenger-inngang
+team: nais
 replicas:
   min: 2
   max: 2
