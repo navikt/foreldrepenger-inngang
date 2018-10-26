@@ -50,15 +50,15 @@
 
 
     "informasjonstavle.tittel": "Foreldrepenger, engangsstønad og svangerskapspenger",
-    "informasjonstavle.ingress": "Her finner du informasjon om foreldrepermisjon ved fødsel og adopsjon.",
+    "informasjonstavle.ingress": "Når du venter barn",
     "informasjonstavle.hva_har_du_rett_på": "Hva har du rett til?",
     "informasjonstavle.hva_har_du_rett_på_body": "Her kan du finne ut om du har rett til foreldrepenger eller engangsstønad.",
-    "informasjonstavle.hvor_lenge_kan_du_få_permisjon": "Hvor lenge kan du ha permisjon?",
+    "informasjonstavle.hvor_lenge_kan_du_få_permisjon": "Hvor lenge?",
     "informasjonstavle.hvor_lenge_kan_du_få_permisjon_body": "Foreldrepengeplanleggeren gir deg svar på hvor lenge du kan få foreldrepenger.",
     "informasjonstavle.gå_rett_til_søknaden": "Gå rett til søknaden",
     "informasjonstavle.gå_rett_til_søknaden_body": "Her kan du søke om foreldrepenger, engangsstønad eller svangerskapspenger.",
     "informasjonstavle.mer_informasjon.tittel": "Utfyllende informasjon",
-    "informasjonstavle.mer_informasjon.foreldrepenger": "Foreldrepenger skal erstatte inntekten din når du skal ha foreldrepermisjon.",
+    "informasjonstavle.mer_informasjon.foreldrepenger": "Foreldrepengene skal erstatte inntekten din når du skal være hjemme med barnet.",
     "informasjonstavle.mer_informasjon.engangsstønad": "Hvis du venter barn og ikke hatt inntekt det siste året, kan du får en engangssum istedenfor foreldrepenger.",
     "informasjonstavle.mer_informasjon.svangerskapspenger": "Hvis du er gravid men ikke kan fortsette å jobbe under svangerskapet, kan du ha rett til svangerskapspenger.",
 
@@ -89,12 +89,13 @@
     "hva_søker_du.søk_svangerskapspenger": "Søk om svangerskapspenger",
     "hva_søker_du.ingen_elektronisk_id": "Jeg har ikke elektronisk ID",
     "hva_søker_du.ingen_elektronisk_id_hjelp": "For å søke på nett må du ha BankID fra banken din eller en annen elektronisk ID.",
+    "hva_søker_du.søke_som_far_eller_medmor": "Jeg vil søke som far eller medmor",
+    "hva_søker_du.søke_som_far_eller_medmor_hjelp": "Hvis du skal søke om engangsstønad, må søknaden sendes i posten. Det gjelder også ved adopsjon.",
 
 
     "søk_foreldrepenger.tittel": "Søk om foreldrepenger",
-    "søk_foreldrepenger.informasjon": "Du kan tidligst sende inn søknad seks uker før du skal ta ut foreldrepengene dine. Skal du vente med å ta ut foreldrepengene dine, gjelder dette også deg.",
     "søk_foreldrepenger.knapp": "Begynn søknad om foreldrepenger",
-    "søk_foreldrepenger.knappMobil": "Begynn søknad",
+    "søk_foreldrepenger.knapp_mobil": "Begynn søknad",
     "søk_foreldrepenger.advarselmelding": "Du søker tidligere enn 6 uker før du skal ta ut foreldrepenger. Du kan begynne på søknaden, men det vil ikke være mulig å sende den inn før ",
     "søk_foreldrepenger.første_dag_spørsmål": "Når er første dag med foreldrepenger eller utsettelse?",
     "søk_svangerskapspenger.tittel": "Søk svangerskapspenger",
@@ -106,7 +107,7 @@
     "hurtiglenke.hvis_du_vil_jobbe": "Hvis du vil jobbe",
     "hurtiglenke.hvis_noen_av_dere_blir_syke": "Hvis en av dere blir syke",
     "hurtiglenke.hjemme_samtidig": "Hjemme samtidig",
-    "hurtiglenke.dette_gir_deg_ogsa_rett": "Andre inntekter som kan gi rett",
+    "hurtiglenke.andre_inntekter_som_gir_rett": "Andre inntekter som gir rett",
     "hurtiglenke.adoptere": "Adoptere",
 
 
@@ -168,7 +169,7 @@
     "om_foreldrepenger.hjemme_samtidig.farTvillinger":"Når dere får tvillinger eller flere barn",
     "om_foreldrepenger.hjemme_samtidig.permisjon":"Permisjon ved fødselen",
 
-    "om_foreldrepenger.hatt_inntekt.tittel": "Andre inntekter som kan gi rett",
+    "om_foreldrepenger.hatt_inntekt.tittel": "Andre inntekter som gir rett",
     "om_foreldrepenger.hatt_inntekt.andre_inntekter": "Andre inntekter som kan gi rett til foreldrepenger",
     "om_foreldrepenger.hatt_inntekt.hvor_mye": "Hvor mye må du ha tjent",
     "om_foreldrepenger.hatt_inntekt.dager_uten_arbeid": "Dager uten arbeid som teller med",

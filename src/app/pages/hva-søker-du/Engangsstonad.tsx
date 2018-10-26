@@ -16,9 +16,9 @@ const Engangsstonad = ({ parentCls, lang }: { parentCls: any; lang: Language }) 
                 parentCls={parentCls}
                 buttonText={getTranslation('hva_søker_du.søk_engangsstønad', lang)}
                 buttonUrl={Environment.SOK_ENGANGSSTONAD_URL}
-                linkText={getTranslation('hva_søker_du.ingen_elektronisk_id', lang)}
+                linkText={getTranslation('hva_søker_du.søke_som_far_eller_medmor', lang)}
                 linkUrl={Environment.SOK_ENGANGSSTONAD_PAPIR_URL}
-                helpText={getTranslation('hva_søker_du.ingen_elektronisk_id_hjelp', lang)}
+                helpText={getTranslation('hva_søker_du.søke_som_far_eller_medmor_hjelp', lang)}
             />
         </PanelMedTittel>
     );

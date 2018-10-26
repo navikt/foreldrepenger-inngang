@@ -76,7 +76,7 @@ class SøkForeldrepenger extends Component<Props & IntlProps> {
                                     <KnappBase type="hoved" role="link">
                                         <MediaQuery query="(max-width: 575px)">
                                             {getTranslation(
-                                                'søk_foreldrepenger.knappMobil',
+                                                'søk_foreldrepenger.knapp_mobil',
                                                 this.props.lang
                                             )}
                                         </MediaQuery>
