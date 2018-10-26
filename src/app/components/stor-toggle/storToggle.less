@@ -1,0 +1,53 @@
+@import '../../styles/index.less';
+
+.storToggle {
+    height: 5rem;
+    width: 11rem;
+    border: none;
+    border-radius: 4px;
+    background-color: #8ebae5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    &--toggled {
+        box-shadow: 0 0 0 transparent;
+        border: 1px solid lightGray;
+        background-color: white;
+        
+        .typo-normal {
+            font-weight: bold;
+        }
+    }
+
+    &:not(&--toggled) {
+        @baseline: 0.25rem;
+        @offset: 0.1rem;
+
+        box-shadow: 0 @baseline 0 #2c7acb;
+        position: relative;
+        bottom: @baseline;
+
+        &:hover {
+            transform: translateY(-@offset);
+            box-shadow: 0 (@baseline + @offset) 0 #2c7acb;
+            background-color: #9ec4e9;
+        }
+
+        &:active {
+            box-shadow: 0 0 0 #2c7acb;
+            background-color: #7eb0e1;
+            transform: translateY(@baseline);
+        }
+
+        &:focus {
+            .buttonFocus();
+        }
+    }
+
+    &:focus {
+        .buttonFocus();
+    }
+}
