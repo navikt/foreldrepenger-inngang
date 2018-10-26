@@ -27,3 +27,5 @@ fasitResources:
     resourceType: baseurl
   - alias: loadbalancer:foreldrepenger-inngang
     resourceType: loadbalancerconfig
+  - alias: FPINNGANG_PROPERTIES
+    resourceType: applicationProperties
