@@ -5,18 +5,7 @@
         "children": [
             {
                 "type": "span",
-                "text": "Hvis du ikke har hatt inntekt, kan du få en engangssum istedenfor foreldrepenger.",
-                "marks": []
-            }
-        ]
-    },
-    {
-        "type": "avsnitt-uten-padding",
-        "style": "normaltekst",
-        "children": [
-            {
-                "type": "span",
-                "text": "I noen tilfeller kan far eller medmor få engangsstønaden.",
+                "text": "Hvis du som mor ikke har hatt inntekt, kan du få en engangssum istedenfor foreldrepenger ved fødsel",
                 "marks": []
             }
         ]
