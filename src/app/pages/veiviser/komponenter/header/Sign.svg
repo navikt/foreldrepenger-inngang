@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="33px" height="70px" viewBox="0 0 33 70" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>Sign</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Veiviser" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Far-har-rett,-mor-har-ikke-rett-" transform="translate(-312.000000, -309.000000)" stroke="#78706A">
+            <g id="Group-17" transform="translate(278.000000, 224.000000)">
+                <g id="Group-16" transform="translate(0.000000, 54.000000)">
+                    <g id="Group-2">
+                        <g id="Group" transform="translate(34.000000, 32.000000)">
+                            <g id="Sign">
+                                <path d="M16,1.0658141e-13 L16,68.4772727" id="Line" stroke-linecap="square"></path>
+                                <polygon id="Rectangle" fill="#EFEFEF" points="2 6.43840787 27.1163702 6 32.0684136 10.0960169 27.2623358 14.3623625 2.14596558 14.8007704"></polygon>
+                                <polygon id="Rectangle-Copy" fill="#EFEFEF" points="30.1276682 19.8766822 29.8357815 28.2352237 4.73088789 27.3585415 8.08242362e-13 23.008968 5.02277459 19"></polygon>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
