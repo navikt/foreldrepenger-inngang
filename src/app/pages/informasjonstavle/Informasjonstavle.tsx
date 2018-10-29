@@ -37,10 +37,10 @@ const BildelenkerWithoutIntl: StatelessComponent<IntlProps> = ({ lang }) => {
                 svgName="hender-sjekkliste"
                 title={getTranslation('informasjonstavle.hva_har_du_rett_på', lang)}
                 urlIsExternal={false}
-                url="/under-arbeid"
+                url="/veiviser"
                 underArbeid={<UnderProduksjon group={'_mainTable'} />}
-                disabled={true}
-                stopSign={true}>
+                disabled={false}
+                stopSign={false}>
                 <Tekstomrade>
                     {getTranslation('informasjonstavle.hva_har_du_rett_på_body', lang)}
                 </Tekstomrade>

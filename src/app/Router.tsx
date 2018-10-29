@@ -8,6 +8,7 @@ import OmForeldrepenger from './pages/om-foreldrepenger/OmForeldrepenger';
 import OmEngangsstønad from './pages/om-engangsstønad/OmEngangsstønad';
 import Blindside from './pages/blindside/Blindside';
 import ViktigeFrister from './pages/viktige-frister/ViktigeFrister';
+import Veiviser from './pages/veiviser/Veiviser';
 
 const Router = () => (
     <Switch>
@@ -44,6 +45,8 @@ const Router = () => (
             component={ViktigeFrister}
             key="viktige-frister"
         />
+        <Route exact={true} path="/veiviser" component={Veiviser} key="veiviser" />
+
         <Redirect to="/" />
     </Switch>
 );

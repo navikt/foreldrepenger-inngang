@@ -36,9 +36,6 @@ const JegHarHattInntekt: StatelessComponent<Props & IntlProps> = ({ id, lang }) 
                     tekst={getContent('all-informasjon/hatt-inntekt/dager-uten-arbeid', lang)}
                 />
             </LesMer>
-            <StrukturertTekst
-                tekst={getContent('all-informasjon/hatt-inntekt/hatt-inntekt-del2', lang)}
-            />
         </PanelMedIllustrasjon>
     );
 };
