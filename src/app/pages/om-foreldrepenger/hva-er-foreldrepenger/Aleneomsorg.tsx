@@ -39,7 +39,10 @@ const Aleneomsorg = ({ lang }: { lang: Language }) => {
     return (
         <div>
             <StrukturertTekst tekst={getContent(content, lang)} />
-            <Informasjonsfaner tabs={getInformasjonsfaner(lang)} aleneforelder={true} />
+            <Informasjonsfaner
+                tabs={getInformasjonsfaner(lang)}
+                title={getTranslation('om_foreldrepenger.hvor_lenge.fordeling.tittel_alene', lang)}
+            />
             <StrukturertTekst tekst={getContent(content2, lang)} />
             <Kalkulator />
         </div>

@@ -11,7 +11,7 @@ interface Props {
     tittel: string;
     icon: string | any;
     antallUker: string;
-    punktliste: string[];
+    punktliste?: string[];
     component: ReactNode;
 }
 
@@ -81,21 +81,25 @@ const Snakkeboble = ({
     lang
 }: {
     tittel: string;
-    punktliste: string[];
+    punktliste?: string[];
     lang: Language;
 }) => (
     <div>
         <TypografiBase type="element">{tittel}</TypografiBase>
         <ul className={cls.element('liste')}>
-            {punktliste.length > 0 ? (
-                punktliste.map((punkt) => {
-                    return <li key={punkt}>{punkt}</li>;
-                })
-            ) : (
-                <li>
-                    {getTranslation('om_foreldrepenger.hvor_lenge.fordeling.krav.ingen_krav', lang)}
-                </li>
-            )}
+            {punktliste &&
+                (punktliste.length > 0 ? (
+                    punktliste.map((punkt) => {
+                        return <li key={punkt}>{punkt}</li>;
+                    })
+                ) : (
+                    <li>
+                        {getTranslation(
+                            'om_foreldrepenger.hvor_lenge.fordeling.krav.ingen_krav',
+                            lang
+                        )}
+                    </li>
+                ))}
         </ul>
     </div>
 );
