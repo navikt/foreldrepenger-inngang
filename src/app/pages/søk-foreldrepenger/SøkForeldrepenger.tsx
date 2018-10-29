@@ -6,7 +6,7 @@ import BEMHelper from '../../utils/bem';
 import { getTranslation, IntlProps, withIntl } from '../../intl/intl';
 import SvgBanner from '../../components/svg-banner/SvgBanner';
 import PanelMedTittel from '../../components/panel-med-tittel/PanelMedTittel';
-import { datoErOmMindreEnnSeksUker } from '../../utils/datoUtils';
+import { datoForUttakErGyldig } from '../../utils/datoUtils';
 import VeilederMessage from './Veiledermelding';
 import Datovelger from './Datovelger';
 import MediaQuery from 'react-responsive';
@@ -34,7 +34,7 @@ class SøkForeldrepenger extends Component<Props & IntlProps> {
     };
 
     setDate = (selectedDate: Date) => {
-        const dateIsValid = datoErOmMindreEnnSeksUker(selectedDate);
+        const dateIsValid = datoForUttakErGyldig(selectedDate);
 
         this.setState({
             selectedDate,
