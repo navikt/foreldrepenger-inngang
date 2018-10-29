@@ -26,16 +26,6 @@ const tabs: Innholdsfane[] = [
         component: <FarOgMor />
     },
     {
-        label: 'far_og_far',
-        icon: <Foreldrepar firstParent="far4" secondParent="far2" />,
-        component: <FarOgFar />
-    },
-    {
-        label: 'mor_og_mor',
-        icon: <Foreldrepar firstParent="mor2" secondParent="medmor2" />,
-        component: <MorOgMor />
-    },
-    {
         label: 'bareFarHarRett',
         icon: <Foreldrepar firstParent="far3" secondParent="medmor1" variant={1} />,
         component: <BareFarHarRett />
@@ -49,6 +39,16 @@ const tabs: Innholdsfane[] = [
         label: 'aleneomsorg',
         icon: <Foreldrepar firstParent="far1" secondParent="medmor1" variant={3} />,
         component: <Aleneomsorg />
+    },
+    {
+        label: 'mor_og_mor',
+        icon: <Foreldrepar firstParent="mor2" secondParent="medmor2" />,
+        component: <MorOgMor />
+    },
+    {
+        label: 'far_og_far',
+        icon: <Foreldrepar firstParent="far4" secondParent="far2" />,
+        component: <FarOgFar />
     }
 ];
 

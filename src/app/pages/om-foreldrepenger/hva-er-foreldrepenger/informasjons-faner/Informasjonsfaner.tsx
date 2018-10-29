@@ -23,6 +23,7 @@ interface Fane {
 
 interface TabProps {
     tabs: Fane[];
+    title?: string;
 }
 
 type Props = TabProps & IntlProps;
@@ -53,15 +54,17 @@ class Informasjonsfaner extends React.Component<Props> {
         <div className={cls.className}>
             <div className={cls.element('header')}>
                 <TypografiBase type="element">
-                    {this.props.tabs.length > 1
-                        ? getTranslation(
-                              'om_foreldrepenger.hvor_lenge.fordeling.tittel',
-                              this.props.lang
-                          )
-                        : getTranslation(
-                              'om_foreldrepenger.hvor_lenge.fordeling.tittel_alene',
-                              this.props.lang
-                          )}
+                    {this.props.title
+                        ? this.props.title
+                        : this.props.tabs.length > 1
+                            ? getTranslation(
+                                  'om_foreldrepenger.hvor_lenge.fordeling.tittel',
+                                  this.props.lang
+                              )
+                            : getTranslation(
+                                  'om_foreldrepenger.hvor_lenge.fordeling.tittel_alene',
+                                  this.props.lang
+                              )}
                 </TypografiBase>
             </div>
             {this.props.tabs.length > 1 && (

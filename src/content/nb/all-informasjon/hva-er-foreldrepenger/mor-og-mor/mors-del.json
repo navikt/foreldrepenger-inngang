@@ -13,7 +13,7 @@
             { "type": "span", "text": "ni ukene", "marks": ["bold"] },
             {
                 "type": "span",
-                "text": " kan du ta ut rett etterpå eller spare til senere. ",
+                "text": " kan du ta ut rett etterpå eller spare til senere.",
                 "marks": []
             }
         ],
@@ -45,6 +45,48 @@
             {
                 "type": "span",
                 "text": "Du får foreldrepenger fra og med tre uker før terminen. Du kan også ta ut foreldrepenger inntil 12 uker før termin, men da blir det færre uker av fellesperioden.",
+                "marks": []
+            }
+        ],
+        "markDefs": []
+    },
+    {
+        "type": "avsnitt",
+        "style": "element",
+        "children": [
+            { "type": "span", "text": "Hvem regnes som medmor?", "marks": [] }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Medmor er en som har fått juridisk foreldreansvar for barnet. Hvis det ikke foreligger vedtak om medmorskap, kan den andre moren til barnet få foreldrepenger ved stebarnsadopsjon.  ",
+                "marks": []
+            }
+        ],
+        "markDefs": []
+    },
+    {
+        "type": "avsnitt",
+        "style": "element",
+        "children": [
+            {
+                "type": "span",
+                "text": "Hvis dere begge er adoptivforeldre for barnet",
+                "marks": []
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Da har dere 15 uker hver og en fellesperiode som dere kan dele. Foreldrepengeperioden starter ved adopsjonsdatoen. Dere velger hvem av dere som skal starte perioden. Ellers er reglene likt som foreldrepenger ved fødsel.",
                 "marks": []
             }
         ],

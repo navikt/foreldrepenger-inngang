@@ -1,0 +1,60 @@
+[
+    {
+        "type": "avsnitt",
+        "style": "element",
+        "children": [
+            {
+                "type": "span",
+                "text": "Hvis dere  får barn ved surrogati",
+                "marks": []
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Du som er biologisk far til barnet får vanligvis hele foreldrepengeperioden. Din ektefelle eller registrerte partner kan få foreldrepenger hvis han stebarnsadopterer og  det fortsatt er dager  igjen av foreldrepengeperioden.",
+                "marks": []
+            }
+        ],
+        "markDefs": []
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Husk at farskapet til deg som biologisk far må være godkjent i Norge for at du skal få foreldrepenger.",
+                "marks": []
+            }
+        ],
+        "markDefs": []
+    },
+    {
+        "type": "avsnitt",
+        "style": "element",
+        "children": [
+            {
+                "type": "span",
+                "text": "Hvis dere begge er adoptivforeldre for barnet",
+                "marks": []
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Da har dere 15 uker hver og en fellesperiode som dere kan dele. Foreldrepengeperioden starter ved adopsjonsdatoen. Dere velger hvem av dere som skal  starte perioden. Ellers er reglene likt som foreldrepenger ved fødsel.",
+                "marks": []
+            }
+        ],
+        "markDefs": []
+    }
+]
