@@ -44,17 +44,5 @@
                 "marks": []
             }
         ]
-    },
-    {
-        "type": "avsnitt",
-        "style": "normaltekst",
-        "children": [
-            {
-                "type": "span",
-                "text": "Det er fellesperioden som utvides.",
-                "marks": []
-            }
-        ],
-        "markDefs": []
     }
 ]
