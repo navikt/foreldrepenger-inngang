@@ -3,7 +3,7 @@
         "type": "avsnitt",
         "style": "undertittel",
         "children": [
-            { "type": "span", "text": "Være mor til barnet", "marks": [] }
+            { "type": "span", "text": "Jeg er mor til barnet", "marks": [] }
         ]
     },
     {
@@ -15,7 +15,7 @@
                 "text": "I noen tilfeller kan far eller medmor få stønaden. ",
                 "marks": []
             },
-            { "type": "span", "text": "Les mer", "marks": ["url_les_mer"] }
+            { "type": "span", "text": "Les mer om unntak", "marks": ["url_les_mer"] }
         ],
         "markDefs": [
             { "key": "url_les_mer", "type": "link", "href": "#far-eller-medmor" }

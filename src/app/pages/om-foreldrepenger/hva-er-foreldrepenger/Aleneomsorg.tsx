@@ -28,7 +28,7 @@ const getInformasjonsfaner = (lang: Language) => [
         bodyProps: {
             tittel: 'til far',
             icon: 'far1',
-            antallUker: '49/59',
+            antallUker: '46/56',
             punktliste: [],
             component: <StrukturertTekst tekst={getContent(farsDel, lang)} />
         }

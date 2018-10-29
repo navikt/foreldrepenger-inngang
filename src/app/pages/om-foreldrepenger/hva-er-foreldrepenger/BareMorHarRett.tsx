@@ -17,12 +17,7 @@ const getInformasjonsfaner = (lang: Language) => [
             tittel: 'til mor',
             icon: 'mor1',
             antallUker: '49/59',
-            punktliste: [
-                `${getTranslation(
-                    'om_foreldrepenger.hvor_lenge.fordeling.krav.aktivitetskrav_til',
-                    lang
-                )} den andre forelderen`
-            ],
+            punktliste: [],
             component: <StrukturertTekst tekst={getContent(morsDel, lang)} />
         }
     }
