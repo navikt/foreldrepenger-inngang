@@ -23,6 +23,7 @@ interface Fane {
 
 interface TabProps {
     tabs: Fane[];
+    aleneforelder?: boolean;
 }
 
 type Props = TabProps & IntlProps;
@@ -53,7 +54,7 @@ class Informasjonsfaner extends React.Component<Props> {
         <div className={cls.className}>
             <div className={cls.element('header')}>
                 <TypografiBase type="element">
-                    {this.props.tabs.length > 1
+                    {this.props.tabs.length > 1 && !this.props.aleneforelder
                         ? getTranslation(
                               'om_foreldrepenger.hvor_lenge.fordeling.tittel',
                               this.props.lang

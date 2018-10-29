@@ -39,7 +39,7 @@ const Aleneomsorg = ({ lang }: { lang: Language }) => {
     return (
         <div>
             <StrukturertTekst tekst={getContent(content, lang)} />
-            <Informasjonsfaner tabs={getInformasjonsfaner(lang)} />
+            <Informasjonsfaner tabs={getInformasjonsfaner(lang)} aleneforelder={true} />
             <StrukturertTekst tekst={getContent(content2, lang)} />
             <Kalkulator />
         </div>
