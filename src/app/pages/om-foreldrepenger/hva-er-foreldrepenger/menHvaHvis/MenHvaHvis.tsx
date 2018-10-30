@@ -79,7 +79,7 @@ class MenHvaHvis extends React.Component<Props> {
 
                 <WithLink
                     style={{ height: this.state.svgSize, width: this.state.svgSize }}
-                    url={'#hvis_noen_av_dere_blir_syke'}
+                    url={'#hvis-en-av-dere-blir-syke'}
                     noStyling={true}
                     ariaLabel={getTranslation('om_foreldrepenger.menHvaHvis.blirSyk')}>
                     <EnAvOssBlirSyk size={this.state.svgSize} />
