@@ -9,7 +9,7 @@ const links = [
     {
         label: 'informasjonstavle.andre_lenker.i_utlandet',
         href:
-            'https://www.nav.no/no/Person/Familie/Venter+du+barn/Relatert+informasjon/foreldrepenger-og-utland'
+            'https://www.nav.no/no/Person/Familie/Relatert+informasjon/foreldrepenger-og-utland'
     },
     {
         label: 'informasjonstavle.andre_lenker.meld_fra',
@@ -24,7 +24,7 @@ const links = [
     {
         label: 'informasjonstavle.andre_lenker.klage',
         href:
-            'https://www.nav.no/no/NAV+og+samfunn/Kontakt+NAV/Klage+ris+og+ros/Klagerettigheterhttps:/www.nav.no/no/NAV+og+samfunn/Kontakt+NAV/Klage+ris+og+ros/Klagerettigheter'
+            'https://www.nav.no/no/NAV+og+samfunn/Kontakt+NAV/Klage+ris+og+ros/Klagerettigheter'
     },
     {
         label: 'informasjonstavle.andre_lenker.regelverk',
