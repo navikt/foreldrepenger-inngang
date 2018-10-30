@@ -6,11 +6,13 @@ import PanelMedTittel from '../../components/panel-med-tittel/PanelMedTittel';
 import { getTranslation, Language, withIntl } from '../../intl/intl';
 import { getContent } from '../../utils/getContent';
 import Environment from '../../Environment';
+import PopUpModal from "./modal/PopUpModal";
 
 const Engangsstonad = ({ parentCls, lang }: { parentCls: any; lang: Language }) => {
     return (
         <PanelMedTittel title={getTranslation('engangsstønad', lang)}>
             <StrukturertTekst tekst={getContent('hva-vil-du-søke-om/engangsstønad', lang)} />
+            <PopUpModal modalIsOpen={false}/>
             <ButtonPanel
                 externalLink={true}
                 parentCls={parentCls}
