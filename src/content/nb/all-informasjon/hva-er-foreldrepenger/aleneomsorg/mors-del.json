@@ -11,7 +11,7 @@
             { "type": "span", "text": "tre uker før terminen", "marks": ["bold"] },
             {
                 "type": "span",
-                "text": ". Du kan velge å starte så tidlig som 12 uker før, men du får færre uker etter fødselen.",
+                "text": ". Du kan velge å starte så tidlig som tolv uker før, men da får du færre uker etter fødselen.",
                 "marks": []
             }
         ],

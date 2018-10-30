@@ -15,12 +15,12 @@
         "children": [
             {
                 "type": "span",
-                "text": "Bor du i Norge, er du vanligvis medlem av folketrygden. ",
+                "text": "Bor du i Norge, er du vanligvis ",
                 "marks": []
             },
             {
                 "type": "span",
-                "text": "Se medlemskap",
+                "text": "medlem av folketrygden.",
                 "marks": ["external_link", "url_medlemskap"]
             }
         ],

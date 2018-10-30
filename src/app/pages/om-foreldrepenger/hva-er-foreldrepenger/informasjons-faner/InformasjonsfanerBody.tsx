@@ -95,7 +95,7 @@ const Snakkeboble = ({
                 ) : (
                     <li>
                         {getTranslation(
-                            'om_foreldrepenger.hvor_lenge.fordeling.krav.ingen_krav',
+                            'om_foreldrepenger.hvor_lenge.fordeling.krav.default',
                             lang
                         )}
                     </li>

@@ -22,11 +22,7 @@ const getInformasjonsfaner = (lang: Language) => [
             icon: 'mor2',
             antallUker: '15',
             punktliste: [
-                getTranslation('om_foreldrepenger.hvor_lenge.fordeling.krav.ingen_krav', lang),
-                `${getTranslation(
-                    'om_foreldrepenger.hvor_lenge.fordeling.krav.kan_ikke_overtas_av',
-                    lang
-                )} far`
+                getTranslation('om_foreldrepenger.hvor_lenge.fordeling.krav.default', lang)
             ],
             component: <StrukturertTekst tekst={getContent(morsdel, lang)} />
         }
@@ -39,11 +35,7 @@ const getInformasjonsfaner = (lang: Language) => [
             icon: 'far1',
             antallUker: '15',
             punktliste: [
-                getTranslation('om_foreldrepenger.hvor_lenge.fordeling.krav.ingen_krav', lang),
-                `${getTranslation(
-                    'om_foreldrepenger.hvor_lenge.fordeling.krav.kan_ikke_overtas_av',
-                    lang
-                )} mor`
+                getTranslation('om_foreldrepenger.hvor_lenge.fordeling.krav.default', lang)
             ],
             component: <StrukturertTekst tekst={getContent(farsdel, lang)} />
         }
@@ -56,10 +48,10 @@ const getInformasjonsfaner = (lang: Language) => [
             icon: <Foreldrepar variant={4} firstParent="mor2" secondParent="far1" />,
             antallUker: '16/26',
             punktliste: [
-                `${getTranslation(
-                    'om_foreldrepenger.hvor_lenge.fordeling.krav.aktivitetskrav_til',
+                getTranslation(
+                    'om_foreldrepenger.hvor_lenge.fordeling.krav.aktivitetskrav_til.felles',
                     lang
-                )} mor`
+                )
             ],
             component: <StrukturertTekst tekst={getContent(fellesdel, lang)} />
         }

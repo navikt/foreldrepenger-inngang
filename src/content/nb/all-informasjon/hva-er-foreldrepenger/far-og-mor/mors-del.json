@@ -56,8 +56,17 @@
         "children": [
             {
                 "type": "span",
-                "text": "Du får foreldrepenger fra og med tre uker før terminen. Du kan også ta ut foreldrepenger inntil 12 uker før termin, men da blir det færre uker av fellesperioden.",
+                "text": "Du får foreldrepenger fra og med ",
                 "marks": []
+            },
+            {
+                "type": "span",
+                "text": "tre uker før terminen",
+                "marks": ["bold"]
+            },
+            {
+                "type": "span",
+                "text": ". Du kan også ta ut foreldrepenger inntil tolv uker før termin, men da blir det færre uker av fellesperioden."
             }
         ],
         "markDefs": []

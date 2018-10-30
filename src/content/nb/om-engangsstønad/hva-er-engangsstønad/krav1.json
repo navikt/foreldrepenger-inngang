@@ -11,11 +11,14 @@
         "style": "normaltekst",
         "children": [
             {
-                "type": "span",
-                "text": "I noen tilfeller kan far eller medmor få stønaden. ",
-                "marks": []
+              "type": "span",
+                "text": "I noen tilfeller kan "
             },
-            { "type": "span", "text": "Les mer om unntak", "marks": ["url_les_mer"] }
+            {
+                "type": "span",
+                "text": "far eller medmor få engangsstønad.",
+                "marks": ["url_les_mer"]
+            }
         ],
         "markDefs": [
             { "key": "url_les_mer", "type": "link", "href": "#far-eller-medmor" }
