@@ -31,7 +31,7 @@ const sections = [
     'hva-kan-jeg-fa',
     'hvis-du-skal-pa-ferie',
     'hvis-du-vil-jobbe',
-    'hvis_noen_av_dere_blir_syke',
+    'hvis-en-av-dere-blir-syke',
     'hjemme-samtidig',
     'andre-inntekter-som-gir-rett',
     'adoptere'
