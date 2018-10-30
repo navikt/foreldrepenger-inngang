@@ -74,29 +74,11 @@
         "children": [
             {
                 "type": "span",
-                "text": "Klikk her for å søke på papir",
-                "marks": ["modal_link", "external_link"]
-            }
-        ],
-        "markDefs": [
-            {
-                "key": "modal_link",
-                "type": "link",
-                "href": "https://www.nav.no/no/Person/Skjemaer-for-privatpersoner/Skjemaer/Familie/foreldrepenger-og-engangsstonad/Foreldrepenger+og+engangsst%C3%B8nad?method=mail&veiledertype=privatperson"
-            }
-        ]
-    },
-    {
-        "type": "avsnitt",
-        "style": "normaltekst",
-        "children": [
-            {
-                "type": "span",
-                "text": "Den elektroniske søknaden støtter ikke adopsjon. "
+                "text": "Skal du søke som far, medmor eller ved adopsjon, må du "
             },
             {
                 "type": "span",
-                "text": "Klikk her for å søke på papir",
+                "text": "søke på papir.",
                 "marks": ["modal_link_to", "external_link"]
             }
         ],
