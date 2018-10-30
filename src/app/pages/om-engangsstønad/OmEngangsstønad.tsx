@@ -53,7 +53,6 @@ const OmEngangsstonad: React.StatelessComponent<Props & IntlProps> = ({ location
 const OmEngangsstønadHeader = () => {
     return (
         <HeaderInformasjon
-            title={'Om engangsstønad - www.nav.no'}
             siteDescription={'Vilkår og informasjon rundt engangsstønad'}
             propTitle={'nav.no engangstønad-informasjon'}
             propDescription={'Vilkår og informasjon rundt engangsstønad'}

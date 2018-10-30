@@ -21,7 +21,6 @@ const HvaSøkerDu: React.StatelessComponent<Props & IntlProps> = ({ location, la
     return (
         <div>
             <Helmet>
-                <title>Hva søker du - www.nav.no</title>
                 <meta charSet="utf-8" />
                 <meta name="description" content="velg stønad du vil søke etter" />
 

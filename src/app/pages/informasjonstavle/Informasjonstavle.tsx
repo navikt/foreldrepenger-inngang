@@ -75,8 +75,7 @@ const BildelenkerWithoutIntl: StatelessComponent<IntlProps> = ({ lang }) => {
 const InformasjonstavleHeader = () => {
     return (
         <HeaderInformasjon
-            title={'Foreldrepengesidene - www.nav.no'}
-            siteDescription={'Foreldrepengesidene til nav.no'}
+            siteDescription={'Foreldrepenger til nav.no'}
             propTitle={'Foreldrepengesidene til nav.no'}
             propDescription={'Forsiden for foreldrepenger, engangsstønad og svangerskapspenger'}
             imageUrl={'/dist/assets/tmp_forsiden.png'}

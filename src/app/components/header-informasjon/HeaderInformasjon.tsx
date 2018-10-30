@@ -10,7 +10,7 @@ const HeaderInformasjon = ({
     siteUrl,
     imageLargeUrl
 }: {
-    title: string;
+    title?: string;
     siteDescription: string;
     propTitle: string;
     propDescription: string;
@@ -20,7 +20,7 @@ const HeaderInformasjon = ({
 }) => {
     return (
         <Helmet>
-            <title>{title}</title>
+            {title && <title>{title}</title>}
             <meta charSet="utf-8" />
             <meta name="description" content={siteDescription} />
             <meta property="og:title" content={propTitle} />

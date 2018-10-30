@@ -40,7 +40,6 @@ const sections = [
 const OmForeldrepengerHeader = () => {
     return (
         <HeaderInformasjon
-            title={'Om foreldrepenger - wwww.nav.no'}
             siteDescription={'finn ut hva du har rett til av foreldrepenger'}
             propTitle={'om foreldrepenger'}
             propDescription={'finn ut hva du har rett til av foreldrepenger'}

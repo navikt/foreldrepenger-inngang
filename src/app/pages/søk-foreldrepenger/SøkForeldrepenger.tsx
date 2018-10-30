@@ -100,7 +100,6 @@ class SøkForeldrepenger extends Component<Props & IntlProps> {
 const SøkForeldrepengerHeader = () => {
     return (
         <HeaderInformasjon
-            title={'foreldrepenger - www.nav.no'}
             siteDescription={'nav.no Søk om foreldrepenger'}
             propTitle={'nav.no foreldrepenger'}
             propDescription={'nav.no Søk om foreldrepenger'}
