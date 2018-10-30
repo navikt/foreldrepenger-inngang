@@ -58,6 +58,9 @@ const Beregning: React.StatelessComponent<Props & IntlProps> = ({ id, lang }) =>
             svg={beregningSvg}>
             <StrukturertTekst tekst={getContent('all-informasjon/beregning/beregning', lang)} />
             <Innholdsfaner tabs={tabs} section={section} />
+            <StrukturertTekst
+                tekst={getContent('all-informasjon/beregning/beregning-del2', lang)}
+            />
         </PanelMedIllustrasjon>
     );
 };

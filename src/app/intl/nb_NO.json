@@ -47,6 +47,7 @@
     "route.svangerskapspenger": "Svangerskapspenger",
     "route.viktige-frister": "Viktige frister",
     "route.blindside": "Uferdig side!",
+    "route.nye-beregningsregler": "Nye beregningsregler",
 
 
     "informasjonstavle.tittel": "Foreldrepenger, engangsstønad og svangerskapspenger",
@@ -146,6 +147,8 @@
     "om_foreldrepenger.nye_regler.før_beskrivelse": "Av den totale foreldrepengeperioden er 10 uker satt av til hver av foreldrene (kvoten). Får dere flere barn samtidig, får dere fem eller syv uker ekstra for hvert barn mer enn ett.",
     "om_foreldrepenger.nye_regler.etter": "etter 1. juli 2018",
     "om_foreldrepenger.nye_regler.etter_beskrivelse": "Av den totale foreldrepengeperioden er 15 uker satt av til hver av foreldrene (kvoten). Får dere to barn samtidig, får dere 17 eller 21 uker ekstra. Får dere tre eller flere barn, får dere 46 eller 56 uker ekstra.",
+
+    "om_foreldrepenger.nye_beregningsregler.header": "Nye regler for beregning av foreldrepenger 1. januar 2019",
 
     "om_foreldrepenger.menHvaHvis.ferie": "ta ut ferie",
     "om_foreldrepenger.menHvaHvis.jobb_i_periode": "jobbe i perioden",
