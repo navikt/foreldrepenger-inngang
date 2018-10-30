@@ -18,7 +18,7 @@ const getInformasjonsfaner = (lang: Language) => [
             tittel: 'til mor',
             icon: 'medmor1',
             antallUker: '49/59',
-            punktliste: [],
+            punktliste: [getTranslation('om_foreldrepenger.hvor_lenge.fordeling.krav.default', lang)],
             component: <StrukturertTekst tekst={getContent(morsDel, lang)} />
         }
     },
@@ -29,7 +29,7 @@ const getInformasjonsfaner = (lang: Language) => [
             tittel: 'til far',
             icon: 'far1',
             antallUker: '46/56',
-            punktliste: [],
+            punktliste: [getTranslation('om_foreldrepenger.hvor_lenge.fordeling.krav.som_far', lang)],
             component: <StrukturertTekst tekst={getContent(farsDel, lang)} />
         }
     }
