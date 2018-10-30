@@ -8,7 +8,7 @@ import { getContent } from '../../../utils/getContent';
 import Foreldrepar from 'app/components/foreldrepar/Foreldrepar';
 
 const farOgFarContent = 'all-informasjon/hva-er-foreldrepenger/far-og-far/far-og-far';
-const farOgFarContent2 = 'all-informasjon/hva-er-foreldrepenger/far-og-far/far-og-far-del2';
+const kalkulatorbeskrivelse = 'all-informasjon/hva-er-foreldrepenger/kalkulatorbeskrivelse';
 const farOgFarFane = 'all-informasjon/hva-er-foreldrepenger/far-og-far/far-og-far-fane';
 
 const getInformasjonsfaner = (lang: Language) => [
@@ -32,7 +32,7 @@ const FarOgFar = ({ lang }: { lang: Language }) => {
                 tabs={getInformasjonsfaner(lang)}
                 title={getTranslation('om_foreldrepenger.hvor_lenge.fordeling.tittel', lang)}
             />
-            <StrukturertTekst tekst={getContent(farOgFarContent2, lang)} />
+            <StrukturertTekst tekst={getContent(kalkulatorbeskrivelse, lang)} />
             <Kalkulator />
         </div>
     );

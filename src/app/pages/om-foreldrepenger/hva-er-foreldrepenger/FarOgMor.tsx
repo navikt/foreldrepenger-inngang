@@ -8,7 +8,7 @@ import { getContent } from '../../../utils/getContent';
 import Foreldrepar from 'app/components/foreldrepar/Foreldrepar';
 
 const farOgMorContent = 'all-informasjon/hva-er-foreldrepenger/far-og-mor/far-og-mor';
-const farOgMorContent2 = 'all-informasjon/hva-er-foreldrepenger/far-og-mor/far-og-mor-del2';
+const kalkulatorbeskrivelse = 'all-informasjon/hva-er-foreldrepenger/kalkulatorbeskrivelse';
 const morsdel = 'all-informasjon/hva-er-foreldrepenger/far-og-mor/mors-del';
 const fellesdel = 'all-informasjon/hva-er-foreldrepenger/far-og-mor/felles-del';
 const farsdel = 'all-informasjon/hva-er-foreldrepenger/far-og-mor/fars-del';
@@ -71,7 +71,7 @@ const FarOgMor = ({ lang }: { lang: Language }) => {
         <div>
             <StrukturertTekst tekst={getContent(farOgMorContent, lang)} />
             <Informasjonsfaner tabs={getInformasjonsfaner(lang)} />
-            <StrukturertTekst tekst={getContent(farOgMorContent2, lang)} />
+            <StrukturertTekst tekst={getContent(kalkulatorbeskrivelse, lang)} />
             <Kalkulator />
         </div>
     );
