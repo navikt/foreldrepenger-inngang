@@ -47,11 +47,11 @@ class PopUpModal extends Component<Props & IntlProps> {
 
         return (
             <div className={cls.className}>
-                <Lenke id="engangsstonadModal" href={'#'} onClick={this.openModal}>
-                    <TypografiBase type="normaltekst">
+                <TypografiBase type="normaltekst">
+                    <Lenke id="engangsstonadModal" href={'#'} onClick={this.openModal}>
                         {getTranslation('hva_søker_du.engangsstønad_modal', this.props.lang)}
-                    </TypografiBase>
-                </Lenke>
+                    </Lenke>
+                </TypografiBase>
                 <Modal
                     isOpen={this.state.modalIsOpen}
                     onRequestClose={this.closeModal}
