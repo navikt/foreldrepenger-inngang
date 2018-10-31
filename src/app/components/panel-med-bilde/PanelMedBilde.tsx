@@ -7,6 +7,7 @@ import BEMHelper from '../../utils/bem';
 import { FlexibleSvg } from '../../utils/CustomSVG';
 import { WithLink } from '../../utils/withLink';
 import './panelMedBilde.less';
+import MediaQuery from 'react-responsive';
 
 const cls = BEMHelper('panelMedBilde');
 
@@ -43,12 +44,22 @@ const PanelMedBilde = ({
             urlIsExternal={urlIsExternal}>
             <div className={cls.element('imageOnPanel')}>
                 <div className={cls.element('svgContainer')}>
-                    <FlexibleSvg
-                        className={cls.element('svg')}
-                        iconRef={svgFile}
-                        height={115}
-                        width="100%"
-                    />
+                    <MediaQuery maxWidth={799}>
+                        <FlexibleSvg
+                            className={cls.element('svg')}
+                            iconRef={svgFile}
+                            height={80}
+                            width="100%"
+                        />
+                    </MediaQuery>
+                    <MediaQuery minWidth={800}>
+                        <FlexibleSvg
+                            className={cls.element('svg')}
+                            iconRef={svgFile}
+                            height={100}
+                            width="100%"
+                        />
+                    </MediaQuery>
                 </div>
             </div>
             <PanelBase border={false} className={cls.element('panelOnPanel')}>
