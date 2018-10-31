@@ -34,9 +34,7 @@ const getInformasjonsfaner = (lang: Language) => [
             tittel: 'til far',
             icon: 'far1',
             antallUker: '15',
-            punktliste: [
-                getTranslation('om_foreldrepenger.hvor_lenge.fordeling.krav.default', lang)
-            ],
+            punktliste: [getTranslation('om_foreldrepenger.hvor_lenge.fordeling.krav.far', lang)],
             component: <StrukturertTekst tekst={getContent(farsdel, lang)} />
         }
     },

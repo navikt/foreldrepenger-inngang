@@ -131,6 +131,7 @@
     "om_foreldrepenger.hvor_lenge.fordeling.første_fedrekvote": "Far 1",
     "om_foreldrepenger.hvor_lenge.fordeling.andre_fedrekvote": "Far 2",
     "om_foreldrepenger.hvor_lenge.fordeling.krav.default": "Ingen krav til hva far gjør",
+    "om_foreldrepenger.hvor_lenge.fordeling.krav.far": "Ingen krav til hva mor gjør",
     "om_foreldrepenger.hvor_lenge.fordeling.krav.morOgMor_krav": "Ingen krav til hva medmor gjør",
     "om_foreldrepenger.hvor_lenge.fordeling.krav.som_far": "Ingen krav til hva mor gjør",
     "om_foreldrepenger.hvor_lenge.fordeling.krav.kan_ikke_overtas_av": "Kan ikke overtas av",
