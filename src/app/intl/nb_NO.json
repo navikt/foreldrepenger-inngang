@@ -60,7 +60,7 @@
     "informasjonstavle.gå_rett_til_søknaden_body": "Her kan du søke om foreldrepenger, engangsstønad eller svangerskapspenger.",
     "informasjonstavle.mer_informasjon.tittel": "Utfyllende informasjon",
     "informasjonstavle.mer_informasjon.foreldrepenger": "Foreldrepengene skal erstatte inntekten din når du skal være hjemme med barnet.",
-    "informasjonstavle.mer_informasjon.engangsstønad": "Hvis du venter barn og ikke hatt inntekt det siste året, kan du får en engangssum istedenfor foreldrepenger.",
+    "informasjonstavle.mer_informasjon.engangsstønad": "Hvis du venter barn og ikke hatt inntekt det siste året, kan du få en engangssum istedenfor foreldrepenger.",
     "informasjonstavle.mer_informasjon.svangerskapspenger": "Hvis du er gravid men ikke kan fortsette å jobbe under svangerskapet, kan du ha rett til svangerskapspenger.",
 
 
@@ -136,7 +136,10 @@
     "om_foreldrepenger.hvor_lenge.fordeling.krav.kan_ikke_overtas_av": "Kan ikke overtas av",
     "om_foreldrepenger.hvor_lenge.fordeling.krav.aktivitetskrav_til": "Aktivitetskrav til",
     "om_foreldrepenger.hvor_lenge.fordeling.krav.aktivitetskrav_til.felles": "Krav til hva mor gjør",
-    
+    "om_foreldrepenger.hvor_lenge.fordeling.krav.far1": "15 uker hvis adopsjon",
+    "om_foreldrepenger.hvor_lenge.fordeling.krav.far2": "Kan ikke overtas av far 1",
+    "om_foreldrepenger.hvor_lenge.fordeling.krav.fellesPerioden": "Aktivitetskrav til far 1",
+
     "om_foreldrepenger.ferie.tittel": "Hvis du skal på ferie",
     "om_foreldrepenger.ferie.eksempel_label": "Eksempel på hvordan du kan forlenge foreldrepengeperioden din når du utsetter:",
     "om_foreldrepenger.ferie.rett_til_utsettelse": "Ferie som gir rett til å utsette",
