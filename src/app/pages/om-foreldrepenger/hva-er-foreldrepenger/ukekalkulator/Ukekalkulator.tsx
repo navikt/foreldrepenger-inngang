@@ -6,9 +6,9 @@ import AntallBarn from './AntallBarn';
 import AntallUker from './AntallUker';
 import DinLønn from './din-lønn/DinLønn';
 import { antallUtbetalingsuker } from './utils';
-import './kalkulator.less';
+import './ukekalkulator.less';
 
-const cls = BEMHelper('kalkulator');
+const cls = BEMHelper('ukekalkulator');
 
 class Kalkulator extends React.Component<IntlProps> {
     state: {

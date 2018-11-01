@@ -9,32 +9,32 @@ import { Link } from 'react-router-dom';
 
 const cls = BEMHelper('infosider');
 
-const HvorMyeOgHvorLenge = ({ lang }: IntlProps) => {
+const Tjenester = ({ lang }: IntlProps) => {
     const reactRouterLink = (props: any) => <Link to={props.href} {...props} />;
 
     return (
         <div className={cls.className}>
-            <Sidebanner text={getTranslation('planlegging.tittel', lang)} />
+            <Sidebanner text={getTranslation('tjenester.tittel', lang)} />
             <div className={cls.element('body')}>
-                <div className={cls.element('content')}>
+                <main className={cls.element('content')}>
                     <Breadcrumbs path={location.pathname} />
 
                     <Lenkepanel
                         tittelProps="undertittel"
-                        href="/planlegging/beregning"
+                        href="/tjenester/kalkulator"
                         linkCreator={reactRouterLink}>
-                        {getTranslation('planlegging.lenke_beregning')}
+                        {getTranslation('tjenester.lenke_beregning')}
                     </Lenkepanel>
 
                     <Lenkepanel
                         tittelProps="undertittel"
                         href={externalUrls.foreldrepengeplanlegger}>
-                        {getTranslation('planlegging.lenke_planlegger')}
+                        {getTranslation('tjenester.lenke_planlegger')}
                     </Lenkepanel>
-                </div>
+                </main>
             </div>
         </div>
     );
 };
 
-export default withIntl(HvorMyeOgHvorLenge);
+export default withIntl(Tjenester);

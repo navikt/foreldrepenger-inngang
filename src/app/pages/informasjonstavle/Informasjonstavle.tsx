@@ -52,7 +52,7 @@ const BildelenkerWithoutIntl: StatelessComponent<IntlProps> = ({ lang }) => {
                 svgName="permisjon-sjekkliste"
                 title={getTranslation('informasjonstavle.hvor_lenge_kan_du_få_permisjon', lang)}
                 urlIsExternal={false}
-                url="/planlegging">
+                url="/tjenester">
                 <Tekstomrade>
                     {getTranslation('informasjonstavle.hvor_lenge_kan_du_få_permisjon_body', lang)}
                 </Tekstomrade>
