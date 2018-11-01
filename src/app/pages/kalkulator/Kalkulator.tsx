@@ -5,40 +5,35 @@ import Breadcrumbs from 'app/components/breadcrumbs/Breadcrumbs';
 import BEMHelper from 'app/utils/bem';
 import classnames from 'classnames';
 import TypografiBase from 'nav-frontend-typografi';
-import {
-    forStortAvvik,
-    lastThreeYears,
-    lastThreeMonths,
-    computeAverage
-} from 'app/utils/beregningUtils';
 import PanelMedIllustrasjon from 'app/components/panel-med-illustrasjon/PanelMedIllustrasjon';
-import { CheckboksPanelGruppe, Input } from 'nav-frontend-skjema';
-import './kalkulator.less';
+import { CheckboksPanelGruppe } from 'nav-frontend-skjema';
 import StrukturertTekst from 'app/components/strukturert-tekst/StrukturertTekst';
 import { getContent } from 'app/utils/getContent';
+import Lønnskalkulator, { Periode } from './Lønnskalkulator';
+import './kalkulator.less';
+import { getDailyPayment, GRUNNBELØPET } from 'app/utils/beregningUtils';
+import CustomSVGFromSprite from 'app/utils/CustomSVG';
 
 const infosiderCls = BEMHelper('infosider');
 const cls = BEMHelper('kalkulator');
 
 type Situasjon = 'arbeidstaker' | 'frilanser' | 'selvstendig_næringsdrivende';
-type Periode = 'måned' | 'år';
 
 const muligeSituasjoner: Situasjon[] = ['arbeidstaker', 'frilanser', 'selvstendig_næringsdrivende'];
-const headerIcon = require('../../assets/ark/ark-info.svg').default;
+const pengerIcon = require('../../assets/icons/penger.svg').default;
+const mindrePengerIcon = require('../../assets/icons/mindre-penger.svg').default;
 
 interface State {
     kalkulatorversjon?: Periode;
     valgteSituasjoner: Situasjon[];
-    snittlønnPerMåned: number;
+    snittlønnPerMåned?: number;
 }
 
 class Planlegger extends React.Component<IntlProps, State> {
     constructor(props: IntlProps) {
         super(props);
         this.state = {
-            kalkulatorversjon: undefined,
-            valgteSituasjoner: [],
-            snittlønnPerMåned: 0
+            valgteSituasjoner: []
         };
     }
 
@@ -60,7 +55,7 @@ class Planlegger extends React.Component<IntlProps, State> {
         });
     };
 
-    onSnittlønnChange = (monthlyWage: number) => {
+    onSnittlønnChange = (monthlyWage?: number) => {
         this.setState({
             snittlønnPerMåned: monthlyWage
         });
@@ -92,7 +87,7 @@ class Planlegger extends React.Component<IntlProps, State> {
                         <PanelMedIllustrasjon
                             maskSvg={true}
                             title={getTranslation('kalkulator.tittel')}
-                            svg={headerIcon}>
+                            svg={pengerIcon}>
                             <StrukturertTekst tekst={getContent('kalkulator/kalkulator', lang)} />
 
                             <TypografiBase type="undertittel">
@@ -108,13 +103,36 @@ class Planlegger extends React.Component<IntlProps, State> {
                                 <div className={cls.element('flexDownwards')}>
                                     <TypografiBase type="undertittel">{fieldsHeader}</TypografiBase>
                                     <TypografiBase type="normaltekst">
-                                        {getTranslation('kalkulator.skriv_inn_lønn_ingress')}
+                                        {getTranslation('kalkulator.skriv_inn_lønn_ingress', lang)}
                                     </TypografiBase>
                                     <Lønnskalkulator
                                         lang={this.props.lang}
                                         periode={this.state.kalkulatorversjon}
                                         onChange={this.onSnittlønnChange}
                                     />
+
+                                    {this.state.snittlønnPerMåned && (
+                                        <div className={cls.element('flexDownwards')}>
+                                            <TypografiBase type="undertittel">
+                                                {getTranslation('kalkulator.resultat.tittel', lang)}
+                                            </TypografiBase>
+
+                                            <output className={cls.element('resultater')}>
+                                                <Resultat
+                                                    lang={this.props.lang}
+                                                    percentage={100}
+                                                    icon={pengerIcon}
+                                                    monthlyWage={this.state.snittlønnPerMåned}
+                                                />
+                                                <Resultat
+                                                    lang={this.props.lang}
+                                                    percentage={80}
+                                                    icon={mindrePengerIcon}
+                                                    monthlyWage={this.state.snittlønnPerMåned}
+                                                />
+                                            </output>
+                                        </div>
+                                    )}
                                 </div>
                             )}
                         </PanelMedIllustrasjon>
@@ -125,99 +143,46 @@ class Planlegger extends React.Component<IntlProps, State> {
     };
 }
 
-interface LønnskalkulatorProps {
-    periode: Periode;
-    onChange: (monthlyAverage: number) => void;
+const Resultat = ({
+    percentage,
+    monthlyWage,
+    icon,
+    lang
+}: {
+    percentage: number;
+    monthlyWage: number;
+    icon: any;
     lang: Language;
-}
+}) => {
+    const annualMax = 6 * GRUNNBELØPET;
+    const monthlyMax = annualMax / 12;
 
-interface LønnskalkulatorState {
-    average: number;
-    lastThreePeriods: string[];
-    fieldValues: Array<number | undefined>;
-    forStortAvvik: boolean;
-}
+    const decimal: number = percentage / 100;
+    const monthlyPayment = Math.min(monthlyWage * decimal, monthlyMax * decimal);
+    const dailyPayment = getDailyPayment(monthlyPayment);
 
-const defaultMonthlyWage = 25000;
-const defaultAnnualWage = 250000;
+    const monthlyPaymentFormatted = Math.round(monthlyPayment).toLocaleString(lang);
+    const dailyPaymentFormatted = Math.round(dailyPayment).toLocaleString(lang);
 
-const getDefaultWage = (periode: Periode): number =>
-    periode === 'måned' ? defaultMonthlyWage : defaultAnnualWage;
+    return (
+        <output className={cls.element('resultat')}>
+            <TypografiBase type="element">{`${percentage} ${getTranslation(
+                'kalkulator.resultat.undertittel'
+            )}`}</TypografiBase>
 
-class Lønnskalkulator extends React.Component<LønnskalkulatorProps, LønnskalkulatorState> {
-    constructor(props: LønnskalkulatorProps) {
-        super(props);
-        this.state = this.recomputeState(props.periode);
-    }
+            <div className={cls.element('divider')} />
+            <TypografiBase type="normaltekst">
+                {getTranslation('kalkulator.resultat.gjennomsnitt_per_måned')}
+            </TypografiBase>
 
-    componentWillReceiveProps = (nextProps: LønnskalkulatorProps) => {
-        if (this.props.periode !== nextProps.periode) {
-            this.setState(this.recomputeState(nextProps.periode));
-        }
-    };
-
-    recomputeState = (periode: Periode): LønnskalkulatorState => {
-        const fieldValues: undefined[] = new Array(3);
-        const lastThreePeriods = periode === 'år' ? lastThreeYears() : lastThreeMonths();
-        const average = computeAverage(fieldValues, getDefaultWage(periode));
-
-        return {
-            average,
-            lastThreePeriods,
-            forStortAvvik: false,
-            fieldValues
-        };
-    };
-
-    onFieldChange = (index: number, event: any) => {
-        const newFieldValues = [...this.state.fieldValues];
-        newFieldValues[index] = event.target.value ? parseInt(event.target.value, 10) : undefined;
-
-        const defaultWage = getDefaultWage(this.props.periode);
-        const average = computeAverage(newFieldValues, defaultWage);
-        this.setState({
-            average,
-            fieldValues: newFieldValues,
-            forStortAvvik: forStortAvvik(average, newFieldValues, defaultWage)
-        });
-    };
-
-    render = () => {
-        const output = `${Math.round(this.state.average).toLocaleString(this.props.lang)} kr`;
-
-        return (
-            <div className={cls.element('lønnskalkulator')}>
-                {this.state.lastThreePeriods.map((period, index) => {
-                    const value =
-                        this.state.fieldValues[index] === undefined
-                            ? ''
-                            : this.state.fieldValues[index];
-
-                    return (
-                        <Input
-                            key={period}
-                            bredde="S"
-                            label={period}
-                            type="number"
-                            placeholder={getDefaultWage(this.props.periode).toString()}
-                            value={value}
-                            onChange={(event: any) => {
-                                this.onFieldChange(index, event);
-                            }}
-                        />
-                    );
-                })}
-                <output>
-                    <label>
-                        <TypografiBase type="element">
-                            {getTranslation('kalkulator.lønn.resultat', this.props.lang)}
-                        </TypografiBase>
-                    </label>
-                    <TypografiBase type="ingress">{output}</TypografiBase>
-                </output>
-            </div>
-        );
-    };
-}
+            <TypografiBase type="undertittel">{`${monthlyPaymentFormatted} kr`}</TypografiBase>
+            <TypografiBase className={cls.element('topMargin')} type="normaltekst">
+                {getTranslation('kalkulator.resultat.dagsats')}
+            </TypografiBase>
+            <TypografiBase type="undertittel">{`${dailyPaymentFormatted} kr`}</TypografiBase>
+            <CustomSVGFromSprite className={cls.element('resultatIcon')} iconRef={icon} size={72} />
+        </output>
+    );
+};
 
 export default withIntl(Planlegger);

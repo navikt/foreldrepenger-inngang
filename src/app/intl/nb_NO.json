@@ -85,6 +85,10 @@
     "kalkulator.skriv_inn_lønn": "Hvor mye tjente du de tre siste",
     "kalkulator.skriv_inn_lønn_ingress": "Oppgi din nettolønn",
     "kalkulator.lønn.resultat": "Gjennomsnittlig månedslønn",
+    "kalkulator.resultat.tittel": "Resultat",
+    "kalkulator.resultat.undertittel": "prosent foreldrepenger",
+    "kalkulator.resultat.gjennomsnitt_per_måned": "Gjennomsnitt utbetalt per måned",
+    "kalkulator.resultat.dagsats": "Dagsats",
 
     "viktige_frister.banner":"Viktige frister",
     "viktige_frister.header": "Husk å søke til rett tid",
