@@ -6,35 +6,58 @@ import BEMHelper from 'app/utils/bem';
 import externalUrls from 'app/utils/externalUrls';
 import Lenkepanel from 'nav-frontend-lenkepanel';
 import { Link } from 'react-router-dom';
+import { StrukturertTekst as StrukturertTekstType } from 'app/utils/strukturertTekst';
+import StrukturertTekst from 'app/components/strukturert-tekst/StrukturertTekst';
+import CustomSVGFromSprite from 'app/utils/CustomSVG';
+import { getContent } from 'app/utils/getContent';
+import './tjenester.less';
 
-const cls = BEMHelper('infosider');
+const infosiderCls = BEMHelper('infosider');
+const cls = BEMHelper('tjenester');
+const kalkulatorIcon = require('../../assets/icons/penger.svg').default;
+const planleggerIcon = require('../../assets/icons/chat.svg').default;
 
 const Tjenester = ({ lang }: IntlProps) => {
     const reactRouterLink = (props: any) => <Link to={props.href} {...props} />;
 
     return (
-        <div className={cls.className}>
+        <div className={infosiderCls.className}>
             <Sidebanner text={getTranslation('tjenester.tittel', lang)} />
-            <div className={cls.element('body')}>
-                <main className={cls.element('content')}>
+            <div className={infosiderCls.element('body')}>
+                <main className={infosiderCls.element('content')}>
                     <Breadcrumbs path={location.pathname} />
 
                     <Lenkepanel
                         tittelProps="undertittel"
                         href="/tjenester/kalkulator"
                         linkCreator={reactRouterLink}>
-                        {getTranslation('tjenester.lenke_beregning')}
+                        <Lenkeinnhold
+                            svg={kalkulatorIcon}
+                            tekst={getContent('tjenester/kalkulatorlenke', lang)}
+                        />
                     </Lenkepanel>
 
                     <Lenkepanel
                         tittelProps="undertittel"
                         href={externalUrls.foreldrepengeplanlegger}>
-                        {getTranslation('tjenester.lenke_planlegger')}
+                        <Lenkeinnhold
+                            svg={planleggerIcon}
+                            tekst={getContent('tjenester/planleggerlenke', lang)}
+                        />
                     </Lenkepanel>
                 </main>
             </div>
         </div>
     );
 };
+
+const Lenkeinnhold = ({ svg, tekst }: { svg: any; tekst: StrukturertTekstType }) => (
+    <div className={cls.element('linkContent')}>
+        <div className={cls.element('svgMask')}>
+            <CustomSVGFromSprite iconRef={svg} size={60} />
+        </div>
+        <StrukturertTekst tekst={tekst} />
+    </div>
+);
 
 export default withIntl(Tjenester);
