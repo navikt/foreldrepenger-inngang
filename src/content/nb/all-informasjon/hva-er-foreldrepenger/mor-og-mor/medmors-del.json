@@ -23,11 +23,36 @@
         "children": [
             {
                 "type": "span",
-                "text": "Du må ta ut medmorkvoten senest når fellesperioden er ferdig, eller søke om utsettelse.",
+                "text": "Du må ta ut medmorkvoten ",
                 "marks": []
+            },
+            {
+                "type": "span",
+                "text": "senest når fellesperioden ",
+                "marks": ["bold"]
+            },
+            {
+                "type": "span",
+                "text": "er ferdig, eller søke om ",
+                "marks": []
+            },
+            {
+                "type": "span",
+                "text": "utsettelse.",
+                "marks": ["bold"]
             }
         ],
         "markDefs": []
+    },
+    {
+      "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Adopterer dere, kan du ta ut medmorkvoten når som helst etter adopsjonsdatoen."
+            }
+        ]
     },
     {
         "type": "avsnitt",
@@ -40,5 +65,26 @@
             }
         ],
         "markDefs": []
+    },
+    {
+        "type": "avsnitt",
+        "style": "undertittel",
+        "children": [
+            {
+                "type": "span",
+                "text": "Hvem regnes som medmor?",
+                "marks": ["bold"]
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Medmor er en som har fått juridisk foreldreansvar for barnet. Hvis du ikke har fått vedtak om medmorskap, kan du få foreldrepenger hvis du stebarnsadopterer og det fortsatt er dager igjen av foreldrepengeperioden."
+            }
+        ]
     }
 ]

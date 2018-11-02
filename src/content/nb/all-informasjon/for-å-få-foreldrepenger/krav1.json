@@ -23,20 +23,20 @@
         "children": [
             {
                 "type": "span",
-                "text": "Som inntekt regnes også enkelte ytelser fra NAV, arbeidsgiver eller militæret. ",
+                "text": "Som inntekt regnes også enkelte ",
                 "marks": []
             },
             {
                 "type": "span",
-                "text": "Les mer",
-                "marks": ["url_arbeidsgiver", "external_link"]
+                "text": "ytelser fra NAV, arbeidsgiver eller militæret.",
+                "marks": ["url_arbeidsgiver"]
             }
         ],
         "markDefs": [
             {
                 "key": "url_arbeidsgiver",
                 "type": "link",
-                "href": "#arbeidsgiver-og-deg"
+                "href": "#andre-inntekter-som-gir-rett"
             }
         ]
     }

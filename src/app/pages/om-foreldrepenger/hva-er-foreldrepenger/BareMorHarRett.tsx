@@ -6,7 +6,7 @@ import { Language, withIntl, getTranslation } from '../../../intl/intl';
 import { getContent } from '../../../utils/getContent';
 
 const content = 'all-informasjon/hva-er-foreldrepenger/bare-mor-har-rett/bare-mor-har-rett';
-const content2 = 'all-informasjon/hva-er-foreldrepenger/bare-mor-har-rett/bare-mor-har-rett-del2';
+const kalkulatorbeskrivelse = 'all-informasjon/hva-er-foreldrepenger/kalkulatorbeskrivelse';
 const morsDel = 'all-informasjon/hva-er-foreldrepenger/bare-mor-har-rett/mors-del';
 
 const getInformasjonsfaner = (lang: Language) => [
@@ -17,12 +17,7 @@ const getInformasjonsfaner = (lang: Language) => [
             tittel: 'til mor',
             icon: 'mor1',
             antallUker: '49/59',
-            punktliste: [
-                `${getTranslation(
-                    'om_foreldrepenger.hvor_lenge.fordeling.krav.aktivitetskrav_til',
-                    lang
-                )} den andre forelderen`
-            ],
+            punktliste: [],
             component: <StrukturertTekst tekst={getContent(morsDel, lang)} />
         }
     }
@@ -33,7 +28,7 @@ const BareMorHarRett = ({ lang }: { lang: Language }) => {
         <div>
             <StrukturertTekst tekst={getContent(content, lang)} />
             <Informasjonsfaner tabs={getInformasjonsfaner(lang)} />
-            <StrukturertTekst tekst={getContent(content2, lang)} />
+            <StrukturertTekst tekst={getContent(kalkulatorbeskrivelse, lang)} />
             <Kalkulator />
         </div>
     );

@@ -23,8 +23,22 @@
         "children": [
             {
                 "type": "span",
-                "text": "Du må ta ut fedrekvoten senest når fellesperioden er ferdig, eller søke om utsettelse.",
+                "text": "Du må ta ut fedrekvoten ",
                 "marks": []
+            },
+            {
+                "type": "span",
+                "text": "senest når fellesperioden ",
+                "marks": ["bold"]
+            },
+            {
+                "type": "span",
+                "text": "er ferdig, eller søke om "
+            },
+            {
+                "type": "span",
+                "text": "utsettelse",
+                "marks": ["bold"]
             }
         ],
         "markDefs": []
@@ -35,8 +49,13 @@
         "children": [
             {
                 "type": "span",
-                "text": "Adopterer dere, kan du ta ut fedrekvoten når som helt etter adopsjonsdatoen.",
+                "text": "Adopterer dere, kan du ta ut fedrekvoten når som helst etter ",
                 "marks": []
+            },
+            {
+                "type": "span",
+                "text": "adopsjonsdatoen.",
+                "marks": ["bold"]
             }
         ],
         "markDefs": []

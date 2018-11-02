@@ -24,7 +24,7 @@
             { "type": "span", "text": "legeerklæring", "marks": ["bold"] },
             {
                 "type": "span",
-                "text": ". Den må beskrive hvordan sykdommen gjør deg helt avhengig av hjelp til å ta deg av barnet, og hvor lenge sykdommen vil vare.",
+                "text": ". Den må beskrive hvordan sykdommen gjør deg helt avhengig av hjelp til å ta deg av barnet, og hvor lenge du vil være helt avhengig av hjelp. Det er ikke nok med vanlig sykmelding.",
                 "marks": []
             }
         ]

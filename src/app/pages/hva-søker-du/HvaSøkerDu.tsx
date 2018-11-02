@@ -8,9 +8,8 @@ import Svangerskapspenger from './Svangerskapspenger';
 import { getTranslation, withIntl, IntlProps } from '../../intl/intl';
 import SvgBanner from '../../components/svg-banner/SvgBanner';
 import Sidebanner from 'app/components/sidebanner/Sidebanner';
-
 import './hvaSøkerDu.less';
-import {Helmet} from "react-helmet";
+import { Helmet } from 'react-helmet';
 
 const cls = BEMHelper('hvaSøkerDu');
 
@@ -25,8 +24,8 @@ const HvaSøkerDu: React.StatelessComponent<Props & IntlProps> = ({ location, la
                 <title>Hva søker du - www.nav.no</title>
                 <meta charSet="utf-8" />
                 <meta name="description" content="velg stønad du vil søke etter" />
-                <meta property="og:title" content="hva søker du"/>
-                <meta property="og:description" content="velg stønad du vil søke etter"/>
+                <meta property="og:title" content="hva søker du" />
+                <meta property="og:description" content="velg stønad du vil søke etter" />
                 <meta property="og:url" content="https://familie.nav.no/hva-soker-du" />
             </Helmet>
             <div className={cls.className}>

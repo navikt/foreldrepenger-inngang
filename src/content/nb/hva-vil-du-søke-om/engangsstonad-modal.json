@@ -1,0 +1,93 @@
+[
+    {
+        "type": "avsnitt",
+        "style": "undertittel",
+        "children": [
+            {
+                "type": "span",
+                "text": "Far, medmor eller adopsjon",
+                "marks": ["bold"]
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Hvis du er far eller medmor til barnet, kan du i noen tilfeller få engangsstønad. Det kan gjelde"
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "listItem": "bullet",
+        "level": 1,
+        "children": [
+            {
+                "type": "span",
+                "text": "for hvert barn du adopterer alene"
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "listItem": "bullet",
+        "level": 1,
+        "children": [
+            {
+                "type": "span",
+                "text": "om du overtar foreldreansvar eller dersom den andre foreldren dør"
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "listItem": "bullet",
+        "level": 1,
+        "children": [
+            {
+                "type": "span",
+                "text": "når du får tildelt foreldreansvar"
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "listItem": "bullet",
+        "level": 1,
+        "children": [
+            {
+                "type": "span",
+                "text": "hvis du innen 56 uker etter barnet ble født eller adoptert, har overtatt omsorgen for barnet med sikte på å overta foreldreansvaret alene"
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Skal du søke som far, medmor eller ved adopsjon, må du "
+            },
+            {
+                "type": "span",
+                "text": "søke på papir.",
+                "marks": ["modal_link_to", "external_link"]
+            }
+        ],
+        "markDefs": [
+            {
+                "key": "modal_link_to",
+                "type": "link",
+                "href": "https://www.nav.no/no/Person/Skjemaer-for-privatpersoner/Skjemaer/Familie/foreldrepenger-og-engangsstonad/Foreldrepenger+og+engangsst%C3%B8nad?method=mail&veiledertype=privatperson"
+            }
+        ]
+    }
+]

@@ -5,35 +5,8 @@
         "children": [
             {
                 "type": "span",
-                "text": "Hvis du er biologisk far til barnet, må du ta ut de ",
-                "marks": []
-            },
-            { "type": "span", "text": "første seks ukene", "marks": ["bold"] },
-            {
-                "type": "span",
-                "text": " rett etter fødselen. Disse ukene kan ikke kombineres med arbeid eller ferie. De ",
-                "marks": []
-            },
-            { "type": "span", "text": "siste ni ukene", "marks": ["bold"] },
-            {
-                "type": "span",
-                "text": " kan du ta ut rett etterpå eller spare til senere.",
-                "marks": []
-            }
-        ],
-        "markDefs": []
-    },
-    {
-        "type": "avsnitt",
-        "style": "normaltekst",
-        "listItem": "bullet",
-        "level": 1,
-        "children": [
-            { "type": "span", "text": "Adopterer", "marks": ["bold"] },
-            {
-                "type": "span",
-                "text": " dere, kan dere velge hvem av dere som skal ta denne kvoten.",
-                "marks": []
+                "text": "Hvis dere får barn ved surrogati",
+                "marks": ["bold"]
             }
         ]
     },
@@ -43,10 +16,90 @@
         "children": [
             {
                 "type": "span",
-                "text": "Hvis du er så syk at du er helt avhengig av hjelp til å ta deg av barnet, kan den andre forelderen søke om å overta kvoten din.",
-                "marks": []
+                "text": "Du som er "
+            },
+            {
+                "type": "span",
+                "text": "biologisk far",
+                "marks": ["bold"]
+            },
+            {
+                "type": "span",
+                "text": " til barnet får vanligvis hele foreldrepengeperioden som "
+            },
+            {
+                "type": "span",
+                "text": "far 1."
+            },
+            {
+                "type": "span",
+                "text": " Den andre faren kan få foreldrepenger hvis han "
+            },
+            {
+                "type": "span",
+                "text": "stebarnsadopterer",
+                "marks": ["bold"]
+            },
+            {
+                "type": "span",
+                "text": " og det fortsatt er dager igjen av foreldrepengeperioden."
             }
-        ],
-        "markDefs": []
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Farskapet til deg som biologisk far må være godkjent i Norge for at du skal få foreldrepenger."
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Hvis dere begge er adoptivforeldre",
+                "marks": ["bold"]
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Dere kan "
+            },
+            {
+                "type": "span",
+                "text": "velge",
+                "marks": ["bold"]
+            },
+            {
+                "type": "span",
+                "text": " hvem av dere som skal starte foreldrepengeperioden som "
+            },
+            {
+                "type": "span",
+                "text": "far 1."
+            },
+            {
+                "type": "span",
+                "text": " Du som starter får "
+            },
+            {
+                "type": "span",
+                "text": "15 uker "
+            },
+            {
+                "type": "span",
+                "text": "satt av til deg. Perioden din starter ved adopsjonsdatoen."
+            }
+        ]
     }
 ]

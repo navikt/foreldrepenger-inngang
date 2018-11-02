@@ -13,10 +13,11 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+        align-items: center;
+        background-color: white;
         border-radius: 4px 4px 0 0;
         height: 68px;
         margin-bottom: @box-spacing;
-        padding-left: 1rem;
     }
 
     &__links {
@@ -25,31 +26,28 @@
         align-items: stretch;
     }
 
-    &__inner {
+    &__link {
         display: flex;
         flex-direction: row;
-        padding: 20px;
-    }
-
-    &__link {
+        justify-content: space-between;
+        align-items: stretch;
         background-color: white;
         color: black;
-
+        padding: 20px;
         text-decoration: none;
         .containText();
 
-        &:nth-child(1),
-        &:nth-child(2) {
+        &:nth-child(1), &:nth-child(2) {
             margin-bottom: @box-spacing;
         }
 
         &:nth-child(3) {
             border-radius: 0 0 4px 4px;
         }
-
+        
         &:hover {
             color: #0067c5;
-            box-shadow: #b7b1a9 0 2px 1px 0;
+            box-shadow: #B7B1A9 0 2px 1px 0;
             cursor: pointer;
 
             .typo-undertittel {
@@ -64,7 +62,7 @@
         &:focus {
             outline: none;
             background-color: white;
-            box-shadow: 0 0 0 3px #ffbd66;
+            box-shadow: 0 0 0 3px #FFBD66;
         }
 
         .typo-undertittel {
@@ -99,59 +97,11 @@
             justify-content: space-between;
         }
 
-        &__inner {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            align-items: stretch;
-            padding: 20px;
-            height: 100%;
-            color: black;
-            text-decoration: none;
-
-            &:hover {
-                color: #0067c5;
-                box-shadow: #b7b1a9 0 2px 1px 0;
-                cursor: pointer;
-
-                .typo-undertittel {
-                    text-decoration: underline;
-                }
-
-                .nav-frontend-chevron {
-                    left: 6px;
-                }
-            }
-
-            &:focus {
-                outline: none;
-                background-color: white;
-                box-shadow: 0 0 0 3px #ffbd66;
-            }
-
-            .typo-undertittel {
-                font-size: 18px;
-                margin-bottom: 8px;
-            }
-
-            .typo-normal {
-                overflow: hidden;
-                word-break: normal;
-                .containText();
-            }
-        }
-
-        .disabled .typo-undertittel {
-            color: #78706a;
-            text-decoration: none;
-        }
-
         &__link {
             flex: 1;
             flex-direction: column;
 
-            &:nth-child(1),
-            &:nth-child(2) {
+            &:nth-child(1), &:nth-child(2) {
                 margin-bottom: 0;
                 margin-right: @box-spacing;
             }

@@ -63,7 +63,7 @@ class MenHvaHvis extends React.Component<Props> {
             <div className={cls.element('body')}>
                 <WithLink
                     style={{ height: this.state.svgSize, width: this.state.svgSize }}
-                    url={'#ta-ut-ferie'}
+                    url={'#hvis-du-skal-pa-ferie'}
                     noStyling={true}
                     ariaLabel={getTranslation('om_foreldrepenger.menHvaHvis.ferie')}>
                     <NoenVilPaFerie size={this.state.svgSize} />
@@ -71,7 +71,7 @@ class MenHvaHvis extends React.Component<Props> {
 
                 <WithLink
                     style={{ height: this.state.svgSize, width: this.state.svgSize }}
-                    url={'#jobbe-i-perioden'}
+                    url={'#hvis-du-vil-jobbe'}
                     noStyling={true}
                     ariaLabel={getTranslation('om_foreldrepenger.menHvaHvis.jobb_i_periode')}>
                     <JegVilJobbe size={this.state.svgSize} />
@@ -79,7 +79,7 @@ class MenHvaHvis extends React.Component<Props> {
 
                 <WithLink
                     style={{ height: this.state.svgSize, width: this.state.svgSize }}
-                    url={'#noen-blir-syke'}
+                    url={'#hvis-en-av-dere-blir-syke'}
                     noStyling={true}
                     ariaLabel={getTranslation('om_foreldrepenger.menHvaHvis.blirSyk')}>
                     <EnAvOssBlirSyk size={this.state.svgSize} />

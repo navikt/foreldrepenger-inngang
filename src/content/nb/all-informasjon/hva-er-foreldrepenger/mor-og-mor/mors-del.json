@@ -13,11 +13,21 @@
             { "type": "span", "text": "ni ukene", "marks": ["bold"] },
             {
                 "type": "span",
-                "text": " kan du ta ut rett etterpå eller spare til senere. ",
+                "text": " kan du ta ut rett etterpå eller spare til senere.",
                 "marks": []
             }
         ],
         "markDefs": []
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Adopterer dere, kan du ta ut din del når som helst etter adopsjonsdatoen."
+            }
+        ]
     },
     {
         "type": "avsnitt",
@@ -44,10 +54,21 @@
         "children": [
             {
                 "type": "span",
-                "text": "Du får foreldrepenger fra tre uker før terminen. Hvis du ønsker det kan du ta ut foreldrepenger inntil 12 uker før termin, men da blir det færre uker av fellesperioden.",
+                "text": "Du får foreldrepenger fra og ",
+                "marks": []
+            },
+            {
+                "type": "span",
+                "text": "med tre uker før terminen",
+                "marks": ["bold"]
+            },
+            {
+                "type": "span",
+                "text": ". Du kan også ta ut foreldrepenger inntil 12 uker før termin, men da blir det færre uker av fellesperioden.",
                 "marks": []
             }
         ],
         "markDefs": []
     }
+
 ]

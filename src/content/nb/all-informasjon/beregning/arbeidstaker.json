@@ -39,7 +39,7 @@
       "children": [
           {
               "type": "span",
-              "text": "fast arbeidstid og timelønn, brukes de siste tre eller seks månedene",
+              "text": "fast arbeidstid og timelønn, brukes de siste fire ukene",
               "marks": []
           }
       ]
@@ -81,23 +81,5 @@
           }
       ],
       "markDefs": []
-  },
-  {
-      "type": "avsnitt",
-      "style": "normaltekst",
-      "children": [
-          {
-              "type": "span",
-              "text": "Les om nye beregningsregler fra 1. januar",
-              "marks": ["url_Les_om_nye_beregningsregler_fra_1._januar", "external_link"]
-          }
-      ],
-      "markDefs": [
-          {
-              "key": "url_Les_om_nye_beregningsregler_fra_1._januar",
-              "type": "link",
-              "href": "https://www.nav.no/no/Person/Familie/Venter+du+barn/Relatert+informasjon/beregning-av-foreldrepenger"
-          }
-      ]
   }
 ]
