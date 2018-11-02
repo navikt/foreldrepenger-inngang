@@ -12,24 +12,25 @@ const ButtonPanel = ({
     parentCls,
     buttonText,
     buttonUrl,
-    linkText,
-    linkUrl,
     externalLink,
-    helpText
+    helpSection
 }: {
     parentCls: BEMWrapper;
     buttonText: string;
     buttonUrl: string;
-    linkText: string;
-    linkUrl: string;
     externalLink?: boolean;
-    helpText: string;
+    helpSection?: {
+        linkText: string;
+        linkUrl: string;
+        helpText: string;
+    };
 }) => {
     return (
         <div className={cls.className}>
             <WithLink
                 urlIsExternal={externalLink}
                 noStyling={true}
+                noTabbing={true}
                 className={cls.element('noBorder')}
                 url={buttonUrl}>
                 <KnappBase
@@ -38,7 +39,13 @@ const ButtonPanel = ({
                     {buttonText}
                 </KnappBase>
             </WithLink>
-            <UserHelp linkText={linkText} linkUrl={linkUrl} helpText={helpText} />
+            {helpSection && (
+                <UserHelp
+                    linkText={helpSection.linkText}
+                    linkUrl={helpSection.linkUrl}
+                    helpText={helpSection.helpText}
+                />
+            )}
         </div>
     );
 };

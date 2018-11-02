@@ -6,7 +6,7 @@ import { Language, withIntl, getTranslation } from '../../../intl/intl';
 import { getContent } from '../../../utils/getContent';
 
 const content = 'all-informasjon/hva-er-foreldrepenger/bare-far-har-rett/bare-far-har-rett';
-const content2 = 'all-informasjon/hva-er-foreldrepenger/bare-far-har-rett/bare-far-har-rett-del2';
+const kalkulatorbeskrivelse = 'all-informasjon/hva-er-foreldrepenger/kalkulatorbeskrivelse';
 const farsDel = 'all-informasjon/hva-er-foreldrepenger/bare-far-har-rett/fars-del';
 
 const getInformasjonsfaner = (lang: Language) => [
@@ -33,7 +33,7 @@ const BareFarHarRett = ({ lang }: { lang: Language }) => {
         <div>
             <StrukturertTekst tekst={getContent(content, lang)} />
             <Informasjonsfaner tabs={getInformasjonsfaner(lang)} />
-            <StrukturertTekst tekst={getContent(content2, lang)} />
+            <StrukturertTekst tekst={getContent(kalkulatorbeskrivelse, lang)} />
             <Kalkulator />
         </div>
     );

@@ -1,9 +1,9 @@
 [
     {
         "type": "avsnitt",
-        "style": "element",
+        "style": "undertittel",
         "children": [
-            { "type": "span", "text": "Være mor til barnet", "marks": [] }
+            { "type": "span", "text": "Jeg er mor til barnet", "marks": [] }
         ]
     },
     {
@@ -11,14 +11,17 @@
         "style": "normaltekst",
         "children": [
             {
-                "type": "span",
-                "text": "I noen tilfeller kan far få stønaden. ",
-                "marks": []
+              "type": "span",
+                "text": "I noen tilfeller kan "
             },
-            { "type": "span", "text": "Les mer", "marks": ["url_Les_mer", "external_link"] }
+            {
+                "type": "span",
+                "text": "far eller medmor få engangsstønad.",
+                "marks": ["url_les_mer"]
+            }
         ],
         "markDefs": [
-            { "key": "url_Les_mer", "type": "link", "href": "www.nav.no" }
+            { "key": "url_les_mer", "type": "link", "href": "#far-eller-medmor" }
         ]
     }
 ]

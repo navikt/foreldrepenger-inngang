@@ -1,0 +1,226 @@
+[
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Nye beregningsregler gjelder for deg som skal starte foreldrepengeperioden den 1. januar 2019 eller senere.",
+                "marks": []
+            }
+        ],
+        "markDefs": []
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Foreldrepenger skal beregnes og fastsettes som en månedsinntekt. Etter de nye reglene skal foreldrepenger regnes ut fra de tre siste kalendermånedene før foreldrepengeperioden din starter.",
+                "marks": []
+            }
+        ],
+        "markDefs": []
+    },
+    {
+        "type": "avsnitt",
+        "style": "undertittel",
+        "children": [
+            {
+                "type": "span",
+                "text": "Hovedregelen for beregning etter nye regler",
+                "marks": []
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Månedsinntekten skal som hovedregel regnes ut fra gjennomsnittet av inntekten du har hatt i de tre siste kalendermånedene før foreldrepengeperioden din starter. Dette gjelder både hvis du er fast ansatt eller har skiftende arbeidsperioder eller inntekter. ",
+                "marks": []
+            }
+        ],
+        "markDefs": []
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "listItem": "bullet",
+        "level": 1,
+        "children": [
+            {
+                "type": "span",
+                "text": "Hvis arbeidsforholdet ditt har vart under tre måneder, skal foreldrepenger regnes ut fra inntekten du har hatt i den perioden du har vært i jobb. Inntekten din regnes om til en månedsinntekt. ",
+                "marks": []
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "listItem": "bullet",
+        "level": 1,
+        "children": [
+            {
+                "type": "span",
+                "text": "Hvis du har hatt ferie eller korte perioder med tilfeldig ulønnet permisjon i perioden du har hatt inntekt, fastsettes inntekten din til det du vanligvis ville hatt hvis du hadde vært i jobb.",
+                "marks": []
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "undertittel",
+        "children": [
+            { "type": "span", "text": "Inntekt som frilanser", "marks": [] }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Foreldrepenger skal regnes ut på samme måte som for arbeidstakere. Det vil si at det skal regnes ut fra inntekten du har hatt i de tre siste kalendermånedene før foreldrepengeperioden din starter..",
+                "marks": []
+            }
+        ],
+        "markDefs": []
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "listItem": "bullet",
+        "level": 1,
+        "children": [
+            {
+                "type": "span",
+                "text": "Hvis du har jobbet så kort tid at det ikke er rapportert frilansinntekt for tre hele måneder til a-ordningen, skal inntekten for dette kortere tidsrommet brukes i beregningen. ",
+                "marks": []
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "listItem": "bullet",
+        "level": 1,
+        "children": [
+            {
+                "type": "span",
+                "text": "Hvis du både er arbeidstaker og frilanser skal inntektene beregnes hver for seg og legges sammen til ett beløp. Hvis du har en samlet inntekt over seks ganger grunnbeløpet, er det inntekten din som arbeidstaker som legges i bunnen av beregningen.",
+                "marks": []
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "undertittel",
+        "children": [
+            {
+                "type": "span",
+                "text": "Inntekt som både frilanser og selvstendig næringsdrivende",
+                "marks": []
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Beregningsgrunnlaget blir det samme som for arbeidstakere med inntekt som både arbeidstaker og selvstendig næringsdrivende. Inntekten som frilanser skal alltid ligge i bunnen for beregningen. Frilansinntekten opp til seks ganger grunnbeløpet dekkes alltid fullt ut. ",
+                "marks": []
+            }
+        ],
+        "markDefs": []
+    },
+    {
+        "type": "avsnitt",
+        "style": "undertittel",
+        "children": [
+            {
+                "type": "span",
+                "text": "Hvis du har ytelser fra NAV",
+                "marks": []
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "listItem": "bullet",
+        "level": 1,
+        "children": [
+            { "type": "span", "text": "Hvis du mottar ", "marks": [] },
+            { "type": "span", "text": "sykepenger", "marks": ["bold"] },
+            {
+                "type": "span",
+                "text": " når foreldrepengeperioden starter, blir foreldrepengene dine beregnet til det samme som du får i sykepenger. ",
+                "marks": []
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "listItem": "bullet",
+        "level": 1,
+        "children": [
+            { "type": "span", "text": "Hvis du mottar ", "marks": [] },
+            {
+                "type": "span",
+                "text": "arbeidsavklaringspenger",
+                "marks": ["bold"]
+            },
+            {
+                "type": "span",
+                "text": " når foreldrepengeperioden starter, blir foreldrepengene beregnet til det samme som du får i arbeidsavklaringspenger. ",
+                "marks": []
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "listItem": "bullet",
+        "level": 1,
+        "children": [
+            { "type": "span", "text": "Hvis du mottar ", "marks": [] },
+            { "type": "span", "text": "dagpenger", "marks": ["bold"] },
+            {
+                "type": "span",
+                "text": " når foreldrepengeperioden din starter, blir foreldrepengene dine beregnet enten fra de nye beregningsreglene eller et gjennomsnitt av inntekten i de seks beste av de ti siste månedene før mors foreldrepengeperiode starter. NAV vil beregne hvilket alternativ er mest gunstig ut for deg.",
+                "marks": []
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "undertittel",
+        "children": [
+            {
+                "type": "span",
+                "text": "Hvis du slutter i jobben før foreldrepengeperioden din starter",
+                "marks": []
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Hvis arbeidsforholdet ditt avsluttes før du starter foreldrepengeperioden, blir foreldrepengene dine beregnet etter inntekten din de tre siste månedene før arbeidsforholdet ble avsluttet. ",
+                "marks": []
+            }
+        ],
+        "markDefs": []
+    }
+]

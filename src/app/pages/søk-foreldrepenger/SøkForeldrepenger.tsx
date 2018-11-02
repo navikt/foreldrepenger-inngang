@@ -6,18 +6,17 @@ import BEMHelper from '../../utils/bem';
 import { getTranslation, IntlProps, withIntl } from '../../intl/intl';
 import SvgBanner from '../../components/svg-banner/SvgBanner';
 import PanelMedTittel from '../../components/panel-med-tittel/PanelMedTittel';
-import { datoErOmMindreEnnSeksUker } from '../../utils/datoUtils';
+import { datoForUttakErGyldig } from '../../utils/datoUtils';
 import VeilederMessage from './Veiledermelding';
 import Datovelger from './Datovelger';
-import externalUrls from '../../utils/externalUrls';
 import MediaQuery from 'react-responsive';
 import Sidebanner from 'app/components/sidebanner/Sidebanner';
 import StrukturertTekst from 'app/components/strukturert-tekst/StrukturertTekst';
 import { getContent } from 'app/utils/getContent';
-import NAVLAB from 'app/utils/navlab';
-import HeaderInformasjon from '../../components/header-informasjon/HeaderInformasjon';
-import './søkForeldrepenger.less';
 
+import HeaderInformasjon from '../../components/header-informasjon/HeaderInformasjon';
+import Environment from 'app/Environment';
+import './søkForeldrepenger.less';
 
 const hvaSøkerDuCls = BEMHelper('hvaSøkerDu');
 const foreldrepengerCls = BEMHelper('søkForeldrepenger');
@@ -36,7 +35,7 @@ class SøkForeldrepenger extends Component<Props & IntlProps> {
     };
 
     setDate = (selectedDate: Date) => {
-        const dateIsValid = datoErOmMindreEnnSeksUker(selectedDate);
+        const dateIsValid = datoForUttakErGyldig(selectedDate);
 
         this.setState({
             selectedDate,
@@ -74,17 +73,11 @@ class SøkForeldrepenger extends Component<Props & IntlProps> {
                                     />
                                 )}
                             {this.state.selectedDate && (
-                                <a
-                                    tabIndex={-1}
-                                    href={
-                                        NAVLAB
-                                            ? '/under-arbeid'
-                                            : externalUrls.søk_foreldrepenger_eller_engangsstønad
-                                    }>
+                                <a tabIndex={-1} href={Environment.SOK_FORELDREPENGER_URL}>
                                     <KnappBase type="hoved" role="link">
                                         <MediaQuery query="(max-width: 575px)">
                                             {getTranslation(
-                                                'søk_foreldrepenger.knappMobil',
+                                                'søk_foreldrepenger.knapp_mobil',
                                                 this.props.lang
                                             )}
                                         </MediaQuery>

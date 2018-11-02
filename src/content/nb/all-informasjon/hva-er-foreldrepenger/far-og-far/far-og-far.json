@@ -5,9 +5,17 @@
         "children": [
             {
                 "type": "span",
-                "text": "Når begge foreldrene har rett til foreldrepenger består foreldrepengeperioden av en kvote til hver av dere og en fellesperiode som dere kan dele.",
+                "text": "Hvordan foreldrepengeperioden er delt mellom dere, kommer an på om dere får barn ved surrogati og den andre ",
                 "marks": []
-            }
+            },
+            { "type": "span", "text": "stebarnsadopterer", "marks": ["bold"] },
+            {
+                "type": "span",
+                "text": ", eller om dere begge er ",
+                "marks": []
+            },
+            { "type": "span", "text": "adoptivforeldre", "marks": ["bold"] },
+            { "type": "span", "text": " til samme barn. ", "marks": [] }
         ],
         "markDefs": []
     }

@@ -4,13 +4,14 @@ import { getTranslation, Language } from './intl/intl';
 import BEMHelper from './utils/bem';
 import TypografiBase from 'nav-frontend-typografi';
 import Router from './Router';
-import classnames from 'classnames';
 import moment from 'moment';
-import NAVLAB from './utils/navlab';
 import './app.less';
 
 const cls = BEMHelper('app');
 const DEFAULT_LANG: Language = 'nb';
+
+// Feature-toggling? Aldri hørt om.
+const ENABLE_LANGUAGE_TOGGLER = false;
 
 interface State {
     currentLanguage: Language;
@@ -67,11 +68,7 @@ class App extends React.Component<{}, State> {
                     setLanguage: this.setLanguage
                 }}>
                 <div lang={this.state.currentLanguage}>
-                    {NAVLAB ? (
-                        <UnderUtviklingBanner
-                            label={getTranslation('under_utvikling', this.state.currentLanguage)}
-                        />
-                    ) : (
+                    {ENABLE_LANGUAGE_TOGGLER && (
                         <Språkbanner
                             onClick={this.toggleBetweenNbAndNn}
                             label={languageChangeText}
@@ -89,16 +86,6 @@ const Språkbanner = ({ onClick, label }: { onClick: () => void; label: string }
         <span onClick={onClick} className={cls.element('byttSpråkKnapp')}>
             <TypografiBase type="normaltekst">{label}</TypografiBase>
         </span>
-    </div>
-);
-
-const UnderUtviklingBanner = ({ label }: { label: string }) => (
-    <div
-        className={classnames(
-            cls.element('topBanner'),
-            cls.element('topBanner', 'underUtvikling')
-        )}>
-        <TypografiBase type="normaltekst">{label}</TypografiBase>
     </div>
 );
 

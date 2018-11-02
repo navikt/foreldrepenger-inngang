@@ -5,7 +5,6 @@ import CustomSVGFromSprite from './CustomSVG';
 import BEMHelper from './bem';
 import classnames from 'classnames';
 import './withLink.less';
-import NAVLAB from './navlab';
 
 const externalLinkIcon = require('../assets/icons/external.svg').default;
 
@@ -28,6 +27,7 @@ interface Props {
     urlIsExternal?: boolean;
     addExternalIcon?: boolean;
     noStyling?: boolean;
+    noTabbing?: boolean;
     className?: string;
     style?: any;
     bypassNavlab?: boolean;
@@ -51,44 +51,32 @@ export class WithLink extends React.Component<Props> {
             url,
             addExternalIcon,
             noStyling,
+            noTabbing,
             className,
             style,
-            bypassNavlab,
             ariaLabel,
             children
         } = this.props;
 
         if (urlIsExternal) {
             if (noStyling) {
-                return NAVLAB && !bypassNavlab ? (
-                    <Link className={className} to="/under-arbeid">
-                        {children}
-                    </Link>
-                ) : (
-                    <a className={className} href={url}>
+                return (
+                    <a tabIndex={noTabbing ? -1 : 0} className={className} href={url}>
                         {children}
                     </a>
                 );
-            } else if (NAVLAB) {
+            } else {
                 return (
-                    <span
-                        title="Lenke under arbeid"
-                        className={classnames(cls.className, cls.modifier('disabled'), className)}>
+                    <Lenke className={classnames(cls.className, className)} href={url}>
                         {children}
-                    </span>
+                        {addExternalIcon && (
+                            <span className={cls.element('icon')}>
+                                <CustomSVGFromSprite size={15} iconRef={externalLinkIcon} />
+                            </span>
+                        )}
+                    </Lenke>
                 );
             }
-
-            return (
-                <Lenke className={classnames(cls.className, className)} href={url}>
-                    {children}
-                    {addExternalIcon && (
-                        <span className={cls.element('icon')}>
-                            <CustomSVGFromSprite size={15} iconRef={externalLinkIcon} />
-                        </span>
-                    )}
-                </Lenke>
-            );
         } else if (url.charAt(0) === '#') {
             if (noStyling) {
                 return (
@@ -114,7 +102,10 @@ export class WithLink extends React.Component<Props> {
             }
         } else {
             return (
-                <Link className={classnames(cls.className, className)} to={url}>
+                <Link
+                    tabIndex={noTabbing ? -1 : 0}
+                    className={classnames(cls.className, className)}
+                    to={url}>
                     {children}
                 </Link>
             );

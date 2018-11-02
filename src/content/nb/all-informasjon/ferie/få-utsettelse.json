@@ -46,7 +46,7 @@
         "children": [
             {
                 "type": "span",
-                "text": "Hvis du ikke vet tidspunktet for ferien når du søker, kan du senere sende søknad om å utsette. Husk at du må før ferien din starter.",
+                "text": "Hvis du ikke vet tidspunktet for ferien når du søker, kan du senere sende søknad om å utsette. Husk at du må søke før ferien din starter.",
                 "marks": []
             }
         ]

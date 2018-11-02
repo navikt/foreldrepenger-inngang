@@ -105,11 +105,13 @@ const ViktigeFrister: React.StatelessComponent<Props & IntlProps> = ({ location,
 const ViktigeFristerHeader = () => {
     return (
         <HeaderInformasjon
+
             title={'Viktige frister - www.nav.no'}
             siteDescription={'Viktige frister angående foreldrepenger'}
             propTitle={'nav.no Viktige-frister'}
             propDescription={'Viktige frister angående foreldrepenger'}
             siteUrl={'https://familie.nav.no/viktige-frister'}
+
         />
     );
 };

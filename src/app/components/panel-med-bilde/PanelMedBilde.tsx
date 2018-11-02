@@ -7,6 +7,7 @@ import BEMHelper from '../../utils/bem';
 import { FlexibleSvg } from '../../utils/CustomSVG';
 import { WithLink } from '../../utils/withLink';
 import './panelMedBilde.less';
+import MediaQuery from 'react-responsive';
 
 const cls = BEMHelper('panelMedBilde');
 
@@ -33,39 +34,51 @@ const PanelMedBilde = ({
 }) => {
     const svgFile = require(`./img/${svgName}.svg`).default;
 
-    return (
-        <div className={stopSign ? cls.className + ' stop-sign' : cls.className}>
-            <div className={cls.element('underArbeid')}>{underArbeid}</div>
-            <div className={disabled ? '' + ' disabled' : ''}>
-                <WithLink
-                    // className={cls.className}
-                    url={url}
-                    noStyling={true}
-                    bypassNavlab={bypassNavlab}
-                    urlIsExternal={urlIsExternal}>
-                    <div className={cls.element('imageOnPanel')}>
-                        <div className={cls.element('svgContainer')}>
-                            <FlexibleSvg
-                                className={cls.element('svg')}
-                                iconRef={svgFile}
-                                height={115}
-                                width="100%"
-                            />
-                        </div>
-                    </div>
-                    <PanelBase border={false} className={cls.element('panelOnPanel')}>
-                        <div
-                            className={cls.element(
-                                disabled ? 'textOnPanel disabled' : 'textOnPanel'
-                            )}>
-                            <TypografiBase type="undertittel">{title}</TypografiBase>
-                            {children}
-                        </div>
-                        <HoyreChevron className={cls.element('panelChevron')} />
-                    </PanelBase>
-                </WithLink>
+    const toRender = (
+        <WithLink
+            className={disabled ? '' : cls.className}
+            url={url}
+            noStyling={true}
+            noTabbing={disabled}
+            bypassNavlab={bypassNavlab}
+            urlIsExternal={urlIsExternal}>
+            <div className={cls.element('imageOnPanel')}>
+                <div className={cls.element('svgContainer')}>
+                    <MediaQuery maxWidth={799}>
+                        <FlexibleSvg
+                            className={cls.element('svg')}
+                            iconRef={svgFile}
+                            height={80}
+                            width="100%"
+                        />
+                    </MediaQuery>
+                    <MediaQuery minWidth={800}>
+                        <FlexibleSvg
+                            className={cls.element('svg')}
+                            iconRef={svgFile}
+                            height={100}
+                            width="100%"
+                        />
+                    </MediaQuery>
+                </div>
             </div>
+            <PanelBase border={false} className={cls.element('panelOnPanel')}>
+                <div className={cls.element(disabled ? 'textOnPanel disabled' : 'textOnPanel')}>
+                    <TypografiBase type="undertittel">{title}</TypografiBase>
+                    {children}
+                </div>
+                <HoyreChevron className={cls.element('panelChevron')} />
+            </PanelBase>
+        </WithLink>
+    );
+
+    return disabled ? (
+        <div tabIndex={0} className={stopSign ? cls.className + ' stop-sign' : cls.className}>
+            <div className={cls.element('underArbeid')}>{underArbeid}</div>
+            <div className={disabled ? '' + ' disabled' : ''}>{toRender}</div>
         </div>
+    ) : (
+        toRender
     );
 };
 

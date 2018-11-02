@@ -8,6 +8,7 @@ import OmForeldrepenger from './pages/om-foreldrepenger/OmForeldrepenger';
 import OmEngangsstønad from './pages/om-engangsstønad/OmEngangsstønad';
 import Blindside from './pages/blindside/Blindside';
 import ViktigeFrister from './pages/viktige-frister/ViktigeFrister';
+import NyeBeregningsregler from './pages/nye-beregningsregler/NyeBeregningsregler';
 
 const Router = () => (
     <Switch>
@@ -30,6 +31,12 @@ const Router = () => (
             path="/om-foreldrepenger"
             component={OmForeldrepenger}
             key="om-foreldrepenger"
+        />
+        <Route
+            exact={true}
+            path="/om-foreldrepenger/nye-beregningsregler"
+            component={NyeBeregningsregler}
+            key="nye-beregningsregler"
         />
         <Route
             exact={true}

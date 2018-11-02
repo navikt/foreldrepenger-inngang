@@ -5,6 +5,65 @@
         "children": [
             {
                 "type": "span",
+                "text": "Er du ",
+                "marks": []
+            },
+            {
+                "type": "span",
+                "text": "arbeidstaker",
+                "marks": ["bold"]
+            },
+            {
+                "type": "span",
+                "text": "? Da søker du på ",
+                "marks": []
+            },
+            {
+                "type": "span",
+                "text": "Arbeidstilsynets skjema",
+                "marks": ["url_arbeidstilsynets_skjema", "external_link"]
+            },
+            {
+                "type": "span",
+                "text": " \"Omplassering/tilrettelegging pga. graviditet\" (nr. 474 b). Lege eller jordmor fyller ut sin del av skjemaet. Skjemaet tar du med til arbeidsgiveren din, før du sender det til NAV.",
+                "marks": []
+            }
+        ],
+        "markDefs": [
+            {
+                "key": "url_arbeidstilsynets_skjema",
+                "type": "link",
+                "href": "https://www.arbeidstilsynet.no/tema/graviditet-og-arbeidsmiljo/skjema-for-tilrettelegging-for-gravide/"
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Er du ",
+                "marks": []
+            },
+            {
+                "type": "span",
+                "text": "selvstendig næringsdrivende eller frilanser",
+                "marks": ["bold"]
+            },
+            {
+                "type": "span",
+                "text": "? Da finner du skjema her:",
+                "marks": []
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
                 "text": "Krav om svangerskapspenger til selvstendig næringsdrivende og frilanser",
                 "marks": []
             }
@@ -30,32 +89,7 @@
         "children": [
             {
                 "type": "span",
-                "text": "Arbeidstakere som skal ha sykepenger, foreldrepenger, svangerskapspenger, pleie-/opplæringspenger og omsorgspenger",
-                "marks": []
-            }
-        ],
-        "markDefs": []
-    },
-    {
-        "type": "avsnitt",
-        "style": "normaltekst",
-        "children": [
-            { "type": "span", "text": "Skjema på: ", "marks": [] },
-            { "type": "span", "text": "Bokmål", "marks": ["url_arbeidstakere_bokmål", "external_link"] },
-            { "type": "span", "text": "Nynorsk", "marks": ["url_arbeidstakere_nynorsk", "external_link"] }
-        ],
-        "markDefs": [
-            { "key": "url_arbeidstakere_bokmål", "type": "link", "href": "https://www.nav.no/no/Person/Familie/Venter+du+barn/_attachment/1073750932?_ts=158b47d3008&download=true" },
-            { "key": "url_arbeidstakere_nynorsk", "type": "link", "href": "https://www.nav.no/no/Person/Familie/Venter+du+barn/_attachment/1073750928?_ts=158b47cab38&download=true" }
-        ]
-    },
-    {
-        "type": "avsnitt",
-        "style": "normaltekst",
-        "children": [
-            {
-                "type": "span",
-                "text": "Selvstendig næringsdrivende og/eller frilansere som skal ha foreldrepenger eller svangerskapspenger",
+                "text": "Inntektsopplysninger for selvstendig næringsdrivende og/eller frilansere som skal ha foreldrepenger eller svangerskapspenger",
                 "marks": []
             }
         ],

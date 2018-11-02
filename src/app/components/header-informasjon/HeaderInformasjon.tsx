@@ -6,7 +6,7 @@ const HeaderInformasjon = ({
     siteDescription,
     propTitle,
     propDescription,
-    siteUrl,
+    siteUrl
 }: {
     title: string;
     siteDescription: string;

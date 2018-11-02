@@ -10,6 +10,9 @@ import AndreLenker from './andre-lenker/AndreLenker';
 import { StatelessComponent } from 'enzyme';
 import UnderProduksjon from './UnderProduksjon';
 import HeaderInformasjon from '../../components/header-informasjon/HeaderInformasjon';
+
+import MediaQuery from 'react-responsive';
+
 import './informasjonstavle.less';
 
 const cls = BEMHelper('informasjonstavle');
@@ -33,18 +36,20 @@ const Informasjonstavle = () => {
 const BildelenkerWithoutIntl: StatelessComponent<IntlProps> = ({ lang }) => {
     return (
         <nav className={cls.element('bildepaneler')}>
-            <PanelMedBilde
-                svgName="hender-sjekkliste"
-                title={getTranslation('informasjonstavle.hva_har_du_rett_på', lang)}
-                urlIsExternal={false}
-                url="/under-arbeid"
-                underArbeid={<UnderProduksjon group={'_mainTable'} />}
-                disabled={true}
-                stopSign={true}>
-                <Tekstomrade>
-                    {getTranslation('informasjonstavle.hva_har_du_rett_på_body', lang)}
-                </Tekstomrade>
-            </PanelMedBilde>
+            <MediaQuery minWidth={800}>
+                <PanelMedBilde
+                    svgName="hender-sjekkliste"
+                    title={getTranslation('informasjonstavle.hva_har_du_rett_på', lang)}
+                    urlIsExternal={false}
+                    url="/under-arbeid"
+                    underArbeid={<UnderProduksjon group={'_mainTable'} />}
+                    disabled={true}
+                    stopSign={true}>
+                    <Tekstomrade>
+                        {getTranslation('informasjonstavle.hva_har_du_rett_på_body', lang)}
+                    </Tekstomrade>
+                </PanelMedBilde>
+            </MediaQuery>
 
             <PanelMedBilde
                 svgName="illustration"

@@ -15,12 +15,12 @@
         "children": [
             {
                 "type": "span",
-                "text": "Bor du ikke i Norge, kan du være medlem av folketrygden på andre måter. Se ",
+                "text": "Bor du i Norge, er du vanligvis ",
                 "marks": []
             },
             {
                 "type": "span",
-                "text": "medlemskap",
+                "text": "medlem av folketrygden.",
                 "marks": ["external_link", "url_medlemskap"]
             }
         ],
