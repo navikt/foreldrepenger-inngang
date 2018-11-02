@@ -41,8 +41,8 @@ const OmForeldrepengerHeader = () => {
     return (
         <HeaderInformasjon
             title={'Om foreldrepenger - wwww.nav.no'}
-            siteDescription={'finn ut hva du har rett til av foreldrepenger'}
-            propTitle={'om foreldrepenger'}
+            siteDescription={'Finn ut hva du har rett til av foreldrepenger'}
+            propTitle={'Om foreldrepenger'}
             propDescription={'finn ut hva du har rett til av foreldrepenger'}
             siteUrl={'https://familie.nav.no/om-foreldrepenger'}
         />
