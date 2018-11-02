@@ -103,6 +103,7 @@ export class WithLink extends React.Component<Props> {
         } else {
             return (
                 <Link
+                    style={style}
                     tabIndex={noTabbing ? -1 : 0}
                     className={classnames(cls.className, className)}
                     to={url}>
