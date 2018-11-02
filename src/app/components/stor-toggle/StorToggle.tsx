@@ -8,17 +8,19 @@ const cls = BEMHelper('storToggle');
 const StorToggle = ({
     isToggled,
     onToggle,
-    children
+    children,
+    clsName
 }: {
     isToggled: boolean;
     onToggle: () => void;
     children: React.ReactChild;
+    clsName?: string
 }) => {
     return (
         <button
             aria-selected={isToggled}
             onClick={onToggle}
-            className={classnames(cls.className, { [cls.modifier('toggled')]: isToggled })}>
+            className={classnames(cls.className,  { [cls.modifier('toggled')]: isToggled }, clsName)}>
             {children}
         </button>
     );
