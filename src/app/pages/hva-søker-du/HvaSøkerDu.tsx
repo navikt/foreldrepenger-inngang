@@ -25,12 +25,9 @@ const HvaSøkerDu: React.StatelessComponent<Props & IntlProps> = ({ location, la
                 <title>Hva søker du - www.nav.no</title>
                 <meta charSet="utf-8" />
                 <meta name="description" content="velg stønad du vil søke etter" />
-
                 <meta property="og:title" content="hva søker du"/>
                 <meta property="og:description" content="velg stønad du vil søke etter"/>
-                <meta property="og:image" content="/dist/assets/tmp_hvaSokerOm.png" />
                 <meta property="og:url" content="https://familie.nav.no/hva-soker-du" />
-                <meta name="twitter:card" content="/dist/assets/tmp_hvaSokerOm-large.png" />
             </Helmet>
             <div className={cls.className}>
                 <Sidebanner text={getTranslation('hva_søker_du.tittel', lang)} />

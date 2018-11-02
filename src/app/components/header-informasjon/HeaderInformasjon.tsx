@@ -6,17 +6,13 @@ const HeaderInformasjon = ({
     siteDescription,
     propTitle,
     propDescription,
-    imageUrl,
     siteUrl,
-    imageLargeUrl
 }: {
     title: string;
     siteDescription: string;
     propTitle: string;
     propDescription: string;
-    imageUrl: string;
     siteUrl: string;
-    imageLargeUrl?: string;
 }) => {
     return (
         <Helmet>
@@ -25,9 +21,7 @@ const HeaderInformasjon = ({
             <meta name="description" content={siteDescription} />
             <meta property="og:title" content={propTitle} />
             <meta property="og:description" content={propDescription} />
-            <meta property="og:image" content={imageUrl} />
             <meta property="og:url" content={siteUrl} />
-            <meta name="twitter:card" content={imageLargeUrl} />
         </Helmet>
     );
 };

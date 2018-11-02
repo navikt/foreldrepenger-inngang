@@ -109,9 +109,7 @@ const ViktigeFristerHeader = () => {
             siteDescription={'Viktige frister angående foreldrepenger'}
             propTitle={'nav.no Viktige-frister'}
             propDescription={'Viktige frister angående foreldrepenger'}
-            imageUrl={'/dist/assets/tmp_viktigeFrister.png'}
             siteUrl={'https://familie.nav.no/viktige-frister'}
-            imageLargeUrl={'/dist/assets/tmp_viktigeFrister .png'}
         />
     );
 };

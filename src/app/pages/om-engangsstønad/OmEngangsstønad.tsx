@@ -57,9 +57,7 @@ const OmEngangsstønadHeader = () => {
             siteDescription={'Vilkår og informasjon rundt engangsstønad'}
             propTitle={'nav.no engangstønad-informasjon'}
             propDescription={'Vilkår og informasjon rundt engangsstønad'}
-            imageUrl={'/dist/assets/tmp_omEngangsstonad.png'}
             siteUrl={'https://familie.nav.no/om-engangsstonad'}
-            imageLargeUrl={'/dist/assets/tmp_tmp_omEngangsstonad.png'}
         />
     );
 };

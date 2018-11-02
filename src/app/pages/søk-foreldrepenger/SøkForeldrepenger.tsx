@@ -112,9 +112,7 @@ const SøkForeldrepengerHeader = () => {
             siteDescription={'nav.no Søk om foreldrepenger'}
             propTitle={'nav.no foreldrepenger'}
             propDescription={'nav.no Søk om foreldrepenger'}
-            imageUrl={'/dist/assets/tmp_hva-soker-du/sokForeldrepenger.png'}
             siteUrl={'https://familie.nav.no/hva-soker-du/foreldrepenger'}
-            imageLargeUrl={'/dist/assets/tmp_hva-soker-du/sokForeldrepenger-large.png'}
         />
     );
 };
