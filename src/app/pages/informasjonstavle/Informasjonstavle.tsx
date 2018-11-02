@@ -2,6 +2,7 @@ import React from 'react';
 import Tekstomrade from 'nav-frontend-tekstomrade';
 import { withIntl, IntlProps, getTranslation } from '../../intl/intl';
 import BEMHelper from '../../utils/bem';
+import externalUrls from '../../utils/externalUrls';
 import PanelMedBilde from '../../components/panel-med-bilde/PanelMedBilde';
 import Header from './header/Header';
 import MerInformasjon from './mer-informasjon/MerInformasjon';
@@ -51,8 +52,9 @@ const BildelenkerWithoutIntl: StatelessComponent<IntlProps> = ({ lang }) => {
             <PanelMedBilde
                 svgName="permisjon-sjekkliste"
                 title={getTranslation('informasjonstavle.hvor_lenge_kan_du_få_permisjon', lang)}
-                urlIsExternal={false}
-                url="/tjenester">
+                urlIsExternal={true}
+                bypassNavlab={true}
+                url={externalUrls.foreldrepengeplanlegger}>
                 <Tekstomrade>
                     {getTranslation('informasjonstavle.hvor_lenge_kan_du_få_permisjon_body', lang)}
                 </Tekstomrade>
