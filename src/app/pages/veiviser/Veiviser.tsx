@@ -5,11 +5,11 @@ import Breadcrumbs from '../../components/breadcrumbs/Breadcrumbs';
 import { getTranslation, IntlProps, withIntl } from '../../intl/intl';
 import Valg from './komponenter/valg/Valg';
 import PanelMedIllustrasjon from '../../components/panel-med-illustrasjon/PanelMedIllustrasjon';
-// import Header from './komponenter/header/Header';
+
 
 import './veiviser.less';
 
-const moneySVG = require('../../assets/ark/ark-money.svg').default;
+const signSVG = require('../../assets/ark/ark-sign.svg').default;
 
 const cls = BEMHelper('veiviser');
 
@@ -26,7 +26,10 @@ const Veiviser: React.StatelessComponent<Props & IntlProps> = ({ location, lang 
             <div className={cls.element('body')}>
                 <div className={cls.element('content')}>
                     <Breadcrumbs path={location.pathname} />
-                    <PanelMedIllustrasjon title={getTranslation('', lang)} svg={moneySVG}>
+                    <PanelMedIllustrasjon
+                        title={getTranslation('veiviser.panelMedIllustrasjon.tittel', lang)}
+                        svg={signSVG}
+                        maskSvg={true}>
                         <Valg />
                     </PanelMedIllustrasjon>
                 </div>

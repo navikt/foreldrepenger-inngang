@@ -5,6 +5,8 @@ import StorToggle from '../../../../components/stor-toggle/StorToggle';
 import { FlexibleSvg } from '../../../../utils/CustomSVG';
 import { Language, getTranslation, withIntl } from '../../../../intl/intl';
 import TypografiBase from 'nav-frontend-typografi';
+import StrukturertTekst from "../../../../components/strukturert-tekst/StrukturertTekst";
+import {getContent} from "../../../../utils/getContent";
 
 const cls = BEMHelper('valg');
 
@@ -109,6 +111,7 @@ class Valg extends React.Component<Props, State> {
 
         return (
             <div className={cls.className}>
+                <div className={cls.element('ingress')}> <StrukturertTekst tekst={getContent('veiviser/header/header', this.props.lang)}/> </div>
                 <div className={cls.element('forelder')}>
                     <div className={cls.element('ingress-knapp')}>
                         <TypografiBase type="undertittel">
