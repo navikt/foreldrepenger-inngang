@@ -5,7 +5,6 @@ export const getContent = (contentPath: string, language: Language) => {
         const content = require(`../../content/${language}/${contentPath}.json`);
         return content;
     } catch (e) {
-        console.log("error e: ", e);
         return null;
     }
 };

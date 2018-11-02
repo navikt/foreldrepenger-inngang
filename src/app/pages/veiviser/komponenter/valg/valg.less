@@ -1,8 +1,54 @@
 .valg {
-  width: 100%;
-  max-width: 800px;
-  background-color: #e0dae7;
-  min-height: 500px;
-  display: flex;
-  flex-direction: column;
+    width: 100%;
+    max-width: 800px;
+    background-color: white;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 5rem;
+
+    &__knapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .storToggle {
+        width: 7.5rem;
+        height: 8rem;
+        padding: 1rem;
+    }
+    &__knapp-element {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__knapp-frame {
+        margin-left: 0.3rem;
+        margin-right: 0.3rem;
+        width: auto;
+        justify-items: center;
+    }
+
+    &__ingress-knapp {
+        text-align: center;
+        padding-bottom: 1rem;
+        font-weight: bold;
+    }
+
+    &__label {
+        padding-top: 0.5rem;
+    }
+    &__forelder {
+        padding-bottom: 1rem;
+    }
+    &__kort {
+        display: flex;
+        flex-direction: column;
+    }
+  &__kort-rad {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
 }

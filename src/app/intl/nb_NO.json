@@ -196,6 +196,10 @@
     "om_engangsstønad.til_far.tittel": "Engangsstønad til far eller medmor",
 
     "veiviser.sidebanner.tittel": "Hva har du rett på?",
+    "veiviser.ingress.knapper": "Jeg er...",
+    "veiviser.sidebanner.knappFar.label": "Far",
+    "veiviser.sidebanner.knappMor.label": "Mor",
+    "veiviser.sidebanner.knappMedmor.label": "Medmor",
 
     "blindside.veileder": "Så fint å ha deg her!\nDu har klikket deg inn på en side som vi fremdeles holder på med å lage.\nKlikk deg tilbake for å utforske mer :)",
     "blindside.tittel": "Under arbeid"
