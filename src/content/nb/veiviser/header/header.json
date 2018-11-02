@@ -1,19 +1,7 @@
 [
   {
     "type": "avsnitt",
-    "style": "systemtittel",
-    "children": [
-      {
-        "type": "span",
-        "text": "Finn ut om du bør velge foreldrepenger eller engangsstønad",
-        "marks": ["bold"]
-      }
-    ],
-    "markDefs": []
-  },
-  {
-    "type": "avsnitt",
-    "style": "normaltekst",
+    "style": "undertittel",
     "children": [
       {
         "type": "span",
