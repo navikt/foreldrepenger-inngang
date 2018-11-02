@@ -1,0 +1,71 @@
+@import '../../../styles/index.less';
+
+.verticalFlex() {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.lønnskalkulator {
+    width: 100%;
+    .verticalFlex();
+
+    &__perioder {
+        margin-top: 1.5rem;
+        justify-content: space-between;
+        .verticalFlex();
+    }
+
+    &__årslønn {
+        .verticalFlex();
+    }
+
+    .skjemaelement {
+        margin-top: 1rem;
+        font-weight: bold;
+
+        &__input {
+            max-width: 100%;
+            width: 300px;
+            padding: 0.75rem 1rem;
+        }
+    }
+
+    output {
+        .verticalFlex();
+        margin-top: 1.5rem;
+        margin-left: 1rem;
+        justify-content: space-between;
+
+        .typo-ingress {
+            font-weight: 100;
+            font-size: 1.5rem;
+            margin-bottom: 0;
+            margin-top: 0.75rem;
+        }
+    }
+
+    @media (min-width: @tablet-breakpoint) {
+        &__perioder {
+            flex-direction: row;
+        }
+
+        output {
+            margin-top: 0;
+            margin-bottom: 0.75rem;
+        }
+
+        .skjemaelement {
+            margin-top: 0rem;
+
+            &:not(:nth-child(1)) {
+                margin-left: 1rem;
+            }
+
+            &__input {
+                width: 100%;
+                max-width: 120px;
+            }
+        }
+    }
+}

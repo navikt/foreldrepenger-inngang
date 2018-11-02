@@ -1,0 +1,57 @@
+@import '../../styles/index.less';
+
+.tjenester {
+    width: 100%;
+    max-width: 640px;
+    margin: 0 auto;
+
+    &__linkContent {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        .strukturertTekst {
+            margin: 0;
+            margin-left: 1rem;
+        }
+
+        .typo-systemtittel {
+            font-size: 1.2rem;
+        }
+    }
+
+    .lenkepanel {
+        border-radius: 0;
+        padding: 1.5rem 1rem;
+    }
+
+    &__svgMask {
+        flex: 1;
+        background: #b9acca;
+        border-radius: 50%;
+        height: 100px;
+        max-width: 100px;
+        min-width: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 1rem;
+    }
+
+    @media (min-width: @mobile-breakpoint) {
+        &__linkContent {
+            .typo-systemtittel {
+                font-size: 1.4rem;
+            }
+        }
+
+        .lenkepanel {
+            padding: 2rem;
+            border-radius: 4px;
+        }
+
+        &__svgMask {
+            margin-right: 2rem;
+        }
+    }
+}
