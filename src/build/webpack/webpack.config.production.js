@@ -64,8 +64,6 @@ module.exports = merge(common, {
             allChunks: true
         }),
         new CompressionPlugin(),
-        new CopyWebpackPlugin([
-            { from: path.resolve(__dirname, './../../../static/images'), to: './assets' }
-        ])
+        new CopyWebpackPlugin([{ from: path.resolve(__dirname, './../../../static'), to: '.' }])
     ]
 });

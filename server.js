@@ -36,7 +36,7 @@ const startServer = (html) => {
     server.use('/dist/js', express.static(path.resolve(__dirname, 'dist/js')));
     server.use('/dist/css', express.static(path.resolve(__dirname, 'dist/css')));
     server.use('/dist/assets', express.static(path.join(__dirname, 'dist/assets')));
-
+    server.use('/sitemap.xml', express.static(path.join(__dirname, 'dist/sitemap.xml')));
 
     server.get(['/dist/js/settings.js'], (req, res) => {
         res.sendFile(path.resolve(`../../dist/js/settings.js`));
