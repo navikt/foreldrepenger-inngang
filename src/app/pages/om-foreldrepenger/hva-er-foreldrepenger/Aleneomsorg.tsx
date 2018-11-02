@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Kalkulator from './ukekalkulator/Ukekalkulator';
+import Kalkulator from './kalkulator/Kalkulator';
 import Informasjonsfaner from './informasjons-faner/Informasjonsfaner';
 import StrukturertTekst from '../../../components/strukturert-tekst/StrukturertTekst';
 import { Language, withIntl, getTranslation } from '../../../intl/intl';
@@ -18,9 +18,7 @@ const getInformasjonsfaner = (lang: Language) => [
             tittel: 'til mor',
             icon: 'medmor1',
             antallUker: '49/59',
-            punktliste: [
-                getTranslation('om_foreldrepenger.hvor_lenge.fordeling.krav.default', lang)
-            ],
+            punktliste: [getTranslation('om_foreldrepenger.hvor_lenge.fordeling.krav.default', lang)],
             component: <StrukturertTekst tekst={getContent(morsDel, lang)} />
         }
     },
@@ -31,9 +29,7 @@ const getInformasjonsfaner = (lang: Language) => [
             tittel: 'til far',
             icon: 'far1',
             antallUker: '46/56',
-            punktliste: [
-                getTranslation('om_foreldrepenger.hvor_lenge.fordeling.krav.som_far', lang)
-            ],
+            punktliste: [getTranslation('om_foreldrepenger.hvor_lenge.fordeling.krav.som_far', lang)],
             component: <StrukturertTekst tekst={getContent(farsDel, lang)} />
         }
     }

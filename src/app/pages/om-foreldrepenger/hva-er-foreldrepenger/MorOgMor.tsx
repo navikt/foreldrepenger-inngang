@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Kalkulator from './ukekalkulator/Ukekalkulator';
+import Kalkulator from './kalkulator/Kalkulator';
 import Informasjonsfaner from './informasjons-faner/Informasjonsfaner';
 import StrukturertTekst from '../../../components/strukturert-tekst/StrukturertTekst';
 import Foreldrepar from '../../../components/foreldrepar/Foreldrepar';
