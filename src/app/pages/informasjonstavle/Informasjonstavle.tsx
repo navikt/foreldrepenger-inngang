@@ -52,7 +52,7 @@ const BildelenkerWithoutIntl: StatelessComponent<IntlProps> = ({ lang }) => {
             </MediaQuery>
 
             <PanelMedBilde
-                svgName="illustration"
+                svgName="permisjon-sjekkliste"
                 title={getTranslation('informasjonstavle.hvor_lenge_kan_du_få_permisjon', lang)}
                 urlIsExternal={true}
                 bypassNavlab={true}
@@ -63,7 +63,7 @@ const BildelenkerWithoutIntl: StatelessComponent<IntlProps> = ({ lang }) => {
             </PanelMedBilde>
 
             <PanelMedBilde
-                svgName="fylle-ut-søknad"
+                svgName="illustration"
                 title={getTranslation('informasjonstavle.gå_rett_til_søknaden', lang)}
                 urlIsExternal={false}
                 url="/hva-soker-du"
