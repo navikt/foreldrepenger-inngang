@@ -103,8 +103,6 @@ class Lønnskalkulator extends React.Component<Props, State> {
 
     onChange = () => {
         if (!this.state.fieldValues.includes(undefined) && this.state.wageLastYear) {
-            console.warn('Hello:', this.state.monthlyAverage);
-
             const harForStortAvvik = forStortAvvik(this.state.wageLastYear / 12, this.state
                 .fieldValues as number[]);
 

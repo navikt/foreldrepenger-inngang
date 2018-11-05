@@ -66,7 +66,6 @@ class Planlegger extends React.Component<IntlProps, State> {
         monthlyAverage?: number;
         forStortAvvik: boolean;
     }) => {
-        console.warn('Fields changed:', monthlyAverage, forStortAvvik);
         this.setState({
             snittlønnPerMåned: monthlyAverage,
             forStortAvvik
