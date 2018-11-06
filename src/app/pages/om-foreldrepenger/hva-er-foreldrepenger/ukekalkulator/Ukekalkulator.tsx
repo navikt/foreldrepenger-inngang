@@ -26,8 +26,6 @@ class Ukekalkulator extends React.Component<Props, State> {
     constructor(props: Props) {
         super(props);
 
-        console.warn('PROPS:', props);
-
         this.state = {
             selectedNumberOfWeeks: props.antallUtbetalingsuker[0][100],
             selectedNumberOfChildren: 1,
