@@ -1,5 +1,4 @@
-import * as React from 'react';
-import { StatelessComponent } from 'react';
+import React, { StatelessComponent } from 'react';
 import CustomSVGFromSprite, { IconRef } from 'app/utils/CustomSVG';
 import BEMHelper from 'app/utils/bem';
 import './svgMask.less';
