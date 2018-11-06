@@ -37,4 +37,6 @@ export interface Avsnitt {
     listItem: ListItem;
 }
 
+export type Definisjoner = { [s: string]: string };
+
 export type StrukturertTekst = Array<Avsnitt>;

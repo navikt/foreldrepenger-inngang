@@ -12,25 +12,16 @@ const PanelMedIllustrasjon = ({
     id,
     title,
     svg,
-    maskSvg,
     className,
     children
 }: {
     id?: string;
     title: string;
     svg: any;
-    maskSvg?: boolean;
     className?: string;
     children: React.ReactNode;
 }) => {
-    let illustration = <CustomSVG size={100} iconRef={svg} />;
-    if (maskSvg) {
-        illustration = (
-            <div role="presentation" className={cls.element('roundSvgMask')}>
-                {illustration}
-            </div>
-        );
-    }
+    const illustration = svg.viewBox ? <CustomSVG size={100} iconRef={svg} /> : svg;
 
     return (
         <section aria-label={title} id={id} className={className}>

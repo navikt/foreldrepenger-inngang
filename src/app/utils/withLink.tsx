@@ -61,13 +61,20 @@ export class WithLink extends React.Component<Props> {
         if (urlIsExternal) {
             if (noStyling) {
                 return (
-                    <a tabIndex={noTabbing ? -1 : 0} className={className} href={url}>
+                    <a
+                        tabIndex={noTabbing ? -1 : 0}
+                        target="_blank"
+                        className={className}
+                        href={url}>
                         {children}
                     </a>
                 );
             } else {
                 return (
-                    <Lenke className={classnames(cls.className, className)} href={url}>
+                    <Lenke
+                        target="_blank"
+                        className={classnames(cls.className, className)}
+                        href={url}>
                         {children}
                         {addExternalIcon && (
                             <span className={cls.element('icon')}>

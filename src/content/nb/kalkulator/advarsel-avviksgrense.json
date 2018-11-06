@@ -1,0 +1,30 @@
+[
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Basert på tallene ovenfor hadde du en inntekt på ",
+                "marks": []
+            },
+            { "type": "span", "text": "ÅRLIG_SNITTLØNN", "marks": ["variable", "bold"] },
+            { "type": "span", "text": " kr", "marks": ["bold"] },
+            { "type": "span", "text": " i hele ", "marks": [] },
+            { "type": "span", "text": "ÅRET_I_FJOR", "marks": ["variable", "bold"] },
+            {
+                "type": "span",
+                "text": ". Hvis det du faktisk tjente avviker med mer enn ",
+                "marks": []
+            },
+            { "type": "span", "text": "AVVIKSGRENSE", "marks": ["variable", "bold"] },
+            { "type": "span", "text": " kr", "marks": ["bold"] },
+            {
+                "type": "span",
+                "text": " må en saksbehandler se nøyere på utbetalingssummen din, og tallene under kan være unøyaktige.",
+                "marks": []
+            }
+        ],
+        "markDefs": []
+    }
+]

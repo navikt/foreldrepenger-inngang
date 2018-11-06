@@ -8,9 +8,9 @@ import Lenkepanel from 'nav-frontend-lenkepanel';
 import { Link } from 'react-router-dom';
 import { StrukturertTekst as StrukturertTekstType } from 'app/utils/strukturertTekst';
 import StrukturertTekst from 'app/components/strukturert-tekst/StrukturertTekst';
-import CustomSVGFromSprite from 'app/utils/CustomSVG';
 import { getContent } from 'app/utils/getContent';
 import './tjenester.less';
+import SvgMask from 'app/components/svg-mask/SvgMask';
 
 const infosiderCls = BEMHelper('infosider');
 const cls = BEMHelper('tjenester');
@@ -55,9 +55,7 @@ const Tjenester = ({ lang }: IntlProps) => {
 
 const Lenkeinnhold = ({ svg, tekst }: { svg: any; tekst: StrukturertTekstType }) => (
     <div className={cls.element('linkContent')}>
-        <div className={cls.element('svgMask')}>
-            <CustomSVGFromSprite iconRef={svg} size={60} />
-        </div>
+        <SvgMask svg={svg} />
         <StrukturertTekst tekst={tekst} />
     </div>
 );

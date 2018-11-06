@@ -2,14 +2,11 @@ import * as React from 'react';
 import { Input } from 'nav-frontend-skjema';
 import { getTranslation, Language, withIntl } from 'app/intl/intl';
 import {
-    forStortAvvik,
     lastThreeYears,
     lastThreeMonths,
     computeAverage,
     Periode,
-    MAKS_ANTALL_SIFFER,
-    getDefaultWage,
-    getLastYear
+    MAKS_ANTALL_SIFFER
 } from 'app/utils/beregningUtils';
 import TypografiBase from 'nav-frontend-typografi';
 import BEMHelper from 'app/utils/bem';
@@ -19,15 +16,7 @@ const cls = BEMHelper('lønnskalkulator');
 
 interface Props {
     periode: Periode;
-    onChange: (
-        {
-            monthlyAverage,
-            forStortAvvik
-        }: {
-            monthlyAverage?: number;
-            forStortAvvik: boolean;
-        }
-    ) => void;
+    onChange: (monthlyAverage?: number) => void;
     lang: Language;
 }
 
@@ -35,7 +24,6 @@ interface State {
     monthlyAverage?: number;
     lastThreePeriods: string[];
     fieldValues: Array<number | undefined>;
-    wageLastYear?: number;
 }
 
 class Lønnskalkulator extends React.Component<Props, State> {
@@ -81,41 +69,14 @@ class Lønnskalkulator extends React.Component<Props, State> {
             }
         }
 
-        this.setState(
-            {
-                monthlyAverage,
-                fieldValues: newFieldValues
-            },
-            this.onChange
-        );
-    };
-
-    onÅrslønnChange = (event: any) => {
-        const wageLastYear = event.target.value;
-
-        this.setState(
-            {
-                wageLastYear
-            },
-            this.onChange
-        );
-    };
-
-    onChange = () => {
-        if (!this.state.fieldValues.includes(undefined) && this.state.wageLastYear) {
-            const harForStortAvvik = forStortAvvik(this.state.wageLastYear / 12, this.state
-                .fieldValues as number[]);
-
-            this.props.onChange({
-                monthlyAverage: this.state.monthlyAverage,
-                forStortAvvik: harForStortAvvik
-            });
-        } else {
-            this.props.onChange({
-                monthlyAverage: undefined,
-                forStortAvvik: false
-            });
+        if (withoutUndefinedValues.length === 3) {
+            this.props.onChange(monthlyAverage);
         }
+
+        this.setState({
+            fieldValues: newFieldValues,
+            monthlyAverage
+        });
     };
 
     render = () => {
@@ -126,23 +87,8 @@ class Lønnskalkulator extends React.Component<Props, State> {
 
         const output = `${monthlyAverage} kr`;
 
-        const fieldsHeader = `${getTranslation('kalkulator.skriv_inn_lønn', lang)} ${
-            this.props.periode === 'måned'
-                ? getTranslation('månedene', lang)
-                : getTranslation('årene', lang)
-        }?`;
-
-        const årslønnTittel = `${getTranslation(
-            'kalkulator.skriv_inn_årslønn',
-            lang
-        )} ${getLastYear()}?`;
-
         return (
             <div className={cls.className}>
-                <TypografiBase type="undertittel">{fieldsHeader}</TypografiBase>
-                <TypografiBase type="normaltekst">
-                    {getTranslation('kalkulator.skriv_inn_lønn_ingress', lang)}
-                </TypografiBase>
                 <div className={cls.element('perioder')}>
                     {this.state.lastThreePeriods.map((period, index) => {
                         const value =
@@ -155,8 +101,10 @@ class Lønnskalkulator extends React.Component<Props, State> {
                                 key={period}
                                 label={period}
                                 type="number"
+                                min={0}
+                                step={1000}
                                 maxLength={MAKS_ANTALL_SIFFER}
-                                placeholder={getDefaultWage(this.props.periode).toString()}
+                                placeholder="kr"
                                 value={value}
                                 onChange={(event: any) => {
                                     this.onFieldChange(index, event);
@@ -173,20 +121,6 @@ class Lønnskalkulator extends React.Component<Props, State> {
                         <TypografiBase type="ingress">{output}</TypografiBase>
                     </output>
                 </div>
-                {this.props.periode === 'måned' && (
-                    <div className={cls.element('årslønn')}>
-                        <TypografiBase type="undertittel">{årslønnTittel}</TypografiBase>
-                        <Input
-                            key="årslønn"
-                            label=""
-                            type="number"
-                            maxLength={7}
-                            value={this.state.wageLastYear || ''}
-                            placeholder={getDefaultWage('år').toString()}
-                            onChange={this.onÅrslønnChange}
-                        />
-                    </div>
-                )}
             </div>
         );
     };

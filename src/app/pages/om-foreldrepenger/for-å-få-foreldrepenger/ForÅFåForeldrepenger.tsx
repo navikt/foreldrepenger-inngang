@@ -7,6 +7,7 @@ import StrukturertTekst from '../../../components/strukturert-tekst/StrukturertT
 import { Avsnitt } from '../../../utils/strukturertTekst';
 import './forÅFåForeldrepenger.less';
 import { getContent } from '../../../utils/getContent';
+import SvgMask from 'app/components/svg-mask/SvgMask';
 
 const cls = BEMHelper('forÅFåForeldrepenger');
 const foreldrepengerSvg = require('../../../assets/familier/familie-1.svg').default;
@@ -27,8 +28,7 @@ const ForÅFåForeldrepenger: React.StatelessComponent<Props & IntlProps> = ({ i
         <PanelMedIllustrasjon
             id={id}
             title={getTranslation('om_foreldrepenger.for_å_få.tittel', lang)}
-            svg={foreldrepengerSvg}
-            maskSvg={true}>
+            svg={<SvgMask svg={foreldrepengerSvg} anchorToBottom={true} />}>
             <div className={cls.element('alignLeft')}>
                 <StrukturertTekst
                     tekst={getContent('all-informasjon/for-å-få-foreldrepenger/ingress', lang)}

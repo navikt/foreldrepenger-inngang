@@ -20,6 +20,12 @@ const computeDeviation = (value: number, average: number): number => {
     return Math.abs(deviation / average);
 };
 
+export const getUtbetalingsgrense = () => GRUNNBELØPET * 6;
+
+export const tjenerOverUtbetalingsgrensen = (månedslønn: number): boolean => {
+    return månedslønn * 12 > getUtbetalingsgrense();
+};
+
 export const forStortAvvik = (average: number, values: number[]): boolean => {
     for (const value of values) {
         const avvik = computeDeviation(value, average);

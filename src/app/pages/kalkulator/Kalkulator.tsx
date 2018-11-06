@@ -11,33 +11,53 @@ import StrukturertTekst from 'app/components/strukturert-tekst/StrukturertTekst'
 import { getContent } from 'app/utils/getContent';
 import Lønnskalkulator from './lønnskalkulator/Lønnskalkulator';
 import Resultat from './resultat/Resultat';
-import { Periode } from 'app/utils/beregningUtils';
+import {
+    Periode,
+    tjenerOverUtbetalingsgrensen,
+    getLastYear,
+    getUtbetalingsgrense
+} from 'app/utils/beregningUtils';
 import Veileder from 'app/components/veileder/Veileder';
 import './kalkulator.less';
+import Veiledermelding from './Veiledermelding';
+import SvgMask from 'app/components/svg-mask/SvgMask';
 
 const infosiderCls = BEMHelper('infosider');
 const cls = BEMHelper('kalkulator');
 
-type Situasjon = 'arbeidstaker' | 'frilanser' | 'selvstendig_næringsdrivende';
+type Situasjon =
+    | 'arbeidstaker_eller_frilanser'
+    | 'utbetaling_fra_nav'
+    | 'selvstendig_næringsdrivende';
 
-const muligeSituasjoner: Situasjon[] = ['arbeidstaker', 'frilanser', 'selvstendig_næringsdrivende'];
+const muligeSituasjoner: Situasjon[] = [
+    'arbeidstaker_eller_frilanser',
+    'utbetaling_fra_nav',
+    'selvstendig_næringsdrivende'
+];
+
 const pengerIcon = require('../../assets/icons/penger.svg').default;
 const mindrePengerIcon = require('../../assets/icons/mindre-penger.svg').default;
 
 interface State {
-    kalkulatorversjon?: Periode;
+    kalkulatorperiode?: Periode;
     valgteSituasjoner: Situasjon[];
-    snittlønnPerMåned?: number;
-    årslønnIFjor?: number;
-    forStortAvvik: boolean;
+    results?: {
+        snittlønnPerMåned: number;
+
+        // Brukeren tjener over 6G
+        tjenerOverUtbetalingsgrensen: boolean;
+
+        // Hva er et for stort avvik i lønn i fjor?
+        forStortAvvik: number;
+    };
 }
 
 class Planlegger extends React.Component<IntlProps, State> {
     constructor(props: IntlProps) {
         super(props);
         this.state = {
-            valgteSituasjoner: [],
-            forStortAvvik: false
+            valgteSituasjoner: []
         };
     }
 
@@ -46,7 +66,7 @@ class Planlegger extends React.Component<IntlProps, State> {
             ? this.state.valgteSituasjoner.filter((vs) => vs !== situasjon)
             : [...this.state.valgteSituasjoner, situasjon];
 
-        const kalkulatorversjon =
+        const kalkulatorperiode =
             valgteSituasjoner.length === 0
                 ? undefined
                 : valgteSituasjoner.includes('selvstendig_næringsdrivende')
@@ -55,32 +75,70 @@ class Planlegger extends React.Component<IntlProps, State> {
 
         this.setState({
             valgteSituasjoner,
-            kalkulatorversjon
+            kalkulatorperiode
         });
     };
 
-    onFieldsChange = ({
-        monthlyAverage,
-        forStortAvvik
-    }: {
-        monthlyAverage?: number;
-        forStortAvvik: boolean;
-    }) => {
+    onSnittlønnChange = (snittlønn: number) => {
+        const avviksgrense = snittlønn * 12 * 0.25;
+        const tjenerOverGrensen = tjenerOverUtbetalingsgrensen(snittlønn);
+
         this.setState({
-            snittlønnPerMåned: monthlyAverage,
-            forStortAvvik
+            results: {
+                snittlønnPerMåned: snittlønn,
+                forStortAvvik: avviksgrense,
+                tjenerOverUtbetalingsgrensen: tjenerOverGrensen
+            }
         });
     };
 
-    render = () => {
-        const { lang } = this.props;
+    fårUtbetaling = () => this.state.valgteSituasjoner.includes('utbetaling_fra_nav');
+    fårLønn = () =>
+        this.state.valgteSituasjoner.includes('arbeidstaker_eller_frilanser') ||
+        this.state.valgteSituasjoner.includes('selvstendig_næringsdrivende');
 
-        const checkboxes = muligeSituasjoner.map((situasjon) => ({
+    getCheckboxes = () =>
+        muligeSituasjoner.map((situasjon) => ({
             checked: this.state.valgteSituasjoner.includes(situasjon),
             label: getTranslation(`kalkulator.situasjon.${situasjon}`),
             id: situasjon,
             value: situasjon
         }));
+
+    getTitleForChoices = () =>
+        `${
+            this.fårUtbetaling()
+                ? getTranslation('kalkulator.skriv_inn_utbetaling', this.props.lang)
+                : getTranslation('kalkulator.skriv_inn_lønn', this.props.lang)
+        } ${
+            this.state.kalkulatorperiode === 'måned'
+                ? getTranslation('månedene', this.props.lang)
+                : getTranslation('årene', this.props.lang)
+        }?`;
+
+    getAvviksvariabler = () =>
+        this.state.results && {
+            ÅRLIG_SNITTLØNN: (this.state.results.snittlønnPerMåned * 12).toLocaleString(
+                this.props.lang
+            ),
+            ÅRET_I_FJOR: getLastYear(),
+            AVVIKSGRENSE: this.state.results.forStortAvvik.toLocaleString(this.props.lang)
+        };
+
+    getUtbetalingsgrensevariabler = () =>
+        this.state.results &&
+        this.state.results.tjenerOverUtbetalingsgrensen && {
+            UTBETALINGSGRENSE: getUtbetalingsgrense().toLocaleString(this.props.lang)
+        };
+
+    render = () => {
+        const { lang } = this.props;
+
+        const checkboxes = this.getCheckboxes();
+        const fårLønn = this.fårLønn();
+        const valgTittel = this.getTitleForChoices();
+        const avviksvariabler = this.getAvviksvariabler();
+        const utbetalingsgrensevariabler = this.getUtbetalingsgrensevariabler() || undefined;
 
         return (
             <div className={classnames(cls.className, infosiderCls.className)}>
@@ -90,9 +148,8 @@ class Planlegger extends React.Component<IntlProps, State> {
                         <Breadcrumbs path={location.pathname} />
 
                         <PanelMedIllustrasjon
-                            maskSvg={true}
                             title={getTranslation('kalkulator.tittel')}
-                            svg={pengerIcon}>
+                            svg={<SvgMask svg={pengerIcon} />}>
                             <StrukturertTekst tekst={getContent('kalkulator/kalkulator', lang)} />
 
                             <TypografiBase type="undertittel">
@@ -104,19 +161,41 @@ class Planlegger extends React.Component<IntlProps, State> {
                                 onChange={this.onSituasjonToggle}
                             />
 
-                            {this.state.kalkulatorversjon && (
+                            {this.state.kalkulatorperiode && (
                                 <div className={cls.element('flexDownwards')}>
+                                    <TypografiBase type="undertittel">{valgTittel}</TypografiBase>
+                                    {fårLønn && (
+                                        <TypografiBase type="normaltekst">
+                                            {getTranslation(
+                                                'kalkulator.skriv_inn_lønn_ingress',
+                                                lang
+                                            )}
+                                        </TypografiBase>
+                                    )}
                                     <Lønnskalkulator
                                         lang={this.props.lang}
-                                        periode={this.state.kalkulatorversjon}
-                                        onChange={this.onFieldsChange}
+                                        periode={this.state.kalkulatorperiode}
+                                        onChange={this.onSnittlønnChange}
                                     />
 
-                                    {this.state.snittlønnPerMåned && (
+                                    {this.state.results && (
                                         <div className={cls.element('flexDownwards')}>
                                             <TypografiBase type="undertittel">
                                                 {getTranslation('kalkulator.resultat.tittel', lang)}
                                             </TypografiBase>
+
+                                            <Veileder
+                                                fargetema="normal"
+                                                ansikt="glad"
+                                                kompakt={true}>
+                                                <Veiledermelding
+                                                    avviksvariabler={avviksvariabler}
+                                                    utbetalingsgrensevariabler={
+                                                        utbetalingsgrensevariabler
+                                                    }
+                                                    lang={lang}
+                                                />
+                                            </Veileder>
 
                                             <output className={cls.element('resultater')}>
                                                 <Resultat
@@ -124,32 +203,20 @@ class Planlegger extends React.Component<IntlProps, State> {
                                                     lang={this.props.lang}
                                                     percentage={100}
                                                     icon={pengerIcon}
-                                                    monthlyWage={this.state.snittlønnPerMåned}
+                                                    monthlyWage={
+                                                        this.state.results.snittlønnPerMåned
+                                                    }
                                                 />
                                                 <Resultat
                                                     cls={cls}
                                                     lang={this.props.lang}
                                                     percentage={80}
                                                     icon={mindrePengerIcon}
-                                                    monthlyWage={this.state.snittlønnPerMåned}
+                                                    monthlyWage={
+                                                        this.state.results.snittlønnPerMåned
+                                                    }
                                                 />
                                             </output>
-
-                                            {this.state.forStortAvvik && (
-                                                <Veileder
-                                                    fargetema="normal"
-                                                    ansikt="glad"
-                                                    kompakt={true}>
-                                                    <TypografiBase
-                                                        className={cls.element('avviksbeskrivelse')}
-                                                        type="normaltekst">
-                                                        {getTranslation(
-                                                            'kalkulator.for_stort_avvik_beskrivelse',
-                                                            lang
-                                                        )}
-                                                    </TypografiBase>
-                                                </Veileder>
-                                            )}
                                         </div>
                                     )}
                                 </div>
