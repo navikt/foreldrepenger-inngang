@@ -1,5 +1,4 @@
 import * as React from 'react';
-import Kalkulator from './ukekalkulator/Ukekalkulator';
 import Informasjonsfaner from './informasjons-faner/Informasjonsfaner';
 import StrukturertTekst from '../../../components/strukturert-tekst/StrukturertTekst';
 import { Language, withIntl, getTranslation } from '../../../intl/intl';
@@ -34,7 +33,6 @@ const BareFarHarRett = ({ lang }: { lang: Language }) => {
             <StrukturertTekst tekst={getContent(content, lang)} />
             <Informasjonsfaner tabs={getInformasjonsfaner(lang)} />
             <StrukturertTekst tekst={getContent(kalkulatorbeskrivelse, lang)} />
-            <Kalkulator />
         </div>
     );
 };

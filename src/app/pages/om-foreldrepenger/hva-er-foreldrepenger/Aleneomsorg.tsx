@@ -1,5 +1,4 @@
 import * as React from 'react';
-import Kalkulator from './ukekalkulator/Ukekalkulator';
 import Informasjonsfaner from './informasjons-faner/Informasjonsfaner';
 import StrukturertTekst from '../../../components/strukturert-tekst/StrukturertTekst';
 import { Language, withIntl, getTranslation } from '../../../intl/intl';
@@ -48,7 +47,6 @@ const Aleneomsorg = ({ lang }: { lang: Language }) => {
                 title={getTranslation('om_foreldrepenger.hvor_lenge.fordeling.tittel_alene', lang)}
             />
             <StrukturertTekst tekst={getContent(kalkulatorbeskrivelse, lang)} />
-            <Kalkulator />
         </div>
     );
 };

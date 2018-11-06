@@ -1,5 +1,4 @@
 import * as React from 'react';
-import Kalkulator from './ukekalkulator/Ukekalkulator';
 import Informasjonsfaner from './informasjons-faner/Informasjonsfaner';
 
 import StrukturertTekst from '../../../components/strukturert-tekst/StrukturertTekst';
@@ -62,7 +61,6 @@ const FarOgMor = ({ lang }: { lang: Language }) => {
             <StrukturertTekst tekst={getContent(farOgMorContent, lang)} />
             <Informasjonsfaner tabs={getInformasjonsfaner(lang)} />
             <StrukturertTekst tekst={getContent(kalkulatorbeskrivelse, lang)} />
-            <Kalkulator />
         </div>
     );
 };

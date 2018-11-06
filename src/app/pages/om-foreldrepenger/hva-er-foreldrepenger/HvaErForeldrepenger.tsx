@@ -15,6 +15,9 @@ import PanelMedIllustrasjon from '../../../components/panel-med-illustrasjon/Pan
 import { getTranslation, withIntl, IntlProps } from '../../../intl/intl';
 import { getContent } from '../../../utils/getContent';
 import FarOgFar from './FarOgFar';
+import { Foreldresituasjon } from 'app/utils/foreldresituasjon';
+import Ukekalkulator from './ukekalkulator/Ukekalkulator';
+import { getAntallUtbetalingsuker, Utbetalingsalternativ } from './ukekalkulator/utils';
 
 const infoSvg = require('../../../assets/ark/ark-info.svg').default;
 
@@ -26,12 +29,12 @@ const tabs: Innholdsfane[] = [
         component: <FarOgMor />
     },
     {
-        label: 'bareFarHarRett',
+        label: 'bare_far_har_rett',
         icon: <Foreldrepar firstParent="far3" secondParent="medmor1" variant={1} />,
         component: <BareFarHarRett />
     },
     {
-        label: 'bareMorHarRett',
+        label: 'bare_mor_har_rett',
         icon: <Foreldrepar firstParent="far2" secondParent="mor1" variant={2} />,
         component: <BareMorHarRett />
     },
@@ -54,28 +57,53 @@ const tabs: Innholdsfane[] = [
 
 const section = 'hvaErForeldrepenger';
 
-interface Props {
+interface HvaErForeldrepengerProps {
     id: string;
 }
 
-const HvaErForeldrepenger: React.StatelessComponent<Props & IntlProps> = ({ id, lang }) => {
-    return (
-        <PanelMedIllustrasjon
-            id={id}
-            title={getTranslation('om_foreldrepenger.hvor_lenge.tittel', lang)}
-            svg={infoSvg}>
-            <div className={cls.className}>
-                <StrukturertTekst
-                    tekst={getContent(
-                        'all-informasjon/hva-er-foreldrepenger/hva-er-foreldrepenger',
-                        lang
-                    )}
-                />
-                <Innholdsfaner tabs={tabs} section={section} />
-                <MenHvaHvis />
-            </div>
-        </PanelMedIllustrasjon>
-    );
-};
+type Props = HvaErForeldrepengerProps & IntlProps;
+
+interface State {
+    antallUtbetalingsuker?: Utbetalingsalternativ[];
+}
+
+class HvaErForeldrepenger extends React.Component<Props, State> {
+    constructor(props: Props) {
+        super(props);
+
+        this.state = {
+            antallUtbetalingsuker: getAntallUtbetalingsuker('far_og_mor')
+        };
+    }
+
+    onTabSelect = (valgtSituasjon: Foreldresituasjon, undersituasjon?: string) => {
+        this.setState({
+            antallUtbetalingsuker: getAntallUtbetalingsuker(valgtSituasjon, undersituasjon)
+        });
+    };
+
+    render = () => {
+        const { id, lang } = this.props;
+
+        return (
+            <PanelMedIllustrasjon
+                id={id}
+                title={getTranslation('om_foreldrepenger.hvor_lenge.tittel', lang)}
+                svg={infoSvg}>
+                <div className={cls.className}>
+                    <StrukturertTekst
+                        tekst={getContent(
+                            'all-informasjon/hva-er-foreldrepenger/hva-er-foreldrepenger',
+                            lang
+                        )}
+                    />
+                    <Innholdsfaner tabs={tabs} section={section} onSelect={this.onTabSelect} />
+                    <Ukekalkulator antallUtbetalingsuker={this.state.antallUtbetalingsuker} />
+                    <MenHvaHvis />
+                </div>
+            </PanelMedIllustrasjon>
+        );
+    };
+}
 
 export default withIntl(HvaErForeldrepenger);

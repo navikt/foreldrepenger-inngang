@@ -1,5 +1,4 @@
 import * as React from 'react';
-import Kalkulator from './ukekalkulator/Ukekalkulator';
 import Informasjonsfaner from './informasjons-faner/Informasjonsfaner';
 
 import StrukturertTekst from '../../../components/strukturert-tekst/StrukturertTekst';
@@ -61,7 +60,6 @@ const FarOgFar = ({ lang }: { lang: Language }) => {
                 title={getTranslation('om_foreldrepenger.hvor_lenge.fordeling.tittel', lang)}
             />
             <StrukturertTekst tekst={getContent(kalkulatorbeskrivelse, lang)} />
-            <Kalkulator />
         </div>
     );
 };
