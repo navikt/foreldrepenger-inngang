@@ -6,17 +6,15 @@ import SøkForeldrepenger from './pages/søk-foreldrepenger/SøkForeldrepenger';
 import SøkSvangerskapspenger from './pages/søk-svangerskapspenger/SøkSvangerskapspenger';
 import OmForeldrepenger from './pages/om-foreldrepenger/OmForeldrepenger';
 import OmEngangsstønad from './pages/om-engangsstønad/OmEngangsstønad';
-import Blindside from './pages/blindside/Blindside';
 import ViktigeFrister from './pages/viktige-frister/ViktigeFrister';
 import NyeBeregningsregler from './pages/nye-beregningsregler/NyeBeregningsregler';
-import Tjenester from './pages/tjenester/Tjenester';
 import Kalkulator from './pages/kalkulator/Kalkulator';
 
 const Router = () => (
     <Switch>
         <Route exact={true} path="/" component={Informasjonstavle} key="informasjonstavle" />
-        <Route exact={true} path="/tjenester" component={Tjenester} key="tjenester" />
-        <Route exact={true} path="/tjenester/kalkulator" component={Kalkulator} key="kalkulator" />
+        {/*<Route exact={true} path="/tjenester" component={Tjenester} key="tjenester" />*/}
+        <Route exact={true} path="/hvor-mye" component={Kalkulator} key="kalkulator" />
         <Route exact={true} path="/hva-soker-du" component={HvaSøkerDu} key="hva-soker-du" />
         <Route
             exact={true}
@@ -48,7 +46,6 @@ const Router = () => (
             component={OmEngangsstønad}
             key="om-engangsstonad"
         />
-        <Route exact={true} path="/under-arbeid" component={Blindside} key="under-arbeid" />
         <Route
             exact={true}
             path="/viktige-frister"

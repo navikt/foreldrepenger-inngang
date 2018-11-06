@@ -7,7 +7,6 @@ import Header from './header/Header';
 import MerInformasjon from './mer-informasjon/MerInformasjon';
 import AndreLenker from './andre-lenker/AndreLenker';
 import { StatelessComponent } from 'enzyme';
-import UnderProduksjon from './UnderProduksjon';
 import HeaderInformasjon from '../../components/header-informasjon/HeaderInformasjon';
 import MediaQuery from 'react-responsive';
 import './informasjonstavle.less';
@@ -36,14 +35,11 @@ const BildelenkerWithoutIntl: StatelessComponent<IntlProps> = ({ lang }) => {
             <MediaQuery minWidth={800}>
                 <PanelMedBilde
                     svgName="hender-sjekkliste"
-                    title={getTranslation('informasjonstavle.hva_har_du_rett_på', lang)}
+                    title={getTranslation('informasjonstavle.hvor_mye', lang)}
                     urlIsExternal={false}
-                    url="/under-arbeid"
-                    underArbeid={<UnderProduksjon group={'_mainTable'} />}
-                    disabled={true}
-                    stopSign={true}>
+                    url="/hvor-mye">
                     <Tekstomrade>
-                        {getTranslation('informasjonstavle.hva_har_du_rett_på_body', lang)}
+                        {getTranslation('informasjonstavle.hvor_mye_body', lang)}
                     </Tekstomrade>
                 </PanelMedBilde>
             </MediaQuery>
@@ -51,8 +47,8 @@ const BildelenkerWithoutIntl: StatelessComponent<IntlProps> = ({ lang }) => {
             <PanelMedBilde
                 svgName="permisjon-sjekkliste"
                 title={getTranslation('informasjonstavle.hvor_lenge_kan_du_få_permisjon', lang)}
-                urlIsExternal={false}
-                url="/tjenester">
+                urlIsExternal={true}
+                url="https://tjenester.nav.no/foreldrepengeplanlegger">
                 <Tekstomrade>
                     {getTranslation('informasjonstavle.hvor_lenge_kan_du_få_permisjon_body', lang)}
                 </Tekstomrade>
