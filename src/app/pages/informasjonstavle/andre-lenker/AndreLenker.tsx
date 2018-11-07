@@ -8,8 +8,7 @@ import './andreLenker.less';
 const links = [
     {
         label: 'informasjonstavle.andre_lenker.i_utlandet',
-        href:
-            'https://www.nav.no/no/Person/Familie/Relatert+informasjon/foreldrepenger-og-utland'
+        href: 'https://www.nav.no/no/Person/Familie/Relatert+informasjon/foreldrepenger-og-utland'
     },
     {
         label: 'informasjonstavle.andre_lenker.meld_fra',
@@ -23,8 +22,7 @@ const links = [
     },
     {
         label: 'informasjonstavle.andre_lenker.klage',
-        href:
-            'https://www.nav.no/no/NAV+og+samfunn/Kontakt+NAV/Klage+ris+og+ros/Klagerettigheter'
+        href: 'https://www.nav.no/no/NAV+og+samfunn/Kontakt+NAV/Klage+ris+og+ros/Klagerettigheter'
     },
     {
         label: 'informasjonstavle.andre_lenker.regelverk',
@@ -38,9 +36,11 @@ const cls = BEMHelper('andreLenker');
 const AndreLenker: React.StatelessComponent<IntlProps> = ({ lang }) => {
     const otherLinks = links.map((link) => (
         <div key={link.label} className={cls.element('linkContainer')}>
-            <WithLink url={link.href} urlIsExternal={!link.internal} addExternalIcon={true}>
-                <TypografiBase type="normaltekst">{getTranslation(link.label, lang)}</TypografiBase>
-            </WithLink>
+            <TypografiBase type="normaltekst">
+                <WithLink url={link.href} urlIsExternal={!link.internal} addExternalIcon={true}>
+                    {getTranslation(link.label, lang)}
+                </WithLink>
+            </TypografiBase>
         </div>
     ));
 

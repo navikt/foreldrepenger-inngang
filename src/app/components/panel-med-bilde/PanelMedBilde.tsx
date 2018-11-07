@@ -56,7 +56,7 @@ const PanelMedBilde = ({
                         <FlexibleSvg
                             className={cls.element('svg')}
                             iconRef={svgFile}
-                            height={100}
+                            height={110}
                             width="100%"
                         />
                     </MediaQuery>

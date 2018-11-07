@@ -1,4 +1,4 @@
-@import '~nav-frontend-core/less/_variabler.less';
+@import '../../styles/index.less';
 
 .breadcrumbs {
     display: flex;
@@ -9,7 +9,13 @@
 
     a {
         font-weight: lighter;
+        text-decoration: none;
         color: @navBla;
+        border-bottom: 1px solid lightgray;
+
+        &:hover {
+            border-bottom-color: @navBla;
+        }
 
         &:focus {
             outline: none;
@@ -31,11 +37,16 @@
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
-        padding-right: 0.5rem;
-        font-weight: bold;
+        margin-right: 0.5rem;
+        color: lightGray;
 
         &:not(:first-child) {
-            padding-left: 0.5rem;
+            margin-left: 0.5rem;
         }
+    }
+
+    &__current {
+        color: black;
+        font-weight: bold;
     }
 }

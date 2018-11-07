@@ -4,7 +4,8 @@ import {
     StrukturertTekst,
     MarkDefinition,
     Avsnitt,
-    Tekstsnutt
+    Tekstsnutt,
+    Definisjoner
 } from '../../utils/strukturertTekst';
 import { WithLink } from '../../utils/withLink';
 import BEMHelper from '../../utils/bem';
@@ -12,19 +13,22 @@ import './strukturertTekst.less';
 
 interface Props {
     tekst: StrukturertTekst;
+    definisjoner?: Definisjoner;
 }
 
 const cls = BEMHelper('strukturertTekst');
 
-const StrukturertTekst: StatelessComponent<Props> = ({ tekst }) => {
-    return <div className={cls.className}>{tekst ? tekst.map(renderAvsnitt) : null}</div>;
+const StrukturertTekst: StatelessComponent<Props> = ({ tekst, definisjoner }) => {
+    return (
+        <div className={cls.className}>{tekst ? tekst.map(renderAvsnitt(definisjoner)) : null}</div>
+    );
 };
 
-const renderAvsnitt = (avsnitt: Avsnitt, index: number) => {
+const renderAvsnitt = (definisjoner?: Definisjoner) => (avsnitt: Avsnitt, index: number) => {
     const { type, style, markDefs, children, listItem, level } = avsnitt;
 
     if (level > 0) {
-        const renderListElement = renderTekstsnutt(markDefs);
+        const renderListElement = renderTekstsnutt(markDefs, definisjoner);
         const itemToRender = (
             <li>
                 <TypografiBase type={style}>
@@ -47,30 +51,32 @@ const renderAvsnitt = (avsnitt: Avsnitt, index: number) => {
     } else {
         return (
             <TypografiBase key={index} className={cls.element(type)} type={style}>
-                {children.map(renderTekstsnutt(markDefs))}
+                {children.map(renderTekstsnutt(markDefs, definisjoner))}
             </TypografiBase>
         );
     }
 };
 
-const renderTekstsnutt = (markDefs: MarkDefinition[]) => (
+const renderTekstsnutt = (markDefs: MarkDefinition[], variabler?: Definisjoner) => (
     tekstsnutt: Tekstsnutt,
     index: number
 ) => {
     const { type: snuttype, text, marks } = tekstsnutt;
 
-    let toRender: ReactNode = text;
+    const variablesAvailable = variabler && variabler[text] && marks && marks.includes('variable');
+    let toRender: ReactNode = variabler && variablesAvailable ? variabler[text] : text;
+
     switch (snuttype) {
         case 'span': {
-            toRender = <span>{text}</span>;
+            toRender = <span>{toRender}</span>;
             break;
         }
         case 'span_nowrap': {
-            toRender = <span className={cls.element('unbreakable')}>{text}</span>;
+            toRender = <span className={cls.element('unbreakable')}>{toRender}</span>;
             break;
         }
         default: {
-            toRender = <span>{text}</span>;
+            toRender = <span>{toRender}</span>;
         }
     }
 
@@ -84,6 +90,10 @@ const renderTekstsnutt = (markDefs: MarkDefinition[]) => (
 
                 case 'italic': {
                     toRender = <i>{toRender}</i>;
+                    break;
+                }
+
+                case 'variable': {
                     break;
                 }
 

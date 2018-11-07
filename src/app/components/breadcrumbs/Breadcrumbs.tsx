@@ -3,8 +3,9 @@ import TypografiBase from 'nav-frontend-typografi';
 import NavFrontendChevron from 'nav-frontend-chevron';
 import BEMHelper from '../../utils/bem';
 import { Link } from 'react-router-dom';
-import './breadcrumbs.less';
+import classnames from 'classnames';
 import { getTranslation, Language, IntlProps, withIntl } from '../../intl/intl';
+import './breadcrumbs.less';
 
 const cls = BEMHelper('breadcrumbs');
 
@@ -94,7 +95,9 @@ class Breadcrumbs extends Component<BreadcrumbsProps & IntlProps> {
                         aria-current={current ? 'page' : ''}
                         key={`crumb${index}`}
                         type="normaltekst"
-                        className={cls.element('item')}>
+                        className={classnames(cls.element('item'), {
+                            [cls.element('current')]: current
+                        })}>
                         {current ? path.label : <Link to={path.url}>{path.label}</Link>}
                     </TypografiBase>
                 );

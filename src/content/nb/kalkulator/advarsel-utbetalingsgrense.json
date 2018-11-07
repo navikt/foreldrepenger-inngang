@@ -1,0 +1,41 @@
+[
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Merk at siden lønnen din overstiger utbetalingsgrensen på ",
+                "marks": []
+            },
+            { "type": "span", "text": "UTBETALINGSGRENSE", "marks": ["bold", "variable"] },
+            {
+                "type": "span",
+                "text": " kr",
+                "marks": ["bold"]
+            },
+            {
+                "type": "span",
+                "text": " (seks ganger ",
+                "marks": []
+            },
+            {
+                "type": "span",
+                "text": "grunnbeløpet (G)",
+                "marks": ["external_link", "url_grunnbeløp"]
+            },
+            {
+                "type": "span",
+                "text": "), blir dette grunnlaget for utregningen under.",
+                "marks": []
+            }
+        ],
+        "markDefs": [
+            {
+                "key": "url_grunnbeløp",
+                "type": "link",
+                "href": "https://www.nav.no/no/NAV+og+samfunn/Kontakt+NAV/Utbetalinger/Snarveier/satser--380089?kap=383506"
+            }
+        ]
+    }
+]

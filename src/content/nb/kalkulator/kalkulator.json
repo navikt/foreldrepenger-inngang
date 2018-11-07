@@ -1,0 +1,13 @@
+[
+    {
+        "type": "avsnitt",
+        "style": "ingress",
+        "children": [
+            {
+                "type": "span",
+                "text": "Regn ut hvor mye du kan få i foreldrepenger",
+                "marks": []
+            }
+        ]
+    }
+]
