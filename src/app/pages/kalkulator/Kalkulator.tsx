@@ -156,6 +156,9 @@ class Planlegger extends React.Component<IntlProps, State> {
         const avviksvariabler = this.getAvviksvariabler() || undefined;
         const utbetalingsgrensevariabler = this.getUtbetalingsgrensevariabler() || undefined;
         const forLavLønnvariabler = this.getForLavLønnvariabler() || undefined;
+        const kombinasjonIkkeStøttet =
+            this.state.valgteSituasjoner.includes('selvstendig_næringsdrivende') &&
+            this.state.valgteSituasjoner.length > 1;
 
         return (
             <div className={classnames(cls.className, infosiderCls.className)}>
@@ -178,79 +181,96 @@ class Planlegger extends React.Component<IntlProps, State> {
                                 onChange={this.onSituasjonToggle}
                             />
 
-                            {this.state.kalkulatorperiode && (
-                                <div className={cls.element('flexDownwards')}>
-                                    <TypografiBase type="undertittel">{valgTittel}</TypografiBase>
-                                    {fårLønn && (
-                                        <TypografiBase type="normaltekst">
-                                            {getTranslation(
-                                                'kalkulator.skriv_inn_lønn_ingress',
-                                                lang
-                                            )}
+                            {this.state.kalkulatorperiode &&
+                                (kombinasjonIkkeStøttet ? (
+                                    <div className={cls.element('ikkeStøttet')}>
+                                        <Veileder
+                                            fargetema="advarsel"
+                                            ansikt="undrende"
+                                            kompakt={true}>
+                                            <StrukturertTekst
+                                                tekst={getContent('kalkulator/ikke-støttet', lang)}
+                                            />
+                                        </Veileder>
+                                    </div>
+                                ) : (
+                                    <div className={cls.element('flexDownwards')}>
+                                        <TypografiBase type="undertittel">
+                                            {valgTittel}
                                         </TypografiBase>
-                                    )}
-                                    <Lønnskalkulator
-                                        lang={this.props.lang}
-                                        periode={this.state.kalkulatorperiode}
-                                        onChange={this.onSnittlønnChange}
-                                    />
-
-                                    {this.state.results && (
-                                        <div className={cls.element('flexDownwards')}>
-                                            <TypografiBase type="undertittel">
-                                                {getTranslation('kalkulator.resultat.tittel', lang)}
+                                        {fårLønn && (
+                                            <TypografiBase type="normaltekst">
+                                                {getTranslation(
+                                                    'kalkulator.skriv_inn_lønn_ingress',
+                                                    lang
+                                                )}
                                             </TypografiBase>
+                                        )}
+                                        <Lønnskalkulator
+                                            lang={this.props.lang}
+                                            periode={this.state.kalkulatorperiode}
+                                            onChange={this.onSnittlønnChange}
+                                        />
 
-                                            <Veileder
-                                                fargetema="normal"
-                                                ansikt="glad"
-                                                kompakt={true}>
-                                                <Veiledermelding
-                                                    avviksvariabler={
-                                                        forLavLønnvariabler
-                                                            ? undefined
-                                                            : avviksvariabler
-                                                    }
-                                                    forLavLønnvariabler={forLavLønnvariabler}
-                                                    utbetalingsgrensevariabler={
-                                                        utbetalingsgrensevariabler
-                                                    }
-                                                    lang={lang}
-                                                />
-                                            </Veileder>
-
-                                            <output className={cls.element('resultater')}>
-                                                <Resultat
-                                                    cls={cls}
-                                                    lang={this.props.lang}
-                                                    percentage={100}
-                                                    icon={pengerIcon}
-                                                    monthlyWage={
-                                                        this.state.results.snittlønnPerMåned
-                                                    }
-                                                />
-                                                <Resultat
-                                                    cls={cls}
-                                                    lang={this.props.lang}
-                                                    percentage={80}
-                                                    icon={mindrePengerIcon}
-                                                    monthlyWage={
-                                                        this.state.results.snittlønnPerMåned
-                                                    }
-                                                />
-                                            </output>
-                                            <div className={cls.element('disclaimer')}>
-                                                <StrukturertTekst
-                                                    tekst={getContent(
-                                                        'kalkulator/disclaimer',
+                                        {this.state.results && (
+                                            <div className={cls.element('flexDownwards')}>
+                                                <TypografiBase type="undertittel">
+                                                    {getTranslation(
+                                                        'kalkulator.resultat.tittel',
                                                         lang
                                                     )}
-                                                />
+                                                </TypografiBase>
+
+                                                <Veileder
+                                                    fargetema="normal"
+                                                    ansikt="glad"
+                                                    kompakt={true}>
+                                                    <Veiledermelding
+                                                        avviksvariabler={
+                                                            forLavLønnvariabler
+                                                                ? undefined
+                                                                : avviksvariabler
+                                                        }
+                                                        forLavLønnvariabler={forLavLønnvariabler}
+                                                        utbetalingsgrensevariabler={
+                                                            utbetalingsgrensevariabler
+                                                        }
+                                                        lang={lang}
+                                                    />
+                                                </Veileder>
+
+                                                <output className={cls.element('resultater')}>
+                                                    <Resultat
+                                                        cls={cls}
+                                                        lang={this.props.lang}
+                                                        percentage={100}
+                                                        icon={pengerIcon}
+                                                        monthlyWage={
+                                                            this.state.results.snittlønnPerMåned
+                                                        }
+                                                    />
+                                                    <Resultat
+                                                        cls={cls}
+                                                        lang={this.props.lang}
+                                                        percentage={80}
+                                                        icon={mindrePengerIcon}
+                                                        monthlyWage={
+                                                            this.state.results.snittlønnPerMåned
+                                                        }
+                                                    />
+                                                </output>
+                                                <div className={cls.element('disclaimer')}>
+                                                    <StrukturertTekst
+                                                        tekst={getContent(
+                                                            'kalkulator/disclaimer',
+                                                            lang
+                                                        )}
+                                                    />
+                                                </div>
                                             </div>
-                                        </div>
-                                    )}
-                                </div>
-                            )}
+                                        )}
+                                    </div>
+                                ))}
                         </PanelMedIllustrasjon>
                     </main>
                 </div>
