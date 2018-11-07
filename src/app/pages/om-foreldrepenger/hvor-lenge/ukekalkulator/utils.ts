@@ -29,7 +29,7 @@ export const getAntallUtbetalingsuker = (
         case 'bare_mor_har_rett':
             return UKER_BARE_MOR_HAR_RETT;
         case 'aleneomsorg':
-            return undersituasjon === 'mor' ? UKER_ALENEOMSORG_MOR : UKER_ALENEOMSORG_FAR;
+            return undersituasjon === 'alenemor' ? UKER_ALENEOMSORG_MOR : UKER_ALENEOMSORG_FAR;
         default:
             return UKER_FAR_OG_MOR;
     }

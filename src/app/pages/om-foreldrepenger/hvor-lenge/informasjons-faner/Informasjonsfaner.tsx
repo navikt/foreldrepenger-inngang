@@ -10,9 +10,10 @@ import TypografiBase from 'nav-frontend-typografi';
 const cls = BEMHelper('informasjonsfaner');
 
 interface Fane {
-    faneLabel: string;
-    faneIcon: ReactNode;
-    bodyProps: {
+    value: string;
+    label: string;
+    icon: ReactNode;
+    body: {
         tittel: string;
         icon: string | React.ReactNode;
         antallUker: string;
@@ -24,6 +25,7 @@ interface Fane {
 interface TabProps {
     tabs: Fane[];
     title?: string;
+    onTabSelected?: (tab: string) => void;
 }
 
 type Props = TabProps & IntlProps;
@@ -43,7 +45,11 @@ class Informasjonsfaner extends React.Component<Props> {
         };
     }
 
-    onTabChange = (event: any, index: number) => {
+    onTabChange = (_: any, index: number) => {
+        if (this.props.onTabSelected) {
+            this.props.onTabSelected(this.props.tabs[index].value);
+        }
+
         this.setState({
             currentTab: index,
             color: 'red'
@@ -71,12 +77,12 @@ class Informasjonsfaner extends React.Component<Props> {
                 <Tabs
                     kompakt={true}
                     tabs={this.props.tabs.map((tab) => ({
-                        label: tab.faneLabel
+                        label: tab.label
                     }))}
                     onChange={this.onTabChange}
                 />
             )}
-            <InformasjonsfanerBody {...this.props.tabs[this.state.currentTab].bodyProps} />
+            <InformasjonsfanerBody {...this.props.tabs[this.state.currentTab].body} />
         </div>
     );
 }

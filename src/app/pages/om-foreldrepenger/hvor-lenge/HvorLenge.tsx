@@ -1,28 +1,28 @@
 import * as React from 'react';
 import BEMHelper from '../../../utils/bem';
-import FarOgMor from './FarOgMor';
-import MorOgMor from './MorOgMor';
-import BareFarHarRett from './BareFarHarRett';
-import BareMorHarRett from './BareMorHarRett';
-import Aleneomsorg from './Aleneomsorg';
+import FarOgMor from './situasjoner/FarOgMor';
+import MorOgMor from './situasjoner/MorOgMor';
+import BareFarHarRett from './situasjoner/BareFarHarRett';
+import BareMorHarRett from './situasjoner/BareMorHarRett';
+import Aleneomsorg from './situasjoner/Aleneomsorg';
 import MenHvaHvis from './menHvaHvis/MenHvaHvis';
 import Foreldrepar from '../../../components/foreldrepar/Foreldrepar';
 import StrukturertTekst from '../../../components/strukturert-tekst/StrukturertTekst';
 import Innholdsfaner from '../../../components/innholdsfaner/Innholdsfaner';
 import { Innholdsfane } from '../../../components/innholdsfaner/fane/Fane';
-import './hvaErForeldrepenger.less';
 import PanelMedIllustrasjon from '../../../components/panel-med-illustrasjon/PanelMedIllustrasjon';
 import { getTranslation, withIntl, IntlProps } from '../../../intl/intl';
 import { getContent } from '../../../utils/getContent';
-import FarOgFar from './FarOgFar';
+import FarOgFar from './situasjoner/FarOgFar';
 import { Foreldresituasjon } from 'app/utils/foreldresituasjon';
 import Ukekalkulator from './ukekalkulator/Ukekalkulator';
 import { getAntallUtbetalingsuker, Utbetalingsalternativ } from './ukekalkulator/utils';
+import './hvorLenge.less';
 
 const infoSvg = require('../../../assets/ark/ark-info.svg').default;
 
-const cls = BEMHelper('hvaErForeldrepenger');
-const tabs: Innholdsfane[] = [
+const cls = BEMHelper('hvorLenge');
+const getTabs = (onUndersituasjonSelected: (undersituasjon: string) => void): Innholdsfane[] => [
     {
         label: 'far_og_mor',
         icon: <Foreldrepar firstParent="far1" secondParent="mor2" />,
@@ -41,7 +41,7 @@ const tabs: Innholdsfane[] = [
     {
         label: 'aleneomsorg',
         icon: <Foreldrepar firstParent="far1" secondParent="medmor1" variant={3} />,
-        component: <Aleneomsorg />
+        component: <Aleneomsorg onUndersituasjonSelected={onUndersituasjonSelected} />
     },
     {
         label: 'mor_og_mor',
@@ -55,30 +55,52 @@ const tabs: Innholdsfane[] = [
     }
 ];
 
-const section = 'hvaErForeldrepenger';
-
-interface HvaErForeldrepengerProps {
+interface HvorLengeProps {
     id: string;
 }
 
-type Props = HvaErForeldrepengerProps & IntlProps;
+type Props = HvorLengeProps & IntlProps;
 
 interface State {
+    valgtSituasjon: Foreldresituasjon;
+    undersituasjon?: string;
     antallUtbetalingsuker?: Utbetalingsalternativ[];
 }
 
-class HvaErForeldrepenger extends React.Component<Props, State> {
+class HvorLenge extends React.Component<Props, State> {
     constructor(props: Props) {
         super(props);
 
         this.state = {
+            valgtSituasjon: 'far_og_mor',
             antallUtbetalingsuker: getAntallUtbetalingsuker('far_og_mor')
         };
     }
 
-    onTabSelect = (valgtSituasjon: Foreldresituasjon, undersituasjon?: string) => {
+    onSituasjonSelected = (valgtSituasjon: Foreldresituasjon) => {
+        this.setState(
+            {
+                valgtSituasjon
+            },
+            this.setAntallUtbetalingsuker
+        );
+    };
+
+    onUndersituasjonSelected = (undersituasjon?: string) => {
+        this.setState(
+            {
+                undersituasjon
+            },
+            this.setAntallUtbetalingsuker
+        );
+    };
+
+    setAntallUtbetalingsuker = () => {
         this.setState({
-            antallUtbetalingsuker: getAntallUtbetalingsuker(valgtSituasjon, undersituasjon)
+            antallUtbetalingsuker: getAntallUtbetalingsuker(
+                this.state.valgtSituasjon,
+                this.state.undersituasjon
+            )
         });
     };
 
@@ -92,12 +114,12 @@ class HvaErForeldrepenger extends React.Component<Props, State> {
                 svg={infoSvg}>
                 <div className={cls.className}>
                     <StrukturertTekst
-                        tekst={getContent(
-                            'all-informasjon/hva-er-foreldrepenger/hva-er-foreldrepenger',
-                            lang
-                        )}
+                        tekst={getContent('all-informasjon/hvor-lenge/hvor-lenge', lang)}
                     />
-                    <Innholdsfaner tabs={tabs} section={section} onSelect={this.onTabSelect} />
+                    <Innholdsfaner
+                        tabs={getTabs(this.onUndersituasjonSelected)}
+                        onSelect={this.onSituasjonSelected}
+                    />
                     <Ukekalkulator antallUtbetalingsuker={this.state.antallUtbetalingsuker} />
                     <MenHvaHvis />
                 </div>
@@ -106,4 +128,4 @@ class HvaErForeldrepenger extends React.Component<Props, State> {
     };
 }
 
-export default withIntl(HvaErForeldrepenger);
+export default withIntl(HvorLenge);

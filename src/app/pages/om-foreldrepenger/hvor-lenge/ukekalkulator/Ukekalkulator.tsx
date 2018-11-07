@@ -33,6 +33,17 @@ class Ukekalkulator extends React.Component<Props, State> {
         };
     }
 
+    componentWillReceiveProps = (nextProps: Props) => {
+        if (nextProps.antallUtbetalingsuker !== this.props.antallUtbetalingsuker) {
+            this.setState({
+                selectedNumberOfWeeks:
+                    nextProps.antallUtbetalingsuker[this.state.selectedNumberOfChildren - 1][
+                        this.state.selectedPercentage
+                    ]
+            });
+        }
+    };
+
     onNumberOfWeeksSelect = (
         selectedNumberOfWeeks: number,
         selectedNumberOfChildren: 1 | 2 | 3,
