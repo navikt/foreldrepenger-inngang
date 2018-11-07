@@ -6,10 +6,10 @@
         flex-direction: row;
         align-items: flex-start;
         padding: 2rem;
+    }
 
-        .strukturertTekst {
-            margin: 0rem 1rem;
-        }
+    .strukturertTekst {
+        align-self: center;
     }
 
     .typo-undertittel {
@@ -104,6 +104,15 @@
 
     .nav-veilederpanel {
         margin: 1rem 2.2rem;
+    }
+
+    &__disclaimer {
+        font-size: 0.8rem;
+        align-self: flex-start;
+        
+        .strukturertTekst__avsnitt {
+            margin: 0;
+        }
     }
 
     @media (min-width: @mobile-breakpoint) {

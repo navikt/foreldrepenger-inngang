@@ -14,8 +14,10 @@ import Resultat from './resultat/Resultat';
 import {
     Periode,
     tjenerOverUtbetalingsgrensen,
+    tjenerForLiteForForeldrepenger,
     getLastYear,
-    getUtbetalingsgrense
+    getUtbetalingsgrense,
+    getEnHalvG
 } from 'app/utils/beregningUtils';
 import Veileder from 'app/components/veileder/Veileder';
 import './kalkulator.less';
@@ -47,6 +49,9 @@ interface State {
 
         // Brukeren tjener over 6G
         tjenerOverUtbetalingsgrensen: boolean;
+
+        // Brukeren tjener under 1/2G
+        tjenerForLite: boolean;
 
         // Hva er et for stort avvik i lønn i fjor?
         forStortAvvik: number;
@@ -82,12 +87,14 @@ class Planlegger extends React.Component<IntlProps, State> {
     onSnittlønnChange = (snittlønn: number) => {
         const avviksgrense = snittlønn * 12 * 0.25;
         const tjenerOverGrensen = tjenerOverUtbetalingsgrensen(snittlønn);
+        const tjenerForLite = tjenerForLiteForForeldrepenger(snittlønn);
 
         this.setState({
             results: {
                 snittlønnPerMåned: snittlønn,
                 forStortAvvik: avviksgrense,
-                tjenerOverUtbetalingsgrensen: tjenerOverGrensen
+                tjenerOverUtbetalingsgrensen: tjenerOverGrensen,
+                tjenerForLite
             }
         });
     };
@@ -131,14 +138,24 @@ class Planlegger extends React.Component<IntlProps, State> {
             UTBETALINGSGRENSE: getUtbetalingsgrense().toLocaleString(this.props.lang)
         };
 
+    getForLavLønnvariabler = () =>
+        this.state.results &&
+        this.state.results.tjenerForLite && {
+            ÅRLIG_SNITTLØNN: (this.state.results.snittlønnPerMåned * 12).toLocaleString(
+                this.props.lang
+            ),
+            EN_HALV_G: getEnHalvG().toLocaleString(this.props.lang)
+        };
+
     render = () => {
         const { lang } = this.props;
 
         const checkboxes = this.getCheckboxes();
         const fårLønn = this.fårLønn();
         const valgTittel = this.getTitleForChoices();
-        const avviksvariabler = this.getAvviksvariabler();
+        const avviksvariabler = this.getAvviksvariabler() || undefined;
         const utbetalingsgrensevariabler = this.getUtbetalingsgrensevariabler() || undefined;
+        const forLavLønnvariabler = this.getForLavLønnvariabler() || undefined;
 
         return (
             <div className={classnames(cls.className, infosiderCls.className)}>
@@ -189,7 +206,12 @@ class Planlegger extends React.Component<IntlProps, State> {
                                                 ansikt="glad"
                                                 kompakt={true}>
                                                 <Veiledermelding
-                                                    avviksvariabler={avviksvariabler}
+                                                    avviksvariabler={
+                                                        forLavLønnvariabler
+                                                            ? undefined
+                                                            : avviksvariabler
+                                                    }
+                                                    forLavLønnvariabler={forLavLønnvariabler}
                                                     utbetalingsgrensevariabler={
                                                         utbetalingsgrensevariabler
                                                     }
@@ -217,6 +239,14 @@ class Planlegger extends React.Component<IntlProps, State> {
                                                     }
                                                 />
                                             </output>
+                                            <div className={cls.element('disclaimer')}>
+                                                <StrukturertTekst
+                                                    tekst={getContent(
+                                                        'kalkulator/disclaimer',
+                                                        lang
+                                                    )}
+                                                />
+                                            </div>
                                         </div>
                                     )}
                                 </div>

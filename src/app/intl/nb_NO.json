@@ -75,7 +75,7 @@
     "tjenester.lenke_planlegger": "Planlegg for hvor lenge du kan være hjemme med barnet ditt",
 
     "kalkulator.bannertekst": "Beregning av foreldrepenger",
-    "kalkulator.tittel": "Hvor mye har jeg rett på?",
+    "kalkulator.tittel": "Hvor mye?",
     "kalkulator.valg.tittel": "Hva er din nåværende arbeidssituasjon?",
     "kalkulator.valg.ingress": "Du kan velge flere alternativ",
     "kalkulator.velg_din_situasjon": "Velg din situasjon ...",
@@ -86,7 +86,7 @@
     "kalkulator.skriv_inn_utbetaling": "Hvor mye fikk du utbetalt de tre siste",
     "kalkulator.skriv_inn_lønn_ingress": "Oppgi lønnen din før skatt",
     "kalkulator.lønn.resultat": "Gjennomsnittlig månedslønn",
-    "kalkulator.resultat.tittel": "Resultat",
+    "kalkulator.resultat.tittel": "Dette kan du få",
     "kalkulator.resultat.undertittel": "prosent foreldrepenger",
     "kalkulator.resultat.gjennomsnitt_per_måned": "Gjennomsnitt utbetalt per måned",
     "kalkulator.resultat.dagsats": "Dagsats",
