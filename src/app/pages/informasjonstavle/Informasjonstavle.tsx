@@ -8,7 +8,6 @@ import MerInformasjon from './mer-informasjon/MerInformasjon';
 import AndreLenker from './andre-lenker/AndreLenker';
 import { StatelessComponent } from 'enzyme';
 import HeaderInformasjon from '../../components/header-informasjon/HeaderInformasjon';
-import MediaQuery from 'react-responsive';
 import './informasjonstavle.less';
 
 const cls = BEMHelper('informasjonstavle');
@@ -32,37 +31,35 @@ const Informasjonstavle = () => {
 const BildelenkerWithoutIntl: StatelessComponent<IntlProps> = ({ lang }) => {
     return (
         <nav className={cls.element('bildepaneler')}>
-            <MediaQuery minWidth={800}>
-                <PanelMedBilde
-                    svgName="hender-sjekkliste"
-                    title={getTranslation('informasjonstavle.hvor_mye', lang)}
-                    urlIsExternal={false}
-                    url="/hvor-mye">
-                    <Tekstomrade>
-                        {getTranslation('informasjonstavle.hvor_mye_body', lang)}
-                    </Tekstomrade>
-                </PanelMedBilde>
-            </MediaQuery>
-
             <PanelMedBilde
-                svgName="permisjon-sjekkliste"
-                title={getTranslation('informasjonstavle.hvor_lenge_kan_du_få_permisjon', lang)}
-                urlIsExternal={true}
-                url="https://tjenester.nav.no/foreldrepengeplanlegger">
+                svgName="hvor-mye"
+                title={getTranslation('informasjonstavle.hvor_mye', lang)}
+                urlIsExternal={false}
+                url="/hvor-mye">
                 <Tekstomrade>
-                    {getTranslation('informasjonstavle.hvor_lenge_kan_du_få_permisjon_body', lang)}
+                    {getTranslation('informasjonstavle.hvor_mye_ingress', lang)}
                 </Tekstomrade>
             </PanelMedBilde>
 
             <PanelMedBilde
-                svgName="illustration"
-                title={getTranslation('informasjonstavle.gå_rett_til_søknaden', lang)}
+                svgName="hvor-lenge"
+                title={getTranslation('informasjonstavle.hvor_lenge', lang)}
+                urlIsExternal={true}
+                url="https://tjenester.nav.no/foreldrepengeplanlegger">
+                <Tekstomrade>
+                    {getTranslation('informasjonstavle.hvor_lenge_ingress', lang)}
+                </Tekstomrade>
+            </PanelMedBilde>
+
+            <PanelMedBilde
+                svgName="gå-rett-til-søknaden"
+                title={getTranslation('informasjonstavle.velg_søknad', lang)}
                 urlIsExternal={false}
                 url="/hva-soker-du"
                 disabled={false}
                 stopSign={false}>
                 <Tekstomrade>
-                    {getTranslation('informasjonstavle.gå_rett_til_søknaden_body', lang)}
+                    {getTranslation('informasjonstavle.velg_søknad_ingress', lang)}
                 </Tekstomrade>
             </PanelMedBilde>
         </nav>
