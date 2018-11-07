@@ -11,12 +11,12 @@
     .strukturertTekst {
         align-self: center;
     }
-    
+
     &__ikkeStøttet {
         margin-top: 1.5rem;
     }
 
-    .typo-undertittel {
+    .typo-undertittel, .typo-ingress {
         text-align: center;
     }
 
@@ -44,6 +44,14 @@
         white-space: pre-wrap;
     }
 
+    .skjemaelement {
+        width: 100%;
+
+        input {
+            width: 100%;
+        }
+    }
+
     .skjema__legend {
         text-align: center;
         font-weight: normal;
@@ -51,6 +59,7 @@
 
     .inputPanelGruppe {
         margin-top: 0.5rem;
+        width: 100%;
 
         &__inner {
             margin-top: 1rem;
@@ -77,7 +86,8 @@
         border-radius: 4px;
         padding: 1.5rem;
         background-color: #efefef;
-        
+        width: 100%;
+
         &:nth-child(2) {
             margin-top: 2rem;
         }
@@ -107,13 +117,13 @@
     }
 
     .nav-veilederpanel {
-        margin: 1rem 2.2rem;
+        margin: 1rem 0 1rem 2.2rem;
     }
 
     &__disclaimer {
         font-size: 0.8rem;
         align-self: flex-start;
-        
+
         .strukturertTekst__avsnitt {
             margin: 0;
         }
@@ -121,10 +131,16 @@
 
     @media (min-width: @mobile-breakpoint) {
         .inputPanelGruppe {
+            width: unset;
+
             &__inner {
                 display: flex;
                 flex-direction: row;
             }
+        }
+
+        .skjemaelement {
+            width: unset;
         }
 
         .inputPanel {
@@ -138,9 +154,9 @@
                 margin-left: 1rem;
             }
         }
-
-        .panelMedIllustrasjon {
-            padding: 2rem 5rem;
+        
+        .nav-veilederpanel {
+            margin: 1rem 2.2rem;
         }
     }
 

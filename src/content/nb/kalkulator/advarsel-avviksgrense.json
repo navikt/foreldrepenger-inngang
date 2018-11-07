@@ -5,23 +5,28 @@
         "children": [
             {
                 "type": "span",
-                "text": "Utfra tallene du har oppgitt hadde du en årsinntekt på ",
+                "text": "Utfra tallene du har oppgitt bør du ha en årsinntekt på omtrent ",
                 "marks": []
             },
             { "type": "span", "text": "ÅRLIG_SNITTLØNN", "marks": ["variable", "bold"] },
             { "type": "span", "text": " kroner", "marks": ["bold"] },
-            { "type": "span", "text": " i hele ", "marks": [] },
-            { "type": "span", "text": "ÅRET_I_FJOR", "marks": ["variable", "bold"] },
             {
                 "type": "span",
-                "text": ". Hvis det du faktisk tjener er 25 prosent (",
+                "text": ". Hvis det du faktisk tjente de tolv siste månedene er mindre enn ",
                 "marks": []
             },
-            { "type": "span", "text": "AVVIKSGRENSE", "marks": ["variable", "bold"] },
+            { "type": "span", "text": "NEDRE_AVVIKSGRENSE", "marks": ["variable", "bold"] },
             { "type": "span", "text": " kr", "marks": ["bold"] },
             {
                 "type": "span",
-                "text": ") mindre eller høyere enn årsinntekten din, kan du først få et svar på hva du får utbetalt når søknaden din er ferdigbehandlet.",
+                "text": " eller høyere enn ",
+                "marks": []
+            },
+            { "type": "span", "text": "ØVRE_AVVIKSGRENSE", "marks": ["variable", "bold"] },
+            { "type": "span", "text": " kr", "marks": ["bold"] },
+            {
+                "type": "span",
+                "text": ", kan du først få et svar på hva du får utbetalt når søknaden din er ferdigbehandlet.",
                 "marks": []
             }
         ],

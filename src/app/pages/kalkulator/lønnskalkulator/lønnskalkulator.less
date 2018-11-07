@@ -8,10 +8,10 @@
 
 .lønnskalkulator {
     width: 100%;
+    margin-top: 1.5rem;
     .verticalFlex();
 
     &__perioder {
-        margin-top: 1.5rem;
         width: 100%;
         justify-content: space-between;
         .verticalFlex();
@@ -42,18 +42,18 @@
             font-weight: 100;
             font-size: 1.5rem;
             margin-bottom: 0;
-            margin-top: 0.75rem;
+            margin-top: 1rem;
         }
     }
 
-    @media (min-width: @tablet-breakpoint) {
+    @media (min-width: @mobile-breakpoint) {
         &__perioder {
             flex-direction: row;
+            justify-content: center;
         }
 
         output {
-            margin-top: 0;
-            margin-bottom: 0.75rem;
+            min-width: 205px;
         }
 
         .skjemaelement {
@@ -67,6 +67,20 @@
                 width: 100%;
                 max-width: 120px;
             }
+        }
+    }
+
+    @media (min-width: @tablet-breakpoint) {
+        flex-direction: row;
+        align-items: flex-start;
+
+        &__perioder {
+            justify-content: space-between;
+        }
+
+        output {
+            margin-top: 0;
+            margin-bottom: 0.5rem;
         }
     }
 }
