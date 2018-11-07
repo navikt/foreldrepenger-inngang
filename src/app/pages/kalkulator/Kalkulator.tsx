@@ -46,15 +46,10 @@ interface State {
     valgteSituasjoner: Situasjon[];
     results?: {
         snittlønnPerMåned: number;
-
-        // Brukeren tjener over 6G
         tjenerOverUtbetalingsgrensen: boolean;
-
-        // Brukeren tjener under 1/2G
         tjenerForLite: boolean;
-
-        // Hva er et for stort avvik i lønn i fjor?
-        forStortAvvik: number;
+        nedreAvviksgrense: number;
+        øvreAvviksgrense: number;
     };
 }
 
@@ -85,14 +80,16 @@ class Planlegger extends React.Component<IntlProps, State> {
     };
 
     onSnittlønnChange = (snittlønn: number) => {
-        const avviksgrense = snittlønn * 12 * 0.25;
+        const årslønn = snittlønn * 12;
+        const avviksgrense = årslønn * 0.25;
         const tjenerOverGrensen = tjenerOverUtbetalingsgrensen(snittlønn);
         const tjenerForLite = tjenerForLiteForForeldrepenger(snittlønn);
 
         this.setState({
             results: {
                 snittlønnPerMåned: snittlønn,
-                forStortAvvik: avviksgrense,
+                nedreAvviksgrense: årslønn - avviksgrense,
+                øvreAvviksgrense: årslønn + avviksgrense,
                 tjenerOverUtbetalingsgrensen: tjenerOverGrensen,
                 tjenerForLite
             }
@@ -129,7 +126,10 @@ class Planlegger extends React.Component<IntlProps, State> {
                 this.props.lang
             ),
             ÅRET_I_FJOR: getLastYear(),
-            AVVIKSGRENSE: this.state.results.forStortAvvik.toLocaleString(this.props.lang)
+            NEDRE_AVVIKSGRENSE: this.state.results.nedreAvviksgrense.toLocaleString(
+                this.props.lang
+            ),
+            ØVRE_AVVIKSGRENSE: this.state.results.øvreAvviksgrense.toLocaleString(this.props.lang)
         };
 
     getUtbetalingsgrensevariabler = () =>
@@ -239,34 +239,39 @@ class Planlegger extends React.Component<IntlProps, State> {
                                                     />
                                                 </Veileder>
 
-                                                <output className={cls.element('resultater')}>
-                                                    <Resultat
-                                                        cls={cls}
-                                                        lang={this.props.lang}
-                                                        percentage={100}
-                                                        icon={pengerIcon}
-                                                        monthlyWage={
-                                                            this.state.results.snittlønnPerMåned
-                                                        }
-                                                    />
-                                                    <Resultat
-                                                        cls={cls}
-                                                        lang={this.props.lang}
-                                                        percentage={80}
-                                                        icon={mindrePengerIcon}
-                                                        monthlyWage={
-                                                            this.state.results.snittlønnPerMåned
-                                                        }
-                                                    />
-                                                </output>
-                                                <div className={cls.element('disclaimer')}>
-                                                    <StrukturertTekst
-                                                        tekst={getContent(
-                                                            'kalkulator/disclaimer',
-                                                            lang
-                                                        )}
-                                                    />
-                                                </div>
+                                                {!this.state.results.tjenerForLite && (
+                                                    <output className={cls.element('resultater')}>
+                                                        <Resultat
+                                                            cls={cls}
+                                                            lang={this.props.lang}
+                                                            percentage={100}
+                                                            icon={pengerIcon}
+                                                            monthlyWage={
+                                                                this.state.results.snittlønnPerMåned
+                                                            }
+                                                        />
+                                                        <Resultat
+                                                            cls={cls}
+                                                            lang={this.props.lang}
+                                                            percentage={80}
+                                                            icon={mindrePengerIcon}
+                                                            monthlyWage={
+                                                                this.state.results.snittlønnPerMåned
+                                                            }
+                                                        />
+                                                    </output>
+                                                )}
+
+                                                {!this.state.results.tjenerForLite && (
+                                                    <div className={cls.element('disclaimer')}>
+                                                        <StrukturertTekst
+                                                            tekst={getContent(
+                                                                'kalkulator/disclaimer',
+                                                                lang
+                                                            )}
+                                                        />
+                                                    </div>
+                                                )}
                                             </div>
                                         )}
                                     </div>

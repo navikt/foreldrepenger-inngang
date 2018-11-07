@@ -112,15 +112,15 @@ class Lønnskalkulator extends React.Component<Props, State> {
                             />
                         );
                     })}
-                    <output>
-                        <label>
-                            <TypografiBase type="element">
-                                {getTranslation('kalkulator.lønn.resultat', lang)}
-                            </TypografiBase>
-                        </label>
-                        <TypografiBase type="ingress">{output}</TypografiBase>
-                    </output>
                 </div>
+                <output>
+                    <label>
+                        <TypografiBase type="element">
+                            {getTranslation('kalkulator.lønn.resultat', lang)}
+                        </TypografiBase>
+                    </label>
+                    <TypografiBase type="ingress">{output}</TypografiBase>
+                </output>
             </div>
         );
     };

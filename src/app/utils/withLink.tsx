@@ -57,6 +57,9 @@ export class WithLink extends React.Component<Props> {
             ariaLabel,
             children
         } = this.props;
+        const classNames = classnames(cls.className, className, {
+            [cls.element('noStyling')]: noStyling
+        });
 
         if (urlIsExternal) {
             if (noStyling) {
@@ -71,10 +74,7 @@ export class WithLink extends React.Component<Props> {
                 );
             } else {
                 return (
-                    <Lenke
-                        target="_blank"
-                        className={classnames(cls.className, className)}
-                        href={url}>
+                    <Lenke target="_blank" className={classNames} href={url}>
                         {children}
                         {addExternalIcon && (
                             <span className={cls.element('icon')}>
@@ -109,11 +109,7 @@ export class WithLink extends React.Component<Props> {
             }
         } else {
             return (
-                <Link
-                    style={style}
-                    tabIndex={noTabbing ? -1 : 0}
-                    className={classnames(cls.className, className)}
-                    to={url}>
+                <Link style={style} tabIndex={noTabbing ? -1 : 0} className={classNames} to={url}>
                     {children}
                 </Link>
             );

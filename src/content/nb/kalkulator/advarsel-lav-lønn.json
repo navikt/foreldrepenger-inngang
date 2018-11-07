@@ -5,23 +5,29 @@
         "children": [
             {
                 "type": "span",
-                "text": "Utfra tallene du har oppgitt har du en årsinntekt på ",
+                "text": "Utfra tallene du har oppgitt bør du ha en årsinntekt på omtrent ",
                 "marks": []
             },
             { "type": "span", "text": "ÅRLIG_SNITTLØNN", "marks": ["variable", "bold"] },
             { "type": "span", "text": " kroner", "marks": ["bold"] },
             {
                 "type": "span",
-                "text": ". For å ha rett til foreldrepenger må du ha tjent minst ",
+                "text": ". For å ha rett til foreldrepenger må du tjene minst ",
                 "marks": []
             },
             { "type": "span", "text": "EN_HALV_G", "marks": ["bold", "variable"] },
             { "type": "span", "text": " kr", "marks": ["bold"] },
             {
                 "type": "span",
-                "text": "  i året. Hvis du ikke har hatt inntekt, kan du søke om en engangssum istedenfor foreldrepenger. ",
+                "text": "  i året. Hvis du ikke gjør det, kan du søke om en engangssum istedenfor foreldrepenger. ",
                 "marks": []
-            },
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
             {
                 "type": "span",
                 "text": "Les mer om engangsstønad",
