@@ -6,11 +6,6 @@ export const MÅNEDSLØNN_EKSEMPEL = 25000;
 export const ÅRSLØNN_EKSEMPEL = 250000;
 export const MAKS_ANTALL_SIFFER = 7;
 
-export type Periode = 'måned' | 'år';
-
-export const getDefaultWage = (periode: Periode): number =>
-    periode === 'måned' ? MÅNEDSLØNN_EKSEMPEL : ÅRSLØNN_EKSEMPEL;
-
 export const computeAverage = (numbers: number[]) => {
     return numbers.reduce((a, b) => a + b, 0) / numbers.length;
 };

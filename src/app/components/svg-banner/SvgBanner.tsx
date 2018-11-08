@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import CustomSVG from '../../utils/CustomSVG';
+import { FlexibleSvg } from '../../utils/CustomSVG';
 import { getRandomInt } from '../../utils/random';
 import './svgBanner.less';
 
@@ -30,8 +30,15 @@ class SvgBanner extends Component<Props> {
 
         return (
             <div role="banner" className="svgBanner">
-                {this.state && <CustomSVG className="svgBanner__svg" iconRef={svg} size={200} />}
-                <CustomSVG className="svgBanner__cribSvg" iconRef={cribSvg} size={140} />
+                {this.state && (
+                    <FlexibleSvg className="svgBanner__svg" iconRef={svg} width={195} height={94} />
+                )}
+                <FlexibleSvg
+                    className="svgBanner__cribSvg"
+                    iconRef={cribSvg}
+                    width={111}
+                    height={88}
+                />
             </div>
         );
     };

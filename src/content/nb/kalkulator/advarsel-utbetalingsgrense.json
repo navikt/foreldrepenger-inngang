@@ -5,7 +5,7 @@
         "children": [
             {
                 "type": "span",
-                "text": "Merk at siden lønnen din overstiger utbetalingsgrensen på ",
+                "text": "Siden lønnen din er høyere enn utbetalingsgrensen på ",
                 "marks": []
             },
             { "type": "span", "text": "UTBETALINGSGRENSE", "marks": ["bold", "variable"] },
@@ -21,7 +21,7 @@
             },
             {
                 "type": "span",
-                "text": "grunnbeløpet (G)",
+                "text": "grunnbeløpet",
                 "marks": ["external_link", "url_grunnbeløp"]
             },
             {

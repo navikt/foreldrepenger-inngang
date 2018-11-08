@@ -5,17 +5,17 @@ import {
     lastThreeYears,
     lastThreeMonths,
     computeAverage,
-    Periode,
     MAKS_ANTALL_SIFFER
 } from 'app/utils/beregningUtils';
 import TypografiBase from 'nav-frontend-typografi';
 import BEMHelper from 'app/utils/bem';
 import './lønnskalkulator.less';
+import { Arbeidssituasjon } from '../Kalkulator';
 
 const cls = BEMHelper('lønnskalkulator');
 
 interface Props {
-    periode: Periode;
+    situasjoner: Arbeidssituasjon[];
     onChange: (monthlyAverage?: number) => void;
     lang: Language;
 }
@@ -29,18 +29,21 @@ interface State {
 class Lønnskalkulator extends React.Component<Props, State> {
     constructor(props: Props) {
         super(props);
-        this.state = this.recomputeState(props.periode);
+        this.state = this.recomputeState(props.situasjoner);
     }
 
     componentWillReceiveProps = (nextProps: Props) => {
-        if (this.props.periode && this.props.periode !== nextProps.periode) {
-            this.setState(this.recomputeState(nextProps.periode));
+        if (this.props.situasjoner !== nextProps.situasjoner) {
+            this.setState(this.recomputeState(nextProps.situasjoner));
+            this.props.onChange(undefined);
         }
     };
 
-    recomputeState = (periode: Periode): State => {
+    recomputeState = (situasjoner: Arbeidssituasjon[]): State => {
         const fieldValues: undefined[] = new Array(3);
-        const lastThreePeriods = periode === 'år' ? lastThreeYears() : lastThreeMonths();
+        const lastThreePeriods = situasjoner.includes('selvstendig_næringsdrivende')
+            ? lastThreeYears()
+            : lastThreeMonths();
 
         return {
             monthlyAverage: undefined,
@@ -64,7 +67,7 @@ class Lønnskalkulator extends React.Component<Props, State> {
         if (withoutUndefinedValues.length > 0) {
             monthlyAverage = computeAverage(withoutUndefinedValues as number[]);
 
-            if (this.props.periode === 'år') {
+            if (this.props.situasjoner.includes('selvstendig_næringsdrivende')) {
                 monthlyAverage = monthlyAverage / 12;
             }
         }

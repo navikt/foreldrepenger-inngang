@@ -12,7 +12,6 @@ import { getContent } from 'app/utils/getContent';
 import Lønnskalkulator from './lønnskalkulator/Lønnskalkulator';
 import Resultat from './resultat/Resultat';
 import {
-    Periode,
     tjenerOverUtbetalingsgrensen,
     tjenerForLiteForForeldrepenger,
     getLastYear,
@@ -27,12 +26,12 @@ import SvgMask from 'app/components/svg-mask/SvgMask';
 const infosiderCls = BEMHelper('infosider');
 const cls = BEMHelper('kalkulator');
 
-type Situasjon =
+export type Arbeidssituasjon =
     | 'arbeidstaker_eller_frilanser'
     | 'utbetaling_fra_nav'
     | 'selvstendig_næringsdrivende';
 
-const muligeSituasjoner: Situasjon[] = [
+const muligeSituasjoner: Arbeidssituasjon[] = [
     'arbeidstaker_eller_frilanser',
     'utbetaling_fra_nav',
     'selvstendig_næringsdrivende'
@@ -42,8 +41,7 @@ const pengerIcon = require('../../assets/icons/penger.svg').default;
 const mindrePengerIcon = require('../../assets/icons/mindre-penger.svg').default;
 
 interface State {
-    kalkulatorperiode?: Periode;
-    valgteSituasjoner: Situasjon[];
+    valgteSituasjoner: Arbeidssituasjon[];
     results?: {
         snittlønnPerMåned: number;
         tjenerOverUtbetalingsgrensen: boolean;
@@ -61,39 +59,37 @@ class Planlegger extends React.Component<IntlProps, State> {
         };
     }
 
-    onSituasjonToggle = (event: React.SyntheticEvent<EventTarget>, situasjon: Situasjon) => {
+    onSituasjonToggle = (event: React.SyntheticEvent<EventTarget>, situasjon: Arbeidssituasjon) => {
         const valgteSituasjoner = this.state.valgteSituasjoner.includes(situasjon)
             ? this.state.valgteSituasjoner.filter((vs) => vs !== situasjon)
             : [...this.state.valgteSituasjoner, situasjon];
 
-        const kalkulatorperiode =
-            valgteSituasjoner.length === 0
-                ? undefined
-                : valgteSituasjoner.includes('selvstendig_næringsdrivende')
-                    ? 'år'
-                    : 'måned';
-
         this.setState({
-            valgteSituasjoner,
-            kalkulatorperiode
+            valgteSituasjoner
         });
     };
 
-    onSnittlønnChange = (snittlønn: number) => {
-        const årslønn = snittlønn * 12;
-        const avviksgrense = årslønn * 0.25;
-        const tjenerOverGrensen = tjenerOverUtbetalingsgrensen(snittlønn);
-        const tjenerForLite = tjenerForLiteForForeldrepenger(snittlønn);
+    onSnittlønnChange = (snittlønn?: number) => {
+        if (snittlønn) {
+            const årslønn = snittlønn * 12;
+            const avviksgrense = årslønn * 0.25;
+            const tjenerOverGrensen = tjenerOverUtbetalingsgrensen(snittlønn);
+            const tjenerForLite = tjenerForLiteForForeldrepenger(snittlønn);
 
-        this.setState({
-            results: {
-                snittlønnPerMåned: snittlønn,
-                nedreAvviksgrense: årslønn - avviksgrense,
-                øvreAvviksgrense: årslønn + avviksgrense,
-                tjenerOverUtbetalingsgrensen: tjenerOverGrensen,
-                tjenerForLite
-            }
-        });
+            this.setState({
+                results: {
+                    snittlønnPerMåned: snittlønn,
+                    nedreAvviksgrense: årslønn - avviksgrense,
+                    øvreAvviksgrense: årslønn + avviksgrense,
+                    tjenerOverUtbetalingsgrensen: tjenerOverGrensen,
+                    tjenerForLite
+                }
+            });
+        } else {
+            this.setState({
+                results: undefined
+            });
+        }
     };
 
     fårUtbetaling = () => this.state.valgteSituasjoner.includes('utbetaling_fra_nav');
@@ -115,9 +111,9 @@ class Planlegger extends React.Component<IntlProps, State> {
                 ? getTranslation('kalkulator.skriv_inn_utbetaling', this.props.lang)
                 : getTranslation('kalkulator.skriv_inn_lønn', this.props.lang)
         } ${
-            this.state.kalkulatorperiode === 'måned'
-                ? getTranslation('månedene', this.props.lang)
-                : getTranslation('årene', this.props.lang)
+            this.state.valgteSituasjoner.includes('selvstendig_næringsdrivende')
+                ? getTranslation('årene', this.props.lang)
+                : getTranslation('månedene', this.props.lang)
         }?`;
 
     getAvviksvariabler = () =>
@@ -181,7 +177,7 @@ class Planlegger extends React.Component<IntlProps, State> {
                                 onChange={this.onSituasjonToggle}
                             />
 
-                            {this.state.kalkulatorperiode &&
+                            {this.state.valgteSituasjoner.length > 0 &&
                                 (kombinasjonIkkeStøttet ? (
                                     <div className={cls.element('ikkeStøttet')}>
                                         <Veileder
@@ -208,7 +204,7 @@ class Planlegger extends React.Component<IntlProps, State> {
                                         )}
                                         <Lønnskalkulator
                                             lang={this.props.lang}
-                                            periode={this.state.kalkulatorperiode}
+                                            situasjoner={this.state.valgteSituasjoner}
                                             onChange={this.onSnittlønnChange}
                                         />
 
