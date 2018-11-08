@@ -5,19 +5,7 @@
         "children": [
             {
                 "type": "span",
-                "text": "Her ser du en foreløpig beregning på hva du kan få.",
-                "marks": []
-            }
-        ],
-        "markDefs": []
-    },
-    {
-        "type": "avsnitt",
-        "style": "normaltekst",
-        "children": [
-            {
-                "type": "span",
-                "text": "Når søknaden din er ferdigbehandlet, får du vite hva du får utbetalt.",
+                "text": "Dette er en oversikt på hva du kan få. Når du har sendt søknaden, vil du få vite hva du kan få utbetalt.",
                 "marks": []
             }
         ],
