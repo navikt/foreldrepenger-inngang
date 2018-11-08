@@ -21,10 +21,7 @@ const Veileder = (props: VeilederProps) => {
     return (
         <Veilederpanel
             veilederProps={{
-                className: classnames(
-                    { lillaNormalVeileder: props.fargetema === 'normal' },
-                    className
-                ),
+                className: className,
                 children: <VeilederSvg svgProps={svgProps} />
             }}
             svg={<VeilederSvg svgProps={svgProps} />}
