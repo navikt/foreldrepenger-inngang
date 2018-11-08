@@ -13,8 +13,7 @@ const ArbeidstakerIkon = () => {
                 version="1.1"
                 xmlns="http://www.w3.org/2000/svg"
                 xmlnsXlink="http://www.w3.org/1999/xlink">
-                <title>93382BC4-F016-4F8C-A2DA-8C719AB4D0A5</title>
-                <desc>Created with sketchtool.</desc>
+                <title>Arbeidstaker eller frilanser</title>
                 <defs />
                 <g
                     stroke="none"
@@ -24,7 +23,7 @@ const ArbeidstakerIkon = () => {
                     strokeLinecap="square">
                     <g
                         transform="translate(-137.000000, -319.000000)"
-                        stroke="#050505"
+                        stroke="#3E3832"
                         strokeWidth="2">
                         <g transform="translate(70.000000, 40.000000)">
                             <g transform="translate(0.000000, 172.000000)">

@@ -7,10 +7,11 @@ const YtelseFraNavIkon = () => {
     return (
         <div className={cls.className}>
             <svg height="36px" width="36px" version="1.1" viewBox="0 0 40 26">
+                <title>Har ytelser fra NAV</title>
                 <defs>
                     <polygon points="3.33189591 6.47017839 3.33189591 0.102499233 0.0837918216 0.102499233 0.0837918216 6.47017839 3.33189591 6.47017839" />
                 </defs>
-                <g fill="none" stroke="none" strokeWidth="1">
+                <g fill="#3E3832" stroke="none" strokeWidth="1">
                     <g>
                         <path
                             d="M18.6333234,25.1765417 C11.6978587,25.1765417 6.07421561,19.5408722 6.07421561,12.589165 C6.07421561,5.63671269 11.6978587,0 18.6333234,0 C25.571316,0 31.1955539,5.63671269 31.1955539,12.589165 C31.1955539,19.5408722 25.571316,25.1765417 18.6333234,25.1765417 Z"

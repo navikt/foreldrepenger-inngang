@@ -13,13 +13,11 @@ const PoliceOfficerIkon = () => {
                 version="1.1"
                 xmlns="http://www.w3.org/2000/svg"
                 xmlnsXlink="http://www.w3.org/1999/xlink">
-                <title>F5BE70A9-7FA0-4AC8-9ACF-7AEFADD5C301</title>
-                <desc>Created with sketchtool.</desc>
-                <defs />
+                <title>Andre inntektskilder</title>
                 <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
                     <g
                         transform="translate(-536.000000, -320.000000)"
-                        fill="#050505"
+                        fill="#3E3832"
                         fillRule="nonzero">
                         <g transform="translate(70.000000, 40.000000)">
                             <g transform="translate(0.000000, 172.000000)">

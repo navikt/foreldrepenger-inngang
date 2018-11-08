@@ -13,12 +13,10 @@ const SelvstendigIkon = () => {
                 version="1.1"
                 xmlns="http://www.w3.org/2000/svg"
                 xmlnsXlink="http://www.w3.org/1999/xlink">
-                <title>0256EDE3-1EE3-4583-BB45-FF810D1FFF80</title>
-                <desc>Created with sketchtool.</desc>
-                <defs />
+                <title>Selvstendig næringsdrivende</title>
                 <g
-                    stroke="none"
-                    strokeWidth="1"
+                    stroke="#3E3832"
+                    strokeWidth="2"
                     fill="none"
                     fillRule="evenodd"
                     strokeLinejoin="round">
