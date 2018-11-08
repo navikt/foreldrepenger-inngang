@@ -10,18 +10,14 @@ import { CheckboksPanelGruppe } from 'nav-frontend-skjema';
 import StrukturertTekst from 'app/components/strukturert-tekst/StrukturertTekst';
 import { getContent } from 'app/utils/getContent';
 import Lønnskalkulator from './lønnskalkulator/Lønnskalkulator';
-import Resultat from './resultat/Resultat';
 import {
     tjenerOverUtbetalingsgrensen,
-    tjenerForLiteForForeldrepenger,
-    getLastYear,
-    getUtbetalingsgrense,
-    getEnHalvG
+    tjenerForLiteForForeldrepenger
 } from 'app/utils/beregningUtils';
 import Veileder from 'app/components/veileder/Veileder';
-import './kalkulator.less';
-import Veiledermelding from './Veiledermelding';
 import SvgMask from 'app/components/svg-mask/SvgMask';
+import './kalkulator.less';
+import Resultat from './resultat/Resultat';
 
 const infosiderCls = BEMHelper('infosider');
 const cls = BEMHelper('kalkulator');
@@ -38,17 +34,17 @@ const muligeSituasjoner: Arbeidssituasjon[] = [
 ];
 
 const pengerIcon = require('../../assets/icons/penger.svg').default;
-const mindrePengerIcon = require('../../assets/icons/mindre-penger.svg').default;
 
+export interface Resultater {
+    snittlønnPerMåned: number;
+    tjenerOverUtbetalingsgrensen: boolean;
+    tjenerForLite: boolean;
+    nedreAvviksgrense: number;
+    øvreAvviksgrense: number;
+}
 interface State {
     valgteSituasjoner: Arbeidssituasjon[];
-    results?: {
-        snittlønnPerMåned: number;
-        tjenerOverUtbetalingsgrensen: boolean;
-        tjenerForLite: boolean;
-        nedreAvviksgrense: number;
-        øvreAvviksgrense: number;
-    };
+    results?: Resultater;
 }
 
 class Planlegger extends React.Component<IntlProps, State> {
@@ -93,6 +89,7 @@ class Planlegger extends React.Component<IntlProps, State> {
     };
 
     fårUtbetaling = () => this.state.valgteSituasjoner.includes('utbetaling_fra_nav');
+
     fårLønn = () =>
         this.state.valgteSituasjoner.includes('arbeidstaker_eller_frilanser') ||
         this.state.valgteSituasjoner.includes('selvstendig_næringsdrivende');
@@ -116,42 +113,17 @@ class Planlegger extends React.Component<IntlProps, State> {
                 : getTranslation('månedene', this.props.lang)
         }?`;
 
-    getAvviksvariabler = () =>
-        this.state.results && {
-            ÅRLIG_SNITTLØNN: (this.state.results.snittlønnPerMåned * 12).toLocaleString(
-                this.props.lang
-            ),
-            ÅRET_I_FJOR: getLastYear(),
-            NEDRE_AVVIKSGRENSE: this.state.results.nedreAvviksgrense.toLocaleString(
-                this.props.lang
-            ),
-            ØVRE_AVVIKSGRENSE: this.state.results.øvreAvviksgrense.toLocaleString(this.props.lang)
-        };
-
-    getUtbetalingsgrensevariabler = () =>
-        this.state.results &&
-        this.state.results.tjenerOverUtbetalingsgrensen && {
-            UTBETALINGSGRENSE: getUtbetalingsgrense().toLocaleString(this.props.lang)
-        };
-
-    getForLavLønnvariabler = () =>
-        this.state.results &&
-        this.state.results.tjenerForLite && {
-            ÅRLIG_SNITTLØNN: (this.state.results.snittlønnPerMåned * 12).toLocaleString(
-                this.props.lang
-            ),
-            EN_HALV_G: getEnHalvG().toLocaleString(this.props.lang)
-        };
-
     render = () => {
         const { lang } = this.props;
 
         const checkboxes = this.getCheckboxes();
-        const fårLønn = this.fårLønn();
+        const ingressTilUtbetaling = this.state.valgteSituasjoner.includes('utbetaling_fra_nav')
+            ? this.state.valgteSituasjoner.length > 1
+                ? 'kalkulator.skriv_inn_utbetaling_og_lønn_ingress'
+                : 'kalkulator.skriv_inn_utbetaling_ingress'
+            : 'kalkulator.skriv_inn_lønn_ingress';
+
         const valgTittel = this.getTitleForChoices();
-        const avviksvariabler = this.getAvviksvariabler() || undefined;
-        const utbetalingsgrensevariabler = this.getUtbetalingsgrensevariabler() || undefined;
-        const forLavLønnvariabler = this.getForLavLønnvariabler() || undefined;
         const kombinasjonIkkeStøttet =
             this.state.valgteSituasjoner.includes('selvstendig_næringsdrivende') &&
             this.state.valgteSituasjoner.length > 1;
@@ -194,14 +166,9 @@ class Planlegger extends React.Component<IntlProps, State> {
                                         <TypografiBase type="undertittel">
                                             {valgTittel}
                                         </TypografiBase>
-                                        {fårLønn && (
-                                            <TypografiBase type="normaltekst">
-                                                {getTranslation(
-                                                    'kalkulator.skriv_inn_lønn_ingress',
-                                                    lang
-                                                )}
-                                            </TypografiBase>
-                                        )}
+                                        <TypografiBase type="normaltekst">
+                                            {getTranslation(ingressTilUtbetaling, lang)}
+                                        </TypografiBase>
                                         <Lønnskalkulator
                                             lang={this.props.lang}
                                             situasjoner={this.state.valgteSituasjoner}
@@ -209,66 +176,10 @@ class Planlegger extends React.Component<IntlProps, State> {
                                         />
 
                                         {this.state.results && (
-                                            <div className={cls.element('flexDownwards')}>
-                                                <TypografiBase type="undertittel">
-                                                    {getTranslation(
-                                                        'kalkulator.resultat.tittel',
-                                                        lang
-                                                    )}
-                                                </TypografiBase>
-
-                                                <Veileder
-                                                    fargetema="normal"
-                                                    ansikt="glad"
-                                                    kompakt={true}>
-                                                    <Veiledermelding
-                                                        avviksvariabler={
-                                                            forLavLønnvariabler
-                                                                ? undefined
-                                                                : avviksvariabler
-                                                        }
-                                                        forLavLønnvariabler={forLavLønnvariabler}
-                                                        utbetalingsgrensevariabler={
-                                                            utbetalingsgrensevariabler
-                                                        }
-                                                        lang={lang}
-                                                    />
-                                                </Veileder>
-
-                                                {!this.state.results.tjenerForLite && (
-                                                    <output className={cls.element('resultater')}>
-                                                        <Resultat
-                                                            cls={cls}
-                                                            lang={this.props.lang}
-                                                            percentage={100}
-                                                            icon={pengerIcon}
-                                                            monthlyWage={
-                                                                this.state.results.snittlønnPerMåned
-                                                            }
-                                                        />
-                                                        <Resultat
-                                                            cls={cls}
-                                                            lang={this.props.lang}
-                                                            percentage={80}
-                                                            icon={mindrePengerIcon}
-                                                            monthlyWage={
-                                                                this.state.results.snittlønnPerMåned
-                                                            }
-                                                        />
-                                                    </output>
-                                                )}
-
-                                                {!this.state.results.tjenerForLite && (
-                                                    <div className={cls.element('disclaimer')}>
-                                                        <StrukturertTekst
-                                                            tekst={getContent(
-                                                                'kalkulator/disclaimer',
-                                                                lang
-                                                            )}
-                                                        />
-                                                    </div>
-                                                )}
-                                            </div>
+                                            <Resultat
+                                                results={this.state.results}
+                                                fårUtbetaling={this.fårUtbetaling()}
+                                            />
                                         )}
                                     </div>
                                 ))}
