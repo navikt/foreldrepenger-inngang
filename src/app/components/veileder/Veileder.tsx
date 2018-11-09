@@ -3,6 +3,7 @@ import Veilederpanel from 'nav-frontend-veilederpanel';
 import classnames from 'classnames';
 import VeilederSvg from './VeilederSvg';
 import './veileder.less';
+
 interface VeilederProps {
     fargetema?: 'normal' | 'suksess' | 'advarsel' | 'feilmelding';
     ansikt?: 'glad' | 'undrende' | 'skeptisk';
@@ -21,10 +22,7 @@ const Veileder = (props: VeilederProps) => {
     return (
         <Veilederpanel
             veilederProps={{
-                className: classnames(
-                    { lillaNormalVeileder: props.fargetema === 'normal' },
-                    className
-                ),
+                className,
                 children: <VeilederSvg svgProps={svgProps} />
             }}
             svg={<VeilederSvg svgProps={svgProps} />}

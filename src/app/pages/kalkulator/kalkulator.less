@@ -8,6 +8,14 @@
         padding: 2rem;
     }
 
+    .nav-veilederpanel {
+        border-color: #bfb6ce;
+    }
+    
+    .nav-veileder__frame {
+        background: #bfb6ce;
+    }
+
     .strukturertTekst {
         align-self: center;
     }
@@ -72,61 +80,8 @@
         }
     }
 
-    &__resultater {
-        display: flex;
-        flex-direction: column;
-        align-items: stretch;
-        width: 100%;
-        margin-top: 1rem;
-    }
-
-    &__resultat {
-        position: relative;
-        flex: 1;
-        border-radius: 4px;
-        padding: 1.5rem;
-        background-color: #efefef;
-        width: 100%;
-
-        &:nth-child(2) {
-            margin-top: 2rem;
-        }
-
-        .typo-undertittel {
-            margin-top: 0.25rem;
-            margin-bottom: 0;
-            text-align: left;
-        }
-    }
-
-    &__topMargin {
-        margin-top: 1.5rem;
-    }
-
-    &__resultatIcon {
-        position: absolute;
-        bottom: 1.5rem;
-        right: 1.5rem;
-    }
-
-    &__divider {
-        height: 1px;
-        background-color: #c5c2bf;
-        width: 100%;
-        margin: 1rem 0;
-    }
-
     .nav-veilederpanel {
         margin: 1rem 0 1rem 2.2rem;
-    }
-
-    &__disclaimer {
-        font-size: 0.8rem;
-        align-self: flex-start;
-
-        .strukturertTekst__avsnitt {
-            margin: 0;
-        }
     }
 
     @media (min-width: @mobile-breakpoint) {
@@ -157,20 +112,6 @@
         
         .nav-veilederpanel {
             margin: 1rem 2.2rem;
-        }
-    }
-
-    @media (min-width: @tablet-breakpoint) {
-        &__resultat {
-            &:nth-child(2) {
-                margin-top: 0;
-                margin-left: 2rem;
-            }
-        }
-
-        &__resultater {
-            display: flex;
-            flex-direction: row;
         }
     }
 }

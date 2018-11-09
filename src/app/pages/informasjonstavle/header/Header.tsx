@@ -29,19 +29,19 @@ const Header: React.StatelessComponent<IntlProps> = ({ lang }) => {
                         </TypografiBase>
                     </div>
                     <div role="presentation" className={cls.element('svgContainer')}>
-                        <MediaQuery maxWidth={576}>
+                        <MediaQuery maxWidth={575}>
                             <FlexibleSvg
                                 iconRef={svg}
-                                height={111}
-                                width={250}
+                                height={130}
+                                width={270}
                                 className={cls.element('svg')}
                             />
                         </MediaQuery>
-                        <MediaQuery minWidth={577}>
+                        <MediaQuery minWidth={576}>
                             <FlexibleSvg
                                 iconRef={svg}
-                                height={133}
-                                width={300}
+                                height={160}
+                                width={332}
                                 className={cls.element('svg')}
                             />
                         </MediaQuery>

@@ -5,14 +5,22 @@
         "children": [
             {
                 "type": "span",
-                "text": "Utfra tallene du har oppgitt bør du ha en årsinntekt på omtrent ",
+                "text": "Utfra tallene du har oppgitt antar vi at du ",
                 "marks": []
             },
+            { "type": "span", "text": "INNTEKTSSITUASJON", "marks": ["variable"] },
+            { "type": "span", "text": " ", "marks": [] },
             { "type": "span", "text": "ÅRLIG_SNITTLØNN", "marks": ["variable", "bold"] },
             { "type": "span", "text": " kroner", "marks": ["bold"] },
             {
                 "type": "span",
-                "text": ". For å ha rett til foreldrepenger må du tjene minst ",
+                "text": ". For å ha rett til foreldrepenger må du ",
+                "marks": []
+            },
+            { "type": "span", "text": "INNTEKTSSITUASJON_VERB", "marks": ["variable"] },
+            {
+                "type": "span",
+                "text": " minst ",
                 "marks": []
             },
             { "type": "span", "text": "EN_HALV_G", "marks": ["bold", "variable"] },

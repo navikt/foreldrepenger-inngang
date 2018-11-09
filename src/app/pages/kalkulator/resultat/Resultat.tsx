@@ -1,52 +1,112 @@
 import * as React from 'react';
-import { getTranslation, Language } from 'app/intl/intl';
+import { withIntl, getTranslation, Language } from 'app/intl/intl';
 import TypografiBase from 'nav-frontend-typografi';
-import { getDailyPayment, GRUNNBELØPET } from 'app/utils/beregningUtils';
-import CustomSVGFromSprite from 'app/utils/CustomSVG';
-import { BEMWrapper } from 'app/utils/bem';
+import Alertstriper from 'nav-frontend-alertstriper';
+import StrukturertTekst from 'app/components/strukturert-tekst/StrukturertTekst';
+import { getContent } from 'app/utils/getContent';
+import Alternativ from '../alternativ/Alternativ';
+import {
+    tjenerOverUtbetalingsgrensen,
+    getLastYear,
+    getUtbetalingsgrense,
+    getEnHalvG
+} from 'app/utils/beregningUtils';
+import Veileder from 'app/components/veileder/Veileder';
+import Veiledermelding from '../Veiledermelding';
+import { Resultater } from '../Kalkulator';
+import BEMHelper from 'app/utils/bem';
+import './resultat.less';
 
-const Resultat = ({
-    percentage,
-    monthlyWage,
-    icon,
-    cls,
-    lang
-}: {
-    percentage: number;
-    monthlyWage: number;
-    icon: any;
-    cls: BEMWrapper;
+const cls = BEMHelper('resultat');
+const pengerIcon = require('../../../assets/icons/penger.svg').default;
+const mindrePengerIcon = require('../../../assets/icons/mindre-penger.svg').default;
+
+interface Props {
+    results: Resultater;
+    fårUtbetaling: boolean;
     lang: Language;
-}) => {
-    const annualMax = 6 * GRUNNBELØPET;
-    const monthlyMax = annualMax / 12;
+}
 
-    const decimal: number = percentage / 100;
-    const monthlyPayment = Math.min(monthlyWage * decimal, monthlyMax * decimal);
-    const dailyPayment = getDailyPayment(monthlyPayment);
+const Resultat: React.StatelessComponent<Props> = ({ results, fårUtbetaling, lang }) => {
+    const { snittlønnPerMåned, nedreAvviksgrense, øvreAvviksgrense, tjenerForLite } = results;
+    const localizeNumber = (n: number) => Math.round(n).toLocaleString(lang);
 
-    const monthlyPaymentFormatted = Math.round(monthlyPayment).toLocaleString(lang);
-    const dailyPaymentFormatted = Math.round(dailyPayment).toLocaleString(lang);
+    const inntektssituasjon = fårUtbetaling
+        ? getTranslation('kalkulator.får_utbetalt', lang)
+        : getTranslation('kalkulator.har_en_årsinntekt', lang);
+
+    const avviksvariabler = {
+        INNTEKTSSITUASJON: inntektssituasjon,
+        INNTEKTSSITUASJON_PRETERITUM: fårUtbetaling
+            ? getTranslation('kalkulator.fikk', lang)
+            : getTranslation('kalkulator.tjente', lang),
+        ÅRLIG_SNITTLØNN: localizeNumber(snittlønnPerMåned * 12),
+        ÅRET_I_FJOR: getLastYear(),
+        NEDRE_AVVIKSGRENSE: localizeNumber(nedreAvviksgrense),
+        ØVRE_AVVIKSGRENSE: localizeNumber(øvreAvviksgrense)
+    };
+
+    let utbetalingsgrensevariabler;
+    let forLavLønnvariabler;
+
+    if (tjenerOverUtbetalingsgrensen(snittlønnPerMåned)) {
+        utbetalingsgrensevariabler = tjenerOverUtbetalingsgrensen && {
+            UTBETALINGSGRENSE: localizeNumber(getUtbetalingsgrense())
+        };
+    }
+
+    if (tjenerForLite) {
+        forLavLønnvariabler = {
+            INNTEKTSSITUASJON: inntektssituasjon,
+            INNTEKTSSITUASJON_VERB: fårUtbetaling
+                ? getTranslation('kalkulator.får')
+                : getTranslation('kalkulator.tjener'),
+            ÅRLIG_SNITTLØNN: localizeNumber(snittlønnPerMåned * 12),
+            EN_HALV_G: localizeNumber(getEnHalvG())
+        };
+    }
 
     return (
-        <output className={cls.element('resultat')}>
-            <TypografiBase type="element">{`${percentage} ${getTranslation(
-                'kalkulator.resultat.undertittel'
-            )}`}</TypografiBase>
-
-            <div className={cls.element('divider')} />
-            <TypografiBase type="normaltekst">
-                {getTranslation('kalkulator.resultat.gjennomsnitt_per_måned')}
+        <div className={cls.element('flexDownwards')}>
+            <TypografiBase type="undertittel">
+                {getTranslation('kalkulator.resultat.tittel', lang)}
             </TypografiBase>
 
-            <TypografiBase type="undertittel">{`${monthlyPaymentFormatted} kr`}</TypografiBase>
-            <TypografiBase className={cls.element('topMargin')} type="normaltekst">
-                {getTranslation('kalkulator.resultat.dagsats')}
-            </TypografiBase>
-            <TypografiBase type="undertittel">{`${dailyPaymentFormatted} kr`}</TypografiBase>
-            <CustomSVGFromSprite className={cls.element('resultatIcon')} iconRef={icon} size={72} />
-        </output>
+            <Veileder fargetema="normal" ansikt="glad" kompakt={true}>
+                <Veiledermelding
+                    avviksvariabler={forLavLønnvariabler ? undefined : avviksvariabler}
+                    forLavLønnvariabler={forLavLønnvariabler}
+                    utbetalingsgrensevariabler={utbetalingsgrensevariabler}
+                    lang={lang}
+                />
+            </Veileder>
+
+            {!tjenerForLite && (
+                <output className={cls.element('resultater')}>
+                    <Alternativ
+                        lang={lang}
+                        percentage={100}
+                        icon={pengerIcon}
+                        monthlyWage={snittlønnPerMåned}
+                    />
+                    <Alternativ
+                        lang={lang}
+                        percentage={80}
+                        icon={mindrePengerIcon}
+                        monthlyWage={snittlønnPerMåned}
+                    />
+                </output>
+            )}
+
+            {!tjenerForLite && (
+                <div className={cls.element('disclaimer')}>
+                    <Alertstriper type="info">
+                        <StrukturertTekst tekst={getContent('kalkulator/disclaimer', lang)} />
+                    </Alertstriper>
+                </div>
+            )}
+        </div>
     );
 };
 
-export default Resultat;
+export default withIntl(Resultat);

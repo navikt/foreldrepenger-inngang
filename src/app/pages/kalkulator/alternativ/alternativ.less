@@ -1,0 +1,44 @@
+@import '../../../styles/index.less';
+
+.alternativ {
+    position: relative;
+    flex: 1;
+    border-radius: 4px;
+    padding: 1.5rem;
+    background-color: #efefef;
+    width: 100%;
+
+    &:nth-child(2) {
+        margin-top: 2rem;
+    }
+
+    .typo-undertittel {
+        margin-top: 0.25rem;
+        margin-bottom: 0;
+        text-align: left;
+    }
+
+    &__topMargin {
+        margin-top: 1.5rem;
+    }
+
+    &__resultatIcon {
+        position: absolute;
+        bottom: 1.5rem;
+        right: 1.5rem;
+    }
+
+    &__divider {
+        height: 1px;
+        background-color: #c5c2bf;
+        width: 100%;
+        margin: 1rem 0;
+    }
+
+    @media (min-width: @tablet-breakpoint) {
+        &:nth-child(2) {
+            margin-top: 0;
+            margin-left: 2rem;
+        }
+    }
+}

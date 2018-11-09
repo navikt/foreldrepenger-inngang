@@ -32,6 +32,10 @@ class Lønnskalkulator extends React.Component<Props, State> {
         this.state = this.recomputeState(props.situasjoner);
     }
 
+    componentDidMount = () => {
+        this.props.onChange(undefined);
+    };
+
     componentWillReceiveProps = (nextProps: Props) => {
         if (this.props.situasjoner !== nextProps.situasjoner) {
             this.setState(this.recomputeState(nextProps.situasjoner));
