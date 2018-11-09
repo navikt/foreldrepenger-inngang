@@ -27,7 +27,7 @@ interface Props {
     lang: Language;
 }
 
-const Resultat: React.StatelessComponent<Props> = ({ results, fårUtbetaling, lang }) => {
+const Resultat = ({ results, fårUtbetaling, lang }: Props) => {
     const { snittlønnPerMåned, nedreAvviksgrense, øvreAvviksgrense, tjenerForLite } = results;
     const localizeNumber = (n: number) => Math.round(n).toLocaleString(lang);
 

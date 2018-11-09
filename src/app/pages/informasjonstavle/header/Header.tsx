@@ -5,13 +5,17 @@ import BEMHelper from '../../../utils/bem';
 import './header.less';
 import MediaQuery from 'react-responsive';
 import { getRandomInt } from '../../../utils/random';
-import { getTranslation, withIntl, IntlProps } from '../../../intl/intl';
+import { getTranslation, withIntl, Language } from '../../../intl/intl';
 
 const cls = BEMHelper('header');
 
 const NUM_FAMILIES = 5;
 
-const Header: React.StatelessComponent<IntlProps> = ({ lang }) => {
+interface Props {
+    lang: Language;
+}
+
+const Header = ({ lang }: Props) => {
     const randomFamilyAtHome = getRandomInt(1, NUM_FAMILIES);
     const svg = require(`../../../assets/familier-hjemme/familie-hjemme-${randomFamilyAtHome}.svg`)
         .default;

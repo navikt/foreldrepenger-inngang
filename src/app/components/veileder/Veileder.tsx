@@ -8,7 +8,7 @@ interface VeilederProps {
     fargetema?: 'normal' | 'suksess' | 'advarsel' | 'feilmelding';
     ansikt?: 'glad' | 'undrende' | 'skeptisk';
     kompakt?: boolean;
-    children: React.ReactChild;
+    children: any;
     className?: any;
 }
 

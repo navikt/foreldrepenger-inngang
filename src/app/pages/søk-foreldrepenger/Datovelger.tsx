@@ -40,6 +40,8 @@ const Datovelger: StatelessComponent<Props & IntlProps> = ({
                     dato={date}
                     onChange={(newDate: Date) => onChange(newDate)}
                     input={{
+                        name: 'foreldrepenger-startdato',
+                        id: 'foreldrepenger-startdato',
                         placeholder: 'dd.mm.åååå'
                     }}
                 />

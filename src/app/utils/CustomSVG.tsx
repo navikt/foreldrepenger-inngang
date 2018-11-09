@@ -11,12 +11,9 @@ interface Props {
     className?: string;
 }
 
-const CustomSVGFromSprite: React.StatelessComponent<Props> = ({
-    iconRef,
-    size,
-    className,
-    ...other
-}) => <FlexibleSvg iconRef={iconRef} height={size} width={size} className={className} {...other} />;
+const CustomSVGFromSprite = ({ iconRef, size, className, ...other }: Props) => (
+    <FlexibleSvg iconRef={iconRef} height={size} width={size} className={className} {...other} />
+);
 
 interface FlexibleProps {
     iconRef: IconRef;
@@ -25,13 +22,7 @@ interface FlexibleProps {
     className?: string;
 }
 
-export const FlexibleSvg: React.StatelessComponent<FlexibleProps> = ({
-    iconRef,
-    height,
-    width,
-    className,
-    ...other
-}) => {
+export const FlexibleSvg = ({ iconRef, height, width, className, ...other }: FlexibleProps) => {
     const viewBox = { 'view-box': iconRef.viewBox };
     return (
         <svg className={className} height={height} width={width} {...viewBox} {...other}>
