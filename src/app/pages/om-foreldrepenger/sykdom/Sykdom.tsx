@@ -41,10 +41,10 @@ const EnAvForeldreneErSykeWithoutIntl: React.StatelessComponent<IntlProps> = ({ 
             <TypografiBase type="normaltekst">
                 {getTranslation('om_foreldrepenger.sykdom.innlagt.eksempeltittel')}
             </TypografiBase>
-            <MediaQuery query="(min-width: 576px)">
+            <MediaQuery minWidth={576}>
                 <Illustrasjon />
             </MediaQuery>
-            <MediaQuery query="(max-width: 575px)">
+            <MediaQuery maxWidth={575}>
                 <IllustrasjonMobil />
             </MediaQuery>
         </div>

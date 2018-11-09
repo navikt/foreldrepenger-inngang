@@ -45,7 +45,7 @@ class Innholdsfaner extends React.Component<Props> {
 
     render = () => (
         <div className={cls.className}>
-            <MediaQuery query="(max-width: 799px)">
+            <MediaQuery maxWidth={799}>
                 <div className={cls.element('faner')}>
                     <TypografiBase className={cls.element('fanetittel')} type="element">
                         {getTranslation('om_foreldrepenger.faner.label', this.props.lang)}
@@ -59,7 +59,7 @@ class Innholdsfaner extends React.Component<Props> {
                     />
                 </div>
             </MediaQuery>
-            <MediaQuery query="(min-width: 800px)">
+            <MediaQuery minWidth={800}>
                 <div role="tablist" className={cls.element('faner')}>
                     {this.props.tabs.map((tab, index) => (
                         <Fane

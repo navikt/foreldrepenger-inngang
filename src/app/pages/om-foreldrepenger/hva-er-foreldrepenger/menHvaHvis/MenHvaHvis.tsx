@@ -6,7 +6,6 @@ import NoenVilPaFerie from './NoenVilPaFerie';
 import JegVilJobbe from './JegVilJobbe';
 import EnAvOssBlirSyk from './EnAvOssBlirSyk';
 import HjemmeSamtidig from './HjemmeSamtidig';
-import ScaleSize from 'react-responsive';
 
 import './MenHvaHvis.less';
 import { WithLink } from '../../../../utils/withLink';
@@ -54,7 +53,6 @@ class MenHvaHvis extends React.Component<Props> {
 
     render = () => (
         <div className={cls.className}>
-            <ScaleSize query="(max-width: 799px)" />
             <div className={cls.element('header')}>
                 <TypografiBase type="element">
                     {getTranslation('om_foreldrepenger.hvor_lenge.hurtiglenker')}

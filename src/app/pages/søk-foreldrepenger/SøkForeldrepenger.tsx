@@ -74,13 +74,13 @@ class SøkForeldrepenger extends Component<Props & IntlProps> {
                             {this.state.selectedDate && (
                                 <a tabIndex={-1} href={Environment.SOK_FORELDREPENGER_URL}>
                                     <KnappBase type="hoved" role="link">
-                                        <MediaQuery query="(max-width: 575px)">
+                                        <MediaQuery maxWidth={575}>
                                             {getTranslation(
                                                 'søk_foreldrepenger.knapp_mobil',
                                                 this.props.lang
                                             )}
                                         </MediaQuery>
-                                        <MediaQuery query="(min-width: 576px)">
+                                        <MediaQuery minWidth={576}>
                                             {getTranslation(
                                                 'søk_foreldrepenger.knapp',
                                                 this.props.lang

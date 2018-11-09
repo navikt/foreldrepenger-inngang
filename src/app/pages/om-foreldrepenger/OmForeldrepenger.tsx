@@ -58,7 +58,7 @@ const OmForeldrepenger: React.StatelessComponent<Props & IntlProps> = ({ locatio
             <main className={cls.element('body')}>
                 <article className={cls.element('content')}>
                     <Breadcrumbs path={location.pathname} />
-                    <MediaQuery query="(min-width: 800px)">
+                    <MediaQuery minWidth={800}>
                         <Hurtiglenker links={sections} />
                     </MediaQuery>
                     <ForÅFåForeldrepenger id={sections[0]} />

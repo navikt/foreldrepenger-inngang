@@ -34,10 +34,10 @@ const Ferie: React.StatelessComponent<Props & IntlProps> = ({ id, lang }) => {
                 <TypografiBase type="normaltekst">
                     {getTranslation('om_foreldrepenger.ferie.eksempel_label')}
                 </TypografiBase>
-                <MediaQuery query="(min-width: 576px)">
+                <MediaQuery minWidth={576}>
                     <Ferieforskyvning />
                 </MediaQuery>
-                <MediaQuery query="(max-width: 575px)">
+                <MediaQuery maxWidth={575}>
                     <FerieforskyvningMobil />
                 </MediaQuery>
             </div>
