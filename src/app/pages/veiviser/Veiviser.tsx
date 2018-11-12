@@ -13,6 +13,21 @@ const signSVG = require('../../assets/ark/ark-sign.svg').default;
 
 const cls = BEMHelper('veiviser');
 
+const Tabs = [
+    {
+        label: 'Far',
+        icon: '',
+    },
+    {
+        label: 'Mor',
+        icon: '',
+    },
+    {
+        label: 'Medmor',
+        icon: '',
+    }
+];
+
 interface Props {
     location: any;
 }
@@ -30,7 +45,7 @@ const Veiviser: React.StatelessComponent<Props & IntlProps> = ({ location, lang 
                         title={getTranslation('veiviser.panelMedIllustrasjon.tittel', lang)}
                         svg={signSVG}
                         maskSvg={true}>
-                        <Valg />
+                        <Valg content={Tabs} />
                     </PanelMedIllustrasjon>
                 </div>
             </div>
