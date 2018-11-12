@@ -28,9 +28,6 @@ const Header = ({ lang }: Props) => {
                         <TypografiBase type="sidetittel">
                             {getTranslation('informasjonstavle.tittel', lang)}
                         </TypografiBase>
-                        <TypografiBase type="normaltekst">
-                            {getTranslation('informasjonstavle.ingress', lang)}
-                        </TypografiBase>
                     </div>
                     <div role="presentation" className={cls.element('svgContainer')}>
                         <MediaQuery maxWidth={575}>
