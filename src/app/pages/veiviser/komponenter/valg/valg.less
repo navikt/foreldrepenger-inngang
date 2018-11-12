@@ -10,13 +10,55 @@
         width: 100%;
         justify-content: center;
         text-align: center;
-        margin-bottom: 1rem;
+        padding-bottom: 1rem;
+        padding-top: 1rem;
     }
 
     &__knapper {
         display: flex;
         flex-direction: row;
         justify-content: center;
+    }
+
+    &__valg-fane {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .nav-frontend-tabs__tab-inner--aktiv
+        &__valg-fane-bakgrunn {
+            opacity: 0.5;
+        }
+
+
+    &__valg-fane-bakgrunn {
+        background-color: #7eb0e1;
+        position: relative;
+        height: 90px;
+        width: 70px;
+        margin-top: -0.1rem;
+        margin-bottom: -4.6em;
+        z-index: 1;
+        opacity: 0;
+        border-radius: 5px;
+    }
+
+    &__valg-fane-bilde  {
+        z-index: 2;
+
+    }
+
+    .nav-frontend-tabs {
+        width: 100%;
+    }
+    .nav-frontend-tabs__tab-list {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        padding-left: 3rem;
+        padding-right: 3rem;
     }
 
     .storToggle {
@@ -40,8 +82,6 @@
 
     &__ingress-knapp {
         text-align: center;
-        padding-bottom: 1rem;
-        font-weight: bold;
     }
 
     &__label {
