@@ -3,14 +3,21 @@
 .omForeldrepenger {
     &__body {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
+        justify-content: space-between;
         margin: 0;
     }
-
+    
     &__content {
         width: 100%;
         max-width: 780px;
+        position: relative;
+    }
+
+    &__sidebar {
+        width: 100px;
+        background-color: 'red';
     }
 
     &__alignLeft {

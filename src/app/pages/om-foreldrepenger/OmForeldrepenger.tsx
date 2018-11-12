@@ -15,8 +15,10 @@ import HjemmeSamtidig from './hjemme-samtidig/HjemmeSamtidig';
 import Hurtiglenker from './hurtiglenker/Hurtiglenker';
 import MediaQuery from 'react-responsive';
 import HeaderInformasjon from '../../components/header-informasjon/HeaderInformasjon';
+import classnames from 'classnames';
 import './omForeldrepenger.less';
 import Hjelp from '../../components/hjelpe-seksjon/HjelpeSeksjon';
+import TableOfContents from './table-of-contents/TableOfContents';
 
 const cls = BEMHelper('infosider');
 
@@ -49,10 +51,13 @@ const OmForeldrepengerHeader = () => {
 
 const OmForeldrepenger: React.StatelessComponent<Props & IntlProps> = ({ location, lang }) => {
     return (
-        <div className={cls.className}>
+        <div className={classnames(cls.className, cls.modifier('withSidebar'))}>
             <OmForeldrepengerHeader />
             <Sidebanner text={getTranslation('om_foreldrepenger.tittel', lang)} />
             <main className={cls.element('body')}>
+                <div className={cls.element('sidebar')}>
+                    <TableOfContents sections={sections} />
+                </div>
                 <article className={cls.element('content')}>
                     <Breadcrumbs path={location.pathname} />
                     <MediaQuery minWidth={800}>

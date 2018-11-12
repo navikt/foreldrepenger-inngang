@@ -1,11 +1,17 @@
 @import '../styles/index.less';
 
+@sidebar-breakpoint: 1300px;
+
 .infosider {
     &__body {
         display: flex;
         flex-direction: column;
         align-items: center;
         margin: 0;
+    }
+
+    &__sidebar {
+        display: none;
     }
 
     &__content {
@@ -26,6 +32,27 @@
     @media (min-width: @mobile-breakpoint) {
         &__body {
             margin: 0 1rem 1rem;
+        }
+    }
+
+    @media (min-width: 1300px) {
+        &--withSidebar .infosider {
+            &__body {
+                position: relative;
+            }
+
+            &__content {
+                flex: 1;
+                margin: 0 1rem;
+            }
+
+            &__sidebar {
+                display: block;
+                position: fixed;
+                right: calc(50% + 620px);
+                top: 337px;
+                background-color: red;
+            }
         }
     }
 }
