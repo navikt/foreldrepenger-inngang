@@ -1,11 +1,11 @@
 [
   {
     "type": "avsnitt",
-    "style": "undertittel",
+    "style": "normaltekst",
     "children": [
       {
         "type": "span",
-        "text": "Veiviseren under hjelper deg å finne ut"
+        "text": "Gå gjennom veiviseren under for å se om du skal velge engangsstønad eller foreldrepenger"
       }
     ]
   }
