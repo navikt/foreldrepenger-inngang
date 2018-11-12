@@ -106,9 +106,9 @@ const ViktigeFristerHeader = () => {
     return (
         <HeaderInformasjon
             title={'Viktige frister - www.nav.no'}
-            siteDescription={'Viktige frister angående foreldrepenger'}
+            siteDescription={'Les om viktige frister for å søke om foreldrepenger ved foreldrepermisjon.'}
             propTitle={'nav.no Viktige-frister'}
-            propDescription={'Viktige frister angående foreldrepenger'}
+            propDescription={'Les om viktige frister for å søke om foreldrepenger ved foreldrepermisjon.'}
             siteUrl={'https://familie.nav.no/viktige-frister'}
 
         />

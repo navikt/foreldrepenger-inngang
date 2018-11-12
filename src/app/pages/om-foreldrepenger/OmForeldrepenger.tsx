@@ -41,9 +41,9 @@ const OmForeldrepengerHeader = () => {
     return (
         <HeaderInformasjon
             title={'Om foreldrepenger - wwww.nav.no'}
-            siteDescription={'Finn ut hva du har rett til av foreldrepenger'}
+            siteDescription={'Foreldrepenger skal sikre deg inntekt når du ha foreldrepermisjon. Hvis du ikke hatt inntekt, kan du få en engangssum isteden.'}
             propTitle={'Om foreldrepenger'}
-            propDescription={'finn ut hva du har rett til av foreldrepenger'}
+            propDescription={'Foreldrepenger skal sikre deg inntekt når du ha foreldrepermisjon. Hvis du ikke hatt inntekt, kan du få en engangssum isteden.'}
             siteUrl={'https://familie.nav.no/om-foreldrepenger'}
         />
     );

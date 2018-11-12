@@ -102,9 +102,9 @@ const SøkForeldrepengerHeader = () => {
     return (
         <HeaderInformasjon
             title={'Foreldrepenger - www.nav.no'}
-            siteDescription={'nav.no Søk om foreldrepenger'}
+            siteDescription={'Søk om foreldrepenger, utsettelse eller endring av foreldrepengeperioden.'}
             propTitle={'nav.no foreldrepenger'}
-            propDescription={'nav.no Søk om foreldrepenger'}
+            propDescription={'Søk om foreldrepenger, utsettelse eller endring av foreldrepengeperioden.'}
             siteUrl={'https://familie.nav.no/hva-soker-du/foreldrepenger'}
         />
     );

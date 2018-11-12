@@ -23,9 +23,9 @@ const HvaSøkerDu: React.StatelessComponent<Props & IntlProps> = ({ location, la
             <Helmet>
                 <title>Hva søker du - www.nav.no</title>
                 <meta charSet="utf-8" />
-                <meta name="description" content="velg stønad du vil søke etter" />
+                <meta name="description" content="Her finner du alle skjemaer for foreldrepenger, utsettelse, endring og engangsstønad, alt på samme sted." />
                 <meta property="og:title" content="hva søker du" />
-                <meta property="og:description" content="velg stønad du vil søke etter" />
+                <meta property="og:description" content="Her finner du alle skjemaer for foreldrepenger, utsettelse, endring og engangsstønad, alt på samme sted." />
                 <meta property="og:url" content="https://familie.nav.no/hva-soker-du" />
             </Helmet>
             <div className={cls.className}>
