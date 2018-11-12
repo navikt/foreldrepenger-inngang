@@ -2,12 +2,12 @@ import React, { Component } from 'react';
 import Breadcrumbs from '../../components/breadcrumbs/Breadcrumbs';
 import BEMHelper from '../../utils/bem';
 import { getTranslation, IntlProps, withIntl } from '../../intl/intl';
-import PanelMedTittel from '../../components/panel-med-tittel/PanelMedTittel';
 import Sidebanner from 'app/components/sidebanner/Sidebanner';
 import StrukturertTekst from 'app/components/strukturert-tekst/StrukturertTekst';
 import { getContent } from 'app/utils/getContent';
 import classnames from 'classnames';
 import './søkSvangerskapspenger.less';
+import PanelMedIllustrasjon from 'app/components/panel-med-illustrasjon/PanelMedIllustrasjon';
 
 const hvaSøkerDuCls = BEMHelper('hvaSøkerDu');
 const svangerskapspengerCls = BEMHelper('søkSvangerskapspenger');
@@ -16,6 +16,8 @@ interface Props {
     route: any;
 }
 
+const infoSvg = require('../../assets/ark/ark-info.svg').default;
+
 class SøkForeldrepenger extends Component<Props & IntlProps> {
     render = () => (
         <div className={classnames(hvaSøkerDuCls.className, svangerskapspengerCls.className)}>
@@ -23,14 +25,16 @@ class SøkForeldrepenger extends Component<Props & IntlProps> {
             <main className={hvaSøkerDuCls.element('body')}>
                 <div className={hvaSøkerDuCls.element('content')}>
                     <Breadcrumbs path={location.pathname} />
-                    <PanelMedTittel title={getTranslation('svangerskapspenger', this.props.lang)}>
+                    <PanelMedIllustrasjon
+                        svg={infoSvg}
+                        title={getTranslation('svangerskapspenger', this.props.lang)}>
                         <StrukturertTekst
                             tekst={getContent(
                                 'hva-vil-du-søke-om/søk-svangerskapspenger',
                                 this.props.lang
                             )}
                         />
-                    </PanelMedTittel>
+                    </PanelMedIllustrasjon>
                 </div>
             </main>
         </div>
