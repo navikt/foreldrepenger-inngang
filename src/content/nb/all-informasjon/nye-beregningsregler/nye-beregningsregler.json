@@ -1,7 +1,7 @@
 [
     {
         "type": "avsnitt",
-        "style": "normaltekst",
+        "style": "ingress",
         "children": [
             {
                 "type": "span",
@@ -37,11 +37,15 @@
         "children": [
             {
                 "type": "span",
-                "text": "Du kan bruke kalkulatoren for å få en oversikt over hvor mye du kan få når du skal ha foreldrepenger fra 2019.",
-                "marks": []
+                "text": "Bruk kalkulatoren for å få en oversikt over hvor mye du kan få.",
+                "marks": ["url_kalkulator"]
             }
         ],
-        "markDefs": []
+        "markDefs": [{
+            "key": "url_kalkulator",
+            "type": "link",
+            "href": "/hvor-mye"
+        }]
     },
     {
         "type": "avsnitt",
@@ -197,25 +201,6 @@
     },
     {
         "type": "avsnitt",
-        "style": "normaltekst",
-        "listItem": "bullet",
-        "level": 1,
-        "children": [
-            { "type": "span", "text": "Hvis du både er ", "marks": [] },
-            {
-                "type": "span",
-                "text": "arbeidstaker og frilanser",
-                "marks": ["bold"]
-            },
-            {
-                "type": "span",
-                "text": " skal inntektene beregnes hver for seg og legges sammen til ett beløp. Hvis du har en samlet inntekt over seks ganger grunnbeløpet, er det inntekten din som arbeidstaker som legges i bunnen av beregningen.",
-                "marks": []
-            }
-        ]
-    },
-    {
-        "type": "avsnitt",
         "style": "undertittel",
         "children": [
             {
@@ -267,6 +252,17 @@
     },
     {
         "type": "avsnitt",
+        "style": "undertittel",
+        "children": [
+            {
+                "type": "span",
+                "text": "Hvis du har flere inntektskilder",
+                "marks": []
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
         "style": "normaltekst",
         "listItem": "bullet",
         "level": 1,
@@ -274,7 +270,26 @@
             { "type": "span", "text": "Hvis du både er ", "marks": [] },
             {
                 "type": "span",
-                "text": "selvstendig næringsdrivende og frilanser",
+                "text": "arbeidstaker og frilanser",
+                "marks": ["bold"]
+            },
+            {
+                "type": "span",
+                "text": " skal inntektene beregnes hver for seg og legges sammen til ett beløp. Hvis du har en samlet inntekt over seks ganger grunnbeløpet, er det inntekten din som arbeidstaker som legges i bunnen av beregningen.",
+                "marks": []
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "listItem": "bullet",
+        "level": 1,
+        "children": [
+            { "type": "span", "text": "Hvis du både er ", "marks": [] },
+            {
+                "type": "span",
+                "text": "selvstendig næringsdrivende og frilanser eller arbeidstaker",
                 "marks": ["bold"]
             },
             {
