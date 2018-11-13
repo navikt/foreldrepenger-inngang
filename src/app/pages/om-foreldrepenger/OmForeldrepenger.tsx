@@ -5,7 +5,6 @@ import { getTranslation, IntlProps, withIntl } from '../../intl/intl';
 import HvaErForeldrepenger from './hva-er-foreldrepenger/HvaErForeldrepenger';
 import NyeRegler from './nye-regler/NyeRegler';
 import ForÅFåForeldrepenger from './for-å-få-foreldrepenger/ForÅFåForeldrepenger';
-import JegHarHattInntekt from './jeg-har-hatt-inntekt/JegHarHattInntekt';
 import JegVilJobbe from './jeg-vil-jobbe/JegVilJobbe';
 import Sykdom from './sykdom/Sykdom';
 import Ferie from './ferie/Ferie';
@@ -33,7 +32,6 @@ const sections = [
     'hvis-du-vil-jobbe',
     'hvis-en-av-dere-blir-syke',
     'hjemme-samtidig',
-    'andre-inntekter-som-gir-rett',
     'adoptere'
 ];
 
@@ -69,7 +67,6 @@ const OmForeldrepenger: React.StatelessComponent<Props & IntlProps> = ({ locatio
                     <JegVilJobbe id={sections[4]} />
                     <Sykdom id={sections[5]} />
                     <HjemmeSamtidig id={sections[6]} />
-                    <JegHarHattInntekt id={sections[7]} />
                     <Adopsjon id={sections[8]} />
                     <Hjelp />
                 </article>
