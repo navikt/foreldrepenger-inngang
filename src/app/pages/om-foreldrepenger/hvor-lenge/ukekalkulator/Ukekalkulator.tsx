@@ -5,27 +5,44 @@ import { getTranslation, IntlProps, withIntl } from '../../../../intl/intl';
 import AntallBarn from './AntallBarn';
 import AntallUker from './AntallUker';
 import DinLønn from './din-lønn/DinLønn';
-import { antallUtbetalingsuker } from './utils';
 import './ukekalkulator.less';
+import { Utbetalingsalternativ } from './utils';
 
 const cls = BEMHelper('ukekalkulator');
 
-class Kalkulator extends React.Component<IntlProps> {
-    state: {
-        selectedNumberOfWeeks: number;
-        selectedNumberOfChildren: 1 | 2 | 3;
-        selectedPercentage: number;
-    };
+interface KalkulatorProps {
+    antallUtbetalingsuker: Utbetalingsalternativ[];
+}
 
-    constructor(props: IntlProps) {
+type Props = KalkulatorProps & IntlProps;
+
+interface State {
+    selectedNumberOfWeeks: number;
+    selectedNumberOfChildren: 1 | 2 | 3;
+    selectedPercentage: number;
+}
+
+class Ukekalkulator extends React.Component<Props, State> {
+    constructor(props: Props) {
         super(props);
 
         this.state = {
-            selectedNumberOfWeeks: 49,
+            selectedNumberOfWeeks: props.antallUtbetalingsuker[0][100],
             selectedNumberOfChildren: 1,
             selectedPercentage: 100
         };
     }
+
+    componentWillReceiveProps = (nextProps: Props) => {
+        if (nextProps.antallUtbetalingsuker !== this.props.antallUtbetalingsuker) {
+            this.setState({
+                selectedNumberOfWeeks:
+                    nextProps.antallUtbetalingsuker[this.state.selectedNumberOfChildren - 1][
+                        this.state.selectedPercentage
+                    ]
+            });
+        }
+    };
 
     onNumberOfWeeksSelect = (
         selectedNumberOfWeeks: number,
@@ -40,8 +57,9 @@ class Kalkulator extends React.Component<IntlProps> {
     };
 
     onPercentageSelect = (selectedPercentage: number) => {
-        const selectedNumberOfWeeks =
-            antallUtbetalingsuker[this.state.selectedNumberOfChildren][selectedPercentage];
+        const selectedNumberOfWeeks = this.props.antallUtbetalingsuker[
+            this.state.selectedNumberOfChildren - 1
+        ][selectedPercentage];
 
         this.setState({
             selectedPercentage,
@@ -70,12 +88,12 @@ class Kalkulator extends React.Component<IntlProps> {
                         label={getTranslation('ett_barn', this.props.lang)}
                     />
                     <AntallUkerWrapper
-                        numberOfWeeks={antallUtbetalingsuker[1][100]}
+                        numberOfWeeks={this.props.antallUtbetalingsuker[0][100]}
                         numberOfChildren={1}
                         percentage={100}
                     />
                     <AntallUkerWrapper
-                        numberOfWeeks={antallUtbetalingsuker[1][80]}
+                        numberOfWeeks={this.props.antallUtbetalingsuker[0][80]}
                         numberOfChildren={1}
                         percentage={80}
                     />
@@ -85,12 +103,12 @@ class Kalkulator extends React.Component<IntlProps> {
                         label={getTranslation('tvillinger', this.props.lang)}
                     />
                     <AntallUkerWrapper
-                        numberOfWeeks={antallUtbetalingsuker[2][100]}
+                        numberOfWeeks={this.props.antallUtbetalingsuker[1][100]}
                         numberOfChildren={2}
                         percentage={100}
                     />
                     <AntallUkerWrapper
-                        numberOfWeeks={antallUtbetalingsuker[2][80]}
+                        numberOfWeeks={this.props.antallUtbetalingsuker[1][80]}
                         numberOfChildren={2}
                         percentage={80}
                     />
@@ -100,12 +118,12 @@ class Kalkulator extends React.Component<IntlProps> {
                         label={getTranslation('flere_barn', this.props.lang)}
                     />
                     <AntallUkerWrapper
-                        numberOfWeeks={antallUtbetalingsuker[3][100]}
+                        numberOfWeeks={this.props.antallUtbetalingsuker[2][100]}
                         numberOfChildren={3}
                         percentage={100}
                     />
                     <AntallUkerWrapper
-                        numberOfWeeks={antallUtbetalingsuker[3][80]}
+                        numberOfWeeks={this.props.antallUtbetalingsuker[2][80]}
                         numberOfChildren={3}
                         percentage={80}
                     />
@@ -146,4 +164,4 @@ const addAntallUkerAttributes = (
     );
 };
 
-export default withIntl(Kalkulator);
+export default withIntl(Ukekalkulator);

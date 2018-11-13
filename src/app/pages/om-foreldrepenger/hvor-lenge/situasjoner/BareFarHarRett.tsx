@@ -1,19 +1,19 @@
 import * as React from 'react';
-import Kalkulator from './ukekalkulator/Ukekalkulator';
-import Informasjonsfaner from './informasjons-faner/Informasjonsfaner';
-import StrukturertTekst from '../../../components/strukturert-tekst/StrukturertTekst';
-import { Language, withIntl, getTranslation } from '../../../intl/intl';
-import { getContent } from '../../../utils/getContent';
+import Informasjonsfaner from '../informasjons-faner/Informasjonsfaner';
+import StrukturertTekst from '../../../../components/strukturert-tekst/StrukturertTekst';
+import { Language, withIntl, getTranslation } from '../../../../intl/intl';
+import { getContent } from '../../../../utils/getContent';
 
-const content = 'all-informasjon/hva-er-foreldrepenger/bare-far-har-rett/bare-far-har-rett';
-const kalkulatorbeskrivelse = 'all-informasjon/hva-er-foreldrepenger/kalkulatorbeskrivelse';
-const farsDel = 'all-informasjon/hva-er-foreldrepenger/bare-far-har-rett/fars-del';
+const content = 'all-informasjon/hvor-lenge/bare-far-har-rett/bare-far-har-rett';
+const kalkulatorbeskrivelse = 'all-informasjon/hvor-lenge/kalkulatorbeskrivelse';
+const farsDel = 'all-informasjon/hvor-lenge/bare-far-har-rett/fars-del';
 
 const getInformasjonsfaner = (lang: Language) => [
     {
-        faneLabel: getTranslation('om_foreldrepenger.hvor_lenge.fordeling.fedrekvote', lang),
-        faneIcon: true,
-        bodyProps: {
+        value: 'fedrekvote',
+        label: getTranslation('om_foreldrepenger.hvor_lenge.fordeling.fedrekvote', lang),
+        icon: true,
+        body: {
             tittel: 'til far',
             icon: 'far3',
             antallUker: '40/50',
@@ -34,7 +34,6 @@ const BareFarHarRett = ({ lang }: { lang: Language }) => {
             <StrukturertTekst tekst={getContent(content, lang)} />
             <Informasjonsfaner tabs={getInformasjonsfaner(lang)} />
             <StrukturertTekst tekst={getContent(kalkulatorbeskrivelse, lang)} />
-            <Kalkulator />
         </div>
     );
 };

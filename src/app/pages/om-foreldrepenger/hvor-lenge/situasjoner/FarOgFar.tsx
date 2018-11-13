@@ -1,24 +1,24 @@
 import * as React from 'react';
-import Kalkulator from './ukekalkulator/Ukekalkulator';
-import Informasjonsfaner from './informasjons-faner/Informasjonsfaner';
+import Informasjonsfaner from '../informasjons-faner/Informasjonsfaner';
 
-import StrukturertTekst from '../../../components/strukturert-tekst/StrukturertTekst';
-import { Language, withIntl, getTranslation } from '../../../intl/intl';
-import { getContent } from '../../../utils/getContent';
+import StrukturertTekst from '../../../../components/strukturert-tekst/StrukturertTekst';
+import { Language, withIntl, getTranslation } from '../../../../intl/intl';
+import { getContent } from '../../../../utils/getContent';
 import Foreldrepar from 'app/components/foreldrepar/Foreldrepar';
 
-const farOgFarContent = 'all-informasjon/hva-er-foreldrepenger/far-og-far/far-og-far';
-const kalkulatorbeskrivelse = 'all-informasjon/hva-er-foreldrepenger/kalkulatorbeskrivelse';
+const farOgFarContent = 'all-informasjon/hvor-lenge/far-og-far/far-og-far';
+const kalkulatorbeskrivelse = 'all-informasjon/hvor-lenge/kalkulatorbeskrivelse';
 
-const far1 = 'all-informasjon/hva-er-foreldrepenger/far-og-far/far-en';
-const far2 = 'all-informasjon/hva-er-foreldrepenger/far-og-far/far-to';
-const fellesPerioden = 'all-informasjon/hva-er-foreldrepenger/far-og-far/far-fellesperioden';
+const far1 = 'all-informasjon/hvor-lenge/far-og-far/far-en';
+const far2 = 'all-informasjon/hvor-lenge/far-og-far/far-to';
+const fellesPerioden = 'all-informasjon/hvor-lenge/far-og-far/far-fellesperioden';
 
 const getInformasjonsfaner = (lang: Language) => [
     {
-        faneLabel: getTranslation('om_foreldrepenger.hvor_lenge.fordeling.første_fedrekvote', lang),
-        faneIcon: true,
-        bodyProps: {
+        value: 'første_fedrekvote',
+        label: getTranslation('om_foreldrepenger.hvor_lenge.fordeling.første_fedrekvote', lang),
+        icon: true,
+        body: {
             tittel: ' uker til hvis surrogati',
             icon: 'far4',
             antallUker: '45/56',
@@ -27,9 +27,10 @@ const getInformasjonsfaner = (lang: Language) => [
         }
     },
     {
-        faneLabel: getTranslation('om_foreldrepenger.hvor_lenge.fordeling.andre_fedrekvote', lang),
-        faneIcon: true,
-        bodyProps: {
+        value: 'andre_fedrekvote',
+        label: getTranslation('om_foreldrepenger.hvor_lenge.fordeling.andre_fedrekvote', lang),
+        icon: true,
+        body: {
             tittel: ' uker til hvis adopsjon',
             icon: 'far2',
             antallUker: '15',
@@ -38,9 +39,10 @@ const getInformasjonsfaner = (lang: Language) => [
         }
     },
     {
-        faneLabel: getTranslation('om_foreldrepenger.hvor_lenge.fordeling.fellesperiode', lang),
-        faneIcon: false,
-        bodyProps: {
+        value: 'fellesperiode',
+        label: getTranslation('om_foreldrepenger.hvor_lenge.fordeling.fellesperiode', lang),
+        icon: false,
+        body: {
             tittel: '',
             icon: <Foreldrepar firstParent="far4" secondParent="far2" variant={4} />,
             antallUker: '16/26 uker til hvis adopsjon',
@@ -61,7 +63,6 @@ const FarOgFar = ({ lang }: { lang: Language }) => {
                 title={getTranslation('om_foreldrepenger.hvor_lenge.fordeling.tittel', lang)}
             />
             <StrukturertTekst tekst={getContent(kalkulatorbeskrivelse, lang)} />
-            <Kalkulator />
         </div>
     );
 };

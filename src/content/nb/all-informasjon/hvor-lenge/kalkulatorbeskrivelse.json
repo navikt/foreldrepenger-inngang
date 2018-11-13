@@ -1,0 +1,14 @@
+[
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Den totale utbetalingen blir høyere ved å velge 100 prosent.",
+                "marks": []
+            }
+        ],
+        "markDefs": []
+    }
+]

@@ -1,23 +1,23 @@
 import * as React from 'react';
-import Kalkulator from './ukekalkulator/Ukekalkulator';
-import Informasjonsfaner from './informasjons-faner/Informasjonsfaner';
+import Informasjonsfaner from '../informasjons-faner/Informasjonsfaner';
 
-import StrukturertTekst from '../../../components/strukturert-tekst/StrukturertTekst';
-import { Language, withIntl, getTranslation } from '../../../intl/intl';
-import { getContent } from '../../../utils/getContent';
+import StrukturertTekst from '../../../../components/strukturert-tekst/StrukturertTekst';
+import { Language, withIntl, getTranslation } from '../../../../intl/intl';
+import { getContent } from '../../../../utils/getContent';
 import Foreldrepar from 'app/components/foreldrepar/Foreldrepar';
 
-const farOgMorContent = 'all-informasjon/hva-er-foreldrepenger/far-og-mor/far-og-mor';
-const kalkulatorbeskrivelse = 'all-informasjon/hva-er-foreldrepenger/kalkulatorbeskrivelse';
-const morsdel = 'all-informasjon/hva-er-foreldrepenger/far-og-mor/mors-del';
-const fellesdel = 'all-informasjon/hva-er-foreldrepenger/far-og-mor/felles-del';
-const farsdel = 'all-informasjon/hva-er-foreldrepenger/far-og-mor/fars-del';
+const farOgMorContent = 'all-informasjon/hvor-lenge/far-og-mor/far-og-mor';
+const kalkulatorbeskrivelse = 'all-informasjon/hvor-lenge/kalkulatorbeskrivelse';
+const morsdel = 'all-informasjon/hvor-lenge/far-og-mor/mors-del';
+const fellesdel = 'all-informasjon/hvor-lenge/far-og-mor/felles-del';
+const farsdel = 'all-informasjon/hvor-lenge/far-og-mor/fars-del';
 
 const getInformasjonsfaner = (lang: Language) => [
     {
-        faneLabel: getTranslation('om_foreldrepenger.hvor_lenge.fordeling.mødrekvote', lang),
-        faneIcon: true,
-        bodyProps: {
+        value: 'mødrekvote',
+        label: getTranslation('om_foreldrepenger.hvor_lenge.fordeling.mødrekvote', lang),
+        icon: true,
+        body: {
             tittel: 'til mor',
             icon: 'mor2',
             antallUker: '15',
@@ -28,9 +28,10 @@ const getInformasjonsfaner = (lang: Language) => [
         }
     },
     {
-        faneLabel: getTranslation('om_foreldrepenger.hvor_lenge.fordeling.fedrekvote', lang),
-        faneIcon: true,
-        bodyProps: {
+        value: 'fedrekvote',
+        label: getTranslation('om_foreldrepenger.hvor_lenge.fordeling.fedrekvote', lang),
+        icon: true,
+        body: {
             tittel: 'til far',
             icon: 'far1',
             antallUker: '15',
@@ -39,9 +40,10 @@ const getInformasjonsfaner = (lang: Language) => [
         }
     },
     {
-        faneLabel: getTranslation('om_foreldrepenger.hvor_lenge.fordeling.fellesperiode', lang),
-        faneIcon: false,
-        bodyProps: {
+        value: 'fellesperiode',
+        label: getTranslation('om_foreldrepenger.hvor_lenge.fordeling.fellesperiode', lang),
+        icon: false,
+        body: {
             tittel: 'til begge',
             icon: <Foreldrepar variant={4} firstParent="mor2" secondParent="far1" />,
             antallUker: '16/26',
@@ -62,7 +64,6 @@ const FarOgMor = ({ lang }: { lang: Language }) => {
             <StrukturertTekst tekst={getContent(farOgMorContent, lang)} />
             <Informasjonsfaner tabs={getInformasjonsfaner(lang)} />
             <StrukturertTekst tekst={getContent(kalkulatorbeskrivelse, lang)} />
-            <Kalkulator />
         </div>
     );
 };

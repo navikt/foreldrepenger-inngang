@@ -1,22 +1,22 @@
 import * as React from 'react';
-import Kalkulator from './ukekalkulator/Ukekalkulator';
-import Informasjonsfaner from './informasjons-faner/Informasjonsfaner';
-import StrukturertTekst from '../../../components/strukturert-tekst/StrukturertTekst';
-import Foreldrepar from '../../../components/foreldrepar/Foreldrepar';
-import { Language, withIntl, getTranslation } from '../../../intl/intl';
-import { getContent } from '../../../utils/getContent';
+import Informasjonsfaner from '../informasjons-faner/Informasjonsfaner';
+import StrukturertTekst from '../../../../components/strukturert-tekst/StrukturertTekst';
+import Foreldrepar from '../../../../components/foreldrepar/Foreldrepar';
+import { Language, withIntl, getTranslation } from '../../../../intl/intl';
+import { getContent } from '../../../../utils/getContent';
 
-const content = 'all-informasjon/hva-er-foreldrepenger/mor-og-mor/mor-og-mor';
-const kalkulatorbeskrivelse = 'all-informasjon/hva-er-foreldrepenger/kalkulatorbeskrivelse';
-const morsDel = 'all-informasjon/hva-er-foreldrepenger/mor-og-mor/mors-del';
-const medmorsDel = 'all-informasjon/hva-er-foreldrepenger/mor-og-mor/medmors-del';
-const fellesDel = 'all-informasjon/hva-er-foreldrepenger/mor-og-mor/felles-del';
+const content = 'all-informasjon/hvor-lenge/mor-og-mor/mor-og-mor';
+const kalkulatorbeskrivelse = 'all-informasjon/hvor-lenge/kalkulatorbeskrivelse';
+const morsDel = 'all-informasjon/hvor-lenge/mor-og-mor/mors-del';
+const medmorsDel = 'all-informasjon/hvor-lenge/mor-og-mor/medmors-del';
+const fellesDel = 'all-informasjon/hvor-lenge/mor-og-mor/felles-del';
 
 const getInformasjonsfaner = (lang: Language) => [
     {
-        faneLabel: getTranslation('om_foreldrepenger.hvor_lenge.fordeling.mødrekvote', lang),
-        faneIcon: true,
-        bodyProps: {
+        value: 'mødrekvote',
+        label: getTranslation('om_foreldrepenger.hvor_lenge.fordeling.mødrekvote', lang),
+        icon: true,
+        body: {
             tittel: 'til mor',
             icon: 'mor2',
             antallUker: '15',
@@ -27,9 +27,10 @@ const getInformasjonsfaner = (lang: Language) => [
         }
     },
     {
-        faneLabel: getTranslation('om_foreldrepenger.hvor_lenge.fordeling.medmorkvote', lang),
-        faneIcon: true,
-        bodyProps: {
+        value: 'medmorkvote',
+        label: getTranslation('om_foreldrepenger.hvor_lenge.fordeling.medmorkvote', lang),
+        icon: true,
+        body: {
             tittel: 'til medmor',
             icon: 'medmor2',
             antallUker: '15',
@@ -40,9 +41,10 @@ const getInformasjonsfaner = (lang: Language) => [
         }
     },
     {
-        faneLabel: getTranslation('om_foreldrepenger.hvor_lenge.fordeling.fellesperiode', lang),
-        faneIcon: false,
-        bodyProps: {
+        value: 'fellesperiode',
+        label: getTranslation('om_foreldrepenger.hvor_lenge.fordeling.fellesperiode', lang),
+        icon: false,
+        body: {
             tittel: 'til begge',
             icon: <Foreldrepar firstParent="mor2" secondParent="medmor2" variant={4} />,
             antallUker: '16/26',
@@ -63,7 +65,6 @@ const MorOgMor = ({ lang }: { lang: Language }) => {
             <StrukturertTekst tekst={getContent(content, lang)} />
             <Informasjonsfaner tabs={getInformasjonsfaner(lang)} />
             <StrukturertTekst tekst={getContent(kalkulatorbeskrivelse, lang)} />
-            <Kalkulator />
         </div>
     );
 };

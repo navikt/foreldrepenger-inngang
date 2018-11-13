@@ -2,7 +2,7 @@ import * as React from 'react';
 import Breadcrumbs from '../../components/breadcrumbs/Breadcrumbs';
 import BEMHelper from '../../utils/bem';
 import { getTranslation, IntlProps, withIntl } from '../../intl/intl';
-import HvaErForeldrepenger from './hva-er-foreldrepenger/HvaErForeldrepenger';
+import HvorLenge from './hvor-lenge/HvorLenge';
 import NyeRegler from './nye-regler/NyeRegler';
 import ForÅFåForeldrepenger from './for-å-få-foreldrepenger/ForÅFåForeldrepenger';
 import JegVilJobbe from './jeg-vil-jobbe/JegVilJobbe';
@@ -59,7 +59,7 @@ const OmForeldrepenger: React.StatelessComponent<Props & IntlProps> = ({ locatio
                         <Hurtiglenker links={sections} />
                     </MediaQuery>
                     <ForÅFåForeldrepenger id={sections[0]} />
-                    <HvaErForeldrepenger id={sections[1]} />
+                    <HvorLenge id={sections[1]} />
                     <NyeRegler />
                     <Beregning id={sections[2]} />
                     <Ferie id={sections[3]} />

@@ -11,13 +11,10 @@ const cls = BEMHelper('innholdsfaner');
 
 interface TabProps {
     tabs: Innholdsfane[];
+    onSelect: (selectedTab: string) => void;
 }
 
-interface Section {
-    section?: string;
-}
-
-type Props = TabProps & Section & IntlProps;
+type Props = TabProps & IntlProps;
 
 class Innholdsfaner extends React.Component<Props> {
     state: {
@@ -36,6 +33,10 @@ class Innholdsfaner extends React.Component<Props> {
 
     onTabSelect = (tabIndex: number) => {
         const componentToRender = this.props.tabs[tabIndex].component;
+
+        if (this.props.onSelect) {
+            this.props.onSelect(this.props.tabs[tabIndex].label);
+        }
 
         this.setState({
             currentTab: tabIndex,
