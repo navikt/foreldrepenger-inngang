@@ -16,6 +16,7 @@ const computeDeviation = (value: number, average: number): number => {
 };
 
 export const getUtbetalingsgrense = () => GRUNNBELØPET * 6;
+export const getGrunnbeløpet = () => GRUNNBELØPET;
 export const getEnHalvG = () => GRUNNBELØPET / 2;
 
 export const tjenerOverUtbetalingsgrensen = (månedslønn: number): boolean => {

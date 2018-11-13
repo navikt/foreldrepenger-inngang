@@ -1,85 +1,151 @@
 [
-  {
-      "type": "avsnitt",
-      "style": "element",
-      "children": [
-          { "type": "span", "text": "Hvis du er arbeidstaker", "marks": [] }
-      ]
-  },
-  {
-      "type": "avsnitt",
-      "style": "normaltekst",
-      "children": [
-          {
-              "type": "span",
-              "text": "Foreldrepengene dine beregnes vanligvis ut ifra inntekten du har når foreldrepermisjonen din begynner. Hvis du har:",
-              "marks": []
-          }
-      ],
-      "markDefs": []
-  },
-  {
-      "type": "avsnitt",
-      "style": "normaltekst",
-      "listItem": "bullet",
-      "level": 1,
-      "children": [
-          {
-              "type": "span",
-              "text": "fast arbeidstid og månedslønn, brukes den siste måneden",
-              "marks": []
-          }
-      ]
-  },
-  {
-      "type": "avsnitt",
-      "style": "normaltekst",
-      "listItem": "bullet",
-      "level": 1,
-      "children": [
-          {
-              "type": "span",
-              "text": "fast arbeidstid og timelønn, brukes de siste fire ukene",
-              "marks": []
-          }
-      ]
-  },
-  {
-      "type": "avsnitt",
-      "style": "normaltekst",
-      "listItem": "bullet",
-      "level": 1,
-      "children": [
-          {
-              "type": "span",
-              "text": "varierende inntekt eller stillingsprosent, brukes et gjennomsnitt av de siste tre, seks eller ni månedene",
-              "marks": []
-          }
-      ]
-  },
-  {
-      "type": "avsnitt",
-      "style": "normaltekst",
-      "listItem": "bullet",
-      "level": 1,
-      "children": [
-          {
-              "type": "span",
-              "text": "nylig fått jobb eller endret lønn, brukes inntekten din etter endringen",
-              "marks": []
-          }
-      ]
-  },
-  {
-      "type": "avsnitt",
-      "style": "normaltekst",
-      "children": [
-          {
-              "type": "span",
-              "text": "Hvis inntekten din er 25 prosent større eller mindre enn det du har tjent de tre siste årene, vil enten den nåværende inntekten din brukes eller gjennomsnittet av de tre siste årene.",
-              "marks": []
-          }
-      ],
-      "markDefs": []
-  }
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Foreldrepengene dine beregnes vanligvis ut ifra inntekten du har når foreldrepengeperioden din begynner. Hvis du har:",
+                "marks": []
+            }
+        ],
+        "markDefs": []
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "listItem": "bullet",
+        "level": 1,
+        "children": [
+            {
+                "type": "span",
+                "text": "fast arbeidstid og månedslønn, brukes den siste måneden",
+                "marks": []
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "listItem": "bullet",
+        "level": 1,
+        "children": [
+            {
+                "type": "span",
+                "text": "fast arbeidstid og timelønn, brukes de siste fire ukene",
+                "marks": []
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "listItem": "bullet",
+        "level": 1,
+        "children": [
+            {
+                "type": "span",
+                "text": "varierende inntekt eller stillingsprosent, brukes et gjennomsnitt av de siste tre, seks eller ni månedene",
+                "marks": []
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "listItem": "bullet",
+        "level": 1,
+        "children": [
+            {
+                "type": "span",
+                "text": "nylig fått jobb eller endret lønn, brukes inntekten din etter endringen",
+                "marks": []
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Har du hatt flere deltidsstillinger, er det den totale inntekten din som gjelder når foreldrepengene dine skal beregnes.",
+                "marks": []
+            }
+        ],
+        "markDefs": []
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Hvis inntekten din er ",
+                "marks": []
+            },
+            {
+                "type": "span",
+                "text": "25 prosent større eller mindre",
+                "marks": ["bold"]
+            },
+            {
+                "type": "span",
+                "text": " enn det du har tjent de tre siste årene, vil enten den nåværende inntekten din brukes eller gjennomsnittet av de tre siste årene.",
+                "marks": []
+            }
+        ],
+        "markDefs": []
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Også andre situasjoner kan gi deg rett til foreldrepenger. Dette kan være:",
+                "marks": []
+            }
+        ],
+        "markDefs": []
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "listItem": "bullet",
+        "level": 1,
+        "children": [
+            {
+                "type": "span",
+                "text": "lønn fra arbeidsgiver under videre- eller etterutdanning",
+                "marks": []
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "listItem": "bullet",
+        "level": 1,
+        "children": [
+            {
+                "type": "span",
+                "text": "etterlønn fra arbeidsgiver",
+                "marks": []
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "listItem": "bullet",
+        "level": 1,
+        "children": [
+            {
+                "type": "span",
+                "text": "lønn fra arbeid i utlandet",
+                "marks": []
+            }
+        ]
+    }
 ]
