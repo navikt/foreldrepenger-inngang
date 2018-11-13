@@ -14,7 +14,7 @@ const HeaderInformasjon = ({
     siteDescription: string;
     propTitle: string;
     propDescription: string;
-    imageUrl: string;
+    imageUrl?: string;
     siteUrl: string;
     imageLargeUrl?: string;
 }) => {

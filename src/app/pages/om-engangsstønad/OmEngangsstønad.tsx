@@ -53,12 +53,11 @@ const OmEngangsstonad: React.StatelessComponent<Props & IntlProps> = ({ location
 const OmEngangsstønadHeader = () => {
     return (
         <HeaderInformasjon
-            siteDescription={'Vilkår og informasjon rundt engangsstønad'}
+            title={'Om engangsstønad - www.nav.no'}
+            siteDescription={'Hvis du venter barn og ikke hatt inntekt det siste året, kan du få en engangssum fra NAV.'}
             propTitle={'nav.no engangstønad-informasjon'}
-            propDescription={'Vilkår og informasjon rundt engangsstønad'}
-            imageUrl={'/dist/assets/tmp_omEngangsstonad.png'}
+            propDescription={'Hvis du venter barn og ikke hatt inntekt det siste året, kan du få en engangssum fra NAV.'}
             siteUrl={'https://familie.nav.no/om-engangsstonad'}
-            imageLargeUrl={'/dist/assets/tmp_tmp_omEngangsstonad.png'}
         />
     );
 };
