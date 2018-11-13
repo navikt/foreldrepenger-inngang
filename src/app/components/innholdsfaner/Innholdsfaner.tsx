@@ -15,6 +15,7 @@ interface TabProps {
 
 interface Section {
     section?: string;
+    id?: string
 }
 
 type Props = TabProps & Section & IntlProps;
@@ -46,7 +47,7 @@ class Innholdsfaner extends React.Component<Props> {
     render = () => (
         <div className={cls.className}>
             <MediaQuery maxWidth={799}>
-                <div className={cls.element('faner')}>
+                <div  id={this.props.id} className={cls.element('faner')}>
                     <TypografiBase className={cls.element('fanetittel')} type="element">
                         {getTranslation('om_foreldrepenger.faner.label', this.props.lang)}
                     </TypografiBase>
@@ -60,7 +61,7 @@ class Innholdsfaner extends React.Component<Props> {
                 </div>
             </MediaQuery>
             <MediaQuery minWidth={800}>
-                <div role="tablist" className={cls.element('faner')}>
+                <div id={this.props.id} role="tablist" className={cls.element('faner')}>
                     {this.props.tabs.map((tab, index) => (
                         <Fane
                             tab={tab}

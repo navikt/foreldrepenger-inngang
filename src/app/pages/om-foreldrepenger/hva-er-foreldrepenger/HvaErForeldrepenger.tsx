@@ -61,7 +61,6 @@ interface Props {
 const HvaErForeldrepenger: React.StatelessComponent<Props & IntlProps> = ({ id, lang }) => {
     return (
         <PanelMedIllustrasjon
-            id={id}
             title={getTranslation('om_foreldrepenger.hvor_lenge.tittel', lang)}
             svg={infoSvg}>
             <div className={cls.className}>
@@ -71,7 +70,7 @@ const HvaErForeldrepenger: React.StatelessComponent<Props & IntlProps> = ({ id, 
                         lang
                     )}
                 />
-                <Innholdsfaner tabs={tabs} section={section} />
+                <Innholdsfaner id={id} tabs={tabs} section={section} />
                 <MenHvaHvis />
             </div>
         </PanelMedIllustrasjon>
