@@ -40,12 +40,11 @@ const sections = [
 const OmForeldrepengerHeader = () => {
     return (
         <HeaderInformasjon
-            siteDescription={'finn ut hva du har rett til av foreldrepenger'}
-            propTitle={'om foreldrepenger'}
-            propDescription={'finn ut hva du har rett til av foreldrepenger'}
-            imageUrl={'/dist/assets/tmp_omForeldrepenger.png'}
+            title={'Om foreldrepenger - wwww.nav.no'}
+            siteDescription={'Foreldrepenger skal sikre deg inntekt når du ha foreldrepermisjon. Hvis du ikke hatt inntekt, kan du få en engangssum isteden.'}
+            propTitle={'Om foreldrepenger'}
+            propDescription={'Foreldrepenger skal sikre deg inntekt når du ha foreldrepermisjon. Hvis du ikke hatt inntekt, kan du få en engangssum isteden.'}
             siteUrl={'https://familie.nav.no/om-foreldrepenger'}
-            imageLargeUrl={'/dist/assets/tmp_omForeldrepenger-large.png'}
         />
     );
 };

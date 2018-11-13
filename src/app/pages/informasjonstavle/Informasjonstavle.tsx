@@ -69,12 +69,11 @@ const BildelenkerWithoutIntl: StatelessComponent<IntlProps> = ({ lang }) => {
 const InformasjonstavleHeader = () => {
     return (
         <HeaderInformasjon
-            siteDescription={'Foreldrepenger til nav.no'}
+            title={'Foreldrepenger - www.nav.no'}
+            siteDescription={'Foreldrepenger skal sikre deg inntekt når du ha foreldrepermisjon. Hvis du ikke hatt inntekt, kan du få en engangssum isteden.'}
             propTitle={'Foreldrepengesidene til nav.no'}
-            propDescription={'Forsiden for foreldrepenger, engangsstønad og svangerskapspenger'}
-            imageUrl={'/dist/assets/tmp_forsiden.png'}
+            propDescription={'Foreldrepenger skal sikre deg inntekt når du ha foreldrepermisjon. Hvis du ikke hatt inntekt, kan du få en engangssum isteden.'}
             siteUrl={'https://familie.nav.no'}
-            imageLargeUrl={'/dist/assets/tmp_forsiden-large.png'}
         />
     );
 };
