@@ -18,6 +18,7 @@ import Veileder from 'app/components/veileder/Veileder';
 import SvgMask from 'app/components/svg-mask/SvgMask';
 import './kalkulator.less';
 import Resultat from './resultat/Resultat';
+import UtvidetInformasjon from './utvidetinformasjon/UtvidetInformasjon';
 
 const infosiderCls = BEMHelper('infosider');
 const cls = BEMHelper('kalkulator');
@@ -166,6 +167,27 @@ class Planlegger extends React.Component<IntlProps, State> {
                                         <TypografiBase type="undertittel">
                                             {valgTittel}
                                         </TypografiBase>
+
+                                        {this.state.valgteSituasjoner.includes(
+                                            'utbetaling_fra_nav'
+                                        ) && (
+                                            <UtvidetInformasjon
+                                                apneLabel={getTranslation(
+                                                    'kalkulator.ytelser_som_gir_rett_tittel',
+                                                    lang
+                                                )}
+                                                lukkLabel={getTranslation(
+                                                    'kalkulator.lukk_info',
+                                                    lang
+                                                )}>
+                                                <StrukturertTekst
+                                                    tekst={getContent(
+                                                        'kalkulator/ytelser-som-gir-rett',
+                                                        lang
+                                                    )}
+                                                />
+                                            </UtvidetInformasjon>
+                                        )}
                                         <TypografiBase type="normaltekst">
                                             {getTranslation(ingressTilUtbetaling, lang)}
                                         </TypografiBase>

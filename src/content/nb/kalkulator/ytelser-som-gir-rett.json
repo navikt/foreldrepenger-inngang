@@ -1,0 +1,85 @@
+[
+    {
+        "type": "avsnitt",
+        "style": "element",
+        "children": [
+            {
+                "type": "span",
+                "text": "Disse ytelsene fra NAV gir deg rett til foreldrepenger:",
+                "marks": []
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "listItem": "bullet",
+        "level": 1,
+        "children": [{ "type": "span", "text": "Sykepenger", "marks": [] }]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "listItem": "bullet",
+        "level": 1,
+        "children": [
+            {
+                "type": "span",
+                "text": "Foreldre- og svangerskapspenger",
+                "marks": []
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "listItem": "bullet",
+        "level": 1,
+        "children": [
+            { "type": "span", "text": "Arbeidsavklaringspenger", "marks": [] }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "listItem": "bullet",
+        "level": 1,
+        "children": [{ "type": "span", "text": "Dagpenger", "marks": [] }]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "listItem": "bullet",
+        "level": 1,
+        "children": [
+            {
+                "type": "span",
+                "text": "Omsorgs-, pleie- eller opplæringspenger ved sykt barn",
+                "marks": []
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "element",
+        "children": [
+            {
+                "type": "span",
+                "text": "Spesielt om dagpenger og AAP",
+                "marks": []
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Foreldrepengene dine blir beregnet til det samme som du får i dagpenger. Hvis du er gravid kan du istedenfor få foreldrepengene dine beregnet etter et snitt av inntekten din i de seks beste av de ti siste månedene, hvis det gir deg en høyere utbetaling. NAV vil beregne hvilket alternativ som er best for deg.",
+                "marks": []
+            }
+        ],
+        "markDefs": []
+    }
+]

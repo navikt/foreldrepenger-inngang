@@ -1,6 +1,7 @@
 @import '../../styles/index.less';
 
 .kalkulator {
+
     &__headerPanel {
         display: flex;
         flex-direction: row;
@@ -17,7 +18,7 @@
     }
 
     .strukturertTekst {
-        align-self: center;
+        align-self: flex-start;
     }
 
     &__ikkeStøttet {
@@ -25,7 +26,8 @@
     }
 
     .typo-undertittel, .typo-ingress {
-        text-align: center;
+        text-align: left;
+        align-self: flex-start;
     }
 
     .beregning__headerIcon {
@@ -35,7 +37,7 @@
     &__flexDownwards {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
         width: 100%;
 
         .typo-undertittel {
@@ -61,7 +63,6 @@
     }
 
     .skjema__legend {
-        text-align: center;
         font-weight: normal;
     }
 
