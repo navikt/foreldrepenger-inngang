@@ -69,7 +69,8 @@ class Lønnskalkulator extends React.Component<Props, State> {
         const withoutUndefinedValues: number[] = newFieldValues.filter(isDefined) as number[];
 
         if (withoutUndefinedValues.length > 0) {
-            monthlyAverage = computeAverage(withoutUndefinedValues as number[]);
+            // 0-verdier skal ikke medregnes i månedslønn
+            monthlyAverage = computeAverage(withoutUndefinedValues.filter((value) => value !== 0));
 
             if (this.props.situasjoner.includes('selvstendig_næringsdrivende')) {
                 monthlyAverage = monthlyAverage / 12;
