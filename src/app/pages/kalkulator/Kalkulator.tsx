@@ -125,9 +125,9 @@ class Planlegger extends React.Component<IntlProps, State> {
             : 'kalkulator.skriv_inn_lønn_ingress';
 
         const valgTittel = this.getTitleForChoices();
-        const kombinasjonIkkeStøttet =
-            this.state.valgteSituasjoner.includes('selvstendig_næringsdrivende') &&
-            this.state.valgteSituasjoner.length > 1;
+        const kombinasjonIkkeStøttet = this.state.valgteSituasjoner.includes(
+            'selvstendig_næringsdrivende'
+        );
 
         return (
             <div className={classnames(cls.className, infosiderCls.className)}>
