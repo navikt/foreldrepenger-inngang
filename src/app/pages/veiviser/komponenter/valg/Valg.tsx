@@ -8,7 +8,7 @@ import { RadioPanel } from 'nav-frontend-skjema';
 import Tabs from 'nav-frontend-tabs';
 import { FlexibleSvg } from '../../../../utils/CustomSVG';
 import './valg.less';
-
+import { CSSTransition } from 'react-transition-group';
 
 const cls = BEMHelper('valg');
 
@@ -73,12 +73,14 @@ type Props = Lang & TabContent;
 
 class Valg extends React.Component<Props, State> {
     toggled = null;
+    tmp = false;
 
     constructor(props: Props) {
         super(props);
         this.state = {
             parentToggled: [true, true, true], // hvilke kort som er togglet
-            checkbox: [ // state for hvilke checkbox som er valg
+            checkbox: [
+                // state for hvilke checkbox som er valg
                 [false, false],
                 [false, false],
                 [false, false],
@@ -86,15 +88,17 @@ class Valg extends React.Component<Props, State> {
                 [false, false]
             ],
             valg: [], // valg : listen som blir mappet i render
-            items: [], //radiopanel list som blir mappet inne i valg list
+            items: [], // radiopanel list som blir mappet inne i valg list
             teller: 0, // teller for rad i checkbox
             antallRader: 0, // teller for antall rader i valg
             numberofCheckBoxz: 2, // antall checkbox som skal genereres pr rad,
+
         };
     }
 
     updateToggle(e: any, nr: any): void {
-        if (this.toggled !== nr) { //hvis annen tab valgt
+        if (this.toggled !== nr) {
+            // hvis annen tab valgt
             this.toggled = nr;
             let valgBytte = [...this.state.valg];
             valgBytte = [];
@@ -108,7 +112,8 @@ class Valg extends React.Component<Props, State> {
                     noneChecked[j][k] = false;
                 }
             }
-            this.setState(  //oppdaterer state /m nye verdier
+            this.setState(
+                // oppdaterer state /m nye verdier
                 {
                     parentToggled: tmpTabs,
                     teller: 0,
@@ -127,12 +132,13 @@ class Valg extends React.Component<Props, State> {
         }
     }
 
-    initItem(valgListe: object[], input: number, newItem: object) {
+    initItem(valgListe: object[], input: number, newItem: object, radNummer: number) {
         let list;
         if (!this.state.parentToggled[1]) {
             list = valgListe;
             list.push({
                 nr: input,
+                rad: radNummer,
                 sprmal: getTranslation(sprmalMor[input], this.props.lang),
                 svar1: getTranslation(svarMor[input][0], this.props.lang),
                 svar2: getTranslation(svarMor[input][1], this.props.lang),
@@ -142,6 +148,7 @@ class Valg extends React.Component<Props, State> {
             list = valgListe;
             list.push({
                 nr: input,
+                rad: radNummer,
                 sprmal: getTranslation(sprmalFarMedmor[input], this.props.lang),
                 svar1: getTranslation(svarFarMedmor[input][0], this.props.lang),
                 svar2: getTranslation(svarFarMedmor[input][1], this.props.lang),
@@ -166,7 +173,7 @@ class Valg extends React.Component<Props, State> {
                 onChange: () => this.checkRow(checkBoxNivaa, i, radNummer)
             };
         }
-        this.initItem(nyttValg, this.state.teller, newItem);
+        this.initItem(nyttValg, this.state.teller, newItem, radNummer);
     }
 
     checkRow(checkBoxNiva: number, svar: number, radNiva: number) {
@@ -179,17 +186,21 @@ class Valg extends React.Component<Props, State> {
                     checked[i][j] = false;
                 }
             }
+            this.setState({ valg: tmpItems, checkbox: checked }, () =>
+                this.appendRow(checkBoxNiva, svar, radNiva)
+            );
+        } else {
+            this.appendRow(checkBoxNiva, svar, radNiva);
         }
-        this.setState({ valg: tmpItems, checkbox: checked }, () =>
-            this.appendRow(checkBoxNiva, svar, radNiva)
-        );
     }
 
     appendRow(checkBoxNiva: number, svar: number, radNiva: number) {
         // radNivå er rad-nr && svar er ja (0) / nei (1)
         const checked = [...this.state.checkbox];
-        if (checkBoxNiva === 0) {   // nivå 1
+        if (checkBoxNiva === 0) {
+            // nivå 1
             if (svar === 0) {
+                // svar : ja
                 checked[checkBoxNiva][svar] = true;
                 radNiva = 1;
                 checkBoxNiva = 3;
@@ -204,6 +215,7 @@ class Valg extends React.Component<Props, State> {
                         )
                 );
             } else if (svar === 1) {
+                // svar : nei
                 checked[checkBoxNiva][svar] = true;
                 radNiva = 1;
                 checkBoxNiva = 1;
@@ -218,12 +230,10 @@ class Valg extends React.Component<Props, State> {
                         )
                 );
             }
-
-            //// NIVA 2
         } else if (checkBoxNiva === 1) {
-            console.log('checkBoxNiva :', checkBoxNiva, 'rad niva : ', radNiva);
+            // nivå 2
             if (svar === 0) {
-                // ****************************' SVAR : JA ***************************** //
+                // svar : ja
                 checked[checkBoxNiva][svar] = true;
                 radNiva = 2;
                 checkBoxNiva = 3;
@@ -238,7 +248,7 @@ class Valg extends React.Component<Props, State> {
                         )
                 );
             } else if (svar === 1) {
-                // ****************************' SVAR : NEI ***************************** //
+                // svar : nei
                 checked[checkBoxNiva][svar] = true;
                 radNiva = 2;
                 checkBoxNiva = 2;
@@ -256,9 +266,9 @@ class Valg extends React.Component<Props, State> {
 
             //// NIVA 3
         } else if (checkBoxNiva === 2) {
-            console.log('checkBoxNiva :', checkBoxNiva, 'rad niva : ', radNiva);
+            // nivå 3
             if (svar === 0) {
-                // ****************************' SVAR : JA ***************************** //
+                // svar : ja
                 checked[checkBoxNiva][svar] = true;
                 radNiva = 3;
                 checkBoxNiva = 3;
@@ -273,20 +283,17 @@ class Valg extends React.Component<Props, State> {
                         )
                 );
             } else if (svar === 1) {
-                // ****************************' SVAR : NEI ***************************** //
+                // svar : nei
                 // Hurra du burde søke ES ( set inn func for dette resultat )
                 checked[checkBoxNiva][svar] = true;
                 radNiva = 3;
                 checkBoxNiva = 3;
                 this.setState({ antallRader: radNiva, teller: checkBoxNiva, checkbox: checked });
             }
-
-            //// NIVA 4
         } else if (checkBoxNiva === 3) {
-            console.log('checkBoxNiva :', checkBoxNiva, 'rad niva : ', radNiva);
+            // nivå 4
             if (svar === 0) {
-                console.log('svar = ', svar);
-                // ****************************' SVAR : JA ***************************** //
+                // svar : ja
                 checked[checkBoxNiva][svar] = true;
                 checked[checkBoxNiva][1] = false;
                 checked[0][0] ? (radNiva = 2) : (radNiva = 4);
@@ -302,7 +309,7 @@ class Valg extends React.Component<Props, State> {
                         )
                 );
             } else if (svar === 1) {
-                // ****************************' SVAR : NEI ***************************** //
+                // svar : nei
                 // hurra du burde søke ES ( set inn func for dette resultat )
                 checked[checkBoxNiva][svar] = true;
                 checked[checkBoxNiva][0] = false;
@@ -313,22 +320,20 @@ class Valg extends React.Component<Props, State> {
                     () => void 0
                 );
             }
-
-            //// NIVA 5
         } else if (checkBoxNiva === 4) {
-            console.log('checkBoxNiva :', checkBoxNiva, 'rad niva : ', radNiva);
+            // nivå 5
             if (svar === 0) {
-                // ****************************' SVAR : JA ***************************** //
+                // svar : ja
                 // Hurra du burde søke om FP, og far har rett (func for dette )
                 checked[checkBoxNiva][svar] = true;
                 checked[0][0] ? (radNiva = 3) : (radNiva = 5);
                 checkBoxNiva = 5;
                 this.setState(
                     { antallRader: radNiva, teller: checkBoxNiva, checkbox: checked },
-                    () => void 0 //sett inn nytt content på callback
+                    () => void 0 // sett inn nytt content på callback
                 );
             } else if (svar === 1) {
-                // ****************************' SVAR : NEI ***************************** //
+                // svar : nei
                 // Hurra du burde søke om FP, Bare du skal ha FP
                 checked[checkBoxNiva][svar] = true;
                 checked[0][0] ? (radNiva = 3) : (radNiva = 5);
@@ -344,9 +349,7 @@ class Valg extends React.Component<Props, State> {
     render = () => (
         <div className={cls.className}>
             <div className={cls.element('ingress')}>
-                <StrukturertTekst
-                    tekst={getContent('veiviser/header/header', this.props.lang)}
-                />
+                <StrukturertTekst tekst={getContent('veiviser/header/header', this.props.lang)} />
             </div>
             <div className={cls.element('forelder')}>
                 <div className={cls.element('ingress-knapp')}>
@@ -362,15 +365,17 @@ class Valg extends React.Component<Props, State> {
                             label: this.updateToggle[index],
                             children: (
                                 <div className={cls.element('valg-fane')}>
-                                    <div className={cls.element('valg-fane-bakgrunn')}/>
+                                    <div className={cls.element('valg-fane-bakgrunn')} />
                                     <div className={cls.element('valg-fane-bilde')}>
-                                    <FlexibleSvg
-                                        iconRef={
-                                            require(`../../../../assets/foreldre/${fane.icon}.svg`).default
-                                        }
-                                        height={75}
-                                        width={50}
-                                    />
+                                        <FlexibleSvg
+                                            iconRef={
+                                                require(`../../../../assets/foreldre/${
+                                                    fane.icon
+                                                }.svg`).default
+                                            }
+                                            height={75}
+                                            width={50}
+                                        />
                                     </div>
                                     {fane.label}
                                 </div>
@@ -385,28 +390,38 @@ class Valg extends React.Component<Props, State> {
             </div>
             <div className={cls.element('kort')}>
                 {this.state.valg.map((valg: any) => {
-                    // console.log(valg);
+                    console.log(this.state.valg.length-1, valg.nr, "this.state.antallR", this.state.antallRader, valg.rad);
+                    this.state.valg.length - 1 === valg.rad ? (this.tmp = true) : (this.tmp = false);
+
                     return (
                         <div
                             key={valg.nr + Date.now()}
                             className={cls.element('kort-rad ' + valg.nr)}>
                             <TypografiBase type="element">{valg.sprmal}</TypografiBase>
-                            <div className={cls.element('valg-checkboxes')}>
-                                {valg.obj.map((item: any, index: number) => (
-                                    <RadioPanel
-                                        key={item.value}
-                                        checked={this.state.checkbox[item.valgIndex][index]}
-                                        name={item.name}
-                                        onChange={item.onChange}
-                                        label={item.label} // item.label
-                                        value={item.value}
-                                    />
-                                ))}
+                            <div className={cls.element('valg-checkboxes ')}>
+                                {valg.obj.map((item: any, index: number) => {
+                                    return (
+                                        <CSSTransition
+                                            key={item.value + Date.now()}
+                                            appear={true}
+                                            classNames="fade"
+                                            in={this.tmp}
+                                            timeout={10000}>
+                                            <RadioPanel
+                                                key={item.value}
+                                                checked={this.state.checkbox[item.valgIndex][index]}
+                                                name={item.name}
+                                                onChange={item.onChange}
+                                                label={item.label} // item.label
+                                                value={item.value}
+                                            />
+                                        </CSSTransition>
+                                    );
+                                })}
                             </div>
                         </div>
                     );
                 })}
-                ;
             </div>
         </div>
     );
