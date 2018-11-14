@@ -5,7 +5,7 @@
         "children": [
             {
                 "type": "span",
-                "text": "Dette er en foreløpig beregning på hva du kan få før skatt. Når du har sendt søknaden, vil du få vite hva du kan få utbetalt.",
+                "text": "Dette er en foreløpig beregning på hva du kan få basert på dine opplysninger. Når du har sendt søknaden, vil du få vite hva du kan få utbetalt.",
                 "marks": []
             }
         ],

@@ -5,7 +5,7 @@
         "children": [
             {
                 "type": "span",
-                "text": "Du kan dessverre ikke bruke denne tjenesten hvis du er selvstendig næringsdrivende.",
+                "text": "Du kan inntil videre ikke bruke denne tjenesten.",
                 "marks": []
             }
         ],
@@ -18,13 +18,15 @@
             { "type": "span", "text": "Les mer om ", "marks": [] },
             {
                 "type": "span",
-                "text": "nye beregningsregler fra 1. januar 2019",
-                "marks": ["url_nye_beregningsregler_fra_1._januar_2019"]
+                "text": "beregningsregler for selvstendig næringsdrivende fra 2019",
+                "marks": [
+                    "url_om_beregningsregler_for_selvstendig_næringsdrivende_fra_2019"
+                ]
             }
         ],
         "markDefs": [
             {
-                "key": "url_nye_beregningsregler_fra_1._januar_2019",
+                "key": "url_om_beregningsregler_for_selvstendig_næringsdrivende_fra_2019",
                 "type": "link",
                 "href": "/om-foreldrepenger/nye-beregningsregler"
             }
