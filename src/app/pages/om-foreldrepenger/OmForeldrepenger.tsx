@@ -12,13 +12,11 @@ import Adopsjon from './adopsjon/Adopsjon';
 import Sidebanner from '../../components/sidebanner/Sidebanner';
 import Beregning from './beregning/Beregning';
 import HjemmeSamtidig from './hjemme-samtidig/HjemmeSamtidig';
-import Hurtiglenker from './hurtiglenker/Hurtiglenker';
-import MediaQuery from 'react-responsive';
 import HeaderInformasjon from '../../components/header-informasjon/HeaderInformasjon';
 import classnames from 'classnames';
 import './omForeldrepenger.less';
 import Hjelp from '../../components/hjelpe-seksjon/HjelpeSeksjon';
-import TableOfContents from './table-of-contents/TableOfContents';
+import Innholdsfortegnelse from './innholdsfortegnelse/Innholdsfortegnelse';
 
 const cls = BEMHelper('infosider');
 
@@ -26,7 +24,17 @@ interface Props {
     location: any;
 }
 
-const sections = [
+export type ForeldrepengerSection =
+    | 'hvem-kan-fa-foreldrepenger'
+    | 'hvor-lenge-kan-jeg-fa-foreldrepenger'
+    | 'hva-kan-jeg-fa'
+    | 'hvis-du-skal-pa-ferie'
+    | 'hvis-du-vil-jobbe'
+    | 'hvis-en-av-dere-blir-syke'
+    | 'hjemme-samtidig'
+    | 'adoptere';
+
+const sections: ForeldrepengerSection[] = [
     'hvem-kan-fa-foreldrepenger',
     'hvor-lenge-kan-jeg-fa-foreldrepenger',
     'hva-kan-jeg-fa',
@@ -41,9 +49,13 @@ const OmForeldrepengerHeader = () => {
     return (
         <HeaderInformasjon
             title={'Om foreldrepenger - wwww.nav.no'}
-            siteDescription={'Foreldrepenger skal sikre deg inntekt når du ha foreldrepermisjon. Hvis du ikke hatt inntekt, kan du få en engangssum isteden.'}
+            siteDescription={
+                'Foreldrepenger skal sikre deg inntekt når du ha foreldrepermisjon. Hvis du ikke hatt inntekt, kan du få en engangssum isteden.'
+            }
             propTitle={'Om foreldrepenger'}
-            propDescription={'Foreldrepenger skal sikre deg inntekt når du ha foreldrepermisjon. Hvis du ikke hatt inntekt, kan du få en engangssum isteden.'}
+            propDescription={
+                'Foreldrepenger skal sikre deg inntekt når du ha foreldrepermisjon. Hvis du ikke hatt inntekt, kan du få en engangssum isteden.'
+            }
             siteUrl={'https://familie.nav.no/om-foreldrepenger'}
         />
     );
@@ -55,14 +67,11 @@ const OmForeldrepenger: React.StatelessComponent<Props & IntlProps> = ({ locatio
             <OmForeldrepengerHeader />
             <Sidebanner text={getTranslation('om_foreldrepenger.tittel', lang)} />
             <main className={cls.element('body')}>
-                <div className={cls.element('sidebar')}>
-                    <TableOfContents sections={sections} />
-                </div>
                 <article className={cls.element('content')}>
                     <Breadcrumbs path={location.pathname} />
-                    <MediaQuery minWidth={800}>
-                        <Hurtiglenker links={sections} />
-                    </MediaQuery>
+                    <div className={cls.element('sidebar')}>
+                        <Innholdsfortegnelse sections={sections} />
+                    </div>
                     <ForÅFåForeldrepenger id={sections[0]} />
                     <HvorLenge id={sections[1]} />
                     <NyeRegler />
@@ -71,7 +80,7 @@ const OmForeldrepenger: React.StatelessComponent<Props & IntlProps> = ({ locatio
                     <JegVilJobbe id={sections[4]} />
                     <Sykdom id={sections[5]} />
                     <HjemmeSamtidig id={sections[6]} />
-                    <Adopsjon id={sections[8]} />
+                    <Adopsjon id={sections[7]} />
                     <Hjelp />
                 </article>
             </main>

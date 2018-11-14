@@ -144,7 +144,6 @@
     "hurtiglenke.hvis_du_vil_jobbe": "Hvis du vil jobbe",
     "hurtiglenke.hvis_en_av_dere_blir_syke": "Hvis en av dere blir syke",
     "hurtiglenke.hjemme_samtidig": "Hjemme samtidig",
-    "hurtiglenke.andre_inntekter_som_gir_rett": "Andre inntekter som\ngir rett",
     "hurtiglenke.adoptere": "Adoptere",
 
 
@@ -214,11 +213,6 @@
     "om_foreldrepenger.hjemme_samtidig.delePaHjemme":"Dele på å være hjemme",
     "om_foreldrepenger.hjemme_samtidig.farTvillinger":"Når dere får tvillinger eller flere barn",
     "om_foreldrepenger.hjemme_samtidig.permisjon":"Permisjon ved fødselen",
-
-    "om_foreldrepenger.hatt_inntekt.tittel": "Andre inntekter som gir rett",
-    "om_foreldrepenger.hatt_inntekt.andre_inntekter": "Andre inntekter som kan gi rett til foreldrepenger",
-    "om_foreldrepenger.hatt_inntekt.hvor_mye": "Hvor mye må du ha tjent",
-    "om_foreldrepenger.hatt_inntekt.dager_uten_arbeid": "Dager uten arbeid som teller med",
 
     "om_foreldrepenger.adopsjon.tittel": "Adoptere",
     "om_foreldrepenger.adopsjon.når_starter": "Når starter foreldrepengeperioden?",

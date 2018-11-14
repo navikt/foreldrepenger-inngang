@@ -1,0 +1,35 @@
+@import '../../../styles/index.less';
+
+.innholdsfortegnelse {
+    position: absolute;
+    width: 200px;
+    padding-top: 4rem;
+
+    &__lenke {
+        margin-bottom: 1rem;
+        white-space: pre-wrap;
+
+        &:nth-child(1) {
+            margin-top: 3rem;
+        }
+    }
+
+    &__søkNå {
+        width: 100%;
+        margin-top: 0.5rem;
+        height: 40px;
+    }
+
+    &__currentSection {
+        color: black;
+        font-weight: bold;
+    }
+
+    &__icon {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        top: -50px;
+        left: 50px;
+    }
+}
