@@ -115,12 +115,10 @@
         padding: 1rem;
         display: flex;
         flex-direction: row;
-        width: 100%;
         justify-content: center;
     }
 
     .radioPanel {
-        width: 100%;
         margin-left: 0.5rem;
         margin-right: 0.5rem;
     }
@@ -128,15 +126,15 @@
 
 }
 
-.move-enter {
+.move-appear {
     opacity: 0.01;
     transform: translate(-40px, 0);
 }
 
-.move-enter-active {
+.move-appear.move-appear-active{
     opacity: 1;
     transform: translate(0, 0);
-    transition: all 1500ms ease-in;
+    transition: all 500ms ease-in;
 }
 
 .move-exit {
@@ -168,6 +166,17 @@
     opacity: 0.01;
     transform: scale(0.9) translateY(50%);
     transition: all 300ms ease-out;
+}
+
+.message-appear {
+    opacity: 0.01;
+    transform: scale(0.9) translateY(50%);
+}
+
+.message-appear.message-appear-active {
+    opacity: 1;
+    transform: scale(1) translateY(0%);
+    transition: all 450ms ease-out;
 }
 
 .fade-appear {
