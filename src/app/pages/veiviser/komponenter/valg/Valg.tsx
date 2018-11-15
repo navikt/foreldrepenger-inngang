@@ -9,8 +9,20 @@ import Tabs from 'nav-frontend-tabs';
 import { FlexibleSvg } from '../../../../utils/CustomSVG';
 import './valg.less';
 import { CSSTransition } from 'react-transition-group';
+import KnappBase from 'nav-frontend-knapper';
+import NavFrontendChevron from 'nav-frontend-chevron';
 
 const cls = BEMHelper('valg');
+
+const knapptxt = [
+    'veiviser.resultat.knapp.foreldrepenger',
+    'veiviser.resultat.knapp.engangsstønad'
+];
+
+const dialogTekst = [
+    'veiviser/resultat/resultat-foreldrepenger',
+    'veiviser/resultat/resultat-engangsstonad'
+];
 
 const sprmalMor = [
     'veiviser.valg.spørsmål.mor.en',
@@ -67,6 +79,7 @@ interface State {
     teller: number;
     antallRader: number;
     numberofCheckBoxz: number;
+    result: object[];
 }
 
 type Props = Lang & TabContent;
@@ -92,7 +105,7 @@ class Valg extends React.Component<Props, State> {
             teller: 0, // teller for rad i checkbox
             antallRader: 0, // teller for antall rader i valg
             numberofCheckBoxz: 2, // antall checkbox som skal genereres pr rad,
-
+            result: []
         };
     }
 
@@ -119,7 +132,8 @@ class Valg extends React.Component<Props, State> {
                     teller: 0,
                     valg: valgBytte,
                     checkbox: noneChecked,
-                    antallRader: 0
+                    antallRader: 0,
+                    result: []
                 },
                 () =>
                     this.insertBoxes(
@@ -134,6 +148,7 @@ class Valg extends React.Component<Props, State> {
 
     initItem(valgListe: object[], input: number, newItem: object, radNummer: number) {
         let list;
+
         if (!this.state.parentToggled[1]) {
             list = valgListe;
             list.push({
@@ -176,6 +191,13 @@ class Valg extends React.Component<Props, State> {
         this.initItem(nyttValg, this.state.teller, newItem, radNummer);
     }
 
+    insertResultat(knapptekst: string, dialogtxt: string) {
+        const res = [];
+        res.push(<DialogBoks knapp={knapptekst} txt={dialogtxt} lang={this.props.lang} />);
+        res.push(<NavigasjonsBoks lang={this.props.lang} />);
+        this.setState({ result: res });
+    }
+
     checkRow(checkBoxNiva: number, svar: number, radNiva: number) {
         const tmpItems = [...this.state.valg];
         const checked = [...this.state.checkbox];
@@ -187,8 +209,16 @@ class Valg extends React.Component<Props, State> {
                 }
             }
             this.setState({ valg: tmpItems, checkbox: checked }, () =>
-                this.appendRow(checkBoxNiva, svar, radNiva)
+                this.checkResult(checkBoxNiva, svar, radNiva)
             );
+        } else {
+            this.checkResult(checkBoxNiva, svar, radNiva);
+        }
+    }
+
+    checkResult(checkBoxNiva: number, svar: number, radNiva: number) {
+        if (this.state.result.length !== 0) {
+            this.setState({ result: [] }, () => this.appendRow(checkBoxNiva, svar, radNiva));
         } else {
             this.appendRow(checkBoxNiva, svar, radNiva);
         }
@@ -263,9 +293,8 @@ class Valg extends React.Component<Props, State> {
                         )
                 );
             }
-
-            //// NIVA 3
         } else if (checkBoxNiva === 2) {
+            // nivå 3
             // nivå 3
             if (svar === 0) {
                 // svar : ja
@@ -284,11 +313,13 @@ class Valg extends React.Component<Props, State> {
                 );
             } else if (svar === 1) {
                 // svar : nei
-                // Hurra du burde søke ES ( set inn func for dette resultat )
                 checked[checkBoxNiva][svar] = true;
                 radNiva = 3;
                 checkBoxNiva = 3;
-                this.setState({ antallRader: radNiva, teller: checkBoxNiva, checkbox: checked });
+                this.setState(
+                    { antallRader: radNiva, teller: checkBoxNiva, checkbox: checked },
+                    () => this.insertResultat(knapptxt[1], dialogTekst[1]) // søk engangssstønad
+                );
             }
         } else if (checkBoxNiva === 3) {
             // nivå 4
@@ -317,7 +348,7 @@ class Valg extends React.Component<Props, State> {
                 checkBoxNiva = 3;
                 this.setState(
                     { antallRader: radNiva, teller: checkBoxNiva, checkbox: checked },
-                    () => void 0
+                    () => this.insertResultat(knapptxt[1], dialogTekst[1]) // søk engangsstønad
                 );
             }
         } else if (checkBoxNiva === 4) {
@@ -330,7 +361,7 @@ class Valg extends React.Component<Props, State> {
                 checkBoxNiva = 5;
                 this.setState(
                     { antallRader: radNiva, teller: checkBoxNiva, checkbox: checked },
-                    () => void 0 // sett inn nytt content på callback
+                    () => this.insertResultat(knapptxt[0], dialogTekst[0]) // søk foreldrepenger
                 );
             } else if (svar === 1) {
                 // svar : nei
@@ -340,7 +371,7 @@ class Valg extends React.Component<Props, State> {
                 checkBoxNiva = 5;
                 this.setState(
                     { antallRader: radNiva, teller: checkBoxNiva, checkbox: checked },
-                    () => void 0
+                    () => this.insertResultat(knapptxt[1], dialogTekst[1]) // søk engangsstønad
                 );
             }
         }
@@ -390,9 +421,7 @@ class Valg extends React.Component<Props, State> {
             </div>
             <div className={cls.element('kort')}>
                 {this.state.valg.map((valg: any) => {
-                    console.log("this.state.valg.length-1 --> ", this.state.valg.length-1," ", valg.rad,   "<--  valg.rad ", this.state.antallRader);
                     this.state.antallRader === valg.rad ? (this.tmp = true) : (this.tmp = false);
-
                     return (
                         <div
                             key={valg.nr + Date.now()}
@@ -404,7 +433,7 @@ class Valg extends React.Component<Props, State> {
                                         <CSSTransition
                                             key={item.value + Date.now()}
                                             appear={true}
-                                            classNames="message"
+                                            classNames="fade"
                                             in={this.tmp}
                                             timeout={1000}>
                                             <RadioPanel
@@ -423,8 +452,65 @@ class Valg extends React.Component<Props, State> {
                     );
                 })}
             </div>
+            {this.state.result.map((res: any, index: number) => {
+                return (
+                    <CSSTransition
+                        key={index + Date.now()}
+                        appear={true}
+                        classNames="message"
+                        in={true}
+                        timeout={1000}>
+                        {res}
+                    </CSSTransition>
+                );
+            })}
         </div>
     );
 }
-
 export default withIntl(Valg);
+
+const DialogBoks = ({ knapp, txt, lang }: { knapp: string; txt: string; lang: any }) => {
+    return (
+        <div className={cls.element('melding')}>
+            <StrukturertTekst tekst={getContent(txt, lang)} />
+            <KnappBase type="hoved">{getTranslation(knapp, lang)}</KnappBase>
+        </div>
+    );
+};
+
+const NavigasjonsBoks = ({ lang }: { lang: any }) => {
+    return (
+        <div className={cls.element('navigasjonsboks')}>
+            <div className={cls.element('boks')} role="button">
+                <div className={cls.element('boks-bilde')}>
+                    <FlexibleSvg
+                        iconRef={require('../../../../assets/ark/ark-money2.svg').default}
+                        width={60}
+                        height={60}
+                    />
+                </div>
+                <div className={cls.element('boks-txt')}>
+                    <TypografiBase type="normaltekst">
+                        {getTranslation('veiviser.navgigasjonsboks.kalk.label', lang)}
+                    </TypografiBase>
+                </div>
+                <NavFrontendChevron />
+            </div>
+            <div className={cls.element('boks')} role="button">
+                <div className={cls.element('boks-bilde')}>
+                    <FlexibleSvg
+                        iconRef={require('../../../../assets/ark/ark-calendar.svg').default}
+                        width={60}
+                        height={60}
+                    />
+                </div>
+                <div className={cls.element('boks-txt')}>
+                    <TypografiBase type="normaltekst">
+                        {getTranslation('veiviser.navigasjonsboks.planlegg.label', lang)}
+                    </TypografiBase>
+                </div>
+                <NavFrontendChevron />
+            </div>
+        </div>
+    );
+};

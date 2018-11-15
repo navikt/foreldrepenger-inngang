@@ -1,0 +1,22 @@
+[
+  {
+    "type": "avsnitt",
+    "style": "systemtittel",
+    "children": [
+      {
+        "type": "span",
+        "text": "Søk om engangsstønad"
+      }
+    ]
+  },
+  {
+    "type": "avsnitt",
+    "style": "normaltekst",
+    "children": [
+      {
+        "type": "span",
+        "text": "Ut fra informasjonen veiviseren har mottatt, bør du søke om engangsstønad. Det anbefales at før du før en søker om stønaden å sjekke ut kalkulator og planleggeren. For å tilegne seg en bedre oversikt."
+      }
+    ]
+  }
+]
