@@ -390,8 +390,8 @@ class Valg extends React.Component<Props, State> {
             </div>
             <div className={cls.element('kort')}>
                 {this.state.valg.map((valg: any) => {
-                    console.log(this.state.valg.length-1, valg.nr, "this.state.antallR", this.state.antallRader, valg.rad);
-                    this.state.valg.length - 1 === valg.rad ? (this.tmp = true) : (this.tmp = false);
+                    console.log("this.state.valg.length-1 --> ", this.state.valg.length-1," ", valg.rad,   "<--  valg.rad ", this.state.antallRader);
+                    this.state.antallRader === valg.rad ? (this.tmp = true) : (this.tmp = false);
 
                     return (
                         <div
@@ -404,9 +404,9 @@ class Valg extends React.Component<Props, State> {
                                         <CSSTransition
                                             key={item.value + Date.now()}
                                             appear={true}
-                                            classNames="fade"
+                                            classNames="message"
                                             in={this.tmp}
-                                            timeout={10000}>
+                                            timeout={1000}>
                                             <RadioPanel
                                                 key={item.value}
                                                 checked={this.state.checkbox[item.valgIndex][index]}
