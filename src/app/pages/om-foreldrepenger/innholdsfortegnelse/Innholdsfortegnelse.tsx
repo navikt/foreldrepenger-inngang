@@ -3,7 +3,7 @@ import BEMHelper from 'app/utils/bem';
 import { Panel } from 'nav-frontend-paneler';
 import { Normaltekst } from 'nav-frontend-typografi';
 import { WithLink } from 'app/utils/withLink';
-import { getTranslation } from 'app/intl/intl';
+import { getTranslation, withIntl, IntlProps } from 'app/intl/intl';
 import { Hovedknapp } from 'nav-frontend-knapper';
 import { ForeldrepengerSection } from '../OmForeldrepenger';
 import './innholdsfortegnelse.less';
@@ -23,9 +23,11 @@ const getFirstNumberAfter = (n: number, numbers: number[]) => {
     return numbers.length - 1;
 };
 
-interface Props {
+interface OwnProps {
     sections: ForeldrepengerSection[];
 }
+
+type Props = OwnProps & IntlProps;
 
 interface State {
     currentSection: number;
@@ -84,16 +86,18 @@ class Innholdsfortegnelse extends React.Component<Props, State> {
                                     ? cls.element('currentSection')
                                     : ''
                             }>
-                            {getTranslation(`hurtiglenke.${stringToTranslate}`)}
+                            {getTranslation(`hurtiglenke.${stringToTranslate}`, this.props.lang)}
                         </WithLink>
                     </Normaltekst>
                 );
             })}
             <WithLink url="/hva-soker-du/foreldrepenger" noStyling={true}>
-                <Hovedknapp className={cls.element('søkNå')}>Søk nå</Hovedknapp>
+                <Hovedknapp className={cls.element('søkNå')}>
+                    {getTranslation('innholdsfortegnelse.søk_nå', this.props.lang)}
+                </Hovedknapp>
             </WithLink>
         </Panel>
     );
 }
 
-export default Innholdsfortegnelse;
+export default withIntl(Innholdsfortegnelse);
