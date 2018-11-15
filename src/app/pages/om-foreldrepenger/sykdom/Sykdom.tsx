@@ -62,14 +62,14 @@ const EnAvForeldreneErSyke = withIntl(EnAvForeldreneErSykeWithoutIntl);
 
 const tabs = [
     {
-        label: 'om_foreldrepenger.sykdom.innlagt',
-        component: <BarnetErInnlagt />,
-        icon: <CustomSVG iconRef={barn} size={32} />
-    },
-    {
         label: 'om_foreldrepenger.sykdom.foreldre_syke',
         component: <EnAvForeldreneErSyke />,
         icon: <Foreldrepar firstParent="far1" secondParent="mor1" />
+    },
+    {
+        label: 'om_foreldrepenger.sykdom.innlagt',
+        component: <BarnetErInnlagt />,
+        icon: <CustomSVG iconRef={barn} size={32} />
     }
 ];
 
