@@ -60,8 +60,8 @@ class Innholdsfortegnelse extends React.Component<Props, State> {
 
     onScroll = () => {
         let currentSection = 0;
-        if (this.state.sectionOffsets && window.scrollY > this.state.sectionOffsets[0]) {
-            currentSection = getFirstNumberAfter(window.scrollY, this.state.sectionOffsets);
+        if (this.state.sectionOffsets && window.pageYOffset > this.state.sectionOffsets[0]) {
+            currentSection = getFirstNumberAfter(window.pageYOffset, this.state.sectionOffsets);
         }
 
         this.setState({
