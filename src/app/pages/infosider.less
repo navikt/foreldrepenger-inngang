@@ -1,11 +1,18 @@
 @import '../styles/index.less';
 
+@sidebar-breakpoint: 1300px;
+@sidebar-vertical-breakpoint: 684px;
+
 .infosider {
     &__body {
         display: flex;
         flex-direction: column;
         align-items: center;
         margin: 0;
+    }
+
+    &__sidebar {
+        display: none;
     }
 
     &__content {
@@ -26,6 +33,34 @@
     @media (min-width: @mobile-breakpoint) {
         &__body {
             margin: 0 1rem 1rem;
+        }
+    }
+
+    @media (min-width: @sidebar-breakpoint) {
+        &--withSidebar .infosider {
+            &__body {
+                position: relative;
+            }
+
+            &__content {
+                flex: 1;
+            }
+
+            &__sidebar {
+                display: block;
+                position: fixed;
+                right: calc(50% + 37.5rem + 1.5rem);
+                top: 142px;
+                background-color: red;
+            }
+        }
+    }
+
+    @media (min-height: @sidebar-vertical-breakpoint) {
+        &--withSidebar .infosider {
+            &__sidebar {
+                top: calc(50% - 12.5rem);
+            }
         }
     }
 }

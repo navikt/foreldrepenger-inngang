@@ -41,7 +41,7 @@ export class WithLink extends React.Component<Props> {
         window.history.replaceState(null, '', id);
         const target = document.querySelector(id);
         if (target) {
-            target.scrollIntoView({ behavior: 'smooth' });
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
     };
 

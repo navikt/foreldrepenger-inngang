@@ -5,7 +5,6 @@ import MorOgMor from './situasjoner/MorOgMor';
 import BareFarHarRett from './situasjoner/BareFarHarRett';
 import BareMorHarRett from './situasjoner/BareMorHarRett';
 import Aleneomsorg from './situasjoner/Aleneomsorg';
-import MenHvaHvis from './menHvaHvis/MenHvaHvis';
 import Foreldrepar from '../../../components/foreldrepar/Foreldrepar';
 import StrukturertTekst from '../../../components/strukturert-tekst/StrukturertTekst';
 import Innholdsfaner from '../../../components/innholdsfaner/Innholdsfaner';
@@ -121,7 +120,6 @@ class HvorLenge extends React.Component<Props, State> {
                         onSelect={this.onSituasjonSelected}
                     />
                     <Ukekalkulator antallUtbetalingsuker={this.state.antallUtbetalingsuker} />
-                    <MenHvaHvis />
                 </div>
             </PanelMedIllustrasjon>
         );
