@@ -244,9 +244,13 @@
     "veiviser.panelMedIllustrasjon.tittel": "Foreldrepenger eller engangsstønad",
     "veiviser.sidebanner.tittel": "Hva har du rett på?",
     "veiviser.ingress.knapper": "Jeg er",
+    "veiviser.resultat.knapp.foreldrepenger": "Søk om foreldrepenger",
+    "veiviser.resultat.knapp.engangsstønad": "Søk om engangsstønad",
     "veiviser.sidebanner.knappFar.label": "Far",
     "veiviser.sidebanner.knappMor.label": "Mor",
     "veiviser.sidebanner.knappMedmor.label": "Medmor",
+    "veiviser.navgigasjonsboks.kalk.label": "Regn ut hvor mye du kan få ved hjelp av kalkulatoren",
+    "veiviser.navigasjonsboks.planlegg.label": "Planlegg hvor lenge du kan være hjemme med barnet ditt",
 
     "veiviser.valg.spørsmål.mor.en": "Jeg har hatt inntekt?",
     "veiviser.valg.spørsmål.mor.to": "Mottar du utbetaling fra nav?",

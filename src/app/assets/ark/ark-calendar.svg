@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="48px" viewBox="0 -10 48 70" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.4 (67378) - http://www.bohemiancoding.com/sketch -->
+    <title>Illustrations/item/calendar</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Illustrations/item/calendar" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M48,39 C48,42.3137085 45.3137085,45 42,45 L6,45 C2.6862915,45 4.05812251e-16,42.3137085 0,39 L0,10 L48,10 L48,39 Z" id="Bottom" fill="#FFFFFF"></path>
+        <path d="M6,3 L42,3 C45.3137085,3 48,5.6862915 48,9 L48,13 L0,13 L0,9 C-4.05812251e-16,5.6862915 2.6862915,3 6,3 Z M35.5,10 C36.3284271,10 37,9.32842712 37,8.5 C37,7.67157288 36.3284271,7 35.5,7 C34.6715729,7 34,7.67157288 34,8.5 C34,9.32842712 34.6715729,10 35.5,10 Z M12.5,10 C13.3284271,10 14,9.32842712 14,8.5 C14,7.67157288 13.3284271,7 12.5,7 C11.6715729,7 11,7.67157288 11,8.5 C11,9.32842712 11.6715729,10 12.5,10 Z" id="Top" fill="#BA3A26"></path>
+        <g id="Group" transform="translate(7.000000, 19.000000)">
+            <rect id="Rectangle" fill="#C6C2BF" x="0" y="0" width="34" height="2" rx="1"></rect>
+            <rect id="Rectangle-Copy" fill="#C6C2BF" x="26.5" y="6" width="7.5" height="2" rx="1"></rect>
+            <rect id="Rectangle-Copy-4" fill="#C6C2BF" x="0" y="6" width="16.5" height="2" rx="1"></rect>
+            <rect id="Rectangle-Copy-2" fill="#C6C2BF" x="0" y="12" width="34" height="2" rx="1"></rect>
+            <rect id="Rectangle-Copy-3" fill="#C6C2BF" x="0" y="18" width="34" height="2" rx="1"></rect>
+            <circle id="Oval" fill="#FFA733" cx="21.5" cy="7" r="3"></circle>
+        </g>
+    </g>
+</svg>

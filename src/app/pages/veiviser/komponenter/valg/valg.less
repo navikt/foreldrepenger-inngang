@@ -27,11 +27,9 @@
         text-align: center;
     }
 
-    .nav-frontend-tabs__tab-inner--aktiv
-        &__valg-fane-bakgrunn {
-            opacity: 0.5;
-        }
-
+    .nav-frontend-tabs__tab-inner--aktiv &__valg-fane-bakgrunn {
+        opacity: 0.5;
+    }
 
     &__valg-fane-bakgrunn {
         background-color: #7eb0e1;
@@ -45,9 +43,8 @@
         border-radius: 5px;
     }
 
-    &__valg-fane-bilde  {
+    &__valg-fane-bilde {
         z-index: 2;
-
     }
 
     .nav-frontend-tabs {
@@ -123,74 +120,101 @@
         margin-right: 0.5rem;
     }
 
+    &__melding {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        padding: 1rem 4rem 2rem 4rem;
+        background-color: #efefef;
+        border-radius: 5px;
+        margin-top: 1rem;
+    }
 
-}
+    .knapp--hoved {
+        width: 60%;
+    }
 
-.move-appear {
-    opacity: 0.01;
-    transform: translate(-40px, 0);
-}
+    &__navigasjonsboks {
+        display: flex;
+        flex-direction: row;
+        padding: 2rem;
+        justify-content: space-around;
+    }
 
-.move-appear.move-appear-active{
-    opacity: 1;
-    transform: translate(0, 0);
-    transition: all 500ms ease-in;
-}
+    &__boks {
+        width: 270px;
+        display: flex;
+        flex-direction: column;
+        padding: 3rem 2rem 3rem 2rem;
+        text-align: center;
+        align-items: center;
+        border: 1px #979797 solid;
+        border-radius: 5px;
 
-.move-exit {
-    opacity: 1;
-    transform: translate(0, 0)
-}
+        &:hover {
+            color: #0067c5;
+            box-shadow: #b7b1a9 0 2px 1px 0;
+            cursor: pointer;
 
-.move-exit-active {
-    opacity: 0.01;
-    transform: translate(40px, 0);
-    transition: all 500ms ease-in;
-}
+            &__boks-txt .typo-normal {
+                text-decoration: underline;
+            }
 
+            .nav-frontend-chevron {
+                left: 6px;
+            }
+        }
+    }
 
-.message-enter {
-    opacity: 0.01;
-    transform: scale(0.9) translateY(50%);
-}
-.message-enter-active {
-    opacity: 1;
-    transform: scale(1) translateY(0%);
-    transition: all 300ms ease-out;
-}
-.message-exit {
-    opacity: 1;
-    transform: scale(1) translateY(0%);
-}
-.message-exit-active {
-    opacity: 0.01;
-    transform: scale(0.9) translateY(50%);
-    transition: all 300ms ease-out;
-}
+    &__boks-bilde {
+        flex: 1;
+        background: #b9acca;
+        border-radius: 50%;
+        height: 60px;
+        min-height: 60px;
+        max-width: 60px;
+        min-width: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
 
-.message-appear {
-    opacity: 0.01;
-    transform: scale(0.9) translateY(50%);
+    &__boks-txt {
+        padding-top: 1rem;
+        padding-bottom: 3rem;
+    }
+
+    .message-appear {
+        opacity: 0.01;
+        transform: scale(0.9) translateY(50%);
+    }
+
+    .message-appear.message-appear-active {
+        opacity: 1;
+        transform: scale(1) translateY(0%);
+        transition: all 1000ms ease-out;
+    }
+
+    .move-appear {
+        opacity: 0.01;
+        transform: translate(-40px, 0);
+    }
+
+    .move-appear.move-appear-active {
+        opacity: 1;
+        transform: translate(0, 0);
+        transition: all 500ms ease-in;
+    }
+
+    .fade-appear {
+        opacity: 0;
+        z-index: 1;
+    }
+
+    .fade-appear.fade-appear-active {
+        opacity: 1;
+        transition: opacity 1000ms linear;
+    }
 }
-
-.message-appear.message-appear-active {
-    opacity: 1;
-    transform: scale(1) translateY(0%);
-    transition: all 450ms ease-out;
-}
-
-.fade-appear {
-    opacity: 0;
-    z-index: 1;
-}
-
-.fade-appear.fade-appear-active {
-    opacity: 1;
-    transition: opacity 1000ms linear;
-}
-
-
-/*
-valg__kort-rad 0 move-appear move-appear-active
-move-enter-done
-*/
