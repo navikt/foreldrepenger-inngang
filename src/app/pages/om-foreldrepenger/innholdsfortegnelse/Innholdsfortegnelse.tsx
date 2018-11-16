@@ -85,7 +85,13 @@ class Innholdsfortegnelse extends React.Component<Props, State> {
     };
 
     shouldAnchorToTop = (currentScrollHeight: number) => {
-        return currentScrollHeight < 251;
+        const firstSectionNode = document.getElementById(this.props.sections[0]);
+        if (firstSectionNode) {
+            console.warn('current:', currentScrollHeight, 'section:', firstSectionNode.offsetTop);
+            return currentScrollHeight < firstSectionNode.offsetTop && currentScrollHeight < 251;
+        } else {
+            return currentScrollHeight < 251;
+        }
     };
 
     render = () => (
