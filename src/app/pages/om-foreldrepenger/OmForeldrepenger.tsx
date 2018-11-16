@@ -16,7 +16,10 @@ import HeaderInformasjon from '../../components/header-informasjon/HeaderInforma
 import classnames from 'classnames';
 import './omForeldrepenger.less';
 import Hjelp from '../../components/hjelpe-seksjon/HjelpeSeksjon';
-import Innholdsfortegnelse from './innholdsfortegnelse/Innholdsfortegnelse';
+
+import Hurtiglenker from './hurtiglenker/Hurtiglenker';
+import MediaQuery from 'react-responsive';
+// import Innholdsfortegnelse from './innholdsfortegnelse/Innholdsfortegnelse';
 
 const cls = BEMHelper('infosider');
 
@@ -63,15 +66,16 @@ const OmForeldrepengerHeader = () => {
 
 const OmForeldrepenger: React.StatelessComponent<Props & IntlProps> = ({ location, lang }) => {
     return (
-        <div className={classnames(cls.className, cls.modifier('withSidebar'))}>
+        <div className={classnames(cls.className)}>
             <OmForeldrepengerHeader />
             <Sidebanner text={getTranslation('om_foreldrepenger.tittel', lang)} />
             <main className={cls.element('body')}>
                 <article className={cls.element('content')}>
                     <Breadcrumbs path={location.pathname} />
-                    <div className={cls.element('sidebar')}>
-                        <Innholdsfortegnelse sections={sections} />
-                    </div>
+                    <MediaQuery minWidth={800}>
+                        <Hurtiglenker links={sections} />
+                    </MediaQuery>
+                    {/*<Innholdsfortegnelse sections={sections} />*/}
                     <ForÅFåForeldrepenger id={sections[0]} />
                     <HvorLenge id={sections[1]} />
                     <NyeRegler />
