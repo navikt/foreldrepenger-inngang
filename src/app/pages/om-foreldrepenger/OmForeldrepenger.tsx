@@ -63,15 +63,13 @@ const OmForeldrepengerHeader = () => {
 
 const OmForeldrepenger: React.StatelessComponent<Props & IntlProps> = ({ location, lang }) => {
     return (
-        <div className={classnames(cls.className, cls.modifier('withSidebar'))}>
+        <div className={classnames(cls.className)}>
             <OmForeldrepengerHeader />
             <Sidebanner text={getTranslation('om_foreldrepenger.tittel', lang)} />
             <main className={cls.element('body')}>
                 <article className={cls.element('content')}>
                     <Breadcrumbs path={location.pathname} />
-                    <div className={cls.element('sidebar')}>
-                        <Innholdsfortegnelse sections={sections} />
-                    </div>
+                    <Innholdsfortegnelse sections={sections} />
                     <ForÅFåForeldrepenger id={sections[0]} />
                     <HvorLenge id={sections[1]} />
                     <NyeRegler />

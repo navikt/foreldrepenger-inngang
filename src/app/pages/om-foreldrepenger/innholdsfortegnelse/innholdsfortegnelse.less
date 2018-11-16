@@ -1,8 +1,11 @@
 @import '../../../styles/index.less';
 
 .innholdsfortegnelse {
-    position: absolute;
+    position: fixed;
+    //display: none;
     width: 200px;
+    top: calc(50% - 14rem);
+    transform: translateX(calc(-100% - 1.5rem));
     padding-top: 4rem;
 
     &__lenke {
@@ -31,5 +34,10 @@
         position: absolute;
         top: -50px;
         left: 50px;
+    }
+
+    &--anchorToTop {
+        position: absolute;
+        top: unset;
     }
 }
