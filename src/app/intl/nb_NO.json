@@ -60,12 +60,20 @@
     "informasjonstavle.hvor_mye_ingress": "Regn ut hvor mye du kan få i foreldrepenger.",
     "informasjonstavle.hvor_lenge": "Hvor lenge?",
     "informasjonstavle.hvor_lenge_ingress": "Planlegg hvor lenge du kan være hjemmet med barnet.",
-    "informasjonstavle.velg_søknad": "Gå til søknadsskjema",
-    "informasjonstavle.velg_søknad_ingress": "Her finner du alle skjemaer for mor og far\n\nForeldrepenger, utsettelse, endring og engangsstønad, alt på samme sted.",
+    "informasjonstavle.velg_søknad": "Velg søknadsskjema",
+    "informasjonstavle.velg_søknad_ingress": "Her finner du alle skjemaer for mor og far.\n\nForeldrepenger, utsettelse, endring og engangsstønad, alt på samme sted.",
     "informasjonstavle.mer_informasjon.tittel": "Utfyllende informasjon",
     "informasjonstavle.mer_informasjon.foreldrepenger": "Foreldrepengene skal erstatte inntekten din når du skal være hjemme med barnet.",
     "informasjonstavle.mer_informasjon.engangsstønad": "Hvis du venter barn og ikke hatt inntekt det siste året, kan du få en engangssum istedenfor foreldrepenger.",
-    "informasjonstavle.mer_informasjon.svangerskapspenger": "Hvis du ikke kan jobbe når du er gravid fordi det kan skade det ufødte barnet, kan du få svangerskapspenger",
+    "informasjonstavle.mer_informasjon.svangerskapspenger": "Hvis du ikke kan jobbe når du er gravid fordi det kan skade det ufødte barnet, kan du få svangerskapspenger.",
+
+    "informasjonstavle.andre_lenker.tittel": "Relatert informasjon",
+    "informasjonstavle.andre_lenker.i_utlandet": "Opphold i utlandet",
+    "informasjonstavle.andre_lenker.meld_fra": "Meld fra om endringer",
+    "informasjonstavle.andre_lenker.søke_i_rett_tid": "Husk å søke i rett tid",
+    "informasjonstavle.andre_lenker.klage": "Slik klager du",
+    "informasjonstavle.andre_lenker.regelverk": "Regelverk",
+
 
     "tjenester.tittel": "Hvor mye og hvor lenge?",
     "tjenester.beregning_tittel": "Beregning av foreldrepenger",
@@ -111,13 +119,6 @@
     "viktige_frister.sokefrist_nar_kombinere_peng_arbeid": "Søkefrist når du vil kombinere foreldrepenger med arbeid",
     "viktige_frister.hvis_hatt_arbeidsinntekt_eller_jobb": "Hvis du har hatt arbeidsinntekt",
     "viktige_frister.du_skal_legge_dok_pa_termindato": "Du skal legge ved dokumentasjon på termindatoen din hvis du er gravid og",
-
-    "informasjonstavle.andre_lenker.tittel": "Relatert informasjon",
-    "informasjonstavle.andre_lenker.i_utlandet": "Opphold i utlandet",
-    "informasjonstavle.andre_lenker.meld_fra": "Meld fra om endringer",
-    "informasjonstavle.andre_lenker.søke_i_rett_tid": "Husk å søke i rett tid",
-    "informasjonstavle.andre_lenker.klage": "Slik klager du",
-    "informasjonstavle.andre_lenker.regelverk": "Regelverk",
 
 
     "hva_søker_du.tittel": "Hva vil du søke om?",
