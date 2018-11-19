@@ -16,10 +16,7 @@ import HeaderInformasjon from '../../components/header-informasjon/HeaderInforma
 import classnames from 'classnames';
 import './omForeldrepenger.less';
 import Hjelp from '../../components/hjelpe-seksjon/HjelpeSeksjon';
-
-import Hurtiglenker from './hurtiglenker/Hurtiglenker';
-import MediaQuery from 'react-responsive';
-// import Innholdsfortegnelse from './innholdsfortegnelse/Innholdsfortegnelse';
+import Innholdsfortegnelse from './innholdsfortegnelse/Innholdsfortegnelse';
 
 const cls = BEMHelper('infosider');
 
@@ -72,10 +69,7 @@ const OmForeldrepenger: React.StatelessComponent<Props & IntlProps> = ({ locatio
             <main className={cls.element('body')}>
                 <article className={cls.element('content')}>
                     <Breadcrumbs path={location.pathname} />
-                    <MediaQuery minWidth={800}>
-                        <Hurtiglenker links={sections} />
-                    </MediaQuery>
-                    {/*<Innholdsfortegnelse sections={sections} />*/}
+                    <Innholdsfortegnelse sections={sections} />
                     <ForÅFåForeldrepenger id={sections[0]} />
                     <HvorLenge id={sections[1]} />
                     <NyeRegler />

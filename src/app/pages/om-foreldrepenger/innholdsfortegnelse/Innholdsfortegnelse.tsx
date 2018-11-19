@@ -97,7 +97,7 @@ class Innholdsfortegnelse extends React.Component<Props, State> {
     render = () => (
         <Panel
             className={classnames(cls.className, {
-                [cls.modifier('anchorToTop')]: this.state.isAnchoredToTop
+                [cls.modifier('anchorToTop')]: !this.state.isAnchoredToTop
             })}>
             <div className={cls.element('icon')}>
                 <SvgMask svg={icon} />
