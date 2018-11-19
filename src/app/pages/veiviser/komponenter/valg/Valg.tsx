@@ -4,7 +4,7 @@ import { Language, getTranslation, withIntl } from '../../../../intl/intl';
 import TypografiBase from 'nav-frontend-typografi';
 import StrukturertTekst from '../../../../components/strukturert-tekst/StrukturertTekst';
 import { getContent } from '../../../../utils/getContent';
-import { RadioPanel } from 'nav-frontend-skjema';
+import { RadioPanel, Input } from 'nav-frontend-skjema';
 import Tabs from 'nav-frontend-tabs';
 import { FlexibleSvg } from '../../../../utils/CustomSVG';
 import './valg.less';
@@ -86,7 +86,8 @@ type Props = Lang & TabContent;
 
 class Valg extends React.Component<Props, State> {
     toggled = null;
-    tmp = false;
+    fade = false;
+    belop = "inntekt i kroner";
 
     constructor(props: Props) {
         super(props);
@@ -125,6 +126,7 @@ class Valg extends React.Component<Props, State> {
                     noneChecked[j][k] = false;
                 }
             }
+            this.belop = "inntekt i kroner";
             this.setState(
                 // oppdaterer state /m nye verdier
                 {
@@ -146,14 +148,22 @@ class Valg extends React.Component<Props, State> {
         }
     }
 
-    initItem(valgListe: object[], input: number, newItem: object, radNummer: number) {
+    initItem(
+        valgListe: object[],
+        input: number,
+        newItem: object,
+        radNummer: number,
+        ischeckbox: boolean
+    ) {
         let list;
+        //const ischeckbox = true;
 
         if (!this.state.parentToggled[1]) {
             list = valgListe;
             list.push({
                 nr: input,
                 rad: radNummer,
+                checkbox: ischeckbox,
                 sprmal: getTranslation(sprmalMor[input], this.props.lang),
                 svar1: getTranslation(svarMor[input][0], this.props.lang),
                 svar2: getTranslation(svarMor[input][1], this.props.lang),
@@ -164,6 +174,7 @@ class Valg extends React.Component<Props, State> {
             list.push({
                 nr: input,
                 rad: radNummer,
+                checkbox: ischeckbox,
                 sprmal: getTranslation(sprmalFarMedmor[input], this.props.lang),
                 svar1: getTranslation(svarFarMedmor[input][0], this.props.lang),
                 svar2: getTranslation(svarFarMedmor[input][1], this.props.lang),
@@ -171,6 +182,41 @@ class Valg extends React.Component<Props, State> {
             });
         }
         this.setState({ valg: list });
+    }
+    initInputField(valgListe: object[], input: number, radNummer: number, ischeckbox: boolean) {
+        let list;
+        list = valgListe;
+        this.belop = "inntekt i kroner";
+        list.push({
+            nr: input,
+            rad: radNummer,
+            checkbox: ischeckbox,
+            sprmal: getTranslation(sprmalMor[input], this.props.lang)
+        });
+        this.setState({ valg: list });
+    }
+
+    goToSection(id: string) : any {
+        const target = document.querySelector(id);
+        if (target) {
+            target.scrollIntoView({behavior: 'smooth'});
+        }
+    };
+
+    insertInput(e: any, checkboksNiva: number, radnummer: number) {
+        const initValue = e.target.value.replace(/[, ]+/g, '').trim();
+        e.target.value = initValue.replace(/\B(?=(\d{3})+(?!\d))/g, ",").trim();
+        e.persist();
+        setTimeout(() => {
+            const currentValue = e.target.value.replace(/[, ]+/g, '').trim();
+            if (initValue === currentValue && currentValue !== '') {
+                const inntekt = parseInt(currentValue.replace(/\s/g, ''), 10);
+                this.belop = currentValue.replace(/\B(?=(\d{3})+(?!\d))/g, ",").trim() + " kr";
+                inntekt >= 48441
+                    ? this.checkRow(checkboksNiva, 0, radnummer)
+                    : this.checkRow(checkboksNiva, 1, radnummer);
+            }
+        }, 2000);
     }
 
     insertBoxes(numBox: number, checkBoxNivaa: number, nyttValg: object[], radNummer: number) {
@@ -188,20 +234,21 @@ class Valg extends React.Component<Props, State> {
                 onChange: () => this.checkRow(checkBoxNivaa, i, radNummer)
             };
         }
-        this.initItem(nyttValg, this.state.teller, newItem, radNummer);
+        this.initItem(nyttValg, this.state.teller, newItem, radNummer, true);
     }
 
     insertResultat(knapptekst: string, dialogtxt: string) {
         const res = [];
         res.push(<DialogBoks knapp={knapptekst} txt={dialogtxt} lang={this.props.lang} />);
         res.push(<NavigasjonsBoks lang={this.props.lang} />);
-        this.setState({ result: res });
+        this.setState({ result: res }, () => setTimeout(this.goToSection('#mainSokKnapp'), 500));
     }
 
     checkRow(checkBoxNiva: number, svar: number, radNiva: number) {
         const tmpItems = [...this.state.valg];
         const checked = [...this.state.checkbox];
         if (this.state.antallRader !== radNiva) {
+           // this.belop = "tast inn beløpet i kr";
             tmpItems.splice(radNiva + 1);
             for (let i = radNiva; i < this.state.checkbox.length; i++) {
                 for (let j = 0; j < 2; j++) {
@@ -226,6 +273,8 @@ class Valg extends React.Component<Props, State> {
 
     appendRow(checkBoxNiva: number, svar: number, radNiva: number) {
         // radNivå er rad-nr && svar er ja (0) / nei (1)
+        console.log('///////////////////////////////');
+        console.log('checkBoxNiva: ', checkBoxNiva, 'svar: ', svar, 'radNiva: ', radNiva);
         const checked = [...this.state.checkbox];
         if (checkBoxNiva === 0) {
             // nivå 1
@@ -237,11 +286,11 @@ class Valg extends React.Component<Props, State> {
                 this.setState(
                     { antallRader: radNiva, teller: checkBoxNiva, checkbox: checked },
                     () =>
-                        this.insertBoxes(
-                            this.state.numberofCheckBoxz,
-                            this.state.teller,
+                        this.initInputField(
                             this.state.valg,
-                            this.state.antallRader
+                            this.state.teller,
+                            this.state.antallRader,
+                            false
                         )
                 );
             } else if (svar === 1) {
@@ -270,11 +319,11 @@ class Valg extends React.Component<Props, State> {
                 this.setState(
                     { antallRader: radNiva, teller: checkBoxNiva, checkbox: checked },
                     () =>
-                        this.insertBoxes(
-                            this.state.numberofCheckBoxz,
-                            this.state.teller,
+                        this.initInputField(
                             this.state.valg,
-                            this.state.antallRader
+                            this.state.teller,
+                            this.state.antallRader,
+                            false
                         )
                 );
             } else if (svar === 1) {
@@ -295,7 +344,6 @@ class Valg extends React.Component<Props, State> {
             }
         } else if (checkBoxNiva === 2) {
             // nivå 3
-            // nivå 3
             if (svar === 0) {
                 // svar : ja
                 checked[checkBoxNiva][svar] = true;
@@ -304,11 +352,11 @@ class Valg extends React.Component<Props, State> {
                 this.setState(
                     { antallRader: radNiva, teller: checkBoxNiva, checkbox: checked },
                     () =>
-                        this.insertBoxes(
-                            this.state.numberofCheckBoxz,
-                            this.state.teller,
+                        this.initInputField(
                             this.state.valg,
-                            this.state.antallRader
+                            this.state.teller,
+                            this.state.antallRader,
+                            false
                         )
                 );
             } else if (svar === 1) {
@@ -322,6 +370,7 @@ class Valg extends React.Component<Props, State> {
                 );
             }
         } else if (checkBoxNiva === 3) {
+            console.log('checkBoxNivå', checkBoxNiva, 'svar', svar, radNiva);
             // nivå 4
             if (svar === 0) {
                 // svar : ja
@@ -419,37 +468,69 @@ class Valg extends React.Component<Props, State> {
                     />
                 </div>
             </div>
-            <div className={cls.element('kort')}>
+            <div id="test123" className={cls.element('kort')}>
                 {this.state.valg.map((valg: any) => {
-                    this.state.antallRader === valg.rad ? (this.tmp = true) : (this.tmp = false);
-                    return (
-                        <div
-                            key={valg.nr + Date.now()}
-                            className={cls.element('kort-rad ' + valg.nr)}>
-                            <TypografiBase type="element">{valg.sprmal}</TypografiBase>
-                            <div className={cls.element('valg-checkboxes ')}>
-                                {valg.obj.map((item: any, index: number) => {
-                                    return (
-                                        <CSSTransition
-                                            key={item.value + Date.now()}
-                                            appear={true}
-                                            classNames="fade"
-                                            in={this.tmp}
-                                            timeout={1000}>
-                                            <RadioPanel
-                                                key={item.value}
-                                                checked={this.state.checkbox[item.valgIndex][index]}
-                                                name={item.name}
-                                                onChange={item.onChange}
-                                                label={item.label} // item.label
-                                                value={item.value}
-                                            />
-                                        </CSSTransition>
-                                    );
-                                })}
+                    if (valg.checkbox) {
+                        this.state.antallRader === valg.rad
+                            ? (this.fade = true)
+                            : (this.fade = false);
+                        return (
+                            <div
+                                key={valg.nr + Date.now()}
+                                className={cls.element('kort-rad ' + valg.nr)}>
+                                <TypografiBase type="element">{valg.sprmal}</TypografiBase>
+                                <div className={cls.element('valg-checkboxes ')}>
+                                    {valg.obj.map((item: any, index: number) => {
+                                        return (
+                                            <CSSTransition
+                                                key={item.value + Date.now()}
+                                                appear={true}
+                                                classNames="fade"
+                                                in={this.fade}
+                                                timeout={1000}>
+                                                <RadioPanel
+                                                    key={item.value}
+                                                    checked={
+                                                        this.state.checkbox[item.valgIndex][index]
+                                                    }
+                                                    name={item.name}
+                                                    onChange={item.onChange}
+                                                    label={item.label} // item.label
+                                                    value={item.value}
+                                                />
+                                            </CSSTransition>
+                                        );
+                                    })}
+                                </div>
                             </div>
-                        </div>
-                    );
+                        );
+                    } else {
+                        return (
+                            <CSSTransition
+                                key={valg.nr + Date.now()}
+                                appear={true}
+                                classNames="fade"
+                                in={true}
+                                timeout={1000}>
+                                <div
+                                    key={valg.nr + Date.now()}
+                                    className={cls.element('inputFelt')}>
+                                    <Input
+                                        className={cls.element('inputFeilt--komponent')}
+                                        label={
+                                            <TypografiBase type={'element'}>
+                                                {valg.sprmal}
+                                            </TypografiBase>
+                                        }
+                                        onChange={(event: any) => {
+                                            this.insertInput(event, valg.nr, valg.rad);
+                                        }}
+                                        placeholder={this.belop}
+                                    />
+                                </div>
+                            </CSSTransition>
+                        );
+                    }
                 })}
             </div>
             {this.state.result.map((res: any, index: number) => {
@@ -459,7 +540,7 @@ class Valg extends React.Component<Props, State> {
                         appear={true}
                         classNames="message"
                         in={true}
-                        timeout={1000}>
+                        timeout={800}>
                         {res}
                     </CSSTransition>
                 );
@@ -473,7 +554,7 @@ const DialogBoks = ({ knapp, txt, lang }: { knapp: string; txt: string; lang: an
     return (
         <div className={cls.element('melding')}>
             <StrukturertTekst tekst={getContent(txt, lang)} />
-            <KnappBase type="hoved">{getTranslation(knapp, lang)}</KnappBase>
+            <KnappBase id="mainSokKnapp" type="hoved">{getTranslation(knapp, lang)}</KnappBase>
         </div>
     );
 };
