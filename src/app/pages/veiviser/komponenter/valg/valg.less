@@ -118,6 +118,7 @@
     .radioPanel {
         margin-left: 0.5rem;
         margin-right: 0.5rem;
+        width: 50%;
     }
 
     &__melding {
@@ -133,6 +134,21 @@
 
     .knapp--hoved {
         width: 60%;
+    }
+
+    &__inputFelt {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    &__inputFeilt--komponent{
+        width: 27%;
+    }
+
+    .skjemaelement__input {
+        padding-left: 1.5rem;
     }
 
     &__navigasjonsboks {
@@ -191,7 +207,7 @@
         transform: scale(0.9) translateY(50%);
     }
 
-    .message-appear.message-appear-active {
+    .message-enter-done {
         opacity: 1;
         transform: scale(1) translateY(0%);
         transition: all 1000ms ease-out;
