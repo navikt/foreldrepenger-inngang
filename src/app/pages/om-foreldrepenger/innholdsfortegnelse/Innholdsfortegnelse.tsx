@@ -3,7 +3,7 @@ import BEMHelper from 'app/utils/bem';
 import { Panel } from 'nav-frontend-paneler';
 import { Normaltekst } from 'nav-frontend-typografi';
 import { WithLink } from 'app/utils/withLink';
-import { getTranslation, withIntl, IntlProps } from 'app/intl/intl';
+import { getTranslation, withIntl, Language } from 'app/intl/intl';
 import { Hovedknapp } from 'nav-frontend-knapper';
 import { ForeldrepengerSection } from '../OmForeldrepenger';
 import classnames from 'classnames';
@@ -13,7 +13,6 @@ import throttle from 'lodash/throttle';
 import { Cancelable } from 'lodash';
 
 const cls = BEMHelper('innholdsfortegnelse');
-
 const icon = require('../../../assets/icons/rakett.svg').default;
 
 const getFirstNumberAfter = (n: number, numbers: number[]) => {
@@ -26,16 +25,15 @@ const getFirstNumberAfter = (n: number, numbers: number[]) => {
     return numbers.length - 1;
 };
 
-interface OwnProps {
+interface Props {
     sections: ForeldrepengerSection[];
+    lang: Language;
 }
 
-type Props = OwnProps & IntlProps;
-
 interface State {
-    currentSection: number;
+    currentSection?: number;
     sectionOffsets?: number[];
-    isAnchoredToTop: boolean;
+    documentHeight: number;
 }
 
 class Innholdsfortegnelse extends React.Component<Props, State> {
@@ -44,22 +42,17 @@ class Innholdsfortegnelse extends React.Component<Props, State> {
     constructor(props: Props) {
         super(props);
         this.state = {
-            currentSection: 0,
-            isAnchoredToTop: this.shouldAnchorToTop(this.getCurrentScrollHeight())
+            documentHeight: this.getDocumentHeight()
         };
 
-        this.debouncedOnScroll = throttle(this.onScroll, 200);
+        this.debouncedOnScroll = throttle(this.onScroll, 100);
     }
 
     componentDidMount = () => {
         document.addEventListener('scroll', this.debouncedOnScroll);
 
-        const sectionOffsets = this.props.sections
-            .map((section) => document.getElementById(section))
-            .map((sectionNode) => (sectionNode ? sectionNode.offsetTop : 0));
-
         this.setState({
-            sectionOffsets
+            sectionOffsets: this.getSectionOffsets()
         });
     };
 
@@ -67,40 +60,42 @@ class Innholdsfortegnelse extends React.Component<Props, State> {
         document.removeEventListener('scroll', this.debouncedOnScroll);
     };
 
-    getCurrentScrollHeight = () => window.pageYOffset;
+    getDocumentHeight = () => document.body.scrollHeight;
+    getDocumentScroll = () => window.scrollY || window.pageYOffset;
+    getSectionOffsets = () =>
+        this.props.sections
+            .map((section) => document.getElementById(section))
+            .map((sectionNode) => (sectionNode ? sectionNode.offsetTop : 0));
 
     onScroll = () => {
-        let currentSection = 0;
-        const currentScrollHeight = this.getCurrentScrollHeight();
-        if (this.state.sectionOffsets && currentScrollHeight > this.state.sectionOffsets[0]) {
-            currentSection = getFirstNumberAfter(currentScrollHeight, this.state.sectionOffsets);
+        const nextState: any = {
+            currentSection: undefined
+        };
+
+        const currentDocumentHeight = this.getDocumentHeight();
+        const currentScrollHeight = this.getDocumentScroll();
+        let currentSectionOffsets = this.state.sectionOffsets;
+
+        if (currentDocumentHeight !== this.state.documentHeight) {
+            currentSectionOffsets = this.getSectionOffsets();
+            nextState.documentHeight = currentDocumentHeight;
+            nextState.sectionOffsets = currentSectionOffsets;
         }
 
-        const isAnchoredToTop = this.shouldAnchorToTop(currentScrollHeight);
-
-        this.setState({
-            isAnchoredToTop,
-            currentSection
-        });
-    };
-
-    shouldAnchorToTop = (currentScrollHeight: number) => {
-        const firstSectionNode = document.getElementById(this.props.sections[0]);
-        if (firstSectionNode) {
-            console.warn('current:', currentScrollHeight, 'section:', firstSectionNode.offsetTop);
-            return currentScrollHeight < firstSectionNode.offsetTop && currentScrollHeight < 251;
-        } else {
-            return currentScrollHeight < 251;
+        if (currentSectionOffsets) {
+            nextState.currentSection = getFirstNumberAfter(
+                currentScrollHeight,
+                currentSectionOffsets
+            );
         }
+
+        this.setState(nextState);
     };
 
     render = () => (
-        <Panel
-            className={classnames(cls.className, {
-                [cls.modifier('anchorToTop')]: !this.state.isAnchoredToTop
-            })}>
+        <Panel className={classnames(cls.className)}>
             <div className={cls.element('icon')}>
-                <SvgMask svg={icon} />
+                <SvgMask small={true} svg={icon} />
             </div>
             {this.props.sections.map((section, index) => {
                 const stringToTranslate = section.replace(new RegExp('-', 'g'), '_');

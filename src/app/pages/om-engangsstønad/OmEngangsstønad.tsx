@@ -36,15 +36,15 @@ const OmEngangsstonad: React.StatelessComponent<Props & IntlProps> = ({ location
         <div className={infosiderCls.className}>
             <OmEngangsstønadHeader />
             <Sidebanner text={getTranslation('om_engangsstønad.tittel', lang)} />
-            <div className={infosiderCls.element('body')}>
-                <div className={infosiderCls.element('content')}>
+            <div className={infosiderCls.element('container')}>
+                <article>
                     <Breadcrumbs path={location.pathname} />
                     <HvaErEngangsstønad />
                     <HvaKanDuFå />
                     <NårBlirPengeneUtbetalt />
                     <EngangsstønadTilFar id="far-eller-medmor" />
                     <Hjelp />
-                </div>
+                </article>
             </div>
         </div>
     );
@@ -54,9 +54,13 @@ const OmEngangsstønadHeader = () => {
     return (
         <HeaderInformasjon
             title={'Om engangsstønad - www.nav.no'}
-            siteDescription={'Hvis du venter barn og ikke hatt inntekt det siste året, kan du få en engangssum fra NAV.'}
+            siteDescription={
+                'Hvis du venter barn og ikke hatt inntekt det siste året, kan du få en engangssum fra NAV.'
+            }
             propTitle={'nav.no engangstønad-informasjon'}
-            propDescription={'Hvis du venter barn og ikke hatt inntekt det siste året, kan du få en engangssum fra NAV.'}
+            propDescription={
+                'Hvis du venter barn og ikke hatt inntekt det siste året, kan du få en engangssum fra NAV.'
+            }
             siteUrl={'https://familie.nav.no/om-engangsstonad'}
         />
     );

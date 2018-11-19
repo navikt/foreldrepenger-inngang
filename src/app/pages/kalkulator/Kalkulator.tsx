@@ -132,8 +132,8 @@ class Planlegger extends React.Component<IntlProps, State> {
         return (
             <div className={classnames(cls.className, infosiderCls.className)}>
                 <Sidebanner text={getTranslation('kalkulator.bannertekst', lang)} />
-                <div className={infosiderCls.element('body')}>
-                    <main className={infosiderCls.element('content')}>
+                <div className={infosiderCls.element('container')}>
+                    <article>
                         <Breadcrumbs path={location.pathname} />
 
                         <PanelMedIllustrasjon
@@ -206,7 +206,7 @@ class Planlegger extends React.Component<IntlProps, State> {
                                     </div>
                                 ))}
                         </PanelMedIllustrasjon>
-                    </main>
+                    </article>
                 </div>
             </div>
         );

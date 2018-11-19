@@ -1,14 +1,8 @@
 @import '../../../styles/index.less';
 
 .innholdsfortegnelse {
-    position: fixed;
-    //display: none;
-    width: 200px;
+    position: sticky;
     top: calc(50% - 14rem);
-    transform: translateX(calc(-100% - 1.5rem)) scale(0.8);
-    padding-top: 4rem;
-    opacity: 0;
-    transition: all 200ms;
 
     &__lenke {
         margin-bottom: 1rem;
@@ -33,17 +27,8 @@
     &__icon {
         display: flex;
         justify-content: center;
-        position: absolute;
-        top: -50px;
-        left: 50px;
-    }
-
-    &--anchorToTop {
-        // position: absolute;
-        // top: unset;
-
-        opacity: 1;
-        transform: translateX(calc(-100% - 1.5rem)) scale(1);
-        transition: all 500ms;
+        transform: translateY(calc(-50% - 1rem));
+        align-items: center;
+        margin-bottom: -2rem;
     }
 }

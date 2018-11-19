@@ -66,10 +66,12 @@ const OmForeldrepenger: React.StatelessComponent<Props & IntlProps> = ({ locatio
         <div className={classnames(cls.className)}>
             <OmForeldrepengerHeader />
             <Sidebanner text={getTranslation('om_foreldrepenger.tittel', lang)} />
-            <main className={cls.element('body')}>
-                <article className={cls.element('content')}>
-                    <Breadcrumbs path={location.pathname} />
+            <div className={classnames(cls.element('container'), cls.modifier('withSidebar'))}>
+                <div className={cls.element('sidebar')}>
                     <Innholdsfortegnelse sections={sections} />
+                </div>
+                <article>
+                    <Breadcrumbs path={location.pathname} />
                     <ForÅFåForeldrepenger id={sections[0]} />
                     <HvorLenge id={sections[1]} />
                     <NyeRegler />
@@ -81,7 +83,8 @@ const OmForeldrepenger: React.StatelessComponent<Props & IntlProps> = ({ locatio
                     <Adopsjon id={sections[7]} />
                     <Hjelp />
                 </article>
-            </main>
+                <div className={cls.element('filler')} />
+            </div>
         </div>
     );
 };
