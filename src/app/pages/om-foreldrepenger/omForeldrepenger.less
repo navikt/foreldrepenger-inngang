@@ -1,25 +1,12 @@
 @import '../../styles/variables.less';
 
 .omForeldrepenger {
-    &__body {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        margin: 0;
-    }
-    
     &__content {
         width: 100%;
         max-width: 780px;
         position: relative;
     }
-
-    &__sidebar {
-        width: 100px;
-        background-color: 'red';
-    }
-
+    
     &__alignLeft {
         align-self: center;
     }
@@ -28,12 +15,6 @@
         background: transparent;
         margin: 2rem auto;
         max-width: 630px;
-    }
-
-    @media (min-width: @mobile-breakpoint) {
-        &__body {
-            margin: 1rem;
-        }
     }
 }
 

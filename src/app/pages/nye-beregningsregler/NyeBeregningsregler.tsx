@@ -18,8 +18,8 @@ const NyeBeregningsregler: React.StatelessComponent<Props & IntlProps> = ({ loca
     return (
         <div className={infosiderCls.className}>
             <Sidebanner text={getTranslation('om_foreldrepenger.tittel', lang)} />
-            <div className={infosiderCls.element('body')}>
-                <div className={infosiderCls.element('content')}>
+            <div className={infosiderCls.element('container')}>
+                <article>
                     <Breadcrumbs path={location.pathname} />
                     <PanelMedIllustrasjon
                         title={getTranslation(
@@ -34,7 +34,7 @@ const NyeBeregningsregler: React.StatelessComponent<Props & IntlProps> = ({ loca
                             )}
                         />
                     </PanelMedIllustrasjon>
-                </div>
+                </article>
             </div>
         </div>
     );

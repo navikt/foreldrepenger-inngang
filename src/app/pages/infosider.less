@@ -1,20 +1,37 @@
 @import '../styles/index.less';
 
-@sidebar-breakpoint: 1300px;
-@sidebar-vertical-breakpoint: 1046px;
+@add-filler-breakpoint: 1300px;
 
 .infosider {
-    &__body {
+    margin-bottom: 4rem;
+
+    &__container {
         display: flex;
-        flex-direction: column;
-        position: relative;
-        align-items: center;
+        flex-direction: row;
+        justify-content: center;
         margin: 0;
     }
 
-    &__content {
+    &__sidebar {
+        width: 200px;
+        margin-top: 86px;
+        flex-shrink: 0;
+        display: none;
+    }
+
+    &__filler {
+        display: none;
+        width: 0px;
+    }
+
+    article {
         width: 100%;
         max-width: @app-max-width;
+        flex-shrink: 0;
+
+        section:not(:nth-last-child(1)) {
+            margin-bottom: 3rem;
+        }
     }
 
     &__alignLeft {
@@ -28,8 +45,41 @@
     }
 
     @media (min-width: @mobile-breakpoint) {
-        &__body {
+        &__container {
             margin: 0 1rem 1rem;
+        }
+
+        article {
+            margin: 0 1rem;
+        }
+    }
+
+    &--withSidebar {
+        @media (min-width: @tablet-breakpoint) {
+            .infosider__container {
+                margin: 0 1.5rem 1rem;
+            }
+
+            article {
+                margin-left: 1.5rem;
+                margin-right: 0;
+            }
+        }
+
+        @media (min-width: @desktop-breakpoint) {
+            .infosider__sidebar, .infosider__filler {
+                display: block;
+            }
+        }
+
+        @media (min-width: @add-filler-breakpoint) {
+            .infosider__filler {
+                width: 200px;
+            }
+
+            article {
+                margin-right: 1.5rem;
+            }
         }
     }
 }

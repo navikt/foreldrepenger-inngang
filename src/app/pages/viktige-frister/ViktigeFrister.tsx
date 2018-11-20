@@ -46,8 +46,8 @@ const ViktigeFrister: React.StatelessComponent<Props & IntlProps> = ({ location,
         <div className={infosiderCls.className}>
             <ViktigeFristerHeader />
             <Sidebanner text={getTranslation('viktige_frister.banner', lang)} />
-            <div className={infosiderCls.element('body')}>
-                <div className={infosiderCls.element('content')}>
+            <div className={infosiderCls.element('container')}>
+                <article>
                     <Breadcrumbs path={location.pathname} />
                     <PanelMedIllustrasjon
                         title={getTranslation('viktige_frister.header', lang)}
@@ -96,7 +96,7 @@ const ViktigeFrister: React.StatelessComponent<Props & IntlProps> = ({ location,
                             <StrukturertTekst tekst={getContent(dokPaTermindatoInnhold, lang)} />
                         </LesMer>
                     </PanelMedIllustrasjon>
-                </div>
+                </article>
             </div>
         </div>
     );
@@ -106,9 +106,13 @@ const ViktigeFristerHeader = () => {
     return (
         <HeaderInformasjon
             title={'Viktige frister - www.nav.no'}
-            siteDescription={'Les om viktige frister for å søke om foreldrepenger ved foreldrepermisjon.'}
+            siteDescription={
+                'Les om viktige frister for å søke om foreldrepenger ved foreldrepermisjon.'
+            }
             propTitle={'nav.no Viktige-frister'}
-            propDescription={'Les om viktige frister for å søke om foreldrepenger ved foreldrepermisjon.'}
+            propDescription={
+                'Les om viktige frister for å søke om foreldrepenger ved foreldrepermisjon.'
+            }
             siteUrl={'https://familie.nav.no/viktige-frister'}
         />
     );
