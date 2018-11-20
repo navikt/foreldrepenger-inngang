@@ -11,6 +11,7 @@ import './valg.less';
 import { CSSTransition } from 'react-transition-group';
 import KnappBase from 'nav-frontend-knapper';
 import NavFrontendChevron from 'nav-frontend-chevron';
+import UtvidetInformasjon from '../../../kalkulator/utvidetinformasjon/UtvidetInformasjon';
 
 const cls = BEMHelper('valg');
 
@@ -76,6 +77,7 @@ interface State {
     antallRader: number;
     numberofCheckBoxz: number;
     result: object[];
+    inputFade: boolean;
 }
 
 type Props = Lang & TabContent;
@@ -103,7 +105,8 @@ class Valg extends React.Component<Props, State> {
             teller: 0, // teller for rad i checkbox
             antallRader: 0, // teller for antall rader i valg
             numberofCheckBoxz: 2, // antall checkbox som skal genereres pr rad,
-            result: []
+            result: [],
+            inputFade: true
         };
     }
 
@@ -150,16 +153,19 @@ class Valg extends React.Component<Props, State> {
         input: number,
         newItem: object,
         radNummer: number,
-        ischeckbox: boolean
+        ischeckbox: boolean,
+        dropdownContent?: object
     ) {
         let list;
-        //const ischeckbox = true;
+        let content;
+        dropdownContent ? (content = dropdownContent) : (content = <div />);
 
         if (!this.state.parentToggled[1]) {
             list = valgListe;
             list.push({
                 nr: input,
                 rad: radNummer,
+                con: content,
                 checkbox: ischeckbox,
                 sprmal: getTranslation(sprmalMor[input], this.props.lang),
                 svar1: getTranslation(svarMor[input][0], this.props.lang),
@@ -171,6 +177,7 @@ class Valg extends React.Component<Props, State> {
             list.push({
                 nr: input,
                 rad: radNummer,
+                con: content,
                 checkbox: ischeckbox,
                 sprmal: getTranslation(sprmalFarMedmor[input], this.props.lang),
                 svar1: getTranslation(svarFarMedmor[input][0], this.props.lang),
@@ -180,13 +187,21 @@ class Valg extends React.Component<Props, State> {
         }
         this.setState({ valg: list });
     }
-    initInputField(valgListe: object[], input: number, radNummer: number, ischeckbox: boolean) {
-        let list;
+    initInputField(
+        valgListe: object[],
+        input: number,
+        radNummer: number,
+        ischeckbox: boolean,
+        dropdown: object
+    ) {
+        let list, content;
         list = valgListe;
         this.belop = 'inntekt i kroner';
+        dropdown ? (content = dropdown) : (content = <div />);
         list.push({
             nr: input,
             rad: radNummer,
+            con: content,
             checkbox: ischeckbox,
             sprmal: getTranslation(sprmalMor[input], this.props.lang)
         });
@@ -198,6 +213,18 @@ class Valg extends React.Component<Props, State> {
         if (target) {
             target.scrollIntoView({ behavior: 'smooth' });
         }
+    }
+
+    getDropdown(aapneLabel: string, lukeLabel: string, jsonContentPath: string) {
+        return (
+            <div className={cls.element('dropdown')}>
+                <UtvidetInformasjon
+                    apneLabel={getTranslation(aapneLabel, this.props.lang)}
+                    lukkLabel={getTranslation(lukeLabel, this.props.lang)}>
+                    <StrukturertTekst tekst={getContent(jsonContentPath, this.props.lang)} />
+                </UtvidetInformasjon>
+            </div>
+        );
     }
 
     insertInput(e: any, checkboksNiva: number, radnummer: number) {
@@ -213,10 +240,16 @@ class Valg extends React.Component<Props, State> {
                     ? this.checkRow(checkboksNiva, 0, radnummer)
                     : this.checkRow(checkboksNiva, 1, radnummer);
             }
-        }, 2000);
+        }, 1500);
     }
 
-    insertBoxes(numBox: number, checkBoxNivaa: number, nyttValg: object[], radNummer: number) {
+    insertBoxes(
+        numBox: number,
+        checkBoxNivaa: number,
+        nyttValg: object[],
+        radNummer: number,
+        dropdown?: object
+    ) {
         const newItem = [];
         let value: string;
         for (let i = 0; i < numBox; i++) {
@@ -231,7 +264,7 @@ class Valg extends React.Component<Props, State> {
                 onChange: () => this.checkRow(checkBoxNivaa, i, radNummer)
             };
         }
-        this.initItem(nyttValg, this.state.teller, newItem, radNummer, true);
+        this.initItem(nyttValg, this.state.teller, newItem, radNummer, true, dropdown);
     }
 
     insertResultat(knapptekst: string, dialogtxt: string) {
@@ -287,7 +320,12 @@ class Valg extends React.Component<Props, State> {
                             this.state.valg,
                             this.state.teller,
                             this.state.antallRader,
-                            false
+                            false,
+                            this.getDropdown(
+                                'veiviser.valg.hjelpetekst.mndInntekt',
+                                'veiviser.valg.hjelpetekst.lukk',
+                                'veiviser/infobox/til-manedsinntekt'
+                            )
                         )
                 );
             } else if (svar === 1) {
@@ -302,7 +340,12 @@ class Valg extends React.Component<Props, State> {
                             this.state.numberofCheckBoxz,
                             this.state.teller,
                             this.state.valg,
-                            this.state.antallRader
+                            this.state.antallRader,
+                            this.getDropdown(
+                                'veiviser.valg.hjelpetekst.utbetalinger',
+                                'veiviser.valg.hjelpetekst.lukk',
+                                'veiviser/infobox/utbetalinger-fra-nav'
+                            )
                         )
                 );
             }
@@ -320,7 +363,12 @@ class Valg extends React.Component<Props, State> {
                             this.state.valg,
                             this.state.teller,
                             this.state.antallRader,
-                            false
+                            false,
+                            this.getDropdown(
+                                'veiviser.valg.hjelpetekst.mndInntekt',
+                                'veiviser.valg.hjelpetekst.lukk',
+                                'veiviser/infobox/til-manedsinntekt'
+                            )
                         )
                 );
             } else if (svar === 1) {
@@ -353,7 +401,12 @@ class Valg extends React.Component<Props, State> {
                             this.state.valg,
                             this.state.teller,
                             this.state.antallRader,
-                            false
+                            false,
+                            this.getDropdown(
+                                'veiviser.valg.hjelpetekst.mndInntekt',
+                                'veiviser.valg.hjelpetekst.lukk',
+                                'veiviser/infobox/til-manedsinntekt'
+                            )
                         )
                 );
             } else if (svar === 1) {
@@ -407,8 +460,7 @@ class Valg extends React.Component<Props, State> {
                 checkBoxNiva = 5;
                 this.setState(
                     { antallRader: radNiva, teller: checkBoxNiva, checkbox: checked },
-                    () =>this.insertResultat(knapptxt[1], dialogTekst[1])
-
+                    () => this.insertResultat(knapptxt[0], dialogTekst[0])
                 );
             } else if (svar === 1) {
                 // svar : nei
@@ -418,12 +470,13 @@ class Valg extends React.Component<Props, State> {
                 checkBoxNiva = 5;
                 this.setState(
                     { antallRader: radNiva, teller: checkBoxNiva, checkbox: checked },
-                    () =>    this.insertBoxes(
-                        this.state.numberofCheckBoxz,
-                        this.state.teller,
-                        this.state.valg,
-                        this.state.antallRader
-                    ) // søk engangsstønad
+                    () =>
+                        this.insertBoxes(
+                            this.state.numberofCheckBoxz,
+                            this.state.teller,
+                            this.state.valg,
+                            this.state.antallRader
+                        ) // søk engangsstønad
                 );
             }
         } else if (checkBoxNiva === 5) {
@@ -501,6 +554,7 @@ class Valg extends React.Component<Props, State> {
                                 key={valg.nr + Date.now()}
                                 className={cls.element('kort-rad ' + valg.nr)}>
                                 <TypografiBase type="element">{valg.sprmal}</TypografiBase>
+                                {valg.con}
                                 <div className={cls.element('valg-checkboxes ')}>
                                     {valg.obj.map((item: any, index: number) => {
                                         return (
@@ -532,18 +586,18 @@ class Valg extends React.Component<Props, State> {
                                 key={valg.nr + Date.now()}
                                 appear={true}
                                 classNames="fade"
-                                in={true}
+                                in={this.state.inputFade}
                                 timeout={1000}>
                                 <div
                                     key={valg.nr + Date.now()}
                                     className={cls.element('inputFelt')}>
+                                    <TypografiBase type={'element'}>{valg.sprmal}</TypografiBase>
+                                    {valg.con}
                                     <Input
                                         className={cls.element('inputFeilt--komponent')}
-                                        label={
-                                            <TypografiBase type={'element'}>
-                                                {valg.sprmal}
-                                            </TypografiBase>
-                                        }
+                                        label={''}
+                                        min={0}
+                                        step={5000}
                                         onChange={(event: any) => {
                                             this.insertInput(event, valg.nr, valg.rad);
                                         }}

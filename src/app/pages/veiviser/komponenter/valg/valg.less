@@ -99,14 +99,15 @@
         display: flex;
         flex-direction: row;
         justify-content: center;
-        margin-top: 2.5rem;
+
     }
 
     &__kort-rad {
         display: flex;
         flex-direction: column;
-        text-align: center;
-        justify-content: center;
+        text-align: left;
+        justify-content: left;
+        margin-top: 2.5rem;
     }
 
     &__valg-checkboxes {
@@ -115,11 +116,20 @@
         display: flex;
         flex-direction: row;
         justify-content: center;
-        margin-top: 1.5rem;
+        margin-top: 0.8rem;
+    }
+
+    &__dropdown {
+        padding-left: 1.5rem;
     }
 
     &__forelder {
         margin-top: 1.5rem;
+    }
+
+    .typo-element {
+        padding-left: 1.5rem;
+        margin-bottom: 0.7rem;
     }
 
     .radioPanel {
@@ -145,13 +155,23 @@
 
     &__inputFelt {
         display: flex;
-        justify-content: center;
-        text-align: center;
+        flex-direction: column;
+        justify-content: left;
+        text-align: left;
         margin-top: 2.5rem;
+        margin-left: 1.3rem;
+
+        .valg__dropdown {
+            padding-left: 0;
+        }
+
+        .typo-element {
+            padding-left: 0;
+        }
     }
 
     &__inputFeilt--komponent {
-        width: 27%;
+        width: 30%;
     }
 
     .skjemaelement__input {
@@ -238,6 +258,6 @@
 
     .fade-appear.fade-appear-active {
         opacity: 1;
-        transition: opacity 1000ms linear;
+        transition: opacity 450ms linear;
     }
 }

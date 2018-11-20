@@ -8,6 +8,7 @@ import PanelMedIllustrasjon from '../../components/panel-med-illustrasjon/PanelM
 
 
 import './veiviser.less';
+import SvgMask from "../../components/svg-mask/SvgMask";
 
 const signSVG = require('../../assets/ark/ark-sign.svg').default;
 
@@ -43,8 +44,8 @@ const Veiviser: React.StatelessComponent<Props & IntlProps> = ({ location, lang 
                     <Breadcrumbs path={location.pathname} />
                     <PanelMedIllustrasjon
                         title={getTranslation('veiviser.panelMedIllustrasjon.tittel', lang)}
-                        svg={signSVG}
-                        maskSvg={true}>
+                        svg={<SvgMask svg={signSVG} anchorToBottom={true}/>}
+                        >
                         <Valg faner={faner} />
                     </PanelMedIllustrasjon>
                 </div>

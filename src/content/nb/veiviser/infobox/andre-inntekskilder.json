@@ -1,0 +1,103 @@
+[
+  {
+    "type": "avsnitt",
+    "style": "normaltekst",
+    "children": [
+      {
+        "type": "span",
+        "text": "Har du andre inntektskilder kan du ha rett til foreldrepenger:"
+      }
+    ]
+  },
+  {
+    "type": "avsnitt",
+    "style": "normaltekst",
+    "listItem": "bullet",
+    "level": 1,
+    "children": [
+      {
+        "type": "span",
+        "text": "Vernepliktig i militæret",
+        "marks": []
+      }
+    ]
+  },
+  {
+    "type": "avsnitt",
+    "style": "normaltekst",
+    "listItem": "bullet",
+    "level": 1,
+    "children": [
+      {
+        "type": "span",
+        "text": "Jobbet i et annet EØS-land",
+        "marks": []
+      }
+    ]
+  },
+  {
+    "type": "avsnitt",
+    "style": "normaltekst",
+    "listItem": "bullet",
+    "level": 1,
+    "children": [
+      {
+        "type": "span",
+        "text": "Selvstendig næringsdrivende",
+        "marks": []
+      }
+    ]
+  },
+  {
+    "type": "avsnitt",
+    "style": "normaltekst",
+    "listItem": "bullet",
+    "level": 1,
+    "children": [
+      {
+        "type": "span",
+        "text": "Frilanser",
+        "marks": []
+      }
+    ]
+  },
+  {
+    "type": "avsnitt",
+    "style": "normaltekst",
+    "listItem": "bullet",
+    "level": 1,
+    "children": [
+      {
+        "type": "span",
+        "text": "Ventelønn",
+        "marks": []
+      }
+    ]
+  },
+  {
+    "type": "avsnitt",
+    "style": "normaltekst",
+    "listItem": "bullet",
+    "level": 1,
+    "children": [
+      {
+        "type": "span",
+        "text": "Sluttpakke",
+        "marks": []
+      }
+    ]
+  },
+  {
+    "type": "avsnitt",
+    "style": "normaltekst",
+    "listItem": "bullet",
+    "level": 1,
+    "children": [
+      {
+        "type": "span",
+        "text": "Lønn fra arbeidsgiver under videre- eller etterutdanning",
+        "marks": []
+      }
+    ]
+  }
+]

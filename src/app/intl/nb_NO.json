@@ -292,6 +292,9 @@
     "veiviser.valg.svar.far.seks.ja": "Ja, jeg er medlem",
     "veiviser.valg.svar.far.seks.nei": "Nei, jeg er ikke medlem",
 
+    "veiviser.valg.hjelpetekst.lukk": "Lukk informasjon",
+    "veiviser.valg.hjelpetekst.utbetalinger": "Info til utbetalinger fra nav",
+    "veiviser.valg.hjelpetekst.mndInntekt": "Info til månedsinntekt",
 
     "blindside.veileder": "Så fint å ha deg her!\nDu har klikket deg inn på en side som vi fremdeles holder på med å lage.\nKlikk deg tilbake for å utforske mer :)",
     "blindside.tittel": "Under arbeid"
