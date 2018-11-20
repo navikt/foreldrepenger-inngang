@@ -1,0 +1,112 @@
+@import '../../../styles/index.less';
+
+.mobilmeny {
+    position: fixed;
+    top: 0rem;
+    left: 0rem;
+    width: 100%;
+    z-index: 10;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+
+    transform: none;
+    transition: transform 200ms;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.4);
+    // background-color: rgba(255, 255, 255, 0.4);
+    // backdrop-filter: grayscale(90%);
+    border-radius: 0;
+
+    &__icon {
+        margin-right: 1rem;
+    }
+
+    &__hidden {
+        transform: translateY(-110%);
+    }
+
+    &__header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        .typo-element {
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        .mobilmeny__flexLeft {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        &--expanded {
+            margin-bottom: 3rem;
+            
+            .typo-element {
+                display: none;
+            }
+
+            .mobilmeny__flexLeft {
+                flex: 1;
+                justify-content: center;
+            }
+
+            .mobilmeny__icon {
+                transform: scale(1.5) translateX(1rem) translateY(0.5rem);
+            }
+        }
+    }
+
+    &__expandable {
+        display: none;
+
+        &--expanded {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-bottom: 1.5rem;
+        }
+
+        .mobilmeny__lenker {
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+
+    &__søkNå {
+        align-self: stretch;
+        margin-top: 1.5rem;
+
+        button {
+            width: 100%;
+            height: 3rem;
+        }
+    }
+
+    @media (min-width: @mobile-breakpoint) {
+        &__lenker {
+            flex-wrap: wrap;
+            max-height: 130px;
+        }
+        
+        &__lenke {
+            width: 33%;
+        }
+
+        &__søkNå {
+            margin: 0 auto;
+            margin-top: 2.5rem;
+
+            button {
+                width: unset;
+            }
+        }
+    }
+}
