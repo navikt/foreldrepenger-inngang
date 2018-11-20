@@ -455,7 +455,7 @@ class Valg extends React.Component<Props, State> {
             </div>
             <div className={cls.element('forelder')}>
                 <div className={cls.element('ingress-knapp')}>
-                    <TypografiBase type="element">
+                    <TypografiBase type="undertittel">
                         {getTranslation('veiviser.ingress.knapper', this.props.lang)}
                     </TypografiBase>
                 </div>
