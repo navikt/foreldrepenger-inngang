@@ -70,7 +70,7 @@ const OmForeldrepenger: React.StatelessComponent<Props & IntlProps> = ({ locatio
                 <div className={cls.element('sidebar')}>
                     <Innholdsfortegnelse sections={sections} />
                 </div>
-                <article>
+                <article className={cls.element('article')}>
                     <Breadcrumbs path={location.pathname} />
                     <ForÅFåForeldrepenger id={sections[0]} />
                     <HvorLenge id={sections[1]} />

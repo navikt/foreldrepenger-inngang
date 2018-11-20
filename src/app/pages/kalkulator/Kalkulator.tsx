@@ -133,7 +133,7 @@ class Planlegger extends React.Component<IntlProps, State> {
             <div className={classnames(cls.className, infosiderCls.className)}>
                 <Sidebanner text={getTranslation('kalkulator.bannertekst', lang)} />
                 <div className={infosiderCls.element('container')}>
-                    <article>
+                    <article className={infosiderCls.element('article')}>
                         <Breadcrumbs path={location.pathname} />
 
                         <PanelMedIllustrasjon

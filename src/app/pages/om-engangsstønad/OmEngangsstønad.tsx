@@ -37,7 +37,7 @@ const OmEngangsstonad: React.StatelessComponent<Props & IntlProps> = ({ location
             <OmEngangsstønadHeader />
             <Sidebanner text={getTranslation('om_engangsstønad.tittel', lang)} />
             <div className={infosiderCls.element('container')}>
-                <article>
+                <article className={infosiderCls.element('article')}>
                     <Breadcrumbs path={location.pathname} />
                     <HvaErEngangsstønad />
                     <HvaKanDuFå />
