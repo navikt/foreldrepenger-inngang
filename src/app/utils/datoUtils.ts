@@ -1,7 +1,7 @@
 import moment from 'moment';
 
 export const datoForUttakErGyldig = (dato: Date) => {
-    const valgtDato = moment(dato);
+    const valgtDato = moment(dato).startOf('day');
 
     // Alle datoer i 2018 er gyldige
     const førsteJanuar2019 = moment('01.01.2019', 'DD.MM.YYYY');
