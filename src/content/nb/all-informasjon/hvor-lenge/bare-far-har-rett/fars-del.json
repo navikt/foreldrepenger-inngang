@@ -14,7 +14,7 @@
                 "text": " etter fødselen. Adopterer dere, starter foreldrepengeperioden din fra ",
                 "marks": []
             },
-            { "type": "span", "text": "adopsjonsdatoen", "marks": ["bold"] },
+            { "type": "span", "text": "omsorgsovertakelsen", "marks": ["bold"] },
             { "type": "span", "text": ".", "marks": [] }
         ],
         "markDefs": []
