@@ -5,7 +5,17 @@
         "children": [
             {
                 "type": "span",
-                "text": "Du får en engangssum på 63 240 kroner for hvert barn du føder eller adopterer. ",
+                "text": "Du får en engangssum på ",
+                "marks": []
+            },
+            {
+                "type": "span",
+                "text": "ENGANGSSUM_PER_BARN",
+                "marks": ["variable", "bold"]
+            },
+            {
+                "type": "span",
+                "text": " kroner for hvert barn du føder eller adopterer.",
                 "marks": []
             }
         ],
@@ -17,7 +27,7 @@
         "children": [
             {
                 "type": "span",
-                "text": "Adopterer du barnet til ektefellen din, har du ikke rett til engangsstønad. Det samme gjelder hvis du adopterer barn over 15 år. ",
+                "text": "Adopterer du barnet til ektefellen din, har du ikke rett til engangsstønad. Det samme gjelder hvis du adopterer barn over 15 år.",
                 "marks": []
             }
         ],
