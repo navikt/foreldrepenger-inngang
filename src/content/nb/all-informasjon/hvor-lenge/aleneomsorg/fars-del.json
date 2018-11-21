@@ -9,8 +9,8 @@
                 "marks": []
             },
             { "type": "span", "text": "barnet er født", "marks": ["bold"] },
-            { "type": "span", "text": " eller på ", "marks": [] },
-            { "type": "span", "text": "adopsjonsdatoen", "marks": ["bold"] },
+            { "type": "span", "text": " eller på datoen for", "marks": [] },
+            { "type": "span", "text": "omsorgsovertakelse", "marks": ["bold"] },
             { "type": "span", "text": ".", "marks": [] }
         ],
         "markDefs": []
