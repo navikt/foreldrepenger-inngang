@@ -37,7 +37,10 @@ class Mobilmeny extends React.Component<Props, State> {
 
     handleSectionChange = (section: string) => {
         this.setState({
-            currentSection: section
+            currentSection: section,
+
+            // Lukk menyen hvis brukeren har scrollet til toppen.
+            expanded: section ? this.state.expanded : false
         });
     };
 
@@ -54,11 +57,11 @@ class Mobilmeny extends React.Component<Props, State> {
 
         return (
             <Panel
-                onClick={this.handleToggle}
                 className={classnames(classnames(cls.className), {
                     [cls.element('hidden')]: !this.state.currentSection
                 })}>
                 <div
+                    onClick={this.handleToggle}
                     className={cls.element('header', this.state.expanded ? 'expanded' : undefined)}>
                     <div className={cls.element('flexLeft')}>
                         <div className={cls.element('icon')}>

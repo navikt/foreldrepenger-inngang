@@ -92,8 +92,6 @@ class Innholdsfortegnelse extends React.Component<Props, State> {
             if (didSectionChange) {
                 nextState.currentSection = nextSection;
 
-                console.warn('Section changed');
-
                 if (this.props.onSectionChange) {
                     this.props.onSectionChange(this.state.sectionNames[nextSection]);
                 }

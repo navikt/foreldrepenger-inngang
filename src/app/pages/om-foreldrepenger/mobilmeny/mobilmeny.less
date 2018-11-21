@@ -13,17 +13,17 @@
     align-items: stretch;
 
     transform: none;
-    transition: transform 200ms;
+    transition: transform 200ms, visibility 200ms;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.4);
-    // background-color: rgba(255, 255, 255, 0.4);
-    // backdrop-filter: grayscale(90%);
     border-radius: 0;
+    visibility: visible;
 
     &__icon {
         margin-right: 1rem;
     }
 
     &__hidden {
+        visibility: hidden;
         transform: translateY(-110%);
     }
 
@@ -36,12 +36,14 @@
         .typo-element {
             overflow: hidden;
             white-space: nowrap;
+            text-overflow: ellipsis;
         }
 
         .mobilmeny__flexLeft {
             display: flex;
             flex-direction: row;
             align-items: center;
+            overflow: hidden;
         }
 
         &--expanded {
@@ -54,6 +56,7 @@
             .mobilmeny__flexLeft {
                 flex: 1;
                 justify-content: center;
+                overflow: unset;
             }
 
             .mobilmeny__icon {
@@ -69,15 +72,14 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding-bottom: 1.5rem;
         }
+    }
 
-        .mobilmeny__lenker {
-            display: flex;
-            width: 100%;
-            flex-direction: column;
-            align-items: flex-start;
-        }
+    &__lenker {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
     }
 
     &__søkNå {
@@ -91,13 +93,25 @@
     }
 
     @media (min-width: @mobile-breakpoint) {
-        &__lenker {
-            flex-wrap: wrap;
-            max-height: 130px;
+        &__expandable--expanded {
+            margin-bottom: 1.5rem;
         }
-        
-        &__lenke {
-            width: 33%;
+
+        &__lenker {
+            padding: 0 2.5rem;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-column-gap: 1rem;
+        }
+
+        .seksjonslenker__lenke {
+            &:nth-child(2n-1) {
+                text-align: right;
+            }
+
+            &:nth-child(2n) {
+                text-align: left;
+            }
         }
 
         &__søkNå {
@@ -106,6 +120,19 @@
 
             button {
                 width: unset;
+                min-width: 12rem;
+            }
+        }
+    }
+
+    @media (min-width: @tablet-breakpoint) {
+        &__lenker {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .seksjonslenker__lenke {
+            &:nth-child(n) {
+                text-align: left;
             }
         }
     }
