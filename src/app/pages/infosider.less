@@ -13,7 +13,6 @@
     }
 
     &__sidebar {
-        width: 200px;
         margin-top: 86px;
         flex-shrink: 0;
         display: none;
@@ -48,21 +47,12 @@
         &__container {
             margin: 0 1rem 1rem;
         }
-
-        &__article {
-            margin: 0 1rem;
-        }
     }
 
     &--withSidebar {
         @media (min-width: @tablet-breakpoint) {
             .infosider__container {
                 margin: 0 1.5rem 1rem;
-            }
-
-            .infosider__article {
-                margin-left: 1.5rem;
-                margin-right: 0;
             }
         }
 
@@ -75,10 +65,6 @@
         @media (min-width: @add-filler-breakpoint) {
             .infosider__filler {
                 width: 200px;
-            }
-
-            .infosider__article {
-                margin-right: 1.5rem;
             }
         }
     }

@@ -9,17 +9,22 @@ const cls = BEMHelper('svgMask');
 interface Props {
     svg: IconRef;
     small?: boolean;
+    smaller?: boolean;
     anchorToBottom?: boolean;
 }
 
-const SvgMask: StatelessComponent<Props> = ({ svg, small, anchorToBottom }) => {
-    let svgSize = small ? 64 : 100;
+const SvgMask: StatelessComponent<Props> = ({ svg, small, smaller, anchorToBottom }) => {
+    let svgSize = smaller ? 40 : small ? 64 : 100;
     if (!anchorToBottom) {
         svgSize = svgSize * 0.6;
     }
 
     return (
-        <div className={classnames(cls.className, { [cls.modifier('small')]: small })}>
+        <div
+            className={classnames(cls.className, {
+                [cls.modifier('small')]: small,
+                [cls.modifier('smaller')]: smaller
+            })}>
             <CustomSVGFromSprite
                 className={anchorToBottom ? cls.element('anchorToBOttom') : ''}
                 iconRef={svg}
