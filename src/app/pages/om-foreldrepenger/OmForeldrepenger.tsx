@@ -70,9 +70,9 @@ const OmForeldrepenger: React.StatelessComponent<Props & IntlProps> = ({ locatio
             <Sidebanner text={getTranslation('om_foreldrepenger.tittel', lang)} />
             <div className={classnames(cls.element('container'), cls.modifier('withSidebar'))}>
                 <MediaQuery minWidth={1072}>
-                    <div className={cls.element('sidebar')}>
+                    <aside className={cls.element('sidebar')}>
                         <Innholdsfortegnelse sections={sections} />
-                    </div>
+                    </aside>
                 </MediaQuery>
                 <MediaQuery maxWidth={1071}>
                     <Mobilmeny sections={sections} />

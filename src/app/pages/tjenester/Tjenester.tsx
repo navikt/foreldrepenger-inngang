@@ -24,7 +24,7 @@ const Tjenester = ({ lang }: IntlProps) => {
         <div className={infosiderCls.className}>
             <Sidebanner text={getTranslation('tjenester.tittel', lang)} />
             <div className={infosiderCls.element('body')}>
-                <main className={infosiderCls.element('content')}>
+                <div role="main" className={infosiderCls.element('content')}>
                     <Breadcrumbs path={location.pathname} />
 
                     <div className={cls.className}>
@@ -47,7 +47,7 @@ const Tjenester = ({ lang }: IntlProps) => {
                             />
                         </Lenkepanel>
                     </div>
-                </main>
+                </div>
             </div>
         </div>
     );
