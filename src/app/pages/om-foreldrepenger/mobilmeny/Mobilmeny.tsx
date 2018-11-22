@@ -85,11 +85,12 @@ class Mobilmeny extends React.Component<Props, State> {
             getTranslation('om_foreldrepenger.tittel', this.props.lang);
 
         return (
-            <div ref={this.menuRef}>
-                <Panel
-                    className={classnames(classnames(cls.className), {
-                        [cls.element('hidden')]: !this.state.currentSection
-                    })}>
+            <nav
+                className={classnames(classnames(cls.className), {
+                    [cls.element('hidden')]: !this.state.currentSection
+                })}
+                ref={this.menuRef}>
+                <Panel>
                     <MobilMenyHeader
                         header={tittel}
                         expanded={this.state.expanded}
@@ -116,7 +117,7 @@ class Mobilmeny extends React.Component<Props, State> {
                         </WithLink>
                     </div>
                 </Panel>
-            </div>
+            </nav>
         );
     };
 }
