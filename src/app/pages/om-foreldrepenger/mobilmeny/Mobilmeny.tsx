@@ -27,13 +27,38 @@ interface State {
 }
 
 class Mobilmeny extends React.Component<Props, State> {
+    menuRef: React.RefObject<HTMLDivElement>;
+
     constructor(props: Props) {
         super(props);
 
+        this.menuRef = React.createRef();
         this.state = {
             expanded: false
         };
     }
+
+    componentWillMount = () => {
+        document.addEventListener('mousedown', this.handleClick);
+    };
+
+    componentWillUnmount = () => {
+        document.removeEventListener('mousedown', this.handleClick);
+    };
+
+    handleClick = (event: Event) => {
+        if (this.menuRef.current && this.menuRef.current.contains(event.target as Node)) {
+            return;
+        } else {
+            this.handleClickOutside();
+        }
+    };
+
+    handleClickOutside = () => {
+        this.setState({
+            expanded: false
+        });
+    };
 
     handleSectionChange = (section: string) => {
         this.setState({
@@ -56,44 +81,60 @@ class Mobilmeny extends React.Component<Props, State> {
             getTranslation('om_foreldrepenger.tittel', this.props.lang);
 
         return (
-            <Panel
-                className={classnames(classnames(cls.className), {
-                    [cls.element('hidden')]: !this.state.currentSection
-                })}>
-                <div
-                    onClick={this.handleToggle}
-                    className={cls.element('header', this.state.expanded ? 'expanded' : undefined)}>
-                    <div className={cls.element('flexLeft')}>
-                        <div className={cls.element('icon')}>
-                            <SvgMask smaller={true} svg={icon} />
+            <div ref={this.menuRef}>
+                <Panel
+                    className={classnames(classnames(cls.className), {
+                        [cls.element('hidden')]: !this.state.currentSection
+                    })}>
+                    <MobilMenyHeader
+                        header={tittel}
+                        expanded={this.state.expanded}
+                        onClick={this.handleToggle}
+                    />
+                    <div
+                        className={cls.element(
+                            'expandable',
+                            this.state.expanded ? 'expanded' : undefined
+                        )}>
+                        <div className={cls.element('lenker')}>
+                            <Seksjonslenker
+                                sections={this.props.sections}
+                                onSectionChange={this.handleSectionChange}
+                            />
                         </div>
-                        <Element>{tittel}</Element>
+                        <WithLink
+                            className={cls.element('søkNå')}
+                            url="/hva-soker-du/foreldrepenger"
+                            noStyling={true}>
+                            <Hovedknapp>
+                                {getTranslation('innholdsfortegnelse.søk_nå', this.props.lang)}
+                            </Hovedknapp>
+                        </WithLink>
                     </div>
-                    <NavFrontendChevron stor={true} type={this.state.expanded ? 'opp' : 'ned'} />
-                </div>
-                <div
-                    className={cls.element(
-                        'expandable',
-                        this.state.expanded ? 'expanded' : undefined
-                    )}>
-                    <div className={cls.element('lenker')}>
-                        <Seksjonslenker
-                            sections={this.props.sections}
-                            onSectionChange={this.handleSectionChange}
-                        />
-                    </div>
-                    <WithLink
-                        className={cls.element('søkNå')}
-                        url="/hva-soker-du/foreldrepenger"
-                        noStyling={true}>
-                        <Hovedknapp>
-                            {getTranslation('innholdsfortegnelse.søk_nå', this.props.lang)}
-                        </Hovedknapp>
-                    </WithLink>
-                </div>
-            </Panel>
+                </Panel>
+            </div>
         );
     };
 }
+
+const MobilMenyHeader = ({
+    onClick,
+    expanded,
+    header
+}: {
+    onClick: () => void;
+    expanded: boolean;
+    header: string;
+}) => (
+    <div onClick={onClick} className={cls.element('header', expanded ? 'expanded' : undefined)}>
+        <div className={cls.element('flexLeft')}>
+            <div className={cls.element('icon')}>
+                <SvgMask smaller={true} svg={icon} />
+            </div>
+            <Element>{header}</Element>
+        </div>
+        <NavFrontendChevron stor={true} type={expanded ? 'opp' : 'ned'} />
+    </div>
+);
 
 export default withIntl(Mobilmeny);
