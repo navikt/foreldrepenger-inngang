@@ -6,6 +6,7 @@
     left: 0rem;
     width: 100%;
     z-index: 10;
+    touch-action: none;
 
     display: flex;
     flex-direction: column;
@@ -33,13 +34,13 @@
             overflow: hidden;
             white-space: nowrap;
             text-overflow: ellipsis;
+            margin: 0 0.5rem;
         }
 
         .mobilmeny__flexLeft {
             display: flex;
             flex-direction: row;
             align-items: center;
-            overflow: hidden;
         }
 
         &--expanded {
