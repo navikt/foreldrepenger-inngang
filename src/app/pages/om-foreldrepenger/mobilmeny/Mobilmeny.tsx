@@ -39,22 +39,26 @@ class Mobilmeny extends React.Component<Props, State> {
     }
 
     componentWillMount = () => {
-        document.addEventListener('mousedown', this.handleClick);
+        document.addEventListener('click', this.handleClick);
     };
 
     componentWillUnmount = () => {
-        document.removeEventListener('mousedown', this.handleClick);
+        document.removeEventListener('click', this.handleClick);
     };
 
-    handleClick = (event: Event) => {
-        if (this.menuRef.current && this.menuRef.current.contains(event.target as Node)) {
-            return;
-        } else {
-            this.handleClickOutside();
+    handleClick = (event: MouseEvent) => {
+        if (this.menuRef.current) {
+            const target = event.target as HTMLElement;
+            const targetIsHref = target.tagName === 'A';
+            const clickedOutsideMenu = !this.menuRef.current.contains(target);
+
+            if (targetIsHref || clickedOutsideMenu) {
+                this.closeMenu();
+            }
         }
     };
 
-    handleClickOutside = () => {
+    closeMenu = () => {
         this.setState({
             expanded: false
         });
