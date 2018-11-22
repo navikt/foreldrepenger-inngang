@@ -182,7 +182,7 @@
     "om_foreldrepenger.ferie.tittel": "Hvis du skal på ferie",
     "om_foreldrepenger.ferie.eksempel_label": "Eksempel på hvordan du kan forlenge foreldrepengeperioden din når du utsetter:",
     "om_foreldrepenger.ferie.rett_til_utsettelse": "Ferie som gir rett til å utsette",
-    "om_foreldrepenger.ferie.utsette": "Slik går du frem for å utsette",
+    "om_foreldrepenger.ferie.utsette": "Slik går du frem for å utsette når du har ferie",
     
     "om_foreldrepenger.nye_regler.tittel": "Nye regler fra 1. juli 2018",
     "om_foreldrepenger.nye_regler_label": "Barnet er født eller adoptert",
@@ -199,8 +199,8 @@
     "om_foreldrepenger.menHvaHvis.hjemmeSamtidig": "hjemme samtidig",
 
     "om_foreldrepenger.jobbe.tittel": "Hvis du vil jobbe",
-    "om_foreldrepenger.jobbe.heltidsjobb": "Slik går du frem ved heltidsjobb",
-    "om_foreldrepenger.jobbe.deltidsjobb": "Slik går du frem når du jobber delvis",
+    "om_foreldrepenger.jobbe.heltidsjobb": "Slik går du frem hvis du er arbeidstaker",
+    "om_foreldrepenger.jobbe.deltidsjobb": "Slik går du frem hvis du er selvstendig eller frilanser",
 
     "om_foreldrepenger.sykdom.tittel": "Hvis en av dere blir syke",
     "om_foreldrepenger.sykdom.innlagt": "Barnet er innlagt",
