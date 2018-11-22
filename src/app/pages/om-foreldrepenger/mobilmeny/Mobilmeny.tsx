@@ -131,8 +131,8 @@ const MobilMenyHeader = ({
             <div className={cls.element('icon')}>
                 <SvgMask smaller={true} svg={icon} />
             </div>
-            <Element>{header}</Element>
         </div>
+        <Element>{header}</Element>
         <NavFrontendChevron stor={true} type={expanded ? 'opp' : 'ned'} />
     </div>
 );

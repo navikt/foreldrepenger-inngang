@@ -18,10 +18,6 @@
     border-radius: 0;
     visibility: visible;
 
-    &__icon {
-        margin-right: 1rem;
-    }
-
     &__hidden {
         visibility: hidden;
         transform: translateY(-110%);
@@ -80,6 +76,12 @@
         text-align: center;
         column-count: 1;
         column-gap: 2rem;
+    }
+
+    .seksjonslenker__lenke {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
     }
 
     &__søkNå {
