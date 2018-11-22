@@ -12,6 +12,7 @@ import { CSSTransition } from 'react-transition-group';
 import KnappBase from 'nav-frontend-knapper';
 import NavFrontendChevron from 'nav-frontend-chevron';
 import UtvidetInformasjon from '../../../kalkulator/utvidetinformasjon/UtvidetInformasjon';
+import DuHarRett from './komponenter/DuHarRett';
 
 const cls = BEMHelper('valg');
 
@@ -78,6 +79,9 @@ interface State {
     numberofCheckBoxz: number;
     result: object[];
     inputFade: boolean;
+    inputVal: string;
+    loadingSpinner: boolean;
+    buttonCls: string;
 }
 
 type Props = Lang & TabContent;
@@ -98,6 +102,7 @@ class Valg extends React.Component<Props, State> {
                 [false, false],
                 [false, false],
                 [false, false],
+                [false, false],
                 [false, false]
             ],
             valg: [], // valg : listen som blir mappet i render
@@ -106,11 +111,14 @@ class Valg extends React.Component<Props, State> {
             antallRader: 0, // teller for antall rader i valg
             numberofCheckBoxz: 2, // antall checkbox som skal genereres pr rad,
             result: [],
-            inputFade: true
+            inputFade: true,
+            inputVal: '',
+            loadingSpinner: false,
+            buttonCls: ''
         };
     }
 
-    updateToggle(e: any, nr: any): void {
+    updateToggle = (e: any, nr: any): void => {
         if (this.toggled !== nr) {
             // hvis annen tab valgt
             this.toggled = nr;
@@ -146,7 +154,7 @@ class Valg extends React.Component<Props, State> {
                     )
             );
         }
-    }
+    };
 
     initItem(
         valgListe: object[],
@@ -194,7 +202,8 @@ class Valg extends React.Component<Props, State> {
         ischeckbox: boolean,
         dropdown: object
     ) {
-        let list, content;
+        let list;
+        let content;
         list = valgListe;
         this.belop = 'inntekt i kroner';
         dropdown ? (content = dropdown) : (content = <div />);
@@ -208,7 +217,7 @@ class Valg extends React.Component<Props, State> {
         this.setState({ valg: list });
     }
 
-    goToSection(id: string): any {
+    static goToSection(id: string): any {
         const target = document.querySelector(id);
         if (target) {
             target.scrollIntoView({ behavior: 'smooth' });
@@ -227,7 +236,7 @@ class Valg extends React.Component<Props, State> {
         );
     }
 
-    insertInput(e: any, checkboksNiva: number, radnummer: number) {
+    insertInput = (checkboksNiva: number, radnummer: number) => (e: any) => {
         const initValue = e.target.value.replace(/[, ]+/g, '').trim();
         e.target.value = initValue.replace(/\B(?=(\d{3})+(?!\d))/g, ',').trim();
         e.persist();
@@ -241,7 +250,45 @@ class Valg extends React.Component<Props, State> {
                     : this.checkRow(checkboksNiva, 1, radnummer);
             }
         }, 1500);
-    }
+    };
+
+    insertInputVal = (check: boolean, radNiva: number) => (e: any) => {
+        e.preventDefault();
+        if (!check) {
+            const initValue = e.target.value;
+            const tmpItems = [...this.state.valg];
+            const checked = [...this.state.checkbox];
+            tmpItems.splice(radNiva + 1);
+            for (let i = radNiva; i < this.state.checkbox.length; i++) {
+                for (let j = 0; j < 2; j++) {
+                    checked[i][j] = false;
+                }
+            }
+            this.setState({
+                inputVal: initValue,
+                buttonCls: '',
+                valg: tmpItems,
+                checkbox: checked,
+                result: []
+            });
+        } else {
+            const initValue = e.target.value;
+            this.setState({ inputVal: initValue, buttonCls: '' });
+        }
+    };
+
+    checkInputValue = (checkboksNiva: number, radnummer: number) => (e: any) => {
+        e.preventDefault();
+        console.log('checkboxNiva', checkboksNiva, 'radnummer', radnummer, 'e', e);
+        this.setState({ loadingSpinner: true });
+        setTimeout(() => {
+            const inntekt = parseInt(this.state.inputVal, 10);
+            inntekt >= 48441
+                ? this.checkRow(checkboksNiva, 0, radnummer)
+                : this.checkRow(checkboksNiva, 1, radnummer);
+            this.setState({ loadingSpinner: false, buttonCls: 'button--gone' });
+        }, 1200);
+    };
 
     insertBoxes(
         numBox: number,
@@ -269,9 +316,17 @@ class Valg extends React.Component<Props, State> {
 
     insertResultat(knapptekst: string, dialogtxt: string) {
         const res = [];
-        res.push(<DialogBoks knapp={knapptekst} txt={dialogtxt} lang={this.props.lang} />);
+        res.push(
+            <DuHarRett
+                lang={this.props.lang}
+                overskrift={'veiviser.valg.resultat.overskrift.foreldrepenger'}
+                punkt1={true}
+                punkt2={true}
+                punkt3={true}
+            />
+        );
         res.push(<NavigasjonsBoks lang={this.props.lang} />);
-        this.setState({ result: res }, () => setTimeout(this.goToSection('#mainSokKnapp'), 500));
+        this.setState({ result: res }, () => setTimeout(Valg.goToSection('#mainSokKnapp'), 500));
     }
 
     checkRow(checkBoxNiva: number, svar: number, radNiva: number) {
@@ -306,17 +361,32 @@ class Valg extends React.Component<Props, State> {
         console.log('///////////////////////////////');
         console.log('checkBoxNiva: ', checkBoxNiva, 'svar: ', svar, 'radNiva: ', radNiva);
         const checked = [...this.state.checkbox];
+
         if (checkBoxNiva === 0) {
             // nivå 1
             if (svar === 0) {
                 // svar : ja
                 checked[checkBoxNiva][svar] = true;
                 radNiva = 1;
-                checkBoxNiva = 3;
+                checkBoxNiva = 2;
                 this.setState(
-                    { antallRader: radNiva, teller: checkBoxNiva, checkbox: checked },
+                    { antallRader: radNiva, teller: checkBoxNiva, checkbox: checked, inputVal: '' },
                     () =>
-                        this.initInputField(
+                        this.insertBoxes(
+                            this.state.numberofCheckBoxz,
+                            this.state.teller,
+                            this.state.valg,
+                            this.state.antallRader
+                            /*
+                this.getDropdown(
+                                'veiviser.valg.hjelpetekst.utbetalinger',
+                                'veiviser.valg.hjelpetekst.lukk',
+                                'veiviser/infobox/utbetalinger-fra-nav'
+                            ) */
+                        )
+                );
+
+                /*this.initInputField(
                             this.state.valg,
                             this.state.teller,
                             this.state.antallRader,
@@ -326,8 +396,7 @@ class Valg extends React.Component<Props, State> {
                                 'veiviser.valg.hjelpetekst.lukk',
                                 'veiviser/infobox/til-manedsinntekt'
                             )
-                        )
-                );
+                        )*/
             } else if (svar === 1) {
                 // svar : nei
                 checked[checkBoxNiva][svar] = true;
@@ -340,14 +409,27 @@ class Valg extends React.Component<Props, State> {
                             this.state.numberofCheckBoxz,
                             this.state.teller,
                             this.state.valg,
-                            this.state.antallRader,
+                            this.state.antallRader
+                            /*
                             this.getDropdown(
-                                'veiviser.valg.hjelpetekst.utbetalinger',
-                                'veiviser.valg.hjelpetekst.lukk',
-                                'veiviser/infobox/utbetalinger-fra-nav'
-                            )
+                                            'veiviser.valg.hjelpetekst.utbetalinger',
+                                            'veiviser.valg.hjelpetekst.lukk',
+                                            'veiviser/infobox/utbetalinger-fra-nav'
+                                        ) */
                         )
                 );
+
+                /*this.initInputField(
+                            this.state.valg,
+                            this.state.teller,
+                            this.state.antallRader,
+                            false,
+                            this.getDropdown(
+                                'veiviser.valg.hjelpetekst.mndInntekt',
+                                'veiviser.valg.hjelpetekst.lukk',
+                                'veiviser/infobox/til-manedsinntekt'
+                            )
+                        )*/
             }
         } else if (checkBoxNiva === 1) {
             // nivå 2
@@ -355,9 +437,9 @@ class Valg extends React.Component<Props, State> {
                 // svar : ja
                 checked[checkBoxNiva][svar] = true;
                 radNiva = 2;
-                checkBoxNiva = 3;
+                checkBoxNiva = 2;
                 this.setState(
-                    { antallRader: radNiva, teller: checkBoxNiva, checkbox: checked },
+                    { antallRader: radNiva, teller: checkBoxNiva, checkbox: checked, inputVal: '' },
                     () =>
                         this.initInputField(
                             this.state.valg,
@@ -375,7 +457,7 @@ class Valg extends React.Component<Props, State> {
                 // svar : nei
                 checked[checkBoxNiva][svar] = true;
                 radNiva = 2;
-                checkBoxNiva = 2;
+                checkBoxNiva = 5;
                 this.setState(
                     { antallRader: radNiva, teller: checkBoxNiva, checkbox: checked },
                     () =>
@@ -383,7 +465,12 @@ class Valg extends React.Component<Props, State> {
                             this.state.numberofCheckBoxz,
                             this.state.teller,
                             this.state.valg,
-                            this.state.antallRader
+                            this.state.antallRader,
+                            this.getDropdown(
+                                'veiviser.valg.hjelpetekst.andreInntekt',
+                                'veiviser.valg.hjelpetekst.lukk',
+                                'veiviser/infobox/andre-inntekskilder'
+                            )
                         )
                 );
             }
@@ -392,10 +479,10 @@ class Valg extends React.Component<Props, State> {
             if (svar === 0) {
                 // svar : ja
                 checked[checkBoxNiva][svar] = true;
-                radNiva = 3;
+                checked[0][0] ? (radNiva = 2) : (radNiva = 3);
                 checkBoxNiva = 3;
                 this.setState(
-                    { antallRader: radNiva, teller: checkBoxNiva, checkbox: checked },
+                    { antallRader: radNiva, teller: checkBoxNiva, checkbox: checked, inputVal: '' },
                     () =>
                         this.initInputField(
                             this.state.valg,
@@ -412,21 +499,7 @@ class Valg extends React.Component<Props, State> {
             } else if (svar === 1) {
                 // svar : nei
                 checked[checkBoxNiva][svar] = true;
-                radNiva = 3;
-                checkBoxNiva = 3;
-                this.setState(
-                    { antallRader: radNiva, teller: checkBoxNiva, checkbox: checked },
-                    () => this.insertResultat(knapptxt[1], dialogTekst[1]) // søk engangssstønad
-                );
-            }
-        } else if (checkBoxNiva === 3) {
-            console.log('checkBoxNivå', checkBoxNiva, 'svar', svar, radNiva);
-            // nivå 4
-            if (svar === 0) {
-                // svar : ja
-                checked[checkBoxNiva][svar] = true;
-                checked[checkBoxNiva][1] = false;
-                checked[0][0] ? (radNiva = 2) : (radNiva = 4);
+                checked[0][0] ? (radNiva = 2) : (radNiva = 3);
                 checkBoxNiva = 4;
                 this.setState(
                     { antallRader: radNiva, teller: checkBoxNiva, checkbox: checked },
@@ -438,26 +511,90 @@ class Valg extends React.Component<Props, State> {
                             this.state.antallRader
                         )
                 );
+            }
+        } else if (checkBoxNiva === 3) {
+            console.log('checkBoxNivå', checkBoxNiva, 'svar', svar, radNiva);
+            // nivå 4
+            if (svar === 0) {
+                // svar : ja
+                checked[checkBoxNiva][svar] = true;
+                checked[checkBoxNiva][1] = false;
+                checked[0][0] ? (radNiva = 3) : (radNiva = 4);
+                checkBoxNiva = 4;
+                this.setState(
+                    { antallRader: radNiva, teller: checkBoxNiva, checkbox: checked },
+                    () =>
+                        this.insertBoxes(
+                            this.state.numberofCheckBoxz,
+                            this.state.teller,
+                            this.state.valg,
+                            this.state.antallRader,
+                            this.getDropdown(
+                                'veiviser.valg.hjelpetekst.medlemskap',
+                                'veiviser.valg.hjelpetekst.lukk',
+                                'veiviser/infobox/til-medlemskap'
+                            )
+                        )
+                );
             } else if (svar === 1) {
                 // svar : nei
                 // hurra du burde søke ES ( set inn func for dette resultat )
                 checked[checkBoxNiva][svar] = true;
                 checked[checkBoxNiva][0] = false;
-                checked[0][0] ? (radNiva = 2) : (radNiva = 4);
-                checkBoxNiva = 3;
+                checked[0][0] ? (radNiva = 3) : (radNiva = 4);
+
+                checkBoxNiva = 4;
                 this.setState(
                     { antallRader: radNiva, teller: checkBoxNiva, checkbox: checked },
-                    () => this.insertResultat(knapptxt[1], dialogTekst[1]) // søk engangsstønad
+                    () =>
+                        this.insertBoxes(
+                            this.state.numberofCheckBoxz,
+                            this.state.teller,
+                            this.state.valg,
+                            this.state.antallRader,
+                            this.getDropdown(
+                                'veiviser.valg.hjelpetekst.medlemskap',
+                                'veiviser.valg.hjelpetekst.lukk',
+                                'veiviser/infobox/til-medlemskap'
+                            )
+                        )
                 );
             }
         } else if (checkBoxNiva === 4) {
             // nivå 5
-            if (svar === 0) {
+            if (svar === 0) {   // inne i denne if betyr at person har medlemskap
+
+                console.log(" checked[0][0]", checked[0][0], " checked[2][0]", checked[2][0], " checked[3][0]", checked[3][0]);
+                console.log(" checked[0][0]", checked[0][0], " checked[2][0]", checked[2][0], " checked[3][1]", checked[3][1]);
+                console.log(" checked[0][0]", checked[0][0], " checked[1][1]", checked[1][1]);
+                console.log(" checked[2][0]", checked[2][0], " checked[3][0]", checked[3][0]);
                 // svar : ja
                 // Hurra du burde søke om FP, og far har rett (func for dette )
                 checked[checkBoxNiva][svar] = true;
-                checked[0][0] ? (radNiva = 3) : (radNiva = 5);
                 checkBoxNiva = 5;
+                ++radNiva;
+
+
+                if(checked[2][0] && checked[3][0]) {
+
+                    // har hatt inntekt / annen inntekt + over 6mnd + over 48 441
+                    this.setState(
+                        { antallRader: radNiva, teller: checkBoxNiva, checkbox: checked },
+                        () => this.insertResultat(knapptxt[0], dialogTekst[0])
+                    );
+
+                } else {
+
+                    // mangel på enten inntekt siste 6mnd eller inntekt over 48 441
+
+                    // gjør sjekk her om mor eller far for å avgjøre om søk ES, eller bare info ES/FP
+
+                    this.setState(
+                        { antallRader: radNiva, teller: checkBoxNiva, checkbox: checked },
+                        () => this.insertResultat(knapptxt[0], dialogTekst[0]) // SETT INN
+                    );
+                }
+
                 this.setState(
                     { antallRader: radNiva, teller: checkBoxNiva, checkbox: checked },
                     () => this.insertResultat(knapptxt[0], dialogTekst[0])
@@ -466,7 +603,7 @@ class Valg extends React.Component<Props, State> {
                 // svar : nei
                 // Hurra du burde søke om FP, Bare du skal ha FP
                 checked[checkBoxNiva][svar] = true;
-                checked[0][0] ? (radNiva = 3) : (radNiva = 5);
+                ++radNiva;
                 checkBoxNiva = 5;
                 this.setState(
                     { antallRader: radNiva, teller: checkBoxNiva, checkbox: checked },
@@ -476,26 +613,48 @@ class Valg extends React.Component<Props, State> {
                             this.state.teller,
                             this.state.valg,
                             this.state.antallRader
-                        ) // søk engangsstønad
+                        )
                 );
             }
         } else if (checkBoxNiva === 5) {
             // nivå 6
-            if (svar === 0) {
+            if (svar === 0) { // inne i denne if betyr at person har medlemskap
+
                 checked[checkBoxNiva][svar] = true;
-                checked[0][0] ? (radNiva = 4) : (radNiva = 6);
+                ++radNiva;
+                checkBoxNiva = 5;
+
+
+                if(checked[2][0] && checked[3][0]) {
+
+                    // har hatt inntekt / annen inntekt + over 6mnd + over 48 441
+                    this.setState(
+                        { antallRader: radNiva, teller: checkBoxNiva, checkbox: checked },
+                        () => this.insertResultat(knapptxt[0], dialogTekst[0])
+                    );
+
+                } else {
+
+                    // mangel på enten inntekt siste 6mnd eller inntekt over 48 441
+
+                    // gjør sjekk her om mor eller far for å avgjøre om søk ES, eller bare info ES/FP
+
+                    this.setState(
+                        { antallRader: radNiva, teller: checkBoxNiva, checkbox: checked },
+                        () => this.insertResultat(knapptxt[0], dialogTekst[0]) // SETT INN
+                    );
+                }
+
+
+
+
+            } else if (svar === 1) { // inne i denne if betyr at person IKKE har medlemskap av folketrygden
+                checked[checkBoxNiva][svar] = true;
+                ++radNiva;
                 checkBoxNiva = 5;
                 this.setState(
                     { antallRader: radNiva, teller: checkBoxNiva, checkbox: checked },
-                    () => this.insertResultat(knapptxt[0], dialogTekst[0]) // søk foreldrepenger
-                );
-            } else if (svar === 1) {
-                checked[checkBoxNiva][svar] = true;
-                checked[0][0] ? (radNiva = 4) : (radNiva = 6);
-                checkBoxNiva = 5;
-                this.setState(
-                    { antallRader: radNiva, teller: checkBoxNiva, checkbox: checked },
-                    () => this.insertResultat(knapptxt[1], dialogTekst[1]) // søk foreldrepenger
+                    () => this.insertResultat(knapptxt[1], dialogTekst[1]) // SETT INN 'IKKE RETT!'
                 );
             }
         }
@@ -537,18 +696,14 @@ class Valg extends React.Component<Props, State> {
                             ),
                             onClick: this.updateToggle[index]
                         }))}
-                        onChange={(event: any, index: number) => {
-                            this.updateToggle(event, index);
-                        }}
+                        onChange={this.updateToggle}
                     />
                 </div>
             </div>
-            <div id="test123" className={cls.element('kort')}>
+            <div className={cls.element('kort')}>
                 {this.state.valg.map((valg: any) => {
+                    this.state.antallRader === valg.rad ? (this.fade = true) : (this.fade = false);
                     if (valg.checkbox) {
-                        this.state.antallRader === valg.rad
-                            ? (this.fade = true)
-                            : (this.fade = false);
                         return (
                             <div
                                 key={valg.nr + Date.now()}
@@ -583,26 +738,37 @@ class Valg extends React.Component<Props, State> {
                     } else {
                         return (
                             <CSSTransition
-                                key={valg.nr + Date.now()}
+                                key={valg.nr}
                                 appear={true}
                                 classNames="fade"
-                                in={this.state.inputFade}
+                                in={false}
                                 timeout={1000}>
-                                <div
-                                    key={valg.nr + Date.now()}
-                                    className={cls.element('inputFelt')}>
+                                <div className={cls.element('inputFelt')}>
                                     <TypografiBase type={'element'}>{valg.sprmal}</TypografiBase>
                                     {valg.con}
-                                    <Input
-                                        className={cls.element('inputFeilt--komponent')}
-                                        label={''}
-                                        min={0}
-                                        step={5000}
-                                        onChange={(event: any) => {
-                                            this.insertInput(event, valg.nr, valg.rad);
-                                        }}
-                                        placeholder={this.belop}
-                                    />
+                                    <div className={cls.element('input--rad')}>
+                                        <Input
+                                            className={cls.element('inputFeilt--komponent')}
+                                            label={''}
+                                            min={0}
+                                            step={5000}
+                                            type="number"
+                                            value={this.state.inputVal}
+                                            onChange={this.insertInputVal(this.fade, valg.rad)}
+                                            placeholder={this.belop}
+                                        />
+                                        <div
+                                            className={cls.element(
+                                                'input--rad-knapp ' + this.state.buttonCls
+                                            )}>
+                                            <KnappBase
+                                                type="flat"
+                                                spinner={this.state.loadingSpinner}
+                                                onClick={this.checkInputValue(valg.nr, valg.rad)}>
+                                                beregn inntekt
+                                            </KnappBase>
+                                        </div>
+                                    </div>
                                 </div>
                             </CSSTransition>
                         );
@@ -625,7 +791,7 @@ class Valg extends React.Component<Props, State> {
     );
 }
 export default withIntl(Valg);
-
+/*
 const DialogBoks = ({ knapp, txt, lang }: { knapp: string; txt: string; lang: any }) => {
     return (
         <div className={cls.element('melding')}>
@@ -636,39 +802,47 @@ const DialogBoks = ({ knapp, txt, lang }: { knapp: string; txt: string; lang: an
         </div>
     );
 };
-
+*/
 const NavigasjonsBoks = ({ lang }: { lang: any }) => {
     return (
         <div className={cls.element('navigasjonsboks')}>
-            <div className={cls.element('boks')} role="button">
-                <div className={cls.element('boks-bilde')}>
-                    <FlexibleSvg
-                        iconRef={require('../../../../assets/ark/ark-money2.svg').default}
-                        width={60}
-                        height={60}
-                    />
+            <div className={cls.element('boks-border')}>
+                <div className={cls.element('boks')} role="button">
+                    <div className={cls.element('boks-gruppe')}>
+                        <div className={cls.element('boks-bilde')}>
+                            <FlexibleSvg
+                                iconRef={require('../../../../assets/ark/ark-money2.svg').default}
+                                width={80}
+                                height={80}
+                            />
+                        </div>
+                        <div className={cls.element('boks-txt')}>
+                            <TypografiBase type="normaltekst">
+                                {getTranslation('veiviser.navgigasjonsboks.kalk.label', lang)}
+                            </TypografiBase>
+                        </div>
+                    </div>
+                    <NavFrontendChevron />
                 </div>
-                <div className={cls.element('boks-txt')}>
-                    <TypografiBase type="normaltekst">
-                        {getTranslation('veiviser.navgigasjonsboks.kalk.label', lang)}
-                    </TypografiBase>
-                </div>
-                <NavFrontendChevron />
             </div>
-            <div className={cls.element('boks')} role="button">
-                <div className={cls.element('boks-bilde')}>
-                    <FlexibleSvg
-                        iconRef={require('../../../../assets/ark/ark-calendar.svg').default}
-                        width={60}
-                        height={60}
-                    />
+            <div className={cls.element('boks-border sec')}>
+                <div className={cls.element('boks')} role="button">
+                    <div className={cls.element('boks-gruppe')}>
+                        <div className={cls.element('boks-bilde')}>
+                            <FlexibleSvg
+                                iconRef={require('../../../../assets/ark/ark-calendar.svg').default}
+                                width={60}
+                                height={60}
+                            />
+                        </div>
+                        <div className={cls.element('boks-txt')}>
+                            <TypografiBase type="normaltekst">
+                                {getTranslation('veiviser.navigasjonsboks.planlegg.label', lang)}
+                            </TypografiBase>
+                        </div>
+                    </div>
+                    <NavFrontendChevron />
                 </div>
-                <div className={cls.element('boks-txt')}>
-                    <TypografiBase type="normaltekst">
-                        {getTranslation('veiviser.navigasjonsboks.planlegg.label', lang)}
-                    </TypografiBase>
-                </div>
-                <NavFrontendChevron />
             </div>
         </div>
     );

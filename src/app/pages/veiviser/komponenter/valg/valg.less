@@ -2,22 +2,62 @@
     width: 100%;
     max-width: 800px;
     background-color: white;
-    min-height: 500px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
     &__ingress {
         width: 100%;
         justify-content: center;
         text-align: center;
-        padding-bottom: 1rem;
-        padding-top: 1rem;
+    }
+
+    &__resultat--stonad-rett {
+        display: flex;
+        flex-direction: column;
+        padding-top: 0.5rem
+    }
+
+    &__resultat-stonad-body {
+        background-color: #efefef;
+        padding: 1rem 2rem 2rem 3.5rem;
+        display: flex;
+        flex-direction: column;
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+
+        .typo-innholdstittel {
+            text-align: left;
+            padding-bottom: 1rem;
+        }
+    }
+
+    &__resultat--punkter {
+        display: flex;
+        flex-direction: row;
+        padding-bottom: 0.5rem;
+    }
+    &__resultat--punkt {
+        margin-right: 0.5rem;
+    }
+
+    &__resultat-har-rett-knapp {
+        margin-top: 2rem;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        .knapp--hoved {
+            height: 2.5rem;
+        }
     }
 
     &__knapper {
         display: flex;
         flex-direction: row;
         justify-content: center;
+        padding-bottom: 3rem;
     }
 
     &__valg-fane {
@@ -88,6 +128,9 @@
     &__kort {
         display: flex;
         flex-direction: column;
+        width: 100%;
+        padding-left: 4rem;
+        padding-right: 4rem;
     }
 
     .inputPanel__label {
@@ -97,17 +140,10 @@
 
     &__kort-rad {
         display: flex;
-        flex-direction: row;
-        justify-content: center;
-
-    }
-
-    &__kort-rad {
-        display: flex;
         flex-direction: column;
         text-align: left;
         justify-content: left;
-        margin-top: 2.5rem;
+        margin-bottom: 2.5rem;
     }
 
     &__valg-checkboxes {
@@ -125,6 +161,7 @@
 
     &__forelder {
         margin-top: 1.5rem;
+        width: 100%;
     }
 
     .typo-element {
@@ -158,16 +195,30 @@
         flex-direction: column;
         justify-content: left;
         text-align: left;
-        margin-top: 2.5rem;
+        margin-bottom: 2.5rem;
         margin-left: 1.3rem;
 
         .valg__dropdown {
             padding-left: 0;
         }
 
+        &__input--rad-knapp {
+            width: 30%;
+        }
+        .knapp.knapp--flat {
+            margin-top: 0.5rem;
+            margin-left: 0.6rem;
+            height: 2.4rem;
+        }
+
         .typo-element {
             padding-left: 0;
         }
+    }
+
+    &__input--rad {
+        display: flex;
+        flex-direction: row;
     }
 
     &__inputFeilt--komponent {
@@ -178,21 +229,35 @@
         padding-left: 1.5rem;
     }
 
+    .button--gone {
+        display: none;
+    }
+
     &__navigasjonsboks {
         display: flex;
-        flex-direction: row;
-        padding: 2rem;
-        justify-content: space-around;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 2rem;
+    }
+
+    &__boks-border {
+        width: 100%;
+        background-color: #efefef;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    &__boks-border.sec {
+        padding-top: 0;
     }
 
     &__boks {
-        width: 270px;
+        background-color: white;
         display: flex;
-        flex-direction: column;
-        padding: 3rem 2rem 3rem 2rem;
+        flex-direction: row;
+        padding: 1.5rem 3rem 1.5rem 2rem;
         text-align: center;
         align-items: center;
-        border: 1px #979797 solid;
         border-radius: 5px;
 
         &:hover {
@@ -210,23 +275,30 @@
         }
     }
 
+    &__boks-gruppe {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+
     &__boks-bilde {
         flex: 1;
         background: #b9acca;
         border-radius: 50%;
-        height: 60px;
-        min-height: 60px;
-        max-width: 60px;
-        min-width: 60px;
+        height: 80px;
+        min-height: 80px;
+        max-width: 80px;
+        min-width: 80px;
         display: flex;
         align-items: center;
         justify-content: center;
         overflow: hidden;
+        margin-right: 1rem;
     }
 
     &__boks-txt {
-        padding-top: 1rem;
-        padding-bottom: 3rem;
+        display: flex;
+        align-items: center;
     }
 
     .message-appear {
