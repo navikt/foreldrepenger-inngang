@@ -76,10 +76,10 @@
     }
 
     &__lenker {
-        display: flex;
         width: 100%;
-        flex-direction: column;
-        align-items: center;
+        text-align: center;
+        column-count: 1;
+        column-gap: 2rem;
     }
 
     &__søkNå {
@@ -98,18 +98,13 @@
         }
 
         &__lenker {
-            padding: 0 2.5rem;
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-column-gap: 1rem;
+            column-count: 2;
         }
 
         .seksjonslenker__lenke {
-            &:nth-child(2n-1) {
-                text-align: right;
-            }
+            text-align: right;
 
-            &:nth-child(2n) {
+            &:nth-child(n+5) {
                 text-align: left;
             }
         }
@@ -127,7 +122,9 @@
 
     @media (min-width: @tablet-breakpoint) {
         &__lenker {
-            grid-template-columns: repeat(3, 1fr);
+            column-count: 3;
+            margin: 0 4rem;
+            max-width: @app-max-width;
         }
 
         .seksjonslenker__lenke {
