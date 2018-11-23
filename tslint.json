@@ -4,7 +4,7 @@
         "indent": [true, "spaces", 4],
         "member-access": false,
         "interface-name": [true, "never-prefix"],
-        "jsx-no-lambda": true,
+        "jsx-no-lambda": false,
         "no-submodule-imports": false,
         "object-literal-sort-keys": false,
         "no-bitwise": false,

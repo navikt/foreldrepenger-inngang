@@ -16,12 +16,12 @@ const cls = BEMHelper('veiviser');
 
 const faner = [
     {
-        label: 'Far',
-        icon: 'far1',
-    },
-    {
         label: 'Mor',
         icon: 'mor2',
+    },
+    {
+        label: 'Far',
+        icon: 'far1',
     },
     {
         label: 'Medmor',
