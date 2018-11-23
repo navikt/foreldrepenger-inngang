@@ -1,0 +1,72 @@
+@import '../../styles/index.less';
+
+.langtPanelMedBilde {
+    padding: 1.25rem;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+
+    .typo-normal {
+        white-space: pre-wrap;
+        margin-top: 0.5rem;
+        margin-right: 1rem;
+    }
+
+    &:focus {
+        .buttonFocus();
+    }
+
+    &__chevron {
+        transition: transform 200ms;
+    }
+
+    &:hover {
+        box-shadow: @navGra40 0 2px 1px 0;
+        color: @navBla;
+        cursor: pointer;
+
+        .typo-undertittel {
+            text-decoration: underline;
+        }
+
+        .langtPanelMedBilde__chevron {
+            transform: translateX(6px);
+        }
+    }
+
+    &__leftAlign {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+
+        svg {
+            margin-right: 1.0rem;
+            flex-shrink: 0;
+        }
+    }
+
+    &__flexColumn {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .typo-undertittel {
+        white-space: pre;
+    }
+
+    @media (min-width: @mobile-breakpoint) {
+        padding: 1.25rem 1.5rem 1.25rem 2rem;
+
+        &__leftAlign {
+            align-items: center;
+
+            svg {
+                margin-right: 1.5rem;
+            }
+        }
+    }
+}
