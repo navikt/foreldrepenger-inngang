@@ -1,0 +1,33 @@
+[
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Barne- og likestillingsdepartementet har lagt frem et forslag til Stortinget om å endre fordelingen av foreldrepengeperioden fra 1. januar 2019. I forslaget ønskes det at mødre- og fedrekvoten økes til 19 uker ved 80 prosent foreldrepenger, og at det da er 18 uker igjen som kan fordeles mellom mor og far etter eget ønske.",
+                "marks": []
+            }
+        ],
+        "markDefs": []
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            { "type": "span", "text": "Du kan ", "marks": [] },
+            {
+                "type": "span",
+                "text": "lese om forslaget på stortingets hjemmeside",
+                "marks": ["url_lese_om_forslaget_på_stortingets_hjemmeside", "external_link"]
+            }
+        ],
+        "markDefs": [
+            {
+                "key": "url_lese_om_forslaget_på_stortingets_hjemmeside",
+                "type": "link",
+                "href": "https://www.stortinget.no/no/Saker-og-publikasjoner/Saker/Sak/?p=73599"
+            }
+        ]
+    }
+]
