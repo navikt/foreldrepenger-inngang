@@ -1,0 +1,333 @@
+.valg {
+    width: 100%;
+    max-width: 800px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__ingress {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+
+    &__resultat--stonad-rett {
+        display: flex;
+        flex-direction: column;
+        padding-top: 0.5rem;
+        min-width: 85%;
+        margin-bottom: 3rem;
+    }
+
+    &__resultat-stonad-body {
+        background-color: #efefef;
+        padding: 1rem 3.5rem 2rem 3.5rem;
+        display: flex;
+        flex-direction: column;
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+
+        .typo-innholdstittel {
+            text-align: left;
+            padding-bottom: 1rem;
+        }
+    }
+
+    &__resultat--punkter {
+        display: flex;
+        flex-direction: row;
+        padding-bottom: 0.5rem;
+    }
+    &__resultat--punkt {
+        margin-right: 0.5rem;
+    }
+
+    &__resultat-har-rett-knapp {
+        margin-top: 2rem;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+
+        .knapp {
+            height: 2.5rem;
+        }
+
+        .knapp--standard {
+            margin-right: 1rem;
+            padding-right: 1rem;
+        }
+    }
+
+    &__knapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding-bottom: 3rem;
+    }
+
+    &__valg-fane {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .nav-frontend-tabs__tab-inner--aktiv &__valg-fane-bakgrunn {
+        opacity: 0.5;
+    }
+
+    &__valg-fane-bakgrunn {
+        background-color: #7eb0e1;
+        position: relative;
+        height: 90px;
+        width: 70px;
+        margin-top: -0.1rem;
+        margin-bottom: -4.6em;
+        z-index: 1;
+        opacity: 0;
+        border-radius: 5px;
+    }
+
+    &__valg-fane-bilde {
+        z-index: 2;
+    }
+
+    .nav-frontend-tabs {
+        width: 100%;
+    }
+    .nav-frontend-tabs__tab-list {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+
+    .storToggle {
+        width: 7.5rem;
+        height: 8rem;
+        padding: 1rem;
+    }
+
+    &__knapp-element {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__knapp-frame {
+        margin-left: 0.3rem;
+        margin-right: 0.3rem;
+        width: auto;
+        justify-items: center;
+    }
+
+    &__ingress-knapp {
+        text-align: center;
+        padding-bottom: 1rem;
+    }
+
+    &__label {
+        padding-top: 0.5rem;
+    }
+
+    &__kort {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+
+    .inputPanel__label {
+        text-align: left;
+        float: left;
+    }
+
+    &__kort-rad {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        justify-content: left;
+        margin-bottom: 2.5rem;
+    }
+
+    &__valg-checkboxes {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 0.8rem;
+    }
+
+    &__dropdown {
+        padding-left: 1.5rem;
+    }
+
+    &__forelder {
+        margin-top: 1.5rem;
+        width: 100%;
+    }
+
+    .typo-element {
+        padding-left: 1.5rem;
+        margin-bottom: 0.7rem;
+    }
+
+    .radioPanel {
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+        width: 50%;
+    }
+
+    .knapp--hoved {
+        width: 60%;
+    }
+
+    &__inputFelt {
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        text-align: left;
+        margin-bottom: 2.5rem;
+        margin-left: 1.3rem;
+
+        .valg__dropdown {
+            padding-left: 0;
+        }
+
+        &__input--rad-knapp {
+            width: 30%;
+        }
+        .knapp.knapp--flat {
+            margin-top: 0.5rem;
+            margin-left: 0.6rem;
+            height: 2.4rem;
+        }
+
+        .typo-element {
+            padding-left: 0;
+        }
+    }
+
+    &__input--rad {
+        display: flex;
+        flex-direction: row;
+    }
+
+    &__inputFeilt--komponent {
+        width: 30%;
+    }
+
+    .skjemaelement__input {
+        padding-left: 1.5rem;
+    }
+
+    .button--gone {
+        display: none;
+    }
+
+    &__navigasjonsboks {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 2rem;
+    }
+
+    &__boks-border {
+        width: 100%;
+        background-color: #efefef;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    &__boks-border.sec {
+        padding-top: 0;
+    }
+
+    &__boks {
+        background-color: white;
+        display: flex;
+        flex-direction: row;
+        padding: 1.5rem 3rem 1.5rem 2rem;
+        text-align: center;
+        align-items: center;
+        border-radius: 5px;
+
+        &:hover {
+            color: #0067c5;
+            box-shadow: #b7b1a9 0 2px 1px 0;
+            cursor: pointer;
+
+            &__boks-txt .typo-normal {
+                text-decoration: underline;
+            }
+
+            .nav-frontend-chevron {
+                left: 6px;
+            }
+        }
+    }
+
+    &__boks-gruppe {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+
+    &__boks-bilde {
+        flex: 1;
+        background: #b9acca;
+        border-radius: 50%;
+        height: 80px;
+        min-height: 80px;
+        max-width: 80px;
+        min-width: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        margin-right: 1rem;
+    }
+
+    &__boks-txt {
+        display: flex;
+        align-items: center;
+    }
+
+    .message-appear {
+        opacity: 0.01;
+        transform: scale(0.9) translateY(50%);
+    }
+
+    .message-enter-done {
+        opacity: 1;
+        transform: scale(1) translateY(0%);
+        transition: all 1000ms ease-out;
+    }
+
+    .move-appear {
+        opacity: 0.01;
+        transform: translate(-40px, 0);
+    }
+
+    .move-appear.move-appear-active {
+        opacity: 1;
+        transform: translate(0, 0);
+        transition: all 500ms ease-in;
+    }
+
+    .fade-appear {
+        opacity: 0;
+        z-index: 1;
+    }
+
+    .fade-appear.fade-appear-active {
+        opacity: 1;
+        transition: opacity 450ms linear;
+    }
+}

@@ -1,0 +1,22 @@
+[
+  {
+    "type": "avsnitt",
+    "style": "systemtittel",
+    "children": [
+      {
+        "type": "span",
+        "text": "Søk om foreldrepenger"
+      }
+    ]
+  },
+  {
+    "type": "avsnitt",
+    "style": "normaltekst",
+    "children": [
+      {
+        "type": "span",
+        "text": "Ut fra informasjonen veiviseren har mottatt, viser det seg at du har rett på foreldrepenger. Det anbefales at før du før en søker foreldrepenger å sjekke ut kalkulator og planleggeren"
+      }
+    ]
+  }
+]

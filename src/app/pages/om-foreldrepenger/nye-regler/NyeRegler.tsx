@@ -43,6 +43,10 @@ class NyeRegler extends React.Component<IntlProps> {
         });
     };
 
+
+
+
+
     render = () => (
         <div role="note" aria-label="Nye regler" className={cls.className}>
             <div className={cls.element('content')}>

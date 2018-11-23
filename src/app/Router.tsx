@@ -9,6 +9,7 @@ import OmEngangsstønad from './pages/om-engangsstønad/OmEngangsstønad';
 import ViktigeFrister from './pages/viktige-frister/ViktigeFrister';
 import NyeBeregningsregler from './pages/nye-beregningsregler/NyeBeregningsregler';
 import Kalkulator from './pages/kalkulator/Kalkulator';
+import Veiviser from './pages/veiviser/Veiviser';
 
 const Router = () => (
     <Switch>
@@ -52,6 +53,8 @@ const Router = () => (
             component={ViktigeFrister}
             key="viktige-frister"
         />
+        <Route exact={true} path="/veiviser" component={Veiviser} key="veiviser" />
+
         <Redirect to="/" />
     </Switch>
 );

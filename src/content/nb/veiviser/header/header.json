@@ -1,0 +1,12 @@
+[
+  {
+    "type": "avsnitt",
+    "style": "normaltekst",
+    "children": [
+      {
+        "type": "span",
+        "text": "Gå gjennom veiviseren under for å se om du skal velge engangsstønad eller foreldrepenger"
+      }
+    ]
+  }
+]
