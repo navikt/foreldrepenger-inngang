@@ -8,7 +8,16 @@ import { withRouter, RouteComponentProps } from 'react-router-dom';
 class ScrollToTop extends Component<RouteComponentProps> {
     componentDidUpdate(prevProps: RouteComponentProps) {
         if (this.props.location !== prevProps.location) {
-            window.scrollTo(0, 0);
+            // Gå til riktig seksjon basert på hash i URL
+            if (this.props.location.hash.includes('#')) {
+                const sectionNode = document.getElementById(this.props.location.hash.slice(1));
+
+                if (sectionNode) {
+                    window.scrollTo(0, sectionNode.offsetTop);
+                }
+            } else {
+                window.scrollTo(0, 0);
+            }
         }
     }
 
