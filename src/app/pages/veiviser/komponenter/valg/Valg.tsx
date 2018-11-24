@@ -15,6 +15,7 @@ import ResultatPunkt from './komponenter/ResultatPunkt';
 import Logo from './komponenter/Logo';
 import NavigasjonsBoks from './komponenter/NavigasjonsBoks';
 import './valg.less';
+import Lenke from 'nav-frontend-lenker';
 
 const cls = BEMHelper('valg');
 
@@ -462,7 +463,7 @@ class Valg extends React.Component<Props, State> {
                 // svar : nei
                 checked[checkBoxNiva][svar] = true;
                 radNiva = 2;
-                checkBoxNiva = 5;
+                checkBoxNiva = 4;
                 this.setState(
                     { antallRader: radNiva, teller: checkBoxNiva, checkbox: checked },
                     () =>
@@ -572,7 +573,7 @@ class Valg extends React.Component<Props, State> {
                 checked[checkBoxNiva][svar] = true;
                 checkBoxNiva = 5;
                 ++radNiva;
-                if (checked[1][0] && checked[3][0]) {
+                if (checked[2][0] && checked[3][0]) {
                     // har hatt inntekt / annen inntekt + over 6mnd + over 48 441
                     this.setState(
                         { antallRader: radNiva, teller: checkBoxNiva, checkbox: checked },
@@ -581,7 +582,12 @@ class Valg extends React.Component<Props, State> {
                                 <Logo />,
                                 'veiviser.valg.resultat.overskrift.foreldrepenger',
                                 checked,
-                                <MainKnapp lang={this.props.lang} />
+                                <MainKnapp
+                                    lang={this.props.lang}
+                                    knappType={'hoved'}
+                                    txt={'veiviser.valg.resultat.knapp.foreldrepenger'}
+                                    url={'/hva-soker-du/foreldrepenger'}
+                                />
                             )
                     );
                 } else {
@@ -642,7 +648,12 @@ class Valg extends React.Component<Props, State> {
                                 <Logo />,
                                 'veiviser.valg.resultat.overskrift.foreldrepenger',
                                 checked,
-                                <MainKnapp lang={this.props.lang} />
+                                <MainKnapp
+                                    lang={this.props.lang}
+                                    knappType={'hoved'}
+                                    txt={'veiviser.valg.resultat.knapp.foreldrepenger'}
+                                    url={'/hva-soker-du/foreldrepenger'}
+                                />
                             )
                     );
                 } else {
@@ -683,8 +694,13 @@ class Valg extends React.Component<Props, State> {
                             <div />,
                             'veiviser.valg.resultat.overskrift.foreldrepenger.ikkeRett',
                             checked,
-                            <MainKnapp lang={this.props.lang} />
-                        ) // SETT INN 'IKKE RETT!'
+                            <MainKnapp
+                                lang={this.props.lang}
+                                url={'/om-foreldrepenger'}
+                                txt={'veiviser.valg.resultat.knapp.ikkerett.info'}
+                                knappType={'standard'}
+                            />
+                        )
                 );
             }
         }
@@ -823,21 +839,35 @@ class Valg extends React.Component<Props, State> {
 }
 export default withIntl(Valg);
 
-const MainKnapp = ({ lang }: { lang: Language }) => (
+const MainKnapp = ({
+    lang,
+    url,
+    txt,
+    knappType
+}: {
+    lang: Language;
+    url: string;
+    txt: string;
+    knappType: any;
+}) => (
     <div className={cls.element('resultat-har-rett-knapp')}>
-        <KnappBase type="hoved">
-            {getTranslation('veiviser.valg.resultat.knapp.foreldrepenger', lang)}
-        </KnappBase>
+        <Lenke href={url}>
+            <KnappBase type={knappType}>{getTranslation(txt, lang)}</KnappBase>
+        </Lenke>
     </div>
 );
 
 const EngangsstonadKnapp = ({ lang }: { lang: Language }) => (
-    <div className={cls.element('resultat-har-rett-knapp')}>
-        <KnappBase type="standard">
-            {getTranslation('veiviser.valg.resultat.knapp.engangsstonad.info', lang)}
-        </KnappBase>
-        <KnappBase type="hoved">
-            {getTranslation('veiviser.valg.resultat.knapp.engangsstonad', lang)}
-        </KnappBase>
+    <div className={cls.element('resultat-har-rett-knapp group')}>
+        <Lenke href={'/om-engangsstonad'}>
+            <KnappBase type="standard">
+                {getTranslation('veiviser.valg.resultat.knapp.engangsstonad.info', lang)}
+            </KnappBase>
+        </Lenke>
+        <Lenke href={'https://engangsstonad.nav.no'}>
+            <KnappBase type="hoved">
+                {getTranslation('veiviser.valg.resultat.knapp.engangsstonad', lang)}
+            </KnappBase>
+        </Lenke>
     </div>
 );
