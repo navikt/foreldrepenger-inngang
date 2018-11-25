@@ -17,6 +17,7 @@ import { Foreldresituasjon } from 'app/utils/foreldresituasjon';
 import Ukekalkulator from './ukekalkulator/Ukekalkulator';
 import { getAntallUtbetalingsuker, Utbetalingsalternativ } from './ukekalkulator/utils';
 import './hvorLenge.less';
+import UtvidetInformasjon from 'app/pages/kalkulator/utvidetinformasjon/UtvidetInformasjon';
 
 const infoSvg = require('../../../assets/ark/ark-info.svg').default;
 
@@ -120,6 +121,19 @@ class HvorLenge extends React.Component<Props, State> {
                         onSelect={this.onSituasjonSelected}
                     />
                     <Ukekalkulator antallUtbetalingsuker={this.state.antallUtbetalingsuker} />
+                    <UtvidetInformasjon
+                        apneLabel={getTranslation(
+                            'om_foreldrepenger.hvor_lenge.forslag.åpne',
+                            lang
+                        )}
+                        lukkLabel={getTranslation(
+                            'om_foreldrepenger.hvor_lenge.forslag.lukke',
+                            lang
+                        )}>
+                        <StrukturertTekst
+                            tekst={getContent('all-informasjon/hvor-lenge/forslag-fra-bld', lang)}
+                        />
+                    </UtvidetInformasjon>
                 </div>
             </PanelMedIllustrasjon>
         );

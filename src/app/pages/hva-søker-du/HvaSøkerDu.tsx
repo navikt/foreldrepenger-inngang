@@ -32,7 +32,7 @@ const HvaSøkerDu: React.StatelessComponent<Props & IntlProps> = ({ location, la
             </Helmet>
             <div className={cls.className}>
                 <Sidebanner text={getTranslation('hva_søker_du.tittel', lang)} />
-                <main className={cls.element('body')}>
+                <div role="main" className={cls.element('body')}>
                     <article className={cls.element('content')}>
                         <Breadcrumbs path={location.pathname} />
                         <SvgBanner />
@@ -40,7 +40,7 @@ const HvaSøkerDu: React.StatelessComponent<Props & IntlProps> = ({ location, la
                         <Engangsstonad parentCls={cls} />
                         <Svangerskapspenger parentCls={cls} />
                     </article>
-                </main>
+                </div>
             </div>
         </div>
     );

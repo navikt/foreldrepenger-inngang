@@ -18,11 +18,11 @@ const Informasjonstavle = () => {
             <InformasjonstavleHeader />
             <Header />
             <div className={cls.element('body')}>
-                <main className={cls.element('content')}>
+                <div role="main" className={cls.element('content')}>
                     <Bildelenker />
                     <MerInformasjon />
                     <AndreLenker />
-                </main>
+                </div>
             </div>
         </div>
     );
@@ -70,9 +70,13 @@ const InformasjonstavleHeader = () => {
     return (
         <HeaderInformasjon
             title={'Foreldrepenger - www.nav.no'}
-            siteDescription={'Foreldrepenger skal sikre deg inntekt når du ha foreldrepermisjon. Hvis du ikke hatt inntekt, kan du få en engangssum isteden.'}
+            siteDescription={
+                'Foreldrepenger skal sikre deg inntekt når du ha foreldrepermisjon. Hvis du ikke hatt inntekt, kan du få en engangssum isteden.'
+            }
             propTitle={'Foreldrepengesidene til nav.no'}
-            propDescription={'Foreldrepenger skal sikre deg inntekt når du ha foreldrepermisjon. Hvis du ikke hatt inntekt, kan du få en engangssum isteden.'}
+            propDescription={
+                'Foreldrepenger skal sikre deg inntekt når du ha foreldrepermisjon. Hvis du ikke hatt inntekt, kan du få en engangssum isteden.'
+            }
             siteUrl={'https://familie.nav.no'}
         />
     );

@@ -16,6 +16,7 @@ import Logo from './komponenter/Logo';
 import NavigasjonsBoks from './komponenter/NavigasjonsBoks';
 import './valg.less';
 import Lenke from 'nav-frontend-lenker';
+import {getEnHalvG} from '../../../../utils/beregningUtils';
 
 const cls = BEMHelper('valg');
 
@@ -84,7 +85,7 @@ class Valg extends React.Component<Props, State> {
     static goToSection(id: string): any {
         const target = document.querySelector(id);
         if (target) {
-            target.scrollIntoView({ behavior: 'smooth' });
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
     }
 
@@ -238,7 +239,6 @@ class Valg extends React.Component<Props, State> {
 
     insertInputVal = (check: boolean, radNiva: number, checkBoxNiva: number) => (e: any) => {
         e.preventDefault();
-        console.log('checkBoxNivaa', checkBoxNiva);
         if (!check) {
             const initValue = e.target.value;
             const tmpItems = [...this.state.valg];
@@ -267,7 +267,7 @@ class Valg extends React.Component<Props, State> {
         this.setState({ loadingSpinner: true });
         setTimeout(() => {
             const inntekt = 12 * parseInt(this.state.inputVal, 10);
-            inntekt >= 48441
+            inntekt >= getEnHalvG()
                 ? this.checkRow(checkboksNiva, 0, radnummer)
                 : this.checkRow(checkboksNiva, 1, radnummer);
             this.setState({ loadingSpinner: false, buttonCls: 'item--gone' });
@@ -298,7 +298,7 @@ class Valg extends React.Component<Props, State> {
         this.initItem(nyttValg, this.state.teller, newItem, radNummer, true, dropdown);
     }
 
-    resultatPunkt(lang: any, txt: string, tegn: string) {
+    static resultatPunkt(lang: any, txt: string, tegn: string) {
         return <ResultatPunkt lang={lang} translationString={txt} tegn={tegn} />;
     }
 
@@ -308,7 +308,7 @@ class Valg extends React.Component<Props, State> {
         if (checked[2][0]) {
             taMedAndrePunkt = true;
             sjekkPunkter.push(
-                this.resultatPunkt(
+                Valg.resultatPunkt(
                     this.props.lang,
                     'veiviser.valg.resultat.punkt.forste.godkjent',
                     'godkjenttegn'
@@ -316,7 +316,7 @@ class Valg extends React.Component<Props, State> {
             );
         } else {
             sjekkPunkter.push(
-                this.resultatPunkt(
+                Valg.resultatPunkt(
                     this.props.lang,
                     'veiviser.valg.resultat.punkt.forste.underkjent',
                     'varseltegn'
@@ -326,7 +326,7 @@ class Valg extends React.Component<Props, State> {
         if (taMedAndrePunkt) {
             if (checked[3][0]) {
                 sjekkPunkter.push(
-                    this.resultatPunkt(
+                    Valg.resultatPunkt(
                         this.props.lang,
                         'veiviser.valg.resultat.punkt.andre.godkjent',
                         'godkjenttegn'
@@ -334,7 +334,7 @@ class Valg extends React.Component<Props, State> {
                 );
             } else {
                 sjekkPunkter.push(
-                    this.resultatPunkt(
+                    Valg.resultatPunkt(
                         this.props.lang,
                         'veiviser.valg.resultat.punkt.andre.underkjent',
                         'varseltegn'
@@ -346,7 +346,7 @@ class Valg extends React.Component<Props, State> {
         }
         if (checked[4][0] || checked[5][0]) {
             sjekkPunkter.push(
-                this.resultatPunkt(
+                Valg.resultatPunkt(
                     this.props.lang,
                     'veiviser.valg.resultat.punkt.tredje.godkjent',
                     'godkjenttegn'
@@ -354,7 +354,7 @@ class Valg extends React.Component<Props, State> {
             );
         } else {
             sjekkPunkter.push(
-                this.resultatPunkt(
+                Valg.resultatPunkt(
                     this.props.lang,
                     'veiviser.valg.resultat.punkt.tredje.underkjent',
                     'varseltegn'
@@ -751,7 +751,6 @@ class Valg extends React.Component<Props, State> {
             </div>
             <div className={cls.element('kort')}>
                 {this.state.valg.map((valg: any) => {
-                    console.log('valg.rad', valg.rad, 'valg.nr', valg.nr);
                     this.state.antallRader === valg.rad ? (this.fade = true) : (this.fade = false);
                     if (valg.checkbox) {
                         return (

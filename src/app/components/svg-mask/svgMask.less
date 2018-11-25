@@ -1,3 +1,11 @@
+
+.setSize(@size) {
+    height: @size;
+    min-height: @size;
+    max-width: @size;
+    min-width: @size;
+}
+
 .svgMask {
     flex: 1;
     background: #b9acca;
@@ -8,16 +16,14 @@
     overflow: hidden;
 
     // Size
-    height: 100px;
-    min-height: 100px;
-    max-width: 100px;
-    min-width: 100px;
+    .setSize(100px);
 
     &--small {
-        height: 64px;
-        min-height: 64px;
-        max-width: 64px;
-        min-width: 64px;
+        .setSize(64px)
+    }
+
+    &--smaller {
+        .setSize(40px);
     }
 
     &__anchorToBOttom {

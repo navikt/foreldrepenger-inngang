@@ -47,7 +47,7 @@ class SøkForeldrepenger extends Component<Props & IntlProps> {
             <div className={classnames(hvaSøkerDuCls.className, foreldrepengerCls.className)}>
                 <SøkForeldrepengerHeader />
                 <Sidebanner text={getTranslation('hva_søker_du.tittel', this.props.lang)} />
-                <main className={hvaSøkerDuCls.element('body')}>
+                <div role="main" className={hvaSøkerDuCls.element('body')}>
                     <div className={hvaSøkerDuCls.element('content')}>
                         <Breadcrumbs path={location.pathname} />
                         <SvgBanner />
@@ -64,13 +64,12 @@ class SøkForeldrepenger extends Component<Props & IntlProps> {
                                 onChange={(date: Date) => this.setDate(date)}
                                 parentCls={foreldrepengerCls}
                             />
-                            {this.state.selectedDate &&
-                                !this.state.dateIsValid && (
-                                    <VeilederMessage
-                                        parentCls={foreldrepengerCls}
-                                        selectedDate={this.state.selectedDate}
-                                    />
-                                )}
+                            {this.state.selectedDate && !this.state.dateIsValid && (
+                                <VeilederMessage
+                                    parentCls={foreldrepengerCls}
+                                    selectedDate={this.state.selectedDate}
+                                />
+                            )}
                             {this.state.selectedDate && (
                                 <a tabIndex={-1} href={Environment.SOK_FORELDREPENGER_URL}>
                                     <KnappBase type="hoved" role="link">
@@ -91,7 +90,7 @@ class SøkForeldrepenger extends Component<Props & IntlProps> {
                             )}
                         </PanelMedTittel>
                     </div>
-                </main>
+                </div>
             </div>
         );
     };
@@ -101,9 +100,13 @@ const SøkForeldrepengerHeader = () => {
     return (
         <HeaderInformasjon
             title={'Foreldrepenger - www.nav.no'}
-            siteDescription={'Søk om foreldrepenger, utsettelse eller endring av foreldrepengeperioden.'}
+            siteDescription={
+                'Søk om foreldrepenger, utsettelse eller endring av foreldrepengeperioden.'
+            }
             propTitle={'nav.no foreldrepenger'}
-            propDescription={'Søk om foreldrepenger, utsettelse eller endring av foreldrepengeperioden.'}
+            propDescription={
+                'Søk om foreldrepenger, utsettelse eller endring av foreldrepengeperioden.'
+            }
             siteUrl={'https://familie.nav.no/hva-soker-du/foreldrepenger'}
         />
     );

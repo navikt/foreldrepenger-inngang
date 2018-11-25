@@ -3,7 +3,7 @@ import * as React from 'react';
 const Illustrasjon = () => (
     <svg height="65px" width="100%" version="1.1" viewBox="0 0 622 65">
         <g fill="none" stroke="none" strokeWidth="1">
-            <rect height="65" width="622" fill="#FFFFFF" x="0" y="0" />
+            <rect height="65" width="622" fill="none" x="0" y="0" />
             <rect height="27" width="233" rx="8" stroke="#634887" strokeWidth="1" x="30" y="37" />
             <rect height="27" width="104" rx="8" stroke="#634887" strokeWidth="1" x="369" y="37" />
             <rect

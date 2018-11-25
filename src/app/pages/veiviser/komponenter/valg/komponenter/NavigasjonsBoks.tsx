@@ -1,5 +1,5 @@
 import React from 'react';
-import { getTranslation, IntlProps, withIntl } from '../../../../../intl/intl';
+import {getTranslation, Language, withIntl} from '../../../../../intl/intl';
 import { FlexibleSvg } from '../../../../../utils/CustomSVG';
 import TypografiBase from 'nav-frontend-typografi';
 import NavFrontendChevron from 'nav-frontend-chevron';
@@ -7,7 +7,11 @@ import BEMHelper from '../../../../../utils/bem';
 import Lenke from "nav-frontend-lenker";
 const cls = BEMHelper('valg');
 
-const NavigasjonsBoks: React.StatelessComponent<IntlProps> = ({ lang }) => {
+interface Props {
+    lang: Language;
+}
+
+const NavigasjonsBoks: React.StatelessComponent<Props> = ({ lang }) => {
     return (
         <div className={cls.element('navigasjonsboks')}>
             <div className={cls.element('boks-border')}>

@@ -18,14 +18,14 @@ const Blindside: React.StatelessComponent<Props & IntlProps> = ({ history, lang 
     return (
         <div className={cls.className}>
             <Sidebanner text={getTranslation('blindside.tittel', lang)} />
-            <main className={cls.element('body')}>
+            <div role="main" className={cls.element('body')}>
                 <Tilbakeknapp goBack={history.goBack} />
                 <Veileder ansikt="glad">
                     <TypografiBase type="normaltekst">
                         {getTranslation('blindside.veileder', lang)}
                     </TypografiBase>
                 </Veileder>
-            </main>
+            </div>
         </div>
     );
 };

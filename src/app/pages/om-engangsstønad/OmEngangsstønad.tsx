@@ -6,13 +6,12 @@ import PanelMedIllustrasjon from '../../components/panel-med-illustrasjon/PanelM
 import Sidebanner from '../../components/sidebanner/Sidebanner';
 import StrukturertTekst from '../../components/strukturert-tekst/StrukturertTekst';
 import { getContent } from '../../utils/getContent';
+import CustomSVGFromSprite from '../../utils/CustomSVG';
+import { ENGANGSSUM_PER_BARN } from '../../utils/beregningUtils';
+import HeaderInformasjon from '../../components/header-informasjon/HeaderInformasjon';
+import Hjelp from '../../components/hjelpe-seksjon/HjelpeSeksjon';
 import '../infosider.less';
 import './omEngangsstønad.less';
-import CustomSVGFromSprite from '../../utils/CustomSVG';
-
-import HeaderInformasjon from '../../components/header-informasjon/HeaderInformasjon';
-
-import Hjelp from '../../components/hjelpe-seksjon/HjelpeSeksjon';
 
 const infosiderCls = BEMHelper('infosider');
 const cls = BEMHelper('omEngangsstønad');
@@ -37,7 +36,7 @@ const OmEngangsstonad: React.StatelessComponent<Props & IntlProps> = ({ location
             <OmEngangsstønadHeader />
             <Sidebanner text={getTranslation('om_engangsstønad.tittel', lang)} />
             <div className={infosiderCls.element('container')}>
-                <article>
+                <article className={infosiderCls.element('article')}>
                     <Breadcrumbs path={location.pathname} />
                     <HvaErEngangsstønad />
                     <HvaKanDuFå />
@@ -88,7 +87,12 @@ const HvaKanDuFåW: React.StatelessComponent<IntlProps> = ({ lang }) => (
     <PanelMedIllustrasjon
         title={getTranslation('om_engangsstønad.hva_kan_du_få.tittel', lang)}
         svg={arbeidstakerSvg}>
-        <StrukturertTekst tekst={getContent('om-engangsstønad/hva-kan-du-få', lang)} />
+        <StrukturertTekst
+            tekst={getContent('om-engangsstønad/hva-kan-du-få', lang)}
+            definisjoner={{
+                ENGANGSSUM_PER_BARN: ENGANGSSUM_PER_BARN.toLocaleString(lang)
+            }}
+        />
     </PanelMedIllustrasjon>
 );
 
