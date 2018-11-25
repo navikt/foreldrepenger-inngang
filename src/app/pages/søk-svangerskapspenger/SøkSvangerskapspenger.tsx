@@ -22,7 +22,7 @@ class SøkForeldrepenger extends Component<Props & IntlProps> {
     render = () => (
         <div className={classnames(hvaSøkerDuCls.className, svangerskapspengerCls.className)}>
             <Sidebanner text={getTranslation('hva_søker_du.tittel', this.props.lang)} />
-            <main className={hvaSøkerDuCls.element('body')}>
+            <div role="main" className={hvaSøkerDuCls.element('body')}>
                 <div className={hvaSøkerDuCls.element('content')}>
                     <Breadcrumbs path={location.pathname} />
                     <PanelMedIllustrasjon
@@ -36,7 +36,7 @@ class SøkForeldrepenger extends Component<Props & IntlProps> {
                         />
                     </PanelMedIllustrasjon>
                 </div>
-            </main>
+            </div>
         </div>
     );
 }

@@ -60,7 +60,7 @@
     "informasjonstavle.hvor_mye": "Hvor mye?",
     "informasjonstavle.hvor_mye_ingress": "Regn ut hvor mye du kan få i foreldrepenger.",
     "informasjonstavle.hvor_lenge": "Hvor lenge?",
-    "informasjonstavle.hvor_lenge_ingress": "Planlegg hvor lenge du kan være hjemmet med barnet.",
+    "informasjonstavle.hvor_lenge_ingress": "Planlegg hvor lenge du kan være hjemme med barnet.",
     "informasjonstavle.velg_søknad": "Velg søknadsskjema",
     "informasjonstavle.velg_søknad_ingress": "Her finner du alle skjemaer for mor og far.\n\nForeldrepenger, utsettelse, endring og engangsstønad, alt på samme sted.",
     "informasjonstavle.mer_informasjon.tittel": "Utfyllende informasjon",
@@ -69,11 +69,15 @@
     "informasjonstavle.mer_informasjon.svangerskapspenger": "Hvis du ikke kan jobbe når du er gravid fordi det kan skade det ufødte barnet, kan du få svangerskapspenger.",
 
     "informasjonstavle.andre_lenker.tittel": "Relatert informasjon",
-    "informasjonstavle.andre_lenker.i_utlandet": "Opphold i utlandet",
-    "informasjonstavle.andre_lenker.meld_fra": "Meld fra om endringer",
-    "informasjonstavle.andre_lenker.søke_i_rett_tid": "Husk å søke i rett tid",
-    "informasjonstavle.andre_lenker.klage": "Slik klager du",
+    "informasjonstavle.andre_lenker.ettersende_vedlegg_til_søknad": "Ettersende vedlegg til søknad",
+    "informasjonstavle.andre_lenker.hvis_du_skal_på_ferie": "Hvis du skal på ferie",
     "informasjonstavle.andre_lenker.regelverk": "Regelverk",
+    "informasjonstavle.andre_lenker.hvis_en_av_dere_blir_syke": "Hvis en av dere blir syke",
+    "informasjonstavle.andre_lenker.meld_fra_om_endringer": "Meld fra om endringer",
+    "informasjonstavle.andre_lenker.slik_klager_du": "Slik klager du",
+    "informasjonstavle.andre_lenker.husk_å_søke_i_rett_tid": "Husk å søke i rett tid",
+    "informasjonstavle.andre_lenker.opphold_i_utlandet": "Opphold i utlandet",
+    "informasjonstavle.andre_lenker.hvis_du_vil_jobbe": "Hvis du vil jobbe",
 
 
     "tjenester.tittel": "Hvor mye og hvor lenge?",
@@ -98,7 +102,7 @@
     "kalkulator.lønn.resultat": "Gjennomsnittlig månedslønn",
     "kalkulator.resultat.tittel": "Dette kan du få",
     "kalkulator.resultat.undertittel": "prosent foreldrepenger",
-    "kalkulator.resultat.gjennomsnitt_per_måned": "Gjennomsnitt utbetalt per måned før skatt",
+    "kalkulator.resultat.gjennomsnitt_per_måned": "Gjennomsnitt per måned før skatt",
     "kalkulator.resultat.dagsats": "Dagsats",
     "kalkulator.skriv_inn_årslønn": "Hva tjente du i hele",
     "kalkulator.får_utbetalt": "får utbetalt omtrent",
@@ -179,6 +183,9 @@
     "om_foreldrepenger.hvor_lenge.fordeling.krav.far1": "15 uker hvis adopsjon",
     "om_foreldrepenger.hvor_lenge.fordeling.krav.far2": "Kan ikke overtas av far 1",
     "om_foreldrepenger.hvor_lenge.fordeling.krav.fellesPerioden": "Aktivitetskrav til far 1",
+
+    "om_foreldrepenger.hvor_lenge.forslag.åpne": "Forslag om endring av foreldrepengeperioden ved 80 prosent",
+    "om_foreldrepenger.hvor_lenge.forslag.lukke": "Lukk informasjon",
 
     "om_foreldrepenger.ferie.tittel": "Hvis du skal på ferie",
     "om_foreldrepenger.ferie.eksempel_label": "Eksempel på hvordan du kan forlenge foreldrepengeperioden din når du utsetter:",

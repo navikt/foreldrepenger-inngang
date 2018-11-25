@@ -19,7 +19,7 @@ const NyeBeregningsregler: React.StatelessComponent<Props & IntlProps> = ({ loca
         <div className={infosiderCls.className}>
             <Sidebanner text={getTranslation('om_foreldrepenger.tittel', lang)} />
             <div className={infosiderCls.element('container')}>
-                <article>
+                <article className={infosiderCls.element('article')}>
                     <Breadcrumbs path={location.pathname} />
                     <PanelMedIllustrasjon
                         title={getTranslation(

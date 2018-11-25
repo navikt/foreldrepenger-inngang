@@ -3,7 +3,7 @@ import * as React from 'react';
 const FerieforskyvningMobil = () => (
     <svg height="65px" width="100%" version="1.1" viewBox="0 0 375 65">
         <g fill="none" stroke="none" strokeWidth="1">
-            <rect height="65" width="375" fill="#FFFFFF" x="0" y="0" />
+            <rect height="65" width="375" fill="none" x="0" y="0" />
             <rect height="27" width="97" rx="8" stroke="#634887" strokeWidth="1" x="30" y="37" />
             <rect height="27" width="48" rx="8" stroke="#634887" strokeWidth="1" x="206" y="37" />
             <rect

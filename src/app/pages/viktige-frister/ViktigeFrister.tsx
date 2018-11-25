@@ -47,7 +47,7 @@ const ViktigeFrister: React.StatelessComponent<Props & IntlProps> = ({ location,
             <ViktigeFristerHeader />
             <Sidebanner text={getTranslation('viktige_frister.banner', lang)} />
             <div className={infosiderCls.element('container')}>
-                <article>
+                <article className={infosiderCls.element('article')}>
                     <Breadcrumbs path={location.pathname} />
                     <PanelMedIllustrasjon
                         title={getTranslation('viktige_frister.header', lang)}

@@ -35,13 +35,22 @@ interface Props {
     children: ReactNode;
 }
 
+const SCROLL_OFFSET = 90;
+
 export class WithLink extends React.Component<Props> {
-    goToSection = (e: any, id: string): void => {
-        e.preventDefault();
-        window.history.replaceState(null, '', id);
-        const target = document.querySelector(id);
-        if (target) {
-            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    goToSection = (url: string) => (event: any) => {
+        event.preventDefault();
+        window.history.replaceState(null, '', url);
+
+        // Remove hash to retrieve ID
+        const id = url.slice(1);
+        const sectionNode = document.getElementById(id);
+
+        if (sectionNode) {
+            window.scroll({
+                top: sectionNode.offsetTop - SCROLL_OFFSET,
+                behavior: 'smooth'
+            });
         }
     };
 
@@ -92,7 +101,7 @@ export class WithLink extends React.Component<Props> {
                         aria-label={ariaLabel}
                         className={className + ' anchorLink'}
                         style={style}
-                        onClick={(e) => this.goToSection(e, url)}>
+                        onClick={this.goToSection(url)}>
                         {children}
                     </span>
                 );
@@ -101,7 +110,7 @@ export class WithLink extends React.Component<Props> {
                     <Lenke
                         className={className + ' anchorLink'}
                         style={style}
-                        onClick={(e) => this.goToSection(e, url)}
+                        onClick={this.goToSection(url)}
                         href={url}>
                         {children}
                     </Lenke>

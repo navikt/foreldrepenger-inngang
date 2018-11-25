@@ -1,6 +1,7 @@
 @import '../styles/index.less';
 
 @add-filler-breakpoint: 1300px;
+@edge-margin: 1.5rem;
 
 .infosider {
     margin-bottom: 4rem;
@@ -13,9 +14,9 @@
     }
 
     &__sidebar {
-        width: 200px;
         margin-top: 86px;
         flex-shrink: 0;
+        margin-right: @edge-margin;
         display: none;
     }
 
@@ -48,21 +49,12 @@
         &__container {
             margin: 0 1rem 1rem;
         }
-
-        article {
-            margin: 0 1rem;
-        }
     }
 
     &--withSidebar {
         @media (min-width: @tablet-breakpoint) {
             .infosider__container {
                 margin: 0 1.5rem 1rem;
-            }
-
-            article {
-                margin-left: 1.5rem;
-                margin-right: 0;
             }
         }
 
@@ -75,10 +67,7 @@
         @media (min-width: @add-filler-breakpoint) {
             .infosider__filler {
                 width: 200px;
-            }
-
-            article {
-                margin-right: 1.5rem;
+                margin-left: @edge-margin;
             }
         }
     }

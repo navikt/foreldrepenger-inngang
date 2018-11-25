@@ -238,7 +238,6 @@ class Valg extends React.Component<Props, State> {
 
     insertInputVal = (check: boolean, radNiva: number, checkBoxNiva: number) => (e: any) => {
         e.preventDefault();
-        console.log('checkBoxNivaa', checkBoxNiva);
         if (!check) {
             const initValue = e.target.value;
             const tmpItems = [...this.state.valg];
@@ -751,7 +750,6 @@ class Valg extends React.Component<Props, State> {
             </div>
             <div className={cls.element('kort')}>
                 {this.state.valg.map((valg: any) => {
-                    console.log('valg.rad', valg.rad, 'valg.nr', valg.nr);
                     this.state.antallRader === valg.rad ? (this.fade = true) : (this.fade = false);
                     if (valg.checkbox) {
                         return (
