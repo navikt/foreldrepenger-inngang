@@ -22,12 +22,14 @@ const DuHarRett: React.StatelessComponent<Props & IntlProps> = ({
         <div id="mainSokKnapp" className={cls.element('resultat--stonad-rett')}>
             {minLogo}
             <div className={cls.element('resultat-stonad-body')}>
-                <TypografiBase type="innholdstittel">
-                    {getTranslation(overskrift, lang)}
-                </TypografiBase>
-                {punkter.map((punkt: any, index: number) => {
-                    return <div key={index}>{punkt}</div>;
-                })}
+                <div className={cls.element('resultat-stonad-txt')}>
+                    <TypografiBase type="innholdstittel">
+                        {getTranslation(overskrift, lang)}
+                    </TypografiBase>
+                    {punkter.map((punkt: any, index: number) => {
+                        return <div key={index}>{punkt}</div>;
+                    })}
+                </div>
                 {knapp}
             </div>
         </div>
