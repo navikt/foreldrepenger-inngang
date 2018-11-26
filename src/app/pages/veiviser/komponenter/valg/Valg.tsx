@@ -15,6 +15,8 @@ import ResultatPunkt from './komponenter/ResultatPunkt';
 import Logo from './komponenter/Logo';
 import NavigasjonsBoks from './komponenter/NavigasjonsBoks';
 import './valg.less';
+import Lenke from 'nav-frontend-lenker';
+import {getEnHalvG} from '../../../../utils/beregningUtils';
 
 const cls = BEMHelper('valg');
 
@@ -74,6 +76,7 @@ interface State {
     inputVal: string;
     loadingSpinner: boolean;
     buttonCls: string;
+    inntektCls: string;
 }
 
 type Props = Lang & TabContent;
@@ -82,7 +85,7 @@ class Valg extends React.Component<Props, State> {
     static goToSection(id: string): any {
         const target = document.querySelector(id);
         if (target) {
-            target.scrollIntoView({ behavior: 'smooth' });
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
     }
 
@@ -112,7 +115,8 @@ class Valg extends React.Component<Props, State> {
             inputFade: true,
             inputVal: '',
             loadingSpinner: false,
-            buttonCls: ''
+            buttonCls: '',
+            inntektCls: ''
         };
     }
 
@@ -141,7 +145,8 @@ class Valg extends React.Component<Props, State> {
                     valg: valgBytte,
                     checkbox: noneChecked,
                     antallRader: 0,
-                    result: []
+                    result: [],
+                    inntektCls: 'item--gone'
                 },
                 () =>
                     this.insertBoxes(
@@ -217,7 +222,7 @@ class Valg extends React.Component<Props, State> {
             checkbox: ischeckbox,
             sprmal: getTranslation(sprmalMor[input], this.props.lang)
         });
-        this.setState({ valg: list });
+        this.setState({ valg: list, inntektCls: '' });
     }
 
     getDropdown(aapneLabel: string, lukeLabel: string, jsonContentPath: string) {
@@ -232,14 +237,14 @@ class Valg extends React.Component<Props, State> {
         );
     }
 
-    insertInputVal = (check: boolean, radNiva: number) => (e: any) => {
+    insertInputVal = (check: boolean, radNiva: number, checkBoxNiva: number) => (e: any) => {
         e.preventDefault();
         if (!check) {
             const initValue = e.target.value;
             const tmpItems = [...this.state.valg];
             const checked = [...this.state.checkbox];
             tmpItems.splice(radNiva + 1);
-            for (let i = 3; i < this.state.checkbox.length; i++) {
+            for (let i = checkBoxNiva; i < this.state.checkbox.length; i++) {
                 for (let j = 0; j < 2; j++) {
                     checked[i][j] = false;
                 }
@@ -253,7 +258,7 @@ class Valg extends React.Component<Props, State> {
             });
         } else {
             const initValue = e.target.value;
-            this.setState({ inputVal: initValue, buttonCls: '' });
+            this.setState({ inputVal: initValue, buttonCls: '', inntektCls: 'item-appear' });
         }
     };
 
@@ -262,11 +267,11 @@ class Valg extends React.Component<Props, State> {
         this.setState({ loadingSpinner: true });
         setTimeout(() => {
             const inntekt = 12 * parseInt(this.state.inputVal, 10);
-            inntekt >= 48441
+            inntekt >= getEnHalvG()
                 ? this.checkRow(checkboksNiva, 0, radnummer)
                 : this.checkRow(checkboksNiva, 1, radnummer);
-            this.setState({ loadingSpinner: false, buttonCls: 'button--gone' });
-        }, 700);
+            this.setState({ loadingSpinner: false, buttonCls: 'item--gone' });
+        }, 750);
     };
 
     insertBoxes(
@@ -293,7 +298,7 @@ class Valg extends React.Component<Props, State> {
         this.initItem(nyttValg, this.state.teller, newItem, radNummer, true, dropdown);
     }
 
-    resultatPunkt(lang: any, txt: string, tegn: string) {
+    static resultatPunkt(lang: any, txt: string, tegn: string) {
         return <ResultatPunkt lang={lang} translationString={txt} tegn={tegn} />;
     }
 
@@ -303,7 +308,7 @@ class Valg extends React.Component<Props, State> {
         if (checked[2][0]) {
             taMedAndrePunkt = true;
             sjekkPunkter.push(
-                this.resultatPunkt(
+                Valg.resultatPunkt(
                     this.props.lang,
                     'veiviser.valg.resultat.punkt.forste.godkjent',
                     'godkjenttegn'
@@ -311,7 +316,7 @@ class Valg extends React.Component<Props, State> {
             );
         } else {
             sjekkPunkter.push(
-                this.resultatPunkt(
+                Valg.resultatPunkt(
                     this.props.lang,
                     'veiviser.valg.resultat.punkt.forste.underkjent',
                     'varseltegn'
@@ -321,7 +326,7 @@ class Valg extends React.Component<Props, State> {
         if (taMedAndrePunkt) {
             if (checked[3][0]) {
                 sjekkPunkter.push(
-                    this.resultatPunkt(
+                    Valg.resultatPunkt(
                         this.props.lang,
                         'veiviser.valg.resultat.punkt.andre.godkjent',
                         'godkjenttegn'
@@ -329,7 +334,7 @@ class Valg extends React.Component<Props, State> {
                 );
             } else {
                 sjekkPunkter.push(
-                    this.resultatPunkt(
+                    Valg.resultatPunkt(
                         this.props.lang,
                         'veiviser.valg.resultat.punkt.andre.underkjent',
                         'varseltegn'
@@ -341,7 +346,7 @@ class Valg extends React.Component<Props, State> {
         }
         if (checked[4][0] || checked[5][0]) {
             sjekkPunkter.push(
-                this.resultatPunkt(
+                Valg.resultatPunkt(
                     this.props.lang,
                     'veiviser.valg.resultat.punkt.tredje.godkjent',
                     'godkjenttegn'
@@ -349,14 +354,13 @@ class Valg extends React.Component<Props, State> {
             );
         } else {
             sjekkPunkter.push(
-                this.resultatPunkt(
+                Valg.resultatPunkt(
                     this.props.lang,
                     'veiviser.valg.resultat.punkt.tredje.underkjent',
                     'varseltegn'
                 )
             );
         }
-
         const res = [];
         res.push(
             <DuHarRett
@@ -462,7 +466,7 @@ class Valg extends React.Component<Props, State> {
                 // svar : nei
                 checked[checkBoxNiva][svar] = true;
                 radNiva = 2;
-                checkBoxNiva = 5;
+                checkBoxNiva = 4;
                 this.setState(
                     { antallRader: radNiva, teller: checkBoxNiva, checkbox: checked },
                     () =>
@@ -472,9 +476,9 @@ class Valg extends React.Component<Props, State> {
                             this.state.valg,
                             this.state.antallRader,
                             this.getDropdown(
-                                'veiviser.valg.hjelpetekst.andreInntekt',
+                                'veiviser.valg.hjelpetekst.medlemskap',
                                 'veiviser.valg.hjelpetekst.lukk',
-                                'veiviser/infobox/andre-inntekskilder'
+                                'veiviser/infobox/til-medlemskap'
                             )
                         )
                 );
@@ -572,7 +576,7 @@ class Valg extends React.Component<Props, State> {
                 checked[checkBoxNiva][svar] = true;
                 checkBoxNiva = 5;
                 ++radNiva;
-                if (checked[1][0] && checked[3][0]) {
+                if (checked[2][0] && checked[3][0]) {
                     // har hatt inntekt / annen inntekt + over 6mnd + over 48 441
                     this.setState(
                         { antallRader: radNiva, teller: checkBoxNiva, checkbox: checked },
@@ -581,7 +585,12 @@ class Valg extends React.Component<Props, State> {
                                 <Logo />,
                                 'veiviser.valg.resultat.overskrift.foreldrepenger',
                                 checked,
-                                <MainKnapp lang={this.props.lang} />
+                                <MainKnapp
+                                    lang={this.props.lang}
+                                    knappType={'hoved'}
+                                    txt={'veiviser.valg.resultat.knapp.foreldrepenger'}
+                                    url={'/hva-soker-du/foreldrepenger'}
+                                />
                             )
                     );
                 } else {
@@ -642,7 +651,12 @@ class Valg extends React.Component<Props, State> {
                                 <Logo />,
                                 'veiviser.valg.resultat.overskrift.foreldrepenger',
                                 checked,
-                                <MainKnapp lang={this.props.lang} />
+                                <MainKnapp
+                                    lang={this.props.lang}
+                                    knappType={'hoved'}
+                                    txt={'veiviser.valg.resultat.knapp.foreldrepenger'}
+                                    url={'/hva-soker-du/foreldrepenger'}
+                                />
                             )
                     );
                 } else {
@@ -683,8 +697,13 @@ class Valg extends React.Component<Props, State> {
                             <div />,
                             'veiviser.valg.resultat.overskrift.foreldrepenger.ikkeRett',
                             checked,
-                            <MainKnapp lang={this.props.lang} />
-                        ) // SETT INN 'IKKE RETT!'
+                            <MainKnapp
+                                lang={this.props.lang}
+                                url={'/om-foreldrepenger'}
+                                txt={'veiviser.valg.resultat.knapp.ikkerett.info'}
+                                knappType={'standard'}
+                            />
+                        )
                 );
             }
         }
@@ -771,7 +790,7 @@ class Valg extends React.Component<Props, State> {
                                 key={valg.nr}
                                 appear={true}
                                 classNames="fade"
-                                in={false}
+                                in={this.fade}
                                 timeout={1000}>
                                 <div className={cls.element('inputFelt')}>
                                     <TypografiBase type={'element'}>{valg.sprmal}</TypografiBase>
@@ -784,19 +803,36 @@ class Valg extends React.Component<Props, State> {
                                             step={1000}
                                             type="number"
                                             value={this.state.inputVal}
-                                            onChange={this.insertInputVal(this.fade, valg.rad)}
+                                            onChange={this.insertInputVal(
+                                                this.fade,
+                                                valg.rad,
+                                                valg.nr
+                                            )}
                                             placeholder={this.belop}
                                         />
-                                        <div
-                                            className={cls.element(
-                                                'input--rad-knapp ' + this.state.buttonCls
-                                            )}>
+                                        <div className={cls.element('input--rad-knapp ')}>
                                             <KnappBase
+                                                className={this.state.buttonCls}
                                                 type="flat"
                                                 spinner={this.state.loadingSpinner}
                                                 onClick={this.checkInputValue(valg.nr, valg.rad)}>
                                                 beregn inntekt
                                             </KnappBase>
+                                            <div
+                                                className={cls.element(
+                                                    'aars-inntekt ' + this.state.inntektCls
+                                                )}>
+                                                {getTranslation(
+                                                    'veiviser.valg.beregnet.aarsinntekt',
+                                                    this.props.lang
+                                                )}
+                                                {12 * parseInt(this.state.inputVal, 10)
+                                                    ? (12 * parseInt(this.state.inputVal, 10))
+                                                          .toString()
+                                                          .replace(/\B(?=(\d{3})+(?!\d))/g, ',')
+                                                          .trim()
+                                                    : 0}
+                                            </div>
                                         </div>
                                         <div />
                                     </div>
@@ -823,21 +859,35 @@ class Valg extends React.Component<Props, State> {
 }
 export default withIntl(Valg);
 
-const MainKnapp = ({ lang }: { lang: Language }) => (
+const MainKnapp = ({
+    lang,
+    url,
+    txt,
+    knappType
+}: {
+    lang: Language;
+    url: string;
+    txt: string;
+    knappType: any;
+}) => (
     <div className={cls.element('resultat-har-rett-knapp')}>
-        <KnappBase type="hoved">
-            {getTranslation('veiviser.valg.resultat.knapp.foreldrepenger', lang)}
-        </KnappBase>
+        <Lenke href={url}>
+            <KnappBase type={knappType}>{getTranslation(txt, lang)}</KnappBase>
+        </Lenke>
     </div>
 );
 
 const EngangsstonadKnapp = ({ lang }: { lang: Language }) => (
-    <div className={cls.element('resultat-har-rett-knapp')}>
-        <KnappBase type="standard">
-            {getTranslation('veiviser.valg.resultat.knapp.engangsstonad.info', lang)}
-        </KnappBase>
-        <KnappBase type="hoved">
-            {getTranslation('veiviser.valg.resultat.knapp.engangsstonad', lang)}
-        </KnappBase>
+    <div className={cls.element('resultat-har-rett-knapp group')}>
+        <Lenke href={'/om-engangsstonad'}>
+            <KnappBase type="standard">
+                {getTranslation('veiviser.valg.resultat.knapp.engangsstonad.info', lang)}
+            </KnappBase>
+        </Lenke>
+        <Lenke href={'https://engangsstonad.nav.no'}>
+            <KnappBase type="hoved">
+                {getTranslation('veiviser.valg.resultat.knapp.engangsstonad', lang)}
+            </KnappBase>
+        </Lenke>
     </div>
 );

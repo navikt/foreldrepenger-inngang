@@ -258,20 +258,21 @@
     "veiviser.sidebanner.knappMedmor.label": "Medmor",
     "veiviser.navgigasjonsboks.kalk.label": "Regn ut hvor mye du kan få ved hjelp av kalkulatoren",
     "veiviser.navigasjonsboks.planlegg.label": "Planlegg hvor lenge du kan være hjemme med barnet ditt",
+    "veiviser.valg.beregnet.aarsinntekt": "Beregnet årsinntekt ",
 
     "veiviser.valg.spørsmål.mor.en": "Jeg er arbeidstaker, frilanser, selvstendig næringsdrivende eller mottar utbetalinger fra nav?",
     "veiviser.valg.spørsmål.mor.to": "Har du andre inntektskilder?",
     "veiviser.valg.spørsmål.mor.tre": "Hvor lenge har du hatt inntekt?",
     "veiviser.valg.spørsmål.mor.fire": " Hva er den gjennomsnittlige månedslønnen din før skatt?",
     "veiviser.valg.spørsmål.mor.fem": "Er du medlem av folketrygden?",
-    "veiviser.valg.spørsmål.mor.seks": "Er du medlem på en annen måte?",
+    "veiviser.valg.spørsmål.mor.seks": "Andre måter å være medlem på?",
 
     "veiviser.valg.spørsmål.far.en": "Jeg er arbeidstaker, frilanser, selvstendig næringsdrivende eller mottar utbetalinger fra nav?",
     "veiviser.valg.spørsmål.far.to": "Har du andre inntektskilder?",
     "veiviser.valg.spørsmål.far.tre": "Hvor lenge har du hatt inntekt?",
     "veiviser.valg.spørsmål.far.fire": " Hva er den gjennomsnittlige månedslønnen din før skatt?",
     "veiviser.valg.spørsmål.far.fem": "Er du medlem av folketrygden?",
-    "veiviser.valg.spørsmål.far.seks": "Er du medlem på en annen måte?",
+    "veiviser.valg.spørsmål.far.seks": "Andre måter å være medlem på?",
 
     "veiviser.valg.svar.mor.en.ja": "Ja",
     "veiviser.valg.svar.mor.en.nei": "Nei",
@@ -300,10 +301,10 @@
     "veiviser.valg.svar.far.seks.nei": "Nei, jeg er ikke medlem",
 
     "veiviser.valg.hjelpetekst.lukk": "Lukk informasjon",
-    "veiviser.valg.hjelpetekst.utbetalinger": "Info til utbetalinger fra nav",
-    "veiviser.valg.hjelpetekst.mndInntekt": "Info til månedsinntekt",
+    "veiviser.valg.hjelpetekst.utbetalinger": "Hva er andre inntektskilder?",
+    "veiviser.valg.hjelpetekst.mndInntekt": "Hvor mye må jeg ha i månedslønn før skatt?",
     "veiviser.valg.hjelpetekst.andreInntekt": "Info til årsinntekt",
-    "veiviser.valg.hjelpetekst.medlemskap": "Info til medlemskap",
+    "veiviser.valg.hjelpetekst.medlemskap": "Hva vil det si å være medlem?",
 
     "veiviser.valg.resultat.overskrift.foreldrepenger": "Du har rett til foreldrepenger",
     "veiviser.valg.resultat.overskrift.foreldrepenger.ikkeRett": "Du har ikke rett til foreldrepenger",

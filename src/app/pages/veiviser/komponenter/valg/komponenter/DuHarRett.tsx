@@ -1,5 +1,5 @@
 import React from 'react';
-import { getTranslation, IntlProps, withIntl } from '../../../../../intl/intl';
+import {getTranslation, Language, withIntl} from '../../../../../intl/intl';
 import TypografiBase from 'nav-frontend-typografi';
 import BEMHelper from '../../../../../utils/bem';
 const cls = BEMHelper('valg');
@@ -11,7 +11,11 @@ interface Props {
     knapp: React.ReactNode;
 }
 
-const DuHarRett: React.StatelessComponent<Props & IntlProps> = ({
+interface CurrentLanguage {
+    lang: Language;
+}
+
+const DuHarRett: React.StatelessComponent<Props & CurrentLanguage> = ({
     lang,
     minLogo,
     overskrift,
@@ -22,12 +26,14 @@ const DuHarRett: React.StatelessComponent<Props & IntlProps> = ({
         <div id="mainSokKnapp" className={cls.element('resultat--stonad-rett')}>
             {minLogo}
             <div className={cls.element('resultat-stonad-body')}>
-                <TypografiBase type="innholdstittel">
-                    {getTranslation(overskrift, lang)}
-                </TypografiBase>
-                {punkter.map((punkt: any, index: number) => {
-                    return <div key={index}>{punkt}</div>;
-                })}
+                <div className={cls.element('resultat-stonad-txt')}>
+                    <TypografiBase type="innholdstittel">
+                        {getTranslation(overskrift, lang)}
+                    </TypografiBase>
+                    {punkter.map((punkt: any, index: number) => {
+                        return <div key={index}>{punkt}</div>;
+                    })}
+                </div>
                 {knapp}
             </div>
         </div>

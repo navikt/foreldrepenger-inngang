@@ -21,9 +21,13 @@
         margin-bottom: 3rem;
     }
 
+    &__resultat--stonad-bilde {
+        margin-bottom: -6px;
+    }
+
     &__resultat-stonad-body {
         background-color: #efefef;
-        padding: 1rem 3.5rem 2rem 3.5rem;
+        padding: 1rem 2rem 2rem 2rem;
         display: flex;
         flex-direction: column;
         margin-left: 0.5rem;
@@ -33,6 +37,10 @@
             text-align: left;
             padding-bottom: 1rem;
         }
+    }
+
+    &__resultat-stonad-txt {
+        padding: 0 1.5rem 0 1.5rem;
     }
 
     &__resultat--punkter {
@@ -54,11 +62,9 @@
         .knapp {
             height: 2.5rem;
         }
-
-        .knapp--standard {
-            margin-right: 1rem;
-            padding-right: 1rem;
-        }
+    }
+    &__resultat-har-rett-knapp.group {
+        justify-content: space-around;
     }
 
     &__knapper {
@@ -184,10 +190,6 @@
         width: 50%;
     }
 
-    .knapp--hoved {
-        width: 60%;
-    }
-
     &__inputFelt {
         display: flex;
         flex-direction: column;
@@ -200,9 +202,6 @@
             padding-left: 0;
         }
 
-        &__input--rad-knapp {
-            width: 30%;
-        }
         .knapp.knapp--flat {
             margin-top: 0.5rem;
             margin-left: 0.6rem;
@@ -212,6 +211,21 @@
         .typo-element {
             padding-left: 0;
         }
+    }
+
+    &__input--rad-knapp {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-left: 1em;
+
+        .valg__aars-inntekt {
+            padding-top: 0.5rem;
+        }
+    }
+
+    &__input--rad-knapp > .knapp.knapp--flat {
+        margin-right: 1rem;
     }
 
     &__input--rad {
@@ -227,7 +241,15 @@
         padding-left: 1.5rem;
     }
 
-    .button--gone {
+    .item--gone {
+        display: none;
+    }
+
+    .item-appear {
+        display: initial;
+    }
+
+    &__aars-inntekt {
         display: none;
     }
 
@@ -257,6 +279,7 @@
         text-align: center;
         align-items: center;
         border-radius: 5px;
+        color: black;
 
         &:hover {
             color: #0067c5;
