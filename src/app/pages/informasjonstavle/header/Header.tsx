@@ -17,7 +17,7 @@ interface Props {
 
 const Header = ({ lang }: Props) => {
     const randomFamilyAtHome = getRandomInt(1, NUM_FAMILIES);
-    const svg = require(`../../../assets/familier-hjemme/familie-hjemme-${randomFamilyAtHome}.svg`)
+    const svg = require(`../../../assets/familier-hjemme/familie-hjemme-sesong-${randomFamilyAtHome}.svg`)
         .default;
 
     return (

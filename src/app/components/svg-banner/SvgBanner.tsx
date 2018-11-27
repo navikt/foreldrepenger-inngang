@@ -22,7 +22,7 @@ class SvgBanner extends Component<Props> {
     }
 
     render = () => {
-        const svg = require(`../../assets/familier-hjemme/familie-hjemme-${
+        const svg = require(`../../assets/familier-hjemme/familie-hjemme-sesong-${
             this.state.svgIndex
         }.svg`).default;
 
