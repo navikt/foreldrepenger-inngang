@@ -77,8 +77,6 @@ interface State {
     loadingSpinner: boolean;
     buttonCls: string;
     inntektCls: string;
-    bildeWidth: string;
-    bildeHeight: string;
     resultFade: boolean;
 }
 
@@ -124,31 +122,9 @@ class Valg extends React.Component<Props, State> {
             loadingSpinner: false,
             buttonCls: '',
             inntektCls: '',
-            bildeWidth: '738px',
-            bildeHeight: '182px',
             resultFade: true
         };
     }
-
-    componentWillMount = () => {
-        this.updateWindowSize();
-        window.addEventListener('resize', this.updateWindowSize);
-    };
-
-    componentDidMount = () => {
-        this.updateWindowSize();
-    };
-
-    updateWindowSize = () => {
-        // mobile break point: 576px -- tablet break point: 800px
-        if (window.innerWidth < 576) {
-            this.setState({ bildeHeight: '100%', bildeWidth: '100%' });
-        } else if (window.innerWidth >= 676 && window.innerWidth <= 799) {
-            this.setState({ bildeHeight: '100%', bildeWidth: '100%' });
-        } else if (window.innerWidth > 800) {
-            this.setState({ bildeHeight: '182px', bildeWidth: '738px' });
-        }
-    };
 
     updateToggle = (e: any, nr: any): void => {
         if (this.toggled !== nr) {
@@ -631,10 +607,7 @@ class Valg extends React.Component<Props, State> {
                         { antallRader: radNiva, teller: checkBoxNiva, checkbox: checked },
                         () =>
                             this.insertResultat(
-                                <Logo
-                                    width={this.state.bildeWidth}
-                                    height={this.state.bildeHeight}
-                                />,
+                                <Logo />,
                                 'veiviser.valg.resultat.overskrift.foreldrepenger',
                                 checked,
                                 <MainKnapp
@@ -652,10 +625,7 @@ class Valg extends React.Component<Props, State> {
                             { antallRader: radNiva, teller: checkBoxNiva, checkbox: checked },
                             () =>
                                 this.insertResultat(
-                                    <Logo
-                                        width={this.state.bildeWidth}
-                                        height={this.state.bildeHeight}
-                                    />,
+                                    <Logo />,
                                     'veiviser.valg.resultat.overskrift.Engangsstonad.mor',
                                     checked,
                                     <EngangsstonadKnapp lang={this.props.lang} />
@@ -666,10 +636,7 @@ class Valg extends React.Component<Props, State> {
                             { antallRader: radNiva, teller: checkBoxNiva, checkbox: checked },
                             () =>
                                 this.insertResultat(
-                                    <Logo
-                                        width={this.state.bildeWidth}
-                                        height={this.state.bildeHeight}
-                                    />,
+                                    <Logo />,
                                     'veiviser.valg.resultat.overskrift.Engangsstonad',
                                     checked,
                                     <EngangsstonadKnapp lang={this.props.lang} />
@@ -711,10 +678,7 @@ class Valg extends React.Component<Props, State> {
                         { antallRader: radNiva, teller: checkBoxNiva, checkbox: checked },
                         () =>
                             this.insertResultat(
-                                <Logo
-                                    width={this.state.bildeWidth}
-                                    height={this.state.bildeHeight}
-                                />,
+                                <Logo />,
                                 'veiviser.valg.resultat.overskrift.foreldrepenger',
                                 checked,
                                 <MainKnapp
@@ -732,10 +696,7 @@ class Valg extends React.Component<Props, State> {
                             { antallRader: radNiva, teller: checkBoxNiva, checkbox: checked },
                             () =>
                                 this.insertResultat(
-                                    <Logo
-                                        width={this.state.bildeWidth}
-                                        height={this.state.bildeHeight}
-                                    />,
+                                    <Logo />,
                                     'veiviser.valg.resultat.overskrift.Engangsstonad.mor',
                                     checked,
                                     <EngangsstonadKnapp lang={this.props.lang} />
@@ -746,10 +707,7 @@ class Valg extends React.Component<Props, State> {
                             { antallRader: radNiva, teller: checkBoxNiva, checkbox: checked },
                             () =>
                                 this.insertResultat(
-                                    <Logo
-                                        width={this.state.bildeWidth}
-                                        height={this.state.bildeHeight}
-                                    />,
+                                    <Logo />,
                                     'veiviser.valg.resultat.overskrift.Engangsstonad',
                                     checked,
                                     <EngangsstonadKnapp lang={this.props.lang} />
