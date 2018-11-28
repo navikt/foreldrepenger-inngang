@@ -56,7 +56,7 @@
     }
 
     &__resultat-har-rett-knapp {
-        margin-top: 2rem;
+        margin-top: 1rem;
         width: 100%;
         display: flex;
         justify-content: center;
@@ -67,7 +67,23 @@
         }
     }
     &__resultat-har-rett-knapp.group {
-        justify-content: space-around;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+
+        .lenke {
+            border-bottom: none;
+            display: flex;
+            width: 100%;
+            justify-content: center;
+        }
+        .knapp {
+            width: 90%;
+        }
+
+        .les-om-engangsstonad {
+            padding-bottom: 0.7rem;
+        }
     }
 
     &__knapper {
@@ -149,7 +165,6 @@
         width: 100%;
         padding-left: 1rem;
         padding-right: 1rem;
-
     }
 
     .inputPanel__label {
@@ -180,6 +195,10 @@
     &__forelder {
         margin-top: 1.5rem;
         width: 100%;
+    }
+
+    .nav-frontend-tabs__tab-outer:last-child {
+        margin-right: 0;
     }
 
     .typo-undertittel {
@@ -238,7 +257,7 @@
     &__input--rad-knapp > .knapp.knapp--flat {
         width: 100%;
         margin-right: 0;
-        padding: calc(.5em - 2px) calc(1.5em - 2px) calc(.625em - 2px) calc(1.5em - 2px);
+        padding: calc(0.5em - 2px) calc(1.5em - 2px) calc(0.625em - 2px) calc(1.5em - 2px);
     }
 
     &__input--rad {
@@ -382,7 +401,6 @@
 
     /* @Mobile breakpoint: styling for screen size lager then 576px */
     @media (min-width: @mobile-breakpoint) {
-
         &__ingress {
             padding: 0 5rem 0 5rem;
             text-align: left;
@@ -395,10 +413,10 @@
 
         &__kort {
             padding-left: 2rem;
-            padding-right:  2rem;
+            padding-right: 2rem;
         }
 
-        &__valg-checkboxes{
+        &__valg-checkboxes {
             flex-direction: row;
         }
 
@@ -435,13 +453,12 @@
 
         &__input--rad-knapp {
             padding-top: 0;
-
         }
 
         &__input--rad-knapp > .knapp.knapp--flat {
             width: auto;
             margin-right: 1rem;
-            padding: calc(.5em - 2px) calc(2.5em - 2px) calc(.625em - 2px) calc(2.5em - 2px);
+            padding: calc(0.5em - 2px) calc(2.5em - 2px) calc(0.625em - 2px) calc(2.5em - 2px);
         }
 
         .skjemaelement {
@@ -470,6 +487,12 @@
             padding: 0 2rem 0 2rem;
         }
 
+        &__resultat-har-rett-knapp.group {
+            .knapp {
+                width: 25rem;
+            }
+        }
+
         &__boks {
             padding: 1.5rem 3rem 1.5rem 2rem;
         }
@@ -478,7 +501,26 @@
         }
     }
 
-    @media(min-width: @tablet-breakpoint) {
+    @media (min-width: @tablet-breakpoint) {
+        &__resultat-har-rett-knapp {
+            margin-top: 2rem;
+            display: flex;
+            flex-direction: row;
+        }
+        &__resultat-har-rett-knapp.group {
+            flex-direction: row;
+            justify-content: space-between;
+            width: 100%;
+
+            .knapp {
+                padding: calc(0.5em - 2px) calc(2.5em - 2px) calc(0.625em - 2px) calc(2.5em - 2px);
+                width: auto;
+            }
+            .les-om-engangsstonad {
+                padding-bottom: 0;
+            }
+        }
+
         &__kort {
             padding-left: 5rem;
             padding-right: 5rem;
