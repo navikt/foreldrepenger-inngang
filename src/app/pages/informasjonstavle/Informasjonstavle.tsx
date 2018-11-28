@@ -63,22 +63,22 @@ const Bildelenker = ({ lang }: { lang: Language }) => {
             </PanelMedBilde>
 
             <PanelMedBilde
-                svgName="hvor-mye"
-                title={getTranslation('informasjonstavle.hvor_mye', lang)}
-                urlIsExternal={false}
-                url="/hvor-mye">
-                <Tekstomrade>
-                    {getTranslation('informasjonstavle.hvor_mye_ingress', lang)}
-                </Tekstomrade>
-            </PanelMedBilde>
-
-            <PanelMedBilde
                 svgName="hvor-lenge"
                 title={getTranslation('informasjonstavle.hvor_lenge', lang)}
                 urlIsExternal={true}
                 url="https://tjenester.nav.no/foreldrepengeplanlegger">
                 <Tekstomrade>
                     {getTranslation('informasjonstavle.hvor_lenge_ingress', lang)}
+                </Tekstomrade>
+            </PanelMedBilde>
+
+            <PanelMedBilde
+                svgName="hvor-mye"
+                title={getTranslation('informasjonstavle.hvor_mye', lang)}
+                urlIsExternal={false}
+                url="/hvor-mye">
+                <Tekstomrade>
+                    {getTranslation('informasjonstavle.hvor_mye_ingress', lang)}
                 </Tekstomrade>
             </PanelMedBilde>
         </nav>
