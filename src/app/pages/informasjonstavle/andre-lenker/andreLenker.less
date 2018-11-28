@@ -2,18 +2,16 @@
 @import '~nav-frontend-core/less/_variabler.less';
 
 .andreLenker {
-    margin-bottom: 2rem;
+    margin: 1.5rem;
+    column-count: 1;
 
     &__linkContainer {
-        margin-bottom: 1rem;
-    }
-
-    &__links {
-        margin-top: 1.5rem;
-        margin-left: 1.5rem;
+        margin-bottom: 1.5rem;
+        text-align: center;
     }
 
     p {
+        text-align: center;
         display: inline-block;
         border-bottom: 1px solid transparent;
     }
@@ -34,48 +32,10 @@
     }
 
     @media (min-width: @mobile-breakpoint) {
-        display: block;
+        column-count: 2;
+    }
 
-        &__links {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-
-            @media screen and (-ms-high-contrast: active),
-                (-ms-high-contrast: none) {
-                display: -ms-grid;
-                -ms-grid-columns: 1fr 1fr 1fr;
-
-                .andreLenker__linkContainer:nth-child(2) {
-                    -ms-grid-column: 2;
-                }
-                .andreLenker__linkContainer:nth-child(3) {
-                    -ms-grid-column: 3;
-                }
-                .andreLenker__linkContainer:nth-child(4) {
-                    -ms-grid-column: 1;
-                    -ms-grid-row: 3;
-                }
-                .andreLenker__linkContainer:nth-child(5) {
-                    -ms-grid-column: 2;
-                    -ms-grid-row: 3;
-                }
-                .andreLenker__linkContainer:nth-child(6) {
-                    -ms-grid-column: 3;
-                    -ms-grid-row: 3;
-                }
-                .andreLenker__linkContainer:nth-child(7) {
-                    -ms-grid-column: 1;
-                    -ms-grid-row: 4;
-                }
-                .andreLenker__linkContainer:nth-child(8) {
-                    -ms-grid-column: 2;
-                    -ms-grid-row: 4;
-                }
-                .andreLenker__linkContainer:nth-child(9) {
-                    -ms-grid-column: 3;
-                    -ms-grid-row: 4;
-                }
-            }
-        }
+    @media (min-width: @tablet-breakpoint) {
+        column-count: 3;
     }
 }
