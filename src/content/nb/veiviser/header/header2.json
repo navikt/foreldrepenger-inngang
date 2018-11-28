@@ -1,0 +1,12 @@
+[
+  {
+    "type": "avsnitt",
+    "style": "normaltekst",
+    "children": [
+      {
+        "type": "span",
+        "text": "Svarene du gir på spørsmålene under, skal være basert på situasjonen din før du skal være hjemme."
+      }
+    ]
+  }
+]

@@ -1,3 +1,5 @@
+@import '../../../../styles/variables.less';
+
 .valg {
     width: 100%;
     max-width: 800px;
@@ -10,28 +12,29 @@
     &__ingress {
         width: 100%;
         justify-content: center;
-        text-align: center;
+        text-align: left;
+        padding: 0 1rem 0 1rem;
     }
 
     &__resultat--stonad-rett {
         display: flex;
         flex-direction: column;
         padding-top: 0.5rem;
-        min-width: 85%;
-        margin-bottom: 3rem;
+        min-width: 98%;
+        margin-bottom: 0;
     }
 
     &__resultat--stonad-bilde {
-        margin-bottom: -6px;
+        margin-bottom: -8px;
+        z-index: 3;
     }
 
     &__resultat-stonad-body {
         background-color: #efefef;
-        padding: 1rem 2rem 2rem 2rem;
+        padding: 1rem 0 2rem 0;
         display: flex;
         flex-direction: column;
-        margin-left: 0.5rem;
-        margin-right: 0.5rem;
+        max-width: 100%;
 
         .typo-innholdstittel {
             text-align: left;
@@ -40,7 +43,7 @@
     }
 
     &__resultat-stonad-txt {
-        padding: 0 1.5rem 0 1.5rem;
+        padding: 0 1rem 0 1rem;
     }
 
     &__resultat--punkter {
@@ -108,8 +111,8 @@
         width: 100%;
         display: flex;
         justify-content: space-around;
-        padding-left: 3rem;
-        padding-right: 3rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
 
     .storToggle {
@@ -133,7 +136,11 @@
 
     &__ingress-knapp {
         text-align: center;
-        padding-bottom: 1rem;
+        padding-bottom: 0.3rem;
+    }
+
+    .utvidetInformasjon {
+        padding-left: 0.3rem;
     }
 
     &__label {
@@ -144,8 +151,9 @@
         display: flex;
         flex-direction: column;
         width: 100%;
-        padding-left: 4rem;
-        padding-right: 4rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+
     }
 
     .inputPanel__label {
@@ -158,20 +166,19 @@
         flex-direction: column;
         text-align: left;
         justify-content: left;
-        margin-bottom: 2.5rem;
+        margin-bottom: 2rem;
     }
 
     &__valg-checkboxes {
-        padding-left: 1rem;
-        padding-right: 1rem;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: center;
-        margin-top: 0.8rem;
+        padding-top: 0.5rem;
     }
 
     &__dropdown {
-        padding-left: 1.5rem;
+        padding-left: 0.3rem;
+        margin-bottom: 0.7rem;
     }
 
     &__forelder {
@@ -179,15 +186,16 @@
         width: 100%;
     }
 
-    .typo-element {
-        padding-left: 1.5rem;
+    .typo-undertittel {
+        padding-left: 0.1rem;
         margin-bottom: 0.7rem;
     }
 
     .radioPanel {
-        margin-left: 0.5rem;
+        margin-left: 0;
         margin-right: 0.5rem;
-        width: 50%;
+        margin-bottom: 0.3rem;
+        width: 100%;
     }
 
     &__inputFelt {
@@ -196,7 +204,13 @@
         justify-content: left;
         text-align: left;
         margin-bottom: 2.5rem;
-        margin-left: 1.3rem;
+        margin-left: 0;
+        margin-right: 0;
+        max-width: 100%;
+
+        .typo-undertittel {
+            padding-left: 0;
+        }
 
         .valg__dropdown {
             padding-left: 0;
@@ -204,41 +218,48 @@
 
         .knapp.knapp--flat {
             margin-top: 0.5rem;
-            margin-left: 0.6rem;
+            margin-left: 0;
             height: 2.4rem;
         }
 
         .typo-element {
             padding-left: 0;
+            padding-bottom: 0.5rem;
         }
     }
 
     &__input--rad-knapp {
         display: flex;
         flex-direction: row;
-        align-items: center;
-        margin-left: 1em;
+        align-items: flex-end;
+        padding-top: 0.5rem;
 
         .valg__aars-inntekt {
-            padding-top: 0.5rem;
+            height: 100%;
         }
     }
 
     &__input--rad-knapp > .knapp.knapp--flat {
-        margin-right: 1rem;
+        width: 100%;
+        margin-right: 0;
+        padding: calc(.5em - 2px) calc(1.5em - 2px) calc(.625em - 2px) calc(1.5em - 2px);
     }
 
     &__input--rad {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
     }
 
     &__inputFeilt--komponent {
-        width: 30%;
+        width: 8rem;
+    }
+
+    .skjemaelement {
+        width: 100%;
     }
 
     .skjemaelement__input {
-        padding-left: 1.5rem;
+        padding-left: 0.5rem;
     }
 
     .item--gone {
@@ -251,13 +272,22 @@
 
     &__aars-inntekt {
         display: none;
+        margin-left: 0;
+        margin-top: 1rem;
+    }
+
+    &__aars-inntekt--sum {
+        padding-top: 0;
+        padding-left: 0;
+        font-weight: bold;
+        font-size: 1.5rem;
     }
 
     &__navigasjonsboks {
         display: flex;
         flex-direction: column;
         width: 100%;
-        margin-top: 2rem;
+        margin-top: 1rem;
     }
 
     &__boks-border {
@@ -275,7 +305,7 @@
         background-color: white;
         display: flex;
         flex-direction: row;
-        padding: 1.5rem 3rem 1.5rem 2rem;
+        padding: 1.2rem 0.9rem 1.2rem 0.4rem;
         text-align: center;
         align-items: center;
         border-radius: 5px;
@@ -352,5 +382,109 @@
     .fade-appear.fade-appear-active {
         opacity: 1;
         transition: opacity 450ms linear;
+    }
+
+    /* @Mobile breakpoint: styling for screen size lager then 576px */
+    @media (min-width: @mobile-breakpoint) {
+
+        &__ingress {
+            padding: 0 5rem 0 5rem;
+            text-align: left;
+        }
+
+        .nav-frontend-tabs__tab-list {
+            padding-left: 3rem;
+            padding-right: 3rem;
+        }
+
+        &__kort {
+            padding-left: 2rem;
+            padding-right:  2rem;
+        }
+
+        &__valg-checkboxes{
+            flex-direction: row;
+        }
+
+        .radioPanel {
+            width: 50%;
+            margin-bottom: 0;
+        }
+
+        &__input--rad {
+            flex-direction: row;
+        }
+
+        &__inputFelt {
+            margin-left: 0.3rem;
+            margin-bottom: 2.5rem;
+
+            .knapp.knapp--flat {
+                margin-left: 1rem;
+            }
+        }
+
+        &__aars-inntekt {
+            margin-left: 1rem;
+            margin-top: 0;
+        }
+
+        &__inputFeilt--komponent {
+            width: 100%;
+        }
+
+        .skjemaelement__input {
+            padding-left: 1rem;
+        }
+
+        &____input--rad-knapp {
+            padding-top: 0;
+        }
+
+        &__input--rad-knapp > .knapp.knapp--flat {
+            width: auto;
+            margin-right: 1rem;
+            padding: calc(.5em - 2px) calc(2.5em - 2px) calc(.625em - 2px) calc(2.5em - 2px);
+        }
+
+        .skjemaelement {
+            width: auto;
+        }
+
+        &__aars-inntekt--sum {
+            padding-top: 0.8rem;
+            padding-left: 0.2rem;
+        }
+
+        .typo-undertittel {
+            padding-left: 0.2rem;
+        }
+
+        &__resultat-stonad-body {
+            padding: 1rem 2rem 2rem 2rem;
+        }
+
+        &__resultat-stonad-txt {
+            padding: 0 1.5rem 0 1.5rem;
+        }
+
+        &__resultat--stonad-rett {
+            margin-bottom: 3rem;
+            padding: 0 2rem 0 2rem;
+        }
+
+        &__boks {
+            padding: 1.5rem 3rem 1.5rem 2rem;
+        }
+        &__navigasjonsboks {
+            margin-top: 2rem;
+        }
+    }
+
+    @media(min-width: @tablet-breakpoint) {
+        &__kort {
+            padding-left: 5rem;
+            padding-right: 5rem;
+        }
     }
 }
