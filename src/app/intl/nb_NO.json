@@ -57,12 +57,16 @@
 
 
     "informasjonstavle.tittel": "Foreldrepenger, engangsstønad og svangerskapspenger",
+    "informasjonstavle.hva_kan_jeg_få": "Hva kan jeg få?",
+    "informasjonstavle.hva_kan_jeg_få_ingress": "Bruk veiviseren og finn ut om du skal søke om foreldre-penger eller engangsstønad.",
     "informasjonstavle.hvor_mye": "Hvor mye?",
     "informasjonstavle.hvor_mye_ingress": "Regn ut hvor mye du kan få i foreldrepenger.",
     "informasjonstavle.hvor_lenge": "Hvor lenge?",
     "informasjonstavle.hvor_lenge_ingress": "Planlegg hvor lenge du kan være hjemme med barnet.",
-    "informasjonstavle.velg_søknad": "Velg søknadsskjema",
-    "informasjonstavle.velg_søknad_ingress": "Her finner du alle skjemaer for mor og far.\n\nForeldrepenger, utsettelse, endring og engangsstønad, alt på samme sted.",
+    
+    "informasjonstavle.velg_søknadsskjema.tittel": "Velg søknadsskjema",
+    "informasjonstavle.velg_søknadsskjema.ingress": "Her finner du alle skjemaer for mor og far. Foreldrepenger, utsettelse, endring og engangsstønad, alt på samme sted.",
+
     "informasjonstavle.mer_informasjon.tittel": "Utfyllende informasjon",
     "informasjonstavle.mer_informasjon.foreldrepenger": "Foreldrepengene skal erstatte inntekten din når du skal være hjemme med barnet.",
     "informasjonstavle.mer_informasjon.engangsstønad": "Hvis du venter barn og ikke hatt inntekt det siste året, kan du få en engangssum istedenfor foreldrepenger.",

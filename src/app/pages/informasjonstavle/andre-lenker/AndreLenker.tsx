@@ -64,14 +64,7 @@ const AndreLenker: React.StatelessComponent<IntlProps> = ({ lang }) => {
         </div>
     ));
 
-    return (
-        <div className={cls.className}>
-            <TypografiBase type="undertittel">
-                {getTranslation('informasjonstavle.andre_lenker.tittel', lang)}
-            </TypografiBase>
-            <nav className={cls.element('links')}>{otherLinks}</nav>
-        </div>
-    );
+    return <nav className={cls.className}>{otherLinks}</nav>;
 };
 
 export default withIntl(AndreLenker);
