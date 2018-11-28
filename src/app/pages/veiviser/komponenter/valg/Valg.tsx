@@ -933,7 +933,7 @@ const MainKnapp = ({
 
 const EngangsstonadKnapp = ({ lang }: { lang: Language }) => (
     <div className={cls.element('resultat-har-rett-knapp group')}>
-        <Lenke href={'/om-engangsstonad'}>
+        <Lenke className={"les-om-engangsstonad"} href={'/om-engangsstonad'}>
             <KnappBase type="standard">
                 {getTranslation('veiviser.valg.resultat.knapp.engangsstonad.info', lang)}
             </KnappBase>
