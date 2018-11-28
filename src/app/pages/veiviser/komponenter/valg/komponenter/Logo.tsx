@@ -1,19 +1,13 @@
 import React from 'react';
 import { withIntl } from '../../../../../intl/intl';
-import { FlexibleSvg } from '../../../../../utils/CustomSVG';
 import BEMHelper from '../../../../../utils/bem';
+import ResultatBilde from "./ResultatBilde";
 const cls = BEMHelper('valg');
 
-const Logo = () => {
+const Logo = ({width, height}: {width: string, height: string}) => {
     return (
         <div className={cls.element('resultat--stonad-bilde')}>
-            <FlexibleSvg
-                iconRef={
-                    require('../../../../../assets/icons/veiviser-resultat-har-rett.svg').default
-                }
-                width={738}
-                height={182}
-            />
+      <ResultatBilde width={width} height={height}/>
         </div>
     );
 };

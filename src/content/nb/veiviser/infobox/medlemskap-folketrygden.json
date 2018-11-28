@@ -1,0 +1,28 @@
+[
+  {
+    "type": "avsnitt",
+    "style": "normaltekst",
+    "children": [
+      {
+        "type": "span",
+        "text": "For å få foreldrepenger må du være medlem av folketrygden, det er du vanligvis om du bor og jobber i Norge. Du kan også være frivillig medlem av folketrygden, du kan lese mer om "
+      },
+      {
+        "type": "span",
+        "text": "medlemskap i folketrygden",
+        "marks": ["les_om_folkeTrygden", "external_link"]
+      },
+      {
+        "type": "span",
+        "text": "."
+      }
+    ],
+    "markDefs": [
+      {
+        "key": "les_om_folkeTrygden",
+        "type": "link",
+        "href": "https://www.nav.no/no/Person/Flere+tema/Arbeid+og+opphold+i+Norge/Relatert+informasjon/medlemskap-i-folketrygden"
+      }
+    ]
+  }
+]

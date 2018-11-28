@@ -5,7 +5,7 @@
     "children": [
       {
         "type": "span",
-        "text": "Har du andre inntektskilder kan du ha rett til foreldrepenger:"
+        "text": "Disse inntektene kan gi deg rett til foreldrepenger: "
       }
     ]
   },
@@ -31,32 +31,6 @@
       {
         "type": "span",
         "text": "Jobbet i et annet EØS-land",
-        "marks": []
-      }
-    ]
-  },
-  {
-    "type": "avsnitt",
-    "style": "normaltekst",
-    "listItem": "bullet",
-    "level": 1,
-    "children": [
-      {
-        "type": "span",
-        "text": "Selvstendig næringsdrivende",
-        "marks": []
-      }
-    ]
-  },
-  {
-    "type": "avsnitt",
-    "style": "normaltekst",
-    "listItem": "bullet",
-    "level": 1,
-    "children": [
-      {
-        "type": "span",
-        "text": "Frilanser",
         "marks": []
       }
     ]

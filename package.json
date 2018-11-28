@@ -117,7 +117,7 @@
         "nav-frontend-paneler": "1.0.10",
         "nav-frontend-paneler-style": "^0.3.11",
         "nav-frontend-skjema": "1.0.42",
-        "nav-frontend-skjema-style": "1.0.23",
+        "nav-frontend-skjema-style": "1.0.27",
         "nav-frontend-spinner": "1.0.12",
         "nav-frontend-spinner-style": "0.2.5",
         "nav-frontend-stegindikator": "0.0.27",
@@ -142,7 +142,7 @@
         "react-motion": "0.5.2",
         "react-responsive": "6.0.1",
         "react-router-dom": "4.3.1",
-        "webpack": "4.25.1",
-        "react-transition-group": "2.5.0"
+        "react-transition-group": "2.5.0",
+        "webpack": "4.25.1"
     }
 }

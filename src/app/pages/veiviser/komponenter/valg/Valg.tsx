@@ -16,7 +16,7 @@ import Logo from './komponenter/Logo';
 import NavigasjonsBoks from './komponenter/NavigasjonsBoks';
 import './valg.less';
 import Lenke from 'nav-frontend-lenker';
-import {getEnHalvG} from '../../../../utils/beregningUtils';
+import { getEnHalvG } from '../../../../utils/beregningUtils';
 
 const cls = BEMHelper('valg');
 
@@ -77,6 +77,9 @@ interface State {
     loadingSpinner: boolean;
     buttonCls: string;
     inntektCls: string;
+    bildeWidth: string;
+    bildeHeight: string;
+    resultFade: boolean;
 }
 
 type Props = Lang & TabContent;
@@ -85,8 +88,12 @@ class Valg extends React.Component<Props, State> {
     static goToSection(id: string): any {
         const target = document.querySelector(id);
         if (target) {
-            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            target.scrollIntoView({ behavior: 'smooth', block: 'end' });
         }
+    }
+
+    static resultatPunkt(lang: any, txt: string, tegn: string) {
+        return <ResultatPunkt lang={lang} translationString={txt} tegn={tegn} />;
     }
 
     toggled = null;
@@ -116,9 +123,32 @@ class Valg extends React.Component<Props, State> {
             inputVal: '',
             loadingSpinner: false,
             buttonCls: '',
-            inntektCls: ''
+            inntektCls: '',
+            bildeWidth: '738px',
+            bildeHeight: '182px',
+            resultFade: true
         };
     }
+
+    componentWillMount = () => {
+        this.updateWindowSize();
+        window.addEventListener('resize', this.updateWindowSize);
+    };
+
+    componentDidMount = () => {
+        this.updateWindowSize();
+    };
+
+    updateWindowSize = () => {
+        // mobile break point: 576px -- tablet break point: 800px
+        if (window.innerWidth < 576) {
+            this.setState({ bildeHeight: '100%', bildeWidth: '100%' });
+        } else if (window.innerWidth >= 676 && window.innerWidth <= 799) {
+            this.setState({ bildeHeight: '100%', bildeWidth: '100%' });
+        } else if (window.innerWidth > 800) {
+            this.setState({ bildeHeight: '182px', bildeWidth: '738px' });
+        }
+    };
 
     updateToggle = (e: any, nr: any): void => {
         if (this.toggled !== nr) {
@@ -146,7 +176,8 @@ class Valg extends React.Component<Props, State> {
                     checkbox: noneChecked,
                     antallRader: 0,
                     result: [],
-                    inntektCls: 'item--gone'
+                    inntektCls: 'item--gone',
+                    resultFade: true
                 },
                 () =>
                     this.insertBoxes(
@@ -222,7 +253,7 @@ class Valg extends React.Component<Props, State> {
             checkbox: ischeckbox,
             sprmal: getTranslation(sprmalMor[input], this.props.lang)
         });
-        this.setState({ valg: list, inntektCls: '' });
+        this.setState({ valg: list, inntektCls: 'item--gone' });
     }
 
     getDropdown(aapneLabel: string, lukeLabel: string, jsonContentPath: string) {
@@ -252,13 +283,14 @@ class Valg extends React.Component<Props, State> {
             this.setState({
                 inputVal: initValue,
                 buttonCls: '',
+                inntektCls: '',
                 valg: tmpItems,
                 checkbox: checked,
                 result: []
             });
         } else {
             const initValue = e.target.value;
-            this.setState({ inputVal: initValue, buttonCls: '', inntektCls: 'item-appear' });
+            this.setState({ inputVal: initValue, buttonCls: '', inntektCls: '' });
         }
     };
 
@@ -270,7 +302,11 @@ class Valg extends React.Component<Props, State> {
             inntekt >= getEnHalvG()
                 ? this.checkRow(checkboksNiva, 0, radnummer)
                 : this.checkRow(checkboksNiva, 1, radnummer);
-            this.setState({ loadingSpinner: false, buttonCls: 'item--gone' });
+            this.setState({
+                loadingSpinner: false,
+                buttonCls: 'item--gone',
+                inntektCls: 'item-appear'
+            });
         }, 750);
     };
 
@@ -296,10 +332,6 @@ class Valg extends React.Component<Props, State> {
             };
         }
         this.initItem(nyttValg, this.state.teller, newItem, radNummer, true, dropdown);
-    }
-
-    static resultatPunkt(lang: any, txt: string, tegn: string) {
-        return <ResultatPunkt lang={lang} translationString={txt} tegn={tegn} />;
     }
 
     insertResultat(logo: object, overskrift: string, checked: object[], knappType: object) {
@@ -374,7 +406,12 @@ class Valg extends React.Component<Props, State> {
         if (checked[2][0] && checked[3][0] && (checked[4][0] || checked[5][0])) {
             res.push(<NavigasjonsBoks lang={this.props.lang} />);
         }
-        this.setState({ result: res }, () => setTimeout(Valg.goToSection('#mainSokKnapp'), 500));
+        this.setState({ result: res }, () =>
+            setTimeout(() => {
+                Valg.goToSection('#mainSokKnapp');
+                setTimeout(() => this.setState({ resultFade: false }), 2000);
+            }, 500)
+        );
     }
 
     checkRow(checkBoxNiva: number, svar: number, radNiva: number) {
@@ -398,7 +435,9 @@ class Valg extends React.Component<Props, State> {
 
     checkResult(checkBoxNiva: number, svar: number, radNiva: number) {
         if (this.state.result.length !== 0) {
-            this.setState({ result: [] }, () => this.appendRow(checkBoxNiva, svar, radNiva));
+            this.setState({ result: [], resultFade: true }, () =>
+                this.appendRow(checkBoxNiva, svar, radNiva)
+            );
         } else {
             this.appendRow(checkBoxNiva, svar, radNiva);
         }
@@ -421,7 +460,12 @@ class Valg extends React.Component<Props, State> {
                             this.state.numberofCheckBoxz,
                             this.state.teller,
                             this.state.valg,
-                            this.state.antallRader
+                            this.state.antallRader,
+                            this.getDropdown(
+                                'veiviser.valg.hjelpetekst.hattInntekt',
+                                'veiviser.valg.hjelpetekst.lukk',
+                                'veiviser/infobox/hvorfor-inntekt'
+                            )
                         )
                 );
             } else if (svar === 1) {
@@ -459,7 +503,12 @@ class Valg extends React.Component<Props, State> {
                             this.state.numberofCheckBoxz,
                             this.state.teller,
                             this.state.valg,
-                            this.state.antallRader
+                            this.state.antallRader,
+                            this.getDropdown(
+                                'veiviser.valg.hjelpetekst.hattInntekt',
+                                'veiviser.valg.hjelpetekst.lukk',
+                                'veiviser/infobox/hvorfor-inntekt'
+                            )
                         )
                 );
             } else if (svar === 1) {
@@ -582,7 +631,10 @@ class Valg extends React.Component<Props, State> {
                         { antallRader: radNiva, teller: checkBoxNiva, checkbox: checked },
                         () =>
                             this.insertResultat(
-                                <Logo />,
+                                <Logo
+                                    width={this.state.bildeWidth}
+                                    height={this.state.bildeHeight}
+                                />,
                                 'veiviser.valg.resultat.overskrift.foreldrepenger',
                                 checked,
                                 <MainKnapp
@@ -600,7 +652,10 @@ class Valg extends React.Component<Props, State> {
                             { antallRader: radNiva, teller: checkBoxNiva, checkbox: checked },
                             () =>
                                 this.insertResultat(
-                                    <Logo />,
+                                    <Logo
+                                        width={this.state.bildeWidth}
+                                        height={this.state.bildeHeight}
+                                    />,
                                     'veiviser.valg.resultat.overskrift.Engangsstonad.mor',
                                     checked,
                                     <EngangsstonadKnapp lang={this.props.lang} />
@@ -611,7 +666,10 @@ class Valg extends React.Component<Props, State> {
                             { antallRader: radNiva, teller: checkBoxNiva, checkbox: checked },
                             () =>
                                 this.insertResultat(
-                                    <Logo />,
+                                    <Logo
+                                        width={this.state.bildeWidth}
+                                        height={this.state.bildeHeight}
+                                    />,
                                     'veiviser.valg.resultat.overskrift.Engangsstonad',
                                     checked,
                                     <EngangsstonadKnapp lang={this.props.lang} />
@@ -631,7 +689,12 @@ class Valg extends React.Component<Props, State> {
                             this.state.numberofCheckBoxz,
                             this.state.teller,
                             this.state.valg,
-                            this.state.antallRader
+                            this.state.antallRader,
+                            this.getDropdown(
+                                'veiviser.valg.hjelpetekst.medlem.folketrygden',
+                                'veiviser.valg.hjelpetekst.lukk',
+                                'veiviser/infobox/medlemskap-folketrygden'
+                            )
                         )
                 );
             }
@@ -648,7 +711,10 @@ class Valg extends React.Component<Props, State> {
                         { antallRader: radNiva, teller: checkBoxNiva, checkbox: checked },
                         () =>
                             this.insertResultat(
-                                <Logo />,
+                                <Logo
+                                    width={this.state.bildeWidth}
+                                    height={this.state.bildeHeight}
+                                />,
                                 'veiviser.valg.resultat.overskrift.foreldrepenger',
                                 checked,
                                 <MainKnapp
@@ -666,7 +732,10 @@ class Valg extends React.Component<Props, State> {
                             { antallRader: radNiva, teller: checkBoxNiva, checkbox: checked },
                             () =>
                                 this.insertResultat(
-                                    <Logo />,
+                                    <Logo
+                                        width={this.state.bildeWidth}
+                                        height={this.state.bildeHeight}
+                                    />,
                                     'veiviser.valg.resultat.overskrift.Engangsstonad.mor',
                                     checked,
                                     <EngangsstonadKnapp lang={this.props.lang} />
@@ -677,7 +746,10 @@ class Valg extends React.Component<Props, State> {
                             { antallRader: radNiva, teller: checkBoxNiva, checkbox: checked },
                             () =>
                                 this.insertResultat(
-                                    <Logo />,
+                                    <Logo
+                                        width={this.state.bildeWidth}
+                                        height={this.state.bildeHeight}
+                                    />,
                                     'veiviser.valg.resultat.overskrift.Engangsstonad',
                                     checked,
                                     <EngangsstonadKnapp lang={this.props.lang} />
@@ -713,6 +785,14 @@ class Valg extends React.Component<Props, State> {
         <div className={cls.className}>
             <div className={cls.element('ingress')}>
                 <StrukturertTekst tekst={getContent('veiviser/header/header', this.props.lang)} />
+                <UtvidetInformasjon
+                    apneLabel={getTranslation('veiviser.valg.hjelpetekst.ingress', this.props.lang)}
+                    lukkLabel={getTranslation('veiviser.valg.hjelpetekst.lukk', this.props.lang)}>
+                    <StrukturertTekst
+                        tekst={getContent('veiviser/infobox/ingress', this.props.lang)}
+                    />
+                </UtvidetInformasjon>
+                <StrukturertTekst tekst={getContent('veiviser/header/header2', this.props.lang)} />
             </div>
             <div className={cls.element('forelder')}>
                 <div className={cls.element('ingress-knapp')}>
@@ -754,26 +834,23 @@ class Valg extends React.Component<Props, State> {
                     this.state.antallRader === valg.rad ? (this.fade = true) : (this.fade = false);
                     if (valg.checkbox) {
                         return (
-                            <div
-                                key={valg.nr + Date.now()}
-                                className={cls.element('kort-rad ' + valg.nr)}>
-                                <TypografiBase type="element">{valg.sprmal}</TypografiBase>
+                            <div key={valg.nr} className={cls.element('kort-rad ' + valg.nr)}>
+                                <TypografiBase type="undertittel">{valg.sprmal}</TypografiBase>
                                 {valg.con}
                                 <div className={cls.element('valg-checkboxes ')}>
                                     {valg.obj.map((item: any, index: number) => {
                                         return (
                                             <CSSTransition
-                                                key={item.value + Date.now()}
+                                                key={item.value}
                                                 appear={true}
                                                 classNames="fade"
                                                 in={this.fade}
                                                 timeout={1000}>
                                                 <RadioPanel
-                                                    key={item.value}
                                                     checked={
                                                         this.state.checkbox[item.valgIndex][index]
                                                     }
-                                                    name={item.name}
+                                                    name={item.value}
                                                     onChange={item.onChange}
                                                     label={item.label} // item.label
                                                     value={item.value}
@@ -793,45 +870,64 @@ class Valg extends React.Component<Props, State> {
                                 in={this.fade}
                                 timeout={1000}>
                                 <div className={cls.element('inputFelt')}>
-                                    <TypografiBase type={'element'}>{valg.sprmal}</TypografiBase>
+                                    <TypografiBase type={'undertittel'}>
+                                        {valg.sprmal}
+                                    </TypografiBase>
                                     {valg.con}
                                     <div className={cls.element('input--rad')}>
-                                        <Input
-                                            className={cls.element('inputFeilt--komponent')}
-                                            label={''}
-                                            min={0}
-                                            step={1000}
-                                            type="number"
-                                            value={this.state.inputVal}
-                                            onChange={this.insertInputVal(
-                                                this.fade,
-                                                valg.rad,
-                                                valg.nr
-                                            )}
-                                            placeholder={this.belop}
-                                        />
+                                        <div className={cls.element('input--rad-kol-1')}>
+                                            <TypografiBase type={'element'}>
+                                                {getTranslation(
+                                                    'veiviser.valg.inntekt.subHeader',
+                                                    this.props.lang
+                                                )}
+                                            </TypografiBase>
+                                            <Input
+                                                className={cls.element('inputFeilt--komponent')}
+                                                label={''}
+                                                min={0}
+                                                step={1000}
+                                                type="number"
+                                                value={this.state.inputVal}
+                                                onChange={this.insertInputVal(
+                                                    this.fade,
+                                                    valg.rad,
+                                                    valg.nr
+                                                )}
+                                                placeholder={this.belop}
+                                            />
+                                        </div>
                                         <div className={cls.element('input--rad-knapp ')}>
                                             <KnappBase
                                                 className={this.state.buttonCls}
                                                 type="flat"
                                                 spinner={this.state.loadingSpinner}
                                                 onClick={this.checkInputValue(valg.nr, valg.rad)}>
-                                                beregn inntekt
+                                                {getTranslation(
+                                                    'veiviser.valg.beregn.knapp',
+                                                    this.props.lang
+                                                )}
                                             </KnappBase>
                                             <div
                                                 className={cls.element(
                                                     'aars-inntekt ' + this.state.inntektCls
                                                 )}>
-                                                {getTranslation(
-                                                    'veiviser.valg.beregnet.aarsinntekt',
-                                                    this.props.lang
-                                                )}
-                                                {12 * parseInt(this.state.inputVal, 10)
-                                                    ? (12 * parseInt(this.state.inputVal, 10))
-                                                          .toString()
-                                                          .replace(/\B(?=(\d{3})+(?!\d))/g, ',')
-                                                          .trim()
-                                                    : 0}
+                                                <div>
+                                                    <TypografiBase type={'element'}>
+                                                        {getTranslation(
+                                                            'veiviser.valg.beregnet.aarsinntekt',
+                                                            this.props.lang
+                                                        )}
+                                                    </TypografiBase>
+                                                </div>
+                                                <div className={cls.element('aars-inntekt--sum')}>
+                                                    {12 * parseInt(this.state.inputVal, 10)
+                                                        ? (
+                                                              12 * parseInt(this.state.inputVal, 10)
+                                                          ).toLocaleString(this.props.lang)
+                                                        : 0}{' '}
+                                                    kr
+                                                </div>
                                             </div>
                                         </div>
                                         <div />
@@ -848,7 +944,7 @@ class Valg extends React.Component<Props, State> {
                         key={index + Date.now()}
                         appear={true}
                         classNames="message"
-                        in={true}
+                        in={this.state.resultFade}
                         timeout={800}>
                         {res}
                     </CSSTransition>

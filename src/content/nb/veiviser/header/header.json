@@ -5,7 +5,16 @@
     "children": [
       {
         "type": "span",
-        "text": "Gå gjennom veiviseren under for å se om du skal velge engangsstønad eller foreldrepenger"
+        "text": "Gå gjennom veiviseren under for å se om du burde velge foreldrepenger eller engangsstønad. Du kan kun få "
+      },
+      {
+        "type": "span",
+        "text": "en",
+        "marks": ["bold"]
+      },
+      {
+        "type": "span",
+        "text": " av disse."
       }
     ]
   }
