@@ -607,7 +607,7 @@ class Valg extends React.Component<Props, State> {
                         { antallRader: radNiva, teller: checkBoxNiva, checkbox: checked },
                         () =>
                             this.insertResultat(
-                                <Logo/>,
+                                <Logo />,
                                 'veiviser.valg.resultat.overskrift.foreldrepenger',
                                 checked,
                                 <MainKnapp
@@ -625,7 +625,7 @@ class Valg extends React.Component<Props, State> {
                             { antallRader: radNiva, teller: checkBoxNiva, checkbox: checked },
                             () =>
                                 this.insertResultat(
-                                    <Logo/>,
+                                    <Logo />,
                                     'veiviser.valg.resultat.overskrift.Engangsstonad.mor',
                                     checked,
                                     <EngangsstonadKnapp lang={this.props.lang} />
@@ -636,7 +636,7 @@ class Valg extends React.Component<Props, State> {
                             { antallRader: radNiva, teller: checkBoxNiva, checkbox: checked },
                             () =>
                                 this.insertResultat(
-                                    <Logo/>,
+                                    <Logo />,
                                     'veiviser.valg.resultat.overskrift.Engangsstonad',
                                     checked,
                                     <EngangsstonadKnapp lang={this.props.lang} />
@@ -678,7 +678,7 @@ class Valg extends React.Component<Props, State> {
                         { antallRader: radNiva, teller: checkBoxNiva, checkbox: checked },
                         () =>
                             this.insertResultat(
-                                <Logo/>,
+                                <Logo />,
                                 'veiviser.valg.resultat.overskrift.foreldrepenger',
                                 checked,
                                 <MainKnapp
@@ -696,7 +696,7 @@ class Valg extends React.Component<Props, State> {
                             { antallRader: radNiva, teller: checkBoxNiva, checkbox: checked },
                             () =>
                                 this.insertResultat(
-                                    <Logo/>,
+                                    <Logo />,
                                     'veiviser.valg.resultat.overskrift.Engangsstonad.mor',
                                     checked,
                                     <EngangsstonadKnapp lang={this.props.lang} />
@@ -707,7 +707,7 @@ class Valg extends React.Component<Props, State> {
                             { antallRader: radNiva, teller: checkBoxNiva, checkbox: checked },
                             () =>
                                 this.insertResultat(
-                                    <Logo/>,
+                                    <Logo />,
                                     'veiviser.valg.resultat.overskrift.Engangsstonad',
                                     checked,
                                     <EngangsstonadKnapp lang={this.props.lang} />
