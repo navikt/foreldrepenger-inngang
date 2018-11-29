@@ -9,6 +9,10 @@
     justify-content: center;
     align-items: center;
 
+    .utvidetInformasjon {
+        margin-bottom: 0;
+    }
+
     &__ingress {
         width: 100%;
         justify-content: center;
@@ -20,7 +24,7 @@
         display: flex;
         flex-direction: column;
         padding-top: 0.5rem;
-        min-width: 98%;
+        min-width: 100%;
         margin-bottom: 0;
     }
 
@@ -70,6 +74,7 @@
         flex-direction: column;
         justify-content: center;
         width: 100%;
+        padding: 0 1rem 0 1rem;
 
         .lenke {
             border-bottom: none;
@@ -177,19 +182,18 @@
         flex-direction: column;
         text-align: left;
         justify-content: left;
-        margin-bottom: 2rem;
+        margin-bottom: 3rem;
     }
 
     &__valg-checkboxes {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        padding-top: 0.5rem;
+        padding-top: 1rem;
     }
 
     &__dropdown {
-        padding-left: 0.3rem;
-        margin-bottom: 0.7rem;
+        margin-bottom: 0.5rem;
     }
 
     &__forelder {
@@ -202,8 +206,7 @@
     }
 
     .typo-undertittel {
-        padding-left: 0.1rem;
-        margin-bottom: 0.7rem;
+        margin-bottom: 0.5rem;
     }
 
     .radioPanel {
@@ -267,6 +270,7 @@
     &__input--rad {
         display: flex;
         flex-direction: column;
+        padding-top: 1rem;
     }
 
     &__inputFeilt--komponent {
@@ -306,7 +310,6 @@
         display: flex;
         flex-direction: column;
         width: 100%;
-        margin-top: 1rem;
     }
 
     &__boks-border {
@@ -487,10 +490,6 @@
             padding-left: 0.2rem;
         }
 
-        .typo-undertittel {
-            padding-left: 0.2rem;
-        }
-
         &__resultat-stonad-body {
             padding: 1rem 2rem 2rem 2rem;
         }
@@ -507,8 +506,7 @@
         }
 
         &__resultat--stonad-rett {
-            margin-bottom: 0.5rem;
-            padding: 0 2rem 0 2rem;
+            padding: 0 2rem 2rem 2rem;
         }
 
         &__resultat-har-rett-knapp.group {
@@ -518,16 +516,13 @@
         }
 
         &__boks {
-            padding: 1.5rem 0 1.5rem 0;
-        }
-        &__navigasjonsboks {
-            margin-top: 2rem;
+            padding: 1.5rem 2rem 1.5rem 2rem;
         }
     }
 
     @media (min-width: @tablet-breakpoint) {
         &__resultat-har-rett-knapp {
-            margin-top: 0;
+            margin-top: 1rem;
             display: flex;
             flex-direction: row;
         }
