@@ -565,7 +565,7 @@ class Valg extends React.Component<Props, State> {
                             this.getDropdown(
                                 'veiviser.valg.hjelpetekst.medlemskap',
                                 'veiviser.valg.hjelpetekst.lukk',
-                                'veiviser/infobox/medlemskap-folketrygden'
+                                'veiviser/infobox/til-medlemskap'
                             )
                         )
                 );
