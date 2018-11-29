@@ -6,6 +6,7 @@ import './header.less';
 import MediaQuery from 'react-responsive';
 import { getRandomInt } from '../../../utils/random';
 import { getTranslation, withIntl, Language } from '../../../intl/intl';
+import { detErJul } from 'app/utils/datoUtils';
 
 const cls = BEMHelper('header');
 
@@ -15,10 +16,16 @@ interface Props {
     lang: Language;
 }
 
+const getRandomSvgForHeader = () => {
+    const randomFamily = getRandomInt(1, NUM_FAMILIES);
+    return detErJul()
+        ? require(`../../../assets/familier-hjemme/familie-hjemme-sesong-${randomFamily}.svg`)
+              .default
+        : require(`../../../assets/familier-hjemme/familie-hjemme-${randomFamily}.svg`).default;
+};
+
 const Header = ({ lang }: Props) => {
-    const randomFamilyAtHome = getRandomInt(1, NUM_FAMILIES);
-    const svg = require(`../../../assets/familier-hjemme/familie-hjemme-sesong-${randomFamilyAtHome}.svg`)
-        .default;
+    const svg = getRandomSvgForHeader();
 
     return (
         <header className={cls.className}>
