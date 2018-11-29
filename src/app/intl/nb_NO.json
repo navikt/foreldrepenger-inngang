@@ -263,7 +263,7 @@
     "veiviser.navgigasjonsboks.kalk.label": "Regn ut hvor mye du kan få ved hjelp av kalkulatoren",
     "veiviser.navigasjonsboks.planlegg.label": "Planlegg hvor lenge du kan være hjemme med barnet ditt",
     "veiviser.valg.beregnet.aarsinntekt": "Beregnet årsinntekt før skatt",
-    "veiviser.valg.inntekt.subHeader": "Din månedslønn",
+    "veiviser.valg.inntekt.subHeader": "Din månedslønn før skatt",
     "veiviser.valg.inntekt.beregnet.subHeader": "Beregnet årsinntekt før skatt",
     "veiviser.valg.beregn.knapp": "Beregn inntekt",
 
@@ -316,9 +316,9 @@
     "veiviser.valg.hjelpetekst.medlemskap": "Hvorfor må jeg bo i Norge?",
     "veiviser.valg.hjelpetekst.medlem.folketrygden": "Hva vil det si å være medlem av folketrygden?",
 
-    "veiviser.valg.resultat.overskrift.foreldrepenger": "Du har rett til foreldrepenger",
-    "veiviser.valg.resultat.overskrift.foreldrepenger.ikkeRett": "Du har ikke rett til foreldrepenger",
-    "veiviser.valg.resultat.overskrift.Engangsstonad.mor": "Du har rett til engangsstønad",
+    "veiviser.valg.resultat.overskrift.foreldrepenger": "Du kan ha rett til foreldrepenger",
+    "veiviser.valg.resultat.overskrift.foreldrepenger.ikkeRett": "Det ser ut som at du ikke har rett til foreldrepenger.",
+    "veiviser.valg.resultat.overskrift.Engangsstonad.mor": "Du kan ha rett til engangsstønad",
     "veiviser.valg.resultat.overskrift.Engangsstonad": "Du kan ha rett til engangsstønad",
     "veiviser.valg.resultat.knapp.foreldrepenger": "søk om foreldrepenger",
     "veiviser.valg.resultat.knapp.engangsstonad": "søk om engangstønad",
