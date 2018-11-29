@@ -5,47 +5,112 @@
         "listItem": "bullet",
         "level": 1,
         "children": [
-            { "type": "span", "text": "Send inn ", "marks": [] },
-            { "type": "span", "text": "søknad", "marks": ["bold"] },
+            { "type": "span", "text": "I ", "marks": [] },
             {
                 "type": "span",
-                "text": " om å utsette foreldrepengene.",
-                "marks": []
-            }
-        ]
-    },
-    {
-        "type": "avsnitt",
-        "style": "normaltekst",
-        "listItem": "bullet",
-        "level": 1,
-        "children": [
-            { "type": "span", "text": "Legg ved ", "marks": [] },
-            { "type": "span", "text": "legeerklæring", "marks": ["bold"] },
-            {
-                "type": "span",
-                "text": ". Den må beskrive hvordan sykdommen gjør deg helt avhengig av hjelp til å ta deg av barnet, og hvor lenge du vil være helt avhengig av hjelp. Det er ikke nok med vanlig sykmelding.",
-                "marks": []
-            }
-        ]
-    },
-    {
-        "type": "avsnitt",
-        "style": "normaltekst",
-        "listItem": "bullet",
-        "level": 1,
-        "children": [
-            {
-                "type": "span",
-                "text": "Hvis du er innlagt, legger du i stedet ved ",
-                "marks": []
-            },
-            {
-                "type": "span",
-                "text": "dokumentasjon på innleggelsen",
+                "text": "foreldrepengesøknaden",
                 "marks": ["bold"]
             },
-            { "type": "span", "text": " fra helseinstitusjonen.", "marks": [] }
+            {
+                "type": "span",
+                "text": " oppgir du at du skal ",
+                "marks": []
+            },
+            {
+                "type": "span",
+                "text": "utsette",
+                "marks": ["bold"]
+            },
+            {
+                "type": "span",
+                "text": " en periode fordi du er syk eller innlagt.",
+                "marks": []
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "listItem": "bullet",
+        "level": 1,
+        "children": [
+            { "type": "span", "text": "Hvis du ", "marks": [] },
+            { "type": "span", "text": "allerede har søkt", "marks": ["bold"] },
+            {
+                "type": "span",
+                "text": ", logger du på ",
+                "marks": []
+            },
+            {
+                "type": "span",
+                "text": "Dine foreldrepenger",
+                "marks": ["url_dine_foreldrepenger", "external_link"]
+            },
+            {
+                "type": "span",
+                "text": " og sender en endringssøknad i isteden.",
+                "marks": []
+            }
+        ],
+        "markDefs": [
+            {
+                "key": "url_dine_foreldrepenger",
+                "type": "link",
+                "href": "https://foreldrepenger.nav.no/"
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "element",
+        "children": [
+            {
+                "type": "span",
+                "text": "Dette må du legge ved søknaden",
+                "marks": []
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "listItem": "bullet",
+        "level": 1,
+        "children": [
+            { "type": "span", "text": "Den andre forelderen er ", "marks": [] },
+            { "type": "span", "text": "syk, men hjemme", "marks": ["bold"] },
+            {
+                "type": "span",
+                "text": ": Legg ved en legeerklæring. Den må beskrive hvordan sykdommen gjør den andre forelderen helt avhengig av hjelp til å ta seg av barnet, og hvor lenge sykdommen vil vare",
+                "marks": []
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "listItem": "bullet",
+        "level": 1,
+        "children": [
+            { "type": "span", "text": "Den andre forelderen er ", "marks": [] },
+            { "type": "span", "text": "innlagt", "marks": ["bold"] },
+            {
+                "type": "span",
+                "text": ": Legg ved dokumentasjon på innleggelsen fra helseinstitusjonen.",
+                "marks": []
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            { "type": "span", "text": "Søkefrist", "marks": ["bold"] },
+            {
+                "type": "span",
+                "text": ": Du må søke innen tre måneder.",
+                "marks": []
+            }
         ]
     }
 ]

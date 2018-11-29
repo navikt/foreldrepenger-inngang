@@ -9,7 +9,7 @@
             { "type": "span", "text": "arbeidsgiveren", "marks": ["bold"] },
             {
                 "type": "span",
-                "text": " din når du skal jobbe heltid.",
+                "text": " din når du skal jobbe og stillingsprosenten.",
                 "marks": []
             }
         ]
@@ -22,7 +22,51 @@
         "children": [
             {
                 "type": "span",
-                "text": "Er du selvstendig næringsdrivende eller frilanser, er det en avtale mellom deg og NAV.",
+                "text": "Arbeidsgiveren din ",
+                "marks": []
+            },
+            {
+                "type": "span",
+                "text": "bekrefter",
+                "marks": ["bold"]
+            },
+            {
+                "type": "span",
+                "text": " arbeidsperioden i ",
+                "marks": []
+            },
+            {
+                "type": "span",
+                "text": "inntektsmeldingen",
+                "marks": ["url_inntektsmeldingen", "external_link"]
+            },
+            { "type": "span", "text": " som de skal sende til NAV.", "marks": [] }
+        ],
+        "markDefs": [
+            {
+                "key": "url_inntektsmeldingen",
+                "type": "link",
+                "href": "https://www.nav.no/inntektsmelding"
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "listItem": "bullet",
+        "level": 1,
+        "children": [
+            { "type": "span", "text": "I ", "marks": [] },
+            {
+                "type": "span",
+                "text": "foreldrepengesøknaden",
+                "marks": ["bold"]
+            },
+            { "type": "span", "text": " oppgir du at du skal ", "marks": [] },
+            { "type": "span", "text": "utsette", "marks": ["bold"] },
+            {
+                "type": "span",
+                "text": " perioden fordi du skal jobbe.",
                 "marks": []
             }
         ]
@@ -33,9 +77,52 @@
         "listItem": "bullet",
         "level": 1,
         "children": [
-            { "type": "span", "text": "Send inn ", "marks": [] },
-            { "type": "span", "text": "søknaden", "marks": ["bold"] },
-            { "type": "span", "text": " før du starter å jobbe.", "marks": [] }
+            {
+                "type": "span",
+                "text": "Hvis du ",
+                "marks": []
+            },
+            {
+                "type": "span",
+                "text": "allerede har søkt",
+                "marks": ["bold"]
+            },
+            {
+                "type": "span",
+                "text": ", logger du på ",
+                "marks": []
+            },
+            {
+                "type": "span",
+                "text": "Dine foreldrepenger",
+                "marks": ["url_dine_foreldrepenger", "external_link"]
+            },
+            {
+                "type": "span",
+                "text": " og sender en endringssøknad.",
+                "marks": []
+            }
+        ],
+        "markDefs": [
+            {
+                "key": "url_dine_foreldrepenger",
+                "type": "link",
+                "href": "https://foreldrepenger.nav.no/"
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            { "type": "span", "text": "Søkefrist", "marks": ["bold"] },
+            { "type": "span", "text": ": Du må søke ", "marks": [] },
+            { "type": "span", "text": "før", "marks": ["bold"] },
+            {
+                "type": "span",
+                "text": " du begynner å jobbe.",
+                "marks": []
+            }
         ]
     }
 ]
