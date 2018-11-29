@@ -5,9 +5,11 @@
         "listItem": "bullet",
         "level": 1,
         "children": [
+            { "type": "span", "text": "Avtal med ", "marks": [] },
+            { "type": "span", "text": "arbeidsgiveren", "marks": ["bold"] },
             {
                 "type": "span",
-                "text": "Avtal med arbeidsgiver når du skal ta ut ferien.",
+                "text": " din når du skal ta ut ferien.",
                 "marks": []
             }
         ]
@@ -20,7 +22,41 @@
         "children": [
             {
                 "type": "span",
-                "text": "Skriv inn tidspunktet for ferien i søknaden din om foreldrepenger.",
+                "text": "Arbeidsgiveren din bekrefter ferien i ",
+                "marks": []
+            },
+            {
+                "type": "span",
+                "text": "inntektsmeldingen",
+                "marks": ["url_inntektsmeldingen", "external_link"]
+            },
+            { "type": "span", "text": " som de skal sende til NAV.", "marks": [] }
+        ],
+        "markDefs": [
+            {
+                "key": "url_inntektsmeldingen",
+                "type": "link",
+                "href": "https://www.nav.no/inntektsmelding"
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "listItem": "bullet",
+        "level": 1,
+        "children": [
+            { "type": "span", "text": "I ", "marks": [] },
+            {
+                "type": "span",
+                "text": "foreldrepengesøknaden",
+                "marks": ["bold"]
+            },
+            { "type": "span", "text": " oppgir du at du skal ", "marks": [] },
+            { "type": "span", "text": "utsette", "marks": ["bold"] },
+            {
+                "type": "span",
+                "text": " perioden fordi du skal på ferie.",
                 "marks": []
             }
         ]
@@ -33,20 +69,38 @@
         "children": [
             {
                 "type": "span",
-                "text": "Be arbeidsgiveren din bekrefte ferien i inntektsopplysningene de sender til NAV.",
+                "text": "Hvis du ikke vet tidspunktet for ferien når du søker, kan du senere logge inn på ",
                 "marks": []
+            },
+            {
+                "type": "span",
+                "text": "Dine foreldrepenger",
+                "marks": ["url_dine_foreldrepenger", "external_link"]
+            },
+            {
+                "type": "span",
+                "text": " og sende en endringssøknad.",
+                "marks": []
+            }
+        ],
+        "markDefs": [
+            {
+                "key": "url_dine_foreldrepenger",
+                "type": "link",
+                "href": "https://foreldrepenger.nav.no/"
             }
         ]
     },
     {
         "type": "avsnitt",
         "style": "normaltekst",
-        "listItem": "bullet",
-        "level": 1,
         "children": [
+            { "type": "span", "text": "Søkefrist", "marks": ["bold"] },
+            { "type": "span", "text": ": Du må søke ", "marks": [] },
+            { "type": "span", "text": "før", "marks": ["bold"] },
             {
                 "type": "span",
-                "text": "Hvis du ikke vet tidspunktet for ferien når du søker, kan du senere sende søknad om å utsette. Husk at du må søke før ferien din starter.",
+                "text": " ferien din starter.",
                 "marks": []
             }
         ]
