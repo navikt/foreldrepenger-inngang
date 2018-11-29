@@ -42,15 +42,25 @@ export class WithLink extends React.Component<Props> {
         event.preventDefault();
         window.history.replaceState(null, '', url);
 
-        // Remove hash to retrieve ID
-        const id = url.slice(1);
-        const sectionNode = document.getElementById(id);
+        // Exception for IE and Edge which doesn't support window.scroll with options.
+        if (navigator.userAgent.includes('Trident') || navigator.userAgent.includes('Edge')) {
+            const target = document.querySelector(url);
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        } else {
+            const id = url.slice(1);
+            const sectionNode = document.getElementById(id);
 
-        if (sectionNode) {
-            window.scroll({
-                top: sectionNode.offsetTop - SCROLL_OFFSET,
-                behavior: 'smooth'
-            });
+            if (sectionNode) {
+                window.scroll({
+                    top: sectionNode.offsetTop - SCROLL_OFFSET,
+                    behavior: 'smooth'
+                });
+            }
         }
     };
 
