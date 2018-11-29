@@ -10,7 +10,7 @@ import { getContent } from '../../../utils/getContent';
 import SvgMask from 'app/components/svg-mask/SvgMask';
 
 const cls = BEMHelper('forÅFåForeldrepenger');
-const foreldrepengerSvg = require('../../../assets/familier/familie-1.svg').default;
+const foreldrepengerSvg = require('../../../assets/familier/familie-sesong-1.svg').default;
 const checkmarkIcon = require('./checkmark.svg').default;
 
 const kravTilForeldrepenger = [

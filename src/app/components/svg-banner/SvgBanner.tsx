@@ -2,12 +2,20 @@ import React, { Component } from 'react';
 import { FlexibleSvg } from '../../utils/CustomSVG';
 import { getRandomInt } from '../../utils/random';
 import './svgBanner.less';
+import { detErJul } from 'app/utils/datoUtils';
 
 interface Props {
     svgIndex?: number;
 }
 
 const NUM_FAMILIES = 5;
+
+const getSvgForHeader = (index: number) => {
+    return detErJul()
+        ? require(`../../assets/familier-hjemme/familie-hjemme-sesong-${index}.svg`).default
+        : require(`../../assets/familier-hjemme/familie-hjemme-${index}.svg`).default;
+};
+
 class SvgBanner extends Component<Props> {
     state: {
         svgIndex: number;
@@ -22,10 +30,7 @@ class SvgBanner extends Component<Props> {
     }
 
     render = () => {
-        const svg = require(`../../assets/familier-hjemme/familie-hjemme-${
-            this.state.svgIndex
-        }.svg`).default;
-
+        const svg = getSvgForHeader(this.state.svgIndex);
         const cribSvg = require('../../assets/icons/babyCrib.svg').default;
 
         return (

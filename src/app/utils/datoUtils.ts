@@ -13,3 +13,8 @@ export const datoForUttakErGyldig = (dato: Date) => {
     const omSeksUker = moment().add(6, 'weeks');
     return valgtDato.isBefore(omSeksUker);
 };
+
+export const detErJul = () => {
+    const now = moment();
+    return now.month() === 11 && now.date() < 27;
+};
