@@ -565,7 +565,7 @@ class Valg extends React.Component<Props, State> {
                             this.getDropdown(
                                 'veiviser.valg.hjelpetekst.medlemskap',
                                 'veiviser.valg.hjelpetekst.lukk',
-                                'veiviser/infobox/til-medlemskap'
+                                'veiviser/infobox/medlemskap-folketrygden'
                             )
                         )
                 );
@@ -628,7 +628,17 @@ class Valg extends React.Component<Props, State> {
                                     <Logo />,
                                     'veiviser.valg.resultat.overskrift.Engangsstonad.mor',
                                     checked,
-                                    <EngangsstonadKnapp lang={this.props.lang} />
+                                    <EngangsstonadKnapp
+                                        knappLeft={
+                                            'veiviser.valg.resultat.knapp.engangsstonad.info'
+                                        }
+                                        knappRight={'veiviser.valg.resultat.knapp.engangsstonad'}
+                                        knappLeftStyle={'standard'}
+                                        knappRightStyle={'hoved'}
+                                        lenkeLeft={'/om-engangsstonad'}
+                                        lenkeRight={'https://engangsstonad.nav.no'}
+                                        lang={this.props.lang}
+                                    />
                                 )
                         );
                     } else {
@@ -639,7 +649,23 @@ class Valg extends React.Component<Props, State> {
                                     <Logo />,
                                     'veiviser.valg.resultat.overskrift.Engangsstonad',
                                     checked,
-                                    <EngangsstonadKnapp lang={this.props.lang} />
+                                    <EngangsstonadKnapp
+                                        knappLeft={
+                                            'veiviser.valg.resultat.knapp.engangsstonad.info'
+                                        }
+                                        knappRight={
+                                            'veiviser.valg.resultat.knapp.lesOmForeldrepenger'
+                                        }
+                                        knappRightStyle={'standard'}
+                                        knappLeftStyle={'standard'}
+                                        lenkeLeft={'/om-engangsstonad'}
+                                        lenkeRight={'/om-foreldrepenger'}
+                                        buttonHeadertxtLeft={
+                                            <TypografiBase type={"normaltekst"}>{getTranslation('veiviser.valg.resultat.engangsstonad.headertxt', this.props.lang)} </TypografiBase>
+                                        }
+                                        buttonHeadertxtRight={ <TypografiBase type={"normaltekst"}>{getTranslation('veiviser.valg.resultat.foreldrepenger.headertxt', this.props.lang)} </TypografiBase>}
+                                        lang={this.props.lang}
+                                    />
                                 )
                         );
                     }
@@ -699,7 +725,17 @@ class Valg extends React.Component<Props, State> {
                                     <Logo />,
                                     'veiviser.valg.resultat.overskrift.Engangsstonad.mor',
                                     checked,
-                                    <EngangsstonadKnapp lang={this.props.lang} />
+                                    <EngangsstonadKnapp
+                                        knappLeft={
+                                            'veiviser.valg.resultat.knapp.engangsstonad.info'
+                                        }
+                                        knappRight={'veiviser.valg.resultat.knapp.engangsstonad'}
+                                        knappLeftStyle={'standard'}
+                                        knappRightStyle={'hoved'}
+                                        lenkeLeft={'/om-engangsstonad'}
+                                        lenkeRight={'https://engangsstonad.nav.no'}
+                                        lang={this.props.lang}
+                                    />
                                 )
                         );
                     } else {
@@ -710,7 +746,23 @@ class Valg extends React.Component<Props, State> {
                                     <Logo />,
                                     'veiviser.valg.resultat.overskrift.Engangsstonad',
                                     checked,
-                                    <EngangsstonadKnapp lang={this.props.lang} />
+                                    <EngangsstonadKnapp
+                                        knappLeft={
+                                            'veiviser.valg.resultat.knapp.engangsstonad.info'
+                                        }
+                                        knappRight={
+                                            'veiviser.valg.resultat.knapp.lesOmForeldrepenger'
+                                        }
+                                        knappRightStyle={'standard'}
+                                        knappLeftStyle={'standard'}
+                                        lenkeLeft={'/om-engangsstonad'}
+                                        lenkeRight={'/om-foreldrepenger'}
+                                        buttonHeadertxtLeft={
+                                            <TypografiBase type={"normaltekst"}>{getTranslation('veiviser.valg.resultat.engangsstonad.headertxt', this.props.lang)} </TypografiBase>
+                                        }
+                                        buttonHeadertxtRight={ <TypografiBase type={"normaltekst"}>{getTranslation('veiviser.valg.resultat.foreldrepenger.headertxt', this.props.lang)} </TypografiBase>}
+                                        lang={this.props.lang}
+                                    />
                                 ) // SETT INN
                         );
                     }
@@ -931,17 +983,41 @@ const MainKnapp = ({
     </div>
 );
 
-const EngangsstonadKnapp = ({ lang }: { lang: Language }) => (
-    <div className={cls.element('resultat-har-rett-knapp group')}>
-        <Lenke className={"les-om-engangsstonad"} href={'/om-engangsstonad'}>
-            <KnappBase type="standard">
-                {getTranslation('veiviser.valg.resultat.knapp.engangsstonad.info', lang)}
-            </KnappBase>
-        </Lenke>
-        <Lenke href={'https://engangsstonad.nav.no'}>
-            <KnappBase type="hoved">
-                {getTranslation('veiviser.valg.resultat.knapp.engangsstonad', lang)}
-            </KnappBase>
-        </Lenke>
-    </div>
-);
+const EngangsstonadKnapp = ({
+    lang,
+    knappLeft,
+    knappRight,
+    knappLeftStyle,
+    knappRightStyle,
+    lenkeLeft,
+    lenkeRight,
+    buttonHeadertxtLeft,
+    buttonHeadertxtRight
+}: {
+    lang: Language;
+    knappLeft: string;
+    knappRight: string;
+    knappLeftStyle: any;
+    knappRightStyle: any;
+    lenkeLeft: string;
+    lenkeRight: string;
+    buttonHeadertxtLeft?: object;
+    buttonHeadertxtRight?: object;
+}) => {
+    return (
+        <div className={cls.element('resultat-har-rett-knapp group')}>
+            <div className={cls.element('resultat-har-rett-kol')}>
+                {buttonHeadertxtLeft}
+                <Lenke className={'les-om-engangsstonad'} href={lenkeLeft}>
+                    <KnappBase type={knappLeftStyle}>{getTranslation(knappLeft, lang)}</KnappBase>
+                </Lenke>
+            </div>
+            <div className={cls.element('resultat-har-rett-kol')}>
+                {buttonHeadertxtRight}
+                <Lenke href={lenkeRight}>
+                    <KnappBase type={knappRightStyle}>{getTranslation(knappRight, lang)}</KnappBase>
+                </Lenke>
+            </div>
+        </div>
+    );
+};
