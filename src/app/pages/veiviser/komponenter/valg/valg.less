@@ -75,7 +75,7 @@
             border-bottom: none;
             display: flex;
             width: 100%;
-            justify-content: center;
+            justify-content: flex-start;
         }
         .knapp {
             width: 90%;
@@ -249,6 +249,10 @@
         align-items: flex-end;
         padding-top: 0.5rem;
 
+        @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+            padding-bottom: 0.3rem;
+        }
+
         .valg__aars-inntekt {
             height: 100%;
         }
@@ -282,7 +286,7 @@
     }
 
     .item-appear {
-        display: initial;
+        display: inline;
     }
 
     &__aars-inntekt {
@@ -345,6 +349,18 @@
         display: flex;
         flex-direction: row;
         width: 100%;
+    }
+
+    &__resultat-har-rett-kol {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        align-items: flex-start;
+        margin-top: 1rem;
+
+        .typo-normal {
+            margin-bottom: 1rem;
+        }
     }
 
     &__boks-bilde {
@@ -479,6 +495,13 @@
             padding: 1rem 2rem 2rem 2rem;
         }
 
+        @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+            &__resultat-stonad-body {
+                padding: 1rem 0 2rem 0.6rem;
+                margin: 0 3rem 0 3rem;
+            }
+        }
+
         &__resultat-stonad-txt {
             padding: 0 4.5rem 0 4.5rem;
         }
@@ -504,18 +527,19 @@
 
     @media (min-width: @tablet-breakpoint) {
         &__resultat-har-rett-knapp {
-            margin-top: 2rem;
+            margin-top: 0;
             display: flex;
             flex-direction: row;
         }
         &__resultat-har-rett-knapp.group {
-            flex-direction: row;
-            justify-content: space-between;
+            flex-direction: column;
+            justify-content: center;
             width: 100%;
+            padding: 0 2rem 0 4.5rem;
 
             .knapp {
                 padding: calc(0.5em - 2px) calc(2.5em - 2px) calc(0.625em - 2px) calc(2.5em - 2px);
-                width: auto;
+                width: 20rem;
             }
             .les-om-engangsstonad {
                 padding-bottom: 0;
