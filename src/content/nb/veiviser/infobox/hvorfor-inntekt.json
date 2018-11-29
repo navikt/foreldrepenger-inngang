@@ -5,7 +5,7 @@
     "children": [
       {
         "type": "span",
-        "text": "For å ha rett til foreldrepenger må du ha jobbet 6 av de ti siste månedene. Dager uten arbeid som teller med i opptjeningen:"
+        "text": "For å ha rett til foreldrepenger må du ha jobbet seks av de ti siste månedene. Dager uten arbeid som teller med i opptjeningen:"
       }
     ]
   },
@@ -58,7 +58,7 @@
       },
       {
         "type": "span",
-        "text": ", vil dagene du ikke er i jobb regnes med i opptjeningstiden, selv om du jobber sjeldnere enn hver. 14 dag."
+        "text": ", vil dagene du ikke er i jobb regnes med i opptjeningstiden, selv om du jobber sjeldnere enn hver 14. dag."
       }
     ]
   },
