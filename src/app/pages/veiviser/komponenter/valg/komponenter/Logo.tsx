@@ -5,11 +5,11 @@ import ResultatBilde from "./ResultatBilde";
 import MediaQuery from "react-responsive";
 import ResultatMobileBilde from "./ResultatMobileBilde";
 
-const cls = BEMHelper('valg');
+const resultat = BEMHelper('resultat');
 
 const Logo = () => {
     return (
-        <div className={cls.element('resultat--stonad-bilde')}>
+        <div className={resultat.element('stonadBilde')}>
             <MediaQuery minWidth={576}>
                 <ResultatBilde/>
             </MediaQuery>
