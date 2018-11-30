@@ -8,6 +8,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border-radius: 4px;
 
     .utvidetInformasjon {
         margin-bottom: 0;
@@ -19,75 +20,86 @@
         text-align: left;
         padding: 0 1rem 0 1rem;
     }
-
-    &__resultat--stonad-rett {
-        display: flex;
-        flex-direction: column;
-        padding-top: 0.5rem;
-        min-width: 100%;
-        margin-bottom: 0;
-    }
-
-    &__resultat--stonad-bilde {
-        margin-bottom: -0.5rem;
-        z-index: 3;
-    }
-
-    &__resultat-stonad-body {
-        background-color: #efefef;
-        padding: 1rem 0 2rem 0;
-        display: flex;
-        flex-direction: column;
-        max-width: 100%;
-
-        .typo-innholdstittel {
-            text-align: left;
-            padding-bottom: 1rem;
-        }
-    }
-
-    &__resultat-stonad-txt {
-        padding: 0 1rem 0 1rem;
-    }
-
-    &__resultat--punkter {
-        display: flex;
-        flex-direction: row;
-        padding-bottom: 0.5rem;
-    }
-    &__resultat--punkt {
-        margin-right: 0.5rem;
-    }
-
-    &__resultat-har-rett-knapp {
-        margin-top: 1rem;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        flex-direction: row;
-
-        .knapp {
-            height: 2.5rem;
-        }
-    }
-    &__resultat-har-rett-knapp.group {
-        flex-direction: column;
-        justify-content: center;
-        width: 100%;
-        padding: 0 1rem 0 1rem;
-
-        .lenke {
-            border-bottom: none;
+    .resultat {
+        &__stonadRett {
             display: flex;
-            width: 100%;
-            justify-content: flex-start;
-        }
-        .knapp {
-            width: 90%;
+            flex-direction: column;
+            padding-top: 0.5rem;
+            min-width: 100%;
+            padding-bottom: 2rem;
+            margin-bottom: 0;
+            background-color: white;
+            border-bottom-right-radius: 4px;
+            border-bottom-left-radius: 4px;
+            z-index: 4;
         }
 
-        .les-om-engangsstonad {
-            padding-bottom: 0.7rem;
+        &__stonadBilde {
+            margin-bottom: -0.5rem;
+            z-index: 3;
+        }
+
+        &__stonadBody {
+            background-color: #efefef;
+            padding: 1rem 0 2rem 0;
+            display: flex;
+            flex-direction: column;
+            max-width: 100%;
+            border-bottom-left-radius: 4px;
+            border-bottom-right-radius: 4px;
+
+            .typo-innholdstittel {
+                text-align: left;
+                padding-bottom: 1rem;
+            }
+        }
+
+        &__stonadTxt {
+            padding: 0 1rem 0 2rem;
+
+            .typo-innholdstittel {
+                text-align: left;
+                padding-bottom: 1rem;
+            }
+        }
+
+        &__punkter {
+            display: flex;
+            flex-direction: row;
+            padding-bottom: 0.5rem;
+        }
+        &__punkt {
+            margin-right: 0.5rem;
+        }
+
+        &__harRettKnapp {
+            margin-top: 1rem;
+            width: 100%;
+            display: flex;
+            justify-content: left;
+            flex-direction: row;
+            padding-left: 3rem;
+            padding-bottom: 1rem;
+
+            .knapp {
+                height: 2.5rem;
+            }
+        }
+        &__harRettKnapp.group {
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+            padding: 0 1rem 0 1rem;
+
+            .lenke {
+                border-bottom: none;
+                display: flex;
+                width: 100%;
+                justify-content: flex-start;
+            }
+            .knapp {
+                width: 90%;
+            }
         }
     }
 
@@ -134,12 +146,6 @@
         justify-content: space-around;
         padding-left: 1rem;
         padding-right: 1rem;
-    }
-
-    .storToggle {
-        width: 7.5rem;
-        height: 8rem;
-        padding: 1rem;
     }
 
     &__knapp-element {
@@ -216,65 +222,67 @@
         width: 100%;
     }
 
-    &__inputFelt {
-        display: flex;
-        flex-direction: column;
-        justify-content: left;
-        text-align: left;
-        margin-bottom: 2.5rem;
-        margin-left: 0;
-        margin-right: 0;
-        max-width: 100%;
-
-        .typo-undertittel {
-            padding-left: 0;
-        }
-
-        .valg__dropdown {
-            padding-left: 0;
-        }
-
-        .knapp.knapp--flat {
-            margin-top: 0.5rem;
+    .input {
+        &__felt {
+            display: flex;
+            flex-direction: column;
+            justify-content: left;
+            text-align: left;
+            margin-bottom: 2.5rem;
             margin-left: 0;
-            height: 2.4rem;
+            margin-right: 0;
+            max-width: 100%;
+
+            .typo-undertittel {
+                padding-left: 0;
+            }
+
+            .valg__dropdown {
+                padding-left: 0;
+            }
+
+            .knapp.knapp--flat {
+                margin-top: 0.5rem;
+                margin-left: 0;
+                height: 2.4rem;
+            }
+
+            .typo-element {
+                padding-left: 0;
+                padding-bottom: 0.5rem;
+            }
         }
 
-        .typo-element {
-            padding-left: 0;
-            padding-bottom: 0.5rem;
-        }
-    }
-
-    &__input--rad-knapp {
-        display: flex;
-        flex-direction: row;
-        align-items: flex-end;
-        padding-top: 0.5rem;
-
-        @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-            padding-bottom: 0.3rem;
+        &__rad {
+            display: flex;
+            flex-direction: column;
+            padding-top: 1rem;
         }
 
-        .valg__aars-inntekt {
-            height: 100%;
+        &__radKnapp {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-end;
+            padding-top: 0.5rem;
+
+            @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+                padding-bottom: 0.3rem;
+            }
+
+            .valg__aarsInntekt {
+                height: 100%;
+            }
         }
-    }
 
-    &__input--rad-knapp > .knapp.knapp--flat {
-        width: 100%;
-        margin-right: 0;
-        padding: calc(0.5em - 2px) calc(1.5em - 2px) calc(0.625em - 2px) calc(1.5em - 2px);
-    }
+        &__felt--komponent {
+            width: 8rem;
+        }
 
-    &__input--rad {
-        display: flex;
-        flex-direction: column;
-        padding-top: 1rem;
-    }
-
-    &__inputFeilt--komponent {
-        width: 8rem;
+        &__radKnapp > .knapp.knapp--flat {
+            width: 100%;
+            margin-right: 0;
+            padding: calc(0.5em - 2px) calc(1.5em - 2px) calc(0.625em - 2px) calc(1.5em - 2px);
+        }
     }
 
     .skjemaelement {
@@ -293,13 +301,13 @@
         display: inline;
     }
 
-    &__aars-inntekt {
+    &__aarsInntekt {
         display: none;
         margin-left: 0;
         margin-top: 1rem;
     }
 
-    &__aars-inntekt--sum {
+    &__aarsInntektSum {
         padding-top: 0;
         padding-left: 0;
         font-weight: bold;
@@ -310,16 +318,18 @@
         display: flex;
         flex-direction: column;
         width: 100%;
+        margin-top: -0.5rem;
+        z-index: 3;
     }
 
-    &__boks-border {
+    &__boksBorder {
         width: 100%;
         background-color: #efefef;
-        padding-top: 2rem;
+        padding-top: 2.5rem;
         padding-bottom: 2rem;
     }
 
-    &__boks-border.sec {
+    &__boksBorder.sec {
         padding-top: 0;
     }
 
@@ -327,7 +337,7 @@
         background-color: white;
         display: flex;
         flex-direction: row;
-        padding: 1.2rem 0.9rem 1.2rem 0.4rem;
+        padding: 1rem 0.5rem 1rem 0.5rem;
         text-align: center;
         align-items: center;
         border-radius: 5px;
@@ -338,7 +348,7 @@
             box-shadow: #b7b1a9 0 2px 1px 0;
             cursor: pointer;
 
-            &__boks-txt .typo-normal {
+            &__boksTxt .typo-normal {
                 text-decoration: underline;
             }
 
@@ -348,25 +358,26 @@
         }
     }
 
-    &__boks-gruppe {
+    &__boksGruppe {
         display: flex;
         flex-direction: row;
         width: 100%;
     }
 
-    &__resultat-har-rett-kol {
-        display: flex;
-        flex-direction: column;
-        text-align: left;
-        align-items: flex-start;
-        margin-top: 1rem;
+    .resultat {
+        &__harRettKol {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            align-items: flex-start;
+            margin-top: 1rem;
 
-        .typo-normal {
-            margin-bottom: 1rem;
+            .typo-normal {
+                margin-bottom: 1rem;
+            }
         }
     }
-
-    &__boks-bilde {
+    &__boksBilde {
         flex: 1;
         background: #b9acca;
         border-radius: 50%;
@@ -381,9 +392,12 @@
         margin-right: 1rem;
     }
 
-    &__boks-txt {
+    &__boksTxt {
         display: flex;
-        align-items: center;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0 1rem 0 1rem;
+        text-align: left;
     }
 
     .message-appear {
@@ -444,74 +458,85 @@
             margin-bottom: 0;
         }
 
-        &__input--rad {
-            flex-direction: row;
-        }
+        .input {
+            &__rad {
+                flex-direction: row;
+            }
 
-        &__inputFelt {
-            margin-left: 0.3rem;
-            margin-bottom: 2.5rem;
+            &__felt {
+                margin-left: 0.3rem;
+                margin-bottom: 2.5rem;
 
-            .knapp.knapp--flat {
-                margin-left: 1rem;
+                .knapp.knapp--flat {
+                    margin-left: 1rem;
+                }
+            }
+
+            &__Felt--komponent {
+                width: 100%;
+            }
+
+            &__radKnapp {
+                padding-top: 0;
+            }
+
+            &__radKnapp > .knapp.knapp--flat {
+                width: auto;
+                margin-right: 1rem;
+                padding: calc(0.5em - 2px) calc(2.5em - 2px) calc(0.625em - 2px) calc(2.5em - 2px);
             }
         }
-
-        &__aars-inntekt {
-            margin-left: 1rem;
-            margin-top: 0;
-        }
-
-        &__inputFeilt--komponent {
-            width: 100%;
-        }
-
         .skjemaelement__input {
             padding-left: 1rem;
         }
 
-        &__input--rad-knapp {
-            padding-top: 0;
-
-        }
-
-        &__input--rad-knapp > .knapp.knapp--flat {
-            width: auto;
-            margin-right: 1rem;
-            padding: calc(0.5em - 2px) calc(2.5em - 2px) calc(0.625em - 2px) calc(2.5em - 2px);
+        &__aarsInntekt {
+            margin-left: 1rem;
+            margin-top: 0;
         }
 
         .skjemaelement {
             width: auto;
         }
 
-        &__aars-inntekt--sum {
+        &__aarsInntektSum {
             padding-top: 0.8rem;
             padding-left: 0.2rem;
         }
-
-        &__resultat-stonad-body {
-            padding: 1rem 2rem 2rem 2rem;
+        .resultat {
+            &__stonadbody {
+                padding: 1rem 2rem 2rem 2rem;
+                background-color: #efefef;
+            }
         }
-
         @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-            &__resultat-stonad-body {
-                padding: 1rem 0 2rem 0.6rem;
-                margin: 0 3rem 0 3rem;
+            .resultat {
+                &__stonadbody {
+                    padding: 1rem 0 2rem 0.6rem;
+                    margin: 0 3rem 0 3rem;
+                }
             }
         }
 
-        &__resultat-stonad-txt {
-            padding: 0 4.5rem 0 4.5rem;
-        }
+        .resultat {
+            &__stonadTxt {
+                padding: 0 4.5rem 0 2rem;
 
-        &__resultat--stonad-rett {
-            padding: 0 2rem 2rem 2rem;
-        }
+                .typo-innholdstittel {
+                    padding-bottom: 1rem;
+                    text-align: left;
+                }
+            }
 
-        &__resultat-har-rett-knapp.group {
-            .knapp {
-                width: 25rem;
+            &__stonadRett {
+                padding: 0 2rem 2rem 2rem;
+            }
+
+            &__harRettKnapp.group {
+                padding: 0 2rem 0 2rem;
+                .knapp {
+                    width: 25rem;
+                }
             }
         }
 
@@ -521,26 +546,38 @@
     }
 
     @media (min-width: @tablet-breakpoint) {
-        &__resultat-har-rett-knapp {
-            margin-top: 1rem;
-            display: flex;
-            flex-direction: row;
-        }
-        &__resultat-har-rett-knapp.group {
-            flex-direction: column;
-            justify-content: center;
-            width: 100%;
-            padding: 0 2rem 0 4.5rem;
-
-            .knapp {
-                padding: calc(0.5em - 2px) calc(2.5em - 2px) calc(0.625em - 2px) calc(2.5em - 2px);
-                width: 20rem;
+        .resultat {
+            &__stonadRett {
+                padding: 0 5rem 2rem 5rem;
             }
-            .les-om-engangsstonad {
-                padding-bottom: 0;
+
+            &__harRettKnapp {
+                margin-top: 1rem;
+                display: flex;
+                flex-direction: row;
+                padding-left: 5rem;
+            }
+
+            &__stonadTxt {
+                padding: 0 4.5rem 0 4.5rem;
+            }
+
+            &__harRettKnapp.group {
+                flex-direction: column;
+                justify-content: center;
+                width: 100%;
+                padding: 0 2rem 0 4.5rem;
+
+                .knapp {
+                    padding: calc(0.5em - 2px) calc(2.5em - 2px) calc(0.625em - 2px)
+                        calc(2.5em - 2px);
+                    width: 20rem;
+                }
+                .les-om-engangsstonad {
+                    padding-bottom: 0;
+                }
             }
         }
-
         &__kort {
             padding-left: 5rem;
             padding-right: 5rem;

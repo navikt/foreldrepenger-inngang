@@ -2,7 +2,7 @@ import React from 'react';
 import {getTranslation, Language, withIntl} from '../../../../../intl/intl';
 import TypografiBase from 'nav-frontend-typografi';
 import BEMHelper from '../../../../../utils/bem';
-const cls = BEMHelper('valg');
+const resultat = BEMHelper('resultat');
 
 interface Props {
     minLogo: React.ReactNode;
@@ -23,10 +23,10 @@ const DuHarRett: React.StatelessComponent<Props & CurrentLanguage> = ({
     knapp
 }) => {
     return (
-        <div id="mainSokKnapp" className={cls.element('resultat--stonad-rett')}>
+        <div id="mainSokKnapp" className={resultat.element('stonadRett')}>
             {minLogo}
-            <div className={cls.element('resultat-stonad-body')}>
-                <div className={cls.element('resultat-stonad-txt')}>
+            <div className={resultat.element('stonadbody')}>
+                <div className={resultat.element('stonadTxt')}>
                     <TypografiBase type="innholdstittel">
                         {getTranslation(overskrift, lang)}
                     </TypografiBase>

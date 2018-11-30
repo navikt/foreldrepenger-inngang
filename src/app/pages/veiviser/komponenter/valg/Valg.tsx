@@ -17,8 +17,13 @@ import NavigasjonsBoks from './komponenter/NavigasjonsBoks';
 import './valg.less';
 import Lenke from 'nav-frontend-lenker';
 import { getEnHalvG } from '../../../../utils/beregningUtils';
+import 'core-js';
+import 'raf/polyfill';
+
 
 const cls = BEMHelper('valg');
+const resultat = BEMHelper('resultat');
+const inputCls = BEMHelper('input');
 
 const sprmalMor = [
     'veiviser.valg.spørsmål.mor.en',
@@ -162,7 +167,7 @@ class Valg extends React.Component<Props, State> {
                         valgBytte,
                         this.state.antallRader,
                         this.getDropdown(
-                            'veiviser.valg.hjelpetekst.utbetalinger',
+                            'veiviser.valg.hjelpetekst.utbetalinger.nav',
                             'veiviser.valg.hjelpetekst.lukk',
                             'veiviser/infobox/utbetalinger-fra-nav'
                         )
@@ -542,7 +547,12 @@ class Valg extends React.Component<Props, State> {
                             this.state.numberofCheckBoxz,
                             this.state.teller,
                             this.state.valg,
-                            this.state.antallRader
+                            this.state.antallRader,
+                            this.getDropdown(
+                                'veiviser.valg.hjelpetekst.medlemskap',
+                                'veiviser.valg.hjelpetekst.lukk',
+                                'veiviser/infobox/til-medlemskap'
+                            )
                         )
                 );
             }
@@ -879,13 +889,13 @@ class Valg extends React.Component<Props, State> {
                                 classNames="fade"
                                 in={this.fade}
                                 timeout={1000}>
-                                <div className={cls.element('inputFelt')}>
+                                <div className={inputCls.element('felt')}>
                                     <TypografiBase type={'undertittel'}>
                                         {valg.sprmal}
                                     </TypografiBase>
                                     {valg.con}
-                                    <div className={cls.element('input--rad')}>
-                                        <div className={cls.element('input--rad-kol-1')}>
+                                    <div className={inputCls.element('rad')}>
+                                        <div className={inputCls.element('radKol-1')}>
                                             <TypografiBase type={'element'}>
                                                 {getTranslation(
                                                     'veiviser.valg.inntekt.subHeader',
@@ -893,7 +903,7 @@ class Valg extends React.Component<Props, State> {
                                                 )}
                                             </TypografiBase>
                                             <Input
-                                                className={cls.element('inputFeilt--komponent')}
+                                                className={inputCls.element('felt--komponent')}
                                                 label={''}
                                                 min={0}
                                                 step={1000}
@@ -907,7 +917,7 @@ class Valg extends React.Component<Props, State> {
                                                 placeholder={this.belop}
                                             />
                                         </div>
-                                        <div className={cls.element('input--rad-knapp ')}>
+                                        <div className={inputCls.element('radKnapp ')}>
                                             <KnappBase
                                                 className={this.state.buttonCls}
                                                 type="flat"
@@ -920,7 +930,7 @@ class Valg extends React.Component<Props, State> {
                                             </KnappBase>
                                             <div
                                                 className={cls.element(
-                                                    'aars-inntekt ' + this.state.inntektCls
+                                                    'aarsInntekt ' + this.state.inntektCls
                                                 )}>
                                                 <div>
                                                     <TypografiBase type={'element'}>
@@ -930,7 +940,7 @@ class Valg extends React.Component<Props, State> {
                                                         )}
                                                     </TypografiBase>
                                                 </div>
-                                                <div className={cls.element('aars-inntekt--sum')}>
+                                                <div className={cls.element('aarsInntektSum')}>
                                                     {12 * parseInt(this.state.inputVal, 10)
                                                         ? (
                                                               12 * parseInt(this.state.inputVal, 10)
@@ -976,7 +986,7 @@ const MainKnapp = ({
     txt: string;
     knappType: any;
 }) => (
-    <div className={cls.element('resultat-har-rett-knapp')}>
+    <div className={resultat.element('harRettKnapp')}>
         <Lenke href={url}>
             <KnappBase type={knappType}>{getTranslation(txt, lang)}</KnappBase>
         </Lenke>
@@ -1005,14 +1015,14 @@ const EngangsstonadKnapp = ({
     buttonHeadertxtRight?: object;
 }) => {
     return (
-        <div className={cls.element('resultat-har-rett-knapp group')}>
-            <div className={cls.element('resultat-har-rett-kol')}>
+        <div className={resultat.element('harRettKnapp group')}>
+            <div className={resultat.element('harRettKol')}>
                 {buttonHeadertxtLeft}
                 <Lenke className={'les-om-engangsstonad'} href={lenkeLeft}>
                     <KnappBase type={knappLeftStyle}>{getTranslation(knappLeft, lang)}</KnappBase>
                 </Lenke>
             </div>
-            <div className={cls.element('resultat-har-rett-kol')}>
+            <div className={resultat.element('harRettKol')}>
                 {buttonHeadertxtRight}
                 <Lenke href={lenkeRight}>
                     <KnappBase type={knappRightStyle}>{getTranslation(knappRight, lang)}</KnappBase>
