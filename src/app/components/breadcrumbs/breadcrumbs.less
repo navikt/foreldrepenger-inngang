@@ -5,6 +5,7 @@
     flex-direction: row;
     align-items: center;
     padding: 2rem 0 2rem;
+    margin-left: 1rem;
     align-self: flex-start;
 
     a {
@@ -28,10 +29,6 @@
         transform: scale(0.8) rotate(-90deg);
     }
 
-    .chevron--venstre {
-        margin-left: 1rem;
-    }
-
     &__item {
         max-width: 210px;
         overflow: hidden;
@@ -48,5 +45,9 @@
     &__current {
         color: black;
         font-weight: bold;
+    }
+
+    @media (min-width: @tablet-breakpoint) {
+        margin-left: 0rem;
     }
 }
