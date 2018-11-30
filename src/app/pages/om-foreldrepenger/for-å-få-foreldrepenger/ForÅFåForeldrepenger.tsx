@@ -8,9 +8,13 @@ import { Avsnitt } from '../../../utils/strukturertTekst';
 import './forÅFåForeldrepenger.less';
 import { getContent } from '../../../utils/getContent';
 import SvgMask from 'app/components/svg-mask/SvgMask';
+import { detErJul } from 'app/utils/datoUtils';
 
 const cls = BEMHelper('forÅFåForeldrepenger');
-const foreldrepengerSvg = require('../../../assets/familier/familie-sesong-1.svg').default;
+const foreldrepengerSvg = detErJul()
+    ? require('../../../assets/familier/familie-sesong-1.svg').default
+    : require('../../../assets/familier/familie-1.svg').default;
+
 const checkmarkIcon = require('./checkmark.svg').default;
 
 const kravTilForeldrepenger = [
