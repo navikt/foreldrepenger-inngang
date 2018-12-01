@@ -25,7 +25,7 @@ const DuHarRett: React.StatelessComponent<Props & CurrentLanguage> = ({
     return (
         <div id="mainSokKnapp" className={resultat.element('stonadRett')}>
             {minLogo}
-            <div className={resultat.element('stonadbody')}>
+            <div className={resultat.element('stonadBody')}>
                 <div className={resultat.element('stonadTxt')}>
                     <TypografiBase type="innholdstittel">
                         {getTranslation(overskrift, lang)}

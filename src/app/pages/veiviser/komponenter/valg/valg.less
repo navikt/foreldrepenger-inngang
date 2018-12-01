@@ -55,7 +55,7 @@
         }
 
         &__stonadTxt {
-            padding: 0 1rem 0 2rem;
+            padding: 0 1rem 0 1.5rem;
 
             .typo-innholdstittel {
                 text-align: left;
@@ -73,16 +73,17 @@
         }
 
         &__harRettKnapp {
-            margin-top: 1rem;
+            margin-top: 0.5rem;
             width: 100%;
             display: flex;
             justify-content: left;
             flex-direction: row;
-            padding-left: 3rem;
+            padding-left: 1.5rem;
             padding-bottom: 1rem;
 
             .knapp {
                 height: 2.5rem;
+                padding: 0 1rem 0 1rem;
             }
         }
         &__harRettKnapp.group {
@@ -98,7 +99,7 @@
                 justify-content: flex-start;
             }
             .knapp {
-                width: 90%;
+                width: 95%;
             }
         }
     }
@@ -504,14 +505,14 @@
             padding-left: 0.2rem;
         }
         .resultat {
-            &__stonadbody {
+            &__stonadBody {
                 padding: 1rem 2rem 2rem 2rem;
                 background-color: #efefef;
             }
         }
         @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
             .resultat {
-                &__stonadbody {
+                &__stonadBody {
                     padding: 1rem 0 2rem 0.6rem;
                     margin: 0 3rem 0 3rem;
                 }
@@ -530,6 +531,10 @@
 
             &__stonadRett {
                 padding: 0 2rem 2rem 2rem;
+            }
+
+            &__harRettKnapp {
+                padding: calc(.5em - 2px) calc(2.5em - 2px) calc(.625em - 2px) calc(2.5em - 2px);
             }
 
             &__harRettKnapp.group {
