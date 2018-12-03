@@ -37,23 +37,6 @@
         align-items: stretch;
     }
 
-    &__two-buttons-navigation {
-        align-self: stretch;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        margin-right: 0.125rem;
-
-        .hvaSøkerDu__knapp:nth-child(1) {
-            margin-bottom: 1rem;
-        }
-
-        .userHelp {
-            padding-left: 0;
-        }
-    }
-
     &__knapp {
         height: @button-height;
         align-self: stretch;
@@ -73,21 +56,6 @@
     @media (min-width: @mobile-breakpoint) {
         &__button-container {
             flex-direction: row;
-        }
-
-        &__two-buttons-navigation {
-            flex-direction: column;
-
-            .hvaSøkerDu__knapp:nth-child(1) {
-                margin-bottom: 0;
-                margin-right: 0.5rem;
-            }
-
-            .userHelp {
-                padding-top: 1rem;
-                padding-left: 0.1rem;
-                align-self: flex-start;
-            }
         }
 
         &__knapp {
@@ -132,21 +100,6 @@
 
         &__body {
             padding: 0 1rem;
-        }
-
-        &__two-buttons-navigation {
-            flex-direction: row;
-
-            .userHelp {
-                padding-top: 0;
-                padding-left: 0.5rem;
-                align-self: center;
-                margin-top: 0;
-            }
-
-            &__knapp {
-                max-width: 248px;
-            }
         }
     }
 }
