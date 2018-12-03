@@ -6,7 +6,7 @@ import SøkForeldrepenger from './pages/søk-foreldrepenger/SøkForeldrepenger';
 import SøkSvangerskapspenger from './pages/søk-svangerskapspenger/SøkSvangerskapspenger';
 import OmForeldrepenger from './pages/om-foreldrepenger/OmForeldrepenger';
 import OmEngangsstønad from './pages/om-engangsstønad/OmEngangsstønad';
-import ViktigeFrister from './pages/viktige-frister/ViktigeFrister';
+import Dokumentasjon from './pages/dokumentasjon/Dokumentasjon';
 import NyeBeregningsregler from './pages/nye-beregningsregler/NyeBeregningsregler';
 import Kalkulator from './pages/kalkulator/Kalkulator';
 import Veiviser from './pages/veiviser/Veiviser';
@@ -47,12 +47,7 @@ const Router = () => (
             component={OmEngangsstønad}
             key="om-engangsstonad"
         />
-        <Route
-            exact={true}
-            path="/viktige-frister"
-            component={ViktigeFrister}
-            key="viktige-frister"
-        />
+        <Route exact={true} path="/dokumentasjon" component={Dokumentasjon} key="dokumentasjon" />
         <Route exact={true} path="/veiviser" component={Veiviser} key="veiviser" />
 
         <Redirect to="/" />
