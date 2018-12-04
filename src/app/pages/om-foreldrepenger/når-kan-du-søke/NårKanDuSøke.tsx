@@ -10,7 +10,7 @@ import './nårKanDuSøke.less';
 import Tabs from 'nav-frontend-tabs';
 import StrukturertTekst from 'app/components/strukturert-tekst/StrukturertTekst';
 
-const jobbeSvg = require('../../../assets/ark/ark-jobbe.svg').default;
+const iconSvg = require('../../../assets/ark/ark-frister.svg').default;
 const morSvg = require('../../../assets/foreldre/mor2.svg').default;
 const farSvg = require('../../../assets/foreldre/far4.svg').default;
 const adopsjonSvg = require('../../../assets/icons/adopsjon.svg').default;
@@ -96,7 +96,7 @@ class NårKanDuSøke extends React.Component<Props, State> {
                 id={id}
                 className={cls.className}
                 title={getTranslation('om_foreldrepenger.når_kan_du_søke.tittel', lang)}
-                svg={jobbeSvg}>
+                svg={iconSvg}>
                 <FactsWithIcon>
                     <Fact
                         icon={morSvg}

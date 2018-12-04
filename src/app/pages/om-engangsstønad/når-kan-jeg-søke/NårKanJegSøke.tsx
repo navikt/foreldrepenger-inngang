@@ -8,7 +8,7 @@ import BEMHelper from '../../../utils/bem';
 import StrukturertTekst from 'app/components/strukturert-tekst/StrukturertTekst';
 import './nårKanJegSøke.less';
 
-const jobbeSvg = require('../../../assets/ark/ark-jobbe.svg').default;
+const iconSvg = require('../../../assets/ark/ark-frister.svg').default;
 const morSvg = require('../../../assets/foreldre/mor2.svg').default;
 const cls = BEMHelper('nårKanJegSøke');
 
@@ -23,7 +23,7 @@ const NårKanJegSøke: React.StatelessComponent<Props> = ({ id, lang }) => (
         id={id}
         className={cls.className}
         title={getTranslation('om_engangsstønad.når_kan_jeg_søke.tittel', lang)}
-        svg={jobbeSvg}>
+        svg={iconSvg}>
         <FactsWithIcon>
             <Fact
                 icon={morSvg}
