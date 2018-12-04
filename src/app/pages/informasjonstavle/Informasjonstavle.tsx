@@ -88,15 +88,9 @@ const Bildelenker = ({ lang }: { lang: Language }) => {
 const InformasjonstavleHeader = () => {
     return (
         <HeaderInformasjon
-            title={'Foreldrepenger - www.nav.no'}
-            siteDescription={
-                'Foreldrepenger skal sikre deg inntekt når du ha foreldrepermisjon. Hvis du ikke hatt inntekt, kan du få en engangssum isteden.'
-            }
-            propTitle={'Foreldrepengesidene til nav.no'}
-            propDescription={
-                'Foreldrepenger skal sikre deg inntekt når du ha foreldrepermisjon. Hvis du ikke hatt inntekt, kan du få en engangssum isteden.'
-            }
-            siteUrl={'https://familie.nav.no'}
+            title="Foreldrepenger"
+            description="Foreldrepenger skal sikre deg inntekt når du ha foreldrepermisjon. Hvis du ikke hatt inntekt, kan du få en engangssum isteden."
+            siteUrl="https://familie.nav.no"
         />
     );
 };

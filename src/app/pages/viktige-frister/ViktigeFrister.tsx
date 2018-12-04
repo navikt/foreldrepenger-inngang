@@ -105,15 +105,9 @@ const ViktigeFrister: React.StatelessComponent<Props & IntlProps> = ({ location,
 const ViktigeFristerHeader = () => {
     return (
         <HeaderInformasjon
-            title={'Viktige frister - www.nav.no'}
-            siteDescription={
-                'Les om viktige frister for å søke om foreldrepenger ved foreldrepermisjon.'
-            }
-            propTitle={'nav.no Viktige-frister'}
-            propDescription={
-                'Les om viktige frister for å søke om foreldrepenger ved foreldrepermisjon.'
-            }
-            siteUrl={'https://familie.nav.no/viktige-frister'}
+            title="Viktige frister"
+            description="Les om viktige frister for å søke om foreldrepenger ved foreldrepermisjon."
+            siteUrl="https://familie.nav.no/viktige-frister"
         />
     );
 };
