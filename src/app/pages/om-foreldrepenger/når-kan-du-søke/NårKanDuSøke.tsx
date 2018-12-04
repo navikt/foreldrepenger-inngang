@@ -2,7 +2,7 @@ import * as React from 'react';
 import PanelMedIllustrasjon from '../../../components/panel-med-illustrasjon/PanelMedIllustrasjon';
 import { getTranslation, withIntl, IntlProps, Language } from '../../../intl/intl';
 import { getContent } from 'app/utils/getContent';
-import { Systemtittel } from 'nav-frontend-typografi';
+import { Undertittel } from 'nav-frontend-typografi';
 import FactsWithIcon from 'app/components/facts-with-icon/FactsWithIcon';
 import Fact from 'app/components/facts-with-icon/Fact';
 import BEMHelper from '../../../utils/bem';
@@ -54,7 +54,6 @@ class NårKanDuSøke extends React.Component<Props, State> {
     };
 
     getTabContent = (tabIndex: number) => {
-        console.warn('Clicked tab:', tabIndex);
         switch (tabIndex) {
             case 0:
                 return (
@@ -115,17 +114,17 @@ class NårKanDuSøke extends React.Component<Props, State> {
                         content={getContent('all-informasjon/når-kan-du-søke/adopsjon', lang)}
                     />
                 </FactsWithIcon>
-                <Systemtittel>
+                <Undertittel>
                     {getTranslation('om_foreldrepenger.når_kan_du_søke.hvis_du_skal_utsette', lang)}
-                </Systemtittel>
+                </Undertittel>
                 <Tabs kompakt={true} tabs={tabs} onChange={this.onTabChange} />
                 {this.state.currentTabContent}
-                <Systemtittel>
+                <Undertittel>
                     {getTranslation(
                         'om_foreldrepenger.når_kan_du_søke.hvis_jeg_søker_for_sent',
                         lang
                     )}
-                </Systemtittel>
+                </Undertittel>
                 <StrukturertTekst
                     tekst={getContent(
                         'all-informasjon/når-kan-du-søke/hvis-jeg-søker-for-sent',

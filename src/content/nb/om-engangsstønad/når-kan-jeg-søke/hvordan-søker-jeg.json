@@ -1,0 +1,74 @@
+[
+    {
+        "type": "avsnitt",
+        "style": "undertittel",
+        "children": [
+            { "type": "span", "text": "Hvordan søker jeg?", "marks": [] }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "listItem": "bullet",
+        "level": 1,
+        "children": [
+            {
+                "type": "span",
+                "text": "Hvis du søker før barnet er født, må du få en terminbekreftelse fra jordmor eller legen din. Den må vise at du er kommet til uke ",
+                "marks": []
+            },
+            {
+                "type": "span",
+                "text": "26. eller senere",
+                "marks": ["bold"]
+            },
+            {
+                "type": "span",
+                "text": " i svangerskapet.",
+                "marks": []
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "listItem": "bullet",
+        "level": 1,
+        "children": [
+            {
+                "type": "span",
+                "text": "Bekreftelsen sender du sammen med søknaden om engangsstønad.",
+                "marks": []
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "undertittel",
+        "children": [
+            {
+                "type": "span",
+                "text": "Hva hvis jeg søker for sent?",
+                "marks": []
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Hvis du søker senere enn ",
+                "marks": []
+            },
+            { "type": "span", "text": "seks måneder", "marks": ["bold"] },
+            {
+                "type": "span",
+                "text": " etter at barnet er født eller adoptert, mister du som hovedregel retten til engangsstønaden.",
+                "marks": []
+            }
+        ],
+        "markDefs": []
+    }
+]
