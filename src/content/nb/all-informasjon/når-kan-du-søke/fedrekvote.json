@@ -1,0 +1,64 @@
+[
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            { "type": "span", "text": "Hvis du er ", "marks": [] },
+            { "type": "span", "text": "far", "marks": ["bold"] },
+            { "type": "span", "text": " eller ", "marks": [] },
+            { "type": "span", "text": "medmor", "marks": ["bold"] },
+            {
+                "type": "span",
+                "text": ", må søke om å utsette foreldrepengene dine ",
+                "marks": []
+            },
+            { "type": "span", "text": "før mors siste dag", "marks": ["bold"] },
+            { "type": "span", "text": " med foreldrepenger.", "marks": [] }
+        ],
+        "markDefs": []
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Søknaden må du sende inn ",
+                "marks": []
+            },
+            { "type": "span", "text": "senest siste dag", "marks": ["bold"] },
+            {
+                "type": "span",
+                "text": " mor får utbetalt foreldrepenger. Søker du senere, får du færre dager.",
+                "marks": []
+            }
+        ],
+        "markDefs": []
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Du kan utsette fordi du skal jobbe, ha ferie eller er syk. Det har ingen betydning hva mor gjør når du utsetter. ",
+                "marks": []
+            }
+        ],
+        "markDefs": []
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            { "type": "span", "text": "Du må be ", "marks": [] },
+            { "type": "span", "text": "arbeidsgiveren", "marks": ["bold"] },
+            {
+                "type": "span",
+                "text": " din sende inntektsmelding til NAV når du søker om utsettelsen. Det er fordi foreldrepengene dine regnes etter inntekten du har fra tidspunktet du skulle ha startet foreldrepengeperioden din.",
+                "marks": []
+            }
+        ],
+        "markDefs": []
+    }
+]

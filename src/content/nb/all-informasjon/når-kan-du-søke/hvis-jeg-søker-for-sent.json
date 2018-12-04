@@ -1,0 +1,20 @@
+[
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Foreldrepenger kan utbetales inntil ",
+                "marks": []
+            },
+            { "type": "span", "text": "tre måneder", "marks": ["bold"] },
+            {
+                "type": "span",
+                "text": " tilbake i tid fra du sendte søknaden til NAV.",
+                "marks": []
+            }
+        ],
+        "markDefs": []
+    }
+]

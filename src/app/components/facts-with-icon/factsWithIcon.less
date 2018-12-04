@@ -1,0 +1,31 @@
+.factsWithIcon {
+    display: flex;
+    flex-direction: column;
+    max-width: 37.5rem;
+    background-color: #fbfbfb;
+    padding: 1rem;
+
+    &__fact {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        
+        &:not(:last-child) {
+            margin-bottom: 1rem;
+        }
+    }
+
+    &__svgContainer {
+        width: 40px;
+    }
+
+    .typo-normal {
+        margin-left: 1.5rem;
+    }
+
+    .strukturertTekst {
+        margin-top: 0;
+        align-self: center;
+    }
+}

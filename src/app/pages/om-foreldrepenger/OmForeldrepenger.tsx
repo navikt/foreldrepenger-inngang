@@ -19,6 +19,7 @@ import Hjelp from '../../components/hjelpe-seksjon/HjelpeSeksjon';
 import Innholdsfortegnelse from './innholdsfortegnelse/Innholdsfortegnelse';
 import MediaQuery from 'react-responsive';
 import Mobilmeny from './mobilmeny/Mobilmeny';
+import NårKanDuSøke from './når-kan-du-søke/NårKanDuSøke';
 
 const cls = BEMHelper('infosider');
 
@@ -30,6 +31,7 @@ export type ForeldrepengerSection =
     | 'hvem-kan-fa-foreldrepenger'
     | 'hvor-lenge-kan-jeg-fa-foreldrepenger'
     | 'hva-kan-jeg-fa'
+    | 'når-kan-jeg-søke'
     | 'hvis-du-skal-pa-ferie'
     | 'hvis-du-vil-jobbe'
     | 'hvis-en-av-dere-blir-syke'
@@ -40,6 +42,7 @@ const sections: ForeldrepengerSection[] = [
     'hvem-kan-fa-foreldrepenger',
     'hvor-lenge-kan-jeg-fa-foreldrepenger',
     'hva-kan-jeg-fa',
+    'når-kan-jeg-søke',
     'hvis-du-skal-pa-ferie',
     'hvis-du-vil-jobbe',
     'hvis-en-av-dere-blir-syke',
@@ -83,11 +86,12 @@ const OmForeldrepenger: React.StatelessComponent<Props & IntlProps> = ({ locatio
                     <HvorLenge id={sections[1]} />
                     <NyeRegler />
                     <Beregning id={sections[2]} />
-                    <Ferie id={sections[3]} />
-                    <JegVilJobbe id={sections[4]} />
-                    <Sykdom id={sections[5]} />
-                    <HjemmeSamtidig id={sections[6]} />
-                    <Adopsjon id={sections[7]} />
+                    <NårKanDuSøke id={sections[3]} />
+                    <Ferie id={sections[4]} />
+                    <JegVilJobbe id={sections[5]} />
+                    <Sykdom id={sections[6]} />
+                    <HjemmeSamtidig id={sections[7]} />
+                    <Adopsjon id={sections[8]} />
                     <Hjelp />
                 </article>
                 <div className={cls.element('filler')} />

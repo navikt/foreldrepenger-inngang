@@ -151,6 +151,8 @@
     "hurtiglenke.hvem_kan_fa_foreldrepenger": "Hvem kan få foreldrepenger?",
     "hurtiglenke.hvor_lenge_kan_jeg_fa_foreldrepenger": "Hvor lenge kan jeg få foreldrepenger?",
     "hurtiglenke.hva_kan_jeg_fa": "Hva kan jeg få?",
+    "hurtiglenke.når_kan_jeg_søke": "Når kan jeg søke?",
+    "hurtiglenke.når_kan_du_søke": "Når kan du søke?",
     "hurtiglenke.hvis_du_skal_pa_ferie": "Hvis du skal på ferie",
     "hurtiglenke.hvis_du_vil_jobbe": "Hvis du vil jobbe",
     "hurtiglenke.hvis_en_av_dere_blir_syke": "Hvis en av dere blir syke",
@@ -191,6 +193,13 @@
 
     "om_foreldrepenger.hvor_lenge.forslag.åpne": "Forslag om endring av foreldrepengeperioden ved 80 prosent",
     "om_foreldrepenger.hvor_lenge.forslag.lukke": "Lukk informasjon",
+
+    "om_foreldrepenger.når_kan_du_søke.tittel": "Når kan du søke?",
+    "om_foreldrepenger.når_kan_du_søke.hvis_du_skal_utsette": "Hvis du skal utsette",
+    "om_foreldrepenger.når_kan_du_søke.utsette_fedrekvote": "Fedrekvoten eller medmorkvoten",
+    "om_foreldrepenger.når_kan_du_søke.utsette_jobbe": "Du skal jobbe",
+    "om_foreldrepenger.når_kan_du_søke.utsette_ferie": "Du skal ha ferie",
+    "om_foreldrepenger.når_kan_du_søke.hvis_jeg_søker_for_sent": "Hva hvis jeg søker for sent?",
 
     "om_foreldrepenger.ferie.tittel": "Hvis du skal på ferie",
     "om_foreldrepenger.ferie.eksempel_label": "Eksempel på hvordan du kan forlenge foreldrepengeperioden din når du utsetter:",

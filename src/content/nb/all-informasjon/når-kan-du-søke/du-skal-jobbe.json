@@ -1,0 +1,35 @@
+[
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Du må søke om utsettelse på grunn av arbeid ",
+                "marks": []
+            },
+            { "type": "span", "text": "før", "marks": ["bold"] },
+            { "type": "span", "text": " du begynner å jobbe.", "marks": [] }
+        ],
+        "markDefs": []
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            { "type": "span", "text": "Les mer om ", "marks": [] },
+            {
+                "type": "span",
+                "text": "foreldrepenger hvis du vil jobbe",
+                "marks": ["url_foreldrepenger_hvis_du_vil_jobbe"]
+            }
+        ],
+        "markDefs": [
+            {
+                "key": "url_foreldrepenger_hvis_du_vil_jobbe",
+                "type": "link",
+                "href": "#hvis-du-vil-jobbe"
+            }
+        ]
+    }
+]
