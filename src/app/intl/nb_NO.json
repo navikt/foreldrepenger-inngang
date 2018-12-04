@@ -214,6 +214,9 @@
     "om_foreldrepenger.jobbe.tittel": "Hvis du vil jobbe",
     "om_foreldrepenger.jobbe.heltidsjobb": "Slik går du frem hvis du er arbeidstaker",
     "om_foreldrepenger.jobbe.deltidsjobb": "Slik går du frem hvis du er selvstendig eller frilanser",
+    "om_foreldrepenger.jobbe.fanetittel.jobbeHeltid": "Jobbe heltid (100 prosent)",
+    "om_foreldrepenger.jobbe.fanetittel.jobbeDelvis": "Jobbe delvis (20 prosent for eksempel)",
+
 
     "om_foreldrepenger.sykdom.tittel": "Hvis en av dere blir syke",
     "om_foreldrepenger.sykdom.innlagt": "Barnet er innlagt",
