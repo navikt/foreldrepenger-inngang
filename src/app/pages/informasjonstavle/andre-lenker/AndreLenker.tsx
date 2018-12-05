@@ -12,9 +12,8 @@ const links = [
         href: Environment.DINE_FORELDREPENGER_URL
     },
     {
-        label: 'informasjonstavle.andre_lenker.hvis_du_skal_på_ferie',
-        internal: true,
-        href: '/om-foreldrepenger#hvis-du-skal-pa-ferie'
+        label: 'informasjonstavle.andre_lenker.informasjon_om_kontantstøtte',
+        href: 'https://www.nav.no/no/Person/Familie/Barnetrygd+og+kontantstotte/kontantst%C3%B8tte'
     },
     {
         label: 'informasjonstavle.andre_lenker.hvis_du_vil_jobbe',
