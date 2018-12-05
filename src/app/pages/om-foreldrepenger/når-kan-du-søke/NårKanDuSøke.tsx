@@ -18,13 +18,16 @@ const cls = BEMHelper('nårKanDuSøke');
 
 const getTabs = (lang: Language) => [
     {
-        label: getTranslation('om_foreldrepenger.når_kan_du_søke.utsette_fedrekvote', lang)
+        label: getTranslation('om_foreldrepenger.når_kan_du_søke.utsette_fedrekvote', lang),
+        content: getContent('all-informasjon/når-kan-du-søke/fedrekvote', lang)
     },
     {
-        label: getTranslation('om_foreldrepenger.når_kan_du_søke.utsette_jobbe', lang)
+        label: getTranslation('om_foreldrepenger.når_kan_du_søke.utsette_jobbe', lang),
+        content: getContent('all-informasjon/når-kan-du-søke/du-skal-jobbe', lang)
     },
     {
-        label: getTranslation('om_foreldrepenger.når_kan_du_søke.utsette_ferie', lang)
+        label: getTranslation('om_foreldrepenger.når_kan_du_søke.utsette_ferie', lang),
+        content: getContent('all-informasjon/når-kan-du-søke/du-skal-ha-ferie', lang)
     }
 ];
 
@@ -35,7 +38,7 @@ interface OwnProps {
 type Props = OwnProps & IntlProps;
 
 interface State {
-    currentTabContent: React.ReactNode;
+    currentTabIndex: React.ReactNode;
 }
 
 class NårKanDuSøke extends React.Component<Props, State> {
@@ -43,48 +46,14 @@ class NårKanDuSøke extends React.Component<Props, State> {
         super(props);
 
         this.state = {
-            currentTabContent: this.getTabContent(0)
+            currentTabIndex: 0
         };
     }
 
     onTabChange = (event: any, tabIndex: number) => {
         this.setState({
-            currentTabContent: this.getTabContent(tabIndex)
+            currentTabIndex: tabIndex
         });
-    };
-
-    getTabContent = (tabIndex: number) => {
-        switch (tabIndex) {
-            case 0:
-                return (
-                    <StrukturertTekst
-                        tekst={getContent(
-                            'all-informasjon/når-kan-du-søke/fedrekvote',
-                            this.props.lang
-                        )}
-                    />
-                );
-            case 1:
-                return (
-                    <StrukturertTekst
-                        tekst={getContent(
-                            'all-informasjon/når-kan-du-søke/du-skal-jobbe',
-                            this.props.lang
-                        )}
-                    />
-                );
-            case 2:
-                return (
-                    <StrukturertTekst
-                        tekst={getContent(
-                            'all-informasjon/når-kan-du-søke/du-skal-ha-ferie',
-                            this.props.lang
-                        )}
-                    />
-                );
-            default:
-                return null;
-        }
     };
 
     render = () => {
@@ -118,7 +87,17 @@ class NårKanDuSøke extends React.Component<Props, State> {
                     {getTranslation('om_foreldrepenger.når_kan_du_søke.hvis_du_skal_utsette', lang)}
                 </Undertittel>
                 <Tabs kompakt={true} tabs={tabs} onChange={this.onTabChange} />
-                {this.state.currentTabContent}
+
+                {tabs.map((tab, index) => (
+                    <div
+                        className={cls.element(
+                            'tabContent',
+                            this.state.currentTabIndex !== index ? 'inactive' : undefined
+                        )}>
+                        <StrukturertTekst tekst={tab.content} />
+                    </div>
+                ))}
+
                 <Undertittel>
                     {getTranslation(
                         'om_foreldrepenger.når_kan_du_søke.hvis_jeg_søker_for_sent',
