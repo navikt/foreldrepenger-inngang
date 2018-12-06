@@ -6,7 +6,7 @@ import { HoyreChevron } from 'nav-frontend-chevron';
 import { getTranslation, IntlProps, withIntl } from '../../../intl/intl';
 import BEMHelper from '../../../utils/bem';
 import externalUrls from '../../../utils/externalUrls';
-import { WithLink } from '../../../utils/withLink';
+import WithLink from '../../../components/with-link/WithLink';
 
 import './merInformasjon.less';
 

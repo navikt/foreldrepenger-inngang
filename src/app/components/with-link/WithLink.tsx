@@ -1,24 +1,12 @@
 import React, { ReactNode } from 'react';
 import { Link } from 'react-router-dom';
 import Lenke from 'nav-frontend-lenker';
-import CustomSVGFromSprite from './CustomSVG';
-import BEMHelper from './bem';
+import CustomSVGFromSprite from '../../utils/CustomSVG';
+import BEMHelper from '../../utils/bem';
 import classnames from 'classnames';
 import './withLink.less';
 
-const externalLinkIcon = require('../assets/icons/external.svg').default;
-
-const withLink = (url: string, componentToRender: ReactNode, urlIsExternal?: boolean) => {
-    if (urlIsExternal) {
-        return (
-            <a href={url} aria-label="This is a link">
-                {componentToRender}
-            </a>
-        );
-    } else {
-        return <Link to={url}>{componentToRender}</Link>;
-    }
-};
+const externalLinkIcon = require('../../assets/icons/external.svg').default;
 
 const cls = BEMHelper('withLink');
 
@@ -141,4 +129,4 @@ export class WithLink extends React.Component<Props> {
     };
 }
 
-export default withLink;
+export default WithLink;

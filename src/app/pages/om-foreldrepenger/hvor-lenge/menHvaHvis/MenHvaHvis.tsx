@@ -6,9 +6,8 @@ import NoenVilPaFerie from './NoenVilPaFerie';
 import JegVilJobbe from './JegVilJobbe';
 import EnAvOssBlirSyk from './EnAvOssBlirSyk';
 import HjemmeSamtidig from './HjemmeSamtidig';
-
+import WithLink from '../../../../components/with-link/WithLink';
 import './MenHvaHvis.less';
-import { WithLink } from '../../../../utils/withLink';
 
 const cls = BEMHelper('menHvaHvis');
 

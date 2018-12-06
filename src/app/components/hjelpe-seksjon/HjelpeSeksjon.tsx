@@ -7,7 +7,7 @@ import './hjelpeSeksjon.less';
 import BEMHelper from 'app/utils/bem';
 import CustomSVGFromSprite from 'app/utils/CustomSVG';
 import TypografiBase from 'nav-frontend-typografi';
-import { WithLink } from 'app/utils/withLink';
+import WithLink from 'app/components/with-link/WithLink';
 import externalUrls from 'app/utils/externalUrls';
 
 const svg = require('../../assets/ark/ark-hjelp.svg').default;

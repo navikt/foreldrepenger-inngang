@@ -4,7 +4,7 @@ import throttle from 'lodash/throttle';
 import { Cancelable } from 'lodash';
 
 import BEMHelper from 'app/utils/bem';
-import { WithLink } from 'app/utils/withLink';
+import WithLink from 'app/components/with-link/WithLink';
 import { getTranslation, withIntl, Language } from 'app/intl/intl';
 import { ForeldrepengerSection } from '../OmForeldrepenger';
 import './seksjonslenker.less';

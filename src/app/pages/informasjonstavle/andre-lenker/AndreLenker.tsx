@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { WithLink } from '../../../utils/withLink';
+import WithLink from '../../../components/with-link/WithLink';
 import BEMHelper from '../../../utils/bem';
 import TypografiBase from 'nav-frontend-typografi';
 import { getTranslation, IntlProps, withIntl } from '../../../intl/intl';

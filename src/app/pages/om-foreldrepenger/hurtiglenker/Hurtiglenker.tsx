@@ -4,7 +4,7 @@ import BEMHelper from '../../../utils/bem';
 import { getTranslation, withIntl, Language } from '../../../intl/intl';
 import './hurtiglenker.less';
 import TypografiBase from 'nav-frontend-typografi';
-import { WithLink } from '../../../utils/withLink';
+import WithLink from '../../../components/with-link/WithLink';
 
 const cls = BEMHelper('hurtiglenker');
 
