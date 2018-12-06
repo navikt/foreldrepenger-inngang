@@ -15,7 +15,7 @@
             { "type": "span", "text": "utsette", "marks": ["bold"] },
             {
                 "type": "span",
-                "text": " perioden fordi du skal jobbe.",
+                "text": " perioden fordi du skal jobbe eller at du skal jobbe delvis.",
                 "marks": []
             }
         ]
