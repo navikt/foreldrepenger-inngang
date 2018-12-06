@@ -19,7 +19,7 @@ interface ForeldrepengerProps {
 const Foreldrepenger: StatelessComponent<ForeldrepengerProps> = ({ parentCls, history, lang }) => {
     return (
         <PanelMedTittel title={getTranslation('foreldrepenger', lang)}>
-            <StrukturertTekst tekst={getContent('hva-vil-du-søke-om/foreldrepenger', lang)} />
+            <StrukturertTekst tekst={getContent('hva-søker-du/foreldrepenger', lang)} />
             <ButtonPanel
                 externalLink={true}
                 parentCls={parentCls}
