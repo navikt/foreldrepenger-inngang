@@ -86,6 +86,7 @@ export class WithLink extends React.Component<Props> {
                     <a
                         tabIndex={noTabbing ? -1 : 0}
                         target="_blank"
+                        rel="noopener noreferrer"
                         className={className}
                         href={url}>
                         {children}
@@ -93,7 +94,11 @@ export class WithLink extends React.Component<Props> {
                 );
             } else {
                 return (
-                    <Lenke target="_blank" className={classNames} href={url}>
+                    <Lenke
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={classNames}
+                        href={url}>
                         {children}
                         {addExternalIcon && (
                             <span className={cls.element('icon')}>
