@@ -5,7 +5,7 @@
         "children": [
             {
                 "type": "span",
-                "text": "Når bare du har rett til foreldrepenger, kan du starte foreldrepengeperioden din fra ",
+                "text": "Som far eller medmor kan du starte foreldrepengeperioden din fra ",
                 "marks": []
             },
             { "type": "span", "text": "uke syv", "marks": ["bold"] },

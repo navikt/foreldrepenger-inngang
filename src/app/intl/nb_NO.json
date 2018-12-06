@@ -57,8 +57,8 @@
 
     "informasjonstavle.tittel": "Foreldrepenger, engangsstønad og svangerskapspenger",
     "informasjonstavle.ingress": "Dette har du rett til når du venter barn eller skal ha foreldrepermisjon.",
-    "informasjonstavle.hva_kan_jeg_få": "Hva kan jeg få?",
-    "informasjonstavle.hva_kan_jeg_få_ingress": "Finn ut om du kan ha rett til foreldrepenger eller engangsstønad.",
+    "informasjonstavle.hva_kan_du_få": "Hva kan du få?",
+    "informasjonstavle.hva_kan_du_få_ingress": "Finn ut om du kan ha rett til foreldrepenger eller engangsstønad.",
     "informasjonstavle.hvor_mye": "Hvor mye?",
     "informasjonstavle.hvor_mye_ingress": "Regn ut hvor mye du kan få i foreldrepenger.",
     "informasjonstavle.hvor_lenge": "Hvor lenge?",
@@ -224,7 +224,10 @@
     "om_foreldrepenger.sykdom.foreldre_syke": "En av foreldrene er syke",
     "om_foreldrepenger.sykdom.innlagt.utsette": "Slik går du frem for å utsette",
     "om_foreldrepenger.sykdom.innlagt.overta": "Slik går du frem for å overta",
-    "om_foreldrepenger.sykdom.innlagt.eksempeltittel": "Eksempel på hvordan du kan forlenge foreldrepengeperioden din når du utsetter:",
+    "om_foreldrepenger.sykdom.sykmeldt.eksempeltittel": "Eksempel på hvordan du kan forlenge foreldrepengeperioden din når du utsetter:",
+    "om_foreldrepenger.sykdom.innlagt.eksempeltittel": "Eksempel på hvordan du kan forlenge foreldrepengeperioden dersom barnet blir innlagt:",
+    "om_foreldrepenger.sykdom.sykmeldt": "Sykmeldt",
+    "om_foreldrepenger.sykdom.barnet_er_innlagt": "Barnet er innlagt",
 
     "om_foreldrepenger.hjemme_samtidig.tittel":"Hjemme samtidig",
     "om_foreldrepenger.hjemme_samtidig.ingress": "Hvis dere vil være hjemme med barnet samtidig eller bytte på, har dere flere muligheter.",

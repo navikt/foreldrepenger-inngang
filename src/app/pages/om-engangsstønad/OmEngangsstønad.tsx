@@ -23,7 +23,7 @@ interface Props {
 const engangsstønadSvg = require('../../assets/engangsstønad.svg').default;
 const arbeidstakerSvg = require('../../assets/ark/ark-arbeidstaker.svg').default;
 const utbetalingSvg = require('../../assets/ark/ark-frister.svg').default;
-const farSvg = require('../../assets/ark/ark-far.svg').default;
+const farOgMedmorSvg = require('../../assets/ark/ark-far-og-medmor.svg').default;
 const checkmarkIcon = require('../../assets/icons/checkmark.svg').default;
 
 const hvaErEngangsstønadContent = 'om-engangsstønad/hva-er-engangsstønad/hva-er-engangsstønad';
@@ -105,7 +105,7 @@ const EngangsstønadTilFarW: React.StatelessComponent<IntlProps & { id: string }
     <PanelMedIllustrasjon
         id={id}
         title={getTranslation('om_engangsstønad.til_far.tittel', lang)}
-        svg={farSvg}>
+        svg={farOgMedmorSvg}>
         <StrukturertTekst tekst={getContent('om-engangsstønad/til-far', lang)} />
     </PanelMedIllustrasjon>
 );
