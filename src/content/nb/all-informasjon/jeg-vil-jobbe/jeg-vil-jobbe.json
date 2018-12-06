@@ -19,9 +19,20 @@
         "children": [
             {
                 "type": "span",
-                "text": "Utsette foreldrepengeperioden din når du jobber heltid",
+                "text": "jobbe ",
+                "marks": []
+            },
+            {
+                "type": "span",
+                "text": "heltid og utsette ",
+                "marks": ["bold"]
+            },
+            {
+                "type": "span",
+                "text": "foreldrepengeperioden din",
                 "marks": []
             }
+
         ]
     },
     {
@@ -32,7 +43,17 @@
         "children": [
             {
                 "type": "span",
-                "text": "Kombinere foreldrepenger når du jobber delvis ",
+                "text": "jobbe ",
+                "marks": []
+            },
+            {
+                "type": "span",
+                "text": "deltid og forlenge ",
+                "marks": ["bold"]
+            },
+            {
+                "type": "span",
+                "text": "foreldrepengeperioden din",
                 "marks": []
             }
         ]
@@ -43,10 +64,61 @@
         "children": [
             {
                 "type": "span",
-                "text": "Jobber du delvis blir foreldrepengene redusert etter hvor mye du jobber. Samtidig blir perioden din med foreldrepenger forlenget. Du kan bare jobbe hos én arbeidsgiver om gangen.",
+                "text": "Jobber du delvis blir ",
+                "marks": []
+            },
+            {
+                "type": "span",
+                "text": "foreldrepengene redusert ",
+                "marks": ["bold"]
+            },
+            {
+                "type": "span",
+                "text": "etter hvor mye du jobber. Samtidig blir ",
+                "marks": []
+            },
+            {
+                "type": "span",
+                "text": "permisjonen din forlenget. ",
+                "marks": ["bold"]
+            },
+            {
+                "type": "span",
+                "text": "Du kan bare kombinere foreldrepenger med delvis jobb med ",
+                "marks": []
+            },
+            {
+                "type": "span",
+                "text": " en arbeidsgiver ",
+                "marks": ["bold"]
+            },
+            {
+                "type": "span",
+                "text": "om gangen.",
                 "marks": []
             }
         ],
         "markDefs": []
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Hvis dere vil ",
+                "marks": []
+            },
+            {
+                "type": "span",
+                "text": "kombinere foreldrepengene samtidig",
+                "marks": ["bold"]
+            },
+            {
+                "type": "span",
+                "text": ", kan ikke foreldrepengene være mer enn 100 prosent til sammen. Husk at begge må søke.",
+                "marks": []
+            }
+        ]
     }
 ]
