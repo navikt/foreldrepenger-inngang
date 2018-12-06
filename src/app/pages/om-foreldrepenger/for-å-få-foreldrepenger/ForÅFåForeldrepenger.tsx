@@ -18,9 +18,9 @@ const foreldrepengerSvg = detErJul()
 const checkmarkIcon = require('./checkmark.svg').default;
 
 const kravTilForeldrepenger = [
-    'all-informasjon/for-å-få-foreldrepenger/krav1',
-    'all-informasjon/for-å-få-foreldrepenger/krav2',
-    'all-informasjon/for-å-få-foreldrepenger/krav3'
+    'om-foreldrepenger/for-å-få-foreldrepenger/krav1',
+    'om-foreldrepenger/for-å-få-foreldrepenger/krav2',
+    'om-foreldrepenger/for-å-få-foreldrepenger/krav3'
 ];
 
 interface Props {
@@ -35,7 +35,7 @@ const ForÅFåForeldrepenger: React.StatelessComponent<Props & IntlProps> = ({ i
             svg={<SvgMask svg={foreldrepengerSvg} anchorToBottom={true} />}>
             <div className={cls.element('alignLeft')}>
                 <StrukturertTekst
-                    tekst={getContent('all-informasjon/for-å-få-foreldrepenger/ingress', lang)}
+                    tekst={getContent('om-foreldrepenger/for-å-få-foreldrepenger/ingress', lang)}
                 />
             </div>
             <div className={cls.element('kravTilForeldrepenger')}>

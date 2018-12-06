@@ -15,7 +15,7 @@ const facebookSvg = require('../../assets/icons/facebook.svg').default;
 const chatSvg = require('../../assets/icons/chat.svg').default;
 const telefonSvg = require('../../assets/icons/telefon.svg').default;
 
-const content = 'all-informasjon/hjelp/hjelp';
+const content = 'om-foreldrepenger/hjelp/hjelp';
 const cls = BEMHelper('hjelp');
 
 interface Props {
