@@ -1,4 +1,3 @@
-import * as React from 'react';
 import PanelMedIllustrasjon from '../../../components/panel-med-illustrasjon/PanelMedIllustrasjon';
 import { getTranslation, withIntl, IntlProps } from '../../../intl/intl';
 import StrukturertTekst from '../../../components/strukturert-tekst/StrukturertTekst';
@@ -8,12 +7,9 @@ import { getContent } from '../../../utils/getContent';
 import Tabs from 'nav-frontend-tabs';
 import JobbeHeltid from "./JobbeHeltid";
 import JobbeDelvis from "./JobbeDelvis";
-import {ReactNode} from "react";
+import * as React from "react";
 
 const content = 'all-informasjon/jeg-vil-jobbe/jeg-vil-jobbe';
-
-
-
 const jobbeSvg = require('../../../assets/ark/ark-jobbe.svg').default;
 const cls = BEMHelper('jegVilJobbe');
 
@@ -28,19 +24,18 @@ const faner = [
     }
 ];
 
-
-interface Props {
+interface OwnProps {
     id: string;
 }
 
-type p = Props & IntlProps;
+type Props = OwnProps & IntlProps;
 
-class JegVilJobbe extends React.Component <p> {
+class JegVilJobbe extends React.Component <Props> {
     state: {
-      currentTab: ReactNode
+      currentTab: React.ReactNode
     };
 
-    constructor(props: p) {
+    constructor(props: Props) {
         super(props);
         this.state = {
             currentTab: faner[0].content,
@@ -62,13 +57,7 @@ class JegVilJobbe extends React.Component <p> {
                 kompakt={true}
                 defaultAktiv={0}
                 tabs={faner.map((fane, index) => ({
-                 label: this.updateContent[index],
-                    children: (
-                      <div key={fane.label}>
-                          {getTranslation(fane.label, this.props.lang)}
-                      </div>
-                    ),
-                    onClick: this.updateContent[index]
+                 label: getTranslation(fane.label, this.props.lang),
                 }))}
                 onChange={this.updateContent}
             />

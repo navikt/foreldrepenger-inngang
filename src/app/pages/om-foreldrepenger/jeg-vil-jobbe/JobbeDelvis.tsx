@@ -4,79 +4,114 @@ import LesMer from '../../../components/les-mer/LesMer';
 import StrukturertTekst from '../../../components/strukturert-tekst/StrukturertTekst';
 import { getContent } from '../../../utils/getContent';
 import BEMHelper from '../../../utils/bem';
-import { FlexibleSvg } from '../../../utils/CustomSVG';
+import { JegVilJobbeDeltid } from './komponenter/JegVilJobbeDeltid';
+import { JegVilJobbeDeltidExpandert } from './komponenter/JegVilJobbeDeltidExpandert';
+import { CSSTransition } from 'react-transition-group';
+import TypografiBase from 'nav-frontend-typografi';
+import MediaQuery from 'react-responsive';
+import { JegVilJobbeDeltidExpandertMobil } from './komponenter/JegVilJobbeDeltidExpandertMobil';
 const firstPanelContent = 'all-informasjon/jeg-vil-jobbe/heltidsjobb';
 const secondPanelContent = 'all-informasjon/jeg-vil-jobbe/deltidsjobb';
 const cls = BEMHelper('jegVilJobbe');
 
 class JobbeDelvis extends React.Component<IntlProps> {
     state: {
-        classAppend: string;
         svgList: object[];
-        extendSvg: boolean;
+        message: string;
+        width: string;
+        height: string;
     };
 
     constructor(props: IntlProps) {
         super(props);
         this.state = {
-            classAppend: 'fade-out',
             svgList: [],
-            extendSvg: false
+            message: 'om_foreldrepenger.jobbe.klikkForDetaljertInformasjon',
+            width: '70%',
+            height: '70%'
         };
 
         this.expandJegVilJobbe = this.expandJegVilJobbe.bind(this);
     }
 
-    expandJegVilJobbe() {
-        let tmp = this.state.extendSvg;
-        let list = [...this.state.svgList];
-        tmp ? (tmp = false) : (tmp = true);
-        tmp
-            ? (list = [
-                  <div className={cls.element('expandIcon ')}>
-                      <FlexibleSvg
-                          iconRef={
-                              require('../../../assets/icons/jeg-vil-jobbe-deltid-expandert.svg')
-                                  .default
-                          }
-                      />
-                  </div>
-              ])
-            : (list = []);
-        console.log(list);
-        this.setState({
-            extendSvg: tmp,
-            svgList: list
-        }, () => this.setEntrance());
-    }
+    componentWillMount = () => {
+        this.updateWindowSize();
+        window.addEventListener('resize', this.updateWindowSize);
+    };
 
-    setEntrance() {
-        let classHolder = this.state.classAppend;
-        console.log(classHolder);
-        classHolder === 'fade-out' ? (classHolder = 'fade-enter') : (classHolder = 'fade-out');
-        console.log(classHolder);
-        this.setState({
-            classAppend: classHolder,
-        }, () => console.log(classHolder));
+    componentWillUnmount = () => {
+        window.removeEventListener('resize', this.updateWindowSize);
+    };
+
+    updateWindowSize = () => {
+        if (window.innerWidth < 575) {
+            this.setState({
+                width: '100%',
+                height: '100%'
+            });
+        } else if (window.innerWidth > 576) {
+            this.setState({
+                width: '70%',
+                height: '70%'
+            });
+        }
+    };
+
+    expandJegVilJobbe() {
+        const list = [...this.state.svgList];
+        if (list.length === 1) {
+            this.setState({
+                svgList: [],
+                message: 'om_foreldrepenger.jobbe.klikkForDetaljertInformasjon'
+            });
+        } else {
+            list.push(
+                <div>
+                    <MediaQuery minWidth={576}>
+                        <JegVilJobbeDeltidExpandert height={'100%'} width={'100%'} />
+                    </MediaQuery>
+                    <MediaQuery maxWidth={575}>
+                        <JegVilJobbeDeltidExpandertMobil />
+                    </MediaQuery>
+                </div>
+            );
+            this.setState({
+                svgList: list,
+                message: 'om_foreldrepenger.jobbe.kikkForLukkDetaljertInformasjon'
+            });
+        }
     }
 
     render = () => (
         <div className={cls.element('jobbeDelvis')}>
-            <StrukturertTekst
-                tekst={getContent(
-                    'all-informasjon/jeg-vil-jobbe/heltid-fane-header',
-                    this.props.lang
-                )}
-            />
-            <div className={cls.element('mainIcon')} role="button" onClick={this.expandJegVilJobbe}>
-                <FlexibleSvg
-                    iconRef={require('../../../assets/icons/jeg-vil-jobbe-deltid.svg').default}
+            <div className={cls.element('illustrasjon')}>
+                <StrukturertTekst
+                    tekst={getContent('all-informasjon/jeg-vil-jobbe/deltid-fane', this.props.lang)}
                 />
+                <div
+                    className={cls.element('mainIcon')}
+                    role="button"
+                    onClick={this.expandJegVilJobbe}>
+                    <JegVilJobbeDeltid width={this.state.width} height={this.state.height} />
+                    <TypografiBase type={'normaltekst'}>
+                        {getTranslation(this.state.message, this.props.lang)}
+                    </TypografiBase>
+                </div>
+                {this.state.svgList.map((item, index) => {
+                    return (
+                        <CSSTransition
+                            key={index}
+                            appear={true}
+                            classNames="fade"
+                            in={true}
+                            timeout={1000}>
+                            <div key={index} className={' '}>
+                                {item}
+                            </div>
+                        </CSSTransition>
+                    );
+                })}
             </div>
-            {this.state.svgList.map((item) => {
-                return(<div key={this.state.classAppend} className={this.state.classAppend}> { item }</div>);
-            })}
-
             <div className={cls.element('firstDropdown')}>
                 <LesMer
                     intro={getTranslation('om_foreldrepenger.jobbe.heltidsjobb', this.props.lang)}>

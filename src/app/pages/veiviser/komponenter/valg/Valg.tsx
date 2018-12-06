@@ -20,8 +20,6 @@ import { getEnHalvG } from '../../../../utils/beregningUtils';
 import 'core-js';
 import 'raf/polyfill';
 
-
-
 const cls = BEMHelper('valg');
 const resultat = BEMHelper('resultat');
 const inputCls = BEMHelper('input');
