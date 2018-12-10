@@ -10,7 +10,6 @@ import { getTranslation, withIntl, Language } from 'app/intl/intl';
 import { ForeldrepengerSection } from '../OmForeldrepenger';
 import { WithLink } from 'app/utils/withLink';
 import './innholdsfortegnelse.less';
-import Environment from 'app/Environment';
 
 const cls = BEMHelper('innholdsfortegnelse');
 const icon = require('../../../assets/icons/rakett.svg').default;
@@ -18,10 +17,10 @@ const icon = require('../../../assets/icons/rakett.svg').default;
 interface Props {
     sections: ForeldrepengerSection[];
     lang: Language;
-    sokUrl?: boolean;
+    søkeUrl: string;
 }
 
-const Innholdsfortegnelse: React.StatelessComponent<Props> = ({ lang, sections, sokUrl }) => {
+const Innholdsfortegnelse: React.StatelessComponent<Props> = ({ lang, sections, søkeUrl }) => {
     return (
         <Panel className={classnames(cls.className)}>
             <div className={cls.element('icon')}>
@@ -29,7 +28,7 @@ const Innholdsfortegnelse: React.StatelessComponent<Props> = ({ lang, sections, 
             </div>
             <Seksjonslenker sections={sections} />
             <WithLink
-                url={sokUrl ? Environment.SOK_ENGANGSSTONAD_URL : Environment.SOK_FORELDREPENGER_URL}
+                url={søkeUrl}
                 noStyling={true}
                 urlIsExternal={true}>
                 <Hovedknapp className={cls.element('søkNå')}>

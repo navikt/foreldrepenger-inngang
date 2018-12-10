@@ -16,6 +16,7 @@ import classnames from 'classnames';
 import MediaQuery from 'react-responsive';
 import Innholdsfortegnelse from '../om-foreldrepenger/innholdsfortegnelse/Innholdsfortegnelse';
 import Mobilmeny from '../om-foreldrepenger/mobilmeny/Mobilmeny';
+import Environment from 'app/Environment';
 
 const infosiderCls = BEMHelper('infosider');
 const cls = BEMHelper('omEngangsstønad');
@@ -59,7 +60,7 @@ const OmEngangsstonad: React.StatelessComponent<Props & IntlProps> = ({ location
                 )}>
                 <MediaQuery minWidth={1072}>
                     <aside className={infosiderCls.element('sidebar')}>
-                        <Innholdsfortegnelse sections={sections} sokUrl={true} />
+                        <Innholdsfortegnelse sections={sections} søkeUrl={Environment.SOK_ENGANGSSTONAD_URL} />
                     </aside>
                 </MediaQuery>
                 <MediaQuery maxWidth={1071}>

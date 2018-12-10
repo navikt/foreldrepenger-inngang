@@ -19,6 +19,7 @@ import Hjelp from '../../components/hjelpe-seksjon/HjelpeSeksjon';
 import Innholdsfortegnelse from './innholdsfortegnelse/Innholdsfortegnelse';
 import MediaQuery from 'react-responsive';
 import Mobilmeny from './mobilmeny/Mobilmeny';
+import Environment from 'app/Environment';
 
 const cls = BEMHelper('infosider');
 
@@ -65,7 +66,7 @@ const OmForeldrepenger: React.StatelessComponent<Props & IntlProps> = ({ locatio
             <div className={classnames(cls.element('container'), cls.modifier('withSidebar'))}>
                 <MediaQuery minWidth={1072}>
                     <aside className={cls.element('sidebar')}>
-                        <Innholdsfortegnelse sections={sections} />
+                        <Innholdsfortegnelse sections={sections} søkeUrl={Environment.SOK_FORELDREPENGER_URL} />
                     </aside>
                 </MediaQuery>
                 <MediaQuery maxWidth={1071}>
