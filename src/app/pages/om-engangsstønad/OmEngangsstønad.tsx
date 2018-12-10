@@ -10,7 +10,7 @@ import CustomSVGFromSprite from '../../utils/CustomSVG';
 import { ENGANGSSUM_PER_BARN } from '../../utils/beregningUtils';
 import HeaderInformasjon from '../../components/header-informasjon/HeaderInformasjon';
 import Hjelp from '../../components/hjelpe-seksjon/HjelpeSeksjon';
-import NårKanJegSøke from './når-kan-jeg-søke/NårKanJegSøke';
+import NårKanDuSøke from './når-kan-du-søke/NårKanDuSøke';
 import '../infosider.less';
 import './omEngangsstønad.less';
 
@@ -41,7 +41,7 @@ const OmEngangsstonad: React.StatelessComponent<Props & IntlProps> = ({ location
                     <Breadcrumbs path={location.pathname} />
                     <HvaErEngangsstønad />
                     <HvaKanDuFå />
-                    <NårKanJegSøke />
+                    <NårKanDuSøke />
                     <NårBlirPengeneUtbetalt />
                     <EngangsstønadTilFar id="far-eller-medmor" />
                     <Hjelp />

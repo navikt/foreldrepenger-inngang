@@ -1,19 +1,89 @@
 [
     {
         "type": "avsnitt",
+        "style": "undertittel",
+        "children": [
+            {
+                "type": "span",
+                "text": "Frist for å utsette for far eller medmor",
+                "marks": []
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
         "style": "normaltekst",
         "children": [
             {
                 "type": "span",
-                "text": "Foreldrepenger kan utbetales inntil ",
+                "text": "Hvis du ikke ønsker å starte foreldrepengeperioden rett etter at mor er ferdig med foreldrepengeperioden sin, må du søke om å ",
                 "marks": []
             },
-            { "type": "span", "text": "tre måneder", "marks": ["bold"] },
+            { "type": "span", "text": "utsette", "marks": ["bold"] },
             {
                 "type": "span",
-                "text": " tilbake i tid fra du sendte søknaden til NAV.",
+                "text": " perioden. Du må sende søknaden ",
+                "marks": []
+            },
+            {
+                "type": "span",
+                "text": "senest siste dag mor",
+                "marks": ["bold"]
+            },
+            {
+                "type": "span",
+                "text": " får utbetalt foreldrepenger. Søker du om å utsette på et senere tidspunkt får du ",
+                "marks": []
+            },
+            { "type": "span", "text": "færre dager", "marks": ["bold"] },
+            { "type": "span", "text": " med foreldrepenger.", "marks": [] }
+        ],
+        "markDefs": []
+    },
+    {
+        "type": "avsnitt",
+        "style": "undertittel",
+        "children": [
+            {
+                "type": "span",
+                "text": "Hvis bare far eller medmor har rett",
                 "marks": []
             }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Hvis ikke mor har rett til foreldrepenger kan far eller medmor kan søke om å starte foreldrepengeperioden fra ",
+                "marks": []
+            },
+            { "type": "span", "text": "uke syv", "marks": ["bold"] },
+            { "type": "span", "text": " etter fødselen. Ved ", "marks": [] },
+            { "type": "span", "text": "adopsjon", "marks": ["bold"] },
+            {
+                "type": "span",
+                "text": " kan far eller medmor starte foreldrepengeperioden fra ",
+                "marks": []
+            },
+            { "type": "span", "text": "omsorgsovertakelse", "marks": ["bold"] },
+            { "type": "span", "text": ". ", "marks": [] }
+        ],
+        "markDefs": []
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Starter du senere, får du ",
+                "marks": []
+            },
+            { "type": "span", "text": "færre uker", "marks": ["bold"] },
+            { "type": "span", "text": " med foreldrepenger. ", "marks": [] }
         ],
         "markDefs": []
     }

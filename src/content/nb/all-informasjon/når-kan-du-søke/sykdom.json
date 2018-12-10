@@ -1,0 +1,22 @@
+[
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            { "type": "span", "text": "Du kan søke om ", "marks": [] },
+            { "type": "span", "text": "utsettelse", "marks": ["bold"] },
+            {
+                "type": "span",
+                "text": " tilbake i tid på grunn av sykdom. Du må legge ved en ",
+                "marks": []
+            },
+            { "type": "span", "text": "legeerklæring", "marks": ["bold"] },
+            {
+                "type": "span",
+                "text": " som dokumenterer hele perioden du er syk.",
+                "marks": []
+            }
+        ],
+        "markDefs": []
+    }
+]

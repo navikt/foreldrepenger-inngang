@@ -9,17 +9,18 @@ import BEMHelper from '../../../utils/bem';
 import './nårKanDuSøke.less';
 import Tabs from 'nav-frontend-tabs';
 import StrukturertTekst from 'app/components/strukturert-tekst/StrukturertTekst';
+import Foreldrepar from 'app/components/foreldrepar/Foreldrepar';
+import { FlexibleSvg } from 'app/utils/CustomSVG';
 
 const iconSvg = require('../../../assets/ark/ark-frister.svg').default;
 const morSvg = require('../../../assets/foreldre/mor2.svg').default;
-const farSvg = require('../../../assets/foreldre/far4.svg').default;
 const adopsjonSvg = require('../../../assets/icons/adopsjon.svg').default;
 const cls = BEMHelper('nårKanDuSøke');
 
 const getTabs = (lang: Language) => [
     {
-        label: getTranslation('om_foreldrepenger.når_kan_du_søke.utsette_fedrekvote', lang),
-        content: getContent('all-informasjon/når-kan-du-søke/fedrekvote', lang)
+        label: getTranslation('om_foreldrepenger.når_kan_du_søke.utsette_sykdom', lang),
+        content: getContent('all-informasjon/når-kan-du-søke/sykdom', lang)
     },
     {
         label: getTranslation('om_foreldrepenger.når_kan_du_søke.utsette_jobbe', lang),
@@ -68,23 +69,29 @@ class NårKanDuSøke extends React.Component<Props, State> {
                 svg={iconSvg}>
                 <FactsWithIcon>
                     <Fact
-                        icon={morSvg}
+                        icon={<FlexibleSvg width={40} height={40} iconRef={morSvg} />}
                         content={getContent('all-informasjon/når-kan-du-søke/mor', lang)}
                     />
                     <Fact
-                        icon={farSvg}
+                        icon={<Foreldrepar firstParent="far4" secondParent="medmor2" />}
                         content={getContent(
                             'all-informasjon/når-kan-du-søke/far-eller-medmor',
                             lang
                         )}
                     />
                     <Fact
-                        icon={adopsjonSvg}
+                        icon={<FlexibleSvg width={40} height={56} iconRef={adopsjonSvg} />}
                         content={getContent('all-informasjon/når-kan-du-søke/adopsjon', lang)}
                     />
                 </FactsWithIcon>
+                <StrukturertTekst
+                    tekst={getContent('all-informasjon/når-kan-du-søke/tidligst-svar', lang)}
+                />
                 <Undertittel>
-                    {getTranslation('om_foreldrepenger.når_kan_du_søke.hvis_du_skal_utsette', lang)}
+                    {getTranslation(
+                        'om_foreldrepenger.når_kan_du_søke.hvis_du_skal_utsette_fordi',
+                        lang
+                    )}
                 </Undertittel>
                 <Tabs kompakt={true} tabs={tabs} onChange={this.onTabChange} />
 
@@ -98,12 +105,6 @@ class NårKanDuSøke extends React.Component<Props, State> {
                     </div>
                 ))}
 
-                <Undertittel>
-                    {getTranslation(
-                        'om_foreldrepenger.når_kan_du_søke.hvis_jeg_søker_for_sent',
-                        lang
-                    )}
-                </Undertittel>
                 <StrukturertTekst
                     tekst={getContent(
                         'all-informasjon/når-kan-du-søke/hvis-jeg-søker-for-sent',

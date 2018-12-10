@@ -9,7 +9,7 @@
                 "marks": []
             },
             { "type": "span", "text": "før", "marks": ["bold"] },
-            { "type": "span", "text": " ferien din starter", "marks": [] }
+            { "type": "span", "text": " ferien din starter.", "marks": [] }
         ],
         "markDefs": []
     },

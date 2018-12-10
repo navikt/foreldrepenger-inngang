@@ -29,9 +29,9 @@ interface Props {
 
 export type ForeldrepengerSection =
     | 'hvem-kan-fa-foreldrepenger'
-    | 'hvor-lenge-kan-jeg-fa-foreldrepenger'
-    | 'hva-kan-jeg-fa'
-    | 'når-kan-jeg-søke'
+    | 'hvor-lenge-kan-du-fa-foreldrepenger'
+    | 'hva-kan-du-fa'
+    | 'når-kan-du-søke'
     | 'hvis-du-skal-pa-ferie'
     | 'hvis-du-vil-jobbe'
     | 'hvis-en-av-dere-blir-syke'
@@ -40,9 +40,9 @@ export type ForeldrepengerSection =
 
 const sections: ForeldrepengerSection[] = [
     'hvem-kan-fa-foreldrepenger',
-    'hvor-lenge-kan-jeg-fa-foreldrepenger',
-    'hva-kan-jeg-fa',
-    'når-kan-jeg-søke',
+    'hvor-lenge-kan-du-fa-foreldrepenger',
+    'hva-kan-du-fa',
+    'når-kan-du-søke',
     'hvis-du-skal-pa-ferie',
     'hvis-du-vil-jobbe',
     'hvis-en-av-dere-blir-syke',

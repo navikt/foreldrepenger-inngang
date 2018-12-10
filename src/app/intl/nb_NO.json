@@ -53,7 +53,7 @@
     "route.blindside": "Uferdig side!",
     "route.nye-beregningsregler": "Nye beregningsregler",
     "route.hvor-mye": "Hvor mye?",
-    "route.veiviser": " Hva kan jeg få?",
+    "route.veiviser": " Hva kan du få?",
 
 
     "informasjonstavle.tittel": "Foreldrepenger, engangsstønad og svangerskapspenger",
@@ -149,9 +149,8 @@
     "søk_svangerskapspenger.tittel": "Søk svangerskapspenger",
     
     "hurtiglenke.hvem_kan_fa_foreldrepenger": "Hvem kan få foreldrepenger?",
-    "hurtiglenke.hvor_lenge_kan_jeg_fa_foreldrepenger": "Hvor lenge kan jeg få foreldrepenger?",
-    "hurtiglenke.hva_kan_jeg_fa": "Hva kan jeg få?",
-    "hurtiglenke.når_kan_jeg_søke": "Når kan jeg søke?",
+    "hurtiglenke.hvor_lenge_kan_du_fa_foreldrepenger": "Hvor lenge kan du få foreldrepenger?",
+    "hurtiglenke.hva_kan_du_fa": "Hva kan du få?",
     "hurtiglenke.når_kan_du_søke": "Når kan du søke?",
     "hurtiglenke.hvis_du_skal_pa_ferie": "Hvis du skal på ferie",
     "hurtiglenke.hvis_du_vil_jobbe": "Hvis du vil jobbe",
@@ -165,7 +164,7 @@
     "om_foreldrepenger.tittel": "All informasjon om foreldrepenger",
     "om_foreldrepenger.for_å_få.tittel": "Hvem kan få foreldrepenger?",
     
-    "om_foreldrepenger.hvor_lenge.tittel": "Hvor lenge kan jeg få foreldrepenger?",
+    "om_foreldrepenger.hvor_lenge.tittel": "Hvor lenge kan du få foreldrepenger?",
     "om_foreldrepenger.hvor_lenge.eksempel": "Eksempel med fast inntekt på\n22 000 kroner per måned",
     "om_foreldrepenger.hvor_lenge.hurtiglenker": "Men hva hvis ...",
     "om_foreldrepenger.hvor_lenge.kalkulatorlenke": "Beregn foreldrepengene dine",
@@ -195,11 +194,10 @@
     "om_foreldrepenger.hvor_lenge.forslag.lukke": "Lukk informasjon",
 
     "om_foreldrepenger.når_kan_du_søke.tittel": "Når kan du søke?",
-    "om_foreldrepenger.når_kan_du_søke.hvis_du_skal_utsette": "Hvis du skal utsette",
-    "om_foreldrepenger.når_kan_du_søke.utsette_fedrekvote": "Fedrekvoten eller medmorkvoten",
+    "om_foreldrepenger.når_kan_du_søke.hvis_du_skal_utsette_fordi": "Hvis du skal utsette fordi:",
+    "om_foreldrepenger.når_kan_du_søke.utsette_sykdom": "En av dere blir syke",
     "om_foreldrepenger.når_kan_du_søke.utsette_jobbe": "Du skal jobbe",
     "om_foreldrepenger.når_kan_du_søke.utsette_ferie": "Du skal ha ferie",
-    "om_foreldrepenger.når_kan_du_søke.hvis_jeg_søker_for_sent": "Hva hvis jeg søker for sent?",
 
     "om_foreldrepenger.ferie.tittel": "Hvis du skal på ferie",
     "om_foreldrepenger.ferie.eksempel_label": "Eksempel på hvordan du kan forlenge foreldrepengeperioden din når du utsetter:",
@@ -245,7 +243,7 @@
     "om_foreldrepenger.adopsjon.ikke_rett": "Adopsjon som ikke gir rett til foreldrepenger",
     "om_foreldrepenger.adopsjon.tidlig_stebarnsadopsjon": "Stebarnsadopsjon",
 
-    "om_foreldrepenger.beregning.tittel": "Hva kan jeg få?",
+    "om_foreldrepenger.beregning.tittel": "Hva kan du få?",
     "om_foreldrepenger.beregning.arbeidstaker":"Arbeidstaker",
     "om_foreldrepenger.beregning.arbeidstaker.inntekter_som_tas_med": "Inntekter som tas med i beregningen",
     "om_foreldrepenger.beregning.arbeidstaker.inntekter_som_ikke_tas_med": "Inntekter som ikke tas med",
@@ -261,10 +259,10 @@
     "om_engangsstønad.hva_kan_du_få.tittel": "Hva kan du få?",
     "om_engangsstønad.utbetaling.tittel": "Når blir pengene utbetalt?",
     "om_engangsstønad.til_far.tittel": "Engangsstønad til far eller medmor",
-    "om_engangsstønad.når_kan_jeg_søke.tittel": "Når kan jeg søke?",
+    "om_engangsstønad.når_kan_du_søke.tittel": "Når kan du søke?",
 
     "veiviser.panelMedIllustrasjon.tittel": "Foreldrepenger eller engangsstønad?",
-    "veiviser.sidebanner.tittel": "Hva kan jeg få?",
+    "veiviser.sidebanner.tittel": "Hva kan du få?",
     "veiviser.ingress.knapper": "Jeg er",
     "veiviser.resultat.knapp.foreldrepenger": "Søk om foreldrepenger",
     "veiviser.resultat.knapp.engangsstønad": "Søk om engangsstønad",
