@@ -18,9 +18,10 @@ const icon = require('../../../assets/icons/rakett.svg').default;
 interface Props {
     sections: ForeldrepengerSection[];
     lang: Language;
+    sokUrl?: boolean;
 }
 
-const Innholdsfortegnelse: React.StatelessComponent<Props> = ({ lang, sections }) => {
+const Innholdsfortegnelse: React.StatelessComponent<Props> = ({ lang, sections, sokUrl }) => {
     return (
         <Panel className={classnames(cls.className)}>
             <div className={cls.element('icon')}>
@@ -28,7 +29,7 @@ const Innholdsfortegnelse: React.StatelessComponent<Props> = ({ lang, sections }
             </div>
             <Seksjonslenker sections={sections} />
             <WithLink
-                url={Environment.SOK_FORELDREPENGER_URL}
+                url={sokUrl ? Environment.SOK_ENGANGSSTONAD_URL : Environment.SOK_FORELDREPENGER_URL}
                 noStyling={true}
                 urlIsExternal={true}>
                 <Hovedknapp className={cls.element('søkNå')}>

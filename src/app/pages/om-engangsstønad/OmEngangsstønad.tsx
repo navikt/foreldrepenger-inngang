@@ -12,6 +12,10 @@ import HeaderInformasjon from '../../components/header-informasjon/HeaderInforma
 import Hjelp from '../../components/hjelpe-seksjon/HjelpeSeksjon';
 import '../infosider.less';
 import './omEngangsstønad.less';
+import classnames from 'classnames';
+import MediaQuery from 'react-responsive';
+import Innholdsfortegnelse from '../om-foreldrepenger/innholdsfortegnelse/Innholdsfortegnelse';
+import Mobilmeny from '../om-foreldrepenger/mobilmeny/Mobilmeny';
 
 const infosiderCls = BEMHelper('infosider');
 const cls = BEMHelper('omEngangsstønad');
@@ -30,18 +34,43 @@ const hvaErEngangsstønadContent = 'om-engangsstønad/hva-er-engangsstønad/hva-
 const engangssumContent = 'om-engangsstønad/hva-er-engangsstønad/krav1';
 const utbetalingShortContent = 'om-engangsstønad/hva-er-engangsstønad/krav2';
 
+export type EngangsstonadSection =
+    | 'hvem-kan-fa-engangsstonad'
+    | 'hva-kan-du-fa'
+    | 'nar-blir-pengene-utbetalt'
+    | 'engangsstonad-til-far-eller-medmor';
+
+const sections: EngangsstonadSection[] = [
+    'hvem-kan-fa-engangsstonad',
+    'hva-kan-du-fa',
+    'nar-blir-pengene-utbetalt',
+    'engangsstonad-til-far-eller-medmor'
+];
+
 const OmEngangsstonad: React.StatelessComponent<Props & IntlProps> = ({ location, lang }) => {
     return (
         <div className={infosiderCls.className}>
             <OmEngangsstønadHeader />
             <Sidebanner text={getTranslation('om_engangsstønad.tittel', lang)} />
-            <div className={infosiderCls.element('container')}>
+            <div
+                className={classnames(
+                    infosiderCls.element('container'),
+                    infosiderCls.modifier('withSidebar')
+                )}>
+                <MediaQuery minWidth={1072}>
+                    <aside className={infosiderCls.element('sidebar')}>
+                        <Innholdsfortegnelse sections={sections} sokUrl={true} />
+                    </aside>
+                </MediaQuery>
+                <MediaQuery maxWidth={1071}>
+                    <Mobilmeny sections={sections} />
+                </MediaQuery>
                 <article className={infosiderCls.element('article')}>
                     <Breadcrumbs path={location.pathname} />
                     <HvaErEngangsstønad />
                     <HvaKanDuFå />
                     <NårBlirPengeneUtbetalt />
-                    <EngangsstønadTilFar id="far-eller-medmor" />
+                    <EngangsstønadTilFar id="engangsstonad-til-far-eller-medmor" />
                     <Hjelp />
                 </article>
             </div>
@@ -61,6 +90,7 @@ const OmEngangsstønadHeader = () => {
 
 const HvaErEngangsstønadW: React.StatelessComponent<IntlProps> = ({ lang }) => (
     <PanelMedIllustrasjon
+        id={'hvem-kan-fa-engangsstonad'}
         title={getTranslation('om_engangsstønad.hva_er.tittel', lang)}
         svg={engangsstønadSvg}>
         <StrukturertTekst tekst={getContent(hvaErEngangsstønadContent, lang)} />
@@ -79,6 +109,7 @@ const HvaErEngangsstønadW: React.StatelessComponent<IntlProps> = ({ lang }) => 
 
 const HvaKanDuFåW: React.StatelessComponent<IntlProps> = ({ lang }) => (
     <PanelMedIllustrasjon
+        id={'hva-kan-du-fa'}
         title={getTranslation('om_engangsstønad.hva_kan_du_få.tittel', lang)}
         svg={arbeidstakerSvg}>
         <StrukturertTekst
@@ -92,6 +123,7 @@ const HvaKanDuFåW: React.StatelessComponent<IntlProps> = ({ lang }) => (
 
 const NårBlirPengeneUtbetaltW: React.StatelessComponent<IntlProps> = ({ lang }) => (
     <PanelMedIllustrasjon
+        id={'nar-blir-pengene-utbetalt'}
         title={getTranslation('om_engangsstønad.utbetaling.tittel', lang)}
         svg={utbetalingSvg}>
         <StrukturertTekst tekst={getContent('om-engangsstønad/utbetaling', lang)} />
