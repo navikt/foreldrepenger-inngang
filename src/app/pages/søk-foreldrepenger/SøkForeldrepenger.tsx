@@ -54,7 +54,7 @@ class SøkForeldrepenger extends Component<Props & IntlProps> {
                         <PanelMedTittel title={getTranslation('foreldrepenger', this.props.lang)}>
                             <StrukturertTekst
                                 tekst={getContent(
-                                    'hva-vil-du-søke-om/søk-foreldrepenger',
+                                    'hva-søker-du/søk-foreldrepenger',
                                     this.props.lang
                                 )}
                             />

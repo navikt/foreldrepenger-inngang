@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './select.less';
 import BEMHelper from '../../../utils/bem';
 import { Innholdsfane } from '../fane/Fane';
-import { getTranslation } from '../../../intl/intl';
+import { getTranslation, withIntl, Language } from '../../../intl/intl';
 import { Panel } from 'nav-frontend-paneler';
 import TypografiBase from 'nav-frontend-typografi';
 import Chevron from 'nav-frontend-chevron';
@@ -15,6 +15,7 @@ interface SelectProps {
     selected: Innholdsfane;
     onChoiceSelect: (choice: number) => void;
     choices: Innholdsfane[];
+    lang: Language;
 }
 
 interface SelectState {
@@ -104,7 +105,7 @@ class Select extends React.Component<SelectProps, SelectState> {
                 <div className={cls.element('selected')}>
                     <div className={cls.element('selectedIcon')}>{this.props.selected.icon}</div>
                     <TypografiBase type="normaltekst">
-                        {getTranslation(this.props.selected.label)}
+                        {getTranslation(this.props.selected.label, this.props.lang)}
                     </TypografiBase>
                 </div>
                 <Chevron type={this.state.open ? 'opp' : 'ned'} />
@@ -129,7 +130,7 @@ class Select extends React.Component<SelectProps, SelectState> {
                                 })}
                                 tabIndex={0}>
                                 <TypografiBase type="normaltekst">
-                                    {getTranslation(choice.label)}
+                                    {getTranslation(choice.label, this.props.lang)}
                                 </TypografiBase>
                             </Panel>
                         ))}
@@ -140,4 +141,4 @@ class Select extends React.Component<SelectProps, SelectState> {
     );
 }
 
-export default Select;
+export default withIntl(Select);

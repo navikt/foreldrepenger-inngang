@@ -6,12 +6,12 @@ import { Language, withIntl, getTranslation } from '../../../../intl/intl';
 import { getContent } from '../../../../utils/getContent';
 import Foreldrepar from 'app/components/foreldrepar/Foreldrepar';
 
-const farOgFarContent = 'all-informasjon/hvor-lenge/far-og-far/far-og-far';
-const kalkulatorbeskrivelse = 'all-informasjon/hvor-lenge/kalkulatorbeskrivelse';
+const farOgFarContent = 'om-foreldrepenger/hvor-lenge/far-og-far/far-og-far';
+const kalkulatorbeskrivelse = 'om-foreldrepenger/hvor-lenge/kalkulatorbeskrivelse';
 
-const far1 = 'all-informasjon/hvor-lenge/far-og-far/far-en';
-const far2 = 'all-informasjon/hvor-lenge/far-og-far/far-to';
-const fellesPerioden = 'all-informasjon/hvor-lenge/far-og-far/far-fellesperioden';
+const far1 = 'om-foreldrepenger/hvor-lenge/far-og-far/far-en';
+const far2 = 'om-foreldrepenger/hvor-lenge/far-og-far/far-to';
+const fellesPerioden = 'om-foreldrepenger/hvor-lenge/far-og-far/far-fellesperioden';
 
 const getInformasjonsfaner = (lang: Language) => [
     {

@@ -6,7 +6,7 @@ import { getContent } from '../../../../utils/getContent';
 
 const cls = BEMHelper('selvstendigInnhold');
 
-const beregningTekstPath = 'all-informasjon/beregning/selvstendig';
+const beregningTekstPath = 'om-foreldrepenger/beregning/selvstendig';
 
 const Selvstendig: React.StatelessComponent<IntlProps> = ({ lang }) => {
     return (

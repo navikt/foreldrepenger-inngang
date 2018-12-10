@@ -30,7 +30,7 @@ class SøkForeldrepenger extends Component<Props & IntlProps> {
                         title={getTranslation('svangerskapspenger', this.props.lang)}>
                         <StrukturertTekst
                             tekst={getContent(
-                                'hva-vil-du-søke-om/søk-svangerskapspenger',
+                                'hva-søker-du/søk-svangerskapspenger',
                                 this.props.lang
                             )}
                         />

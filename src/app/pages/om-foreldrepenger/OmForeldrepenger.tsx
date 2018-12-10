@@ -4,7 +4,7 @@ import BEMHelper from '../../utils/bem';
 import { getTranslation, IntlProps, withIntl } from '../../intl/intl';
 import HvorLenge from './hvor-lenge/HvorLenge';
 import NyeRegler from './nye-regler/NyeRegler';
-import ForÅFåForeldrepenger from './for-å-få-foreldrepenger/ForÅFåForeldrepenger';
+import HvemKanFåForeldrepenger from './hvem-kan-få/HvemKanFåForeldrepenger';
 import JegVilJobbe from './jeg-vil-jobbe/JegVilJobbe';
 import Sykdom from './sykdom/Sykdom';
 import Ferie from './ferie/Ferie';
@@ -73,7 +73,7 @@ const OmForeldrepenger: React.StatelessComponent<Props & IntlProps> = ({ locatio
                 </MediaQuery>
                 <article className={cls.element('article')}>
                     <Breadcrumbs path={location.pathname} />
-                    <ForÅFåForeldrepenger id={sections[0]} />
+                    <HvemKanFåForeldrepenger id={sections[0]} />
                     <HvorLenge id={sections[1]} />
                     <NyeRegler />
                     <Beregning id={sections[2]} />

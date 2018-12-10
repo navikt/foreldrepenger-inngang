@@ -6,7 +6,7 @@ import Prosentvalg from './Prosentvalg';
 import './dinLønn.less';
 import { getTranslation, withIntl, IntlProps } from '../../../../../intl/intl';
 import TypografiBase from 'nav-frontend-typografi';
-// import { WithLink } from '../../../../../utils/withLink';
+// import WithLink from '../../../../../utils/withLink';
 
 const cls = BEMHelper('dinLønn');
 

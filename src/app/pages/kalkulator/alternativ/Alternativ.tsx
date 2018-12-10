@@ -32,17 +32,18 @@ const Alternativ = ({
     return (
         <output className={cls.className}>
             <TypografiBase type="element">{`${percentage} ${getTranslation(
-                'kalkulator.resultat.undertittel'
+                'kalkulator.resultat.undertittel',
+                lang
             )}`}</TypografiBase>
 
             <div className={cls.element('divider')} />
             <TypografiBase type="normaltekst">
-                {getTranslation('kalkulator.resultat.gjennomsnitt_per_måned')}
+                {getTranslation('kalkulator.resultat.gjennomsnitt_per_måned', lang)}
             </TypografiBase>
 
             <TypografiBase type="undertittel">{`${monthlyPaymentFormatted} kr`}</TypografiBase>
             <TypografiBase className={cls.element('topMargin')} type="normaltekst">
-                {getTranslation('kalkulator.resultat.dagsats')}
+                {getTranslation('kalkulator.resultat.dagsats', lang)}
             </TypografiBase>
             <TypografiBase type="undertittel">{`${dailyPaymentFormatted} kr`}</TypografiBase>
             <CustomSVGFromSprite className={cls.element('resultatIcon')} iconRef={icon} size={72} />

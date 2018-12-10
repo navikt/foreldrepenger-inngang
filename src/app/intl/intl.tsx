@@ -15,7 +15,7 @@ const translations = {
     nn: nnNo
 };
 
-export const getTranslation = (id: string, lang?: Language, options?: object) => {
+export const getTranslation = (id: string, lang: Language, options?: object) => {
     const language = lang && lang in translations ? lang : 'nb';
     const translated = translations[language][id];
 
