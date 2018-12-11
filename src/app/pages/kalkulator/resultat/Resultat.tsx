@@ -59,8 +59,8 @@ const Resultat = ({ results, fårUtbetaling, lang }: Props) => {
         forLavLønnvariabler = {
             INNTEKTSSITUASJON: inntektssituasjon,
             INNTEKTSSITUASJON_VERB: fårUtbetaling
-                ? getTranslation('kalkulator.får')
-                : getTranslation('kalkulator.tjener'),
+                ? getTranslation('kalkulator.får', lang)
+                : getTranslation('kalkulator.tjener', lang),
             ÅRLIG_SNITTLØNN: localizeNumber(snittlønnPerMåned * 12),
             EN_HALV_G: localizeNumber(getEnHalvG())
         };

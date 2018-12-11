@@ -16,7 +16,7 @@
         "children": [
             {
                 "type": "span",
-                "text": "Hvis du er far eller medmor til barnet, kan du i noen tilfeller få engangsstønad. Det kan gjelde:"
+                "text": "Hvis du er far eller medmor til barnet, kan du i noen tilfeller få engangsstønad. Det kan gjelde"
             }
         ]
     },
@@ -40,7 +40,7 @@
         "children": [
             {
                 "type": "span",
-                "text": "om du overtar foreldreansvar eller dersom den andre foreldren dør"
+                "text": "om du overtar foreldreansvar eller dersom den andre forelderen dør"
             }
         ]
     },
@@ -74,11 +74,29 @@
         "children": [
             {
                 "type": "span",
-                "text": "Skal du søke som far, medmor eller ved adopsjon, må du "
+                "text": "Klikk her for å søke på papir",
+                "marks": ["modal_link_to", "external_link"]
+            }
+        ],
+        "markDefs": [
+            {
+                "key": "modal_link_to",
+                "type": "link",
+                "href": "https://www.nav.no/no/Person/Skjemaer-for-privatpersoner/Skjemaer/Familie/foreldrepenger-og-engangsstonad/Foreldrepenger+og+engangsst%C3%B8nad?method=mail&veiledertype=privatperson"
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Den elektroniske søknaden støtter ikke adopsjon. "
             },
             {
                 "type": "span",
-                "text": "søke på papir.",
+                "text": "Klikk her for å søke på papir",
                 "marks": ["modal_link_to", "external_link"]
             }
         ],

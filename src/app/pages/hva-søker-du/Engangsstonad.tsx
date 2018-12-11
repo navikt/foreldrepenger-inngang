@@ -11,7 +11,7 @@ import PopUpModal from './modal/PopUpModal';
 const Engangsstonad = ({ parentCls, lang }: { parentCls: any; lang: Language }) => {
     return (
         <PanelMedTittel title={getTranslation('engangsstønad', lang)}>
-            <StrukturertTekst tekst={getContent('hva-vil-du-søke-om/engangsstønad', lang)} />
+            <StrukturertTekst tekst={getContent('hva-søker-du/engangsstønad', lang)} />
             <PopUpModal modalIsOpen={false} />
             <ButtonPanel
                 externalLink={true}

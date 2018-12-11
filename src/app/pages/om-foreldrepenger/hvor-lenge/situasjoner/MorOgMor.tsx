@@ -5,11 +5,11 @@ import Foreldrepar from '../../../../components/foreldrepar/Foreldrepar';
 import { Language, withIntl, getTranslation } from '../../../../intl/intl';
 import { getContent } from '../../../../utils/getContent';
 
-const content = 'all-informasjon/hvor-lenge/mor-og-mor/mor-og-mor';
-const kalkulatorbeskrivelse = 'all-informasjon/hvor-lenge/kalkulatorbeskrivelse';
-const morsDel = 'all-informasjon/hvor-lenge/mor-og-mor/mors-del';
-const medmorsDel = 'all-informasjon/hvor-lenge/mor-og-mor/medmors-del';
-const fellesDel = 'all-informasjon/hvor-lenge/mor-og-mor/felles-del';
+const content = 'om-foreldrepenger/hvor-lenge/mor-og-mor/mor-og-mor';
+const kalkulatorbeskrivelse = 'om-foreldrepenger/hvor-lenge/kalkulatorbeskrivelse';
+const morsDel = 'om-foreldrepenger/hvor-lenge/mor-og-mor/mors-del';
+const medmorsDel = 'om-foreldrepenger/hvor-lenge/mor-og-mor/medmors-del';
+const fellesDel = 'om-foreldrepenger/hvor-lenge/mor-og-mor/felles-del';
 
 const getInformasjonsfaner = (lang: Language) => [
     {

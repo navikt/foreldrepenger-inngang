@@ -64,9 +64,7 @@ const DokumentasjonHeader = () => {
     return (
         <HeaderInformasjon
             title="Dokumentasjon - www.nav.no"
-            siteDescription="Les om dokumentasjon som må legges ved søknaden."
-            propTitle="Dokumentasjon - www.nav.no"
-            propDescription="Les om dokumentasjon som må legges ved søknaden."
+            description="Les om dokumentasjon som må legges ved søknaden."
             siteUrl="https://familie.nav.no/dokumentasjon"
         />
     );

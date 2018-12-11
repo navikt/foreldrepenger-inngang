@@ -4,9 +4,9 @@ import StrukturertTekst from '../../../../components/strukturert-tekst/Strukture
 import { Language, withIntl, getTranslation } from '../../../../intl/intl';
 import { getContent } from '../../../../utils/getContent';
 
-const content = 'all-informasjon/hvor-lenge/bare-mor-har-rett/bare-mor-har-rett';
-const kalkulatorbeskrivelse = 'all-informasjon/hvor-lenge/kalkulatorbeskrivelse';
-const morsDel = 'all-informasjon/hvor-lenge/bare-mor-har-rett/mors-del';
+const content = 'om-foreldrepenger/hvor-lenge/bare-mor-har-rett/bare-mor-har-rett';
+const kalkulatorbeskrivelse = 'om-foreldrepenger/hvor-lenge/kalkulatorbeskrivelse';
+const morsDel = 'om-foreldrepenger/hvor-lenge/bare-mor-har-rett/mors-del';
 
 const getInformasjonsfaner = (lang: Language) => [
     {

@@ -18,12 +18,12 @@ const sykdomSvg = require('../../../assets/ark/ark-sykdom.svg').default;
 const cls = BEMHelper('sykdom');
 const barn = require('../../../assets/barn/barn1.svg').default;
 
-const barnetErInnlagt = 'all-informasjon/sykdom/barnet-er-innlagt/barnet-er-innlagt';
-const barnetErInnlagtUtsette = 'all-informasjon/sykdom/barnet-er-innlagt/utsette';
+const barnetErInnlagt = 'om-foreldrepenger/sykdom/barnet-er-innlagt/barnet-er-innlagt';
+const barnetErInnlagtUtsette = 'om-foreldrepenger/sykdom/barnet-er-innlagt/utsette';
 
-const syke = 'all-informasjon/sykdom/en-av-foreldrene-er-syke/en-av-foreldrene-er-syke';
-const sykeUtsette = 'all-informasjon/sykdom/en-av-foreldrene-er-syke/utsette';
-const sykeOverta = 'all-informasjon/sykdom/en-av-foreldrene-er-syke/overta';
+const syke = 'om-foreldrepenger/sykdom/en-av-foreldrene-er-syke/en-av-foreldrene-er-syke';
+const sykeUtsette = 'om-foreldrepenger/sykdom/en-av-foreldrene-er-syke/utsette';
+const sykeOverta = 'om-foreldrepenger/sykdom/en-av-foreldrene-er-syke/overta';
 
 const BarnetErInnlagtWithoutIntl: React.StatelessComponent<IntlProps> = ({ lang }) => (
     <div>
@@ -39,7 +39,7 @@ const EnAvForeldreneErSykeWithoutIntl: React.StatelessComponent<IntlProps> = ({ 
         <StrukturertTekst tekst={getContent(syke, lang)} />
         <div className={cls.element('eksempeltekst')}>
             <TypografiBase type="normaltekst">
-                {getTranslation('om_foreldrepenger.sykdom.innlagt.eksempeltittel')}
+                {getTranslation('om_foreldrepenger.sykdom.innlagt.eksempeltittel', lang)}
             </TypografiBase>
             <MediaQuery minWidth={576}>
                 <Illustrasjon />
