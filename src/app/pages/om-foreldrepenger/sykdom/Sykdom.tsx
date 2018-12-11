@@ -10,7 +10,7 @@ import LesMer from '../../../components/les-mer/LesMer';
 import { getContent } from '../../../utils/getContent';
 import Illustrasjon from './Illustrasjon';
 import IllustrasjonMobil from './IllustrasjonMobil';
-import TypografiBase from 'nav-frontend-typografi';
+import { Normaltekst } from 'nav-frontend-typografi';
 import './sykdom.less';
 import MediaQuery from 'react-responsive';
 
@@ -18,16 +18,35 @@ const sykdomSvg = require('../../../assets/ark/ark-sykdom.svg').default;
 const cls = BEMHelper('sykdom');
 const barn = require('../../../assets/barn/barn1.svg').default;
 
-const barnetErInnlagt = 'all-informasjon/sykdom/barnet-er-innlagt/barnet-er-innlagt';
-const barnetErInnlagtUtsette = 'all-informasjon/sykdom/barnet-er-innlagt/utsette';
+const barnetErInnlagt = 'om-foreldrepenger/sykdom/barnet-er-innlagt/barnet-er-innlagt';
+const barnetErInnlagtUtsette = 'om-foreldrepenger/sykdom/barnet-er-innlagt/utsette';
 
-const syke = 'all-informasjon/sykdom/en-av-foreldrene-er-syke/en-av-foreldrene-er-syke';
-const sykeUtsette = 'all-informasjon/sykdom/en-av-foreldrene-er-syke/utsette';
-const sykeOverta = 'all-informasjon/sykdom/en-av-foreldrene-er-syke/overta';
+const syke = 'om-foreldrepenger/sykdom/en-av-foreldrene-er-syke/en-av-foreldrene-er-syke';
+const sykeUtsette = 'om-foreldrepenger/sykdom/en-av-foreldrene-er-syke/utsette';
+const sykeOverta = 'om-foreldrepenger/sykdom/en-av-foreldrene-er-syke/overta';
 
 const BarnetErInnlagtWithoutIntl: React.StatelessComponent<IntlProps> = ({ lang }) => (
     <div>
         <StrukturertTekst tekst={getContent(barnetErInnlagt, lang)} />
+        <div className={cls.element('eksempeltekst')}>
+            <Normaltekst>
+                {getTranslation('om_foreldrepenger.sykdom.innlagt.eksempeltittel', lang)}
+            </Normaltekst>
+            <MediaQuery minWidth={576}>
+                <Illustrasjon
+                    grunnForForlengelse={getTranslation(
+                        'om_foreldrepenger.sykdom.barnet_er_innlagt', lang
+                    )}
+                />
+            </MediaQuery>
+            <MediaQuery maxWidth={575}>
+                <IllustrasjonMobil
+                    grunnForForlengelse={getTranslation(
+                        'om_foreldrepenger.sykdom.barnet_er_innlagt', lang
+                    )}
+                />
+            </MediaQuery>
+        </div>
         <LesMer intro={getTranslation('om_foreldrepenger.sykdom.innlagt.utsette', lang)}>
             <StrukturertTekst tekst={getContent(barnetErInnlagtUtsette, lang)} />
         </LesMer>
@@ -38,14 +57,18 @@ const EnAvForeldreneErSykeWithoutIntl: React.StatelessComponent<IntlProps> = ({ 
     <div>
         <StrukturertTekst tekst={getContent(syke, lang)} />
         <div className={cls.element('eksempeltekst')}>
-            <TypografiBase type="normaltekst">
-                {getTranslation('om_foreldrepenger.sykdom.innlagt.eksempeltittel')}
-            </TypografiBase>
+            <Normaltekst>
+                {getTranslation('om_foreldrepenger.sykdom.sykmeldt.eksempeltittel', lang)}
+            </Normaltekst>
             <MediaQuery minWidth={576}>
-                <Illustrasjon />
+                <Illustrasjon
+                    grunnForForlengelse={getTranslation('om_foreldrepenger.sykdom.sykmeldt', lang)}
+                />
             </MediaQuery>
             <MediaQuery maxWidth={575}>
-                <IllustrasjonMobil />
+                <IllustrasjonMobil
+                    grunnForForlengelse={getTranslation('om_foreldrepenger.sykdom.sykmeldt', lang)}
+                />
             </MediaQuery>
         </div>
         <LesMer intro={getTranslation('om_foreldrepenger.sykdom.innlagt.utsette', lang)}>

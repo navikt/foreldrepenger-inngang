@@ -3,31 +3,30 @@ import Helmet from 'react-helmet';
 
 const HeaderInformasjon = ({
     title,
-    siteDescription,
-    propTitle,
-    propDescription,
+    description,
     imageUrl,
     siteUrl,
     imageLargeUrl
 }: {
-    title?: string;
-    siteDescription: string;
-    propTitle: string;
-    propDescription: string;
+    title: string;
+    description: string;
+
     imageUrl?: string;
     siteUrl: string;
     imageLargeUrl?: string;
 }) => {
+    const pageTitle = `${title} - www.nav.no`;
+
     return (
         <Helmet>
-            {title && <title>{title}</title>}
+            <title>{pageTitle}</title>
             <meta charSet="utf-8" />
-            <meta name="description" content={siteDescription} />
-            <meta property="og:title" content={propTitle} />
-            <meta property="og:description" content={propDescription} />
-            <meta property="og:image" content={imageUrl} />
-            <meta property="og:url" content={siteUrl} />
-            <meta name="twitter:card" content={imageLargeUrl} />
+            <meta name="description" content={description} />
+            <meta property="og:title" content={title} />
+            <meta property="og:description" content={description} />
+            {imageUrl && <meta property="og:image" content={imageUrl} />}
+            {siteUrl && <meta property="og:url" content={siteUrl} />}
+            {imageLargeUrl && <meta name="twitter:card" content={imageLargeUrl} />}
         </Helmet>
     );
 };

@@ -14,10 +14,10 @@ import MediaQuery from 'react-responsive';
 const cls = BEMHelper('ferie');
 
 const ferieSvg = require('../../../assets/ark/ark-ferie.svg').default;
-const content = 'all-informasjon/ferie/ferie';
-const rettTilUtsettelseContent = 'all-informasjon/ferie/rett-til-utsettelse';
-const fåUtsettelseContent = 'all-informasjon/ferie/få-utsettelse';
-const feriepenger = 'all-informasjon/ferie/feriepenger';
+const content = 'om-foreldrepenger/ferie/ferie';
+const rettTilUtsettelseContent = 'om-foreldrepenger/ferie/rett-til-utsettelse';
+const fåUtsettelseContent = 'om-foreldrepenger/ferie/få-utsettelse';
+const feriepenger = 'om-foreldrepenger/ferie/feriepenger';
 
 interface Props {
     id: string;
@@ -32,7 +32,7 @@ const Ferie: React.StatelessComponent<Props & IntlProps> = ({ id, lang }) => {
             <StrukturertTekst tekst={getContent(content, lang)} />
             <div className={cls.element('eksempel')}>
                 <TypografiBase type="normaltekst">
-                    {getTranslation('om_foreldrepenger.ferie.eksempel_label')}
+                    {getTranslation('om_foreldrepenger.ferie.eksempel_label', lang)}
                 </TypografiBase>
                 <MediaQuery minWidth={576}>
                     <Ferieforskyvning />

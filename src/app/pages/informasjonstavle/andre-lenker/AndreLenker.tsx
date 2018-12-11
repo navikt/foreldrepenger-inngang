@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { WithLink } from '../../../utils/withLink';
+import WithLink from '../../../components/with-link/WithLink';
 import BEMHelper from '../../../utils/bem';
 import TypografiBase from 'nav-frontend-typografi';
 import { getTranslation, IntlProps, withIntl } from '../../../intl/intl';
@@ -8,13 +8,17 @@ import Environment from 'app/Environment';
 
 const links = [
     {
+        label: 'informasjonstavle.andre_lenker.dokumentasjon',
+        internal: true,
+        href: '/dokumentasjon'
+    },
+    {
         label: 'informasjonstavle.andre_lenker.ettersende_vedlegg_til_søknad',
         href: Environment.DINE_FORELDREPENGER_URL
     },
     {
-        label: 'informasjonstavle.andre_lenker.hvis_du_skal_på_ferie',
-        internal: true,
-        href: '/om-foreldrepenger#hvis-du-skal-pa-ferie'
+        label: 'informasjonstavle.andre_lenker.informasjon_om_kontantstøtte',
+        href: 'https://www.nav.no/no/Person/Familie/Barnetrygd+og+kontantstotte/kontantst%C3%B8tte'
     },
     {
         label: 'informasjonstavle.andre_lenker.hvis_du_vil_jobbe',
@@ -25,11 +29,6 @@ const links = [
         label: 'informasjonstavle.andre_lenker.hvis_en_av_dere_blir_syke',
         internal: true,
         href: '/om-foreldrepenger#hvis-en-av-dere-blir-syke'
-    },
-    {
-        label: 'informasjonstavle.andre_lenker.husk_å_søke_i_rett_tid',
-        internal: true,
-        href: '/viktige-frister'
     },
     {
         label: 'informasjonstavle.andre_lenker.meld_fra_om_endringer',

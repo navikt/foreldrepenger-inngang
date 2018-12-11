@@ -6,11 +6,11 @@ import { Language, withIntl, getTranslation } from '../../../../intl/intl';
 import { getContent } from '../../../../utils/getContent';
 import Foreldrepar from 'app/components/foreldrepar/Foreldrepar';
 
-const farOgMorContent = 'all-informasjon/hvor-lenge/far-og-mor/far-og-mor';
-const kalkulatorbeskrivelse = 'all-informasjon/hvor-lenge/kalkulatorbeskrivelse';
-const morsdel = 'all-informasjon/hvor-lenge/far-og-mor/mors-del';
-const fellesdel = 'all-informasjon/hvor-lenge/far-og-mor/felles-del';
-const farsdel = 'all-informasjon/hvor-lenge/far-og-mor/fars-del';
+const farOgMorContent = 'om-foreldrepenger/hvor-lenge/far-og-mor/far-og-mor';
+const kalkulatorbeskrivelse = 'om-foreldrepenger/hvor-lenge/kalkulatorbeskrivelse';
+const morsdel = 'om-foreldrepenger/hvor-lenge/far-og-mor/mors-del';
+const fellesdel = 'om-foreldrepenger/hvor-lenge/far-og-mor/felles-del';
+const farsdel = 'om-foreldrepenger/hvor-lenge/far-og-mor/fars-del';
 
 const getInformasjonsfaner = (lang: Language) => [
     {

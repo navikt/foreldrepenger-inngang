@@ -1,0 +1,77 @@
+[
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "listItem": "bullet",
+        "level": 1,
+        "children": [
+            { "type": "span", "text": "I ", "marks": [] },
+            {
+                "type": "span",
+                "text": "foreldrepengesøknaden",
+                "marks": ["bold"]
+            },
+            { "type": "span", "text": " oppgir du at du skal ", "marks": [] },
+            { "type": "span", "text": "utsette", "marks": ["bold"] },
+            {
+                "type": "span",
+                "text": " perioden fordi du skal jobbe eller at du skal jobbe delvis.",
+                "marks": []
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "listItem": "bullet",
+        "level": 1,
+        "children": [
+            {
+                "type": "span",
+                "text": "Hvis du ",
+                "marks": []
+            },
+            {
+                "type": "span",
+                "text": "allerede har søkt",
+                "marks": ["bold"]
+            },
+            {
+                "type": "span",
+                "text": ", logger du på ",
+                "marks": []
+            },
+            {
+                "type": "span",
+                "text": "Dine foreldrepenger",
+                "marks": ["url_dine_foreldrepenger", "external_link"]
+            },
+            {
+                "type": "span",
+                "text": " og sender en endringssøknad.",
+                "marks": []
+            }
+        ],
+        "markDefs": [
+            {
+                "key": "url_dine_foreldrepenger",
+                "type": "link",
+                "href": "https://foreldrepenger.nav.no/"
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            { "type": "span", "text": "Søkefrist", "marks": ["bold"] },
+            { "type": "span", "text": ": Du må søke ", "marks": [] },
+            { "type": "span", "text": "før", "marks": ["bold"] },
+            {
+                "type": "span",
+                "text": " du begynner å jobbe.",
+                "marks": []
+            }
+        ]
+    }
+]

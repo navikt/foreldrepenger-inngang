@@ -114,7 +114,7 @@ class HvorLenge extends React.Component<Props, State> {
                 svg={infoSvg}>
                 <div className={cls.className}>
                     <StrukturertTekst
-                        tekst={getContent('all-informasjon/hvor-lenge/hvor-lenge', lang)}
+                        tekst={getContent('om-foreldrepenger/hvor-lenge/hvor-lenge', lang)}
                     />
                     <Innholdsfaner
                         tabs={getTabs(this.onUndersituasjonSelected)}
@@ -131,7 +131,7 @@ class HvorLenge extends React.Component<Props, State> {
                             lang
                         )}>
                         <StrukturertTekst
-                            tekst={getContent('all-informasjon/hvor-lenge/forslag-fra-bld', lang)}
+                            tekst={getContent('om-foreldrepenger/hvor-lenge/forslag-fra-bld', lang)}
                         />
                     </UtvidetInformasjon>
                 </div>

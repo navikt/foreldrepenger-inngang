@@ -54,7 +54,7 @@ class SøkForeldrepenger extends Component<Props & IntlProps> {
                         <PanelMedTittel title={getTranslation('foreldrepenger', this.props.lang)}>
                             <StrukturertTekst
                                 tekst={getContent(
-                                    'hva-vil-du-søke-om/søk-foreldrepenger',
+                                    'hva-søker-du/søk-foreldrepenger',
                                     this.props.lang
                                 )}
                             />
@@ -99,15 +99,9 @@ class SøkForeldrepenger extends Component<Props & IntlProps> {
 const SøkForeldrepengerHeader = () => {
     return (
         <HeaderInformasjon
-            title={'Foreldrepenger - www.nav.no'}
-            siteDescription={
-                'Søk om foreldrepenger, utsettelse eller endring av foreldrepengeperioden.'
-            }
-            propTitle={'nav.no foreldrepenger'}
-            propDescription={
-                'Søk om foreldrepenger, utsettelse eller endring av foreldrepengeperioden.'
-            }
-            siteUrl={'https://familie.nav.no/hva-soker-du/foreldrepenger'}
+            title="Foreldrepenger"
+            description="Søk om foreldrepenger, utsettelse eller endring av foreldrepengeperioden."
+            siteUrl="https://familie.nav.no/hva-soker-du/foreldrepenger"
         />
     );
 };

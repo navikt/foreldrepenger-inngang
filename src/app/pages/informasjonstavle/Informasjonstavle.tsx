@@ -54,11 +54,11 @@ const Bildelenker = ({ lang }: { lang: Language }) => {
         <nav className={cls.element('bildepaneler')}>
             <PanelMedBilde
                 svgName="veiviser"
-                title={getTranslation('informasjonstavle.hva_kan_jeg_få', lang)}
+                title={getTranslation('informasjonstavle.hva_kan_du_få', lang)}
                 urlIsExternal={false}
                 url="/veiviser">
                 <Tekstomrade>
-                    {getTranslation('informasjonstavle.hva_kan_jeg_få_ingress', lang)}
+                    {getTranslation('informasjonstavle.hva_kan_du_få_ingress', lang)}
                 </Tekstomrade>
             </PanelMedBilde>
 
@@ -88,15 +88,9 @@ const Bildelenker = ({ lang }: { lang: Language }) => {
 const InformasjonstavleHeader = () => {
     return (
         <HeaderInformasjon
-            title={'Foreldrepenger - www.nav.no'}
-            siteDescription={
-                'Foreldrepenger skal sikre deg inntekt når du ha foreldrepermisjon. Hvis du ikke hatt inntekt, kan du få en engangssum isteden.'
-            }
-            propTitle={'Foreldrepengesidene til nav.no'}
-            propDescription={
-                'Foreldrepenger skal sikre deg inntekt når du ha foreldrepermisjon. Hvis du ikke hatt inntekt, kan du få en engangssum isteden.'
-            }
-            siteUrl={'https://familie.nav.no'}
+            title="Foreldrepenger"
+            description="Foreldrepenger skal sikre deg inntekt når du ha foreldrepermisjon. Hvis du ikke hatt inntekt, kan du få en engangssum isteden."
+            siteUrl="https://familie.nav.no"
         />
     );
 };

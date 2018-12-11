@@ -3,7 +3,7 @@ import * as React from 'react';
 import HjelpetekstBase from 'nav-frontend-hjelpetekst';
 import TypografiBase from 'nav-frontend-typografi';
 import './userHelp.less';
-import { WithLink } from 'app/utils/withLink';
+import WithLink from 'app/components/with-link/WithLink';
 import BEMHelper from 'app/utils/bem';
 
 const cls = BEMHelper('userHelp');

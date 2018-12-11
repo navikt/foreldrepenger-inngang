@@ -1,0 +1,145 @@
+[
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Som far eller medmor kan du starte foreldrepengeperioden din fra ",
+                "marks": []
+            },
+            { "type": "span", "text": "uke syv", "marks": ["bold"] },
+            {
+                "type": "span",
+                "text": " etter fødselen. Adopterer dere, starter foreldrepengeperioden din fra ",
+                "marks": []
+            },
+            { "type": "span", "text": "omsorgsovertakelsen", "marks": ["bold"] },
+            { "type": "span", "text": ".", "marks": [] }
+        ],
+        "markDefs": []
+    },
+    {
+      "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Starter du senere, får du færre uker med foreldrepenger."
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Hvis det ikke passer å ta full permisjon fra jobben, kan du ta ut foreldrepengene dine i kombinasjon med delvis arbeid eller utsette fordi du jobber heltid.",
+                "marks": []
+            }
+        ],
+        "markDefs": []
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            { "type": "span", "text": "Hvis mor er ", "marks": [] },
+            { "type": "span", "text": "uføretrygdet", "marks": ["bold"] },
+            {
+                "type": "span",
+                "text": ", kan du ta ut inntil 15 uker med foreldrepenger før det stilles krav til at mor er i jobb, studerer eller i annen aktivitet.",
+                "marks": []
+            }
+        ],
+        "markDefs": []
+    },
+    {
+        "type": "avsnitt",
+        "style": "element",
+        "children": [
+            { "type": "span", "text": "Aktivitetskravet til mor", "marks": [] }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Både når du tar ut foreldrepenger eller utsetter, må mor enten",
+                "marks": []
+            }
+        ],
+        "markDefs": []
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "listItem": "bullet",
+        "level": 1,
+        "children": [{ "type": "span", "text": "være i arbeid", "marks": [] }]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "listItem": "bullet",
+        "level": 1,
+        "children": [
+            { "type": "span", "text": "ta utdanning på heltid", "marks": [] }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "listItem": "bullet",
+        "level": 1,
+        "children": [
+            {
+                "type": "span",
+                "text": "kombinere utdanning med arbeid som til sammen blir heltid",
+                "marks": []
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "listItem": "bullet",
+        "level": 1,
+        "children": [
+            {
+                "type": "span",
+                "text": "være helt avhengig av hjelp til å ta seg av barnet på grunn av sykdom",
+                "marks": []
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "listItem": "bullet",
+        "level": 1,
+        "children": [
+            {
+                "type": "span",
+                "text": "delta i kvalifiseringsprogrammet",
+                "marks": []
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "listItem": "bullet",
+        "level": 1,
+        "children": [
+            {
+                "type": "span",
+                "text": "delta på heltid i introduksjonsprogrammet etter kapittel 2 for nyankomne innvandrere",
+                "marks": []
+            }
+        ]
+    }
+]

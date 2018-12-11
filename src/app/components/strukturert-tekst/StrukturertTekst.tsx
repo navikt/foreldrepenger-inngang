@@ -7,7 +7,7 @@ import {
     Tekstsnutt,
     Definisjoner
 } from '../../utils/strukturertTekst';
-import { WithLink } from '../../utils/withLink';
+import WithLink from '../with-link/WithLink';
 import BEMHelper from '../../utils/bem';
 import './strukturertTekst.less';
 

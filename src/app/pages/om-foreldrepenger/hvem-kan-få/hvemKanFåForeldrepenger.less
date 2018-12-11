@@ -1,0 +1,60 @@
+@import '../../../styles/variables.less';
+
+.hvemKanFåForeldrepenger {
+    &__alignLeft {
+        align-self: center;
+        padding: 0 1rem;
+    }
+
+    &__kravTilForeldrepenger {
+        margin-top: 1.5rem;
+    }
+
+    &__krav {
+        flex: 1;
+        text-align: center;
+        max-width: 300px;
+
+        p {
+            font-size: 0.875rem;
+        }
+
+        &:not(:nth-child(1)) {
+            margin-top: 2rem;
+        }
+    }
+
+    @media (min-width: @mobile-breakpoint) {
+        &__kravTilForeldrepenger {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+            width: 100%;
+        }
+
+        &__krav {
+            max-width: 190px;
+
+            &:not(:nth-child(1)) {
+                margin-top: 0;
+                margin-left: 1rem;
+            }
+
+            .typo-undertittel {
+                min-height: 48px;
+                text-align: center;
+            }
+        }
+
+        @media screen and (-ms-high-contrast: active),
+            (-ms-high-contrast: none) {
+            &__alignLeft,
+            &__krav,
+            &__kravtittel,
+            &__kravtittel__innhold {
+                max-width: 100%;
+            }
+        }
+    }
+}

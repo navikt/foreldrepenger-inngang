@@ -1,0 +1,52 @@
+[
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "listItem": "bullet",
+        "level": 1,
+        "children": [
+            {
+                "type": "span",
+                "text": "er selvstendig næringsdrivende eller frilanser",
+                "marks": []
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "listItem": "bullet",
+        "level": 1,
+        "children": [
+            {
+                "type": "span",
+                "text": "ikke er fast ansatt hos en arbeidsgiver ",
+                "marks": []
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Terminbekreftelsen får du hos jordmor eller legen din. Den må være datert i 26. svangerskapsuke eller senere.",
+                "marks": []
+            }
+        ],
+        "markDefs": []
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Hvis barnet er født i utlandet og ikke registrert i folkeregisteret, må du legge ved fødselsattesten til barnet.",
+                "marks": []
+            }
+        ],
+        "markDefs": []
+    }
+]

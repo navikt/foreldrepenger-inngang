@@ -1,3 +1,5 @@
+@import '../../../styles/variables.less';
+
 .jegVilJobbe {
     .lesmerPanel {
         width: 100%;
@@ -8,4 +10,77 @@
         margin-top: 2rem;
         margin-bottom: 1rem;
     }
+    .nav-frontend-tabs {
+        width: 100%;
+    }
+
+    &__jobbeHeltid {
+        padding: 1rem 0 2rem 0;
+        width: 100%;
+    }
+
+    &__jobbeDelvis {
+        padding: 1rem 0 2rem 0;
+        width: 100%;
+    }
+
+    &__firstDropdown {
+        margin-bottom: 1rem;
+    }
+
+    &__jobbeHeltid .strukturertTekst .typo-normal {
+        margin: 0;
+    }
+
+    &__jobbeDelvis .strukturertTekst .typo-normal {
+        margin: 0;
+    }
+
+    &__illustrasjon {
+        padding-bottom: 2rem;
+    }
+
+    &__mainIcon {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: left;
+
+        .typo-normal {
+            margin-left: 1rem;
+        }
+    }
+
+    &__jobbeHeltid-icon {
+        padding: 1rem 0;
+    }
+
+    @media (min-width: @mobile-breakpoint) {
+        &__mainIcon {
+            flex-direction: row;
+            align-items: flex-end;
+            text-align: left;
+        }
+    }
+
+    .fade-out {
+        opacity: 0;
+        z-index: 1;
+    }
+
+    .fade-enter {
+        opacity: 1;
+        transition: opacity 1050ms ease-in;
+    }
+
+    .fade-appear {
+        opacity: 0;
+        z-index: 1;
+    }
+
+    .fade-appear.fade-appear-active {
+        opacity: 1;
+        transition: opacity 450ms linear;
+    }
 }
+

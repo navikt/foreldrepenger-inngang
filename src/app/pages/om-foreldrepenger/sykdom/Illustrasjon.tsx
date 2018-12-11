@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-const Illustrasjon = () => (
+const Illustrasjon = ({ grunnForForlengelse }: { grunnForForlengelse: string }) => (
     <svg height="65px" width="100%" version="1.1" viewBox="0 0 622 65">
         <g fill="none" stroke="none" strokeWidth="1">
             <rect height="65" width="622" fill="none" x="0" y="0" />
@@ -27,8 +27,8 @@ const Illustrasjon = () => (
                 y="37.5"
             />
             <text fill="#931515" fontFamily="SourceSansPro-Bold, Source Sans Pro" fontSize="12">
-                <tspan fontWeight="bold" x="288.108" y="9">
-                    Sykemeldt
+                <tspan fontWeight="bold" x={316 - 2.6 * grunnForForlengelse.length} y="9">
+                    {grunnForForlengelse}
                 </tspan>
                 <tspan fontFamily="SourceSansPro-Regular, Source Sans Pro" x="344.892" y="9" />
                 <tspan fontFamily="SourceSansPro-Regular, Source Sans Pro" x="297.498" y="24">
