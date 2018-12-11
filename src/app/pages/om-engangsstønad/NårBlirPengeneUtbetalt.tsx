@@ -9,6 +9,7 @@ const utbetalingSvg = require('../../assets/ark/ark-frister.svg').default;
 
 const NårBlirPengeneUtbetalt: React.StatelessComponent<IntlProps> = ({ lang }) => (
     <PanelMedIllustrasjon
+        id={'nar-blir-pengene-utbetalt'}
         title={getTranslation('om_engangsstønad.utbetaling.tittel', lang)}
         svg={utbetalingSvg}>
         <StrukturertTekst tekst={getContent('om-engangsstønad/utbetaling', lang)} />

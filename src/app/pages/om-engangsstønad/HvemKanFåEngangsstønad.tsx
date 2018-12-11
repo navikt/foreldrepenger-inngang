@@ -17,6 +17,7 @@ const utbetalingShortContent = 'om-engangsstønad/hvem-kan-få/krav2';
 
 const HvemKanFåEngangsstønad: React.StatelessComponent<IntlProps> = ({ lang }) => (
     <PanelMedIllustrasjon
+        id={'hvem-kan-fa-engangsstonad'}
         title={getTranslation('om_engangsstønad.hva_er.tittel', lang)}
         svg={engangsstønadSvg}>
         <StrukturertTekst tekst={getContent(hvaErEngangsstønadContent, lang)} />

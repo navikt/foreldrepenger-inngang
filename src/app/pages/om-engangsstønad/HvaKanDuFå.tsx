@@ -10,6 +10,7 @@ const arbeidstakerSvg = require('../../assets/ark/ark-arbeidstaker.svg').default
 
 const HvaKanDuFå: React.StatelessComponent<IntlProps> = ({ lang }) => (
     <PanelMedIllustrasjon
+        id={'hva-kan-du-fa'}
         title={getTranslation('om_engangsstønad.hva_kan_du_få.tittel', lang)}
         svg={arbeidstakerSvg}>
         <StrukturertTekst
