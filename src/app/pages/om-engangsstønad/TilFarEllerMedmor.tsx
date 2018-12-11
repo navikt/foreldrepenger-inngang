@@ -4,7 +4,7 @@ import { withIntl, getTranslation, IntlProps } from 'app/intl/intl';
 import PanelMedIllustrasjon from 'app/components/panel-med-illustrasjon/PanelMedIllustrasjon';
 import StrukturertTekst from 'app/components/strukturert-tekst/StrukturertTekst';
 
-const farSvg = require('../../assets/ark/ark-far.svg').default;
+const farSvg = require('../../assets/ark/ark-far-og-medmor.svg').default;
 
 interface OwnProps {
     id: string;

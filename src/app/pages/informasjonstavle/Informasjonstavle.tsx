@@ -54,11 +54,11 @@ const Bildelenker = ({ lang }: { lang: Language }) => {
         <nav className={cls.element('bildepaneler')}>
             <PanelMedBilde
                 svgName="veiviser"
-                title={getTranslation('informasjonstavle.hva_kan_jeg_få', lang)}
+                title={getTranslation('informasjonstavle.hva_kan_du_få', lang)}
                 urlIsExternal={false}
                 url="/veiviser">
                 <Tekstomrade>
-                    {getTranslation('informasjonstavle.hva_kan_jeg_få_ingress', lang)}
+                    {getTranslation('informasjonstavle.hva_kan_du_få_ingress', lang)}
                 </Tekstomrade>
             </PanelMedBilde>
 
