@@ -29,7 +29,7 @@ const NyeBeregningsregler: React.StatelessComponent<Props & IntlProps> = ({ loca
                         svg={headerSvg}>
                         <StrukturertTekst
                             tekst={getContent(
-                                'all-informasjon/nye-beregningsregler/nye-beregningsregler',
+                                'om-foreldrepenger/nye-beregningsregler/nye-beregningsregler',
                                 lang
                             )}
                         />

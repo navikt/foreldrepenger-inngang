@@ -5,7 +5,7 @@ import { HoyreChevron } from 'nav-frontend-chevron';
 
 import BEMHelper from '../../utils/bem';
 import { FlexibleSvg } from '../../utils/CustomSVG';
-import { WithLink } from '../../utils/withLink';
+import WithLink from '../with-link/WithLink';
 import './panelMedBilde.less';
 import MediaQuery from 'react-responsive';
 

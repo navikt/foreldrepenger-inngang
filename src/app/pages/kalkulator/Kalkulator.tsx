@@ -98,7 +98,7 @@ class Planlegger extends React.Component<IntlProps, State> {
     getCheckboxes = () =>
         muligeSituasjoner.map((situasjon) => ({
             checked: this.state.valgteSituasjoner.includes(situasjon),
-            label: getTranslation(`kalkulator.situasjon.${situasjon}`),
+            label: getTranslation(`kalkulator.situasjon.${situasjon}`, this.props.lang),
             id: situasjon,
             value: situasjon
         }));
@@ -137,7 +137,7 @@ class Planlegger extends React.Component<IntlProps, State> {
                         <Breadcrumbs path={location.pathname} />
 
                         <PanelMedIllustrasjon
-                            title={getTranslation('kalkulator.tittel')}
+                            title={getTranslation('kalkulator.tittel', lang)}
                             svg={<SvgMask svg={pengerIcon} />}>
                             <StrukturertTekst tekst={getContent('kalkulator/kalkulator', lang)} />
 

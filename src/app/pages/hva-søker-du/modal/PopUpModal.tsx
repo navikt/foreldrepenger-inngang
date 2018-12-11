@@ -65,10 +65,7 @@ class PopUpModal extends Component<Props & IntlProps> {
                             <Lukknapp onClick={this.closeModal} />
                         </div>
                         <StrukturertTekst
-                            tekst={getContent(
-                                'hva-vil-du-søke-om/engangsstonad-modal',
-                                this.props.lang
-                            )}
+                            tekst={getContent('hva-søker-du/engangsstonad-modal', this.props.lang)}
                         />
                     </div>
                 </Modal>

@@ -8,7 +8,7 @@ import Seksjonslenker from '../seksjonslenker/Seksjonslenker';
 import SvgMask from 'app/components/svg-mask/SvgMask';
 import { getTranslation, withIntl, Language } from 'app/intl/intl';
 import { ForeldrepengerSection } from '../OmForeldrepenger';
-import { WithLink } from 'app/utils/withLink';
+import WithLink from 'app/components/with-link/WithLink';
 import './innholdsfortegnelse.less';
 
 const cls = BEMHelper('innholdsfortegnelse');

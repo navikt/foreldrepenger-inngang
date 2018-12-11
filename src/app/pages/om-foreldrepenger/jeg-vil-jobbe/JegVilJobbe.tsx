@@ -5,22 +5,22 @@ import BEMHelper from '../../../utils/bem';
 import './jegVilJobbe.less';
 import { getContent } from '../../../utils/getContent';
 import Tabs from 'nav-frontend-tabs';
-import JobbeHeltid from "./JobbeHeltid";
-import JobbeDelvis from "./JobbeDelvis";
-import * as React from "react";
+import JobbeHeltid from './JobbeHeltid';
+import JobbeDelvis from './JobbeDelvis';
+import * as React from 'react';
 
-const content = 'all-informasjon/jeg-vil-jobbe/jeg-vil-jobbe';
+const content = 'om-foreldrepenger/jeg-vil-jobbe/jeg-vil-jobbe';
 const jobbeSvg = require('../../../assets/ark/ark-jobbe.svg').default;
 const cls = BEMHelper('jegVilJobbe');
 
 const faner = [
     {
         label: 'om_foreldrepenger.jobbe.fanetittel.jobbeHeltid',
-        content: <JobbeHeltid/>,
+        content: <JobbeHeltid />
     },
     {
         label: 'om_foreldrepenger.jobbe.fanetittel.jobbeDelvis',
-        content: <JobbeDelvis/>,
+        content: <JobbeDelvis />
     }
 ];
 
@@ -30,20 +30,20 @@ interface OwnProps {
 
 type Props = OwnProps & IntlProps;
 
-class JegVilJobbe extends React.Component <Props> {
+class JegVilJobbe extends React.Component<Props> {
     state: {
-      currentTab: React.ReactNode
+        currentTab: React.ReactNode;
     };
 
     constructor(props: Props) {
         super(props);
         this.state = {
-            currentTab: faner[0].content,
-        }
+            currentTab: faner[0].content
+        };
     }
 
-    updateContent = (e: any, index: number) : void => {
-        this.setState({currentTab: faner[index].content})
+    updateContent = (e: any, index: number): void => {
+        this.setState({ currentTab: faner[index].content });
     };
 
     render = () => (
@@ -57,13 +57,13 @@ class JegVilJobbe extends React.Component <Props> {
                 kompakt={true}
                 defaultAktiv={0}
                 tabs={faner.map((fane, index) => ({
-                 label: getTranslation(fane.label, this.props.lang),
+                    label: getTranslation(fane.label, this.props.lang)
                 }))}
                 onChange={this.updateContent}
             />
             {this.state.currentTab}
         </PanelMedIllustrasjon>
     );
-};
+}
 
 export default withIntl(JegVilJobbe);

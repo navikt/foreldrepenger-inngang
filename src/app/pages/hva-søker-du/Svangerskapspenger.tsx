@@ -8,7 +8,7 @@ import { getContent } from '../../utils/getContent';
 const Svangerskapspenger = ({ parentCls, lang }: { parentCls: any; lang: Language }) => {
     return (
         <PanelMedTittel title={getTranslation('svangerskapspenger', lang)}>
-            <StrukturertTekst tekst={getContent('hva-vil-du-søke-om/svangerskapspenger', lang)} />
+            <StrukturertTekst tekst={getContent('hva-søker-du/svangerskapspenger', lang)} />
             <ButtonPanel
                 externalLink={false}
                 parentCls={parentCls}

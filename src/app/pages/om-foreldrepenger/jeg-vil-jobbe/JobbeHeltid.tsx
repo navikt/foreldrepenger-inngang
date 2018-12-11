@@ -7,15 +7,15 @@ import BEMHelper from '../../../utils/bem';
 import { JegVilJobbeHeltid } from './komponenter/JegVilJobbeHeltid';
 import MediaQuery from 'react-responsive';
 import { JegVilJobbeHeltidMobile } from './komponenter/JegVilJobbeHeltidMobile';
-const firstPanelContent = 'all-informasjon/jeg-vil-jobbe/heltidsjobb';
-const secondPanelContent = 'all-informasjon/jeg-vil-jobbe/deltidsjobb';
+const firstPanelContent = 'om-foreldrepenger/jeg-vil-jobbe/heltidsjobb';
+const secondPanelContent = 'om-foreldrepenger/jeg-vil-jobbe/deltidsjobb';
 const cls = BEMHelper('jegVilJobbe');
 
 const JobbeHeltid: React.StatelessComponent<IntlProps> = ({ lang }) => {
     return (
         <div className={cls.element('jobbeHeltid')}>
             <StrukturertTekst
-                tekst={getContent('all-informasjon/jeg-vil-jobbe/heltid-fane-header', lang)}
+                tekst={getContent('om-foreldrepenger/jeg-vil-jobbe/heltid-fane-header', lang)}
             />
             <div className={cls.element('jobbeHeltid-icon')}>
                 <MediaQuery minWidth={576}>
