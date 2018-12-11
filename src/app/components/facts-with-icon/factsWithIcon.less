@@ -1,0 +1,43 @@
+@import '../../styles/index.less';
+
+.factsWithIcon {
+    display: flex;
+    flex-direction: column;
+    max-width: 37.5rem;
+    background-color: #efefef;
+    width: 100%;
+    padding: 1rem;
+
+    &__fact {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        
+        &:not(:last-child) {
+            margin-bottom: 2rem;
+        }
+    }
+
+    &__svgContainer {
+        width: 4.5rem;
+    }
+
+    .typo-normal {
+        margin-left: 1.5rem;
+    }
+
+    .strukturertTekst {
+        flex: 1;
+        margin-top: 0;
+        align-self: center;
+    }
+
+    @media (min-width: @mobile-breakpoint) {
+        padding: 2rem;
+
+        &__svgContainer {
+            width: 6rem;
+        }
+    }
+}

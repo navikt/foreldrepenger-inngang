@@ -1,0 +1,20 @@
+[
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Du får tidligst svar på søknaden din ",
+                "marks": []
+            },
+            { "type": "span", "text": "fire uker", "marks": ["bold"] },
+            {
+                "type": "span",
+                "text": " før foreldrepengeperioden din starter. Dette er fordi NAV trenger oppdaterte opplysninger for å behandle saken din.",
+                "marks": []
+            }
+        ],
+        "markDefs": []
+    }
+]

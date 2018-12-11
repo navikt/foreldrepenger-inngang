@@ -19,6 +19,7 @@ import Hjelp from '../../components/hjelpe-seksjon/HjelpeSeksjon';
 import Innholdsfortegnelse from './innholdsfortegnelse/Innholdsfortegnelse';
 import MediaQuery from 'react-responsive';
 import Mobilmeny from './mobilmeny/Mobilmeny';
+import NårKanDuSøke from './når-kan-du-søke/NårKanDuSøke';
 import Environment from 'app/Environment';
 
 const cls = BEMHelper('infosider');
@@ -29,8 +30,9 @@ interface Props {
 
 export type ForeldrepengerSection =
     | 'hvem-kan-fa-foreldrepenger'
-    | 'hvor-lenge-kan-jeg-fa-foreldrepenger'
-    | 'hva-kan-jeg-fa'
+    | 'hvor-lenge-kan-du-fa-foreldrepenger'
+    | 'hva-kan-du-fa'
+    | 'nar-kan-du-soke'
     | 'hvis-du-skal-pa-ferie'
     | 'hvis-du-vil-jobbe'
     | 'hvis-en-av-dere-blir-syke'
@@ -39,8 +41,9 @@ export type ForeldrepengerSection =
 
 const sections: ForeldrepengerSection[] = [
     'hvem-kan-fa-foreldrepenger',
-    'hvor-lenge-kan-jeg-fa-foreldrepenger',
-    'hva-kan-jeg-fa',
+    'hvor-lenge-kan-du-fa-foreldrepenger',
+    'hva-kan-du-fa',
+    'nar-kan-du-soke',
     'hvis-du-skal-pa-ferie',
     'hvis-du-vil-jobbe',
     'hvis-en-av-dere-blir-syke',
@@ -66,7 +69,10 @@ const OmForeldrepenger: React.StatelessComponent<Props & IntlProps> = ({ locatio
             <div className={classnames(cls.element('container'), cls.modifier('withSidebar'))}>
                 <MediaQuery minWidth={1072}>
                     <aside className={cls.element('sidebar')}>
-                        <Innholdsfortegnelse sections={sections} søkeUrl={Environment.SOK_FORELDREPENGER_URL} />
+                        <Innholdsfortegnelse
+                            sections={sections}
+                            søkeUrl={Environment.SOK_FORELDREPENGER_URL}
+                        />
                     </aside>
                 </MediaQuery>
                 <MediaQuery maxWidth={1071}>
@@ -78,11 +84,12 @@ const OmForeldrepenger: React.StatelessComponent<Props & IntlProps> = ({ locatio
                     <HvorLenge id={sections[1]} />
                     <NyeRegler />
                     <Beregning id={sections[2]} />
-                    <Ferie id={sections[3]} />
-                    <JegVilJobbe id={sections[4]} />
-                    <Sykdom id={sections[5]} />
-                    <HjemmeSamtidig id={sections[6]} />
-                    <Adopsjon id={sections[7]} />
+                    <NårKanDuSøke id={sections[3]} />
+                    <Ferie id={sections[4]} />
+                    <JegVilJobbe id={sections[5]} />
+                    <Sykdom id={sections[6]} />
+                    <HjemmeSamtidig id={sections[7]} />
+                    <Adopsjon id={sections[8]} />
                     <Hjelp />
                 </article>
                 <div className={cls.element('filler')} />
