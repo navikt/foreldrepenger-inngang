@@ -4,6 +4,7 @@ import BEMHelper from '../../utils/bem';
 import Breadcrumbs from '../../components/breadcrumbs/Breadcrumbs';
 import HeaderInformasjon from '../../components/header-informasjon/HeaderInformasjon';
 import Hjelp from '../../components/hjelpe-seksjon/HjelpeSeksjon';
+import NårKanDuSøke from './når-kan-du-søke/NårKanDuSøke';
 import HvaKanDuFå from './HvaKanDuFå';
 import HvemKanFåEngangsstønad from './HvemKanFåEngangsstønad';
 import NårBlirPengeneUtbetalt from './NårBlirPengeneUtbetalt';
@@ -26,12 +27,14 @@ interface Props {
 export type EngangsstonadSection =
     | 'hvem-kan-fa-engangsstonad'
     | 'hva-kan-du-fa'
+    | 'nar-kan-du-soke'
     | 'nar-blir-pengene-utbetalt'
     | 'engangsstonad-til-far-eller-medmor';
 
 const sections: EngangsstonadSection[] = [
     'hvem-kan-fa-engangsstonad',
     'hva-kan-du-fa',
+    'nar-kan-du-soke',
     'nar-blir-pengene-utbetalt',
     'engangsstonad-til-far-eller-medmor'
 ];
@@ -52,7 +55,10 @@ const OmEngangsstonad: React.StatelessComponent<Props & IntlProps> = ({ location
                 )}>
                 <MediaQuery minWidth={1072}>
                     <aside className={infosiderCls.element('sidebar')}>
-                        <Innholdsfortegnelse sections={sections} søkeUrl={Environment.SOK_ENGANGSSTONAD_URL} />
+                        <Innholdsfortegnelse
+                            sections={sections}
+                            søkeUrl={Environment.SOK_ENGANGSSTONAD_URL}
+                        />
                     </aside>
                 </MediaQuery>
                 <MediaQuery maxWidth={1071}>
@@ -62,6 +68,7 @@ const OmEngangsstonad: React.StatelessComponent<Props & IntlProps> = ({ location
                     <Breadcrumbs path={location.pathname} />
                     <HvemKanFåEngangsstønad />
                     <HvaKanDuFå />
+                    <NårKanDuSøke id={sections[2]} />
                     <NårBlirPengeneUtbetalt />
                     <TilFarEllerMedmor id="engangsstonad-til-far-eller-medmor" />
                     <Hjelp />
