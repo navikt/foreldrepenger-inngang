@@ -8,6 +8,11 @@ import Environment from 'app/Environment';
 
 const links = [
     {
+        label: 'informasjonstavle.andre_lenker.dokumentasjon',
+        internal: true,
+        href: '/dokumentasjon'
+    },
+    {
         label: 'informasjonstavle.andre_lenker.ettersende_vedlegg_til_søknad',
         href: Environment.DINE_FORELDREPENGER_URL
     },
@@ -24,11 +29,6 @@ const links = [
         label: 'informasjonstavle.andre_lenker.hvis_en_av_dere_blir_syke',
         internal: true,
         href: '/om-foreldrepenger#hvis-en-av-dere-blir-syke'
-    },
-    {
-        label: 'informasjonstavle.andre_lenker.husk_å_søke_i_rett_tid',
-        internal: true,
-        href: '/viktige-frister'
     },
     {
         label: 'informasjonstavle.andre_lenker.meld_fra_om_endringer',

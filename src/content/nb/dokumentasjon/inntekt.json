@@ -1,0 +1,21 @@
+[
+    {
+        "type": "avsnitt",
+        "style": "element",
+        "children": [
+            { "type": "span", "text": "Dokumentasjon på inntekt", "marks": [] }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "For å kunne beregne hva du skal ha utbetalt, må vi ha informasjon om hvilken inntekt du har når du starter foreldrepengeperioden.",
+                "marks": []
+            }
+        ],
+        "markDefs": []
+    }
+]
