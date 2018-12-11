@@ -5,7 +5,7 @@
         "children": [
             {
                 "type": "span",
-                "text": "Ved adopsjon kan dere tidligst søke om foreldrepenger når dere har dato for ",
+                "text": "Ved adopsjon kan du tidligst søke når du har dato for ",
                 "marks": []
             },
             { "type": "span", "text": "omsorgsovertakelse", "marks": ["bold"] },

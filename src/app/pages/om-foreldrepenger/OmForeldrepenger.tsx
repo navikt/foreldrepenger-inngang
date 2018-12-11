@@ -32,7 +32,7 @@ export type ForeldrepengerSection =
     | 'hvem-kan-fa-foreldrepenger'
     | 'hvor-lenge-kan-du-fa-foreldrepenger'
     | 'hva-kan-du-fa'
-    | 'når-kan-du-søke'
+    | 'nar-kan-du-soke'
     | 'hvis-du-skal-pa-ferie'
     | 'hvis-du-vil-jobbe'
     | 'hvis-en-av-dere-blir-syke'
@@ -43,7 +43,7 @@ const sections: ForeldrepengerSection[] = [
     'hvem-kan-fa-foreldrepenger',
     'hvor-lenge-kan-du-fa-foreldrepenger',
     'hva-kan-du-fa',
-    'når-kan-du-søke',
+    'nar-kan-du-soke',
     'hvis-du-skal-pa-ferie',
     'hvis-du-vil-jobbe',
     'hvis-en-av-dere-blir-syke',

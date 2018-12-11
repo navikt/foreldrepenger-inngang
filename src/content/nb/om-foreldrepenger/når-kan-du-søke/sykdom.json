@@ -7,13 +7,13 @@
             { "type": "span", "text": "utsettelse", "marks": ["bold"] },
             {
                 "type": "span",
-                "text": " tilbake i tid på grunn av sykdom. Du må legge ved en ",
+                "text": " tilbake i tid på grunn av sykdom eller innleggelse i helseinstitusjon. Du må legge ved en ",
                 "marks": []
             },
             { "type": "span", "text": "legeerklæring", "marks": ["bold"] },
             {
                 "type": "span",
-                "text": " som dokumenterer hele perioden du er syk.",
+                "text": " som dokumenterer hele perioden du er syk eller innlagt.",
                 "marks": []
             }
         ],

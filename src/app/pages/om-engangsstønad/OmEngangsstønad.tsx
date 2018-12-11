@@ -27,12 +27,14 @@ interface Props {
 export type EngangsstonadSection =
     | 'hvem-kan-fa-engangsstonad'
     | 'hva-kan-du-fa'
+    | 'nar-kan-du-soke'
     | 'nar-blir-pengene-utbetalt'
     | 'engangsstonad-til-far-eller-medmor';
 
 const sections: EngangsstonadSection[] = [
     'hvem-kan-fa-engangsstonad',
     'hva-kan-du-fa',
+    'nar-kan-du-soke',
     'nar-blir-pengene-utbetalt',
     'engangsstonad-til-far-eller-medmor'
 ];
@@ -66,7 +68,7 @@ const OmEngangsstonad: React.StatelessComponent<Props & IntlProps> = ({ location
                     <Breadcrumbs path={location.pathname} />
                     <HvemKanFåEngangsstønad />
                     <HvaKanDuFå />
-                    <NårKanDuSøke />
+                    <NårKanDuSøke id={sections[2]} />
                     <NårBlirPengeneUtbetalt />
                     <TilFarEllerMedmor id="engangsstonad-til-far-eller-medmor" />
                     <Hjelp />

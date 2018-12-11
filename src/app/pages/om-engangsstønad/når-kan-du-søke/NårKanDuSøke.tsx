@@ -12,7 +12,7 @@ import Foreldrepar from 'app/components/foreldrepar/Foreldrepar';
 
 const iconSvg = require('../../../assets/ark/ark-frister.svg').default;
 const morSvg = require('../../../assets/foreldre/mor2.svg').default;
-const adopsjonSvg = require('../../../assets/icons/adopsjon.svg').default;
+const adopsjonSvg = require('../../../assets/icons/stork.svg').default;
 const cls = BEMHelper('nårKanDuSøke');
 
 interface OwnProps {

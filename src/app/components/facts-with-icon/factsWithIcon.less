@@ -1,8 +1,11 @@
+@import '../../styles/index.less';
+
 .factsWithIcon {
     display: flex;
     flex-direction: column;
     max-width: 37.5rem;
-    background-color: #fbfbfb;
+    background-color: #efefef;
+    width: 100%;
     padding: 1rem;
 
     &__fact {
@@ -12,12 +15,12 @@
         align-items: center;
         
         &:not(:last-child) {
-            margin-bottom: 1rem;
+            margin-bottom: 2rem;
         }
     }
 
     &__svgContainer {
-        width: 40px;
+        width: 4.5rem;
     }
 
     .typo-normal {
@@ -25,7 +28,16 @@
     }
 
     .strukturertTekst {
+        flex: 1;
         margin-top: 0;
         align-self: center;
+    }
+
+    @media (min-width: @mobile-breakpoint) {
+        padding: 2rem;
+
+        &__svgContainer {
+            width: 6rem;
+        }
     }
 }

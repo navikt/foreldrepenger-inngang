@@ -5,10 +5,12 @@
         "children": [
             {
                 "type": "span",
-                "text": "Far eller medmor kan tidligst søke om foreldrepenger når ",
+                "text": "Far eller medmor kan tidligst søke når du har dato for ",
                 "marks": []
             },
-            { "type": "span", "text": "barnet er født", "marks": ["bold"] },
+            { "type": "span", "text": "foreldreansvar", "marks": ["bold"] },
+            { "type": "span", "text": " eller ", "marks": [] },
+            { "type": "span", "text": "omsorgsovertakelse", "marks": ["bold"] },
             { "type": "span", "text": ".", "marks": [] }
         ],
         "markDefs": []

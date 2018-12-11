@@ -14,21 +14,21 @@ import { FlexibleSvg } from 'app/utils/CustomSVG';
 
 const iconSvg = require('../../../assets/ark/ark-frister.svg').default;
 const morSvg = require('../../../assets/foreldre/mor2.svg').default;
-const adopsjonSvg = require('../../../assets/icons/adopsjon.svg').default;
+const adopsjonSvg = require('../../../assets/icons/stork.svg').default;
 const cls = BEMHelper('nårKanDuSøke');
 
 const getTabs = (lang: Language) => [
     {
         label: getTranslation('om_foreldrepenger.når_kan_du_søke.utsette_sykdom', lang),
-        content: getContent('all-informasjon/når-kan-du-søke/sykdom', lang)
+        content: getContent('om-foreldrepenger/når-kan-du-søke/sykdom', lang)
     },
     {
         label: getTranslation('om_foreldrepenger.når_kan_du_søke.utsette_jobbe', lang),
-        content: getContent('all-informasjon/når-kan-du-søke/du-skal-jobbe', lang)
+        content: getContent('om-foreldrepenger/når-kan-du-søke/du-skal-jobbe', lang)
     },
     {
         label: getTranslation('om_foreldrepenger.når_kan_du_søke.utsette_ferie', lang),
-        content: getContent('all-informasjon/når-kan-du-søke/du-skal-ha-ferie', lang)
+        content: getContent('om-foreldrepenger/når-kan-du-søke/du-skal-ha-ferie', lang)
     }
 ];
 
@@ -70,22 +70,22 @@ class NårKanDuSøke extends React.Component<Props, State> {
                 <FactsWithIcon>
                     <Fact
                         icon={<FlexibleSvg width={40} height={40} iconRef={morSvg} />}
-                        content={getContent('all-informasjon/når-kan-du-søke/mor', lang)}
+                        content={getContent('om-foreldrepenger/når-kan-du-søke/mor', lang)}
                     />
                     <Fact
                         icon={<Foreldrepar firstParent="far4" secondParent="medmor2" />}
                         content={getContent(
-                            'all-informasjon/når-kan-du-søke/far-eller-medmor',
+                            'om-foreldrepenger/når-kan-du-søke/far-eller-medmor',
                             lang
                         )}
                     />
                     <Fact
-                        icon={<FlexibleSvg width={40} height={56} iconRef={adopsjonSvg} />}
-                        content={getContent('all-informasjon/når-kan-du-søke/adopsjon', lang)}
+                        icon={<FlexibleSvg width={40} height={40} iconRef={adopsjonSvg} />}
+                        content={getContent('om-foreldrepenger/når-kan-du-søke/adopsjon', lang)}
                     />
                 </FactsWithIcon>
                 <StrukturertTekst
-                    tekst={getContent('all-informasjon/når-kan-du-søke/tidligst-svar', lang)}
+                    tekst={getContent('om-foreldrepenger/når-kan-du-søke/tidligst-svar', lang)}
                 />
                 <Undertittel>
                     {getTranslation(
@@ -107,7 +107,7 @@ class NårKanDuSøke extends React.Component<Props, State> {
 
                 <StrukturertTekst
                     tekst={getContent(
-                        'all-informasjon/når-kan-du-søke/hvis-jeg-søker-for-sent',
+                        'om-foreldrepenger/når-kan-du-søke/hvis-jeg-søker-for-sent',
                         lang
                     )}
                 />
