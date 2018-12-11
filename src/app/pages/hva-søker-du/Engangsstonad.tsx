@@ -14,10 +14,11 @@ const Engangsstonad = ({ parentCls, lang }: { parentCls: any; lang: Language }) 
             <StrukturertTekst tekst={getContent('hva-søker-du/engangsstønad', lang)} />
             <PopUpModal modalIsOpen={false} />
             <ButtonPanel
-                externalLink={true}
-                parentCls={parentCls}
-                buttonText={getTranslation('hva_søker_du.søk_engangsstønad', lang)}
-                buttonUrl={Environment.SOK_ENGANGSSTONAD_URL}
+                button={{
+                    text: getTranslation('hva_søker_du.søk_engangsstønad', lang),
+                    url: Environment.SOK_ENGANGSSTONAD_URL,
+                    external: true
+                }}
                 helpSection={{
                     linkText: getTranslation('hva_søker_du.ingen_elektronisk_id', lang),
                     linkUrl: Environment.SOK_ENGANGSSTONAD_PAPIR_URL,

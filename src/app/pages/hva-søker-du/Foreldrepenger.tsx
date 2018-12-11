@@ -1,30 +1,30 @@
 import React, { StatelessComponent } from 'react';
-import { withRouter } from 'react-router-dom';
-
-import PanelMedTittel from '../../components/panel-med-tittel/PanelMedTittel';
-import { getTranslation, withIntl, Language } from '../../intl/intl';
-import StrukturertTekst from '../../components/strukturert-tekst/StrukturertTekst';
 import { getContent } from '../../utils/getContent';
-import Environment from 'app/Environment';
+import { getTranslation, withIntl, Language } from '../../intl/intl';
 import ButtonPanel from './button-panel/ButtonPanel';
+import Environment from 'app/Environment';
+import PanelMedTittel from '../../components/panel-med-tittel/PanelMedTittel';
+import StrukturertTekst from '../../components/strukturert-tekst/StrukturertTekst';
 
 interface ForeldrepengerProps {
-    parentCls: any;
-    history: any;
-    location: any;
-    match: any;
     lang: Language;
 }
 
-const Foreldrepenger: StatelessComponent<ForeldrepengerProps> = ({ parentCls, history, lang }) => {
+const Foreldrepenger: StatelessComponent<ForeldrepengerProps> = ({ lang }) => {
     return (
         <PanelMedTittel title={getTranslation('foreldrepenger', lang)}>
             <StrukturertTekst tekst={getContent('hva-søker-du/foreldrepenger', lang)} />
             <ButtonPanel
-                externalLink={true}
-                parentCls={parentCls}
-                buttonText={getTranslation('hva_søker_du.søk_foreldrepenger', lang)}
-                buttonUrl={Environment.SOK_FORELDREPENGER_URL}
+                button={{
+                    text: getTranslation('hva_søker_du.søk_foreldrepenger', lang),
+                    url: Environment.SOK_FORELDREPENGER_URL,
+                    external: true
+                }}
+                secondButton={{
+                    text: getTranslation('hva_søker_du.ettersend_vedlegg', lang),
+                    url: Environment.SOK_FORELDREPENGER_URL,
+                    external: true
+                }}
                 helpSection={{
                     linkText: getTranslation('hva_søker_du.ingen_elektronisk_id', lang),
                     linkUrl: Environment.SOK_FORELDREPENGER_PAPIR_URL,
@@ -35,4 +35,4 @@ const Foreldrepenger: StatelessComponent<ForeldrepengerProps> = ({ parentCls, hi
     );
 };
 
-export default withIntl(withRouter(Foreldrepenger));
+export default withIntl(Foreldrepenger);

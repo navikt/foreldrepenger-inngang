@@ -1,22 +1,75 @@
-@import '../../../styles/variables.less';
+@import '../../../styles/index.less';
 
 .buttonPanel {
     flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
 
-    &__noBorder {
+    &__buttons {
+        display: flex;
+        flex-direction: column;
         width: 100%;
-        border: none;
-    }
-    
-    @media (min-width: @mobile-breakpoint) {
-        flex-direction: row;
-        justify-content: space-between;
 
-        .lenke, .knapp, &__noBorder {
-            width: unset;
+        :nth-child(2) {
+            margin-top: 1rem;
+        }
+    }
+
+    .userHelp {
+        margin-top: 1rem;
+    }
+
+    &__knapp {
+        height: @button-height;
+        padding: 0 1rem;
+        width: 100%;
+    }
+
+    @media (min-width: @mobile-breakpoint) {
+        &__buttons {
+            max-width: 100%;
+            flex-direction: row;
+
+            :nth-child(2) {
+                margin-top: 0;
+                margin-left: 0.5rem;
+            }
+
+            a {
+                overflow: hidden;
+                width: 100%;
+
+                // Lag litt rom i høyden slik at 'Hovedknapp' fra nav-frontend
+                // kan heves litt utover sin egen container, selv med
+                // overflow:hidden i parent-containeren
+                padding-top: 0.5rem;
+            }
+        }
+
+        &__knapp {
+            flex: 1;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+
+    @media (min-width: @tablet-breakpoint) {
+        flex-direction: row;
+
+        &__buttons {
+            overflow: hidden;
+            width: initial;
+        }
+
+        .userHelp {
+            margin-top: 0.5rem;
+            margin-left: 0.5rem;
+        }
+
+        a {
+            width: initial;
         }
     }
 }
