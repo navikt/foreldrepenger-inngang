@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { WithLink } from 'app/utils/withLink';
+import WithLink from 'app/components/with-link/WithLink';
 import BEMHelper from 'app/utils/bem';
 import { Undertittel, Normaltekst } from 'nav-frontend-typografi';
 import CustomSvg, { IconRef } from 'app/utils/CustomSVG';

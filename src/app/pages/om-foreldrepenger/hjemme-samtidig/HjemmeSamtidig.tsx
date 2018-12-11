@@ -9,11 +9,11 @@ import './hjemmeSamtidig.less';
 
 const cls = BEMHelper('hjemmeSamtidig');
 const hjemmeSamtidigSvg = require('../../../assets/ark/ark-hjemme-samtidig.svg').default;
-const ingress = 'all-informasjon/hjemme-samtidig/ingress';
-const hjemmeFulltid = 'all-informasjon/hjemme-samtidig/hjemme-fulltid';
-const delePaHjemme = 'all-informasjon/hjemme-samtidig/dele-pa-hjemme';
-const narFarTvillinger = 'all-informasjon/hjemme-samtidig/far-tvillinger';
-const permisjonVedFodsel = 'all-informasjon/hjemme-samtidig/permisjon-fodsel';
+const ingress = 'om-foreldrepenger/hjemme-samtidig/ingress';
+const hjemmeFulltid = 'om-foreldrepenger/hjemme-samtidig/hjemme-fulltid';
+const delePaHjemme = 'om-foreldrepenger/hjemme-samtidig/dele-pa-hjemme';
+const narFarTvillinger = 'om-foreldrepenger/hjemme-samtidig/far-tvillinger';
+const permisjonVedFodsel = 'om-foreldrepenger/hjemme-samtidig/permisjon-fodsel';
 
 interface Props {
     id: string;
@@ -24,7 +24,7 @@ const HjemmeSamtidig: React.StatelessComponent<Props & IntlProps> = ({ id, lang 
         <PanelMedIllustrasjon
             className={cls.className}
             id={id}
-            title={getTranslation('om_foreldrepenger.hjemme_samtidig.tittel')}
+            title={getTranslation('om_foreldrepenger.hjemme_samtidig.tittel', lang)}
             svg={hjemmeSamtidigSvg}>
             <StrukturertTekst tekst={getContent(ingress, lang)} />
             <LesMer

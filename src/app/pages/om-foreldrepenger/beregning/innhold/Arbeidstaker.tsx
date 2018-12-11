@@ -4,10 +4,10 @@ import StrukturertTekst from '../../../../components/strukturert-tekst/Strukture
 import { getContent } from '../../../../utils/getContent';
 import LesMer from 'app/components/les-mer/LesMer';
 
-const beregningTekstPath = 'all-informasjon/beregning/arbeidstaker';
-const arbeidstakerTasMed = 'all-informasjon/beregning/arbeidstaker-tas-med';
-const arbeidstakerTasIkkeMed = 'all-informasjon/beregning/arbeidstaker-tas-ikke-med';
-const dagerUtenArbeid = 'all-informasjon/beregning/arbeidstaker-dager-uten-arbeid';
+const beregningTekstPath = 'om-foreldrepenger/beregning/arbeidstaker';
+const arbeidstakerTasMed = 'om-foreldrepenger/beregning/arbeidstaker-tas-med';
+const arbeidstakerTasIkkeMed = 'om-foreldrepenger/beregning/arbeidstaker-tas-ikke-med';
+const dagerUtenArbeid = 'om-foreldrepenger/beregning/arbeidstaker-dager-uten-arbeid';
 
 const Arbeidstaker: React.StatelessComponent<IntlProps> = ({ lang }) => {
     return (

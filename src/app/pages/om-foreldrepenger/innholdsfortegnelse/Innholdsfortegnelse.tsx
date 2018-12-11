@@ -8,9 +8,8 @@ import Seksjonslenker from '../seksjonslenker/Seksjonslenker';
 import SvgMask from 'app/components/svg-mask/SvgMask';
 import { getTranslation, withIntl, Language } from 'app/intl/intl';
 import { ForeldrepengerSection } from '../OmForeldrepenger';
-import { WithLink } from 'app/utils/withLink';
+import WithLink from 'app/components/with-link/WithLink';
 import './innholdsfortegnelse.less';
-import Environment from 'app/Environment';
 
 const cls = BEMHelper('innholdsfortegnelse');
 const icon = require('../../../assets/icons/rakett.svg').default;
@@ -18,9 +17,10 @@ const icon = require('../../../assets/icons/rakett.svg').default;
 interface Props {
     sections: ForeldrepengerSection[];
     lang: Language;
+    søkeUrl: string;
 }
 
-const Innholdsfortegnelse: React.StatelessComponent<Props> = ({ lang, sections }) => {
+const Innholdsfortegnelse: React.StatelessComponent<Props> = ({ lang, sections, søkeUrl }) => {
     return (
         <Panel className={classnames(cls.className)}>
             <div className={cls.element('icon')}>
@@ -28,7 +28,7 @@ const Innholdsfortegnelse: React.StatelessComponent<Props> = ({ lang, sections }
             </div>
             <Seksjonslenker sections={sections} />
             <WithLink
-                url={Environment.SOK_FORELDREPENGER_URL}
+                url={søkeUrl}
                 noStyling={true}
                 urlIsExternal={true}>
                 <Hovedknapp className={cls.element('søkNå')}>

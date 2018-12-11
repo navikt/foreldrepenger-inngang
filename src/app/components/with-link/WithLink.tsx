@@ -1,24 +1,12 @@
 import React, { ReactNode } from 'react';
 import { Link } from 'react-router-dom';
 import Lenke from 'nav-frontend-lenker';
-import CustomSVGFromSprite from './CustomSVG';
-import BEMHelper from './bem';
+import CustomSVGFromSprite from '../../utils/CustomSVG';
+import BEMHelper from '../../utils/bem';
 import classnames from 'classnames';
 import './withLink.less';
 
-const externalLinkIcon = require('../assets/icons/external.svg').default;
-
-const withLink = (url: string, componentToRender: ReactNode, urlIsExternal?: boolean) => {
-    if (urlIsExternal) {
-        return (
-            <a href={url} aria-label="This is a link">
-                {componentToRender}
-            </a>
-        );
-    } else {
-        return <Link to={url}>{componentToRender}</Link>;
-    }
-};
+const externalLinkIcon = require('../../assets/icons/external.svg').default;
 
 const cls = BEMHelper('withLink');
 
@@ -86,6 +74,7 @@ export class WithLink extends React.Component<Props> {
                     <a
                         tabIndex={noTabbing ? -1 : 0}
                         target="_blank"
+                        rel="noopener noreferrer"
                         className={className}
                         href={url}>
                         {children}
@@ -93,7 +82,11 @@ export class WithLink extends React.Component<Props> {
                 );
             } else {
                 return (
-                    <Lenke target="_blank" className={classNames} href={url}>
+                    <Lenke
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={classNames}
+                        href={url}>
                         {children}
                         {addExternalIcon && (
                             <span className={cls.element('icon')}>
@@ -136,4 +129,4 @@ export class WithLink extends React.Component<Props> {
     };
 }
 
-export default withLink;
+export default WithLink;

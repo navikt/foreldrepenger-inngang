@@ -4,7 +4,7 @@ import KnappBase from 'nav-frontend-knapper';
 import UserHelp from '../user-help/UserHelp';
 import BEMHelper, { BEMWrapper } from '../../../utils/bem';
 import './buttonPanel.less';
-import { WithLink } from 'app/utils/withLink';
+import WithLink from 'app/components/with-link/WithLink';
 
 const cls = BEMHelper('buttonPanel');
 

@@ -5,12 +5,12 @@ import BEMHelper from '../../../utils/bem';
 import CustomSVG from '../../../utils/CustomSVG';
 import StrukturertTekst from '../../../components/strukturert-tekst/StrukturertTekst';
 import { Avsnitt } from '../../../utils/strukturertTekst';
-import './forÅFåForeldrepenger.less';
 import { getContent } from '../../../utils/getContent';
 import SvgMask from 'app/components/svg-mask/SvgMask';
 import { detErJul } from 'app/utils/datoUtils';
+import './hvemKanFåForeldrepenger.less';
 
-const cls = BEMHelper('forÅFåForeldrepenger');
+const cls = BEMHelper('hvemKanFåForeldrepenger');
 const foreldrepengerSvg = detErJul()
     ? require('../../../assets/familier/familie-sesong-1.svg').default
     : require('../../../assets/familier/familie-1.svg').default;
@@ -18,16 +18,16 @@ const foreldrepengerSvg = detErJul()
 const checkmarkIcon = require('./checkmark.svg').default;
 
 const kravTilForeldrepenger = [
-    'all-informasjon/for-å-få-foreldrepenger/krav1',
-    'all-informasjon/for-å-få-foreldrepenger/krav2',
-    'all-informasjon/for-å-få-foreldrepenger/krav3'
+    'om-foreldrepenger/hvem-kan-få/krav1',
+    'om-foreldrepenger/hvem-kan-få/krav2',
+    'om-foreldrepenger/hvem-kan-få/krav3'
 ];
 
 interface Props {
     id: string;
 }
 
-const ForÅFåForeldrepenger: React.StatelessComponent<Props & IntlProps> = ({ id, lang }) => {
+const HvemKanFåForeldrepenger: React.StatelessComponent<Props & IntlProps> = ({ id, lang }) => {
     return (
         <PanelMedIllustrasjon
             id={id}
@@ -35,7 +35,7 @@ const ForÅFåForeldrepenger: React.StatelessComponent<Props & IntlProps> = ({ i
             svg={<SvgMask svg={foreldrepengerSvg} anchorToBottom={true} />}>
             <div className={cls.element('alignLeft')}>
                 <StrukturertTekst
-                    tekst={getContent('all-informasjon/for-å-få-foreldrepenger/ingress', lang)}
+                    tekst={getContent('om-foreldrepenger/hvem-kan-få/ingress', lang)}
                 />
             </div>
             <div className={cls.element('kravTilForeldrepenger')}>
@@ -56,4 +56,4 @@ const KravTilForeldrepenger = ({ ingress }: { ingress: Avsnitt[] }) => {
     );
 };
 
-export default withIntl(ForÅFåForeldrepenger);
+export default withIntl(HvemKanFåForeldrepenger);

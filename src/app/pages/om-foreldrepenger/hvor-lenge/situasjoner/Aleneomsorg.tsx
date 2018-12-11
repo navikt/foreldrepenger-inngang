@@ -4,10 +4,10 @@ import StrukturertTekst from '../../../../components/strukturert-tekst/Strukture
 import { Language, withIntl, getTranslation } from '../../../../intl/intl';
 import { getContent } from '../../../../utils/getContent';
 
-const content = 'all-informasjon/hvor-lenge/aleneomsorg/aleneomsorg';
-const kalkulatorbeskrivelse = 'all-informasjon/hvor-lenge/kalkulatorbeskrivelse';
-const farsDel = 'all-informasjon/hvor-lenge/aleneomsorg/fars-del';
-const morsDel = 'all-informasjon/hvor-lenge/aleneomsorg/mors-del';
+const content = 'om-foreldrepenger/hvor-lenge/aleneomsorg/aleneomsorg';
+const kalkulatorbeskrivelse = 'om-foreldrepenger/hvor-lenge/kalkulatorbeskrivelse';
+const farsDel = 'om-foreldrepenger/hvor-lenge/aleneomsorg/fars-del';
+const morsDel = 'om-foreldrepenger/hvor-lenge/aleneomsorg/mors-del';
 
 const DEFAULT_TAB = 'alenemor';
 

@@ -10,8 +10,8 @@ import { CSSTransition } from 'react-transition-group';
 import TypografiBase from 'nav-frontend-typografi';
 import MediaQuery from 'react-responsive';
 import { JegVilJobbeDeltidExpandertMobil } from './komponenter/JegVilJobbeDeltidExpandertMobil';
-const firstPanelContent = 'all-informasjon/jeg-vil-jobbe/heltidsjobb';
-const secondPanelContent = 'all-informasjon/jeg-vil-jobbe/deltidsjobb';
+const firstPanelContent = 'om-foreldrepenger/jeg-vil-jobbe/heltidsjobb';
+const secondPanelContent = 'om-foreldrepenger/jeg-vil-jobbe/deltidsjobb';
 const cls = BEMHelper('jegVilJobbe');
 
 class JobbeDelvis extends React.Component<IntlProps> {
@@ -86,7 +86,10 @@ class JobbeDelvis extends React.Component<IntlProps> {
         <div className={cls.element('jobbeDelvis')}>
             <div className={cls.element('illustrasjon')}>
                 <StrukturertTekst
-                    tekst={getContent('all-informasjon/jeg-vil-jobbe/deltid-fane', this.props.lang)}
+                    tekst={getContent(
+                        'om-foreldrepenger/jeg-vil-jobbe/deltid-fane',
+                        this.props.lang
+                    )}
                 />
                 <div
                     className={cls.element('mainIcon')}

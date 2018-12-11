@@ -5,9 +5,10 @@ import HvaSøkerDu from './pages/hva-søker-du/HvaSøkerDu';
 import SøkSvangerskapspenger from './pages/søk-svangerskapspenger/SøkSvangerskapspenger';
 import OmForeldrepenger from './pages/om-foreldrepenger/OmForeldrepenger';
 import OmEngangsstønad from './pages/om-engangsstønad/OmEngangsstønad';
-import ViktigeFrister from './pages/viktige-frister/ViktigeFrister';
+import Dokumentasjon from './pages/dokumentasjon/Dokumentasjon';
 import NyeBeregningsregler from './pages/nye-beregningsregler/NyeBeregningsregler';
 import Kalkulator from './pages/kalkulator/Kalkulator';
+import ViktigeFrister from './pages/viktige-frister/ViktigeFrister';
 import Veiviser from './pages/veiviser/Veiviser';
 import { ValidPath } from './utils/validPath';
 
@@ -54,6 +55,8 @@ const Router = () => (
         />
 
         <ValidRoute exact={true} path="/veiviser" component={Veiviser} key="veiviser" />
+        <Route exact={true} path="/dokumentasjon" component={Dokumentasjon} key="dokumentasjon" />
+        <Route exact={true} path="/veiviser" component={Veiviser} key="veiviser" />
 
         <Redirect to="/" />
     </Switch>
