@@ -57,7 +57,7 @@
         "children": [
             {
                 "type": "span",
-                "text": "Hvis ikke mor har rett til foreldrepenger kan far eller medmor kan søke om å starte foreldrepengeperioden fra ",
+                "text": "Hvis ikke mor har rett til foreldrepenger kan far eller medmor søke om å starte foreldrepengeperioden fra ",
                 "marks": []
             },
             { "type": "span", "text": "uke syv", "marks": ["bold"] },
