@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Breadcrumbs from '../../components/breadcrumbs/Breadcrumbs';
 import BEMHelper from '../../utils/bem';
-import { getTranslation, IntlProps, withIntl } from '../../intl/intl';
+import { getTranslation, IntlProps, withIntl, Language } from '../../intl/intl';
 import HvorLenge from './hvor-lenge/HvorLenge';
 import NyeRegler from './nye-regler/NyeRegler';
 import HvemKanFåForeldrepenger from './hvem-kan-få/HvemKanFåForeldrepenger';
@@ -21,8 +21,12 @@ import MediaQuery from 'react-responsive';
 import Mobilmeny from './mobilmeny/Mobilmeny';
 import NårKanDuSøke from './når-kan-du-søke/NårKanDuSøke';
 import Environment from 'app/Environment';
+import { AlertStripeInfo } from 'nav-frontend-alertstriper';
+import StrukturertTekst from 'app/components/strukturert-tekst/StrukturertTekst';
+import { getContent } from 'app/utils/getContent';
 
 const cls = BEMHelper('infosider');
+const omForeldrepengerCls = BEMHelper('omForeldrepenger');
 
 interface Props {
     location: any;
@@ -80,6 +84,7 @@ const OmForeldrepenger: React.StatelessComponent<Props & IntlProps> = ({ locatio
                 </MediaQuery>
                 <article className={cls.element('article')}>
                     <Breadcrumbs path={location.pathname} />
+                    <NyeReglerFra2019 lang={lang} />
                     <HvemKanFåForeldrepenger id={sections[0]} />
                     <HvorLenge id={sections[1]} />
                     <NyeRegler />
@@ -97,5 +102,11 @@ const OmForeldrepenger: React.StatelessComponent<Props & IntlProps> = ({ locatio
         </div>
     );
 };
+
+const NyeReglerFra2019 = ({ lang }: { lang: Language }) => (
+    <AlertStripeInfo className={omForeldrepengerCls.element('nyeRegler2019')}>
+        <StrukturertTekst tekst={getContent('om-foreldrepenger/nye-regler-fra-2019', lang)} />
+    </AlertStripeInfo>
+);
 
 export default withIntl(OmForeldrepenger);
