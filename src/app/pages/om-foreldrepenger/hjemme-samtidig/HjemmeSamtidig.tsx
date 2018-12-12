@@ -1,10 +1,10 @@
 import * as React from 'react';
-import { getTranslation, withIntl, IntlProps } from '../../../intl/intl';
-import PanelMedIllustrasjon from '../../../components/panel-med-illustrasjon/PanelMedIllustrasjon';
-import BEMHelper from '../../../utils/bem';
-import StrukturertTekst from '../../../components/strukturert-tekst/StrukturertTekst';
 import { getContent } from '../../../utils/getContent';
+import { getTranslation, withIntl, IntlProps } from '../../../intl/intl';
+import BEMHelper from '../../../utils/bem';
 import LesMer from '../../../components/les-mer/LesMer';
+import PanelMedIllustrasjon from '../../../components/panel-med-illustrasjon/PanelMedIllustrasjon';
+import StrukturertTekst from '../../../components/strukturert-tekst/StrukturertTekst';
 import './hjemmeSamtidig.less';
 
 const cls = BEMHelper('hjemmeSamtidig');

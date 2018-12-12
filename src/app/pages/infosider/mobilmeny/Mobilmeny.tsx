@@ -7,7 +7,6 @@ import BEMHelper from 'app/utils/bem';
 import Seksjonslenker from '../seksjonslenker/Seksjonslenker';
 import SvgMask from 'app/components/svg-mask/SvgMask';
 import { getTranslation, withIntl, Language } from 'app/intl/intl';
-import { ForeldrepengerSection } from '../OmForeldrepenger';
 import WithLink from 'app/components/with-link/WithLink';
 import './mobilmeny.less';
 import { Element } from 'nav-frontend-typografi';
@@ -17,7 +16,7 @@ const cls = BEMHelper('mobilmeny');
 const icon = require('../../../assets/icons/rakett.svg').default;
 
 interface Props {
-    sections: ForeldrepengerSection[];
+    sections: string[];
     lang: Language;
 }
 

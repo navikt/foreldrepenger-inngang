@@ -1,10 +1,10 @@
 import * as React from 'react';
-import PanelBase from 'nav-frontend-paneler';
-import BEMHelper from '../../../utils/bem';
 import { getTranslation, withIntl, Language } from '../../../intl/intl';
-import './hurtiglenker.less';
+import BEMHelper from '../../../utils/bem';
+import PanelBase from 'nav-frontend-paneler';
 import TypografiBase from 'nav-frontend-typografi';
 import WithLink from '../../../components/with-link/WithLink';
+import './hurtiglenker.less';
 
 const cls = BEMHelper('hurtiglenker');
 

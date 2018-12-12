@@ -1,32 +1,27 @@
 import * as React from 'react';
-import Breadcrumbs from '../../components/breadcrumbs/Breadcrumbs';
-import BEMHelper from '../../utils/bem';
-import { getTranslation, IntlProps, withIntl, Language } from '../../intl/intl';
-import HvorLenge from './hvor-lenge/HvorLenge';
-import NyeRegler from './nye-regler/NyeRegler';
-import HvemKanFåForeldrepenger from './hvem-kan-få/HvemKanFåForeldrepenger';
-import JegVilJobbe from './jeg-vil-jobbe/JegVilJobbe';
-import Sykdom from './sykdom/Sykdom';
-import Ferie from './ferie/Ferie';
+import { getTranslation, IntlProps, withIntl } from '../../intl/intl';
 import Adopsjon from './adopsjon/Adopsjon';
-import Sidebanner from '../../components/sidebanner/Sidebanner';
+import BEMHelper from '../../utils/bem';
 import Beregning from './beregning/Beregning';
-import HjemmeSamtidig from './hjemme-samtidig/HjemmeSamtidig';
-import HeaderInformasjon from '../../components/header-informasjon/HeaderInformasjon';
+import Breadcrumbs from '../../components/breadcrumbs/Breadcrumbs';
 import classnames from 'classnames';
-import './omForeldrepenger.less';
-import Hjelp from '../../components/hjelpe-seksjon/HjelpeSeksjon';
-import Innholdsfortegnelse from './innholdsfortegnelse/Innholdsfortegnelse';
-import MediaQuery from 'react-responsive';
-import Mobilmeny from './mobilmeny/Mobilmeny';
-import NårKanDuSøke from './når-kan-du-søke/NårKanDuSøke';
 import Environment from 'app/Environment';
-import { AlertStripeInfo } from 'nav-frontend-alertstriper';
-import StrukturertTekst from 'app/components/strukturert-tekst/StrukturertTekst';
-import { getContent } from 'app/utils/getContent';
+import Ferie from './ferie/Ferie';
+import HeaderInformasjon from '../../components/header-informasjon/HeaderInformasjon';
+import Hjelp from '../../components/hjelpe-seksjon/HjelpeSeksjon';
+import HjemmeSamtidig from './hjemme-samtidig/HjemmeSamtidig';
+import HvemKanFåForeldrepenger from './hvem-kan-få/HvemKanFåForeldrepenger';
+import HvorLenge from './hvor-lenge/HvorLenge';
+import JegVilJobbe from './jeg-vil-jobbe/JegVilJobbe';
+import MedInnholdsfortegnelse from '../infosider/MedInnholdsfortegnelse';
+import NårKanDuSøke from './når-kan-du-søke/NårKanDuSøke';
+import NyeRegler from './nye-regler/NyeRegler';
+import NyeReglerFra2019 from './nye-regler-fra-2019/NyeReglerFra2019';
+import Sidebanner from '../../components/sidebanner/Sidebanner';
+import Sykdom from './sykdom/Sykdom';
+import '../infosider/infosider.less';
 
 const cls = BEMHelper('infosider');
-const omForeldrepengerCls = BEMHelper('omForeldrepenger');
 
 interface Props {
     location: any;
@@ -55,36 +50,24 @@ const sections: ForeldrepengerSection[] = [
     'adoptere'
 ];
 
-const OmForeldrepengerHeader = () => {
-    return (
-        <HeaderInformasjon
-            title="Om foreldrepenger"
-            description="Foreldrepenger skal sikre deg inntekt når du ha foreldrepermisjon. Hvis du ikke hatt inntekt, kan du få en engangssum isteden."
-            siteUrl="https://familie.nav.no/om-foreldrepenger"
-        />
-    );
-};
-
 const OmForeldrepenger: React.StatelessComponent<Props & IntlProps> = ({ location, lang }) => {
     return (
         <div className={classnames(cls.className)}>
-            <OmForeldrepengerHeader />
+            <HeaderInformasjon
+                title="Om foreldrepenger"
+                description="Foreldrepenger skal sikre deg inntekt når du ha foreldrepermisjon. Hvis du ikke hatt inntekt, kan du få en engangssum isteden."
+                siteUrl="https://familie.nav.no/om-foreldrepenger"
+            />
             <Sidebanner text={getTranslation('om_foreldrepenger.tittel', lang)} />
-            <div className={classnames(cls.element('container'), cls.modifier('withSidebar'))}>
-                <MediaQuery minWidth={1072}>
-                    <aside className={cls.element('sidebar')}>
-                        <Innholdsfortegnelse
-                            sections={sections}
-                            søkeUrl={Environment.SOK_FORELDREPENGER_URL}
-                        />
-                    </aside>
-                </MediaQuery>
-                <MediaQuery maxWidth={1071}>
-                    <Mobilmeny sections={sections} />
-                </MediaQuery>
+            <MedInnholdsfortegnelse
+                sections={sections}
+                button={{
+                    label: getTranslation('innholdsfortegnelse.søk_nå', lang),
+                    url: Environment.SOK_FORELDREPENGER_URL
+                }}>
                 <article className={cls.element('article')}>
                     <Breadcrumbs path={location.pathname} />
-                    <NyeReglerFra2019 lang={lang} />
+                    <NyeReglerFra2019 />
                     <HvemKanFåForeldrepenger id={sections[0]} />
                     <HvorLenge id={sections[1]} />
                     <NyeRegler />
@@ -97,16 +80,9 @@ const OmForeldrepenger: React.StatelessComponent<Props & IntlProps> = ({ locatio
                     <Adopsjon id={sections[8]} />
                     <Hjelp />
                 </article>
-                <div className={cls.element('filler')} />
-            </div>
+            </MedInnholdsfortegnelse>
         </div>
     );
 };
-
-const NyeReglerFra2019 = ({ lang }: { lang: Language }) => (
-    <AlertStripeInfo className={omForeldrepengerCls.element('nyeRegler2019')}>
-        <StrukturertTekst tekst={getContent('om-foreldrepenger/nye-regler-fra-2019', lang)} />
-    </AlertStripeInfo>
-);
 
 export default withIntl(OmForeldrepenger);

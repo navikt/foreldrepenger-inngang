@@ -1,18 +1,18 @@
 import * as React from 'react';
-import PanelMedIllustrasjon from '../../../components/panel-med-illustrasjon/PanelMedIllustrasjon';
-import { getTranslation, withIntl, IntlProps } from '../../../intl/intl';
-import BEMHelper from '../../../utils/bem';
 import { getContent } from '../../../utils/getContent';
-import StrukturertTekst from '../../../components/strukturert-tekst/StrukturertTekst';
+import { getTranslation, withIntl, IntlProps } from '../../../intl/intl';
 import { Innholdsfane } from '../../../components/innholdsfaner/fane/Fane';
-import Innholdsfaner from '../../../components/innholdsfaner/Innholdsfaner';
-import ArbeidstakerIkon from './ikoner/ArbeidstakerIkon';
-import SelvstendigIkon from './ikoner/SelvstendigIkon';
-import YtelseFraNavIkon from './ikoner/YtelseFraNavIkon';
-import PoliceOfficerIkon from './ikoner/PoliceOfficerIkon';
 import Arbeidstaker from './innhold/Arbeidstaker';
-
+import ArbeidstakerIkon from './ikoner/ArbeidstakerIkon';
+import BEMHelper from '../../../utils/bem';
+import Innholdsfaner from '../../../components/innholdsfaner/Innholdsfaner';
+import PanelMedIllustrasjon from '../../../components/panel-med-illustrasjon/PanelMedIllustrasjon';
+import PoliceOfficerIkon from './ikoner/PoliceOfficerIkon';
+import SelvstendigIkon from './ikoner/SelvstendigIkon';
+import StrukturertTekst from '../../../components/strukturert-tekst/StrukturertTekst';
+import YtelseFraNavIkon from './ikoner/YtelseFraNavIkon';
 import './beregning.less';
+
 import Selvstendig from './innhold/Selvstendig';
 import HarYtelser from './innhold/HarYtelser';
 import AndreInntekskilder from './innhold/AndreInntekskilder';
