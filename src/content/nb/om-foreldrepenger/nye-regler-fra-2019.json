@@ -1,0 +1,35 @@
+[
+    {
+        "type": "avsnitt",
+        "style": "undertittel",
+        "children": [
+            {
+                "type": "span",
+                "text": "Nye regler fra 1. januar 2019",
+                "marks": []
+            }
+        ],
+        "markDefs": []
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            { "type": "span", "text": "Når foreldrepengeperioden starter i 2019 og dere har valgt 80 prosent foreldrepenger, er kvoten til hver av foreldrene på 19 uker. ", "marks": [] },
+            {
+                "type": "span",
+                "text": "Les mer om beregning av foreldrepenger",
+                "marks": [
+                    "url_om_beregningsregler_fra_2019"
+                ]
+            }
+        ],
+        "markDefs": [
+            {
+                "key": "url_om_beregningsregler_fra_2019",
+                "type": "link",
+                "href": "#hva-kan-du-fa"
+            }
+        ]
+    }
+]
