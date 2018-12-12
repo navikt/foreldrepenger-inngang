@@ -1,13 +1,13 @@
 import * as React from 'react';
-import PanelMedIllustrasjon from '../../../components/panel-med-illustrasjon/PanelMedIllustrasjon';
+import { Avsnitt } from '../../../utils/strukturertTekst';
+import { detErJul } from 'app/utils/datoUtils';
+import { getContent } from '../../../utils/getContent';
 import { getTranslation, withIntl, IntlProps } from '../../../intl/intl';
 import BEMHelper from '../../../utils/bem';
 import CustomSVG from '../../../utils/CustomSVG';
+import PanelMedIllustrasjon from '../../../components/panel-med-illustrasjon/PanelMedIllustrasjon';
 import StrukturertTekst from '../../../components/strukturert-tekst/StrukturertTekst';
-import { Avsnitt } from '../../../utils/strukturertTekst';
-import { getContent } from '../../../utils/getContent';
 import SvgMask from 'app/components/svg-mask/SvgMask';
-import { detErJul } from 'app/utils/datoUtils';
 import './hvemKanFåForeldrepenger.less';
 
 const cls = BEMHelper('hvemKanFåForeldrepenger');

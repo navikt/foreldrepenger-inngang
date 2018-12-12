@@ -5,11 +5,11 @@ import BEMHelper from 'app/utils/bem';
 import CustomSVGFromSprite from 'app/utils/CustomSVG';
 import PanelMedIllustrasjon from 'app/components/panel-med-illustrasjon/PanelMedIllustrasjon';
 import StrukturertTekst from 'app/components/strukturert-tekst/StrukturertTekst';
-import './omEngangsstønad.less';
+import './hvemKanFåEngangsstønad.less';
 
-const cls = BEMHelper('omEngangsstønad');
-const engangsstønadSvg = require('../../assets/engangsstønad.svg').default;
-const checkmarkIcon = require('../../assets/icons/checkmark.svg').default;
+const cls = BEMHelper('hvemKanFåEngangsstønad');
+const engangsstønadSvg = require('../../../assets/engangsstønad.svg').default;
+const checkmarkIcon = require('../../../assets/icons/checkmark.svg').default;
 
 const hvaErEngangsstønadContent = 'om-engangsstønad/hvem-kan-få/hvem-kan-få';
 const engangssumContent = 'om-engangsstønad/hvem-kan-få/krav1';

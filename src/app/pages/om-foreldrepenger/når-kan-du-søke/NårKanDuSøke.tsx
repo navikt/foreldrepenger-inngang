@@ -97,6 +97,7 @@ class NårKanDuSøke extends React.Component<Props, State> {
 
                 {tabs.map((tab, index) => (
                     <div
+                        key={index}
                         className={cls.element(
                             'tabContent',
                             this.state.currentTabIndex !== index ? 'inactive' : undefined

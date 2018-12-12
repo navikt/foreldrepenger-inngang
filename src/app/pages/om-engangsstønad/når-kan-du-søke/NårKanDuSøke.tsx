@@ -1,14 +1,14 @@
 import * as React from 'react';
-import PanelMedIllustrasjon from '../../../components/panel-med-illustrasjon/PanelMedIllustrasjon';
-import { getTranslation, withIntl, IntlProps } from '../../../intl/intl';
-import { getContent } from 'app/utils/getContent';
-import FactsWithIcon from 'app/components/facts-with-icon/FactsWithIcon';
-import Fact from 'app/components/facts-with-icon/Fact';
-import BEMHelper from '../../../utils/bem';
-import StrukturertTekst from 'app/components/strukturert-tekst/StrukturertTekst';
 import { FlexibleSvg } from 'app/utils/CustomSVG';
-import './nårKanDuSøke.less';
+import { getContent } from 'app/utils/getContent';
+import { getTranslation, withIntl, IntlProps } from '../../../intl/intl';
+import BEMHelper from '../../../utils/bem';
+import Fact from 'app/components/facts-with-icon/Fact';
+import FactsWithIcon from 'app/components/facts-with-icon/FactsWithIcon';
 import Foreldrepar from 'app/components/foreldrepar/Foreldrepar';
+import PanelMedIllustrasjon from '../../../components/panel-med-illustrasjon/PanelMedIllustrasjon';
+import StrukturertTekst from 'app/components/strukturert-tekst/StrukturertTekst';
+import './nårKanDuSøke.less';
 
 const iconSvg = require('../../../assets/ark/ark-frister.svg').default;
 const morSvg = require('../../../assets/foreldre/mor2.svg').default;

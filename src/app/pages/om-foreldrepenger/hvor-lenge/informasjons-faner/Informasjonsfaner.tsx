@@ -1,11 +1,10 @@
 import React, { ReactNode } from 'react';
-import Tabs from 'nav-frontend-tabs';
+import { getTranslation, IntlProps, withIntl } from '../../../../intl/intl';
 import BEMHelper from '../../../../utils/bem';
 import InformasjonsfanerBody from './InformasjonsfanerBody';
-
-import './informasjonsfaner.less';
-import { getTranslation, IntlProps, withIntl } from '../../../../intl/intl';
+import Tabs from 'nav-frontend-tabs';
 import TypografiBase from 'nav-frontend-typografi';
+import './informasjonsfaner.less';
 
 const cls = BEMHelper('informasjonsfaner');
 
@@ -63,14 +62,14 @@ class Informasjonsfaner extends React.Component<Props> {
                     {this.props.title
                         ? this.props.title
                         : this.props.tabs.length > 1
-                            ? getTranslation(
-                                  'om_foreldrepenger.hvor_lenge.fordeling.tittel',
-                                  this.props.lang
-                              )
-                            : getTranslation(
-                                  'om_foreldrepenger.hvor_lenge.fordeling.tittel_alene',
-                                  this.props.lang
-                              )}
+                        ? getTranslation(
+                              'om_foreldrepenger.hvor_lenge.fordeling.tittel',
+                              this.props.lang
+                          )
+                        : getTranslation(
+                              'om_foreldrepenger.hvor_lenge.fordeling.tittel_alene',
+                              this.props.lang
+                          )}
                 </TypografiBase>
             </div>
             {this.props.tabs.length > 1 && (

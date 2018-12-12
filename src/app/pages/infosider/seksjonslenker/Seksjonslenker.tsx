@@ -1,12 +1,10 @@
 import * as React from 'react';
-import { Normaltekst } from 'nav-frontend-typografi';
-import throttle from 'lodash/throttle';
 import { Cancelable } from 'lodash';
-
-import BEMHelper from 'app/utils/bem';
-import WithLink from 'app/components/with-link/WithLink';
 import { getTranslation, withIntl, Language } from 'app/intl/intl';
-import { ForeldrepengerSection } from '../OmForeldrepenger';
+import { Normaltekst } from 'nav-frontend-typografi';
+import BEMHelper from 'app/utils/bem';
+import throttle from 'lodash/throttle';
+import WithLink from 'app/components/with-link/WithLink';
 import './seksjonslenker.less';
 
 const cls = BEMHelper('seksjonslenker');
@@ -22,7 +20,7 @@ const getFirstNumberAfter = (n: number, numbers: number[]) => {
 };
 
 interface Props {
-    sections: ForeldrepengerSection[];
+    sections: string[];
     lang: Language;
     onSectionChange?: (section: string) => void;
 }
@@ -34,7 +32,7 @@ interface State {
     sectionNames: string[];
 }
 
-class Innholdsfortegnelse extends React.Component<Props, State> {
+class Seksjonslenker extends React.Component<Props, State> {
     debouncedOnScroll: (() => void) & Cancelable;
 
     constructor(props: Props) {
@@ -117,4 +115,4 @@ class Innholdsfortegnelse extends React.Component<Props, State> {
         });
 }
 
-export default withIntl(Innholdsfortegnelse);
+export default withIntl(Seksjonslenker);

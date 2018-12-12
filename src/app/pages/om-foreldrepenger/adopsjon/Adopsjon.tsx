@@ -1,9 +1,9 @@
 import * as React from 'react';
-import PanelMedIllustrasjon from '../../../components/panel-med-illustrasjon/PanelMedIllustrasjon';
-import { getTranslation, withIntl, IntlProps } from '../../../intl/intl';
-import StrukturertTekst from '../../../components/strukturert-tekst/StrukturertTekst';
-import LesMer from '../../../components/les-mer/LesMer';
 import { getContent } from '../../../utils/getContent';
+import { getTranslation, withIntl, IntlProps } from '../../../intl/intl';
+import LesMer from '../../../components/les-mer/LesMer';
+import PanelMedIllustrasjon from '../../../components/panel-med-illustrasjon/PanelMedIllustrasjon';
+import StrukturertTekst from '../../../components/strukturert-tekst/StrukturertTekst';
 
 const adopsjonSvg = require('../../../assets/ark/ark-adopsjon.svg').default;
 

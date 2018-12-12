@@ -1,9 +1,9 @@
 import React, { ReactNode } from 'react';
+import { Language, getTranslation, withIntl, IntlProps } from 'app/intl/intl';
 import BEMHelper from '../../../../utils/bem';
 import CustomSVG from '../../../../utils/CustomSVG';
-import Veileder from 'nav-frontend-veileder';
 import TypografiBase from 'nav-frontend-typografi';
-import { Language, getTranslation, withIntl, IntlProps } from 'app/intl/intl';
+import Veileder from 'nav-frontend-veileder';
 
 const cls = BEMHelper('informasjonsfanerBody');
 

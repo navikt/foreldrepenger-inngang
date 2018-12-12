@@ -4,7 +4,6 @@ import { getContent } from 'app/utils/getContent';
 import { withIntl, IntlProps, getTranslation } from 'app/intl/intl';
 import PanelMedIllustrasjon from 'app/components/panel-med-illustrasjon/PanelMedIllustrasjon';
 import StrukturertTekst from 'app/components/strukturert-tekst/StrukturertTekst';
-import './omEngangsstønad.less';
 
 const arbeidstakerSvg = require('../../assets/ark/ark-arbeidstaker.svg').default;
 

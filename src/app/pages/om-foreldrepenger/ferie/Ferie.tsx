@@ -1,15 +1,15 @@
 import * as React from 'react';
-import PanelMedIllustrasjon from '../../../components/panel-med-illustrasjon/PanelMedIllustrasjon';
-import { getTranslation, withIntl, IntlProps } from '../../../intl/intl';
-import StrukturertTekst from '../../../components/strukturert-tekst/StrukturertTekst';
-import LesMer from '../../../components/les-mer/LesMer';
-import TypografiBase from 'nav-frontend-typografi';
-import BEMHelper from '../../../utils/bem';
 import { getContent } from '../../../utils/getContent';
+import { getTranslation, withIntl, IntlProps } from '../../../intl/intl';
+import BEMHelper from '../../../utils/bem';
 import Ferieforskyvning from './Ferieforskyvning';
-import './ferie.less';
 import FerieforskyvningMobil from './FerieforskyvningMobil';
+import LesMer from '../../../components/les-mer/LesMer';
 import MediaQuery from 'react-responsive';
+import PanelMedIllustrasjon from '../../../components/panel-med-illustrasjon/PanelMedIllustrasjon';
+import StrukturertTekst from '../../../components/strukturert-tekst/StrukturertTekst';
+import TypografiBase from 'nav-frontend-typografi';
+import './ferie.less';
 
 const cls = BEMHelper('ferie');
 
