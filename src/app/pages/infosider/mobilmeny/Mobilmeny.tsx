@@ -18,6 +18,10 @@ const icon = require('../../../assets/icons/rakett.svg').default;
 interface Props {
     sections: string[];
     lang: Language;
+    button: {
+        label: string;
+        url: string;
+    }
 }
 
 interface State {
@@ -108,10 +112,11 @@ class Mobilmeny extends React.Component<Props, State> {
                         </div>
                         <WithLink
                             className={cls.element('søkNå')}
-                            url="/hva-soker-du/foreldrepenger"
+                            urlIsExternal={true}
+                            url={this.props.button.url}
                             noStyling={true}>
                             <Hovedknapp>
-                                {getTranslation('innholdsfortegnelse.søk_nå', this.props.lang)}
+                                {this.props.button.label}
                             </Hovedknapp>
                         </WithLink>
                     </div>

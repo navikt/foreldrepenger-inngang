@@ -24,14 +24,20 @@ const MedInnholdsfortegnelse = ({ sections, button, children }: MedInnholdsforte
                 <Innholdsfortegnelse
                     sections={sections}
                     button={{
-                        label: button.label
+                        label: button.label,
+                        url: button.url
                     }}
-                    buttonUrl={button.url}
                 />
             </aside>
         </MediaQuery>
         <MediaQuery maxWidth={1071}>
-            <Mobilmeny sections={sections} />
+            <Mobilmeny
+                sections={sections}
+                button={{
+                    label: button.label,
+                    url: button.url
+                }}
+            />
         </MediaQuery>
         {children}
         <div className={cls.element('filler')} />
