@@ -1,0 +1,56 @@
+@import '../../../styles/index.less';
+
+.ReactModal__Content,
+.ReactModal__Content--after-open,
+.modal {
+    padding: 1rem 1rem;
+    max-width: 600px;
+    min-width: 320px;
+
+    &--overflow-visible {
+        overflow: visible;
+    }
+
+    .engangs-modal-sokPapir {
+        &__body {
+            display: flex;
+            flex-direction: column;
+            padding: 1rem 1rem;
+        }
+
+        &__knapp {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            align-items: flex-end;
+        }
+
+        &__knappRad {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        &__topIconContainer {
+            pointer-events: none;
+            z-index: 98;
+            position: absolute;
+            left: 0;
+            right: 0;
+            text-align: center;
+            margin: -2.9rem auto 0 auto;
+        }
+
+        &__knapper {
+            display: flex;
+            flex-direction: column;
+        }
+
+        @media (min-width: @mobile-breakpoint) {
+            &__knapper {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+            }
+        }
+    }
+}
