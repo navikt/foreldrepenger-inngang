@@ -14,9 +14,7 @@
     {
         "type": "avsnitt",
         "style": "element",
-        "children": [
-            { "type": "span", "text": "Dokumentasjon på inntekt", "marks": [] }
-        ]
+        "children": [{ "type": "span", "text": "Dokumentasjon på inntekt", "marks": [] }]
     },
     {
         "type": "avsnitt",
@@ -58,7 +56,11 @@
                 "marks": ["url_digitale_inntektsmeldingen", "external_link"]
             },
             { "type": "span", "text": " eller papirskjemaet ", "marks": [] },
-            { "type": "span", "text": "NAV 08-30.01", "marks": ["url_NAV-08.30.01", "external_link"] },
+            {
+                "type": "span",
+                "text": "NAV 08-30.01",
+                "marks": ["url_NAV-08.30.01", "external_link"]
+            },
             {
                 "type": "span",
                 "text": ". Hvis arbeidsgiveren bruker papirskjemaet, kan du laste det opp sammen med søknaden din.",
@@ -123,10 +125,59 @@
     },
     {
         "type": "avsnitt",
-        "style": "element",
+        "style": "normaltekst",
         "children": [
-            { "type": "span", "text": "Bekreftelse på termin", "marks": [] }
+            {
+                "type": "span",
+                "text": "Hvis du er ",
+                "marks": []
+            },
+            {
+                "type": "span",
+                "text": "selvstendig næringsdrivende",
+                "marks": ["bold"]
+            },
+            {
+                "type": "span",
+                "text": " eller ",
+                "marks": []
+            },
+            {
+                "type": "span",
+                "text": "frilanser",
+                "marks": ["bold"]
+            },
+            {
+                "type": "span",
+                "text": " trenger du ",
+                "marks": []
+            },
+            {
+                "type": "span",
+                "text": "ikke",
+                "marks": ["bold"]
+            },
+            {
+                "type": "span",
+                "text": " å legge ved noe dokumentasjon. Vi henter inn opplysninger fra offentlige registre, og ",
+                "marks": []
+            },
+            {
+                "type": "span",
+                "text": "tar kontakt",
+                "marks": ["bold"]
+            },
+            {
+                "type": "span",
+                "text": " med deg hvis vi trenger flere opplysninger.",
+                "marks": []
+            }
         ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "element",
+        "children": [{ "type": "span", "text": "Bekreftelse på termin", "marks": [] }]
     },
     {
         "type": "avsnitt",
