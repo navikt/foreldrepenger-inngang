@@ -7,6 +7,7 @@ import { getTranslation, Language, withIntl } from '../../intl/intl';
 import { getContent } from '../../utils/getContent';
 import Environment from '../../Environment';
 import PopUpModal from './modal/PopUpModal';
+import UserHelpEngangsstonad from './user-help-engangsstonad/UserHelpEngangsstonad';
 
 const Engangsstonad = ({ parentCls, lang }: { parentCls: any; lang: Language }) => {
     return (
@@ -19,11 +20,14 @@ const Engangsstonad = ({ parentCls, lang }: { parentCls: any; lang: Language }) 
                     url: Environment.SOK_ENGANGSSTONAD_URL,
                     external: true
                 }}
-                helpSection={{
-                    linkText: getTranslation('hva_søker_du.ingen_elektronisk_id', lang),
-                    linkUrl: Environment.SOK_ENGANGSSTONAD_PAPIR_URL,
-                    helpText: getTranslation('hva_søker_du.ingen_elektronisk_id_hjelp', lang)
-                }}
+                alternativHelpSection={
+                    <UserHelpEngangsstonad
+                        linkText={getTranslation('hva_søker_du.ingen_elektronisk_id', lang)}
+                        linkUrl={Environment.SOK_ENGANGSSTONAD_PAPIR_URL}
+                        helpText={getTranslation('hva_søker_du.ingen_elektronisk_id_hjelp', lang)}
+                        lang={lang}
+                    />
+                }
             />
         </PanelMedTittel>
     );

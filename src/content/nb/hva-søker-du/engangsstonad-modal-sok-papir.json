@@ -1,0 +1,34 @@
+[
+  {
+    "type": "avsnitt",
+    "style": "normaltekst",
+    "children": [
+      {
+        "type": "span",
+        "text": "Du vil få raskere svar på søknaden din hvis du søker elektronisk i stedet for å sende papirskjema i posten."
+      }
+    ]
+  },
+  {
+    "type": "avsnitt",
+    "style": "normaltekst",
+    "children": [
+      {
+        "type": "span",
+        "text": "For å søke på nett må du ha bank-id fra banken din eller en annen elektronisk id. "
+      },
+      {
+        "type": "span",
+        "text": "Slik skaffer du deg elektronisk ID.",
+        "marks": ["modal_link_engangsstonad", "external_link"]
+      }
+    ],
+    "markDefs": [
+      {
+        "key": "modal_link_engangsstonad",
+        "type": "link",
+        "href": ""
+      }
+    ]
+  }
+  ]

@@ -22,9 +22,10 @@ interface Props {
         linkUrl: string;
         helpText: string;
     };
+    alternativHelpSection?: React.ReactNode;
 }
 
-const ButtonPanel = ({ button, secondButton, helpSection }: Props) => {
+const ButtonPanel = ({ button, secondButton, helpSection, alternativHelpSection }: Props) => {
     return (
         <div className={cls.className}>
             <div className={cls.element('buttons')}>
@@ -48,6 +49,7 @@ const ButtonPanel = ({ button, secondButton, helpSection }: Props) => {
                     helpText={helpSection.helpText}
                 />
             )}
+            {alternativHelpSection}
         </div>
     );
 };
