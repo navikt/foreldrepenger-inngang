@@ -1,23 +1,29 @@
 import * as React from 'react';
-import Informasjonsfaner from '../informasjons-faner/Informasjonsfaner';
+import Informasjonsfaner, { InformasjonsfaneProps } from '../informasjons-faner/Informasjonsfaner';
 import StrukturertTekst from '../../../../components/strukturert-tekst/StrukturertTekst';
 import { Language, withIntl, getTranslation } from '../../../../intl/intl';
 import { getContent } from '../../../../utils/getContent';
+import { addAntallUkerSomSnakkebobletittel } from './utils';
 
 const content = 'om-foreldrepenger/hvor-lenge/bare-mor-har-rett/bare-mor-har-rett';
 const kalkulatorbeskrivelse = 'om-foreldrepenger/hvor-lenge/kalkulatorbeskrivelse';
 const morsDel = 'om-foreldrepenger/hvor-lenge/bare-mor-har-rett/mors-del';
 
-const getInformasjonsfaner = (lang: Language) => [
+const getInformasjonsfaner = (lang: Language): InformasjonsfaneProps[] => [
     {
-        value: 'mødrekvote',
+        kvote: 'mødrekvote',
         label: getTranslation('om_foreldrepenger.hvor_lenge.fordeling.mødrekvote', lang),
-        icon: true,
-        body: {
-            tittel: 'til mor',
-            icon: 'mor1',
-            antallUker: '49/59',
-            punktliste: [],
+        innhold: {
+            snakkeboble: {
+                tittel: 'til mor',
+                icon: 'mor1',
+                punkter: [
+                    getTranslation(
+                        'om_foreldrepenger.hvor_lenge.fordeling.tre_uker_før_fødsel',
+                        lang
+                    )
+                ]
+            },
             component: <StrukturertTekst tekst={getContent(morsDel, lang)} />
         }
     }
@@ -27,7 +33,11 @@ const BareMorHarRett = ({ lang }: { lang: Language }) => {
     return (
         <div>
             <StrukturertTekst tekst={getContent(content, lang)} />
-            <Informasjonsfaner tabs={getInformasjonsfaner(lang)} />
+            <Informasjonsfaner
+                tabs={getInformasjonsfaner(lang).map(
+                    addAntallUkerSomSnakkebobletittel('bareMorHarRett', lang)
+                )}
+            />
             <StrukturertTekst tekst={getContent(kalkulatorbeskrivelse, lang)} />
         </div>
     );

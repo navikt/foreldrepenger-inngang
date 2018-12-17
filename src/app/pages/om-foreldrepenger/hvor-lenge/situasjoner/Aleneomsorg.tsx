@@ -1,42 +1,48 @@
 import * as React from 'react';
-import Informasjonsfaner from '../informasjons-faner/Informasjonsfaner';
+import Informasjonsfaner, { InformasjonsfaneProps } from '../informasjons-faner/Informasjonsfaner';
 import StrukturertTekst from '../../../../components/strukturert-tekst/StrukturertTekst';
 import { Language, withIntl, getTranslation } from '../../../../intl/intl';
 import { getContent } from '../../../../utils/getContent';
+import { Kvote } from 'app/utils/foreldresituasjon';
+import { addAntallUkerSomSnakkebobletittel } from './utils';
 
 const content = 'om-foreldrepenger/hvor-lenge/aleneomsorg/aleneomsorg';
 const kalkulatorbeskrivelse = 'om-foreldrepenger/hvor-lenge/kalkulatorbeskrivelse';
 const farsDel = 'om-foreldrepenger/hvor-lenge/aleneomsorg/fars-del';
 const morsDel = 'om-foreldrepenger/hvor-lenge/aleneomsorg/mors-del';
 
-const DEFAULT_TAB = 'alenemor';
+const DEFAULT_TAB: Kvote = 'mødrekvote';
 
-const getInformasjonsfaner = (lang: Language) => [
+const getInformasjonsfaner = (lang: Language): InformasjonsfaneProps[] => [
     {
-        value: DEFAULT_TAB,
+        kvote: DEFAULT_TAB,
         label: getTranslation(`om_foreldrepenger.hvor_lenge.fordeling.${DEFAULT_TAB}`, lang),
-        icon: true,
-        body: {
-            tittel: 'til mor',
-            icon: 'medmor1',
-            antallUker: '49/59',
-            punktliste: [
-                getTranslation('om_foreldrepenger.hvor_lenge.fordeling.krav.default', lang)
-            ],
+        innhold: {
+            snakkeboble: {
+                tittel: 'til mor',
+                icon: 'medmor1',
+                punkter: [
+                    getTranslation(
+                        'om_foreldrepenger.hvor_lenge.fordeling.tre_uker_før_fødsel',
+                        lang
+                    ),
+                    getTranslation('om_foreldrepenger.hvor_lenge.fordeling.krav.default', lang)
+                ]
+            },
             component: <StrukturertTekst tekst={getContent(morsDel, lang)} />
         }
     },
     {
-        value: 'alenefar',
+        kvote: 'fedrekvote',
         label: getTranslation('om_foreldrepenger.hvor_lenge.fordeling.alenefar', lang),
-        icon: true,
-        body: {
-            tittel: 'til far',
-            icon: 'far1',
-            antallUker: '46/56',
-            punktliste: [
-                getTranslation('om_foreldrepenger.hvor_lenge.fordeling.krav.som_far', lang)
-            ],
+        innhold: {
+            snakkeboble: {
+                tittel: 'til far',
+                icon: 'far1',
+                punkter: [
+                    getTranslation('om_foreldrepenger.hvor_lenge.fordeling.krav.som_far', lang)
+                ]
+            },
             component: <StrukturertTekst tekst={getContent(farsDel, lang)} />
         }
     }
@@ -44,20 +50,22 @@ const getInformasjonsfaner = (lang: Language) => [
 
 interface Props {
     lang: Language;
-    onUndersituasjonSelected: (undersituasjon: string) => void;
+    onKvoteSelected: (kvote: Kvote) => void;
 }
 
 class Aleneomsorg extends React.Component<Props> {
     componentWillMount = () => {
-        this.props.onUndersituasjonSelected(DEFAULT_TAB);
+        this.props.onKvoteSelected(DEFAULT_TAB);
     };
 
     render = () => (
         <div>
             <StrukturertTekst tekst={getContent(content, this.props.lang)} />
             <Informasjonsfaner
-                tabs={getInformasjonsfaner(this.props.lang)}
-                onTabSelected={this.props.onUndersituasjonSelected}
+                tabs={getInformasjonsfaner(this.props.lang).map(
+                    addAntallUkerSomSnakkebobletittel('aleneomsorg', this.props.lang)
+                )}
+                onTabSelected={this.props.onKvoteSelected}
                 title={getTranslation(
                     'om_foreldrepenger.hvor_lenge.fordeling.tittel_alene',
                     this.props.lang
