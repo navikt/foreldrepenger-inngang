@@ -1,16 +1,14 @@
 @import '../../../styles/index.less';
 
-.nyeReglerFra2019 {
-    margin-bottom: 2rem;
+.informasjonsbanner {
+    margin: 0 1rem 2rem;
     border: 1px solid #ff9100;
-    border-left-width: 0;
-    border-right-width: 0;
-    border-radius: 0;
+    border-radius: 0.25rem;
 
     .alertstripe__ikon {
         width: 3.5rem;
         margin-right: 1rem;
-        border-right-width: 2px;
+        border-right-width: 2px !important;
         margin-top: 2rem;
         margin-bottom: 2rem;
 
@@ -25,7 +23,6 @@
     }
 
     @media (min-width: @mobile-breakpoint) {
-        border-width: 1px;
-        border-radius: 0.25rem;
+        margin: 0 0 2rem;
     }
 }

@@ -1,6 +1,7 @@
 import { Language } from '../intl/intl';
+import { StrukturertTekst } from './strukturertTekst';
 
-export const getContent = (contentPath: string, language: Language) => {
+export const getContent = (contentPath: string, language: Language): StrukturertTekst => {
     try {
         const content = require(`../../content/${language}/${contentPath}.json`);
         return content;
@@ -10,6 +11,6 @@ export const getContent = (contentPath: string, language: Language) => {
             console.error('No content found:', e);
         }
 
-        return null;
+        return [];
     }
 };
