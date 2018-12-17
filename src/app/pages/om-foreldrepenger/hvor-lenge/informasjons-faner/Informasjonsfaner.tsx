@@ -1,33 +1,36 @@
 import React, { ReactNode } from 'react';
 import { getTranslation, IntlProps, withIntl } from '../../../../intl/intl';
 import BEMHelper from '../../../../utils/bem';
-import InformasjonsfanerBody from './InformasjonsfanerBody';
+import Faneinnhold from './Faneinnhold';
 import Tabs from 'nav-frontend-tabs';
 import TypografiBase from 'nav-frontend-typografi';
 import './informasjonsfaner.less';
+import { Kvote } from 'app/utils/foreldresituasjon';
 
 const cls = BEMHelper('informasjonsfaner');
 
-interface Fane {
-    value: string;
-    label: string;
-    icon: ReactNode;
-    body: {
+export interface FaneinnholdProps {
+    snakkeboble: {
         tittel: string;
+        punkter: string[];
         icon: string | React.ReactNode;
-        antallUker: string;
-        punktliste: string[];
-        component: ReactNode;
     };
+    component: ReactNode;
 }
 
-interface TabProps {
-    tabs: Fane[];
-    title?: string;
+export interface InformasjonsfaneProps {
+    kvote: Kvote;
+    label: string;
+    innhold: FaneinnholdProps;
+}
+
+interface OwnProps {
+    title: string;
+    tabs: InformasjonsfaneProps[];
     onTabSelected?: (tab: string) => void;
 }
 
-type Props = TabProps & IntlProps;
+type Props = OwnProps & IntlProps;
 
 class Informasjonsfaner extends React.Component<Props> {
     state: {
@@ -46,7 +49,7 @@ class Informasjonsfaner extends React.Component<Props> {
 
     onTabChange = (_: any, index: number) => {
         if (this.props.onTabSelected) {
-            this.props.onTabSelected(this.props.tabs[index].value);
+            this.props.onTabSelected(this.props.tabs[index].kvote);
         }
 
         this.setState({
@@ -81,7 +84,7 @@ class Informasjonsfaner extends React.Component<Props> {
                     onChange={this.onTabChange}
                 />
             )}
-            <InformasjonsfanerBody {...this.props.tabs[this.state.currentTab].body} />
+            <Faneinnhold {...this.props.tabs[this.state.currentTab].innhold} />
         </div>
     );
 }

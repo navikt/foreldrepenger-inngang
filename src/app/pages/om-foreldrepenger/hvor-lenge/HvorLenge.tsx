@@ -13,7 +13,7 @@ import PanelMedIllustrasjon from '../../../components/panel-med-illustrasjon/Pan
 import { getTranslation, withIntl, IntlProps } from '../../../intl/intl';
 import { getContent } from '../../../utils/getContent';
 import FarOgFar from './situasjoner/FarOgFar';
-import { Foreldresituasjon } from 'app/utils/foreldresituasjon';
+import { Foreldresituasjon, Kvote } from 'app/utils/foreldresituasjon';
 import Ukekalkulator from './ukekalkulator/Ukekalkulator';
 import { getAntallUtbetalingsuker, Utbetalingsalternativ } from './ukekalkulator/utils';
 import './hvorLenge.less';
@@ -22,34 +22,34 @@ import UtvidetInformasjon from 'app/pages/kalkulator/utvidetinformasjon/UtvidetI
 const infoSvg = require('../../../assets/ark/ark-info.svg').default;
 
 const cls = BEMHelper('hvorLenge');
-const getTabs = (onUndersituasjonSelected: (undersituasjon: string) => void): Innholdsfane[] => [
+const getTabs = (onKvoteSelected: (undersituasjon: Kvote) => void): Innholdsfane[] => [
     {
-        label: 'far_og_mor',
+        label: 'farOgMor',
         icon: <Foreldrepar firstParent="far1" secondParent="mor2" />,
         component: <FarOgMor />
     },
     {
-        label: 'bare_far_har_rett',
+        label: 'bareFarHarRett',
         icon: <Foreldrepar firstParent="far3" secondParent="medmor1" variant={1} />,
         component: <BareFarHarRett />
     },
     {
-        label: 'bare_mor_har_rett',
+        label: 'bareMorHarRett',
         icon: <Foreldrepar firstParent="far2" secondParent="mor1" variant={2} />,
         component: <BareMorHarRett />
     },
     {
         label: 'aleneomsorg',
         icon: <Foreldrepar firstParent="far1" secondParent="medmor1" variant={3} />,
-        component: <Aleneomsorg onUndersituasjonSelected={onUndersituasjonSelected} />
+        component: <Aleneomsorg onKvoteSelected={onKvoteSelected} />
     },
     {
-        label: 'mor_og_mor',
+        label: 'morOgMor',
         icon: <Foreldrepar firstParent="mor2" secondParent="medmor2" />,
         component: <MorOgMor />
     },
     {
-        label: 'far_og_far',
+        label: 'farOgFar',
         icon: <Foreldrepar firstParent="far4" secondParent="far2" />,
         component: <FarOgFar />
     }
@@ -63,7 +63,7 @@ type Props = HvorLengeProps & IntlProps;
 
 interface State {
     valgtSituasjon: Foreldresituasjon;
-    undersituasjon?: string;
+    valgtKvote?: Kvote;
     antallUtbetalingsuker?: Utbetalingsalternativ[];
 }
 
@@ -72,8 +72,8 @@ class HvorLenge extends React.Component<Props, State> {
         super(props);
 
         this.state = {
-            valgtSituasjon: 'far_og_mor',
-            antallUtbetalingsuker: getAntallUtbetalingsuker('far_og_mor')
+            valgtSituasjon: 'farOgMor',
+            antallUtbetalingsuker: getAntallUtbetalingsuker('farOgMor')
         };
     }
 
@@ -86,10 +86,10 @@ class HvorLenge extends React.Component<Props, State> {
         );
     };
 
-    onUndersituasjonSelected = (undersituasjon?: string) => {
+    onKvoteSelected = (valgtKvote?: Kvote) => {
         this.setState(
             {
-                undersituasjon
+                valgtKvote
             },
             this.setAntallUtbetalingsuker
         );
@@ -99,7 +99,7 @@ class HvorLenge extends React.Component<Props, State> {
         this.setState({
             antallUtbetalingsuker: getAntallUtbetalingsuker(
                 this.state.valgtSituasjon,
-                this.state.undersituasjon
+                this.state.valgtKvote
             )
         });
     };
@@ -117,7 +117,7 @@ class HvorLenge extends React.Component<Props, State> {
                         tekst={getContent('om-foreldrepenger/hvor-lenge/hvor-lenge', lang)}
                     />
                     <Innholdsfaner
-                        tabs={getTabs(this.onUndersituasjonSelected)}
+                        tabs={getTabs(this.onKvoteSelected)}
                         onSelect={this.onSituasjonSelected}
                     />
                     <Ukekalkulator antallUtbetalingsuker={this.state.antallUtbetalingsuker} />

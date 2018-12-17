@@ -1,4 +1,4 @@
-import { Foreldresituasjon } from 'app/utils/foreldresituasjon';
+import { Foreldresituasjon, Kvote } from 'app/utils/foreldresituasjon';
 
 export interface Utbetalingsalternativ {
     100: number;
@@ -15,21 +15,21 @@ const UKER_ALENEOMSORG_FAR = UKER_FAR_OG_FAR;
 
 export const getAntallUtbetalingsuker = (
     situasjon: Foreldresituasjon,
-    undersituasjon?: string
+    undersituasjon?: Kvote
 ): Utbetalingsalternativ[] => {
     switch (situasjon) {
-        case 'far_og_mor':
+        case 'farOgMor':
             return UKER_FAR_OG_MOR;
-        case 'far_og_far':
+        case 'farOgFar':
             return UKER_FAR_OG_FAR;
-        case 'mor_og_mor':
+        case 'morOgMor':
             return UKER_MOR_OG_MOR;
-        case 'bare_far_har_rett':
+        case 'bareFarHarRett':
             return UKER_BARE_FAR_HAR_RETT;
-        case 'bare_mor_har_rett':
+        case 'bareMorHarRett':
             return UKER_BARE_MOR_HAR_RETT;
         case 'aleneomsorg':
-            return undersituasjon === 'alenemor' ? UKER_ALENEOMSORG_MOR : UKER_ALENEOMSORG_FAR;
+            return undersituasjon === 'mødrekvote' ? UKER_ALENEOMSORG_MOR : UKER_ALENEOMSORG_FAR;
         default:
             return UKER_FAR_OG_MOR;
     }
