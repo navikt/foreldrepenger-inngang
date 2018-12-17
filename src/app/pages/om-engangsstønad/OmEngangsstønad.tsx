@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { getContent } from 'app/utils/getContent';
 import { getTranslation, withIntl, IntlProps } from '../../intl/intl';
 import BEMHelper from '../../utils/bem';
 import Breadcrumbs from '../../components/breadcrumbs/Breadcrumbs';
@@ -7,6 +8,7 @@ import HeaderInformasjon from '../../components/header-informasjon/HeaderInforma
 import Hjelp from '../../components/hjelpe-seksjon/HjelpeSeksjon';
 import HvaKanDuFå from './HvaKanDuFå';
 import HvemKanFåEngangsstønad from './hvem-kan-få-engangsstønad/HvemKanFåEngangsstønad';
+import Informasjonsbanner from '../infosider/informasjonsbanner/Informasjonsbanner';
 import MedInnholdsfortegnelse from '../infosider/MedInnholdsfortegnelse';
 import NårBlirPengeneUtbetalt from './NårBlirPengeneUtbetalt';
 import NårKanDuSøke from './når-kan-du-søke/NårKanDuSøke';
@@ -52,6 +54,9 @@ const OmEngangsstonad: React.StatelessComponent<Props & IntlProps> = ({ location
                 }}>
                 <article className={infosiderCls.element('article')}>
                     <Breadcrumbs path={location.pathname} />
+                    <Informasjonsbanner
+                        tekst={getContent('om-engangsstønad/nye-regler-fra-2019', lang)}
+                    />
                     <HvemKanFåEngangsstønad />
                     <HvaKanDuFå />
                     <NårKanDuSøke id={sections[2]} />

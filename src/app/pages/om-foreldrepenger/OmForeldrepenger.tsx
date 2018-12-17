@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { getContent } from 'app/utils/getContent';
 import { getTranslation, IntlProps, withIntl } from '../../intl/intl';
 import Adopsjon from './adopsjon/Adopsjon';
 import BEMHelper from '../../utils/bem';
@@ -12,11 +13,11 @@ import Hjelp from '../../components/hjelpe-seksjon/HjelpeSeksjon';
 import HjemmeSamtidig from './hjemme-samtidig/HjemmeSamtidig';
 import HvemKanFåForeldrepenger from './hvem-kan-få/HvemKanFåForeldrepenger';
 import HvorLenge from './hvor-lenge/HvorLenge';
+import Informasjonsbanner from '../infosider/informasjonsbanner/Informasjonsbanner';
 import JegVilJobbe from './jeg-vil-jobbe/JegVilJobbe';
 import MedInnholdsfortegnelse from '../infosider/MedInnholdsfortegnelse';
 import NårKanDuSøke from './når-kan-du-søke/NårKanDuSøke';
 import NyeRegler from './nye-regler/NyeRegler';
-import NyeReglerFra2019 from './nye-regler-fra-2019/NyeReglerFra2019';
 import Sidebanner from '../../components/sidebanner/Sidebanner';
 import Sykdom from './sykdom/Sykdom';
 import '../infosider/infosider.less';
@@ -67,7 +68,9 @@ const OmForeldrepenger: React.StatelessComponent<Props & IntlProps> = ({ locatio
                 }}>
                 <article className={cls.element('article')}>
                     <Breadcrumbs path={location.pathname} />
-                    <NyeReglerFra2019 />
+                    <Informasjonsbanner
+                        tekst={getContent('om-foreldrepenger/nye-regler-fra-2019', lang)}
+                    />
                     <HvemKanFåForeldrepenger id={sections[0]} />
                     <HvorLenge id={sections[1]} />
                     <NyeRegler />

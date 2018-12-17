@@ -1,0 +1,46 @@
+[
+    {
+        "type": "avsnitt",
+        "style": "undertittel",
+        "children": [
+            {
+                "type": "span",
+                "text": "Nye regler fra 1. januar 2019",
+                "marks": []
+            }
+        ],
+        "markDefs": []
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Fra 1/1/2019 øker stønaden med 20.000 kroner til ",
+                "marks": []
+            },
+            { "type": "span", "text": "83.140 kroner", "marks": ["bold"] },
+            { "type": "span", "text": ".", "marks": [] }
+        ],
+        "markDefs": []
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Endringen vil få virkning for fødsler og adopsjoner som skjer ",
+                "marks": []
+            },
+            {
+                "type": "span",
+                "text": "1. januar 2019 eller senere",
+                "marks": ["bold"]
+            },
+            { "type": "span", "text": ".", "marks": [] }
+        ],
+        "markDefs": []
+    }
+]
