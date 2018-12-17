@@ -17,7 +17,7 @@
         "children": [
             {
                 "type": "span",
-                "text": "Fra 1/1/2019 øker stønaden med 20.000 kroner til ",
+                "text": "Fra 1. januar 2019 øker stønaden med 20.000 kroner til ",
                 "marks": []
             },
             { "type": "span", "text": "83.140 kroner", "marks": ["bold"] },
