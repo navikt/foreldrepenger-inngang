@@ -19,7 +19,7 @@ const getInformasjonsfaner = (lang: Language): InformasjonsfaneProps[] => [
                 icon: 'mor1',
                 punkter: [
                     getTranslation(
-                        'om_foreldrepenger.hvor_lenge.fordeling.tre_uker_før_fødsel',
+                        'om_foreldrepenger.hvor_lenge.fordeling.i_tillegg_til_foreldrepenger',
                         lang
                     )
                 ]
