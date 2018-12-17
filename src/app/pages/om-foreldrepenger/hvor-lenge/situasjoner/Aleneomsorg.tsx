@@ -16,7 +16,7 @@ const DEFAULT_TAB: Kvote = 'mødrekvote';
 const getInformasjonsfaner = (lang: Language): InformasjonsfaneProps[] => [
     {
         kvote: DEFAULT_TAB,
-        label: getTranslation(`om_foreldrepenger.hvor_lenge.fordeling.${DEFAULT_TAB}`, lang),
+        label: getTranslation(`om_foreldrepenger.hvor_lenge.fordeling.alenemor`, lang),
         innhold: {
             snakkeboble: {
                 tittel: 'til mor',

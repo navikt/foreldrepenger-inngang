@@ -1,9 +1,5 @@
 import { getTranslation, Language } from 'app/intl/intl';
-import {
-    getMottakersOversettbareNavn,
-    getAntallUker,
-    Foreldresituasjon
-} from 'app/utils/foreldresituasjon';
+import { getAntallUker, Foreldresituasjon } from 'app/utils/foreldresituasjon';
 import { InformasjonsfaneProps } from '../informasjons-faner/Informasjonsfaner';
 
 export const addAntallUkerSomSnakkebobletittel = (
@@ -12,10 +8,6 @@ export const addAntallUkerSomSnakkebobletittel = (
 ) => (fane: InformasjonsfaneProps) => {
     const antallUker100 = getAntallUker(foreldresituasjon, fane.kvote, 'dekning100');
     const antallUker80 = getAntallUker(foreldresituasjon, fane.kvote, 'dekning80');
-    const mottakersNavn = getTranslation(
-        getMottakersOversettbareNavn(foreldresituasjon, fane.kvote),
-        lang
-    );
 
     return {
         ...fane,
@@ -28,7 +20,6 @@ export const addAntallUkerSomSnakkebobletittel = (
                     lang,
                     {
                         antallUker100,
-                        mottakersNavn,
                         antallUker80
                     }
                 )

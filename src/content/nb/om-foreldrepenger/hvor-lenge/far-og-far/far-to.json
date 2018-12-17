@@ -20,48 +20,26 @@
             },
             {
                 "type": "span",
-                "text": "far 2 ",
+                "text": "far 2",
                 "marks": ["bold"]
             },
             {
                 "type": "span",
-                "text": "får også "
+                "text": " får også "
             },
             {
                 "type": "span",
-                "text": "15 uker ",
+                "text": "15 uker",
                 "marks": ["bold"]
             },
             {
                 "type": "span",
-                "text": "satt av til deg."
-            }
-        ]
-    },
-    {
-        "type": "avsnitt",
-        "style": "normaltekst",
-        "children": [
-            {
-                "type": "span",
-                "text": "Ukene kan du ta samlet, dele opp eller kombinere med arbeid."
-            }
-        ]
-    },
-    {
-        "type": "avsnitt",
-        "style": "normaltekst",
-        "children": [
+                "text": " satt av til deg. Ukene kan du ta samlet, dele opp eller kombinere med arbeid."
+            },
             {
                 "type": "span",
                 "text": "Du må ta ut dine uker senest når fellesperioden er ferdig, eller søke om utsettelse."
-            }
-        ]
-    },
-    {
-        "type": "avsnitt",
-        "style": "normaltekst",
-        "children": [
+            },
             {
                 "type": "span",
                 "text": "Hvis du blir så syk at du er helt avhengig av hjelp til å ta deg av barnet, kan far 1 søke om å overta ukene dine."
@@ -89,21 +67,21 @@
             },
             {
                 "type": "span",
-                "text": "ikke plikt ",
+                "text": "ikke plikt",
                 "marks": ["bold"]
             },
             {
                 "type": "span",
-                "text": "til å ta ut ukene satt av til deg, som ved adopsjon. Det betyr at"
+                "text": " til å ta ut ukene satt av til deg, som ved adopsjon. Det betyr at "
             },
             {
                 "type": "span",
-                "text": "biologisk far kan overta ",
+                "text": "biologisk far kan overta",
                 "marks": ["bold"]
             },
             {
                 "type": "span",
-                "text": "ukene dine hvis det passer best for dere."
+                "text": " ukene dine hvis det passer best for dere."
             }
         ]
     }
