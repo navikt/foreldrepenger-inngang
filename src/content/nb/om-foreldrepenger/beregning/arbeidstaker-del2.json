@@ -1,0 +1,65 @@
+[
+  {
+    "type": "avsnitt",
+    "style": "normaltekst",
+    "children": [
+      {
+        "type": "span",
+        "text": "Hvis du både er "
+      },
+      {
+        "type": "span",
+        "text": "arbeidstaker og frilanser ",
+        "marks": ["bold"]
+      },
+      {
+        "type": "span",
+        "text": "skal inntektene beregnes hver for seg og legges sammen til ett beløp. Hvis du har en samlet inntekt over "
+      },
+      {
+        "type": "span",
+        "text": "seks ganger grunnbeløpet",
+        "marks": ["url_seks_ganger_grunnbeløpet", "external_link"]
+      },
+      {
+        "type": "span",
+        "text": ", er det inntekten din som arbeidstaker som legges i bunnen av beregningen."
+      }
+    ],
+    "markDefs": [
+      {
+        "key": "url_seks_ganger_grunnbeløpet",
+        "type": "link",
+        "href": "https://www.nav.no/no/NAV+og+samfunn/Kontakt+NAV/Utbetalinger/Snarveier/satser--380089?kap=383506"
+      }
+    ]
+  },
+  {
+    "type": "avsnitt",
+    "style": "normaltekst",
+    "children": [
+      {
+        "type": "span",
+        "text": "Hvis du både er "
+      },
+      {
+        "type": "span",
+        "text": "selvstendig næringsdrivende og frilanser eller arbeidstaker",
+        "marks": ["bold"]
+      },
+      {
+        "type": "span",
+        "text": ", blir foreldrepengene dine beregnet ut fra "
+      },
+      {
+        "type": "span",
+        "text": "begge inntektene dine.",
+        "marks": ["bold"]
+      },
+      {
+        "type": "span",
+        "text": "Inntekten din som frilanser skal alltid ligge i bunnen for beregningen. Frilansinntekten opp til seks ganger grunnbeløpet dekkes alltid fult ut."
+      }
+    ]
+  }
+]
