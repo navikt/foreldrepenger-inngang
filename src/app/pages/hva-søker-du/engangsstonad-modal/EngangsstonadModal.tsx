@@ -87,7 +87,7 @@ class EngangsstonadModal extends React.Component<Props & IntlProps> {
                         <div className={cls.element('knapper')}>
                             <WithLink
                                 url={
-                                    'https://www.nav.no/no/Person/Skjemaer-for-privatpersoner/Skjemaer/Familie/foreldrepenger-og-engangsstonad/Foreldrepenger+og+engangsst%C3%B8nad?method=mail&veiledertype=privatperson '
+                                    'https://www.nav.no/no/Person/Skjemaer-for-privatpersoner/Skjemaer/Familie/foreldrepenger-og-engangsstonad/Foreldrepenger+og+engangsst%C3%B8nad?method=mail&veiledertype=privatperson'
                                 }
                                 urlIsExternal={true}
                                 noStyling={false}>

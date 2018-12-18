@@ -5,22 +5,71 @@
         "children": [
             {
                 "type": "span",
-                "text": "Foreldrepengene dine blir vanligvis beregnet av gjennomsnittet av inntekten din de ",
-                "marks": []
+                "text": "Foreldrepengene dine blir vanligvis beregnet til "
             },
-            { "type": "span", "text": "tre siste årene", "marks": ["bold"] },
             {
                 "type": "span",
-                "text": ". Hvis virksomheten din eller arbeidssituasjonen din er ",
-                "marks": []
+                "text": "gjennomsnittet av inntekten din de tre siste ferdiglignede årene",
+                "marks": ["bold"]
             },
-            { "type": "span", "text": "varig endret", "marks": ["bold"] },
             {
                 "type": "span",
-                "text": ", kan inntekten du har når foreldrepengeperioden din starter brukes istedenfor. ",
-                "marks": []
+                "text": ". Hvis virksomheten din eller arbeidssituasjonen er varig endret, kan inntekten du har når foreldrepengeperioden din starter brukes istedenfor."
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "De samme reglene gjelder også hvis du mottar sykepenger, foreldre- eller svangerskapspenger eller stønader ved pleie av syke barn."
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Hvis du både er "
+            },
+            {
+                "type": "span",
+                "text": "selvstendig næringsdrivende og frilanser eller arbeidstaker",
+                "marks": ["bold"]
+            },
+            {
+                "type": "span",
+                "text": ", blir foreldrepengene dine beregnet ut fra "
+            },
+            {
+                "type": "span",
+                "text": "begge inntektene dine",
+                "marks": ["bold"]
+            },
+            {
+                "type": "span",
+                "text": ". Inntekten din som frilanser skal alltid ligge i bunnen for beregningen. Frilanserinntekten opp til seks ganger "
+            },
+            {
+                "type": "span",
+                "text": "grunnbeløpet",
+                "marks": ["url_grunnbeløp", "url_external"]
+            },
+            {
+                "type": "span",
+                "text": " dekkes alltid fullt ut."
             }
         ],
-        "markDefs": []
+        "markDefs": [
+            {
+                "key": "url_grunnbeløp",
+                "type": "link",
+                "href": "https://www.nav.no/383506/grunnbel%C3%B8pet-i-folketrygden"
+            }
+        ]
     }
 ]

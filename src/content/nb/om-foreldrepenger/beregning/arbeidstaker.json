@@ -5,94 +5,17 @@
         "children": [
             {
                 "type": "span",
-                "text": "Foreldrepengene dine beregnes vanligvis ut ifra inntekten du har når foreldrepengeperioden din begynner. Hvis du har:",
-                "marks": []
-            }
-        ],
-        "markDefs": []
-    },
-    {
-        "type": "avsnitt",
-        "style": "normaltekst",
-        "listItem": "bullet",
-        "level": 1,
-        "children": [
-            {
-                "type": "span",
-                "text": "fast arbeidstid og månedslønn, brukes den siste måneden",
-                "marks": []
-            }
-        ]
-    },
-    {
-        "type": "avsnitt",
-        "style": "normaltekst",
-        "listItem": "bullet",
-        "level": 1,
-        "children": [
-            {
-                "type": "span",
-                "text": "fast arbeidstid og timelønn, brukes de siste fire ukene",
-                "marks": []
-            }
-        ]
-    },
-    {
-        "type": "avsnitt",
-        "style": "normaltekst",
-        "listItem": "bullet",
-        "level": 1,
-        "children": [
-            {
-                "type": "span",
-                "text": "varierende inntekt eller stillingsprosent, brukes et gjennomsnitt av de siste tre, seks eller ni månedene",
-                "marks": []
-            }
-        ]
-    },
-    {
-        "type": "avsnitt",
-        "style": "normaltekst",
-        "listItem": "bullet",
-        "level": 1,
-        "children": [
-            {
-                "type": "span",
-                "text": "nylig fått jobb eller endret lønn, brukes inntekten din etter endringen",
-                "marks": []
-            }
-        ]
-    },
-    {
-        "type": "avsnitt",
-        "style": "normaltekst",
-        "children": [
-            {
-                "type": "span",
-                "text": "Har du hatt flere deltidsstillinger, er det den totale inntekten din som gjelder når foreldrepengene dine skal beregnes.",
-                "marks": []
-            }
-        ],
-        "markDefs": []
-    },
-    {
-        "type": "avsnitt",
-        "style": "normaltekst",
-        "children": [
-            {
-                "type": "span",
-                "text": "Hvis inntekten din er ",
+                "text": "Foreldrepengene dine beregnes vanligvis ut fra gjennomsnittet av inntekten du har hatt i de ",
                 "marks": []
             },
             {
                 "type": "span",
-                "text": "25 prosent større eller mindre",
+                "text": "tre siste kalendermånedene ",
                 "marks": ["bold"]
             },
             {
                 "type": "span",
-                "text": " enn det du har tjent de tre siste årene, vil enten den nåværende inntekten din brukes eller gjennomsnittet av de tre siste årene.",
-                "marks": []
+                "text": "før foreldrepengeperioden din starter. Dette gjelder både hvis du er fast ansatt eller har skiftende arbeidsperioder eller inntekter."
             }
         ],
         "markDefs": []
@@ -103,8 +26,57 @@
         "children": [
             {
                 "type": "span",
-                "text": "Også andre situasjoner kan gi deg rett til foreldrepenger. Dette kan være:",
+                "text": "Hvis det er mer enn 25 prosent forskjell mellom årsinntekten din og inntekten din de tre siste månedene, må vi vurdere hvilken inntekt som er mest representativ i din situasjon."
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "listItem": "bullet",
+        "level": 1,
+        "children": [
+            {
+                "type": "span",
+                "text": "Hvis arbeidsforholdet ditt har vart under tre måneder, skal foreldrepengene regnes ut fra inntekten du har hatt i den perioden du har vært i jobb. Inntekten din regnes om til en månedsinntekt.",
                 "marks": []
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "listItem": "bullet",
+        "level": 1,
+        "children": [
+            {
+                "type": "span",
+                "text": "Hvis du har hatt ferie eller korte perioder med tilfeldig ulønnet permisjon i perioden du har hatt inntekt, fastsettes inntekten din til det du vanligvis ville hatt hvis du hadde vært i jobb.",
+                "marks": []
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "listItem": "bullet",
+        "level": 1,
+        "children": [
+            {
+                "type": "span",
+                "text": "Hvis arbeidsforholdet ditt avsluttes før du starter foreldrepengeperioden, blir foreldrepengene dine beregnet etter inntekten din de tre siste månedene før arbeidsforholdet ble avsluttet",
+                "marks": []
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Dette kan også gi deg rett til foreldrepenger:",
+                "marks": ["bold"]
             }
         ],
         "markDefs": []
