@@ -11,7 +11,7 @@
                 "text": "søknad",
                 "marks": ["bold"]
             },
-            { "type": "span", "text": " om å utsette foreldrepengene", "marks": [] }
+            { "type": "span", "text": " om å utsette foreldrepengene.", "marks": [] }
         ]
     },
     {
@@ -28,7 +28,7 @@
             },
             {
                 "type": "span",
-                "text": " fra sykehuset eller helseinstitusjonen",
+                "text": " fra sykehuset eller helseinstitusjonen.",
                 "marks": []
             }
         ]

@@ -77,11 +77,11 @@
         "listItem": "bullet",
         "level": 1,
         "children": [
-            { "type": "span", "text": "Den andre forelderen er ", "marks": [] },
-            { "type": "span", "text": "syk, men hjemme", "marks": ["bold"] },
+            { "type": "span", "text": "Du er blitt ", "marks": [] },
+            { "type": "span", "text": "syk", "marks": ["bold"] },
             {
                 "type": "span",
-                "text": ": Legg ved en legeerklæring. Den må beskrive hvordan sykdommen gjør den andre forelderen helt avhengig av hjelp til å ta seg av barnet, og hvor lenge sykdommen vil vare",
+                "text": ": Legg ved en legeerklæring. Den må beskrive hvordan sykdommen gjør deg helt avhengig av hjelp til å ta deg av barnet, og hvor lenge sykdommen vil vare.",
                 "marks": []
             }
         ]
@@ -92,7 +92,7 @@
         "listItem": "bullet",
         "level": 1,
         "children": [
-            { "type": "span", "text": "Den andre forelderen er ", "marks": [] },
+            { "type": "span", "text": "Du er ", "marks": [] },
             { "type": "span", "text": "innlagt", "marks": ["bold"] },
             {
                 "type": "span",

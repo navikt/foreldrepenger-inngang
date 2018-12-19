@@ -15,13 +15,22 @@
         "type": "avsnitt",
         "style": "normaltekst",
         "children": [
-            { "type": "span", "text": "Når foreldrepengeperioden starter i 2019 og dere har valgt 80 prosent foreldrepenger, er kvoten til hver av foreldrene på 19 uker. ", "marks": [] },
             {
                 "type": "span",
-                "text": "Les mer om beregning av foreldrepenger",
-                "marks": [
-                    "url_om_beregningsregler_fra_2019"
-                ]
+                "text": "Når foreldrepengeperioden starter i 2019 og dere har valgt 80 prosent foreldrepenger, er kvoten til hver av foreldrene på 19 uker. ",
+                "marks": []
+            }
+        ],
+        "markDefs": []
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Les om hva du kan få i foreldrepenger",
+                "marks": ["url_om_beregningsregler_fra_2019"]
             }
         ],
         "markDefs": [

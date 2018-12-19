@@ -2,20 +2,31 @@
     width: 100%;
     margin: 0.5rem 0;
 
-    .ekspanderbartPanel__innhold {
-        padding: 1.5rem 1.5rem;
-    }
+    .ekspanderbartPanel {
+        &--apen .ekspanderbartPanel__flex-wrapper {
+            border-bottom-color: lightgray;
+        }
 
-    .ekspanderbartPanel__hode {
-        padding-left: 1.5rem;
-        background-color: unset;
+        &__innhold {
+            padding: 1.5rem 1.5rem;
+        }
+
+        &__flex-wrapper {
+            border-bottom: 2px solid transparent;
+            padding-bottom: 1rem;
+        }
+
+        &__hode {
+            padding: 1rem 1.5rem 0rem;
+            background-color: unset;
+        }
     }
 
     .strukturertTekst {
         &:nth-child(1) {
             margin-top: 0;
         }
-        
+
         &:nth-last-child(1) {
             margin-bottom: 0;
         }
