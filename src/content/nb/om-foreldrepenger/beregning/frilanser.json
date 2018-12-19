@@ -5,7 +5,7 @@
         "children": [
             {
                 "type": "span",
-                "text": "Foreldrepengene dine regnes vanligvis ut fra gjennomsnittet av inntekten du har hatt i de"
+                "text": "Foreldrepengene dine regnes vanligvis ut fra gjennomsnittet av inntekten du har hatt i de "
             },
             {
                 "type": "span",
@@ -14,7 +14,7 @@
             },
             {
                 "type": "span",
-                "text": "før foreldrepengeperioden din starter."
+                "text": " før foreldrepengeperioden din starter."
             }
         ]
     },
@@ -28,12 +28,12 @@
             },
             {
                 "type": "span",
-                "text": "25 prosent forskjell ",
+                "text": "25 prosent forskjell",
                 "marks": ["bold"]
             },
             {
                 "type": "span",
-                "text": "mellom årsinntekten din og inntekten din de "
+                "text": " mellom årsinntekten din og inntekten din de "
             },
             {
                 "type": "span",
@@ -66,12 +66,12 @@
             },
             {
                 "type": "span",
-                "text": "arbeidstaker og frilanser ",
+                "text": "arbeidstaker og frilanser",
                 "marks": ["bold"]
             },
             {
                 "type": "span",
-                "text": "skal inntektene beregnes hver for seg og legges sammen til "
+                "text": " skal inntektene beregnes hver for seg og legges sammen til "
             },
             {
                 "type": "span",
