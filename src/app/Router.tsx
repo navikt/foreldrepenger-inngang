@@ -8,7 +8,6 @@ import OmEngangsstønad from './pages/om-engangsstønad/OmEngangsstønad';
 import Dokumentasjon from './pages/dokumentasjon/Dokumentasjon';
 import NyeBeregningsregler from './pages/nye-beregningsregler/NyeBeregningsregler';
 import Kalkulator from './pages/kalkulator/Kalkulator';
-import ViktigeFrister from './pages/viktige-frister/ViktigeFrister';
 import Veiviser from './pages/veiviser/Veiviser';
 import { ValidPath } from './utils/validPath';
 
@@ -21,13 +20,25 @@ const ValidRoute = (props: ValidRouteProps) => <Route {...props} />;
 const Router = () => (
     <Switch>
         <ValidRoute exact={true} path="/" component={Informasjonstavle} key="informasjonstavle" />
-        <ValidRoute exact={true} path="/hvor-mye" component={Kalkulator} key="kalkulator" />
+        <ValidRoute
+            exact={true}
+            path="/dokumentasjon"
+            component={Dokumentasjon}
+            key="dokumentasjon"
+        />
         <ValidRoute exact={true} path="/hva-soker-du" component={HvaSøkerDu} key="hva-soker-du" />
         <ValidRoute
             exact={true}
             path="/hva-soker-du/svangerskapspenger"
             component={SøkSvangerskapspenger}
             key="svangerskapspenger"
+        />
+        <ValidRoute exact={true} path="/hvor-mye" component={Kalkulator} key="kalkulator" />
+        <ValidRoute
+            exact={true}
+            path="/om-engangsstonad"
+            component={OmEngangsstønad}
+            key="om-engangsstonad"
         />
         <ValidRoute
             exact={true}
@@ -41,23 +52,7 @@ const Router = () => (
             component={NyeBeregningsregler}
             key="nye-beregningsregler"
         />
-        <ValidRoute
-            exact={true}
-            path="/om-engangsstonad"
-            component={OmEngangsstønad}
-            key="om-engangsstonad"
-        />
-        <ValidRoute
-            exact={true}
-            path="/viktige-frister"
-            component={ViktigeFrister}
-            key="viktige-frister"
-        />
-
         <ValidRoute exact={true} path="/veiviser" component={Veiviser} key="veiviser" />
-        <Route exact={true} path="/dokumentasjon" component={Dokumentasjon} key="dokumentasjon" />
-        <Route exact={true} path="/veiviser" component={Veiviser} key="veiviser" />
-
         <Redirect to="/" />
     </Switch>
 );

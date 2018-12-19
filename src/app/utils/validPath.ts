@@ -6,5 +6,5 @@ export type ValidPath =
     | '/om-foreldrepenger'
     | '/om-foreldrepenger/nye-beregningsregler'
     | '/om-engangsstonad'
-    | '/viktige-frister'
+    | '/dokumentasjon'
     | '/veiviser';
