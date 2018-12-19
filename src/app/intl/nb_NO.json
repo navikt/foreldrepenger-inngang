@@ -61,6 +61,10 @@
     "route.hvor-mye": "Hvor mye?",
     "route.veiviser": " Hva kan du få?",
 
+    "languageToggle.bokmål": "Bokmål",
+    "languageToggle.nynorsk": "Nynorsk",
+    "languageToggle.english": "Engelsk",
+
     "informasjonstavle.tittel": "Foreldrepenger, engangsstønad og svangerskapspenger",
     "informasjonstavle.ingress": "Dette har du rett til når du venter barn eller skal ha foreldrepermisjon.",
     "informasjonstavle.hva_kan_du_få": "Hva kan du få?",
