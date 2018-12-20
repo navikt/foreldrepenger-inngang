@@ -5,7 +5,6 @@ import { getContent } from '../../../../utils/getContent';
 import LesMer from 'app/components/les-mer/LesMer';
 
 const beregningTekstPath = 'om-foreldrepenger/beregning/arbeidstaker';
-const beregningTekstPathDel2 = 'om-foreldrepenger/beregning/arbeidstaker-del2';
 const arbeidstakerTasMed = 'om-foreldrepenger/beregning/arbeidstaker-tas-med';
 const arbeidstakerTasIkkeMed = 'om-foreldrepenger/beregning/arbeidstaker-tas-ikke-med';
 const dagerUtenArbeid = 'om-foreldrepenger/beregning/arbeidstaker-dager-uten-arbeid';
@@ -35,8 +34,6 @@ const Arbeidstaker: React.StatelessComponent<IntlProps> = ({ lang }) => {
                 )}>
                 <StrukturertTekst tekst={getContent(dagerUtenArbeid, lang)} />
             </LesMer>
-
-            <StrukturertTekst tekst={getContent(beregningTekstPathDel2, lang)} />
         </div>
     );
 };

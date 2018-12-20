@@ -7,7 +7,7 @@ import { getGrunnbeløpet } from 'app/utils/beregningUtils';
 
 const cls = BEMHelper('arbeidstakerTxt');
 
-const beregningTekstPath = 'om-foreldrepenger/beregning/milit-eller-sivilforsvaret';
+const beregningTekstPath = 'om-foreldrepenger/beregning/andre-inntekskilder';
 
 const AndreInntekskilder: React.StatelessComponent<IntlProps> = ({ lang }) => {
     return (

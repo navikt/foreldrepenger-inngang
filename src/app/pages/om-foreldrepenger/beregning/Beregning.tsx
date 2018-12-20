@@ -16,8 +16,6 @@ import './beregning.less';
 import Selvstendig from './innhold/Selvstendig';
 import HarYtelser from './innhold/HarYtelser';
 import AndreInntekskilder from './innhold/AndreInntekskilder';
-import { FrilanserIkon } from './ikoner/FrilanserIkon';
-import Frilanser from './innhold/Frilanser';
 
 const beregningSvg = require('../../../assets/ark/ark-beregning.svg').default;
 const cls = BEMHelper('beregning');
@@ -32,11 +30,6 @@ const tabs: Innholdsfane[] = [
         label: 'om_foreldrepenger.beregning.selvstendig',
         icon: <SelvstendigIkon />,
         component: <Selvstendig />
-    },
-    {
-        label: 'om_foreldrepenger.beregning.frilanser.ikontittel',
-        icon: <FrilanserIkon />,
-        component: <Frilanser />
     },
     {
         label: 'om_foreldrepenger.beregning.harYtelse',
