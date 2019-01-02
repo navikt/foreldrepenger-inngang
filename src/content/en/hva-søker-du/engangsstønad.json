@@ -1,0 +1,13 @@
+[
+    {
+        "type": "avsnitt-uten-padding",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "If you are the mother and have not had an income, you can receive a lump-sum at birth instead of the parental benefit.",
+                "marks": []
+            }
+        ]
+    }
+]

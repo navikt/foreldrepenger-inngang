@@ -33,11 +33,11 @@
     "årene": "years",
     "månedene": "months",
 
-    "far_og_mor": "Father and mother",
-    "far_og_far": "Father and father",
-    "mor_og_mor": "Mother and mother",
-    "bare_far_har_rett": "Only the father is entitled",
-    "bare_mor_har_rett": "Only the mother is entitled",
+    "farOgMor": "Father and mother",
+    "farOgFar": "Father and father",
+    "morOgMor": "Mother and mother",
+    "bareFarHarRett": "Only the father is entitled",
+    "bareMorHarRett": "Only the mother is entitled",
     "aleneomsorg": "Sole custody",
 
     "route.": "Parental benefit, lump-sum grant and pregnancy benefit",
@@ -59,8 +59,9 @@
     "languageToggle.english": "Engelsk",
 
     "informasjonstavle.tittel": "Parental benefit, lump-sum grant and pregnancy benefit",
-    "informasjonstavle.hva_kan_jeg_få": "What can I receive?",
-    "informasjonstavle.hva_kan_jeg_få_ingress": " Use the wizard to find out whether you should apply for the parental benefit or lump-sum grant",
+    "informasjonstavle.ingress": "These are your rights when expecting children or awaiting parental benefits.",
+    "informasjonstavle.hva_kan_du_få": "What can I receive?",
+    "informasjonstavle.hva_kan_du_få_ingress": " Use the wizard to find out whether you should apply for the parental benefit or lump-sum grant",
     "informasjonstavle.hvor_mye": "How much?",
     "informasjonstavle.hvor_mye_ingress": "Calculate the parental benefit you are entitled to.",
     "informasjonstavle.hvor_lenge": "How long?",
@@ -76,12 +77,12 @@
 
     "informasjonstavle.andre_lenker.tittel": "Related information",
     "informasjonstavle.andre_lenker.ettersende_vedlegg_til_søknad": "Forward attachments for the application",
-    "informasjonstavle.andre_lenker.hvis_du_skal_på_ferie": "If you will be going on holiday",
+    "informasjonstavle.andre_lenker.informasjon_om_kontantstøtte": "Information on cash benefit",
     "informasjonstavle.andre_lenker.regelverk": "Rules",
     "informasjonstavle.andre_lenker.hvis_en_av_dere_blir_syke": "If one of you becomes sick",
     "informasjonstavle.andre_lenker.meld_fra_om_endringer": "Report changes",
     "informasjonstavle.andre_lenker.slik_klager_du": "How to appeal",
-    "informasjonstavle.andre_lenker.husk_å_søke_i_rett_tid": "Remember to apply at the correct time",
+    "informasjonstavle.andre_lenker.dokumentasjon": "Required documentation",
     "informasjonstavle.andre_lenker.opphold_i_utlandet": "Stays abroad",
     "informasjonstavle.andre_lenker.hvis_du_vil_jobbe": "If you wish to work",
 
@@ -131,13 +132,15 @@
     "viktige_frister.du_skal_legge_dok_pa_termindato": "You must submit documentation of your expected date of delivery if you are pregnant and",
 
     "hva_søker_du.tittel": "What do you wish to apply for?",
-    "hva_søker_du.søk_foreldrepenger": "Application for parental benefit",
-    "hva_søker_du.har_søkt_foreldrepenger": "Application for adjustment",
-    "hva_søker_du.søk_engangsstønad": "Application for lump-sum grant",
+    "hva_søker_du.søk_foreldrepenger": "Apply for parental benefit",
+    "hva_søker_du.ettersend_vedlegg": "Submit documentation",
+    "hva_søker_du.søk_engangsstønad": "Apply for a lump-sum grant",
     "hva_søker_du.engangsstønad_modal": "Read about the lump-sum grant to the father, co-mother or in connection with adoption",
-    "hva_søker_du.søk_svangerskapspenger": "Application for pregnancy benefit",
+    "hva_søker_du.søk_svangerskapspenger": "Apply for pregnancy benefit",
     "hva_søker_du.ingen_elektronisk_id": "I do not have an electronic ID",
     "hva_søker_du.ingen_elektronisk_id_hjelp": "To apply online, you must have BankID from your bank or another electronic ID.",
+    "hva_søker_du.engangsstønad.sokPapir.modal.knapp.standard": "Go to the paper-based application",
+    "hva_søker_du.engangsstønad.sokPapir.modal.knapp.hoved": "Go to the application",
 
     "søk_foreldrepenger.tittel": "Application for parental benefit",
     "søk_foreldrepenger.knapp": "Start application for parental benefit",
@@ -147,13 +150,17 @@
     "søk_svangerskapspenger.tittel": "Application for pregnancy benefit",
 
     "hurtiglenke.hvem_kan_fa_foreldrepenger": "Who can receive the parental benefit?",
-    "hurtiglenke.hvor_lenge_kan_jeg_fa_foreldrepenger": "How long can I receive the parental benefit?",
-    "hurtiglenke.hva_kan_jeg_fa": "What am I entitled to?",
+    "hurtiglenke.hvor_lenge_kan_du_fa_foreldrepenger": "How long can you receive the parental benefit?",
+    "hurtiglenke.hva_kan_du_fa": "What can you receive?",
+    "hurtiglenke.nar_kan_du_soke": "When can you apply?",
     "hurtiglenke.hvis_du_skal_pa_ferie": " If you will be going on holiday",
     "hurtiglenke.hvis_du_vil_jobbe": "If you wish to work",
     "hurtiglenke.hvis_en_av_dere_blir_syke": "If one of you becomes sick",
     "hurtiglenke.hjemme_samtidig": "Home at the same time",
     "hurtiglenke.adoptere": "Adopting",
+    "hurtiglenke.hvem_kan_fa_engangsstonad": "Who is entitled to the lump-sum grant?",
+    "hurtiglenke.nar_blir_pengene_utbetalt": "When will the money be paid out?",
+    "hurtiglenke.engangsstonad_til_far_eller_medmor": "Lump-sum grant to father or co-mother",
 
     "innholdsfortegnelse.søk_nå": "Apply now",
 
@@ -161,7 +168,7 @@
     "om_foreldrepenger.tittel": "All information regarding the parental benefit",
     "om_foreldrepenger.for_å_få.tittel": "Who can receive the parental benefit?",
 
-    "om_foreldrepenger.hvor_lenge.tittel": "How long can I receive the parental benefit?",
+    "om_foreldrepenger.hvor_lenge.tittel": "How long can you receive the parental benefit?",
     "om_foreldrepenger.hvor_lenge.eksempel": "Example with fixed income of NOK 22,000 per month",
     "om_foreldrepenger.hvor_lenge.hurtiglenker": "But what if ...",
     "om_foreldrepenger.hvor_lenge.kalkulatorlenke": "Calculate your parental benefit",
@@ -189,6 +196,12 @@
 
     "om_foreldrepenger.hvor_lenge.forslag.åpne": " Proposal for adjustment of parental benefit period at 80 per cent",
     "om_foreldrepenger.hvor_lenge.forslag.lukke": "Close information",
+
+    "om_foreldrepenger.når_kan_du_søke.tittel": "When can you apply?",
+    "om_foreldrepenger.når_kan_du_søke.hvis_du_skal_utsette_fordi": "If you are delaying because:",
+    "om_foreldrepenger.når_kan_du_søke.utsette_sykdom": "One of you gets sick",
+    "om_foreldrepenger.når_kan_du_søke.utsette_jobbe": "You are going to work",
+    "om_foreldrepenger.når_kan_du_søke.utsette_ferie": "You will be going on holiday",
 
     "om_foreldrepenger.ferie.tittel": " If you will be going on holiday",
     "om_foreldrepenger.ferie.eksempel_label": "Example of how you can extend your parental benefit period when you postpone:",
@@ -247,6 +260,7 @@
 
     "om_engangsstønad.tittel": "All information regarding the lump-sum grant",
     "om_engangsstønad.hva_er.tittel": "Who is entitled to the lump-sum grant?",
+    "om_engangsstønad.når_kan_du_søke.tittel": "When can you apply?",
     "om_engangsstønad.hva_kan_du_få.tittel": "What can you receive?",
     "om_engangsstønad.utbetaling.tittel": "When will the money be paid out?",
     "om_engangsstønad.til_far.tittel": "Lump-sum grant to father or co-mother",

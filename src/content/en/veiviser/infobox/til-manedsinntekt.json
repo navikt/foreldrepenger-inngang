@@ -1,0 +1,12 @@
+[
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "To be entitled to the parental benefit you must earn a minimum of NOK 48,442 per year."
+            }
+        ]
+    }
+]

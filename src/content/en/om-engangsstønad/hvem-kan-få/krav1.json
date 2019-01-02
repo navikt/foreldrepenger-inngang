@@ -1,0 +1,23 @@
+[
+    {
+        "type": "avsnitt",
+        "style": "undertittel",
+        "children": [{ "type": "span", "text": "I am the mother of the child", "marks": [] }]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "In some instances the "
+            },
+            {
+                "type": "span",
+                "text": "father or co-mother can receive the lump-sum benefit.",
+                "marks": ["url_les_mer"]
+            }
+        ],
+        "markDefs": [{ "key": "url_les_mer", "type": "link", "href": "#far-eller-medmor" }]
+    }
+]

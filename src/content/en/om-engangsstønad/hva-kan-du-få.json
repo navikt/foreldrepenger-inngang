@@ -1,0 +1,36 @@
+[
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "You receive a lump-sum amount of NOK ",
+                "marks": []
+            },
+            {
+                "type": "span",
+                "text": "ENGANGSSUM_PER_BARN",
+                "marks": ["variable", "bold"]
+            },
+            {
+                "type": "span",
+                "text": " for every child you give birth to or adopt.",
+                "marks": []
+            }
+        ],
+        "markDefs": []
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "You are not entitled to the lump-sum grant if you adopt your spouse’s child. The same applies if you adopt a child over the age of 15.",
+                "marks": []
+            }
+        ],
+        "markDefs": []
+    }
+]

@@ -1,0 +1,26 @@
+[
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "You will normally be paid the lump-sum grant one week after your application was approved. The benefit is tax-free.",
+                "marks": []
+            }
+        ],
+        "markDefs": []
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "The processing time is up to six weeks.",
+                "marks": []
+            }
+        ],
+        "markDefs": []
+    }
+]

@@ -1,0 +1,33 @@
+[
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "You cannot use this service until further notice.",
+                "marks": []
+            }
+        ],
+        "markDefs": []
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            { "type": "span", "text": "Read more about ", "marks": [] },
+            {
+                "type": "span",
+                "text": "new rules for self-employed people from 2019",
+                "marks": ["url_om_beregningsregler_for_selvstendig_næringsdrivende_fra_2019"]
+            }
+        ],
+        "markDefs": [
+            {
+                "key": "url_om_beregningsregler_for_selvstendig_næringsdrivende_fra_2019",
+                "type": "link",
+                "href": "/om-foreldrepenger/nye-beregningsregler"
+            }
+        ]
+    }
+]

@@ -1,0 +1,47 @@
+[
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Based on the figures you have provided, we assume that you ",
+                "marks": []
+            },
+            { "type": "span", "text": "INNTEKTSSITUASJON", "marks": ["variable"] },
+            {
+                "type": "span",
+                "text": " ",
+                "marks": []
+            },
+            { "type": "span", "text": "ÅRLIG_SNITTLØNN", "marks": ["variable", "bold"] },
+            { "type": "span", "text": " kroner", "marks": ["bold"] },
+            {
+                "type": "span",
+                "text": ". If what you actually ",
+                "marks": []
+            },
+            { "type": "span", "text": "INNTEKTSSITUASJON_PRETERITUM", "marks": ["variable"] },
+            {
+                "type": "span",
+                "text": " in the past twelve months is less than ",
+                "marks": []
+            },
+            { "type": "span", "text": "NEDRE_AVVIKSGRENSE", "marks": ["variable", "bold"] },
+            { "type": "span", "text": " kr", "marks": ["bold"] },
+            {
+                "type": "span",
+                "text": " or higher than ",
+                "marks": []
+            },
+            { "type": "span", "text": "ØVRE_AVVIKSGRENSE", "marks": ["variable", "bold"] },
+            { "type": "span", "text": " kr", "marks": ["bold"] },
+            {
+                "type": "span",
+                "text": ", you will first be informed about what you will receive when your application has been processed.",
+                "marks": []
+            }
+        ],
+        "markDefs": []
+    }
+]

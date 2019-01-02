@@ -1,0 +1,53 @@
+[
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Based on the figures you have provided, we assume that you ",
+                "marks": []
+            },
+            { "type": "span", "text": "INNTEKTSSITUASJON", "marks": ["variable"] },
+            { "type": "span", "text": " ", "marks": [] },
+            { "type": "span", "text": "ÅRLIG_SNITTLØNN", "marks": ["variable", "bold"] },
+            { "type": "span", "text": " kroner", "marks": ["bold"] },
+            {
+                "type": "span",
+                "text": ". To be entitled to the parental benefit you must ",
+                "marks": []
+            },
+            { "type": "span", "text": "INNTEKTSSITUASJON_VERB", "marks": ["variable"] },
+            {
+                "type": "span",
+                "text": " a minimum of ",
+                "marks": []
+            },
+            { "type": "span", "text": "EN_HALV_G", "marks": ["bold", "variable"] },
+            { "type": "span", "text": " kr", "marks": ["bold"] },
+            {
+                "type": "span",
+                "text": " for the year. If you do not, you can apply for a lump-sum instead of the parental benefit. ",
+                "marks": []
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Read more about lump-sum grant",
+                "marks": ["url_Les_mer_om_engangsstønad"]
+            }
+        ],
+        "markDefs": [
+            {
+                "key": "url_Les_mer_om_engangsstønad",
+                "type": "link",
+                "href": "/om-engangsstonad"
+            }
+        ]
+    }
+]

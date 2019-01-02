@@ -1,0 +1,143 @@
+[
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Are you ",
+                "marks": []
+            },
+            {
+                "type": "span",
+                "text": "an employee",
+                "marks": ["bold"]
+            },
+            {
+                "type": "span",
+                "text": "? You then apply using the ",
+                "marks": []
+            },
+            {
+                "type": "span",
+                "text": "Arbeidstilsynets skjema",
+                "marks": ["url_arbeidstilsynets_skjema", "external_link"]
+            },
+            {
+                "type": "span",
+                "text": " \"Omplassering/tilrettelegging pga graviditet\" (\"Alternative/adjusted work due to pregnancy\") (no. 474 b). Your doctor or midwife must fill in his/her part of the form. You give the form to your employer before it is sent to NAV.",
+                "marks": []
+            }
+        ],
+        "markDefs": [
+            {
+                "key": "url_arbeidstilsynets_skjema",
+                "type": "link",
+                "href": "https://www.arbeidstilsynet.no/tema/graviditet-og-arbeidsmiljo/skjema-for-tilrettelegging-for-gravide/"
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Are you ",
+                "marks": []
+            },
+            {
+                "type": "span",
+                "text": "selvstendig næringsdrivende eller frilanser",
+                "marks": ["bold"]
+            },
+            {
+                "type": "span",
+                "text": "? Then you will find the form here:",
+                "marks": []
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Krav om svangerskapspenger til selvstendig næringsdrivende og frilanser  (Application for pregnancy benefits for the self-employed/freelancers)",
+                "marks": []
+            }
+        ],
+        "markDefs": []
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            { "type": "span", "text": "Form in: ", "marks": [] },
+            {
+                "type": "span",
+                "text": "Norwegian (Bokmål)",
+                "marks": ["url_krav_bokmål", "external_link"]
+            },
+            {
+                "type": "span",
+                "text": "Norwegian (Nynorsk)",
+                "marks": ["url_krav_nynorsk", "external_link"]
+            }
+        ],
+        "markDefs": [
+            {
+                "key": "url_krav_bokmål",
+                "type": "link",
+                "href": "https://www.nav.no/no/Person/Skjemaer-for-privatpersoner/skjemaveileder/vedlegg?key=233606&languagecode=53&veiledertype=privatperson"
+            },
+            {
+                "key": "url_krav_nynorsk",
+                "type": "link",
+                "href": "https://www.nav.no/no/Person/Skjemaer-for-privatpersoner/skjemaveileder/vedlegg?key=233606&languagecode=54&veiledertype=privatperson"
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            {
+                "type": "span",
+                "text": "Income information for self-employed people and/or freelancers who are claiming the parental benefit or pregnancy benefit.",
+                "marks": []
+            }
+        ],
+        "markDefs": []
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "children": [
+            { "type": "span", "text": "Form in: ", "marks": [] },
+            {
+                "type": "span",
+                "text": "Norwegian (Bokmål)",
+                "marks": ["url_selvstendig_bokmål", "external_link"]
+            },
+            {
+                "type": "span",
+                "text": "Norwegian (Nynorsk)",
+                "marks": ["url_selvstendig_nynorsk", "external_link"]
+            }
+        ],
+        "markDefs": [
+            {
+                "key": "url_selvstendig_bokmål",
+                "type": "link",
+                "href": "https://www.nav.no/no/Person/Skjemaer-for-privatpersoner/skjemaveileder/vedlegg?key=422066&languagecode=53&veiledertype=privatperson"
+            },
+            {
+                "key": "url_selvstendig_nynorsk",
+                "type": "link",
+                "href": "https://www.nav.no/no/Person/Skjemaer-for-privatpersoner/skjemaveileder/vedlegg?key=422066&languagecode=54&veiledertype=privatperson"
+            }
+        ]
+    }
+]
