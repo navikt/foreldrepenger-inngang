@@ -14,7 +14,8 @@
         "start": "node ./src/build/scripts/start-dev.js",
         "start-no-decorator": "node ./src/build/scripts/start-dev-nodecorator.js",
         "precommit": "pretty-quick --staged",
-        "jest": "jest --verbose --config ./jest/jest.config.js"
+        "test": "jest --verbose --config ./jest/jest.config.js",
+        "test-watch": "jest --watch --verbose --config ./jest/jest.config.js"
     },
     "keywords": [],
     "author": "NAV",
