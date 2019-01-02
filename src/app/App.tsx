@@ -1,5 +1,5 @@
 import * as React from 'react';
-import IntlContext from './intl/IntlContext';
+import IntlProvider from './intl/IntlProvider';
 import { getTranslation, Language } from './intl/intl';
 import BEMHelper from './utils/bem';
 import TypografiBase from 'nav-frontend-typografi';
@@ -62,11 +62,7 @@ class App extends React.Component<{}, State> {
         )} ${getTranslation(otherMålform, this.state.currentLanguage)}`;
 
         return (
-            <IntlContext.Provider
-                value={{
-                    lang: this.state.currentLanguage,
-                    setLanguage: this.setLanguage
-                }}>
+            <IntlProvider language={this.state.currentLanguage}>
                 <div lang={this.state.currentLanguage}>
                     {ENABLE_LANGUAGE_TOGGLER && (
                         <Språkbanner
@@ -76,7 +72,7 @@ class App extends React.Component<{}, State> {
                     )}
                     <Router />
                 </div>
-            </IntlContext.Provider>
+            </IntlProvider>
         );
     };
 }

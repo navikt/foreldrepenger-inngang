@@ -78,6 +78,7 @@
     },
     "dependencies": {
         "@types/lodash": "^4.14.118",
+        "@types/react-intl": "^2.3.14",
         "autoprefixer": "^9.3.1",
         "babel-runtime": "^6.22.0",
         "classnames": "2.2.6",
@@ -139,7 +140,7 @@
         "react-collapse": "4.0.3",
         "react-dom": "16.6.3",
         "react-helmet": "5.2.0",
-        "react-intl": "2.7.2",
+        "react-intl": "^2.7.2",
         "react-modal": "3.6.1",
         "react-motion": "0.5.2",
         "react-responsive": "6.0.1",
