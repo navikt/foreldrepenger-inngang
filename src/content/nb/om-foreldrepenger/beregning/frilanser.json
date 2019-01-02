@@ -5,12 +5,39 @@
         "children": [
             {
                 "type": "span",
-                "text": "Vanligvis blir foreldrepengene dine beregnet til gjennomsnittet av inntekten din de "
+                "text": "Vanligvis blir foreldrepengene dine regnet ut fra gjennomsnittet av inntekten du har hatt i de "
             },
             {
                 "type": "span",
-                "text": "tre siste ferdiglignede årene.",
+                "text": "tre siste kalendermånedene",
                 "marks": ["bold"]
+            },
+            {
+                "type": "span",
+                "text": "før foreldrepengeperioden din starter. Hvis det er mer enn 25 prosent forskjell mellom årsinntekten din og inntekten din de tre siste månedene, må vi vurdere hvilken inntekt som er mest representativ i din situasjon."
+            }
+        ]
+    },
+    {
+        "type": "avsnitt",
+        "style": "normaltekst",
+        "listItem": "bullet",
+        "level": 1,
+        "children": [
+            {
+                "type": "span",
+                "text": "Hvis du har jobbet så ",
+                "marks": []
+            },
+            {
+                "type": "span",
+                "text": "kort tid ",
+                "marks": ["bold"]
+            },
+            {
+                "type": "span",
+                "text": "at det ikke er rapportert frilansinntekt for tre hele måneder til a-ordningen, skal inntekten for dette kortere tidsrommet brukes i beregningen.",
+                "marks": []
             }
         ]
     },
@@ -20,31 +47,17 @@
         "children": [
             {
                 "type": "span",
-                "text": "Er virksomheten eller arbeidssituasjonen din varig endret, kan inntekten du har når foreldrepengeperioden din starter brukes istedenfor. Inntekt over 12 ganger grunnbeløpet i folketrygden tas ikke med i beregningen. "
-            }
-        ]
-    },
-    {
-        "type": "avsnitt",
-        "style": "normaltekst",
-        "children": [
-            {
-                "type": "span",
-                "text": "De samme reglene gjelder også hvis du mottar "
+                "text": "Hvis du både er "
             },
             {
                 "type": "span",
-                "text": "sykepenger, foreldre- eller svangerskapspenger ",
+                "text": "arbeidstaker og frilanser ",
                 "marks": ["bold"]
             },
             {
                 "type": "span",
-                "text": "eller stønader ved pleie av "
-            },
-            {
-                "type": "span",
-                "text": "syke barn.",
-                "marks": ["bold"]
+                "text": "skal inntektene beregnes hver for seg og legges sammen til ett beløp. Hvis du har en samlet inntekt over seks ganger grunnbeløpet, blir inntekten din som arbeidstaker lagt til grunn i beregningen.",
+                "marks": []
             }
         ]
     },
