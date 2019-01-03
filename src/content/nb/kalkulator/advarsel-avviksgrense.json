@@ -1,47 +1,32 @@
 [
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "children": [
             {
-                "type": "span",
-                "text": "Utfra tallene du har oppgitt antar vi at du ",
-                "marks": []
+                "text": "Utfra tallene du har oppgitt antar vi at du "
             },
-            { "type": "span", "text": "INNTEKTSSITUASJON", "marks": ["variable"] },
+            { "text": "INNTEKTSSITUASJON", "marks": ["variable"] },
             {
-                "type": "span",
-                "text": " ",
-                "marks": []
+                "text": " "
             },
-            { "type": "span", "text": "ÅRLIG_SNITTLØNN", "marks": ["variable", "bold"] },
-            { "type": "span", "text": " kroner", "marks": ["bold"] },
+            { "text": "ÅRLIG_SNITTLØNN", "marks": ["variable", "bold"] },
+            { "text": " kroner", "marks": ["bold"] },
             {
-                "type": "span",
-                "text": ". Hvis det du faktisk ",
-                "marks": []
+                "text": ". Hvis det du faktisk "
             },
-            { "type": "span", "text": "INNTEKTSSITUASJON_PRETERITUM", "marks": ["variable"] },
+            { "text": "INNTEKTSSITUASJON_PRETERITUM", "marks": ["variable"] },
             {
-                "type": "span",
-                "text": " de tolv siste månedene er mindre enn ",
-                "marks": []
+                "text": " de tolv siste månedene er mindre enn "
             },
-            { "type": "span", "text": "NEDRE_AVVIKSGRENSE", "marks": ["variable", "bold"] },
-            { "type": "span", "text": " kr", "marks": ["bold"] },
+            { "text": "NEDRE_AVVIKSGRENSE", "marks": ["variable", "bold"] },
+            { "text": " kr", "marks": ["bold"] },
             {
-                "type": "span",
-                "text": " eller høyere enn ",
-                "marks": []
+                "text": " eller høyere enn "
             },
-            { "type": "span", "text": "ØVRE_AVVIKSGRENSE", "marks": ["variable", "bold"] },
-            { "type": "span", "text": " kr", "marks": ["bold"] },
+            { "text": "ØVRE_AVVIKSGRENSE", "marks": ["variable", "bold"] },
+            { "text": " kr", "marks": ["bold"] },
             {
-                "type": "span",
-                "text": ", kan du først få et svar på hva du får utbetalt når søknaden din er ferdigbehandlet.",
-                "marks": []
+                "text": ", kan du først få et svar på hva du får utbetalt når søknaden din er ferdigbehandlet."
             }
-        ],
-        "markDefs": []
+        ]
     }
 ]

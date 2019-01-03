@@ -1,14 +1,10 @@
 [
     {
-        "type": "avsnitt",
         "style": "ingress",
         "children": [
             {
-                "type": "span",
-                "text": "Du kan velge å ta ut foreldrepengene sammenhengende eller kombinere de med arbeid eller ferie. Du må ta ut foreldrepengene før barnet fyller tre år, eller du får nytt barn.",
-                "marks": []
+                "text": "Du kan velge å ta ut foreldrepengene sammenhengende eller kombinere de med arbeid eller ferie. Du må ta ut foreldrepengene før barnet fyller tre år, eller du får nytt barn."
             }
-        ],
-        "markDefs": []
+        ]
     }
 ]

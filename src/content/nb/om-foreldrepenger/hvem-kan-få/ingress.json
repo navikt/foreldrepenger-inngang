@@ -1,22 +1,16 @@
 [
     {
-        "type": "avsnitt",
         "style": "ingress",
         "children": [
             {
-                "type": "span",
-                "text": "Vanligvis er det ",
-                "marks": []
+                "text": "Vanligvis er det "
             },
             {
-                "type": "span",
                 "text": "tre",
                 "marks": ["bold"]
             },
             {
-                "type": "span",
-                "text": " krav du må fylle for å få foreldrepenger.",
-                "marks": []
+                "text": " krav du må fylle for å få foreldrepenger."
             }
         ]
     }

@@ -1,14 +1,9 @@
 [
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "children": [
             {
-                "type": "span",
-                "text": "Når begge foreldrene har rett til foreldrepenger består foreldrepengeperioden av mødrekvoten, fedrekvoten og en fellesperiode som dere kan dele.",
-                "marks": []
+                "text": "Når begge foreldrene har rett til foreldrepenger består foreldrepengeperioden av mødrekvoten, fedrekvoten og en fellesperiode som dere kan dele."
             }
-        ],
-        "markDefs": []
+        ]
     }
 ]

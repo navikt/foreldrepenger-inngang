@@ -1,70 +1,48 @@
 [
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "children": [
             {
-                "type": "span",
-                "text": "Vi informerer deg underveis i søknaden dersom vi har behov for dokumentasjon fra deg.",
-                "marks": []
-            }
-        ],
-        "markDefs": []
-    },
-    {
-        "type": "avsnitt",
-        "style": "element",
-        "children": [{ "type": "span", "text": "Dokumentasjon på inntekt", "marks": [] }]
-    },
-    {
-        "type": "avsnitt",
-        "style": "normaltekst",
-        "children": [
-            {
-                "type": "span",
-                "text": "For å kunne beregne hva du skal ha utbetalt, må vi ha opplysninger om inntekten din.",
-                "marks": []
-            }
-        ],
-        "markDefs": []
-    },
-    {
-        "type": "avsnitt",
-        "style": "element",
-        "children": [
-            {
-                "type": "span",
-                "text": "Hvis du har hatt arbeidsinntekt eller er i jobb",
-                "marks": []
+                "text": "Vi informerer deg underveis i søknaden dersom vi har behov for dokumentasjon fra deg."
             }
         ]
     },
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
+        "style": "element",
+        "children": [{ "text": "Dokumentasjon på inntekt" }]
+    },
+    {
+        "children": [
+            {
+                "text": "For å kunne beregne hva du skal ha utbetalt, må vi ha opplysninger om inntekten din."
+            }
+        ]
+    },
+    {
+        "style": "element",
+        "children": [
+            {
+                "text": "Hvis du har hatt arbeidsinntekt eller er i jobb"
+            }
+        ]
+    },
+    {
         "listItem": "bullet",
         "level": 1,
         "children": [
             {
-                "type": "span",
-                "text": "Hvis du skal starte foreldrepengeperioden din i 2018, må du be arbeidsgiveren din sende inntektsopplysninger til NAV. Arbeidsgiver kan bruke den ",
-                "marks": []
+                "text": "Hvis du skal starte foreldrepengeperioden din i 2018, må du be arbeidsgiveren din sende inntektsopplysninger til NAV. Arbeidsgiver kan bruke den "
             },
             {
-                "type": "span",
                 "text": "digitale inntektsmeldingen",
                 "marks": ["url_digitale_inntektsmeldingen", "external_link"]
             },
-            { "type": "span", "text": " eller papirskjemaet ", "marks": [] },
+            { "text": " eller papirskjemaet " },
             {
-                "type": "span",
                 "text": "NAV 08-30.01",
                 "marks": ["url_NAV-08.30.01", "external_link"]
             },
             {
-                "type": "span",
-                "text": ". Hvis arbeidsgiveren bruker papirskjemaet, kan du laste det opp sammen med søknaden din.",
-                "marks": []
+                "text": ". Hvis arbeidsgiveren bruker papirskjemaet, kan du laste det opp sammen med søknaden din."
             }
         ],
         "markDefs": [
@@ -81,25 +59,18 @@
         ]
     },
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "listItem": "bullet",
         "level": 1,
         "children": [
             {
-                "type": "span",
-                "text": "Hvis du skal starte foreldrepengeperioden din i 2019, må arbeidsgiveren din sende ",
-                "marks": []
+                "text": "Hvis du skal starte foreldrepengeperioden din i 2019, må arbeidsgiveren din sende "
             },
             {
-                "type": "span",
                 "text": "digital inntektsmelding",
                 "marks": ["url_digitale_inntektsmeldingen", "external_link"]
             },
             {
-                "type": "span",
-                "text": " til NAV. Inntektsmeldingen kan tidligst sendes fire uker før foreldrepengeperioden starter. ",
-                "marks": []
+                "text": " til NAV. Inntektsmeldingen kan tidligst sendes fire uker før foreldrepengeperioden starter. "
             }
         ],
         "markDefs": [
@@ -111,238 +82,164 @@
         ]
     },
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "listItem": "bullet",
         "level": 1,
         "children": [
             {
-                "type": "span",
-                "text": "Hvis du får utbetalt penger fra NAV, trenger du ikke sende dokumentasjon på dette.",
-                "marks": []
+                "text": "Hvis du får utbetalt penger fra NAV, trenger du ikke sende dokumentasjon på dette."
             }
         ]
     },
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "children": [
             {
-                "type": "span",
-                "text": "Hvis du er ",
-                "marks": []
+                "text": "Hvis du er "
             },
             {
-                "type": "span",
                 "text": "selvstendig næringsdrivende",
                 "marks": ["bold"]
             },
             {
-                "type": "span",
-                "text": " eller ",
-                "marks": []
+                "text": " eller "
             },
             {
-                "type": "span",
                 "text": "frilanser",
                 "marks": ["bold"]
             },
             {
-                "type": "span",
-                "text": " trenger du ",
-                "marks": []
+                "text": " trenger du "
             },
             {
-                "type": "span",
                 "text": "ikke",
                 "marks": ["bold"]
             },
             {
-                "type": "span",
-                "text": " å legge ved noe dokumentasjon. Vi henter inn opplysninger fra offentlige registre, og ",
-                "marks": []
+                "text": " å legge ved noe dokumentasjon. Vi henter inn opplysninger fra offentlige registre, og "
             },
             {
-                "type": "span",
                 "text": "tar kontakt",
                 "marks": ["bold"]
             },
             {
-                "type": "span",
-                "text": " med deg hvis vi trenger flere opplysninger.",
-                "marks": []
+                "text": " med deg hvis vi trenger flere opplysninger."
             }
         ]
     },
     {
-        "type": "avsnitt",
         "style": "element",
-        "children": [{ "type": "span", "text": "Bekreftelse på termin", "marks": [] }]
+        "children": [{ "text": "Bekreftelse på termin" }]
     },
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "children": [
             {
-                "type": "span",
-                "text": "Hvis du er fast ansatt hos en arbeidsgiver, trenger du ikke sende terminbekreftelse til NAV.",
-                "marks": []
-            }
-        ],
-        "markDefs": []
-    },
-    {
-        "type": "avsnitt",
-        "style": "element",
-        "children": [
-            {
-                "type": "span",
-                "text": "Du skal legge ved bekreftelse på termindatoen din hvis",
-                "marks": []
+                "text": "Hvis du er fast ansatt hos en arbeidsgiver, trenger du ikke sende terminbekreftelse til NAV."
             }
         ]
     },
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
+        "style": "element",
+        "children": [
+            {
+                "text": "Du skal legge ved bekreftelse på termindatoen din hvis"
+            }
+        ]
+    },
+    {
         "listItem": "bullet",
         "level": 1,
         "children": [
             {
-                "type": "span",
-                "text": "du er selvstendig næringsdrivende eller frilanser",
-                "marks": []
+                "text": "du er selvstendig næringsdrivende eller frilanser"
             }
         ]
     },
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "listItem": "bullet",
         "level": 1,
         "children": [
             {
-                "type": "span",
-                "text": "du ikke er fast ansatt hos en arbeidsgiver",
-                "marks": []
+                "text": "du ikke er fast ansatt hos en arbeidsgiver"
             }
         ]
     },
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "children": [
             {
-                "type": "span",
-                "text": "Terminbekreftelsen får du hos jordmor eller legen din. Den må være datert i ",
-                "marks": []
+                "text": "Terminbekreftelsen får du hos jordmor eller legen din. Den må være datert i "
             },
             {
-                "type": "span",
                 "text": "26. svangerskapsuke",
                 "marks": ["bold"]
             },
-            { "type": "span", "text": " eller senere.", "marks": [] }
-        ],
-        "markDefs": []
+            { "text": " eller senere." }
+        ]
     },
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "children": [
             {
-                "type": "span",
-                "text": "Hvis barnet er født i utlandet og ikke er registrert i folkeregisteret, må du legge ved fødselsattesten til barnet. ",
-                "marks": []
+                "text": "Hvis barnet er født i utlandet og ikke er registrert i folkeregisteret, må du legge ved fødselsattesten til barnet. "
             }
-        ],
-        "markDefs": []
+        ]
     },
     {
-        "type": "avsnitt",
         "style": "element",
         "children": [
             {
-                "type": "span",
-                "text": "Far eller medmor skal ha fellesperiode eller foreldrepenger",
-                "marks": []
+                "text": "Far eller medmor skal ha fellesperiode eller foreldrepenger"
             }
         ]
     },
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "children": [
             {
-                "type": "span",
-                "text": "Du må legge ved dokumentasjon på aktivitetskravet til mor når du skal være hjemme i fellesperioden eller ha foreldrepenger. Er det bare du som har rett til foreldrepenger må du også legge ved dokumentasjon på aktivitetskravet til mor, hvis du skal utsette.",
-                "marks": []
+                "text": "Du må legge ved dokumentasjon på aktivitetskravet til mor når du skal være hjemme i fellesperioden eller ha foreldrepenger. Er det bare du som har rett til foreldrepenger må du også legge ved dokumentasjon på aktivitetskravet til mor, hvis du skal utsette."
             }
-        ],
-        "markDefs": []
+        ]
     },
     {
-        "type": "avsnitt",
         "style": "undertittel",
         "children": [
             {
-                "type": "span",
-                "text": "Dokumentasjon som må legges ved søknad om engangsstønad",
-                "marks": []
+                "text": "Dokumentasjon som må legges ved søknad om engangsstønad"
             }
         ]
     },
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "listItem": "bullet",
         "level": 1,
         "children": [
             {
-                "type": "span",
-                "text": "Hvis du søker før barnet er født, så trenger vi en ",
-                "marks": []
+                "text": "Hvis du søker før barnet er født, så trenger vi en "
             },
-            { "type": "span", "text": "terminbekreftelse", "marks": ["bold"] },
+            { "text": "terminbekreftelse", "marks": ["bold"] },
             {
-                "type": "span",
-                "text": " fra jordmor eller legen din. Den må vise at du er kommet til uke 26. eller senere i svangerskapet.",
-                "marks": []
+                "text": " fra jordmor eller legen din. Den må vise at du er kommet til uke 26. eller senere i svangerskapet."
             }
         ]
     },
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "listItem": "bullet",
         "level": 1,
         "children": [
             {
-                "type": "span",
-                "text": "Terminbekreftelsen laster du opp elektronisk i søknaden når du ",
-                "marks": []
+                "text": "Terminbekreftelsen laster du opp elektronisk i søknaden når du "
             },
-            { "type": "span", "text": "fyller ut", "marks": ["bold"] },
-            { "type": "span", "text": " og sender denne.", "marks": [] }
+            { "text": "fyller ut", "marks": ["bold"] },
+            { "text": " og sender denne." }
         ]
     },
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "listItem": "bullet",
         "level": 1,
         "children": [
             {
-                "type": "span",
-                "text": "Ved adopsjon, må du legge ved dokumentasjon på dato for ",
-                "marks": []
+                "text": "Ved adopsjon, må du legge ved dokumentasjon på dato for "
             },
             {
-                "type": "span",
                 "text": "omsorgsovertakelsen",
                 "marks": ["bold"]
             },
-            { "type": "span", "text": ". ", "marks": [] }
+            { "text": ". " }
         ]
     }
 ]

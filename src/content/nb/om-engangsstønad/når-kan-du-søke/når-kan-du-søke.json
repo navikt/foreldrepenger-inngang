@@ -1,20 +1,14 @@
 [
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "children": [
             {
-                "type": "span",
-                "text": "Mor kan tidligst søke om engangsstønad i ",
-                "marks": []
+                "text": "Mor kan tidligst søke om engangsstønad i "
             },
             {
-                "type": "span",
                 "text": "26. svangerskapsuke",
                 "marks": ["bold"]
             },
-            { "type": "span", "text": ".", "marks": [] }
-        ],
-        "markDefs": []
+            { "text": "." }
+        ]
     }
 ]

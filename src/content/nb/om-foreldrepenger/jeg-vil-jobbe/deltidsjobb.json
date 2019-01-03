@@ -1,55 +1,40 @@
 [
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "listItem": "bullet",
         "level": 1,
         "children": [
-            { "type": "span", "text": "I ", "marks": [] },
+            { "text": "I " },
             {
-                "type": "span",
                 "text": "foreldrepengesøknaden",
                 "marks": ["bold"]
             },
-            { "type": "span", "text": " oppgir du at du skal ", "marks": [] },
-            { "type": "span", "text": "utsette", "marks": ["bold"] },
+            { "text": " oppgir du at du skal " },
+            { "text": "utsette", "marks": ["bold"] },
             {
-                "type": "span",
-                "text": " perioden fordi du skal jobbe eller at du skal jobbe delvis.",
-                "marks": []
+                "text": " perioden fordi du skal jobbe eller at du skal jobbe delvis."
             }
         ]
     },
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "listItem": "bullet",
         "level": 1,
         "children": [
             {
-                "type": "span",
-                "text": "Hvis du ",
-                "marks": []
+                "text": "Hvis du "
             },
             {
-                "type": "span",
                 "text": "allerede har søkt",
                 "marks": ["bold"]
             },
             {
-                "type": "span",
-                "text": ", logger du på ",
-                "marks": []
+                "text": ", logger du på "
             },
             {
-                "type": "span",
                 "text": "Dine foreldrepenger",
                 "marks": ["url_dine_foreldrepenger", "external_link"]
             },
             {
-                "type": "span",
-                "text": " og sender en endringssøknad.",
-                "marks": []
+                "text": " og sender en endringssøknad."
             }
         ],
         "markDefs": [
@@ -61,16 +46,12 @@
         ]
     },
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "children": [
-            { "type": "span", "text": "Søkefrist", "marks": ["bold"] },
-            { "type": "span", "text": ": Du må søke ", "marks": [] },
-            { "type": "span", "text": "før", "marks": ["bold"] },
+            { "text": "Søkefrist", "marks": ["bold"] },
+            { "text": ": Du må søke " },
+            { "text": "før", "marks": ["bold"] },
             {
-                "type": "span",
-                "text": " du begynner å jobbe.",
-                "marks": []
+                "text": " du begynner å jobbe."
             }
         ]
     }

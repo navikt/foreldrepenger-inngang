@@ -1,60 +1,44 @@
 [
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "listItem": "bullet",
         "level": 1,
         "children": [
             {
-                "type": "span",
-                "text": "Hvis du har vært i jobb i ",
-                "marks": []
+                "text": "Hvis du har vært i jobb i "
             },
             {
-                "type": "span",
                 "text": "fire uker sammenhengende",
                 "marks": ["bold"]
             },
-            { "type": "span", "text": " og det ikke er mer enn ", "marks": [] },
-            { "type": "span", "text": "fjorten dager", "marks": ["bold"] },
+            { "text": " og det ikke er mer enn " },
+            { "text": "fjorten dager", "marks": ["bold"] },
             {
-                "type": "span",
-                "text": " mellom hver gang du er på jobb, regnes også dager uten arbeid med i opptjeningstiden.",
-                "marks": []
+                "text": " mellom hver gang du er på jobb, regnes også dager uten arbeid med i opptjeningstiden."
             }
         ]
     },
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "listItem": "bullet",
         "level": 1,
         "children": [
             {
-                "type": "span",
-                "text": "Hvis du har en arbeidsavtale om ",
-                "marks": []
+                "text": "Hvis du har en arbeidsavtale om "
             },
-            { "type": "span", "text": "fast turnus", "marks": ["bold"] },
+            { "text": "fast turnus", "marks": ["bold"] },
             {
-                "type": "span",
-                "text": ", vil dagene du ikke er i jobb regnes med i opptjeningstiden, selv om du jobber sjeldnere enn hver 14. dag.",
-                "marks": []
+                "text": ", vil dagene du ikke er i jobb regnes med i opptjeningstiden, selv om du jobber sjeldnere enn hver 14. dag."
             }
         ]
     },
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "listItem": "bullet",
         "level": 1,
         "children": [
             {
-                "type": "span",
                 "text": "Ferie og avspasering",
                 "marks": ["bold"]
             },
-            { "type": "span", "text": " teller også med.", "marks": [] }
+            { "text": " teller også med." }
         ]
     }
 ]

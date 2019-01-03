@@ -1,26 +1,16 @@
 [
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "children": [
             {
-                "type": "span",
-                "text": "Du får vanligvis utbetalt engangsstønaden én uke etter at søknaden din er innvilget. Stønaden er skattefri. ",
-                "marks": []
+                "text": "Du får vanligvis utbetalt engangsstønaden én uke etter at søknaden din er innvilget. Stønaden er skattefri. "
             }
-        ],
-        "markDefs": []
+        ]
     },
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "children": [
             {
-                "type": "span",
-                "text": "Saksbehandlingstiden er inntil seks uker. ",
-                "marks": []
+                "text": "Saksbehandlingstiden er inntil seks uker. "
             }
-        ],
-        "markDefs": []
+        ]
     }
 ]

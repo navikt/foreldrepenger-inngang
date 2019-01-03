@@ -1,56 +1,38 @@
 [
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "children": [
             {
-                "type": "span",
-                "text": "Du har rett til å ta ut ferie mens du er i foreldrepermisjon. Du kan velge mellom å:",
-                "marks": []
-            }
-        ],
-        "markDefs": []
-    },
-    {
-        "type": "avsnitt",
-        "style": "normaltekst",
-        "listItem": "bullet",
-        "level": 1,
-        "children": [
-            {
-                "type": "span",
-                "text": "ta ut ferien samtidig som du får foreldrepenger",
-                "marks": []
+                "text": "Du har rett til å ta ut ferie mens du er i foreldrepermisjon. Du kan velge mellom å:"
             }
         ]
     },
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "listItem": "bullet",
         "level": 1,
         "children": [
             {
-                "type": "span",
-                "text": "ha et opphold i foreldrepengene dine til ferien din er ferdig",
-                "marks": []
+                "text": "ta ut ferien samtidig som du får foreldrepenger"
             }
         ]
     },
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
+        "listItem": "bullet",
+        "level": 1,
         "children": [
-            { "type": "span", "text": "Bruk ", "marks": [] },
             {
-                "type": "span",
+                "text": "ha et opphold i foreldrepengene dine til ferien din er ferdig"
+            }
+        ]
+    },
+    {
+        "children": [
+            { "text": "Bruk " },
+            {
                 "text": "foreldrepengeplanleggeren",
                 "marks": ["url_foreldrepengeplanleggeren", "external_link"]
             },
             {
-                "type": "span",
-                "text": " for å se hvordan du kan ha et opphold i perioden med foreldrepenger når du tar ferie.",
-                "marks": []
+                "text": " for å se hvordan du kan ha et opphold i perioden med foreldrepenger når du tar ferie."
             }
         ],
         "markDefs": [

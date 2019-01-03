@@ -1,52 +1,34 @@
 [
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "children": [
             {
-                "type": "span",
-                "text": "Adopterer dere i utlandet, kan dere velge når dere vil  begynne å ta ut foreldrepengene:",
-                "marks": []
-            }
-        ],
-        "markDefs": []
-    },
-    {
-        "type": "avsnitt",
-        "style": "normaltekst",
-        "listItem": "bullet",
-        "level": 1,
-        "children": [
-            {
-                "type": "span",
-                "text": "når dere overtar omsorgen for barnet i utlandet",
-                "marks": []
+                "text": "Adopterer dere i utlandet, kan dere velge når dere vil  begynne å ta ut foreldrepengene:"
             }
         ]
     },
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "listItem": "bullet",
         "level": 1,
         "children": [
             {
-                "type": "span",
-                "text": "den dagen dere kommer til Norge sammen med barnet. Starter dere senere, får dere færre uker.",
-                "marks": []
+                "text": "når dere overtar omsorgen for barnet i utlandet"
             }
         ]
     },
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
+        "listItem": "bullet",
+        "level": 1,
         "children": [
             {
-                "type": "span",
-                "text": "Dere kan selv velge hvem som skal være hjemme i permisjon. Når far skal ta ut foreldrepenger fra fellesperioden gjelder de samme reglene som ved fødsel, og det er aktivitetskrav til mor.",
-                "marks": []
+                "text": "den dagen dere kommer til Norge sammen med barnet. Starter dere senere, får dere færre uker."
             }
-        ],
-        "markDefs": []
+        ]
+    },
+    {
+        "children": [
+            {
+                "text": "Dere kan selv velge hvem som skal være hjemme i permisjon. Når far skal ta ut foreldrepenger fra fellesperioden gjelder de samme reglene som ved fødsel, og det er aktivitetskrav til mor."
+            }
+        ]
     }
 ]

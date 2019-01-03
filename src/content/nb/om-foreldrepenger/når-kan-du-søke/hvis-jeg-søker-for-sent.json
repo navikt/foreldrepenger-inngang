@@ -1,90 +1,62 @@
 [
     {
-        "type": "avsnitt",
         "style": "undertittel",
         "children": [
             {
-                "type": "span",
-                "text": "Frist for å utsette for far eller medmor",
-                "marks": []
+                "text": "Frist for å utsette for far eller medmor"
             }
         ]
     },
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "children": [
             {
-                "type": "span",
-                "text": "Hvis du ikke ønsker å starte foreldrepengeperioden rett etter at mor er ferdig med foreldrepengeperioden sin, må du søke om å ",
-                "marks": []
+                "text": "Hvis du ikke ønsker å starte foreldrepengeperioden rett etter at mor er ferdig med foreldrepengeperioden sin, må du søke om å "
             },
-            { "type": "span", "text": "utsette", "marks": ["bold"] },
+            { "text": "utsette", "marks": ["bold"] },
             {
-                "type": "span",
-                "text": " perioden. Du må sende søknaden ",
-                "marks": []
+                "text": " perioden. Du må sende søknaden "
             },
             {
-                "type": "span",
                 "text": "senest siste dag mor",
                 "marks": ["bold"]
             },
             {
-                "type": "span",
-                "text": " får utbetalt foreldrepenger. Søker du om å utsette på et senere tidspunkt får du ",
-                "marks": []
+                "text": " får utbetalt foreldrepenger. Søker du om å utsette på et senere tidspunkt får du "
             },
-            { "type": "span", "text": "færre dager", "marks": ["bold"] },
-            { "type": "span", "text": " med foreldrepenger.", "marks": [] }
-        ],
-        "markDefs": []
+            { "text": "færre dager", "marks": ["bold"] },
+            { "text": " med foreldrepenger." }
+        ]
     },
     {
-        "type": "avsnitt",
         "style": "undertittel",
         "children": [
             {
-                "type": "span",
-                "text": "Hvis bare far eller medmor har rett",
-                "marks": []
+                "text": "Hvis bare far eller medmor har rett"
             }
         ]
     },
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "children": [
             {
-                "type": "span",
-                "text": "Hvis ikke mor har rett til foreldrepenger kan far eller medmor søke om å starte foreldrepengeperioden fra ",
-                "marks": []
+                "text": "Hvis ikke mor har rett til foreldrepenger kan far eller medmor søke om å starte foreldrepengeperioden fra "
             },
-            { "type": "span", "text": "uke syv", "marks": ["bold"] },
-            { "type": "span", "text": " etter fødselen. Ved ", "marks": [] },
-            { "type": "span", "text": "adopsjon", "marks": ["bold"] },
+            { "text": "uke syv", "marks": ["bold"] },
+            { "text": " etter fødselen. Ved " },
+            { "text": "adopsjon", "marks": ["bold"] },
             {
-                "type": "span",
-                "text": " kan far eller medmor starte foreldrepengeperioden fra ",
-                "marks": []
+                "text": " kan far eller medmor starte foreldrepengeperioden fra "
             },
-            { "type": "span", "text": "omsorgsovertakelse", "marks": ["bold"] },
-            { "type": "span", "text": ". ", "marks": [] }
-        ],
-        "markDefs": []
+            { "text": "omsorgsovertakelse", "marks": ["bold"] },
+            { "text": ". " }
+        ]
     },
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "children": [
             {
-                "type": "span",
-                "text": "Starter du senere, får du ",
-                "marks": []
+                "text": "Starter du senere, får du "
             },
-            { "type": "span", "text": "færre uker", "marks": ["bold"] },
-            { "type": "span", "text": " med foreldrepenger. ", "marks": [] }
-        ],
-        "markDefs": []
+            { "text": "færre uker", "marks": ["bold"] },
+            { "text": " med foreldrepenger. " }
+        ]
     }
 ]

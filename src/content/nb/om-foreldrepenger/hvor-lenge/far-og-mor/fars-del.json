@@ -1,75 +1,49 @@
 [
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "children": [
             {
-                "type": "span",
-                "text": "Du kan ta ut fedrekvoten fra ",
-                "marks": []
+                "text": "Du kan ta ut fedrekvoten fra "
             },
-            { "type": "span", "text": "uke syv", "marks": ["bold"] },
+            { "text": "uke syv", "marks": ["bold"] },
             {
-                "type": "span",
-                "text": " etter fødselen eller vente til barnet er blitt litt større. Ukene kan du ta samlet, dele opp eller kombinere med delvis arbeid.",
-                "marks": []
+                "text": " etter fødselen eller vente til barnet er blitt litt større. Ukene kan du ta samlet, dele opp eller kombinere med delvis arbeid."
             }
-        ],
-        "markDefs": []
+        ]
     },
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "children": [
             {
-                "type": "span",
-                "text": "Du må ta ut fedrekvoten ",
-                "marks": []
+                "text": "Du må ta ut fedrekvoten "
             },
             {
-                "type": "span",
                 "text": "senest når fellesperioden ",
                 "marks": ["bold"]
             },
             {
-                "type": "span",
                 "text": "er ferdig, eller søke om "
             },
             {
-                "type": "span",
                 "text": "utsettelse",
                 "marks": ["bold"]
             }
-        ],
-        "markDefs": []
+        ]
     },
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "children": [
             {
-                "type": "span",
-                "text": "Adopterer dere, kan du ta ut fedrekvoten når som helst etter ",
-                "marks": []
+                "text": "Adopterer dere, kan du ta ut fedrekvoten når som helst etter "
             },
             {
-                "type": "span",
                 "text": "omsorgsovertakelsen.",
                 "marks": ["bold"]
             }
-        ],
-        "markDefs": []
+        ]
     },
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "children": [
             {
-                "type": "span",
-                "text": "Hvis du blir så syk at du er helt avhengig av hjelp til å ta deg av barnet, kan mor søke om å overta fedrekvoten din.",
-                "marks": []
+                "text": "Hvis du blir så syk at du er helt avhengig av hjelp til å ta deg av barnet, kan mor søke om å overta fedrekvoten din."
             }
-        ],
-        "markDefs": []
+        ]
     }
 ]

@@ -1,14 +1,9 @@
 [
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "children": [
             {
-                "type": "span",
-                "text": "Når bare du har rett til foreldrepenger får du hele foreldrepengeperioden, unntatt de ni ukene som var satt av til mor rett før og etter fødselen.",
-                "marks": []
+                "text": "Når bare du har rett til foreldrepenger får du hele foreldrepengeperioden, unntatt de ni ukene som var satt av til mor rett før og etter fødselen."
             }
-        ],
-        "markDefs": []
+        ]
     }
 ]

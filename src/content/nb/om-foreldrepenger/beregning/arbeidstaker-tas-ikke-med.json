@@ -1,30 +1,20 @@
 [
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "listItem": "bullet",
         "level": 1,
-        "children": [
-            { "type": "span", "text": "Lønn for overtid", "marks": [] }
-        ]
+        "children": [{ "text": "Lønn for overtid" }]
     },
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "listItem": "bullet",
         "level": 1,
-        "children": [{ "type": "span", "text": "Feriepenger", "marks": [] }]
+        "children": [{ "text": "Feriepenger" }]
     },
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "listItem": "bullet",
         "level": 1,
         "children": [
             {
-                "type": "span",
-                "text": "Godtgjørelser som dekker utgifter i forbindelse med jobben din, for eksempel diettgodtgjørelse, bilgodtgjørelse, verktøygodtgjørelse og smussgodtgjørelse",
-                "marks": []
+                "text": "Godtgjørelser som dekker utgifter i forbindelse med jobben din, for eksempel diettgodtgjørelse, bilgodtgjørelse, verktøygodtgjørelse og smussgodtgjørelse"
             }
         ]
     }

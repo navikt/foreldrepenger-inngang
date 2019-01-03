@@ -1,72 +1,51 @@
 [
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "children": [
             {
-                "type": "span",
-                "text": "Hvis du er far til barnet, kan du i noen tilfeller få engangsstønad. Det kan gjelde:",
-                "marks": []
-            }
-        ],
-        "markDefs": []
-    },
-    {
-        "type": "avsnitt",
-        "style": "normaltekst",
-        "listItem": "bullet",
-        "level": 1,
-        "children": [
-            { "type": "span", "text": "for hvert barn du ", "marks": [] },
-            { "type": "span", "text": "adopterer alene", "marks": ["bold"] }
-        ]
-    },
-    {
-        "type": "avsnitt",
-        "style": "normaltekst",
-        "listItem": "bullet",
-        "level": 1,
-        "children": [
-            { "type": "span", "text": "om du overtar ", "marks": [] },
-            { "type": "span", "text": "foreldreansvar", "marks": ["bold"] },
-            {
-                "type": "span",
-                "text": " eller dersom den andre forelderen dør",
-                "marks": []
+                "text": "Hvis du er far til barnet, kan du i noen tilfeller få engangsstønad. Det kan gjelde:"
             }
         ]
     },
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "listItem": "bullet",
         "level": 1,
         "children": [
+            { "text": "for hvert barn du " },
+            { "text": "adopterer alene", "marks": ["bold"] }
+        ]
+    },
+    {
+        "listItem": "bullet",
+        "level": 1,
+        "children": [
+            { "text": "om du overtar " },
+            { "text": "foreldreansvar", "marks": ["bold"] },
             {
-                "type": "span",
-                "text": "når du får tildelt foreldreansvar",
-                "marks": []
+                "text": " eller dersom den andre forelderen dør"
             }
         ]
     },
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "listItem": "bullet",
         "level": 1,
         "children": [
-            { "type": "span", "text": "hvis du ", "marks": [] },
-            { "type": "span", "text": "innen 56 uker", "marks": ["bold"] },
             {
-                "type": "span",
-                "text": " etter barnet ble født eller adoptert, har ",
-                "marks": []
+                "text": "når du får tildelt foreldreansvar"
+            }
+        ]
+    },
+    {
+        "listItem": "bullet",
+        "level": 1,
+        "children": [
+            { "text": "hvis du " },
+            { "text": "innen 56 uker", "marks": ["bold"] },
+            {
+                "text": " etter barnet ble født eller adoptert, har "
             },
-            { "type": "span", "text": "overtatt omsorgen", "marks": ["bold"] },
+            { "text": "overtatt omsorgen", "marks": ["bold"] },
             {
-                "type": "span",
-                "text": " for barnet med sikte på å overta foreldreansvaret alene",
-                "marks": []
+                "text": " for barnet med sikte på å overta foreldreansvaret alene"
             }
         ]
     }

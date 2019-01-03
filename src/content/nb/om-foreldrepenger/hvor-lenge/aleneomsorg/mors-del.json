@@ -1,42 +1,27 @@
 [
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "children": [
             {
-                "type": "span",
-                "text": "Foreldrepengeperioden din starter senest ",
-                "marks": []
+                "text": "Foreldrepengeperioden din starter senest "
             },
-            { "type": "span", "text": "tre uker før terminen", "marks": ["bold"] },
+            { "text": "tre uker før terminen", "marks": ["bold"] },
             {
-                "type": "span",
-                "text": ". Du kan velge å starte så tidlig som tolv uker før, men da får du færre uker etter fødselen.",
-                "marks": []
+                "text": ". Du kan velge å starte så tidlig som tolv uker før, men da får du færre uker etter fødselen."
             }
-        ],
-        "markDefs": []
+        ]
     },
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "children": [
             {
-                "type": "span",
-                "text": "Adopterer du, starter foreldrepengeperioden din ved ",
-                "marks": []
+                "text": "Adopterer du, starter foreldrepengeperioden din ved "
             },
             {
-                "type": "span",
                 "text": "omsorgsovertakelsen",
                 "marks": ["bold"]
             },
             {
-                "type": "span",
-                "text": " og du får 46 eller 56 uker med foreldrepenger.",
-                "marks": []
+                "text": " og du får 46 eller 56 uker med foreldrepenger."
             }
-        ],
-        "markDefs": []
+        ]
     }
 ]

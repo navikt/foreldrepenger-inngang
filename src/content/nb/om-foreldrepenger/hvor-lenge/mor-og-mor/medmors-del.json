@@ -1,88 +1,59 @@
 [
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "children": [
             {
-                "type": "span",
-                "text": "Du kan ta ut medmorkvoten fra ",
-                "marks": []
+                "text": "Du kan ta ut medmorkvoten fra "
             },
-            { "type": "span", "text": "uke syv", "marks": ["bold"] },
+            { "text": "uke syv", "marks": ["bold"] },
             {
-                "type": "span",
-                "text": " etter fødselen eller vente til barnet er blitt litt større. Ukene kan du ta samlet, dele opp eller kombinere med delvis arbeid.",
-                "marks": []
+                "text": " etter fødselen eller vente til barnet er blitt litt større. Ukene kan du ta samlet, dele opp eller kombinere med delvis arbeid."
             }
-        ],
-        "markDefs": []
+        ]
     },
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "children": [
             {
-                "type": "span",
-                "text": "Du må ta ut medmorkvoten ",
-                "marks": []
+                "text": "Du må ta ut medmorkvoten "
             },
             {
-                "type": "span",
                 "text": "senest når fellesperioden ",
                 "marks": ["bold"]
             },
             {
-                "type": "span",
-                "text": "er ferdig, eller søke om ",
-                "marks": []
+                "text": "er ferdig, eller søke om "
             },
             {
-                "type": "span",
                 "text": "utsettelse.",
                 "marks": ["bold"]
             }
-        ],
-        "markDefs": []
+        ]
     },
     {
-      "type": "avsnitt",
-        "style": "normaltekst",
         "children": [
             {
-                "type": "span",
                 "text": "Adopterer dere, kan du ta ut medmorkvoten når som helst etter omsorgsovertakelsen."
             }
         ]
     },
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "children": [
             {
-                "type": "span",
-                "text": "Hvis du blir så syk at du er helt avhengig av hjelp til å ta deg av barnet, kan mor søke om å overta medmorkvoten din.",
-                "marks": []
+                "text": "Hvis du blir så syk at du er helt avhengig av hjelp til å ta deg av barnet, kan mor søke om å overta medmorkvoten din."
             }
-        ],
-        "markDefs": []
+        ]
     },
     {
-        "type": "avsnitt",
         "style": "element",
         "children": [
             {
-                "type": "span",
                 "text": "Hvem regnes som medmor?",
                 "marks": ["bold"]
             }
         ]
     },
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "children": [
             {
-                "type": "span",
                 "text": "Medmor er en som har fått juridisk foreldreansvar for barnet. Hvis du ikke har fått vedtak om medmorskap, kan du få foreldrepenger hvis du stebarnsadopterer og det fortsatt er dager igjen av foreldrepengeperioden."
             }
         ]

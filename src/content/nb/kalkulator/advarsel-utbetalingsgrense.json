@@ -1,33 +1,23 @@
 [
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "children": [
             {
-                "type": "span",
-                "text": "Siden lønnen din er høyere enn utbetalingsgrensen på ",
-                "marks": []
+                "text": "Siden lønnen din er høyere enn utbetalingsgrensen på "
             },
-            { "type": "span", "text": "UTBETALINGSGRENSE", "marks": ["bold", "variable"] },
+            { "text": "UTBETALINGSGRENSE", "marks": ["bold", "variable"] },
             {
-                "type": "span",
                 "text": " kr",
                 "marks": ["bold"]
             },
             {
-                "type": "span",
-                "text": " i året (seks ganger ",
-                "marks": []
+                "text": " i året (seks ganger "
             },
             {
-                "type": "span",
                 "text": "grunnbeløpet",
                 "marks": ["external_link", "url_grunnbeløp"]
             },
             {
-                "type": "span",
-                "text": "), blir dette grunnlaget for utregningen under.",
-                "marks": []
+                "text": "), blir dette grunnlaget for utregningen under."
             }
         ],
         "markDefs": [

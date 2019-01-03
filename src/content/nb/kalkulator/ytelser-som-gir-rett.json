@@ -1,97 +1,65 @@
 [
     {
-        "type": "avsnitt",
         "style": "element",
         "children": [
             {
-                "type": "span",
-                "text": "Får du utbetalt en av disse ytelsene fra NAV, kan du ha rett til foreldrepenger:",
-                "marks": []
+                "text": "Får du utbetalt en av disse ytelsene fra NAV, kan du ha rett til foreldrepenger:"
             }
         ]
     },
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "listItem": "bullet",
         "level": 1,
-        "children": [{ "type": "span", "text": "Sykepenger", "marks": [] }]
+        "children": [{ "text": "Sykepenger" }]
     },
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "listItem": "bullet",
         "level": 1,
         "children": [
             {
-                "type": "span",
-                "text": "Foreldre- og svangerskapspenger",
-                "marks": []
+                "text": "Foreldre- og svangerskapspenger"
             }
         ]
     },
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "listItem": "bullet",
         "level": 1,
-        "children": [
-            { "type": "span", "text": "Arbeidsavklaringspenger", "marks": [] }
-        ]
+        "children": [{ "text": "Arbeidsavklaringspenger" }]
     },
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "listItem": "bullet",
         "level": 1,
-        "children": [{ "type": "span", "text": "Dagpenger", "marks": [] }]
+        "children": [{ "text": "Dagpenger" }]
     },
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "listItem": "bullet",
         "level": 1,
         "children": [
             {
-                "type": "span",
-                "text": "Omsorgs-, pleie- eller opplæringspenger ved sykt barn",
-                "marks": []
+                "text": "Omsorgs-, pleie- eller opplæringspenger ved sykt barn"
             }
         ]
     },
     {
-        "type": "avsnitt",
         "style": "element",
         "children": [
             {
-                "type": "span",
-                "text": "Spesielt om dagpenger og arbeidsavklaringspenger",
-                "marks": []
+                "text": "Spesielt om dagpenger og arbeidsavklaringspenger"
             }
         ]
     },
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "children": [
             {
-                "type": "span",
-                "text": "Du vil få det samme i dagsats på foreldrepenger, som du har i dagpenger eller arbeidsavklaringspenger.",
-                "marks": []
+                "text": "Du vil få det samme i dagsats på foreldrepenger, som du har i dagpenger eller arbeidsavklaringspenger."
             }
-        ],
-        "markDefs": []
+        ]
     },
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "children": [
             {
-                "type": "span",
-                "text": "Er du mor som venter barn ved fødsel og mottar dagpenger,  kan du få foreldrepengene beregnet etter et snitt av inntekten din i de seks beste av de ti siste månedene, hvis det gir deg en høyere utbetaling. NAV vil beregne hvilket alternativ er best for deg.",
-                "marks": []
+                "text": "Er du mor som venter barn ved fødsel og mottar dagpenger,  kan du få foreldrepengene beregnet etter et snitt av inntekten din i de seks beste av de ti siste månedene, hvis det gir deg en høyere utbetaling. NAV vil beregne hvilket alternativ er best for deg."
             }
-        ],
-        "markDefs": []
+        ]
     }
 ]

@@ -1,10 +1,8 @@
 [
     {
-        "type": "avsnitt",
         "style": "undertittel",
         "children": [
             {
-                "type": "span",
                 "text": "Jeg har hatt inntekt "
             },
             {
@@ -12,22 +10,18 @@
                 "text": "6 av de 10"
             },
             {
-                "type": "span",
                 "text": " siste mnd."
             }
         ]
     },
     {
         "type": "inline",
-        "style": "normaltekst",
+
         "children": [
             {
-                "type": "span",
-                "text": "Som inntekt regnes også enkelte ",
-                "marks": []
+                "text": "Som inntekt regnes også enkelte "
             },
             {
-                "type": "span",
                 "text": "ytelser fra NAV, arbeidsgiver eller militæret.",
                 "marks": ["url_arbeidsgiver"]
             }

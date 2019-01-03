@@ -1,14 +1,9 @@
 [
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "children": [
             {
-                "type": "span",
-                "text": "Når bare du har rett til foreldrepenger får du hele foreldrepengeperioden, inkludert kvoten til den andre forelderen.",
-                "marks": []
+                "text": "Når bare du har rett til foreldrepenger får du hele foreldrepengeperioden, inkludert kvoten til den andre forelderen."
             }
-        ],
-        "markDefs": []
+        ]
     }
 ]

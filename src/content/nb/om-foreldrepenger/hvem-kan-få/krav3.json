@@ -1,25 +1,20 @@
 [
     {
-        "type": "avsnitt",
         "style": "undertittel",
         "children": [
             {
-                "type": "span",
                 "text": "Jeg bor i Norge"
             }
         ]
     },
     {
         "type": "inline",
-        "style": "normaltekst",
+
         "children": [
             {
-                "type": "span",
-                "text": "Bor du i Norge, er du vanligvis ",
-                "marks": []
+                "text": "Bor du i Norge, er du vanligvis "
             },
             {
-                "type": "span",
                 "text": "medlem av folketrygden.",
                 "marks": ["external_link", "url_medlemskap"]
             }

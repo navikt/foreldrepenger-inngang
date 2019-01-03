@@ -1,18 +1,13 @@
 [
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "children": [
             {
-                "type": "span",
-                "text": "Far eller medmor kan tidligst søke når du har dato for ",
-                "marks": []
+                "text": "Far eller medmor kan tidligst søke når du har dato for "
             },
-            { "type": "span", "text": "foreldreansvar", "marks": ["bold"] },
-            { "type": "span", "text": " eller ", "marks": [] },
-            { "type": "span", "text": "omsorgsovertakelse", "marks": ["bold"] },
-            { "type": "span", "text": ".", "marks": [] }
-        ],
-        "markDefs": []
+            { "text": "foreldreansvar", "marks": ["bold"] },
+            { "text": " eller " },
+            { "text": "omsorgsovertakelse", "marks": ["bold"] },
+            { "text": "." }
+        ]
     }
 ]
