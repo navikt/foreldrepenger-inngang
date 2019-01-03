@@ -10,45 +10,29 @@
     },
     {
         "children": [
-            {
-                "text": "Hvis du er far eller medmor til barnet, kan du i noen tilfeller få engangsstønad. Det kan gjelde"
-            }
+            "Hvis du er far eller medmor til barnet, kan du i noen tilfeller få engangsstønad. Det kan gjelde"
         ]
     },
     {
         "listItem": "bullet",
         "level": 1,
-        "children": [
-            {
-                "text": "for hvert barn du adopterer alene"
-            }
-        ]
+        "children": ["for hvert barn du adopterer alene"]
+    },
+    {
+        "listItem": "bullet",
+        "level": 1,
+        "children": ["om du overtar foreldreansvar eller dersom den andre forelderen dør"]
+    },
+    {
+        "listItem": "bullet",
+        "level": 1,
+        "children": ["når du får tildelt foreldreansvar"]
     },
     {
         "listItem": "bullet",
         "level": 1,
         "children": [
-            {
-                "text": "om du overtar foreldreansvar eller dersom den andre forelderen dør"
-            }
-        ]
-    },
-    {
-        "listItem": "bullet",
-        "level": 1,
-        "children": [
-            {
-                "text": "når du får tildelt foreldreansvar"
-            }
-        ]
-    },
-    {
-        "listItem": "bullet",
-        "level": 1,
-        "children": [
-            {
-                "text": "hvis du innen 56 uker etter barnet ble født eller adoptert, har overtatt omsorgen for barnet med sikte på å overta foreldreansvaret alene"
-            }
+            "hvis du innen 56 uker etter barnet ble født eller adoptert, har overtatt omsorgen for barnet med sikte på å overta foreldreansvaret alene"
         ]
     },
     {
@@ -68,9 +52,7 @@
     },
     {
         "children": [
-            {
-                "text": "Den elektroniske søknaden støtter ikke adopsjon. "
-            },
+            "Den elektroniske søknaden støtter ikke adopsjon. ",
             {
                 "text": "Klikk her for å søke på papir",
                 "marks": ["modal_link_to", "external_link"]

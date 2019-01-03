@@ -3,32 +3,26 @@
         "listItem": "bullet",
         "level": 1,
         "children": [
-            { "text": "Avtal med " },
+            "Avtal med ",
             { "text": "arbeidsgiveren", "marks": ["bold"] },
-            {
-                "text": " din når du skal jobbe og stillingsprosenten."
-            }
+            " din når du skal jobbe og stillingsprosenten."
         ]
     },
     {
         "listItem": "bullet",
         "level": 1,
         "children": [
-            {
-                "text": "Arbeidsgiveren din "
-            },
+            "Arbeidsgiveren din ",
             {
                 "text": "bekrefter",
                 "marks": ["bold"]
             },
-            {
-                "text": " arbeidsperioden i "
-            },
+            " arbeidsperioden i ",
             {
                 "text": "inntektsmeldingen",
                 "marks": ["url_inntektsmeldingen", "external_link"]
             },
-            { "text": " som de skal sende til NAV." }
+            " som de skal sende til NAV."
         ],
         "markDefs": [
             {
@@ -42,39 +36,31 @@
         "listItem": "bullet",
         "level": 1,
         "children": [
-            { "text": "I " },
+            "I ",
             {
                 "text": "foreldrepengesøknaden",
                 "marks": ["bold"]
             },
-            { "text": " oppgir du at du skal " },
+            " oppgir du at du skal ",
             { "text": "utsette", "marks": ["bold"] },
-            {
-                "text": " perioden fordi du skal jobbe eller at du skal jobbe delvis."
-            }
+            " perioden fordi du skal jobbe eller at du skal jobbe delvis."
         ]
     },
     {
         "listItem": "bullet",
         "level": 1,
         "children": [
-            {
-                "text": "Hvis du "
-            },
+            "Hvis du ",
             {
                 "text": "allerede har søkt",
                 "marks": ["bold"]
             },
-            {
-                "text": ", logger du på "
-            },
+            ", logger du på ",
             {
                 "text": "Dine foreldrepenger",
                 "marks": ["url_dine_foreldrepenger", "external_link"]
             },
-            {
-                "text": " og sender en endringssøknad."
-            }
+            " og sender en endringssøknad."
         ],
         "markDefs": [
             {
@@ -87,11 +73,9 @@
     {
         "children": [
             { "text": "Søkefrist", "marks": ["bold"] },
-            { "text": ": Du må søke " },
+            ": Du må søke ",
             { "text": "før", "marks": ["bold"] },
-            {
-                "text": " du begynner å jobbe."
-            }
+            " du begynner å jobbe."
         ]
     }
 ]

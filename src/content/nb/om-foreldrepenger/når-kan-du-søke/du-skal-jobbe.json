@@ -1,22 +1,18 @@
 [
     {
         "children": [
-            { "text": "Hvis du skal jobbe " },
+            "Hvis du skal jobbe ",
             { "text": "heltid", "marks": ["bold"] },
-            {
-                "text": ", må du søke om utsettelse før du begynner å jobbe. Hvis du skal "
-            },
+            ", må du søke om utsettelse før du begynner å jobbe. Hvis du skal ",
             { "text": "kombinere", "marks": ["bold"] },
-            { "text": " foreldrepengene med " },
+            " foreldrepengene med ",
             { "text": "delvis arbeid", "marks": ["bold"] },
-            {
-                "text": ", må du søke om endring i foreldrepengeperioden din før du begynner å jobbe."
-            }
+            ", må du søke om endring i foreldrepengeperioden din før du begynner å jobbe."
         ]
     },
     {
         "children": [
-            { "text": "Les mer om " },
+            "Les mer om ",
             {
                 "text": "foreldrepenger hvis du vil jobbe",
                 "marks": ["url_foreldrepenger_hvis_du_vil_jobbe"]

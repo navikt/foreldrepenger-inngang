@@ -1,31 +1,23 @@
 [
     {
         "style": "undertittel",
-        "children": [
-            {
-                "text": "Ny sats fra 1. januar 2019"
-            }
-        ]
+        "children": ["Ny sats fra 1. januar 2019"]
     },
     {
         "children": [
-            {
-                "text": "Fra 1. januar 2019 øker stønaden med 20.000 kroner til "
-            },
+            "Fra 1. januar 2019 øker stønaden med 20.000 kroner til ",
             { "text": "83.140 kroner", "marks": ["bold"] },
-            { "text": "." }
+            "."
         ]
     },
     {
         "children": [
-            {
-                "text": "Endringen vil få virkning for fødsler og adopsjoner som skjer "
-            },
+            "Endringen vil få virkning for fødsler og adopsjoner som skjer ",
             {
                 "text": "1. januar 2019 eller senere",
                 "marks": ["bold"]
             },
-            { "text": "." }
+            "."
         ]
     }
 ]

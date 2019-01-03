@@ -1,52 +1,37 @@
 [
     {
         "children": [
-            {
-                "text": "Hvis du er far til barnet, kan du i noen tilfeller få engangsstønad. Det kan gjelde:"
-            }
+            "Hvis du er far til barnet, kan du i noen tilfeller få engangsstønad. Det kan gjelde:"
         ]
     },
     {
         "listItem": "bullet",
         "level": 1,
-        "children": [
-            { "text": "for hvert barn du " },
-            { "text": "adopterer alene", "marks": ["bold"] }
-        ]
+        "children": ["for hvert barn du ", { "text": "adopterer alene", "marks": ["bold"] }]
     },
     {
         "listItem": "bullet",
         "level": 1,
         "children": [
-            { "text": "om du overtar " },
+            "om du overtar ",
             { "text": "foreldreansvar", "marks": ["bold"] },
-            {
-                "text": " eller dersom den andre forelderen dør"
-            }
+            " eller dersom den andre forelderen dør"
         ]
     },
     {
         "listItem": "bullet",
         "level": 1,
-        "children": [
-            {
-                "text": "når du får tildelt foreldreansvar"
-            }
-        ]
+        "children": ["når du får tildelt foreldreansvar"]
     },
     {
         "listItem": "bullet",
         "level": 1,
         "children": [
-            { "text": "hvis du " },
+            "hvis du ",
             { "text": "innen 56 uker", "marks": ["bold"] },
-            {
-                "text": " etter barnet ble født eller adoptert, har "
-            },
+            " etter barnet ble født eller adoptert, har ",
             { "text": "overtatt omsorgen", "marks": ["bold"] },
-            {
-                "text": " for barnet med sikte på å overta foreldreansvaret alene"
-            }
+            " for barnet med sikte på å overta foreldreansvaret alene"
         ]
     }
 ]

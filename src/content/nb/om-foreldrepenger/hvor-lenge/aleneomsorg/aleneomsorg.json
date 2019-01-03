@@ -1,24 +1,20 @@
 [
     {
         "style": "element",
-        "children": [{ "text": "Alene som mor" }]
+        "children": ["Alene som mor"]
     },
     {
         "children": [
-            {
-                "text": "Når du er alene om omsorgen for barnet får du hele foreldrepengeperioden, inkludert kvoten til den andre forelderen."
-            }
+            "Når du er alene om omsorgen for barnet får du hele foreldrepengeperioden, inkludert kvoten til den andre forelderen."
         ]
     },
     {
         "style": "element",
-        "children": [{ "text": "Alene som far" }]
+        "children": ["Alene som far"]
     },
     {
         "children": [
-            {
-                "text": "Når du er alene om omsorgen for barnet får du hele foreldrepengeperioden, unntatt de tre ukene som var satt av til mor før fødselen."
-            }
+            "Når du er alene om omsorgen for barnet får du hele foreldrepengeperioden, unntatt de tre ukene som var satt av til mor før fødselen."
         ]
     }
 ]

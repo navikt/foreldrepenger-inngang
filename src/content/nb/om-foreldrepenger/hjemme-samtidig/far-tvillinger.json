@@ -1,27 +1,21 @@
 [
     {
         "children": [
-            {
-                "text": "De ekstra ukene kan dere ta samtidig når som helst i foreldrepengeperioden. Når bare far eller medmor har rett til foreldrepenger, kan ukene tas samtidig med at mor er hjemme."
-            }
+            "De ekstra ukene kan dere ta samtidig når som helst i foreldrepengeperioden. Når bare far eller medmor har rett til foreldrepenger, kan ukene tas samtidig med at mor er hjemme."
         ]
     },
     {
         "listItem": "bullet",
         "level": 1,
         "children": [
-            {
-                "text": "Hvis mor tar ut flerbarnsukene, kan ikke far ta ut foreldrepenger fra fellesperiode samtidig."
-            }
+            "Hvis mor tar ut flerbarnsukene, kan ikke far ta ut foreldrepenger fra fellesperiode samtidig."
         ]
     },
     {
         "listItem": "bullet",
         "level": 1,
         "children": [
-            {
-                "text": "Hvis far tar ut flerbarnsukene, kan mor ta ut fellesperiode samtidig. Det er ikke krav til hva far gjør, når mor tar foreldrepenger fra fellesperioden. "
-            }
+            "Hvis far tar ut flerbarnsukene, kan mor ta ut fellesperiode samtidig. Det er ikke krav til hva far gjør, når mor tar foreldrepenger fra fellesperioden. "
         ]
     }
 ]

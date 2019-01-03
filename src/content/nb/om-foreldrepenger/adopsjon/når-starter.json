@@ -1,34 +1,24 @@
 [
     {
         "children": [
-            {
-                "text": "Adopterer dere i utlandet, kan dere velge når dere vil  begynne å ta ut foreldrepengene:"
-            }
+            "Adopterer dere i utlandet, kan dere velge når dere vil  begynne å ta ut foreldrepengene:"
         ]
     },
     {
         "listItem": "bullet",
         "level": 1,
-        "children": [
-            {
-                "text": "når dere overtar omsorgen for barnet i utlandet"
-            }
-        ]
+        "children": ["når dere overtar omsorgen for barnet i utlandet"]
     },
     {
         "listItem": "bullet",
         "level": 1,
         "children": [
-            {
-                "text": "den dagen dere kommer til Norge sammen med barnet. Starter dere senere, får dere færre uker."
-            }
+            "den dagen dere kommer til Norge sammen med barnet. Starter dere senere, får dere færre uker."
         ]
     },
     {
         "children": [
-            {
-                "text": "Dere kan selv velge hvem som skal være hjemme i permisjon. Når far skal ta ut foreldrepenger fra fellesperioden gjelder de samme reglene som ved fødsel, og det er aktivitetskrav til mor."
-            }
+            "Dere kan selv velge hvem som skal være hjemme i permisjon. Når far skal ta ut foreldrepenger fra fellesperioden gjelder de samme reglene som ved fødsel, og det er aktivitetskrav til mor."
         ]
     }
 ]

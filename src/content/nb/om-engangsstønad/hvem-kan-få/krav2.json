@@ -1,13 +1,11 @@
 [
     {
         "style": "undertittel",
-        "children": [{ "text": "Jeg bor i Norge" }]
+        "children": ["Jeg bor i Norge"]
     },
     {
         "children": [
-            {
-                "text": "Bor du i Norge, er du vanligvis medlem av folketrygden. "
-            },
+            "Bor du i Norge, er du vanligvis medlem av folketrygden. ",
             {
                 "text": "Se medlemskap",
                 "marks": ["url_Se_medlemskap", "external_link"]

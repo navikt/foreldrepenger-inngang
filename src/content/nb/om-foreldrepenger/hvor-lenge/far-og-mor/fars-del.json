@@ -1,27 +1,19 @@
 [
     {
         "children": [
-            {
-                "text": "Du kan ta ut fedrekvoten fra "
-            },
+            "Du kan ta ut fedrekvoten fra ",
             { "text": "uke syv", "marks": ["bold"] },
-            {
-                "text": " etter fødselen eller vente til barnet er blitt litt større. Ukene kan du ta samlet, dele opp eller kombinere med delvis arbeid."
-            }
+            " etter fødselen eller vente til barnet er blitt litt større. Ukene kan du ta samlet, dele opp eller kombinere med delvis arbeid."
         ]
     },
     {
         "children": [
-            {
-                "text": "Du må ta ut fedrekvoten "
-            },
+            "Du må ta ut fedrekvoten ",
             {
                 "text": "senest når fellesperioden ",
                 "marks": ["bold"]
             },
-            {
-                "text": "er ferdig, eller søke om "
-            },
+            "er ferdig, eller søke om ",
             {
                 "text": "utsettelse",
                 "marks": ["bold"]
@@ -30,9 +22,7 @@
     },
     {
         "children": [
-            {
-                "text": "Adopterer dere, kan du ta ut fedrekvoten når som helst etter "
-            },
+            "Adopterer dere, kan du ta ut fedrekvoten når som helst etter ",
             {
                 "text": "omsorgsovertakelsen.",
                 "marks": ["bold"]
@@ -41,9 +31,7 @@
     },
     {
         "children": [
-            {
-                "text": "Hvis du blir så syk at du er helt avhengig av hjelp til å ta deg av barnet, kan mor søke om å overta fedrekvoten din."
-            }
+            "Hvis du blir så syk at du er helt avhengig av hjelp til å ta deg av barnet, kan mor søke om å overta fedrekvoten din."
         ]
     }
 ]

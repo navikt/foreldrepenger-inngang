@@ -2,16 +2,12 @@
     {
         "style": "ingress",
         "children": [
-            {
-                "text": "Vanligvis er det "
-            },
+            "Vanligvis er det ",
             {
                 "text": "tre",
                 "marks": ["bold"]
             },
-            {
-                "text": " krav du må fylle for å få foreldrepenger."
-            }
+            " krav du må fylle for å få foreldrepenger."
         ]
     }
 ]

@@ -1,16 +1,14 @@
 [
     {
         "children": [
-            {
-                "text": "Du må søke om utsettelse "
-            },
+            "Du må søke om utsettelse ",
             { "text": "før", "marks": ["bold"] },
-            { "text": " ferien din starter." }
+            " ferien din starter."
         ]
     },
     {
         "children": [
-            { "text": "Les mer om " },
+            "Les mer om ",
             {
                 "text": "foreldrepenger hvis du skal på ferie",
                 "marks": ["url_foreldrepenger_hvis_du_skal_på_ferie"]

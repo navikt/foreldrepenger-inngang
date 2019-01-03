@@ -1,13 +1,11 @@
 [
     {
         "children": [
-            {
-                "text": "Far eller medmor kan tidligst søke når du har dato for "
-            },
+            "Far eller medmor kan tidligst søke når du har dato for ",
             { "text": "foreldreansvar", "marks": ["bold"] },
-            { "text": " eller " },
+            " eller ",
             { "text": "omsorgsovertakelse", "marks": ["bold"] },
-            { "text": "." }
+            "."
         ]
     }
 ]

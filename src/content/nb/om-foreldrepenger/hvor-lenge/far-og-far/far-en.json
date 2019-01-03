@@ -9,36 +9,24 @@
     },
     {
         "children": [
-            {
-                "text": "Du som er "
-            },
+            "Du som er ",
             {
                 "text": "biologisk far",
                 "marks": ["bold"]
             },
-            {
-                "text": " til barnet får vanligvis hele foreldrepengeperioden som "
-            },
-            {
-                "text": "far 1."
-            },
-            {
-                "text": " Den andre faren kan få foreldrepenger hvis han "
-            },
+            " til barnet får vanligvis hele foreldrepengeperioden som ",
+            "far 1.",
+            " Den andre faren kan få foreldrepenger hvis han ",
             {
                 "text": "stebarnsadopterer",
                 "marks": ["bold"]
             },
-            {
-                "text": " og det fortsatt er dager igjen av foreldrepengeperioden."
-            }
+            " og det fortsatt er dager igjen av foreldrepengeperioden."
         ]
     },
     {
         "children": [
-            {
-                "text": "Farskapet til deg som biologisk far må være godkjent i Norge for at du skal få foreldrepenger."
-            }
+            "Farskapet til deg som biologisk far må være godkjent i Norge for at du skal få foreldrepenger."
         ]
     },
     {
@@ -51,28 +39,16 @@
     },
     {
         "children": [
-            {
-                "text": "Dere kan "
-            },
+            "Dere kan ",
             {
                 "text": "velge",
                 "marks": ["bold"]
             },
-            {
-                "text": " hvem av dere som skal starte foreldrepengeperioden som "
-            },
-            {
-                "text": "far 1."
-            },
-            {
-                "text": " Du som starter får "
-            },
-            {
-                "text": "15 uker "
-            },
-            {
-                "text": "satt av til deg. Perioden din starter ved omsorgsovertakelsen."
-            }
+            " hvem av dere som skal starte foreldrepengeperioden som ",
+            "far 1.",
+            " Du som starter får ",
+            "15 uker ",
+            "satt av til deg. Perioden din starter ved omsorgsovertakelsen."
         ]
     }
 ]

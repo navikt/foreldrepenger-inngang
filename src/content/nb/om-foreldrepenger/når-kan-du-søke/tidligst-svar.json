@@ -1,13 +1,9 @@
 [
     {
         "children": [
-            {
-                "text": "Du får tidligst svar på søknaden din "
-            },
+            "Du får tidligst svar på søknaden din ",
             { "text": "fire uker", "marks": ["bold"] },
-            {
-                "text": " før foreldrepengeperioden din starter. Dette er fordi NAV trenger oppdaterte opplysninger for å behandle saken din."
-            }
+            " før foreldrepengeperioden din starter. Dette er fordi NAV trenger oppdaterte opplysninger for å behandle saken din."
         ]
     }
 ]

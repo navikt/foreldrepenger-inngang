@@ -1,49 +1,37 @@
 [
     {
         "children": [
-            {
-                "text": "Vi informerer deg underveis i søknaden dersom vi har behov for dokumentasjon fra deg."
-            }
+            "Vi informerer deg underveis i søknaden dersom vi har behov for dokumentasjon fra deg."
         ]
     },
     {
         "style": "element",
-        "children": [{ "text": "Dokumentasjon på inntekt" }]
+        "children": ["Dokumentasjon på inntekt"]
     },
     {
         "children": [
-            {
-                "text": "For å kunne beregne hva du skal ha utbetalt, må vi ha opplysninger om inntekten din."
-            }
+            "For å kunne beregne hva du skal ha utbetalt, må vi ha opplysninger om inntekten din."
         ]
     },
     {
         "style": "element",
-        "children": [
-            {
-                "text": "Hvis du har hatt arbeidsinntekt eller er i jobb"
-            }
-        ]
+        "children": ["Hvis du har hatt arbeidsinntekt eller er i jobb"]
     },
     {
         "listItem": "bullet",
         "level": 1,
         "children": [
-            {
-                "text": "Hvis du skal starte foreldrepengeperioden din i 2018, må du be arbeidsgiveren din sende inntektsopplysninger til NAV. Arbeidsgiver kan bruke den "
-            },
+            "Hvis du skal starte foreldrepengeperioden din i 2018, må du be arbeidsgiveren din sende inntektsopplysninger til NAV. Arbeidsgiver kan bruke den ",
             {
                 "text": "digitale inntektsmeldingen",
                 "marks": ["url_digitale_inntektsmeldingen", "external_link"]
             },
-            { "text": " eller papirskjemaet " },
+            " eller papirskjemaet ",
             {
                 "text": "NAV 08-30.01",
                 "marks": ["url_NAV-08.30.01", "external_link"]
             },
-            {
-                "text": ". Hvis arbeidsgiveren bruker papirskjemaet, kan du laste det opp sammen med søknaden din."
-            }
+            ". Hvis arbeidsgiveren bruker papirskjemaet, kan du laste det opp sammen med søknaden din."
         ],
         "markDefs": [
             {
@@ -62,16 +50,12 @@
         "listItem": "bullet",
         "level": 1,
         "children": [
-            {
-                "text": "Hvis du skal starte foreldrepengeperioden din i 2019, må arbeidsgiveren din sende "
-            },
+            "Hvis du skal starte foreldrepengeperioden din i 2019, må arbeidsgiveren din sende ",
             {
                 "text": "digital inntektsmelding",
                 "marks": ["url_digitale_inntektsmeldingen", "external_link"]
             },
-            {
-                "text": " til NAV. Inntektsmeldingen kan tidligst sendes fire uker før foreldrepengeperioden starter. "
-            }
+            " til NAV. Inntektsmeldingen kan tidligst sendes fire uker før foreldrepengeperioden starter. "
         ],
         "markDefs": [
             {
@@ -85,161 +69,113 @@
         "listItem": "bullet",
         "level": 1,
         "children": [
-            {
-                "text": "Hvis du får utbetalt penger fra NAV, trenger du ikke sende dokumentasjon på dette."
-            }
+            "Hvis du får utbetalt penger fra NAV, trenger du ikke sende dokumentasjon på dette."
         ]
     },
     {
         "children": [
-            {
-                "text": "Hvis du er "
-            },
+            "Hvis du er ",
             {
                 "text": "selvstendig næringsdrivende",
                 "marks": ["bold"]
             },
-            {
-                "text": " eller "
-            },
+            " eller ",
             {
                 "text": "frilanser",
                 "marks": ["bold"]
             },
-            {
-                "text": " trenger du "
-            },
+            " trenger du ",
             {
                 "text": "ikke",
                 "marks": ["bold"]
             },
-            {
-                "text": " å legge ved noe dokumentasjon. Vi henter inn opplysninger fra offentlige registre, og "
-            },
+            " å legge ved noe dokumentasjon. Vi henter inn opplysninger fra offentlige registre, og ",
             {
                 "text": "tar kontakt",
                 "marks": ["bold"]
             },
-            {
-                "text": " med deg hvis vi trenger flere opplysninger."
-            }
+            " med deg hvis vi trenger flere opplysninger."
         ]
     },
     {
         "style": "element",
-        "children": [{ "text": "Bekreftelse på termin" }]
+        "children": ["Bekreftelse på termin"]
     },
     {
         "children": [
-            {
-                "text": "Hvis du er fast ansatt hos en arbeidsgiver, trenger du ikke sende terminbekreftelse til NAV."
-            }
+            "Hvis du er fast ansatt hos en arbeidsgiver, trenger du ikke sende terminbekreftelse til NAV."
         ]
     },
     {
         "style": "element",
-        "children": [
-            {
-                "text": "Du skal legge ved bekreftelse på termindatoen din hvis"
-            }
-        ]
+        "children": ["Du skal legge ved bekreftelse på termindatoen din hvis"]
     },
     {
         "listItem": "bullet",
         "level": 1,
-        "children": [
-            {
-                "text": "du er selvstendig næringsdrivende eller frilanser"
-            }
-        ]
+        "children": ["du er selvstendig næringsdrivende eller frilanser"]
     },
     {
         "listItem": "bullet",
         "level": 1,
-        "children": [
-            {
-                "text": "du ikke er fast ansatt hos en arbeidsgiver"
-            }
-        ]
+        "children": ["du ikke er fast ansatt hos en arbeidsgiver"]
     },
     {
         "children": [
-            {
-                "text": "Terminbekreftelsen får du hos jordmor eller legen din. Den må være datert i "
-            },
+            "Terminbekreftelsen får du hos jordmor eller legen din. Den må være datert i ",
             {
                 "text": "26. svangerskapsuke",
                 "marks": ["bold"]
             },
-            { "text": " eller senere." }
+            " eller senere."
         ]
     },
     {
         "children": [
-            {
-                "text": "Hvis barnet er født i utlandet og ikke er registrert i folkeregisteret, må du legge ved fødselsattesten til barnet. "
-            }
+            "Hvis barnet er født i utlandet og ikke er registrert i folkeregisteret, må du legge ved fødselsattesten til barnet. "
         ]
     },
     {
         "style": "element",
-        "children": [
-            {
-                "text": "Far eller medmor skal ha fellesperiode eller foreldrepenger"
-            }
-        ]
+        "children": ["Far eller medmor skal ha fellesperiode eller foreldrepenger"]
     },
     {
         "children": [
-            {
-                "text": "Du må legge ved dokumentasjon på aktivitetskravet til mor når du skal være hjemme i fellesperioden eller ha foreldrepenger. Er det bare du som har rett til foreldrepenger må du også legge ved dokumentasjon på aktivitetskravet til mor, hvis du skal utsette."
-            }
+            "Du må legge ved dokumentasjon på aktivitetskravet til mor når du skal være hjemme i fellesperioden eller ha foreldrepenger. Er det bare du som har rett til foreldrepenger må du også legge ved dokumentasjon på aktivitetskravet til mor, hvis du skal utsette."
         ]
     },
     {
         "style": "undertittel",
-        "children": [
-            {
-                "text": "Dokumentasjon som må legges ved søknad om engangsstønad"
-            }
-        ]
+        "children": ["Dokumentasjon som må legges ved søknad om engangsstønad"]
     },
     {
         "listItem": "bullet",
         "level": 1,
         "children": [
-            {
-                "text": "Hvis du søker før barnet er født, så trenger vi en "
-            },
+            "Hvis du søker før barnet er født, så trenger vi en ",
             { "text": "terminbekreftelse", "marks": ["bold"] },
-            {
-                "text": " fra jordmor eller legen din. Den må vise at du er kommet til uke 26. eller senere i svangerskapet."
-            }
+            " fra jordmor eller legen din. Den må vise at du er kommet til uke 26. eller senere i svangerskapet."
         ]
     },
     {
         "listItem": "bullet",
         "level": 1,
         "children": [
-            {
-                "text": "Terminbekreftelsen laster du opp elektronisk i søknaden når du "
-            },
+            "Terminbekreftelsen laster du opp elektronisk i søknaden når du ",
             { "text": "fyller ut", "marks": ["bold"] },
-            { "text": " og sender denne." }
+            " og sender denne."
         ]
     },
     {
         "listItem": "bullet",
         "level": 1,
         "children": [
-            {
-                "text": "Ved adopsjon, må du legge ved dokumentasjon på dato for "
-            },
+            "Ved adopsjon, må du legge ved dokumentasjon på dato for ",
             {
                 "text": "omsorgsovertakelsen",
                 "marks": ["bold"]
             },
-            { "text": ". " }
+            ". "
         ]
     }
 ]

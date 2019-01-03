@@ -1,34 +1,24 @@
 [
     {
         "children": [
-            {
-                "text": "Som far eller medmor kan du starte foreldrepengeperioden din fra "
-            },
+            "Som far eller medmor kan du starte foreldrepengeperioden din fra ",
             { "text": "uke syv", "marks": ["bold"] },
-            {
-                "text": " etter fødselen. Adopterer dere, starter foreldrepengeperioden din fra "
-            },
+            " etter fødselen. Adopterer dere, starter foreldrepengeperioden din fra ",
             { "text": "omsorgsovertakelsen", "marks": ["bold"] },
-            { "text": "." }
+            "."
+        ]
+    },
+    {
+        "children": ["Starter du senere, får du færre uker med foreldrepenger."]
+    },
+    {
+        "children": [
+            "Hvis det ikke passer å ta full permisjon fra jobben, kan du ta ut foreldrepengene dine i kombinasjon med delvis arbeid eller utsette fordi du jobber heltid."
         ]
     },
     {
         "children": [
-            {
-                "text": "Starter du senere, får du færre uker med foreldrepenger."
-            }
-        ]
-    },
-    {
-        "children": [
-            {
-                "text": "Hvis det ikke passer å ta full permisjon fra jobben, kan du ta ut foreldrepengene dine i kombinasjon med delvis arbeid eller utsette fordi du jobber heltid."
-            }
-        ]
-    },
-    {
-        "children": [
-            { "text": "Hvis mor er " },
+            "Hvis mor er ",
             { "text": "uføretrygdet", "marks": ["bold"] },
             {
                 "text": ",  kan du ta ut inntil 15 uker ved 100 prosent foreldrepenger, eller 19 uker ved 80 prosent foreldrepenger, før det stilles krav til at mor er i jobb, studerer eller er i annen godkjent aktivitet."
@@ -37,59 +27,41 @@
     },
     {
         "style": "element",
-        "children": [{ "text": "Aktivitetskravet til mor" }]
+        "children": ["Aktivitetskravet til mor"]
     },
     {
-        "children": [
-            {
-                "text": "Både når du tar ut foreldrepenger eller utsetter, må mor enten"
-            }
-        ]
+        "children": ["Både når du tar ut foreldrepenger eller utsetter, må mor enten"]
     },
     {
         "listItem": "bullet",
         "level": 1,
-        "children": [{ "text": "være i arbeid" }]
+        "children": ["være i arbeid"]
     },
     {
         "listItem": "bullet",
         "level": 1,
-        "children": [{ "text": "ta utdanning på heltid" }]
+        "children": ["ta utdanning på heltid"]
     },
     {
         "listItem": "bullet",
         "level": 1,
-        "children": [
-            {
-                "text": "kombinere utdanning med arbeid som til sammen blir heltid"
-            }
-        ]
+        "children": ["kombinere utdanning med arbeid som til sammen blir heltid"]
     },
     {
         "listItem": "bullet",
         "level": 1,
-        "children": [
-            {
-                "text": "være helt avhengig av hjelp til å ta seg av barnet på grunn av sykdom"
-            }
-        ]
+        "children": ["være helt avhengig av hjelp til å ta seg av barnet på grunn av sykdom"]
+    },
+    {
+        "listItem": "bullet",
+        "level": 1,
+        "children": ["delta i kvalifiseringsprogrammet"]
     },
     {
         "listItem": "bullet",
         "level": 1,
         "children": [
-            {
-                "text": "delta i kvalifiseringsprogrammet"
-            }
-        ]
-    },
-    {
-        "listItem": "bullet",
-        "level": 1,
-        "children": [
-            {
-                "text": "delta på heltid i introduksjonsprogrammet etter kapittel 2 for nyankomne innvandrere"
-            }
+            "delta på heltid i introduksjonsprogrammet etter kapittel 2 for nyankomne innvandrere"
         ]
     }
 ]

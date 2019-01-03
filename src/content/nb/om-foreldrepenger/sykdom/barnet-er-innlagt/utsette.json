@@ -3,26 +3,24 @@
         "listItem": "bullet",
         "level": 1,
         "children": [
-            { "text": "Send inn " },
+            "Send inn ",
             {
                 "text": "søknad",
                 "marks": ["bold"]
             },
-            { "text": " om å utsette foreldrepengene." }
+            " om å utsette foreldrepengene."
         ]
     },
     {
         "listItem": "bullet",
         "level": 1,
         "children": [
-            { "text": "Legg ved " },
+            "Legg ved ",
             {
                 "text": "dokumentasjon på innleggelsen",
                 "marks": ["bold"]
             },
-            {
-                "text": " fra sykehuset eller helseinstitusjonen."
-            }
+            " fra sykehuset eller helseinstitusjonen."
         ]
     }
 ]

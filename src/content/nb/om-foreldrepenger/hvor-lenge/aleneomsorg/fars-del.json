@@ -1,20 +1,16 @@
 [
     {
         "children": [
-            {
-                "text": "Foreldrepengeperioden din starter når "
-            },
+            "Foreldrepengeperioden din starter når ",
             { "text": "barnet er født", "marks": ["bold"] },
-            { "text": " eller på datoen for" },
+            " eller på datoen for",
             { "text": "omsorgsovertakelse", "marks": ["bold"] },
-            { "text": "." }
+            "."
         ]
     },
     {
         "children": [
-            {
-                "text": "Hvis mor har fått foreldrepenger før du blir alene om omsorgen, kan du få foreldrepenger for perioden som er igjen."
-            }
+            "Hvis mor har fått foreldrepenger før du blir alene om omsorgen, kan du få foreldrepenger for perioden som er igjen."
         ]
     }
 ]

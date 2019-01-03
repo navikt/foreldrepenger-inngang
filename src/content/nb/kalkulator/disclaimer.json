@@ -1,14 +1,12 @@
 [
     {
         "children": [
-            {
-                "text": "Dette er en foreløpig beregning på hva du kan få før skatt. Når du har sendt søknaden og den er ferdigbehandlet, vil du få vite hva du får utbetalt."
-            }
+            "Dette er en foreløpig beregning på hva du kan få før skatt. Når du har sendt søknaden og den er ferdigbehandlet, vil du få vite hva du får utbetalt."
         ]
     },
     {
         "children": [
-            { "text": "Les mer om " },
+            "Les mer om ",
             {
                 "text": "nye beregningsregler fra 1. januar 2019",
                 "marks": ["url_om_beregningsregler_fra_2019"]

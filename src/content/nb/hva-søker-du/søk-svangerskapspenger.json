@@ -1,16 +1,12 @@
 [
     {
         "children": [
-            {
-                "text": "Er du "
-            },
+            "Er du ",
             {
                 "text": "arbeidstaker",
                 "marks": ["bold"]
             },
-            {
-                "text": "? Da søker du på "
-            },
+            "? Da søker du på ",
             {
                 "text": "Arbeidstilsynets skjema",
                 "marks": ["url_arbeidstilsynets_skjema", "external_link"]
@@ -29,28 +25,20 @@
     },
     {
         "children": [
-            {
-                "text": "Er du "
-            },
+            "Er du ",
             {
                 "text": "selvstendig næringsdrivende eller frilanser",
                 "marks": ["bold"]
             },
-            {
-                "text": "? Da finner du skjema her:"
-            }
+            "? Da finner du skjema her:"
         ]
     },
     {
-        "children": [
-            {
-                "text": "Krav om svangerskapspenger til selvstendig næringsdrivende og frilanser"
-            }
-        ]
+        "children": ["Krav om svangerskapspenger til selvstendig næringsdrivende og frilanser"]
     },
     {
         "children": [
-            { "text": "Skjema på: " },
+            "Skjema på: ",
             { "text": "Bokmål", "marks": ["url_krav_bokmål", "external_link"] },
             { "text": "Nynorsk", "marks": ["url_krav_nynorsk", "external_link"] }
         ],
@@ -69,14 +57,12 @@
     },
     {
         "children": [
-            {
-                "text": "Inntektsopplysninger for selvstendig næringsdrivende og/eller frilansere som skal ha foreldrepenger eller svangerskapspenger"
-            }
+            "Inntektsopplysninger for selvstendig næringsdrivende og/eller frilansere som skal ha foreldrepenger eller svangerskapspenger"
         ]
     },
     {
         "children": [
-            { "text": "Skjema på: " },
+            "Skjema på: ",
             { "text": "Bokmål", "marks": ["url_selvstendig_bokmål", "external_link"] },
             { "text": "Nynorsk", "marks": ["url_selvstendig_nynorsk", "external_link"] }
         ],

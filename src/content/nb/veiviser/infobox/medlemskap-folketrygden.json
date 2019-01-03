@@ -1,16 +1,12 @@
 [
     {
         "children": [
-            {
-                "text": "Hvis du ikke bor i Norge kan du være frivillig medlem av folketrygden, du kan lese mer om "
-            },
+            "Hvis du ikke bor i Norge kan du være frivillig medlem av folketrygden, du kan lese mer om ",
             {
                 "text": "medlemskap i folketrygden her.",
                 "marks": ["les_om_folkeTrygden", "external_link"]
             },
-            {
-                "text": ""
-            }
+            ""
         ],
         "markDefs": [
             {

@@ -1,23 +1,17 @@
 [
     {
         "children": [
-            {
-                "text": "Du får en engangssum på "
-            },
+            "Du får en engangssum på ",
             {
                 "text": "ENGANGSSUM_PER_BARN",
                 "marks": ["variable", "bold"]
             },
-            {
-                "text": " kroner for hvert barn du føder eller adopterer."
-            }
+            " kroner for hvert barn du føder eller adopterer."
         ]
     },
     {
         "children": [
-            {
-                "text": "Adopterer du barnet til ektefellen din, har du ikke rett til engangsstønad. Det samme gjelder hvis du adopterer barn over 15 år."
-            }
+            "Adopterer du barnet til ektefellen din, har du ikke rett til engangsstønad. Det samme gjelder hvis du adopterer barn over 15 år."
         ]
     }
 ]

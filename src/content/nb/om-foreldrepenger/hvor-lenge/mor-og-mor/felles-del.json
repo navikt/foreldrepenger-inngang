@@ -1,73 +1,49 @@
 [
     {
-        "children": [
-            {
-                "text": "Fellesdelen er ukene med foreldrepenger som dere kan dele. "
-            }
-        ]
+        "children": ["Fellesdelen er ukene med foreldrepenger som dere kan dele. "]
     },
     {
         "children": [
-            {
-                "text": "Når medmor tar ut foreldrepengene fra fellesperioden, må mor jobbe, studere eller være i annen godkjent aktivitet. "
-            }
+            "Når medmor tar ut foreldrepengene fra fellesperioden, må mor jobbe, studere eller være i annen godkjent aktivitet. "
         ]
     },
     {
         "style": "element",
-        "children": [{ "text": "Aktivitetskravet til mor" }]
+        "children": ["Aktivitetskravet til mor"]
     },
     {
-        "children": [
-            {
-                "text": "Mor må enten "
-            }
-        ]
+        "children": ["Mor må enten "]
     },
     {
         "listItem": "bullet",
         "level": 1,
-        "children": [{ "text": "være i arbeid" }]
+        "children": ["være i arbeid"]
     },
     {
         "listItem": "bullet",
         "level": 1,
-        "children": [{ "text": "ta utdanning på heltid " }]
+        "children": ["ta utdanning på heltid "]
     },
     {
         "listItem": "bullet",
         "level": 1,
-        "children": [
-            {
-                "text": "kombinere utdanning med arbeid som til sammen blir heltid"
-            }
-        ]
+        "children": ["kombinere utdanning med arbeid som til sammen blir heltid"]
     },
     {
         "listItem": "bullet",
         "level": 1,
-        "children": [
-            {
-                "text": "være helt avhengig av hjelp til å ta seg av barnet på grunn av sykdom"
-            }
-        ]
+        "children": ["være helt avhengig av hjelp til å ta seg av barnet på grunn av sykdom"]
+    },
+    {
+        "listItem": "bullet",
+        "level": 1,
+        "children": ["delta i kvalifiseringsprogrammet"]
     },
     {
         "listItem": "bullet",
         "level": 1,
         "children": [
-            {
-                "text": "delta i kvalifiseringsprogrammet"
-            }
-        ]
-    },
-    {
-        "listItem": "bullet",
-        "level": 1,
-        "children": [
-            {
-                "text": "delta på heltid i introduksjonsprogrammet etter kapittel 2 for nyankomne innvandrere"
-            }
+            "delta på heltid i introduksjonsprogrammet etter kapittel 2 for nyankomne innvandrere"
         ]
     }
 ]

@@ -1,13 +1,11 @@
 [
     {
         "style": "undertittel",
-        "children": [{ "text": "Jeg er mor til barnet" }]
+        "children": ["Jeg er mor til barnet"]
     },
     {
         "children": [
-            {
-                "text": "I noen tilfeller kan "
-            },
+            "I noen tilfeller kan ",
             {
                 "text": "far eller medmor få engangsstønad.",
                 "marks": ["url_les_mer"]

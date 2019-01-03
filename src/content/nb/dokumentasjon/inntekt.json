@@ -1,13 +1,11 @@
 [
     {
         "style": "element",
-        "children": [{ "text": "Dokumentasjon på inntekt" }]
+        "children": ["Dokumentasjon på inntekt"]
     },
     {
         "children": [
-            {
-                "text": "For å kunne beregne hva du skal ha utbetalt, må vi ha informasjon om hvilken inntekt du har når du starter foreldrepengeperioden."
-            }
+            "For å kunne beregne hva du skal ha utbetalt, må vi ha informasjon om hvilken inntekt du har når du starter foreldrepengeperioden."
         ]
     }
 ]
