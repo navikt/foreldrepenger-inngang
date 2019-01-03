@@ -1,97 +1,62 @@
 [
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "children": [
-            {
-                "type": "span",
-                "text": "Her finner du en oversikt over hvor mye du får i foreldrepenger når du har utbetalinger fra NAV frem til foreldrepengeperioden din starter."
-            }
+            "Her finner du en oversikt over hvor mye du får i foreldrepenger når du har utbetalinger fra NAV frem til foreldrepengeperioden din starter."
         ]
     },
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "listItem": "bullet",
         "level": 1,
         "children": [
             {
-                "type": "span",
                 "text": "Sykepenger, foreldrepenger, svangerskapspenger eller stønad ved pleie av sykt barn: ",
                 "marks": ["bold"]
             },
-            {
-                "type": "span",
-                "text": "Foreldrepengene dine blir beregnet til det samme som du vanligvis ville hatt i inntekt dersom du var i jobb."
-            }
+            "Foreldrepengene dine blir beregnet til det samme som du vanligvis ville hatt i inntekt dersom du var i jobb."
         ]
     },
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "listItem": "bullet",
         "level": 1,
         "children": [
             {
-                "type": "span",
                 "text": "Arbeidsavklaringspenger: ",
                 "marks": ["bold"]
             },
-            {
-                "type": "span",
-                "text": "Foreldrepengene dine blir beregnet til det samme som du får i arbeidsavklaringspenger. "
-            }
+            "Foreldrepengene dine blir beregnet til det samme som du får i arbeidsavklaringspenger. "
         ]
     },
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "listItem": "bullet",
         "level": 1,
         "children": [
             {
-                "type": "span",
                 "text": "Dagpenger til gravide kvinner: ",
                 "marks": ["bold"]
             },
-            {
-                "type": "span",
-                "text": "Foreldrepengene dine blir beregnet til det samme du får i dagpenger. Hvis du er mor og venter barn ved fødsel, kan du istedenfor få foreldrepengene dine beregnet etter et snitt av inntekten din i de seks beste av de ti siste månedene, hvis det gir deg en høyere utbetaling. NAV vil beregne hvilket alternativ er best for deg. "
-            }
+            "Foreldrepengene dine blir beregnet til det samme du får i dagpenger. Hvis du er mor og venter barn ved fødsel, kan du istedenfor få foreldrepengene dine beregnet etter et snitt av inntekten din i de seks beste av de ti siste månedene, hvis det gir deg en høyere utbetaling. NAV vil beregne hvilket alternativ er best for deg. "
         ]
     },
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "listItem": "bullet",
         "level": 1,
         "children": [
             {
-                "type": "span",
                 "text": "Dagpenger til far og medmor: ",
                 "marks": ["bold"]
             },
-            {
-                "type": "span",
-                "text": "Foreldrepengene blir det samme som du får i dagpenger. Hvis du har arbeidsinntekt i tillegg til dagpengene, beregner vi foreldrepengene dine ut fra dagpengene og arbeidsinntekten din."
-            }
+            "Foreldrepengene blir det samme som du får i dagpenger. Hvis du har arbeidsinntekt i tillegg til dagpengene, beregner vi foreldrepengene dine ut fra dagpengene og arbeidsinntekten din."
         ]
     },
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "listItem": "bullet",
         "level": 1,
         "children": [
             {
-                "type": "span",
                 "text": "Dagpenger til mor ved adopsjon: ",
                 "marks": ["bold"]
             },
-            {
-                "type": "span",
-                "text": "Foreldrepengene blir det samme som du får i dagpenger. Hvis du har arbeidsinntekt i tillegg til dagpengene, beregner vi foreldrepengene dine ut fra dagpengene og arbeidsinntekten din."
-            }
+            "Foreldrepengene blir det samme som du får i dagpenger. Hvis du har arbeidsinntekt i tillegg til dagpengene, beregner vi foreldrepengene dine ut fra dagpengene og arbeidsinntekten din."
         ]
     }
 ]

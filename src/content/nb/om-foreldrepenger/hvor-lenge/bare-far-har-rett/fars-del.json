@@ -20,9 +20,7 @@
         "children": [
             "Hvis mor er ",
             { "text": "uføretrygdet", "marks": ["bold"] },
-            {
-                "text": ",  kan du ta ut inntil 15 uker ved 100 prosent foreldrepenger, eller 19 uker ved 80 prosent foreldrepenger, før det stilles krav til at mor er i jobb, studerer eller er i annen godkjent aktivitet."
-            }
+            ",  kan du ta ut inntil 15 uker ved 100 prosent foreldrepenger, eller 19 uker ved 80 prosent foreldrepenger, før det stilles krav til at mor er i jobb, studerer eller er i annen godkjent aktivitet."
         ]
     },
     {
