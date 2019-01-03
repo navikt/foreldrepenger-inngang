@@ -1,30 +1,17 @@
 [
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "children": [
+            "Foreldrepengene skal dekke inntekten du vanligvis har, opptil ",
             {
-                "type": "span",
-                "text": "Foreldrepengene skal dekke inntekten du vanligvis har, opptil "
-            },
-            {
-                "type": "span",
                 "text": "581 298 kroner",
                 "marks": ["bold"]
             },
+            " (",
             {
-                "type": "span",
-                "text": " ("
-            },
-            {
-                "type": "span",
                 "text": "seks ganger grunnbeløpet",
                 "marks": ["url_seks_ganger_grunnbeløpet", "external_link"]
             },
-            {
-                "type": "span",
-                "text": "). Her kan du lese om hvordan foreldrepengene beregnes."
-            }
+            "). Her kan du lese om hvordan foreldrepengene beregnes."
         ],
         "markDefs": [
             {
