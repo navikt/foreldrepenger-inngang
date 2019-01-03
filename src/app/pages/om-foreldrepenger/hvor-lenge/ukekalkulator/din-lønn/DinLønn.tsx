@@ -7,6 +7,7 @@ import TypografiBase from 'nav-frontend-typografi';
 import './dinLønn.less';
 
 const cls = BEMHelper('dinLønn');
+const EKSEMPEL_KRONER_PER_MÅNED = 22000;
 
 interface Props {
     grandParentCls: BEMWrapper;
@@ -20,7 +21,7 @@ const DinLønn: React.StatelessComponent<Props & InjectedIntlProps> = ({
     onPercentageSelect,
     intl
 }) => {
-    const monthlyWage = 22000;
+    const monthlyWage = EKSEMPEL_KRONER_PER_MÅNED;
 
     return (
         <div className={cls.className}>
@@ -43,7 +44,9 @@ const DinLønn: React.StatelessComponent<Props & InjectedIntlProps> = ({
                 />
             </div>
             <TypografiBase type="normaltekst" className={cls.element('eksempeltekst')}>
-                {getTranslation('om_foreldrepenger.hvor_lenge.eksempel', intl)}
+                {getTranslation('om_foreldrepenger.hvor_lenge.eksempel', intl, {
+                    eksempelKronerPerMåned: EKSEMPEL_KRONER_PER_MÅNED.toLocaleString(intl.locale)
+                })}
             </TypografiBase>
         </div>
     );

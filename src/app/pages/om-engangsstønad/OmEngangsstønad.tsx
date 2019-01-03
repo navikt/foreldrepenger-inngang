@@ -1,9 +1,11 @@
 import * as React from 'react';
+import { ENGANGSSUM_PER_BARN } from 'app/utils/beregningUtils';
 import { getContent } from 'app/utils/getContent';
 import { injectIntl, InjectedIntlProps } from 'react-intl';
 import BEMHelper from '../../utils/bem';
 import Breadcrumbs from '../../components/breadcrumbs/Breadcrumbs';
 import Environment from 'app/Environment';
+import getTranslation from 'app/utils/i18nUtils';
 import HeaderInformasjon from '../../components/header-informasjon/HeaderInformasjon';
 import Hjelp from '../../components/hjelpe-seksjon/HjelpeSeksjon';
 import HvaKanDuFå from './HvaKanDuFå';
@@ -15,7 +17,6 @@ import NårKanDuSøke from './når-kan-du-søke/NårKanDuSøke';
 import Sidebanner from '../../components/sidebanner/Sidebanner';
 import TilFarEllerMedmor from './TilFarEllerMedmor';
 import '../infosider/infosider.less';
-import getTranslation from 'app/utils/i18nUtils';
 
 const infosiderCls = BEMHelper('infosider');
 
@@ -60,6 +61,9 @@ const OmEngangsstonad: React.StatelessComponent<Props & InjectedIntlProps> = ({
                     <Breadcrumbs path={location.pathname} />
                     <Informasjonsbanner
                         tekst={getContent('om-engangsstønad/nye-regler-fra-2019', intl)}
+                        definisjoner={{
+                            engangssum: ENGANGSSUM_PER_BARN.toLocaleString(intl.locale)
+                        }}
                     />
                     <HvemKanFåEngangsstønad />
                     <HvaKanDuFå />

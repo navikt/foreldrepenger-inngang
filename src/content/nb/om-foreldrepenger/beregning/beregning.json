@@ -3,7 +3,11 @@
         "children": [
             "Foreldrepengene skal dekke inntekten du vanligvis har, opptil ",
             {
-                "text": "581 298 kroner",
+                "text": "seksG",
+                "marks": ["variable", "bold"]
+            },
+            {
+                "text": " kroner",
                 "marks": ["bold"]
             },
             " (",

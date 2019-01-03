@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { AlertStripeInfo } from 'nav-frontend-alertstriper';
-import { Avsnitt } from 'app/utils/strukturertTekst';
+import { Avsnitt, Definisjoner } from 'app/utils/strukturertTekst';
 import BEMHelper from 'app/utils/bem';
 import StrukturertTekst from 'app/components/strukturert-tekst/StrukturertTekst';
 import './informasjonsbanner.less';
@@ -9,11 +9,12 @@ const cls = BEMHelper('informasjonsbanner');
 
 interface Props {
     tekst: Avsnitt[];
+    definisjoner?: Definisjoner;
 }
 
-const Informasjonsbanner = ({ tekst }: Props) => (
+const Informasjonsbanner = ({ tekst, definisjoner }: Props) => (
     <AlertStripeInfo className={cls.className}>
-        <StrukturertTekst tekst={tekst} />
+        <StrukturertTekst tekst={tekst} definisjoner={definisjoner} />
     </AlertStripeInfo>
 );
 

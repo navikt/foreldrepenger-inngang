@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { FrilanserIkon } from './ikoner/FrilanserIkon';
 import { getContent } from '../../../utils/getContent';
+import { getGrunnbeløpet } from 'app/utils/beregningUtils';
 import { injectIntl, InjectedIntlProps } from 'react-intl';
 import { Innholdsfane } from '../../../components/innholdsfaner/fane/Fane';
 import AndreInntekskilder from './innhold/AndreInntekskilder';
@@ -61,7 +62,12 @@ const Beregning: React.StatelessComponent<Props & InjectedIntlProps> = ({ id, in
             id={id}
             title={getTranslation('om_foreldrepenger.beregning.tittel', intl)}
             svg={beregningSvg}>
-            <StrukturertTekst tekst={getContent('om-foreldrepenger/beregning/beregning', intl)} />
+            <StrukturertTekst
+                tekst={getContent('om-foreldrepenger/beregning/beregning', intl)}
+                definisjoner={{
+                    seksG: (getGrunnbeløpet() * 6).toLocaleString(intl.locale)
+                }}
+            />
             <Innholdsfaner tabs={tabs} />
         </PanelMedIllustrasjon>
     );
