@@ -1,24 +1,26 @@
 import * as React from 'react';
+import { Arbeidssituasjon } from '../Kalkulator';
+import { injectIntl, InjectedIntlProps } from 'react-intl';
 import { Input } from 'nav-frontend-skjema';
-import { getTranslation, Language, withIntl } from 'app/intl/intl';
 import {
     lastThreeYears,
     lastThreeMonths,
     computeAverage,
     MAKS_ANTALL_SIFFER
 } from 'app/utils/beregningUtils';
-import TypografiBase from 'nav-frontend-typografi';
 import BEMHelper from 'app/utils/bem';
+import getTranslation from 'app/utils/i18nUtils';
+import TypografiBase from 'nav-frontend-typografi';
 import './lønnskalkulator.less';
-import { Arbeidssituasjon } from '../Kalkulator';
 
 const cls = BEMHelper('lønnskalkulator');
 
-interface Props {
+interface OwnProps {
     situasjoner: Arbeidssituasjon[];
     onChange: (monthlyAverage?: number) => void;
-    lang: Language;
 }
+
+type Props = OwnProps & InjectedIntlProps;
 
 interface State {
     monthlyAverage?: number;
@@ -88,9 +90,9 @@ class Lønnskalkulator extends React.Component<Props, State> {
     };
 
     render = () => {
-        const { lang } = this.props;
+        const { intl } = this.props;
         const monthlyAverage = this.state.monthlyAverage
-            ? Math.round(this.state.monthlyAverage).toLocaleString(lang)
+            ? Math.round(this.state.monthlyAverage).toLocaleString(intl.locale)
             : '–';
 
         const output = `${monthlyAverage} kr`;
@@ -124,7 +126,7 @@ class Lønnskalkulator extends React.Component<Props, State> {
                 <output>
                     <label>
                         <TypografiBase type="element">
-                            {getTranslation('kalkulator.lønn.resultat', lang)}
+                            {getTranslation('kalkulator.lønn.resultat', intl)}
                         </TypografiBase>
                     </label>
                     <TypografiBase type="ingress">{output}</TypografiBase>
@@ -134,4 +136,4 @@ class Lønnskalkulator extends React.Component<Props, State> {
     };
 }
 
-export default withIntl(Lønnskalkulator);
+export default injectIntl(Lønnskalkulator);

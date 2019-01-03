@@ -1,10 +1,11 @@
-import { getTranslation, Language } from 'app/intl/intl';
 import { getAntallUker, Foreldresituasjon } from 'app/utils/foreldresituasjon';
 import { InformasjonsfaneProps } from '../informasjons-faner/Informasjonsfaner';
+import getTranslation from 'app/utils/i18nUtils';
+import { InjectedIntl } from 'react-intl';
 
 export const addAntallUkerSomSnakkebobletittel = (
     foreldresituasjon: Foreldresituasjon,
-    lang: Language
+    intl: InjectedIntl
 ) => (fane: InformasjonsfaneProps) => {
     const antallUker100 = getAntallUker(foreldresituasjon, fane.kvote, 'dekning100');
     const antallUker80 = getAntallUker(foreldresituasjon, fane.kvote, 'dekning80');
@@ -17,7 +18,7 @@ export const addAntallUkerSomSnakkebobletittel = (
                 ...fane.innhold.snakkeboble,
                 tittel: getTranslation(
                     'om_foreldrepenger.hvor_lenge.fordeling.snakkeboble.tittel',
-                    lang,
+                    intl,
                     {
                         antallUker100,
                         antallUker80

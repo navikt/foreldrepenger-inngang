@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { getContent } from 'app/utils/getContent';
-import { getTranslation, IntlProps, withIntl } from '../../intl/intl';
+import { InjectedIntlProps, injectIntl } from 'react-intl';
 import Adopsjon from './adopsjon/Adopsjon';
 import BEMHelper from '../../utils/bem';
 import Beregning from './beregning/Beregning';
@@ -8,6 +8,7 @@ import Breadcrumbs from '../../components/breadcrumbs/Breadcrumbs';
 import classnames from 'classnames';
 import Environment from 'app/Environment';
 import Ferie from './ferie/Ferie';
+import getTranslation from 'app/utils/i18nUtils';
 import HeaderInformasjon from '../../components/header-informasjon/HeaderInformasjon';
 import Hjelp from '../../components/hjelpe-seksjon/HjelpeSeksjon';
 import HjemmeSamtidig from './hjemme-samtidig/HjemmeSamtidig';
@@ -51,7 +52,10 @@ const sections: ForeldrepengerSection[] = [
     'adoptere'
 ];
 
-const OmForeldrepenger: React.StatelessComponent<Props & IntlProps> = ({ location, lang }) => {
+const OmForeldrepenger: React.StatelessComponent<Props & InjectedIntlProps> = ({
+    location,
+    intl
+}) => {
     return (
         <div className={classnames(cls.className)}>
             <HeaderInformasjon
@@ -59,17 +63,17 @@ const OmForeldrepenger: React.StatelessComponent<Props & IntlProps> = ({ locatio
                 description="Foreldrepenger skal sikre deg inntekt når du ha foreldrepermisjon. Hvis du ikke hatt inntekt, kan du få en engangssum isteden."
                 siteUrl="https://familie.nav.no/om-foreldrepenger"
             />
-            <Sidebanner text={getTranslation('om_foreldrepenger.tittel', lang)} />
+            <Sidebanner text={getTranslation('om_foreldrepenger.tittel', intl)} />
             <MedInnholdsfortegnelse
                 sections={sections}
                 button={{
-                    label: getTranslation('innholdsfortegnelse.søk_nå', lang),
+                    label: getTranslation('innholdsfortegnelse.søk_nå', intl),
                     url: Environment.SOK_FORELDREPENGER_URL
                 }}>
                 <article className={cls.element('article')}>
                     <Breadcrumbs path={location.pathname} />
                     <Informasjonsbanner
-                        tekst={getContent('om-foreldrepenger/nye-regler-fra-2019', lang)}
+                        tekst={getContent('om-foreldrepenger/nye-regler-fra-2019', intl)}
                     />
                     <HvemKanFåForeldrepenger id={sections[0]} />
                     <HvorLenge id={sections[1]} />
@@ -88,4 +92,4 @@ const OmForeldrepenger: React.StatelessComponent<Props & IntlProps> = ({ locatio
     );
 };
 
-export default withIntl(OmForeldrepenger);
+export default injectIntl(OmForeldrepenger);

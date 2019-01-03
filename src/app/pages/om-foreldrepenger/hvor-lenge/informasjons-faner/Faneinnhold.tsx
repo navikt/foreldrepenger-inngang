@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { withIntl, IntlProps } from 'app/intl/intl';
+import { injectIntl, InjectedIntlProps } from 'react-intl';
 import BEMHelper from '../../../../utils/bem';
 import CustomSVG from '../../../../utils/CustomSVG';
 import Veileder from 'nav-frontend-veileder';
@@ -8,7 +8,7 @@ import Snakkeboble from './Snakkeboble';
 
 const cls = BEMHelper('faneinnhold');
 
-type Props = FaneinnholdProps & IntlProps;
+type Props = FaneinnholdProps & InjectedIntlProps;
 
 class Faneinnhold extends React.Component<Props> {
     state: {
@@ -40,7 +40,7 @@ class Faneinnhold extends React.Component<Props> {
     getVeilederposisjon = () => (window.innerWidth > 576 ? 'høyre' : 'bunn');
 
     render = () => {
-        const { snakkeboble, component, lang } = this.props;
+        const { snakkeboble, component } = this.props;
 
         let svg;
         if (typeof snakkeboble.icon === 'string') {
@@ -59,10 +59,13 @@ class Faneinnhold extends React.Component<Props> {
                             <Snakkeboble
                                 tittel={snakkeboble.tittel}
                                 punkter={snakkeboble.punkter}
-                                lang={lang}
                             />
                         }>
-                        {svg ? <CustomSVG className="Icon__svg" iconRef={svg} size={72} /> : snakkeboble.icon}
+                        {svg ? (
+                            <CustomSVG className="Icon__svg" iconRef={svg} size={72} />
+                        ) : (
+                            snakkeboble.icon
+                        )}
                     </Veileder>
                 </div>
                 <div className={cls.element('bodyTxt')}>{component}</div>
@@ -71,4 +74,4 @@ class Faneinnhold extends React.Component<Props> {
     };
 }
 
-export default withIntl(Faneinnhold);
+export default injectIntl(Faneinnhold);

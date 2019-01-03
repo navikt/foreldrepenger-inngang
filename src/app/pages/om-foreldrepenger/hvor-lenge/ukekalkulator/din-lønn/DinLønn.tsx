@@ -1,12 +1,10 @@
 import * as React from 'react';
-
+import { injectIntl, InjectedIntlProps } from 'react-intl';
 import BEMHelper, { BEMWrapper } from '../../../../../utils/bem';
+import getTranslation from 'app/utils/i18nUtils';
 import Prosentvalg from './Prosentvalg';
-
-import './dinLønn.less';
-import { getTranslation, withIntl, IntlProps } from '../../../../../intl/intl';
 import TypografiBase from 'nav-frontend-typografi';
-// import WithLink from '../../../../../utils/withLink';
+import './dinLønn.less';
 
 const cls = BEMHelper('dinLønn');
 
@@ -16,11 +14,11 @@ interface Props {
     onPercentageSelect: (p: number) => void;
 }
 
-const DinLønn: React.StatelessComponent<Props & IntlProps> = ({
+const DinLønn: React.StatelessComponent<Props & InjectedIntlProps> = ({
     grandParentCls,
     selectedPercentage,
     onPercentageSelect,
-    lang
+    intl
 }) => {
     const monthlyWage = 22000;
 
@@ -45,17 +43,10 @@ const DinLønn: React.StatelessComponent<Props & IntlProps> = ({
                 />
             </div>
             <TypografiBase type="normaltekst" className={cls.element('eksempeltekst')}>
-                {getTranslation('om_foreldrepenger.hvor_lenge.eksempel', lang)}
+                {getTranslation('om_foreldrepenger.hvor_lenge.eksempel', intl)}
             </TypografiBase>
-            {/*<div className={cls.element('kalkulatorlenke')}>
-                <TypografiBase type="normaltekst">
-                    <WithLink urlIsExternal={true} addExternalIcon={true} url="www.nav.no">
-                        {getTranslation('om_foreldrepenger.hvor_lenge.kalkulatorlenke', lang)}
-                    </WithLink>
-                </TypografiBase>
-            </div>*/}
         </div>
     );
 };
 
-export default withIntl(DinLønn);
+export default injectIntl(DinLønn);

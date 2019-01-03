@@ -1,10 +1,11 @@
 import * as React from 'react';
 import Informasjonsfaner, { InformasjonsfaneProps } from '../informasjons-faner/Informasjonsfaner';
 import StrukturertTekst from '../../../../components/strukturert-tekst/StrukturertTekst';
-import { Language, withIntl, getTranslation } from '../../../../intl/intl';
+import { injectIntl, InjectedIntl, InjectedIntlProps } from 'react-intl';
 import { getContent } from '../../../../utils/getContent';
 import { Kvote } from 'app/utils/foreldresituasjon';
 import { addAntallUkerSomSnakkebobletittel } from './utils';
+import getTranslation from 'app/utils/i18nUtils';
 
 const content = 'om-foreldrepenger/hvor-lenge/aleneomsorg/aleneomsorg';
 const kalkulatorbeskrivelse = 'om-foreldrepenger/hvor-lenge/kalkulatorbeskrivelse';
@@ -13,10 +14,10 @@ const morsDel = 'om-foreldrepenger/hvor-lenge/aleneomsorg/mors-del';
 
 const DEFAULT_TAB: Kvote = 'mødrekvote';
 
-const getInformasjonsfaner = (lang: Language): InformasjonsfaneProps[] => [
+const getInformasjonsfaner = (intl: InjectedIntl): InformasjonsfaneProps[] => [
     {
         kvote: DEFAULT_TAB,
-        label: getTranslation(`om_foreldrepenger.hvor_lenge.fordeling.alenemor`, lang),
+        label: getTranslation(`om_foreldrepenger.hvor_lenge.fordeling.alenemor`, intl),
         innhold: {
             snakkeboble: {
                 tittel: 'til mor',
@@ -24,34 +25,35 @@ const getInformasjonsfaner = (lang: Language): InformasjonsfaneProps[] => [
                 punkter: [
                     getTranslation(
                         'om_foreldrepenger.hvor_lenge.fordeling.i_tillegg_til_foreldrepenger',
-                        lang
+                        intl
                     ),
-                    getTranslation('om_foreldrepenger.hvor_lenge.fordeling.krav.default', lang)
+                    getTranslation('om_foreldrepenger.hvor_lenge.fordeling.krav.default', intl)
                 ]
             },
-            component: <StrukturertTekst tekst={getContent(morsDel, lang)} />
+            component: <StrukturertTekst tekst={getContent(morsDel, intl)} />
         }
     },
     {
         kvote: 'fedrekvote',
-        label: getTranslation('om_foreldrepenger.hvor_lenge.fordeling.alenefar', lang),
+        label: getTranslation('om_foreldrepenger.hvor_lenge.fordeling.alenefar', intl),
         innhold: {
             snakkeboble: {
                 tittel: 'til far',
                 icon: 'far1',
                 punkter: [
-                    getTranslation('om_foreldrepenger.hvor_lenge.fordeling.krav.som_far', lang)
+                    getTranslation('om_foreldrepenger.hvor_lenge.fordeling.krav.som_far', intl)
                 ]
             },
-            component: <StrukturertTekst tekst={getContent(farsDel, lang)} />
+            component: <StrukturertTekst tekst={getContent(farsDel, intl)} />
         }
     }
 ];
 
-interface Props {
-    lang: Language;
+interface OwnProps {
     onKvoteSelected: (kvote: Kvote) => void;
 }
+
+type Props = OwnProps & InjectedIntlProps;
 
 class Aleneomsorg extends React.Component<Props> {
     componentWillMount = () => {
@@ -60,20 +62,20 @@ class Aleneomsorg extends React.Component<Props> {
 
     render = () => (
         <div>
-            <StrukturertTekst tekst={getContent(content, this.props.lang)} />
+            <StrukturertTekst tekst={getContent(content, this.props.intl)} />
             <Informasjonsfaner
-                tabs={getInformasjonsfaner(this.props.lang).map(
-                    addAntallUkerSomSnakkebobletittel('aleneomsorg', this.props.lang)
+                tabs={getInformasjonsfaner(this.props.intl).map(
+                    addAntallUkerSomSnakkebobletittel('aleneomsorg', this.props.intl)
                 )}
                 onTabSelected={this.props.onKvoteSelected}
                 title={getTranslation(
                     'om_foreldrepenger.hvor_lenge.fordeling.tittel_alene',
-                    this.props.lang
+                    this.props.intl
                 )}
             />
-            <StrukturertTekst tekst={getContent(kalkulatorbeskrivelse, this.props.lang)} />
+            <StrukturertTekst tekst={getContent(kalkulatorbeskrivelse, this.props.intl)} />
         </div>
     );
 }
 
-export default withIntl(Aleneomsorg);
+export default injectIntl(Aleneomsorg);

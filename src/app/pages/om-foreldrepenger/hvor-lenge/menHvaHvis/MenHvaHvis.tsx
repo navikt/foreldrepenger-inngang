@@ -1,6 +1,5 @@
 import * as React from 'react';
 import BEMHelper from '../../../../utils/bem';
-import { getTranslation, Language, withIntl } from '../../../../intl/intl';
 import TypografiBase from 'nav-frontend-typografi';
 import NoenVilPaFerie from './NoenVilPaFerie';
 import JegVilJobbe from './JegVilJobbe';
@@ -8,20 +7,18 @@ import EnAvOssBlirSyk from './EnAvOssBlirSyk';
 import HjemmeSamtidig from './HjemmeSamtidig';
 import WithLink from '../../../../components/with-link/WithLink';
 import './MenHvaHvis.less';
+import { InjectedIntlProps, injectIntl } from 'react-intl';
+import getTranslation from 'app/utils/i18nUtils';
 
 const cls = BEMHelper('menHvaHvis');
 
-interface Props {
-    lang: Language;
-}
-
-class MenHvaHvis extends React.Component<Props> {
+class MenHvaHvis extends React.Component<InjectedIntlProps> {
     state: {
         Size?: any;
         svgSize: string;
     };
 
-    constructor(props: Props) {
+    constructor(props: InjectedIntlProps) {
         super(props);
         this.state = {
             svgSize: '109px',
@@ -53,13 +50,13 @@ class MenHvaHvis extends React.Component<Props> {
     };
 
     render = () => {
-        const { lang } = this.props;
+        const { intl } = this.props;
 
         return (
             <div className={cls.className}>
                 <div className={cls.element('header')}>
                     <TypografiBase type="element">
-                        {getTranslation('om_foreldrepenger.hvor_lenge.hurtiglenker', lang)}
+                        {getTranslation('om_foreldrepenger.hvor_lenge.hurtiglenker', intl)}
                     </TypografiBase>
                 </div>
                 <div className={cls.element('body')}>
@@ -67,7 +64,7 @@ class MenHvaHvis extends React.Component<Props> {
                         style={{ height: this.state.svgSize, width: this.state.svgSize }}
                         url={'#hvis-du-skal-pa-ferie'}
                         noStyling={true}
-                        ariaLabel={getTranslation('om_foreldrepenger.menHvaHvis.ferie', lang)}>
+                        ariaLabel={getTranslation('om_foreldrepenger.menHvaHvis.ferie', intl)}>
                         <NoenVilPaFerie size={this.state.svgSize} />
                     </WithLink>
 
@@ -77,7 +74,7 @@ class MenHvaHvis extends React.Component<Props> {
                         noStyling={true}
                         ariaLabel={getTranslation(
                             'om_foreldrepenger.menHvaHvis.jobb_i_periode',
-                            lang
+                            intl
                         )}>
                         <JegVilJobbe size={this.state.svgSize} />
                     </WithLink>
@@ -86,7 +83,7 @@ class MenHvaHvis extends React.Component<Props> {
                         style={{ height: this.state.svgSize, width: this.state.svgSize }}
                         url={'#hvis-en-av-dere-blir-syke'}
                         noStyling={true}
-                        ariaLabel={getTranslation('om_foreldrepenger.menHvaHvis.blirSyk', lang)}>
+                        ariaLabel={getTranslation('om_foreldrepenger.menHvaHvis.blirSyk', intl)}>
                         <EnAvOssBlirSyk size={this.state.svgSize} />
                     </WithLink>
 
@@ -96,7 +93,7 @@ class MenHvaHvis extends React.Component<Props> {
                         noStyling={true}
                         ariaLabel={getTranslation(
                             'om_foreldrepenger.menHvaHvis.hjemmeSamtidig',
-                            lang
+                            intl
                         )}>
                         <HjemmeSamtidig size={this.state.svgSize} />
                     </WithLink>
@@ -106,4 +103,4 @@ class MenHvaHvis extends React.Component<Props> {
     };
 }
 
-export default withIntl(MenHvaHvis);
+export default injectIntl(MenHvaHvis);

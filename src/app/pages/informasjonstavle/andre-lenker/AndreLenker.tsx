@@ -1,10 +1,11 @@
 import * as React from 'react';
-import WithLink from '../../../components/with-link/WithLink';
+import { InjectedIntlProps, injectIntl } from 'react-intl';
 import BEMHelper from '../../../utils/bem';
-import TypografiBase from 'nav-frontend-typografi';
-import { getTranslation, IntlProps, withIntl } from '../../../intl/intl';
-import './andreLenker.less';
 import Environment from 'app/Environment';
+import getTranslation from 'app/utils/i18nUtils';
+import TypografiBase from 'nav-frontend-typografi';
+import WithLink from '../../../components/with-link/WithLink';
+import './andreLenker.less';
 
 const links = [
     {
@@ -52,12 +53,12 @@ const links = [
 
 const cls = BEMHelper('andreLenker');
 
-const AndreLenker: React.StatelessComponent<IntlProps> = ({ lang }) => {
+const AndreLenker: React.StatelessComponent<InjectedIntlProps> = ({ intl }) => {
     const otherLinks = links.map((link) => (
         <div key={link.label} className={cls.element('linkContainer')}>
             <TypografiBase type="normaltekst">
                 <WithLink url={link.href} urlIsExternal={!link.internal} addExternalIcon={true}>
-                    {getTranslation(link.label, lang)}
+                    {getTranslation(link.label, intl)}
                 </WithLink>
             </TypografiBase>
         </div>
@@ -66,4 +67,4 @@ const AndreLenker: React.StatelessComponent<IntlProps> = ({ lang }) => {
     return <nav className={cls.className}>{otherLinks}</nav>;
 };
 
-export default withIntl(AndreLenker);
+export default injectIntl(AndreLenker);

@@ -1,11 +1,12 @@
 import * as React from 'react';
 import { getContent } from '../../../utils/getContent';
-import { getTranslation, withIntl, IntlProps } from '../../../intl/intl';
+import { injectIntl, InjectedIntlProps } from 'react-intl';
 import BEMHelper from '../../../utils/bem';
 import LesMer from '../../../components/les-mer/LesMer';
 import PanelMedIllustrasjon from '../../../components/panel-med-illustrasjon/PanelMedIllustrasjon';
 import StrukturertTekst from '../../../components/strukturert-tekst/StrukturertTekst';
 import './hjemmeSamtidig.less';
+import getTranslation from 'app/utils/i18nUtils';
 
 const cls = BEMHelper('hjemmeSamtidig');
 const hjemmeSamtidigSvg = require('../../../assets/ark/ark-hjemme-samtidig.svg').default;
@@ -19,32 +20,32 @@ interface Props {
     id: string;
 }
 
-const HjemmeSamtidig: React.StatelessComponent<Props & IntlProps> = ({ id, lang }) => {
+const HjemmeSamtidig: React.StatelessComponent<Props & InjectedIntlProps> = ({ id, intl }) => {
     return (
         <PanelMedIllustrasjon
             className={cls.className}
             id={id}
-            title={getTranslation('om_foreldrepenger.hjemme_samtidig.tittel', lang)}
+            title={getTranslation('om_foreldrepenger.hjemme_samtidig.tittel', intl)}
             svg={hjemmeSamtidigSvg}>
-            <StrukturertTekst tekst={getContent(ingress, lang)} />
+            <StrukturertTekst tekst={getContent(ingress, intl)} />
             <LesMer
-                intro={getTranslation('om_foreldrepenger.hjemme_samtidig.enHjemmeFulltid', lang)}>
-                <StrukturertTekst tekst={getContent(hjemmeFulltid, lang)} />
+                intro={getTranslation('om_foreldrepenger.hjemme_samtidig.enHjemmeFulltid', intl)}>
+                <StrukturertTekst tekst={getContent(hjemmeFulltid, intl)} />
             </LesMer>
 
-            <LesMer intro={getTranslation('om_foreldrepenger.hjemme_samtidig.delePaHjemme', lang)}>
-                <StrukturertTekst tekst={getContent(delePaHjemme, lang)} />
+            <LesMer intro={getTranslation('om_foreldrepenger.hjemme_samtidig.delePaHjemme', intl)}>
+                <StrukturertTekst tekst={getContent(delePaHjemme, intl)} />
             </LesMer>
 
-            <LesMer intro={getTranslation('om_foreldrepenger.hjemme_samtidig.farTvillinger', lang)}>
-                <StrukturertTekst tekst={getContent(narFarTvillinger, lang)} />
+            <LesMer intro={getTranslation('om_foreldrepenger.hjemme_samtidig.farTvillinger', intl)}>
+                <StrukturertTekst tekst={getContent(narFarTvillinger, intl)} />
             </LesMer>
 
-            <LesMer intro={getTranslation('om_foreldrepenger.hjemme_samtidig.permisjon', lang)}>
-                <StrukturertTekst tekst={getContent(permisjonVedFodsel, lang)} />
+            <LesMer intro={getTranslation('om_foreldrepenger.hjemme_samtidig.permisjon', intl)}>
+                <StrukturertTekst tekst={getContent(permisjonVedFodsel, intl)} />
             </LesMer>
         </PanelMedIllustrasjon>
     );
 };
 
-export default withIntl(HjemmeSamtidig);
+export default injectIntl(HjemmeSamtidig);

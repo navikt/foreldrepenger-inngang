@@ -1,11 +1,12 @@
 import * as React from 'react';
-import PanelMedIllustrasjon from '../../components/panel-med-illustrasjon/PanelMedIllustrasjon';
-import { getTranslation, withIntl, IntlProps } from '../../intl/intl';
-import Sidebanner from '../../components/sidebanner/Sidebanner';
-import Breadcrumbs from '../../components/breadcrumbs/Breadcrumbs';
-import BEMHelper from '../../utils/bem';
-import StrukturertTekst from '../../components/strukturert-tekst/StrukturertTekst';
 import { getContent } from '../../utils/getContent';
+import { injectIntl, InjectedIntlProps } from 'react-intl';
+import BEMHelper from '../../utils/bem';
+import Breadcrumbs from '../../components/breadcrumbs/Breadcrumbs';
+import getTranslation from 'app/utils/i18nUtils';
+import PanelMedIllustrasjon from '../../components/panel-med-illustrasjon/PanelMedIllustrasjon';
+import Sidebanner from '../../components/sidebanner/Sidebanner';
+import StrukturertTekst from '../../components/strukturert-tekst/StrukturertTekst';
 
 interface Props {
     location: any;
@@ -14,23 +15,26 @@ interface Props {
 const infosiderCls = BEMHelper('infosider');
 const headerSvg = require('./../../assets/ark/ark-info.svg').default;
 
-const NyeBeregningsregler: React.StatelessComponent<Props & IntlProps> = ({ location, lang }) => {
+const NyeBeregningsregler: React.StatelessComponent<Props & InjectedIntlProps> = ({
+    location,
+    intl
+}) => {
     return (
         <div className={infosiderCls.className}>
-            <Sidebanner text={getTranslation('om_foreldrepenger.tittel', lang)} />
+            <Sidebanner text={getTranslation('om_foreldrepenger.tittel', intl)} />
             <div className={infosiderCls.element('container')}>
                 <article className={infosiderCls.element('article')}>
                     <Breadcrumbs path={location.pathname} />
                     <PanelMedIllustrasjon
                         title={getTranslation(
                             'om_foreldrepenger.nye_beregningsregler.header',
-                            lang
+                            intl
                         )}
                         svg={headerSvg}>
                         <StrukturertTekst
                             tekst={getContent(
                                 'om-foreldrepenger/nye-beregningsregler/nye-beregningsregler',
-                                lang
+                                intl
                             )}
                         />
                     </PanelMedIllustrasjon>
@@ -40,4 +44,4 @@ const NyeBeregningsregler: React.StatelessComponent<Props & IntlProps> = ({ loca
     );
 };
 
-export default withIntl(NyeBeregningsregler);
+export default injectIntl(NyeBeregningsregler);

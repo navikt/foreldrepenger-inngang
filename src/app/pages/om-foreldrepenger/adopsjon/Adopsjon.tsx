@@ -1,9 +1,10 @@
 import * as React from 'react';
 import { getContent } from '../../../utils/getContent';
-import { getTranslation, withIntl, IntlProps } from '../../../intl/intl';
+import { injectIntl, InjectedIntlProps } from 'react-intl';
 import LesMer from '../../../components/les-mer/LesMer';
 import PanelMedIllustrasjon from '../../../components/panel-med-illustrasjon/PanelMedIllustrasjon';
 import StrukturertTekst from '../../../components/strukturert-tekst/StrukturertTekst';
+import getTranslation from 'app/utils/i18nUtils';
 
 const adopsjonSvg = require('../../../assets/ark/ark-adopsjon.svg').default;
 
@@ -11,41 +12,41 @@ interface Props {
     id: string;
 }
 
-const Adopjson: React.StatelessComponent<Props & IntlProps> = ({ id, lang }) => {
+const Adopjson: React.StatelessComponent<Props & InjectedIntlProps> = ({ id, intl }) => {
     return (
         <PanelMedIllustrasjon
             id={id}
-            title={getTranslation('om_foreldrepenger.adopsjon.tittel', lang)}
+            title={getTranslation('om_foreldrepenger.adopsjon.tittel', intl)}
             svg={adopsjonSvg}>
-            <StrukturertTekst tekst={getContent('om-foreldrepenger/adopsjon/adopsjon', lang)} />
-            <LesMer intro={getTranslation('om_foreldrepenger.adopsjon.når_starter', lang)}>
+            <StrukturertTekst tekst={getContent('om-foreldrepenger/adopsjon/adopsjon', intl)} />
+            <LesMer intro={getTranslation('om_foreldrepenger.adopsjon.når_starter', intl)}>
                 <StrukturertTekst
-                    tekst={getContent('om-foreldrepenger/adopsjon/når-starter', lang)}
+                    tekst={getContent('om-foreldrepenger/adopsjon/når-starter', intl)}
                 />
             </LesMer>
-            <LesMer intro={getTranslation('om_foreldrepenger.adopsjon.hvor_lenge', lang)}>
+            <LesMer intro={getTranslation('om_foreldrepenger.adopsjon.hvor_lenge', intl)}>
                 <StrukturertTekst
-                    tekst={getContent('om-foreldrepenger/adopsjon/hvor-lenge', lang)}
+                    tekst={getContent('om-foreldrepenger/adopsjon/hvor-lenge', intl)}
                 />
             </LesMer>
-            <LesMer intro={getTranslation('om_foreldrepenger.adopsjon.flere_barn', lang)}>
+            <LesMer intro={getTranslation('om_foreldrepenger.adopsjon.flere_barn', intl)}>
                 <StrukturertTekst
-                    tekst={getContent('om-foreldrepenger/adopsjon/flere-barn', lang)}
+                    tekst={getContent('om-foreldrepenger/adopsjon/flere-barn', intl)}
                 />
             </LesMer>
-            <LesMer intro={getTranslation('om_foreldrepenger.adopsjon.ikke_rett', lang)}>
+            <LesMer intro={getTranslation('om_foreldrepenger.adopsjon.ikke_rett', intl)}>
                 <StrukturertTekst
-                    tekst={getContent('om-foreldrepenger/adopsjon/ikke-rett', lang)}
+                    tekst={getContent('om-foreldrepenger/adopsjon/ikke-rett', intl)}
                 />
             </LesMer>
             <LesMer
-                intro={getTranslation('om_foreldrepenger.adopsjon.tidlig_stebarnsadopsjon', lang)}>
+                intro={getTranslation('om_foreldrepenger.adopsjon.tidlig_stebarnsadopsjon', intl)}>
                 <StrukturertTekst
-                    tekst={getContent('om-foreldrepenger/adopsjon/tidlig-stebarnsadopsjon', lang)}
+                    tekst={getContent('om-foreldrepenger/adopsjon/tidlig-stebarnsadopsjon', intl)}
                 />
             </LesMer>
         </PanelMedIllustrasjon>
     );
 };
 
-export default withIntl(Adopjson);
+export default injectIntl(Adopjson);

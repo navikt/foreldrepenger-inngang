@@ -1,27 +1,29 @@
 import React, { Component } from 'react';
-import Modal from 'nav-frontend-modal';
-import Lenke from 'nav-frontend-lenker';
-import BEMHelper from '../../../utils/bem';
-import { getTranslation, Language, withIntl, IntlProps } from '../../../intl/intl';
 import { getContent } from '../../../utils/getContent';
-import StrukturertTekst from '../../../components/strukturert-tekst/StrukturertTekst';
+import { injectIntl, InjectedIntlProps } from 'react-intl';
+import BEMHelper from '../../../utils/bem';
+import getTranslation from 'app/utils/i18nUtils';
+import Lenke from 'nav-frontend-lenker';
 import Lukknapp from 'nav-frontend-lukknapp';
-import './popUpModal.less';
+import Modal from 'nav-frontend-modal';
+import StrukturertTekst from '../../../components/strukturert-tekst/StrukturertTekst';
 import TypografiBase from 'nav-frontend-typografi';
+import './popUpModal.less';
 
 const cls = BEMHelper('engangs-modal');
 
-interface Props {
+interface OwnProps {
     modalIsOpen: boolean;
-    lang: Language;
 }
 
-class PopUpModal extends Component<Props & IntlProps> {
+type Props = OwnProps & InjectedIntlProps;
+
+class PopUpModal extends Component<Props> {
     state: {
         modalIsOpen: boolean;
     };
 
-    constructor(props: Props & IntlProps) {
+    constructor(props: Props) {
         super(props);
     }
 
@@ -49,7 +51,7 @@ class PopUpModal extends Component<Props & IntlProps> {
             <div className={cls.className}>
                 <TypografiBase type="normaltekst">
                     <Lenke id="engangsstonadModal" href={'#'} onClick={this.openModal}>
-                        {getTranslation('hva_søker_du.engangsstønad_modal', this.props.lang)}
+                        {getTranslation('hva_søker_du.engangsstønad_modal', this.props.intl)}
                     </Lenke>
                 </TypografiBase>
                 <Modal
@@ -58,14 +60,14 @@ class PopUpModal extends Component<Props & IntlProps> {
                     closeButton={false}
                     contentLabel={getTranslation(
                         'hva_søker_du.engangsstønad_modal',
-                        this.props.lang
+                        this.props.intl
                     )}>
                     <div className={cls.element('body')}>
                         <div className={cls.element('knapp')}>
                             <Lukknapp onClick={this.closeModal} />
                         </div>
                         <StrukturertTekst
-                            tekst={getContent('hva-søker-du/engangsstonad-modal', this.props.lang)}
+                            tekst={getContent('hva-søker-du/engangsstonad-modal', this.props.intl)}
                         />
                     </div>
                 </Modal>
@@ -74,4 +76,4 @@ class PopUpModal extends Component<Props & IntlProps> {
     }
 }
 
-export default withIntl(PopUpModal);
+export default injectIntl(PopUpModal);

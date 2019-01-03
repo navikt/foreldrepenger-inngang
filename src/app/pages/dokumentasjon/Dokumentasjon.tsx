@@ -1,12 +1,13 @@
 import * as React from 'react';
-import PanelMedIllustrasjon from '../../components/panel-med-illustrasjon/PanelMedIllustrasjon';
-import { getTranslation, withIntl, IntlProps } from '../../intl/intl';
-import Sidebanner from '../../components/sidebanner/Sidebanner';
-import Breadcrumbs from '../../components/breadcrumbs/Breadcrumbs';
-import BEMHelper from '../../utils/bem';
-import StrukturertTekst from '../../components/strukturert-tekst/StrukturertTekst';
 import { getContent } from '../../utils/getContent';
+import { injectIntl, InjectedIntlProps } from 'react-intl';
+import BEMHelper from '../../utils/bem';
+import Breadcrumbs from '../../components/breadcrumbs/Breadcrumbs';
+import getTranslation from 'app/utils/i18nUtils';
 import HeaderInformasjon from '../../components/header-informasjon/HeaderInformasjon';
+import PanelMedIllustrasjon from '../../components/panel-med-illustrasjon/PanelMedIllustrasjon';
+import Sidebanner from '../../components/sidebanner/Sidebanner';
+import StrukturertTekst from '../../components/strukturert-tekst/StrukturertTekst';
 import SvgMask from 'app/components/svg-mask/SvgMask';
 
 interface Props {
@@ -16,18 +17,18 @@ interface Props {
 const infosiderCls = BEMHelper('infosider');
 const pageSvg = require('./../../assets/icons/brev.svg').default;
 
-const Dokumentasjon: React.StatelessComponent<Props & IntlProps> = ({ location, lang }) => {
+const Dokumentasjon: React.StatelessComponent<Props & InjectedIntlProps> = ({ location, intl }) => {
     return (
         <div className={infosiderCls.className}>
             <DokumentasjonHeader />
-            <Sidebanner text={getTranslation('dokumentasjon.banner', lang)} />
+            <Sidebanner text={getTranslation('dokumentasjon.banner', intl)} />
             <div className={infosiderCls.element('container')}>
                 <article className={infosiderCls.element('article')}>
                     <Breadcrumbs path={location.pathname} />
                     <PanelMedIllustrasjon
-                        title={getTranslation('dokumentasjon.tittel', lang)}
+                        title={getTranslation('dokumentasjon.tittel', intl)}
                         svg={<SvgMask svg={pageSvg} />}>
-                        <StrukturertTekst tekst={getContent('dokumentasjon/dokumentasjon', lang)} />
+                        <StrukturertTekst tekst={getContent('dokumentasjon/dokumentasjon', intl)} />
                     </PanelMedIllustrasjon>
                 </article>
             </div>
@@ -45,4 +46,4 @@ const DokumentasjonHeader = () => {
     );
 };
 
-export default withIntl(Dokumentasjon);
+export default injectIntl(Dokumentasjon);

@@ -1,35 +1,34 @@
 import React, { StatelessComponent } from 'react';
-import Tekstomrade from 'nav-frontend-tekstomrade';
-import TypografiBase from 'nav-frontend-typografi';
 import { HoyreChevron } from 'nav-frontend-chevron';
-
-import { getTranslation, IntlProps, withIntl } from '../../../intl/intl';
+import { InjectedIntlProps, injectIntl } from 'react-intl';
 import BEMHelper from '../../../utils/bem';
 import externalUrls from '../../../utils/externalUrls';
+import getTranslation from 'app/utils/i18nUtils';
+import Tekstomrade from 'nav-frontend-tekstomrade';
+import TypografiBase from 'nav-frontend-typografi';
 import WithLink from '../../../components/with-link/WithLink';
-
 import './merInformasjon.less';
 
 const cls = BEMHelper('merInformasjon');
 
-const MerInformasjon: StatelessComponent<IntlProps> = ({ lang }) => {
+const MerInformasjon: StatelessComponent<InjectedIntlProps> = ({ intl }) => {
     return (
         <nav className={cls.className}>
             <MerInformasjonLink
-                title={getTranslation('foreldrepenger', lang)}
-                body={getTranslation('informasjonstavle.mer_informasjon.foreldrepenger', lang)}
+                title={getTranslation('foreldrepenger', intl)}
+                body={getTranslation('informasjonstavle.mer_informasjon.foreldrepenger', intl)}
                 url="/om-foreldrepenger"
                 urlIsExternal={false}
             />
             <MerInformasjonLink
-                title={getTranslation('engangsstønad', lang)}
-                body={getTranslation('informasjonstavle.mer_informasjon.engangsstønad', lang)}
+                title={getTranslation('engangsstønad', intl)}
+                body={getTranslation('informasjonstavle.mer_informasjon.engangsstønad', intl)}
                 url="/om-engangsstonad"
                 urlIsExternal={false}
             />
             <MerInformasjonLink
-                title={getTranslation('svangerskapspenger', lang)}
-                body={getTranslation('informasjonstavle.mer_informasjon.svangerskapspenger', lang)}
+                title={getTranslation('svangerskapspenger', intl)}
+                body={getTranslation('informasjonstavle.mer_informasjon.svangerskapspenger', intl)}
                 url={externalUrls.les_mer_svangerskapspenger}
                 urlIsExternal={true}
             />
@@ -65,4 +64,4 @@ const MerInformasjonLink = ({
     );
 };
 
-export default withIntl(MerInformasjon);
+export default injectIntl(MerInformasjon);

@@ -1,18 +1,19 @@
 import * as React from 'react';
 import Informasjonsfaner, { InformasjonsfaneProps } from '../informasjons-faner/Informasjonsfaner';
 import StrukturertTekst from '../../../../components/strukturert-tekst/StrukturertTekst';
-import { Language, withIntl, getTranslation } from '../../../../intl/intl';
+import { injectIntl, InjectedIntl, InjectedIntlProps } from 'react-intl';
 import { getContent } from '../../../../utils/getContent';
 import { addAntallUkerSomSnakkebobletittel } from './utils';
+import getTranslation from 'app/utils/i18nUtils';
 
 const content = 'om-foreldrepenger/hvor-lenge/bare-mor-har-rett/bare-mor-har-rett';
 const kalkulatorbeskrivelse = 'om-foreldrepenger/hvor-lenge/kalkulatorbeskrivelse';
 const morsDel = 'om-foreldrepenger/hvor-lenge/bare-mor-har-rett/mors-del';
 
-const getInformasjonsfaner = (lang: Language): InformasjonsfaneProps[] => [
+const getInformasjonsfaner = (intl: InjectedIntl): InformasjonsfaneProps[] => [
     {
         kvote: 'mødrekvote',
-        label: getTranslation('om_foreldrepenger.hvor_lenge.fordeling.mødrekvote', lang),
+        label: getTranslation('om_foreldrepenger.hvor_lenge.fordeling.mødrekvote', intl),
         innhold: {
             snakkeboble: {
                 tittel: 'til mor',
@@ -20,27 +21,27 @@ const getInformasjonsfaner = (lang: Language): InformasjonsfaneProps[] => [
                 punkter: [
                     getTranslation(
                         'om_foreldrepenger.hvor_lenge.fordeling.i_tillegg_til_foreldrepenger',
-                        lang
+                        intl
                     )
                 ]
             },
-            component: <StrukturertTekst tekst={getContent(morsDel, lang)} />
+            component: <StrukturertTekst tekst={getContent(morsDel, intl)} />
         }
     }
 ];
 
-const BareMorHarRett = ({ lang }: { lang: Language }) => {
+const BareMorHarRett = ({ intl }: InjectedIntlProps) => {
     return (
         <div>
-            <StrukturertTekst tekst={getContent(content, lang)} />
+            <StrukturertTekst tekst={getContent(content, intl)} />
             <Informasjonsfaner
-                tabs={getInformasjonsfaner(lang).map(
-                    addAntallUkerSomSnakkebobletittel('bareMorHarRett', lang)
+                tabs={getInformasjonsfaner(intl).map(
+                    addAntallUkerSomSnakkebobletittel('bareMorHarRett', intl)
                 )}
             />
-            <StrukturertTekst tekst={getContent(kalkulatorbeskrivelse, lang)} />
+            <StrukturertTekst tekst={getContent(kalkulatorbeskrivelse, intl)} />
         </div>
     );
 };
 
-export default withIntl(BareMorHarRett);
+export default injectIntl(BareMorHarRett);

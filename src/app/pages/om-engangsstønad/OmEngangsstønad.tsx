@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { getContent } from 'app/utils/getContent';
-import { getTranslation, withIntl, IntlProps } from '../../intl/intl';
+import { injectIntl, InjectedIntlProps } from 'react-intl';
 import BEMHelper from '../../utils/bem';
 import Breadcrumbs from '../../components/breadcrumbs/Breadcrumbs';
 import Environment from 'app/Environment';
@@ -15,6 +15,7 @@ import NårKanDuSøke from './når-kan-du-søke/NårKanDuSøke';
 import Sidebanner from '../../components/sidebanner/Sidebanner';
 import TilFarEllerMedmor from './TilFarEllerMedmor';
 import '../infosider/infosider.less';
+import getTranslation from 'app/utils/i18nUtils';
 
 const infosiderCls = BEMHelper('infosider');
 
@@ -37,7 +38,10 @@ const sections: EngangsstonadSection[] = [
     'engangsstonad-til-far-eller-medmor'
 ];
 
-const OmEngangsstonad: React.StatelessComponent<Props & IntlProps> = ({ location, lang }) => {
+const OmEngangsstonad: React.StatelessComponent<Props & InjectedIntlProps> = ({
+    location,
+    intl
+}) => {
     return (
         <div className={infosiderCls.className}>
             <HeaderInformasjon
@@ -45,17 +49,17 @@ const OmEngangsstonad: React.StatelessComponent<Props & IntlProps> = ({ location
                 description="Hvis du venter barn og ikke hatt inntekt det siste året, kan du få en engangssum fra NAV."
                 siteUrl="https://familie.nav.no/om-engangsstonad"
             />
-            <Sidebanner text={getTranslation('om_engangsstønad.tittel', lang)} />
+            <Sidebanner text={getTranslation('om_engangsstønad.tittel', intl)} />
             <MedInnholdsfortegnelse
                 sections={sections}
                 button={{
-                    label: getTranslation('innholdsfortegnelse.søk_nå', lang),
+                    label: getTranslation('innholdsfortegnelse.søk_nå', intl),
                     url: Environment.SOK_ENGANGSSTONAD_URL
                 }}>
                 <article className={infosiderCls.element('article')}>
                     <Breadcrumbs path={location.pathname} />
                     <Informasjonsbanner
-                        tekst={getContent('om-engangsstønad/nye-regler-fra-2019', lang)}
+                        tekst={getContent('om-engangsstønad/nye-regler-fra-2019', intl)}
                     />
                     <HvemKanFåEngangsstønad />
                     <HvaKanDuFå />
@@ -69,4 +73,4 @@ const OmEngangsstonad: React.StatelessComponent<Props & IntlProps> = ({ location
     );
 };
 
-export default withIntl(OmEngangsstonad);
+export default injectIntl(OmEngangsstonad);

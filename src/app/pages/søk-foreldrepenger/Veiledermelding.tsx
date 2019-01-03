@@ -1,15 +1,16 @@
 import * as React from 'react';
 import moment from 'moment';
-import { getTranslation, Language, IntlProps, withIntl } from '../../intl/intl';
+import { InjectedIntlProps, injectIntl, InjectedIntl } from 'react-intl';
 import { BEMWrapper } from '../../utils/bem';
 import Veileder from 'app/components/veileder/Veileder';
+import getTranslation from 'app/utils/i18nUtils';
 
-const createDateErrorMessage = (date: Date, lang: Language) => {
+const createDateErrorMessage = (date: Date, intl: InjectedIntl) => {
     const sixWeeksEarlier = moment(date)
         .subtract(6, 'weeks')
         .format('dddd D. MMMM');
 
-    return `${getTranslation('søk_foreldrepenger.advarselmelding', lang)} ${sixWeeksEarlier}.`;
+    return `${getTranslation('søk_foreldrepenger.advarselmelding', intl)} ${sixWeeksEarlier}.`;
 };
 
 interface Props {
@@ -17,18 +18,18 @@ interface Props {
     parentCls: BEMWrapper;
 }
 
-const Veiledermelding: React.StatelessComponent<Props & IntlProps> = ({
+const Veiledermelding: React.StatelessComponent<Props & InjectedIntlProps> = ({
     selectedDate,
     parentCls,
-    lang
+    intl
 }) => {
     return (
         <div role="alert">
             <Veileder className={parentCls} ansikt="undrende" fargetema="advarsel" kompakt={true}>
-                {createDateErrorMessage(selectedDate, lang)}
+                {createDateErrorMessage(selectedDate, intl)}
             </Veileder>
         </div>
     );
 };
 
-export default withIntl(Veiledermelding);
+export default injectIntl(Veiledermelding);

@@ -1,28 +1,27 @@
 import * as React from 'react';
-import TypografiBase from 'nav-frontend-typografi';
-import { getTranslation, IntlProps, withIntl, Language } from '../../intl/intl';
-import BEMHelper from '../../utils/bem';
-import { withRouter } from 'react-router';
-import './blindside.less';
+import { InjectedIntlProps, injectIntl, InjectedIntl } from 'react-intl';
 import { VenstreChevron } from 'nav-frontend-chevron';
+import { withRouter, RouteComponentProps } from 'react-router';
+import BEMHelper from '../../utils/bem';
+import getTranslation from 'app/utils/i18nUtils';
 import Sidebanner from '../../components/sidebanner/Sidebanner';
+import TypografiBase from 'nav-frontend-typografi';
 import Veileder from 'app/components/veileder/Veileder';
+import './blindside.less';
 
 const cls = BEMHelper('blindside');
 
-interface Props {
-    history: any;
-}
+type Props = RouteComponentProps & InjectedIntlProps;
 
-const Blindside: React.StatelessComponent<Props & IntlProps> = ({ history, lang }) => {
+const Blindside: React.StatelessComponent<Props> = ({ history, intl }) => {
     return (
         <div className={cls.className}>
-            <Sidebanner text={getTranslation('blindside.tittel', lang)} />
+            <Sidebanner text={getTranslation('blindside.tittel', intl)} />
             <div role="main" className={cls.element('body')}>
                 <Tilbakeknapp goBack={history.goBack} />
                 <Veileder ansikt="glad">
                     <TypografiBase type="normaltekst">
-                        {getTranslation('blindside.veileder', lang)}
+                        {getTranslation('blindside.veileder', intl)}
                     </TypografiBase>
                 </Veileder>
             </div>
@@ -30,7 +29,7 @@ const Blindside: React.StatelessComponent<Props & IntlProps> = ({ history, lang 
     );
 };
 
-const Tilbakeknapp = withIntl(({ goBack, lang }: { goBack: any; lang: Language }) => {
+const Tilbakeknapp = injectIntl(({ goBack, intl }: { goBack: any; intl: InjectedIntl }) => {
     return (
         <div
             tabIndex={0}
@@ -39,9 +38,9 @@ const Tilbakeknapp = withIntl(({ goBack, lang }: { goBack: any; lang: Language }
                 goBack();
             }}>
             <VenstreChevron />
-            <TypografiBase type="element">{getTranslation('tilbake', lang)}</TypografiBase>
+            <TypografiBase type="element">{getTranslation('tilbake', intl)}</TypografiBase>
         </div>
     );
 });
 
-export default withRouter(withIntl(Blindside));
+export default injectIntl(withRouter(Blindside));

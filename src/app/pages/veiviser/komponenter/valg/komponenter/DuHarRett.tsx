@@ -1,26 +1,26 @@
 import React from 'react';
-import {getTranslation, Language, withIntl} from '../../../../../intl/intl';
-import TypografiBase from 'nav-frontend-typografi';
+import { injectIntl, InjectedIntlProps } from 'react-intl';
 import BEMHelper from '../../../../../utils/bem';
+import getTranslation from 'app/utils/i18nUtils';
+import TypografiBase from 'nav-frontend-typografi';
+
 const resultat = BEMHelper('resultat');
 
-interface Props {
+interface OwnProps {
     minLogo: React.ReactNode;
     overskrift: string;
     punkter: React.ReactNode[];
     knapp: React.ReactNode;
 }
 
-interface CurrentLanguage {
-    lang: Language;
-}
+type Props = OwnProps & InjectedIntlProps;
 
-const DuHarRett: React.StatelessComponent<Props & CurrentLanguage> = ({
-    lang,
+const DuHarRett: React.StatelessComponent<Props> = ({
     minLogo,
     overskrift,
     punkter,
-    knapp
+    knapp,
+    intl
 }) => {
     return (
         <div id="mainSokKnapp" className={resultat.element('stonadRett')}>
@@ -28,7 +28,7 @@ const DuHarRett: React.StatelessComponent<Props & CurrentLanguage> = ({
             <div className={resultat.element('stonadBody')}>
                 <div className={resultat.element('stonadTxt')}>
                     <TypografiBase type="innholdstittel">
-                        {getTranslation(overskrift, lang)}
+                        {getTranslation(overskrift, intl)}
                     </TypografiBase>
                     {punkter.map((punkt: any, index: number) => {
                         return <div key={index}>{punkt}</div>;
@@ -40,4 +40,4 @@ const DuHarRett: React.StatelessComponent<Props & CurrentLanguage> = ({
     );
 };
 
-export default withIntl(DuHarRett);
+export default injectIntl(DuHarRett);

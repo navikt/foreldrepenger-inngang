@@ -2,9 +2,10 @@ import * as React from 'react';
 import { Avsnitt } from '../../../utils/strukturertTekst';
 import { detErJul } from 'app/utils/datoUtils';
 import { getContent } from '../../../utils/getContent';
-import { getTranslation, withIntl, IntlProps } from '../../../intl/intl';
+import { injectIntl, InjectedIntlProps } from 'react-intl';
 import BEMHelper from '../../../utils/bem';
 import CustomSVG from '../../../utils/CustomSVG';
+import getTranslation from 'app/utils/i18nUtils';
 import PanelMedIllustrasjon from '../../../components/panel-med-illustrasjon/PanelMedIllustrasjon';
 import StrukturertTekst from '../../../components/strukturert-tekst/StrukturertTekst';
 import SvgMask from 'app/components/svg-mask/SvgMask';
@@ -27,20 +28,23 @@ interface Props {
     id: string;
 }
 
-const HvemKanFåForeldrepenger: React.StatelessComponent<Props & IntlProps> = ({ id, lang }) => {
+const HvemKanFåForeldrepenger: React.StatelessComponent<Props & InjectedIntlProps> = ({
+    id,
+    intl
+}) => {
     return (
         <PanelMedIllustrasjon
             id={id}
-            title={getTranslation('om_foreldrepenger.for_å_få.tittel', lang)}
+            title={getTranslation('om_foreldrepenger.for_å_få.tittel', intl)}
             svg={<SvgMask svg={foreldrepengerSvg} anchorToBottom={true} />}>
             <div className={cls.element('alignLeft')}>
                 <StrukturertTekst
-                    tekst={getContent('om-foreldrepenger/hvem-kan-få/ingress', lang)}
+                    tekst={getContent('om-foreldrepenger/hvem-kan-få/ingress', intl)}
                 />
             </div>
             <div className={cls.element('kravTilForeldrepenger')}>
                 {kravTilForeldrepenger.map((krav) => (
-                    <KravTilForeldrepenger key={krav} ingress={getContent(krav, lang)} />
+                    <KravTilForeldrepenger key={krav} ingress={getContent(krav, intl)} />
                 ))}
             </div>
         </PanelMedIllustrasjon>
@@ -56,4 +60,4 @@ const KravTilForeldrepenger = ({ ingress }: { ingress: Avsnitt[] }) => {
     );
 };
 
-export default withIntl(HvemKanFåForeldrepenger);
+export default injectIntl(HvemKanFåForeldrepenger);

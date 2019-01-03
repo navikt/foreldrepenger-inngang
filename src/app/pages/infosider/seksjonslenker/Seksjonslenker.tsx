@@ -1,8 +1,9 @@
 import * as React from 'react';
 import { Cancelable } from 'lodash';
-import { getTranslation, withIntl, Language } from 'app/intl/intl';
+import { InjectedIntlProps, injectIntl } from 'react-intl';
 import { Normaltekst } from 'nav-frontend-typografi';
 import BEMHelper from 'app/utils/bem';
+import getTranslation from 'app/utils/i18nUtils';
 import throttle from 'lodash/throttle';
 import WithLink from 'app/components/with-link/WithLink';
 import './seksjonslenker.less';
@@ -19,11 +20,12 @@ const getFirstNumberAfter = (n: number, numbers: number[]) => {
     return numbers.length - 1;
 };
 
-interface Props {
+interface OwnProps {
     sections: string[];
-    lang: Language;
     onSectionChange?: (section: string) => void;
 }
+
+type Props = OwnProps & InjectedIntlProps;
 
 interface State {
     currentSection?: number;
@@ -40,7 +42,7 @@ class Seksjonslenker extends React.Component<Props, State> {
 
         const convertToTranslatable = (s: string) => s.replace(new RegExp('-', 'g'), '_');
         const sectionNames = this.props.sections.map((section) =>
-            getTranslation(`hurtiglenke.${convertToTranslatable(section)}`, this.props.lang)
+            getTranslation(`hurtiglenke.${convertToTranslatable(section)}`, this.props.intl)
         );
 
         this.state = {
@@ -115,4 +117,4 @@ class Seksjonslenker extends React.Component<Props, State> {
         });
 }
 
-export default withIntl(Seksjonslenker);
+export default injectIntl(Seksjonslenker);

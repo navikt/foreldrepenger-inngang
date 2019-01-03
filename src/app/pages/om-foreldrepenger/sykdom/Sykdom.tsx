@@ -1,7 +1,7 @@
 import * as React from 'react';
 import PanelMedIllustrasjon from '../../../components/panel-med-illustrasjon/PanelMedIllustrasjon';
 import BEMHelper from '../../../utils/bem';
-import { getTranslation, withIntl, IntlProps } from '../../../intl/intl';
+import { injectIntl, InjectedIntlProps } from 'react-intl';
 import CustomSVG from '../../../utils/CustomSVG';
 import Foreldrepar from '../../../components/foreldrepar/Foreldrepar';
 import Innholdsfaner from '../../../components/innholdsfaner/Innholdsfaner';
@@ -13,6 +13,7 @@ import IllustrasjonMobil from './IllustrasjonMobil';
 import { Normaltekst } from 'nav-frontend-typografi';
 import './sykdom.less';
 import MediaQuery from 'react-responsive';
+import getTranslation from 'app/utils/i18nUtils';
 
 const sykdomSvg = require('../../../assets/ark/ark-sykdom.svg').default;
 const cls = BEMHelper('sykdom');
@@ -25,63 +26,65 @@ const syke = 'om-foreldrepenger/sykdom/en-av-foreldrene-er-syke/en-av-foreldrene
 const sykeUtsette = 'om-foreldrepenger/sykdom/en-av-foreldrene-er-syke/utsette';
 const sykeOverta = 'om-foreldrepenger/sykdom/en-av-foreldrene-er-syke/overta';
 
-const BarnetErInnlagtWithoutIntl: React.StatelessComponent<IntlProps> = ({ lang }) => (
+const BarnetErInnlagtWithoutIntl: React.StatelessComponent<InjectedIntlProps> = ({ intl }) => (
     <div>
-        <StrukturertTekst tekst={getContent(barnetErInnlagt, lang)} />
+        <StrukturertTekst tekst={getContent(barnetErInnlagt, intl)} />
         <div className={cls.element('eksempeltekst')}>
             <Normaltekst>
-                {getTranslation('om_foreldrepenger.sykdom.innlagt.eksempeltittel', lang)}
+                {getTranslation('om_foreldrepenger.sykdom.innlagt.eksempeltittel', intl)}
             </Normaltekst>
             <MediaQuery minWidth={576}>
                 <Illustrasjon
                     grunnForForlengelse={getTranslation(
-                        'om_foreldrepenger.sykdom.barnet_er_innlagt', lang
+                        'om_foreldrepenger.sykdom.barnet_er_innlagt',
+                        intl
                     )}
                 />
             </MediaQuery>
             <MediaQuery maxWidth={575}>
                 <IllustrasjonMobil
                     grunnForForlengelse={getTranslation(
-                        'om_foreldrepenger.sykdom.barnet_er_innlagt', lang
+                        'om_foreldrepenger.sykdom.barnet_er_innlagt',
+                        intl
                     )}
                 />
             </MediaQuery>
         </div>
-        <LesMer intro={getTranslation('om_foreldrepenger.sykdom.innlagt.utsette', lang)}>
-            <StrukturertTekst tekst={getContent(barnetErInnlagtUtsette, lang)} />
+        <LesMer intro={getTranslation('om_foreldrepenger.sykdom.innlagt.utsette', intl)}>
+            <StrukturertTekst tekst={getContent(barnetErInnlagtUtsette, intl)} />
         </LesMer>
     </div>
 );
 
-const EnAvForeldreneErSykeWithoutIntl: React.StatelessComponent<IntlProps> = ({ lang }) => (
+const EnAvForeldreneErSykeWithoutIntl: React.StatelessComponent<InjectedIntlProps> = ({ intl }) => (
     <div>
-        <StrukturertTekst tekst={getContent(syke, lang)} />
+        <StrukturertTekst tekst={getContent(syke, intl)} />
         <div className={cls.element('eksempeltekst')}>
             <Normaltekst>
-                {getTranslation('om_foreldrepenger.sykdom.sykmeldt.eksempeltittel', lang)}
+                {getTranslation('om_foreldrepenger.sykdom.sykmeldt.eksempeltittel', intl)}
             </Normaltekst>
             <MediaQuery minWidth={576}>
                 <Illustrasjon
-                    grunnForForlengelse={getTranslation('om_foreldrepenger.sykdom.sykmeldt', lang)}
+                    grunnForForlengelse={getTranslation('om_foreldrepenger.sykdom.sykmeldt', intl)}
                 />
             </MediaQuery>
             <MediaQuery maxWidth={575}>
                 <IllustrasjonMobil
-                    grunnForForlengelse={getTranslation('om_foreldrepenger.sykdom.sykmeldt', lang)}
+                    grunnForForlengelse={getTranslation('om_foreldrepenger.sykdom.sykmeldt', intl)}
                 />
             </MediaQuery>
         </div>
-        <LesMer intro={getTranslation('om_foreldrepenger.sykdom.innlagt.utsette', lang)}>
-            <StrukturertTekst tekst={getContent(sykeUtsette, lang)} />
+        <LesMer intro={getTranslation('om_foreldrepenger.sykdom.innlagt.utsette', intl)}>
+            <StrukturertTekst tekst={getContent(sykeUtsette, intl)} />
         </LesMer>
-        <LesMer intro={getTranslation('om_foreldrepenger.sykdom.innlagt.overta', lang)}>
-            <StrukturertTekst tekst={getContent(sykeOverta, lang)} />
+        <LesMer intro={getTranslation('om_foreldrepenger.sykdom.innlagt.overta', intl)}>
+            <StrukturertTekst tekst={getContent(sykeOverta, intl)} />
         </LesMer>
     </div>
 );
 
-const BarnetErInnlagt = withIntl(BarnetErInnlagtWithoutIntl);
-const EnAvForeldreneErSyke = withIntl(EnAvForeldreneErSykeWithoutIntl);
+const BarnetErInnlagt = injectIntl(BarnetErInnlagtWithoutIntl);
+const EnAvForeldreneErSyke = injectIntl(EnAvForeldreneErSykeWithoutIntl);
 
 const tabs = [
     {
@@ -100,16 +103,16 @@ interface Props {
     id: string;
 }
 
-const Sykdom: React.StatelessComponent<Props & IntlProps> = ({ id, lang }) => {
+const Sykdom: React.StatelessComponent<Props & InjectedIntlProps> = ({ id, intl }) => {
     return (
         <PanelMedIllustrasjon
             id={id}
             className={cls.className}
             svg={sykdomSvg}
-            title={getTranslation('om_foreldrepenger.sykdom.tittel', lang)}>
-            <Innholdsfaner tabs={tabs} section={'sykdom'} />
+            title={getTranslation('om_foreldrepenger.sykdom.tittel', intl)}>
+            <Innholdsfaner tabs={tabs} />
         </PanelMedIllustrasjon>
     );
 };
 
-export default withIntl(Sykdom);
+export default injectIntl(Sykdom);

@@ -1,45 +1,47 @@
 import * as React from 'react';
-import { withIntl, getTranslation, Language } from 'app/intl/intl';
-import TypografiBase from 'nav-frontend-typografi';
-import Alertstriper from 'nav-frontend-alertstriper';
-import StrukturertTekst from 'app/components/strukturert-tekst/StrukturertTekst';
 import { getContent } from 'app/utils/getContent';
-import Alternativ from '../alternativ/Alternativ';
+import { injectIntl, InjectedIntlProps } from 'react-intl';
+import { Resultater } from '../Kalkulator';
 import {
     tjenerOverUtbetalingsgrensen,
     getLastYear,
     getUtbetalingsgrense,
     getEnHalvG
 } from 'app/utils/beregningUtils';
+import Alertstriper from 'nav-frontend-alertstriper';
+import Alternativ from '../alternativ/Alternativ';
+import BEMHelper from 'app/utils/bem';
+import getTranslation from 'app/utils/i18nUtils';
+import StrukturertTekst from 'app/components/strukturert-tekst/StrukturertTekst';
+import TypografiBase from 'nav-frontend-typografi';
 import Veileder from 'app/components/veileder/Veileder';
 import Veiledermelding from '../Veiledermelding';
-import { Resultater } from '../Kalkulator';
-import BEMHelper from 'app/utils/bem';
 import './resultat.less';
 
 const cls = BEMHelper('resultat');
 const pengerIcon = require('../../../assets/icons/penger.svg').default;
 const mindrePengerIcon = require('../../../assets/icons/mindre-penger.svg').default;
 
-interface Props {
+interface OwnProps {
     results: Resultater;
     fårUtbetaling: boolean;
-    lang: Language;
 }
 
-const Resultat = ({ results, fårUtbetaling, lang }: Props) => {
+type Props = OwnProps & InjectedIntlProps;
+
+const Resultat = ({ results, fårUtbetaling, intl }: Props) => {
     const { snittlønnPerMåned, nedreAvviksgrense, øvreAvviksgrense, tjenerForLite } = results;
-    const localizeNumber = (n: number) => Math.round(n).toLocaleString(lang);
+    const localizeNumber = (n: number) => Math.round(n).toLocaleString(intl.locale);
 
     const inntektssituasjon = fårUtbetaling
-        ? getTranslation('kalkulator.får_utbetalt', lang)
-        : getTranslation('kalkulator.har_en_årsinntekt', lang);
+        ? getTranslation('kalkulator.får_utbetalt', intl)
+        : getTranslation('kalkulator.har_en_årsinntekt', intl);
 
     const avviksvariabler = {
         INNTEKTSSITUASJON: inntektssituasjon,
         INNTEKTSSITUASJON_PRETERITUM: fårUtbetaling
-            ? getTranslation('kalkulator.fikk', lang)
-            : getTranslation('kalkulator.tjente', lang),
+            ? getTranslation('kalkulator.fikk', intl)
+            : getTranslation('kalkulator.tjente', intl),
         ÅRLIG_SNITTLØNN: localizeNumber(snittlønnPerMåned * 12),
         ÅRET_I_FJOR: getLastYear(),
         NEDRE_AVVIKSGRENSE: localizeNumber(nedreAvviksgrense),
@@ -59,8 +61,8 @@ const Resultat = ({ results, fårUtbetaling, lang }: Props) => {
         forLavLønnvariabler = {
             INNTEKTSSITUASJON: inntektssituasjon,
             INNTEKTSSITUASJON_VERB: fårUtbetaling
-                ? getTranslation('kalkulator.får', lang)
-                : getTranslation('kalkulator.tjener', lang),
+                ? getTranslation('kalkulator.får', intl)
+                : getTranslation('kalkulator.tjener', intl),
             ÅRLIG_SNITTLØNN: localizeNumber(snittlønnPerMåned * 12),
             EN_HALV_G: localizeNumber(getEnHalvG())
         };
@@ -69,7 +71,7 @@ const Resultat = ({ results, fårUtbetaling, lang }: Props) => {
     return (
         <div className={cls.element('flexDownwards')}>
             <TypografiBase type="undertittel">
-                {getTranslation('kalkulator.resultat.tittel', lang)}
+                {getTranslation('kalkulator.resultat.tittel', intl)}
             </TypografiBase>
 
             <Veileder fargetema="normal" ansikt="glad" kompakt={true}>
@@ -77,20 +79,17 @@ const Resultat = ({ results, fårUtbetaling, lang }: Props) => {
                     avviksvariabler={forLavLønnvariabler ? undefined : avviksvariabler}
                     forLavLønnvariabler={forLavLønnvariabler}
                     utbetalingsgrensevariabler={utbetalingsgrensevariabler}
-                    lang={lang}
                 />
             </Veileder>
 
             {!tjenerForLite && (
                 <output className={cls.element('resultater')}>
                     <Alternativ
-                        lang={lang}
                         percentage={100}
                         icon={pengerIcon}
                         monthlyWage={snittlønnPerMåned}
                     />
                     <Alternativ
-                        lang={lang}
                         percentage={80}
                         icon={mindrePengerIcon}
                         monthlyWage={snittlønnPerMåned}
@@ -101,7 +100,7 @@ const Resultat = ({ results, fårUtbetaling, lang }: Props) => {
             {!tjenerForLite && (
                 <div className={cls.element('disclaimer')}>
                     <Alertstriper type="info">
-                        <StrukturertTekst tekst={getContent('kalkulator/disclaimer', lang)} />
+                        <StrukturertTekst tekst={getContent('kalkulator/disclaimer', intl)} />
                     </Alertstriper>
                 </div>
             )}
@@ -109,4 +108,4 @@ const Resultat = ({ results, fårUtbetaling, lang }: Props) => {
     );
 };
 
-export default withIntl(Resultat);
+export default injectIntl(Resultat);

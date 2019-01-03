@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { getTranslation, IntlProps, withIntl } from '../../../intl/intl';
+import { InjectedIntlProps, injectIntl } from 'react-intl';
 import LesMer from '../../../components/les-mer/LesMer';
 import StrukturertTekst from '../../../components/strukturert-tekst/StrukturertTekst';
 import { getContent } from '../../../utils/getContent';
@@ -10,11 +10,12 @@ import { CSSTransition } from 'react-transition-group';
 import TypografiBase from 'nav-frontend-typografi';
 import MediaQuery from 'react-responsive';
 import { JegVilJobbeDeltidExpandertMobil } from './komponenter/JegVilJobbeDeltidExpandertMobil';
+import getTranslation from 'app/utils/i18nUtils';
 const firstPanelContent = 'om-foreldrepenger/jeg-vil-jobbe/heltidsjobb';
 const secondPanelContent = 'om-foreldrepenger/jeg-vil-jobbe/deltidsjobb';
 const cls = BEMHelper('jegVilJobbe');
 
-class JobbeDelvis extends React.Component<IntlProps> {
+class JobbeDelvis extends React.Component<InjectedIntlProps> {
     state: {
         svgList: object[];
         message: string;
@@ -22,7 +23,7 @@ class JobbeDelvis extends React.Component<IntlProps> {
         height: string;
     };
 
-    constructor(props: IntlProps) {
+    constructor(props: InjectedIntlProps) {
         super(props);
         this.state = {
             svgList: [],
@@ -88,7 +89,7 @@ class JobbeDelvis extends React.Component<IntlProps> {
                 <StrukturertTekst
                     tekst={getContent(
                         'om-foreldrepenger/jeg-vil-jobbe/deltid-fane',
-                        this.props.lang
+                        this.props.intl
                     )}
                 />
                 <div
@@ -97,7 +98,7 @@ class JobbeDelvis extends React.Component<IntlProps> {
                     onClick={this.expandJegVilJobbe}>
                     <JegVilJobbeDeltid width={this.state.width} height={this.state.height} />
                     <TypografiBase type={'normaltekst'}>
-                        {getTranslation(this.state.message, this.props.lang)}
+                        {getTranslation(this.state.message, this.props.intl)}
                     </TypografiBase>
                 </div>
                 {this.state.svgList.map((item, index) => {
@@ -117,14 +118,14 @@ class JobbeDelvis extends React.Component<IntlProps> {
             </div>
             <div className={cls.element('firstDropdown')}>
                 <LesMer
-                    intro={getTranslation('om_foreldrepenger.jobbe.heltidsjobb', this.props.lang)}>
-                    <StrukturertTekst tekst={getContent(firstPanelContent, this.props.lang)} />
+                    intro={getTranslation('om_foreldrepenger.jobbe.heltidsjobb', this.props.intl)}>
+                    <StrukturertTekst tekst={getContent(firstPanelContent, this.props.intl)} />
                 </LesMer>
             </div>
-            <LesMer intro={getTranslation('om_foreldrepenger.jobbe.deltidsjobb', this.props.lang)}>
-                <StrukturertTekst tekst={getContent(secondPanelContent, this.props.lang)} />
+            <LesMer intro={getTranslation('om_foreldrepenger.jobbe.deltidsjobb', this.props.intl)}>
+                <StrukturertTekst tekst={getContent(secondPanelContent, this.props.intl)} />
             </LesMer>
         </div>
     );
 }
-export default withIntl(JobbeDelvis);
+export default injectIntl(JobbeDelvis);
