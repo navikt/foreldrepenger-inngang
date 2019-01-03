@@ -166,7 +166,7 @@
     "om_foreldrepenger.for_å_få.tittel": "Hvem kan få foreldrepenger?",
 
     "om_foreldrepenger.hvor_lenge.tittel": "Hvor lenge kan du få foreldrepenger?",
-    "om_foreldrepenger.hvor_lenge.eksempel": "Eksempel med fast inntekt på\n22 000 kroner per måned",
+    "om_foreldrepenger.hvor_lenge.eksempel": "Eksempel med fast inntekt på\n{eksempelKronerPerMåned} kroner per måned",
     "om_foreldrepenger.hvor_lenge.hurtiglenker": "Men hva hvis ...",
     "om_foreldrepenger.hvor_lenge.kalkulatorlenke": "Beregn foreldrepengene dine",
 
