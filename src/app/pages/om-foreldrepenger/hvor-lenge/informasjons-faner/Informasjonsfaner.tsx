@@ -1,11 +1,12 @@
 import React, { ReactNode } from 'react';
-import { getTranslation, IntlProps, withIntl } from '../../../../intl/intl';
+import { InjectedIntlProps, injectIntl } from 'react-intl';
 import BEMHelper from '../../../../utils/bem';
 import Faneinnhold from './Faneinnhold';
 import Tabs from 'nav-frontend-tabs';
 import TypografiBase from 'nav-frontend-typografi';
 import './informasjonsfaner.less';
 import { Kvote } from 'app/utils/foreldresituasjon';
+import getTranslation from 'app/utils/i18nUtils';
 
 const cls = BEMHelper('informasjonsfaner');
 
@@ -25,12 +26,12 @@ export interface InformasjonsfaneProps {
 }
 
 interface OwnProps {
-    title: string;
+    title?: string;
     tabs: InformasjonsfaneProps[];
     onTabSelected?: (tab: string) => void;
 }
 
-type Props = OwnProps & IntlProps;
+type Props = OwnProps & InjectedIntlProps;
 
 class Informasjonsfaner extends React.Component<Props> {
     state: {
@@ -67,11 +68,11 @@ class Informasjonsfaner extends React.Component<Props> {
                         : this.props.tabs.length > 1
                         ? getTranslation(
                               'om_foreldrepenger.hvor_lenge.fordeling.tittel',
-                              this.props.lang
+                              this.props.intl
                           )
                         : getTranslation(
                               'om_foreldrepenger.hvor_lenge.fordeling.tittel_alene',
-                              this.props.lang
+                              this.props.intl
                           )}
                 </TypografiBase>
             </div>
@@ -89,4 +90,4 @@ class Informasjonsfaner extends React.Component<Props> {
     );
 }
 
-export default withIntl(Informasjonsfaner);
+export default injectIntl(Informasjonsfaner);

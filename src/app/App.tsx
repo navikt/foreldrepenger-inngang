@@ -1,10 +1,11 @@
 import * as React from 'react';
-import IntlContext from './intl/IntlContext';
-import { getTranslation, Language } from './intl/intl';
+import { injectIntl, InjectedIntl } from 'react-intl';
 import BEMHelper from './utils/bem';
-import TypografiBase from 'nav-frontend-typografi';
-import Router from './Router';
+import getTranslation from './utils/i18nUtils';
+import IntlProvider, { Language } from './intl/IntlProvider';
 import moment from 'moment';
+import Router from './Router';
+import TypografiBase from 'nav-frontend-typografi';
 import './app.less';
 
 const cls = BEMHelper('app');
@@ -56,37 +57,42 @@ class App extends React.Component<{}, State> {
 
     render = () => {
         const otherMålform = this.spellLanguage(this.getOtherMålform());
-        const languageChangeText = `${getTranslation(
-            'endre_målform_til',
-            this.state.currentLanguage
-        )} ${getTranslation(otherMålform, this.state.currentLanguage)}`;
 
         return (
-            <IntlContext.Provider
-                value={{
-                    lang: this.state.currentLanguage,
-                    setLanguage: this.setLanguage
-                }}>
+            <IntlProvider language={this.state.currentLanguage}>
                 <div lang={this.state.currentLanguage}>
                     {ENABLE_LANGUAGE_TOGGLER && (
                         <Språkbanner
                             onClick={this.toggleBetweenNbAndNn}
-                            label={languageChangeText}
+                            otherMålform={otherMålform}
                         />
                     )}
                     <Router />
                 </div>
-            </IntlContext.Provider>
+            </IntlProvider>
         );
     };
 }
 
-const Språkbanner = ({ onClick, label }: { onClick: () => void; label: string }) => (
-    <div className={cls.element('topBanner')}>
-        <span onClick={onClick} className={cls.element('byttSpråkKnapp')}>
-            <TypografiBase type="normaltekst">{label}</TypografiBase>
-        </span>
-    </div>
+const Språkbanner = injectIntl(
+    ({
+        onClick,
+        otherMålform,
+        intl
+    }: {
+        onClick: () => void;
+        otherMålform: any;
+        intl: InjectedIntl;
+    }) => (
+        <div className={cls.element('topBanner')}>
+            <span onClick={onClick} className={cls.element('byttSpråkKnapp')}>
+                <TypografiBase type="normaltekst">{`${getTranslation(
+                    'endre_målform_til',
+                    intl
+                )} ${getTranslation(otherMålform, intl)}`}</TypografiBase>
+            </span>
+        </div>
+    )
 );
 
 export default App;

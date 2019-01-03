@@ -1,10 +1,11 @@
 import React, { Component, ReactNodeArray } from 'react';
-import TypografiBase from 'nav-frontend-typografi';
-import NavFrontendChevron from 'nav-frontend-chevron';
-import BEMHelper from '../../utils/bem';
+import { injectIntl, InjectedIntl, InjectedIntlProps } from 'react-intl';
 import { Link } from 'react-router-dom';
+import BEMHelper from '../../utils/bem';
 import classnames from 'classnames';
-import { getTranslation, Language, IntlProps, withIntl } from '../../intl/intl';
+import getTranslation from 'app/utils/i18nUtils';
+import NavFrontendChevron from 'nav-frontend-chevron';
+import TypografiBase from 'nav-frontend-typografi';
 import './breadcrumbs.less';
 
 const cls = BEMHelper('breadcrumbs');
@@ -13,7 +14,7 @@ interface BreadcrumbsProps {
     path: string;
 }
 
-const parsePath = (path: string, lang: Language) => {
+const parsePath = (path: string, intl: InjectedIntl) => {
     const parts = path.split('/');
 
     // Remove any trailing slash ("/")
@@ -27,12 +28,12 @@ const parsePath = (path: string, lang: Language) => {
 
         return {
             url,
-            label: getTranslation(`route.${part}`, lang)
+            label: getTranslation(`route.${part}`, intl)
         };
     });
 };
 
-class Breadcrumbs extends Component<BreadcrumbsProps & IntlProps> {
+class Breadcrumbs extends Component<BreadcrumbsProps & InjectedIntlProps> {
     state: {
         windowWidth?: number;
     } = {
@@ -57,7 +58,7 @@ class Breadcrumbs extends Component<BreadcrumbsProps & IntlProps> {
 
     render() {
         const breadcrumbChain: ReactNodeArray = [];
-        const parsedPath = parsePath(this.props.path, this.props.lang);
+        const parsedPath = parsePath(this.props.path, this.props.intl);
 
         if (this.state.windowWidth && this.state.windowWidth < 576) {
             const routeLength = parsedPath.length;
@@ -75,7 +76,7 @@ class Breadcrumbs extends Component<BreadcrumbsProps & IntlProps> {
                     key="tilbake"
                     type="normaltekst"
                     className={cls.element('item')}>
-                    <Link to={lastUrl}>{getTranslation('tilbake', this.props.lang)}</Link>
+                    <Link to={lastUrl}>{getTranslation('tilbake', this.props.intl)}</Link>
                 </TypografiBase>
             );
         } else {
@@ -112,4 +113,4 @@ class Breadcrumbs extends Component<BreadcrumbsProps & IntlProps> {
     }
 }
 
-export default withIntl(Breadcrumbs);
+export default injectIntl(Breadcrumbs);

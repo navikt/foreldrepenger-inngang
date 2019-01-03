@@ -1,10 +1,9 @@
 import * as React from 'react';
 import { AlertStripeInfo } from 'nav-frontend-alertstriper';
-import { withIntl } from 'app/intl/intl';
+import { Avsnitt } from 'app/utils/strukturertTekst';
 import BEMHelper from 'app/utils/bem';
 import StrukturertTekst from 'app/components/strukturert-tekst/StrukturertTekst';
 import './informasjonsbanner.less';
-import { Avsnitt } from 'app/utils/strukturertTekst';
 
 const cls = BEMHelper('informasjonsbanner');
 
@@ -18,4 +17,4 @@ const Informasjonsbanner = ({ tekst }: Props) => (
     </AlertStripeInfo>
 );
 
-export default withIntl(Informasjonsbanner);
+export default Informasjonsbanner;

@@ -3,7 +3,7 @@ import classnames from 'classnames';
 import KnappBase from 'nav-frontend-knapper';
 import Breadcrumbs from '../../components/breadcrumbs/Breadcrumbs';
 import BEMHelper from '../../utils/bem';
-import { getTranslation, IntlProps, withIntl } from '../../intl/intl';
+import { InjectedIntlProps, injectIntl } from 'react-intl';
 import SvgBanner from '../../components/svg-banner/SvgBanner';
 import PanelMedTittel from '../../components/panel-med-tittel/PanelMedTittel';
 import { datoForUttakErGyldig } from '../../utils/datoUtils';
@@ -16,6 +16,7 @@ import { getContent } from 'app/utils/getContent';
 import HeaderInformasjon from '../../components/header-informasjon/HeaderInformasjon';
 import Environment from 'app/Environment';
 import './søkForeldrepenger.less';
+import getTranslation from 'app/utils/i18nUtils';
 
 const hvaSøkerDuCls = BEMHelper('hvaSøkerDu');
 const foreldrepengerCls = BEMHelper('søkForeldrepenger');
@@ -24,7 +25,7 @@ interface Props {
     route: any;
 }
 
-class SøkForeldrepenger extends Component<Props & IntlProps> {
+class SøkForeldrepenger extends Component<Props & InjectedIntlProps> {
     state: {
         selectedDate?: Date;
         dateIsValid: boolean;
@@ -46,21 +47,21 @@ class SøkForeldrepenger extends Component<Props & IntlProps> {
         return (
             <div className={classnames(hvaSøkerDuCls.className, foreldrepengerCls.className)}>
                 <SøkForeldrepengerHeader />
-                <Sidebanner text={getTranslation('hva_søker_du.tittel', this.props.lang)} />
+                <Sidebanner text={getTranslation('hva_søker_du.tittel', this.props.intl)} />
                 <div role="main" className={hvaSøkerDuCls.element('body')}>
                     <div className={hvaSøkerDuCls.element('content')}>
                         <Breadcrumbs path={location.pathname} />
                         <SvgBanner />
-                        <PanelMedTittel title={getTranslation('foreldrepenger', this.props.lang)}>
+                        <PanelMedTittel title={getTranslation('foreldrepenger', this.props.intl)}>
                             <StrukturertTekst
                                 tekst={getContent(
                                     'hva-søker-du/søk-foreldrepenger',
-                                    this.props.lang
+                                    this.props.intl
                                 )}
                             />
                             <Datovelger
                                 date={this.state.selectedDate}
-                                dateIsValid={this.state.selectedDate && this.state.dateIsValid}
+                                dateIsValid={!!this.state.selectedDate && this.state.dateIsValid}
                                 onChange={(date: Date) => this.setDate(date)}
                                 parentCls={foreldrepengerCls}
                             />
@@ -76,13 +77,13 @@ class SøkForeldrepenger extends Component<Props & IntlProps> {
                                         <MediaQuery maxWidth={575}>
                                             {getTranslation(
                                                 'søk_foreldrepenger.knapp_mobil',
-                                                this.props.lang
+                                                this.props.intl
                                             )}
                                         </MediaQuery>
                                         <MediaQuery minWidth={576}>
                                             {getTranslation(
                                                 'søk_foreldrepenger.knapp',
-                                                this.props.lang
+                                                this.props.intl
                                             )}
                                         </MediaQuery>
                                     </KnappBase>
@@ -106,4 +107,4 @@ const SøkForeldrepengerHeader = () => {
     );
 };
 
-export default withIntl(SøkForeldrepenger);
+export default injectIntl(SøkForeldrepenger);

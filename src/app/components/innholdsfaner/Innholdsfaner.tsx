@@ -1,20 +1,21 @@
 import React from 'react';
-import './innholdsfaner.less';
+import { InjectedIntlProps, injectIntl } from 'react-intl';
 import BEMHelper from '../../utils/bem';
 import Fane, { Innholdsfane } from './fane/Fane';
+import getTranslation from 'app/utils/i18nUtils';
 import MediaQuery from 'react-responsive';
-import { getTranslation, IntlProps, withIntl } from '../../intl/intl';
 import Select from './select/Select';
 import TypografiBase from 'nav-frontend-typografi';
+import './innholdsfaner.less';
 
 const cls = BEMHelper('innholdsfaner');
 
-interface TabProps {
+interface OwnProps {
     tabs: Innholdsfane[];
-    onSelect: (selectedTab: string) => void;
+    onSelect?: (selectedTab: string) => void;
 }
 
-type Props = TabProps & IntlProps;
+type Props = OwnProps & InjectedIntlProps;
 
 class Innholdsfaner extends React.Component<Props> {
     state: {
@@ -49,7 +50,7 @@ class Innholdsfaner extends React.Component<Props> {
             <MediaQuery maxWidth={799}>
                 <div className={cls.element('faner')}>
                     <TypografiBase className={cls.element('fanetittel')} type="element">
-                        {getTranslation('om_foreldrepenger.faner.label', this.props.lang)}
+                        {getTranslation('om_foreldrepenger.faner.label', this.props.intl)}
                     </TypografiBase>
                     <Select
                         selected={this.props.tabs[this.state.currentTab]}
@@ -80,4 +81,4 @@ class Innholdsfaner extends React.Component<Props> {
     );
 }
 
-export default withIntl(Innholdsfaner);
+export default injectIntl(Innholdsfaner);

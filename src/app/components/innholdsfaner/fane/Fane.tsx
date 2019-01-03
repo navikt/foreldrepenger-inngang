@@ -1,9 +1,9 @@
 import * as React from 'react';
-import classnames from 'classnames';
-import TypografiBase from 'nav-frontend-typografi';
+import { InjectedIntlProps, injectIntl } from 'react-intl';
 import BEMHelper from '../../../utils/bem';
-import { getTranslation, IntlProps, withIntl } from '../../../intl/intl';
-
+import classnames from 'classnames';
+import getTranslation from 'app/utils/i18nUtils';
+import TypografiBase from 'nav-frontend-typografi';
 import './fane.less';
 
 const cls = BEMHelper('fane');
@@ -21,12 +21,12 @@ interface Props {
     mos?: boolean;
 }
 
-const Fane: React.StatelessComponent<Props & IntlProps> = ({
+const Fane: React.StatelessComponent<Props & InjectedIntlProps> = ({
     tab,
     isSelected,
     onSelect,
     mos,
-    lang
+    intl
 }) => {
     return (
         <div
@@ -41,11 +41,11 @@ const Fane: React.StatelessComponent<Props & IntlProps> = ({
             })}>
             <div className={cls.element('inner')}>
                 {tab.icon}
-                <TypografiBase type="normaltekst">{getTranslation(tab.label, lang)}</TypografiBase>
+                <TypografiBase type="normaltekst">{getTranslation(tab.label, intl)}</TypografiBase>
             </div>
             <div className={cls.element('selector')} />
         </div>
     );
 };
 
-export default withIntl(Fane);
+export default injectIntl(Fane);

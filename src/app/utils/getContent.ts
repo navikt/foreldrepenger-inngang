@@ -1,9 +1,9 @@
-import { Language } from '../intl/intl';
 import { StrukturertTekst } from './strukturertTekst';
+import { InjectedIntl } from 'react-intl';
 
-export const getContent = (contentPath: string, language: Language): StrukturertTekst => {
+export const getContent = (contentPath: string, intl: InjectedIntl): StrukturertTekst => {
     try {
-        const content = require(`../../content/${language}/${contentPath}.json`);
+        const content = require(`../../content/${intl.locale}/${contentPath}.json`);
         return content;
     } catch (e) {
         if (process.env.NODE_ENV === 'development') {

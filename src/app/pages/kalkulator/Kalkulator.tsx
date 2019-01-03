@@ -1,6 +1,5 @@
 import * as React from 'react';
 import Sidebanner from 'app/components/sidebanner/Sidebanner';
-import { withIntl, IntlProps, getTranslation } from 'app/intl/intl';
 import Breadcrumbs from 'app/components/breadcrumbs/Breadcrumbs';
 import BEMHelper from 'app/utils/bem';
 import classnames from 'classnames';
@@ -19,6 +18,8 @@ import SvgMask from 'app/components/svg-mask/SvgMask';
 import './kalkulator.less';
 import Resultat from './resultat/Resultat';
 import UtvidetInformasjon from './utvidetinformasjon/UtvidetInformasjon';
+import { InjectedIntlProps, injectIntl } from 'react-intl';
+import getTranslation from 'app/utils/i18nUtils';
 
 const infosiderCls = BEMHelper('infosider');
 const cls = BEMHelper('kalkulator');
@@ -43,13 +44,14 @@ export interface Resultater {
     nedreAvviksgrense: number;
     øvreAvviksgrense: number;
 }
+
 interface State {
     valgteSituasjoner: Arbeidssituasjon[];
     results?: Resultater;
 }
 
-class Planlegger extends React.Component<IntlProps, State> {
-    constructor(props: IntlProps) {
+class Planlegger extends React.Component<InjectedIntlProps, State> {
+    constructor(props: InjectedIntlProps) {
         super(props);
         this.state = {
             valgteSituasjoner: []
@@ -98,7 +100,7 @@ class Planlegger extends React.Component<IntlProps, State> {
     getCheckboxes = () =>
         muligeSituasjoner.map((situasjon) => ({
             checked: this.state.valgteSituasjoner.includes(situasjon),
-            label: getTranslation(`kalkulator.situasjon.${situasjon}`, this.props.lang),
+            label: getTranslation(`kalkulator.situasjon.${situasjon}`, this.props.intl),
             id: situasjon,
             value: situasjon
         }));
@@ -106,16 +108,16 @@ class Planlegger extends React.Component<IntlProps, State> {
     getTitleForChoices = () =>
         `${
             this.fårUtbetaling()
-                ? getTranslation('kalkulator.skriv_inn_utbetaling', this.props.lang)
-                : getTranslation('kalkulator.skriv_inn_lønn', this.props.lang)
+                ? getTranslation('kalkulator.skriv_inn_utbetaling', this.props.intl)
+                : getTranslation('kalkulator.skriv_inn_lønn', this.props.intl)
         } ${
             this.state.valgteSituasjoner.includes('selvstendig_næringsdrivende')
-                ? getTranslation('årene', this.props.lang)
-                : getTranslation('månedene', this.props.lang)
+                ? getTranslation('årene', this.props.intl)
+                : getTranslation('månedene', this.props.intl)
         }?`;
 
     render = () => {
-        const { lang } = this.props;
+        const { intl } = this.props;
 
         const checkboxes = this.getCheckboxes();
         const ingressTilUtbetaling = this.state.valgteSituasjoner.includes('utbetaling_fra_nav')
@@ -131,21 +133,21 @@ class Planlegger extends React.Component<IntlProps, State> {
 
         return (
             <div className={classnames(cls.className, infosiderCls.className)}>
-                <Sidebanner text={getTranslation('kalkulator.bannertekst', lang)} />
+                <Sidebanner text={getTranslation('kalkulator.bannertekst', intl)} />
                 <div className={infosiderCls.element('container')}>
                     <article className={infosiderCls.element('article')}>
                         <Breadcrumbs path={location.pathname} />
 
                         <PanelMedIllustrasjon
-                            title={getTranslation('kalkulator.tittel', lang)}
+                            title={getTranslation('kalkulator.tittel', intl)}
                             svg={<SvgMask svg={pengerIcon} />}>
-                            <StrukturertTekst tekst={getContent('kalkulator/kalkulator', lang)} />
+                            <StrukturertTekst tekst={getContent('kalkulator/kalkulator', intl)} />
 
                             <TypografiBase type="undertittel">
-                                {getTranslation('kalkulator.valg.tittel', lang)}
+                                {getTranslation('kalkulator.valg.tittel', intl)}
                             </TypografiBase>
                             <CheckboksPanelGruppe
-                                legend={getTranslation('kalkulator.valg.ingress', lang)}
+                                legend={getTranslation('kalkulator.valg.ingress', intl)}
                                 checkboxes={checkboxes}
                                 onChange={this.onSituasjonToggle}
                             />
@@ -158,7 +160,7 @@ class Planlegger extends React.Component<IntlProps, State> {
                                             ansikt="undrende"
                                             kompakt={true}>
                                             <StrukturertTekst
-                                                tekst={getContent('kalkulator/ikke-støttet', lang)}
+                                                tekst={getContent('kalkulator/ikke-støttet', intl)}
                                             />
                                         </Veileder>
                                     </div>
@@ -174,25 +176,24 @@ class Planlegger extends React.Component<IntlProps, State> {
                                             <UtvidetInformasjon
                                                 apneLabel={getTranslation(
                                                     'kalkulator.ytelser_som_gir_rett_tittel',
-                                                    lang
+                                                    intl
                                                 )}
                                                 lukkLabel={getTranslation(
                                                     'kalkulator.lukk_info',
-                                                    lang
+                                                    intl
                                                 )}>
                                                 <StrukturertTekst
                                                     tekst={getContent(
                                                         'kalkulator/ytelser-som-gir-rett',
-                                                        lang
+                                                        intl
                                                     )}
                                                 />
                                             </UtvidetInformasjon>
                                         )}
                                         <TypografiBase type="normaltekst">
-                                            {getTranslation(ingressTilUtbetaling, lang)}
+                                            {getTranslation(ingressTilUtbetaling, intl)}
                                         </TypografiBase>
                                         <Lønnskalkulator
-                                            lang={this.props.lang}
                                             situasjoner={this.state.valgteSituasjoner}
                                             onChange={this.onSnittlønnChange}
                                         />
@@ -213,4 +214,4 @@ class Planlegger extends React.Component<IntlProps, State> {
     };
 }
 
-export default withIntl(Planlegger);
+export default injectIntl(Planlegger);

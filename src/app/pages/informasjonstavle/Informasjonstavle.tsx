@@ -1,40 +1,41 @@
 import React from 'react';
-import Tekstomrade from 'nav-frontend-tekstomrade';
-import { withIntl, IntlProps, getTranslation, Language } from '../../intl/intl';
-import BEMHelper from '../../utils/bem';
-import PanelMedBilde from '../../components/panel-med-bilde/PanelMedBilde';
-import LangtPanelMedBilde from '../../components/langt-panel-med-bilde/LangtPanelMedBilde';
-import Header from './header/Header';
-import MerInformasjon from './mer-informasjon/MerInformasjon';
-import AndreLenker from './andre-lenker/AndreLenker';
+import { injectIntl, InjectedIntlProps, InjectedIntl } from 'react-intl';
 import { StatelessComponent } from 'enzyme';
-import HeaderInformasjon from '../../components/header-informasjon/HeaderInformasjon';
-import './informasjonstavle.less';
 import { Undertittel } from 'nav-frontend-typografi';
+import AndreLenker from './andre-lenker/AndreLenker';
+import BEMHelper from '../../utils/bem';
+import getTranslation from 'app/utils/i18nUtils';
+import Header from './header/Header';
+import HeaderInformasjon from '../../components/header-informasjon/HeaderInformasjon';
+import LangtPanelMedBilde from '../../components/langt-panel-med-bilde/LangtPanelMedBilde';
+import MerInformasjon from './mer-informasjon/MerInformasjon';
+import PanelMedBilde from '../../components/panel-med-bilde/PanelMedBilde';
+import Tekstomrade from 'nav-frontend-tekstomrade';
+import './informasjonstavle.less';
 
 const cls = BEMHelper('informasjonstavle');
 const velgSkjemaIcon = require('../../assets/icons/brev.svg').default;
 
-const Informasjonstavle: StatelessComponent<IntlProps> = ({ lang }) => {
+const Informasjonstavle: StatelessComponent<InjectedIntlProps> = ({ intl }) => {
     return (
         <div className={cls.className}>
             <InformasjonstavleHeader />
             <Header />
             <div className={cls.element('body')}>
                 <div role="main" className={cls.element('content')}>
-                    <Bildelenker lang={lang} />
+                    <Bildelenker intl={intl} />
                     <LangtPanelMedBilde
                         svg={velgSkjemaIcon}
-                        title={getTranslation('informasjonstavle.velg_søknadsskjema.tittel', lang)}
-                        body={getTranslation('informasjonstavle.velg_søknadsskjema.ingress', lang)}
+                        title={getTranslation('informasjonstavle.velg_søknadsskjema.tittel', intl)}
+                        body={getTranslation('informasjonstavle.velg_søknadsskjema.ingress', intl)}
                         url="/hva-soker-du"
                     />
                     <Subheader
-                        text={getTranslation('informasjonstavle.mer_informasjon.tittel', lang)}
+                        text={getTranslation('informasjonstavle.mer_informasjon.tittel', intl)}
                     />
                     <MerInformasjon />
                     <Subheader
-                        text={getTranslation('informasjonstavle.andre_lenker.tittel', lang)}
+                        text={getTranslation('informasjonstavle.andre_lenker.tittel', intl)}
                     />
                     <AndreLenker />
                 </div>
@@ -49,36 +50,36 @@ const Subheader = ({ text }: { text: string }) => (
     </div>
 );
 
-const Bildelenker = ({ lang }: { lang: Language }) => {
+const Bildelenker = ({ intl }: { intl: InjectedIntl }) => {
     return (
         <nav className={cls.element('bildepaneler')}>
             <PanelMedBilde
                 svgName="veiviser"
-                title={getTranslation('informasjonstavle.hva_kan_du_få', lang)}
+                title={getTranslation('informasjonstavle.hva_kan_du_få', intl)}
                 urlIsExternal={false}
                 url="/veiviser">
                 <Tekstomrade>
-                    {getTranslation('informasjonstavle.hva_kan_du_få_ingress', lang)}
+                    {getTranslation('informasjonstavle.hva_kan_du_få_ingress', intl)}
                 </Tekstomrade>
             </PanelMedBilde>
 
             <PanelMedBilde
                 svgName="hvor-lenge"
-                title={getTranslation('informasjonstavle.hvor_lenge', lang)}
+                title={getTranslation('informasjonstavle.hvor_lenge', intl)}
                 urlIsExternal={true}
                 url="https://tjenester.nav.no/foreldrepengeplanlegger">
                 <Tekstomrade>
-                    {getTranslation('informasjonstavle.hvor_lenge_ingress', lang)}
+                    {getTranslation('informasjonstavle.hvor_lenge_ingress', intl)}
                 </Tekstomrade>
             </PanelMedBilde>
 
             <PanelMedBilde
                 svgName="hvor-mye"
-                title={getTranslation('informasjonstavle.hvor_mye', lang)}
+                title={getTranslation('informasjonstavle.hvor_mye', intl)}
                 urlIsExternal={false}
                 url="/hvor-mye">
                 <Tekstomrade>
-                    {getTranslation('informasjonstavle.hvor_mye_ingress', lang)}
+                    {getTranslation('informasjonstavle.hvor_mye_ingress', intl)}
                 </Tekstomrade>
             </PanelMedBilde>
         </nav>
@@ -95,4 +96,4 @@ const InformasjonstavleHeader = () => {
     );
 };
 
-export default withIntl(Informasjonstavle);
+export default injectIntl(Informasjonstavle);

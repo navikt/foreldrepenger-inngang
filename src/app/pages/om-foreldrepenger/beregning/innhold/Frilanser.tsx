@@ -1,12 +1,12 @@
 import * as React from 'react';
-import { withIntl, IntlProps } from '../../../../intl/intl';
-import StrukturertTekst from '../../../../components/strukturert-tekst/StrukturertTekst';
 import { getContent } from '../../../../utils/getContent';
+import { injectIntl, InjectedIntlProps } from 'react-intl';
+import StrukturertTekst from '../../../../components/strukturert-tekst/StrukturertTekst';
 
 const beregningTekstPath = 'om-foreldrepenger/beregning/frilanser';
 
-const Frilanser: React.StatelessComponent<IntlProps> = ({ lang }) => {
-    return <StrukturertTekst tekst={getContent(beregningTekstPath, lang)} />;
+const Frilanser: React.StatelessComponent<InjectedIntlProps> = ({ intl }) => {
+    return <StrukturertTekst tekst={getContent(beregningTekstPath, intl)} />;
 };
 
-export default withIntl(Frilanser);
+export default injectIntl(Frilanser);

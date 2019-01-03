@@ -1,6 +1,7 @@
 import * as React from 'react';
-import { getTranslation, withIntl, Language } from '../../../intl/intl';
+import { injectIntl, InjectedIntlProps } from 'react-intl';
 import BEMHelper from '../../../utils/bem';
+import getTranslation from 'app/utils/i18nUtils';
 import PanelBase from 'nav-frontend-paneler';
 import TypografiBase from 'nav-frontend-typografi';
 import WithLink from '../../../components/with-link/WithLink';
@@ -8,12 +9,13 @@ import './hurtiglenker.less';
 
 const cls = BEMHelper('hurtiglenker');
 
-interface Props {
+interface OwnProps {
     links: string[];
-    lang: Language;
 }
 
-const Hurtiglenker = ({ links, lang }: Props) => (
+type Props = OwnProps & InjectedIntlProps;
+
+const Hurtiglenker = ({ links, intl }: Props) => (
     <PanelBase className={cls.className}>
         {links.map((link) => {
             const stringToTranslate = link.replace(new RegExp('-', 'g'), '_');
@@ -21,7 +23,7 @@ const Hurtiglenker = ({ links, lang }: Props) => (
             return (
                 <TypografiBase key={link} type="normaltekst">
                     <WithLink className={cls.element('lenke')} url={`#${link}`}>
-                        {getTranslation(`hurtiglenke.${stringToTranslate}`, lang)}
+                        {getTranslation(`hurtiglenke.${stringToTranslate}`, intl)}
                     </WithLink>
                 </TypografiBase>
             );
@@ -29,4 +31,4 @@ const Hurtiglenker = ({ links, lang }: Props) => (
     </PanelBase>
 );
 
-export default withIntl(Hurtiglenker);
+export default injectIntl(Hurtiglenker);

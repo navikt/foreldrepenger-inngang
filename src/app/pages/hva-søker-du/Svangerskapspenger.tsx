@@ -1,17 +1,18 @@
 import * as React from 'react';
 import PanelMedTittel from '../../components/panel-med-tittel/PanelMedTittel';
 import ButtonPanel from './button-panel/ButtonPanel';
-import { getTranslation, Language, withIntl } from '../../intl/intl';
+import { injectIntl, InjectedIntlProps } from 'react-intl';
 import StrukturertTekst from '../../components/strukturert-tekst/StrukturertTekst';
 import { getContent } from '../../utils/getContent';
+import getTranslation from 'app/utils/i18nUtils';
 
-const Svangerskapspenger = ({ lang }: { lang: Language }) => {
+const Svangerskapspenger = ({ intl }: InjectedIntlProps) => {
     return (
-        <PanelMedTittel title={getTranslation('svangerskapspenger', lang)}>
-            <StrukturertTekst tekst={getContent('hva-søker-du/svangerskapspenger', lang)} />
+        <PanelMedTittel title={getTranslation('svangerskapspenger', intl)}>
+            <StrukturertTekst tekst={getContent('hva-søker-du/svangerskapspenger', intl)} />
             <ButtonPanel
                 button={{
-                    text: getTranslation('hva_søker_du.søk_svangerskapspenger', lang),
+                    text: getTranslation('hva_søker_du.søk_svangerskapspenger', intl),
                     url: '/hva-soker-du/svangerskapspenger'
                 }}
             />
@@ -19,4 +20,4 @@ const Svangerskapspenger = ({ lang }: { lang: Language }) => {
     );
 };
 
-export default withIntl(Svangerskapspenger);
+export default injectIntl(Svangerskapspenger);

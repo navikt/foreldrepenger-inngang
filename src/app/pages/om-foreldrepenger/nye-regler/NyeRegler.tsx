@@ -1,26 +1,25 @@
 import * as React from 'react';
+import { InjectedIntlProps, injectIntl } from 'react-intl';
 import { RadioPanel } from 'nav-frontend-skjema';
-
-import { getTranslation, IntlProps, withIntl } from '../../../intl/intl';
 import BEMHelper from '../../../utils/bem';
-
-import './nyeRegler.less';
 import CustomSVGFromSprite from '../../../utils/CustomSVG';
+import getTranslation from 'app/utils/i18nUtils';
 import TypografiBase from 'nav-frontend-typografi';
+import './nyeRegler.less';
 
 const infoIcon = require('./check_circle_filled.svg').default;
 const cls = BEMHelper('nyeRegler');
 
 type ValgtRegel = 'FØR' | 'ETTER';
 
-class NyeRegler extends React.Component<IntlProps> {
+class NyeRegler extends React.Component<InjectedIntlProps> {
     radios = [
         {
-            label: getTranslation('om_foreldrepenger.nye_regler.etter', this.props.lang),
+            label: getTranslation('om_foreldrepenger.nye_regler.etter', this.props.intl),
             value: 'ETTER'
         },
         {
-            label: getTranslation('om_foreldrepenger.nye_regler.før', this.props.lang),
+            label: getTranslation('om_foreldrepenger.nye_regler.før', this.props.intl),
             value: 'FØR'
         }
     ];
@@ -29,7 +28,7 @@ class NyeRegler extends React.Component<IntlProps> {
         selectedRule: ValgtRegel;
     };
 
-    constructor(props: IntlProps) {
+    constructor(props: InjectedIntlProps) {
         super(props);
 
         this.state = {
@@ -43,16 +42,12 @@ class NyeRegler extends React.Component<IntlProps> {
         });
     };
 
-
-
-
-
     render = () => (
         <div role="note" aria-label="Nye regler" className={cls.className}>
             <div className={cls.element('content')}>
                 <TypografiBase type="element">{`${getTranslation(
                     'om_foreldrepenger.nye_regler_label',
-                    this.props.lang
+                    this.props.intl
                 )}:`}</TypografiBase>
                 <div role="radiogroup" className={cls.element('radiopanelgruppe')}>
                     {this.radios.map((radio) => (
@@ -76,7 +71,7 @@ class NyeRegler extends React.Component<IntlProps> {
                             <span id="førBeskrivelse">
                                 {getTranslation(
                                     'om_foreldrepenger.nye_regler.tittel',
-                                    this.props.lang
+                                    this.props.intl
                                 )}
                             </span>
                         </TypografiBase>
@@ -87,11 +82,11 @@ class NyeRegler extends React.Component<IntlProps> {
                         {this.state.selectedRule === 'FØR'
                             ? getTranslation(
                                   'om_foreldrepenger.nye_regler.før_beskrivelse',
-                                  this.props.lang
+                                  this.props.intl
                               )
                             : getTranslation(
                                   'om_foreldrepenger.nye_regler.etter_beskrivelse',
-                                  this.props.lang
+                                  this.props.intl
                               )}
                     </TypografiBase>
                 </output>
@@ -100,4 +95,4 @@ class NyeRegler extends React.Component<IntlProps> {
     );
 }
 
-export default withIntl(NyeRegler);
+export default injectIntl(NyeRegler);

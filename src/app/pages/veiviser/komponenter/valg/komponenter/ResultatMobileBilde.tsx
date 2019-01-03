@@ -1,5 +1,5 @@
 import React from 'react';
-import { withIntl } from '../../../../../intl/intl';
+import { injectIntl } from 'react-intl';
 
 const ResultatMobileBilde = () => {
     return (
@@ -350,4 +350,4 @@ const ResultatMobileBilde = () => {
     );
 };
 
-export default withIntl(ResultatMobileBilde);
+export default injectIntl(ResultatMobileBilde);

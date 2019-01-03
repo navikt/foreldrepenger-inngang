@@ -1,28 +1,29 @@
 import * as React from 'react';
-import classnames from 'classnames';
-import { Panel } from 'nav-frontend-paneler';
+import { Element } from 'nav-frontend-typografi';
 import { Hovedknapp } from 'nav-frontend-knapper';
-
+import { InjectedIntlProps, injectIntl } from 'react-intl';
+import { Panel } from 'nav-frontend-paneler';
 import BEMHelper from 'app/utils/bem';
+import classnames from 'classnames';
+import getTranslation from 'app/utils/i18nUtils';
+import NavFrontendChevron from 'nav-frontend-chevron';
 import Seksjonslenker from '../seksjonslenker/Seksjonslenker';
 import SvgMask from 'app/components/svg-mask/SvgMask';
-import { getTranslation, withIntl, Language } from 'app/intl/intl';
 import WithLink from 'app/components/with-link/WithLink';
 import './mobilmeny.less';
-import { Element } from 'nav-frontend-typografi';
-import NavFrontendChevron from 'nav-frontend-chevron';
 
 const cls = BEMHelper('mobilmeny');
 const icon = require('../../../assets/icons/rakett.svg').default;
 
-interface Props {
+interface OwnProps {
     sections: string[];
-    lang: Language;
     button: {
         label: string;
         url: string;
-    }
+    };
 }
+
+type Props = OwnProps & InjectedIntlProps;
 
 interface State {
     currentSection?: string;
@@ -85,7 +86,7 @@ class Mobilmeny extends React.Component<Props, State> {
     render = () => {
         const tittel =
             this.state.currentSection ||
-            getTranslation('om_foreldrepenger.tittel', this.props.lang);
+            getTranslation('om_foreldrepenger.tittel', this.props.intl);
 
         return (
             <nav
@@ -115,9 +116,7 @@ class Mobilmeny extends React.Component<Props, State> {
                             urlIsExternal={true}
                             url={this.props.button.url}
                             noStyling={true}>
-                            <Hovedknapp>
-                                {this.props.button.label}
-                            </Hovedknapp>
+                            <Hovedknapp>{this.props.button.label}</Hovedknapp>
                         </WithLink>
                     </div>
                 </Panel>
@@ -146,4 +145,4 @@ const MobilMenyHeader = ({
     </div>
 );
 
-export default withIntl(Mobilmeny);
+export default injectIntl(Mobilmeny);

@@ -4,14 +4,14 @@ import { FlexibleSvg } from '../../../../utils/CustomSVG';
 import './header.less';
 import StrukturertTekst from '../../../../components/strukturert-tekst/StrukturertTekst';
 import { getContent } from '../../../../utils/getContent';
-import { Language, withIntl } from '../../../../intl/intl';
+import { injectIntl, InjectedIntl } from 'react-intl';
 
 const svg = require('./Sign.svg').default;
 
 const headerTXT = 'veiviser/header/header';
 
 const cls = BEMHelper('veiviser');
-const Header = ({ lang }: { lang: Language }) => {
+const Header = ({ intl }: { intl: InjectedIntl }) => {
     return (
         <div className={cls.element('komponent-header')}>
             <FlexibleSvg
@@ -21,10 +21,10 @@ const Header = ({ lang }: { lang: Language }) => {
                 height={70}
             />
             <div className={cls.element('komponent-header-txt')}>
-                <StrukturertTekst tekst={getContent(headerTXT, lang)} />
+                <StrukturertTekst tekst={getContent(headerTXT, intl)} />
             </div>
         </div>
     );
 };
 
-export default withIntl(Header);
+export default injectIntl(Header);

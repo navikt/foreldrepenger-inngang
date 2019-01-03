@@ -1,21 +1,19 @@
 import React from 'react';
-import {getTranslation, Language, withIntl} from '../../../../../intl/intl';
+import { injectIntl, InjectedIntlProps } from 'react-intl';
 import { FlexibleSvg } from '../../../../../utils/CustomSVG';
 import TypografiBase from 'nav-frontend-typografi';
 import BEMHelper from '../../../../../utils/bem';
+import getTranslation from 'app/utils/i18nUtils';
 const resultat = BEMHelper('resultat');
 
-interface Props {
+interface OwnProps {
     tegn: string;
-    lang: Language
     translationString: string;
 }
 
-const ResultatPunkt: React.StatelessComponent<Props> = ({
-    tegn,
-    translationString,
-    lang
-}) => {
+type Props = OwnProps & InjectedIntlProps;
+
+const ResultatPunkt: React.StatelessComponent<Props> = ({ tegn, translationString, intl }) => {
     return (
         <div className={resultat.element('punkter')}>
             <span className={resultat.element('punkt')}>
@@ -27,11 +25,11 @@ const ResultatPunkt: React.StatelessComponent<Props> = ({
             </span>
             <span>
                 <TypografiBase type="normaltekst">
-                    {getTranslation(translationString, lang)}
+                    {getTranslation(translationString, intl)}
                 </TypografiBase>
             </span>
         </div>
     );
 };
 
-export default withIntl(ResultatPunkt);
+export default injectIntl(ResultatPunkt);

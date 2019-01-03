@@ -1,31 +1,30 @@
 import * as React from 'react';
-import StrukturertTekst from '../../components/strukturert-tekst/StrukturertTekst';
-
-import ButtonPanel from './button-panel/ButtonPanel';
-import PanelMedTittel from '../../components/panel-med-tittel/PanelMedTittel';
-import { getTranslation, Language, withIntl } from '../../intl/intl';
 import { getContent } from '../../utils/getContent';
+import { injectIntl, InjectedIntlProps } from 'react-intl';
+import ButtonPanel from './button-panel/ButtonPanel';
 import Environment from '../../Environment';
+import getTranslation from 'app/utils/i18nUtils';
+import PanelMedTittel from '../../components/panel-med-tittel/PanelMedTittel';
 import PopUpModal from './modal/PopUpModal';
+import StrukturertTekst from '../../components/strukturert-tekst/StrukturertTekst';
 import UserHelpEngangsstonad from './user-help-engangsstonad/UserHelpEngangsstonad';
 
-const Engangsstonad = ({ parentCls, lang }: { parentCls: any; lang: Language }) => {
+const Engangsstonad = ({ intl }: InjectedIntlProps) => {
     return (
-        <PanelMedTittel title={getTranslation('engangsstønad', lang)}>
-            <StrukturertTekst tekst={getContent('hva-søker-du/engangsstønad', lang)} />
+        <PanelMedTittel title={getTranslation('engangsstønad', intl)}>
+            <StrukturertTekst tekst={getContent('hva-søker-du/engangsstønad', intl)} />
             <PopUpModal modalIsOpen={false} />
             <ButtonPanel
                 button={{
-                    text: getTranslation('hva_søker_du.søk_engangsstønad', lang),
+                    text: getTranslation('hva_søker_du.søk_engangsstønad', intl),
                     url: Environment.SOK_ENGANGSSTONAD_URL,
                     external: true
                 }}
                 alternativHelpSection={
                     <UserHelpEngangsstonad
-                        linkText={getTranslation('hva_søker_du.ingen_elektronisk_id', lang)}
+                        linkText={getTranslation('hva_søker_du.ingen_elektronisk_id', intl)}
                         linkUrl={Environment.SOK_ENGANGSSTONAD_PAPIR_URL}
-                        helpText={getTranslation('hva_søker_du.ingen_elektronisk_id_hjelp', lang)}
-                        lang={lang}
+                        helpText={getTranslation('hva_søker_du.ingen_elektronisk_id_hjelp', intl)}
                     />
                 }
             />
@@ -33,4 +32,4 @@ const Engangsstonad = ({ parentCls, lang }: { parentCls: any; lang: Language }) 
     );
 };
 
-export default withIntl(Engangsstonad);
+export default injectIntl(Engangsstonad);

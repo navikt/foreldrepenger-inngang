@@ -1,23 +1,24 @@
 import * as React from 'react';
-import BEMHelper from '../../../utils/bem';
-import FarOgMor from './situasjoner/FarOgMor';
-import MorOgMor from './situasjoner/MorOgMor';
+import { Foreldresituasjon, Kvote } from 'app/utils/foreldresituasjon';
+import { getAntallUtbetalingsuker, Utbetalingsalternativ } from './ukekalkulator/utils';
+import { getContent } from '../../../utils/getContent';
+import { injectIntl, InjectedIntlProps } from 'react-intl';
+import { Innholdsfane } from '../../../components/innholdsfaner/fane/Fane';
+import Aleneomsorg from './situasjoner/Aleneomsorg';
 import BareFarHarRett from './situasjoner/BareFarHarRett';
 import BareMorHarRett from './situasjoner/BareMorHarRett';
-import Aleneomsorg from './situasjoner/Aleneomsorg';
-import Foreldrepar from '../../../components/foreldrepar/Foreldrepar';
-import StrukturertTekst from '../../../components/strukturert-tekst/StrukturertTekst';
-import Innholdsfaner from '../../../components/innholdsfaner/Innholdsfaner';
-import { Innholdsfane } from '../../../components/innholdsfaner/fane/Fane';
-import PanelMedIllustrasjon from '../../../components/panel-med-illustrasjon/PanelMedIllustrasjon';
-import { getTranslation, withIntl, IntlProps } from '../../../intl/intl';
-import { getContent } from '../../../utils/getContent';
+import BEMHelper from '../../../utils/bem';
 import FarOgFar from './situasjoner/FarOgFar';
-import { Foreldresituasjon, Kvote } from 'app/utils/foreldresituasjon';
+import FarOgMor from './situasjoner/FarOgMor';
+import Foreldrepar from '../../../components/foreldrepar/Foreldrepar';
+import getTranslation from 'app/utils/i18nUtils';
+import Innholdsfaner from '../../../components/innholdsfaner/Innholdsfaner';
+import MorOgMor from './situasjoner/MorOgMor';
+import PanelMedIllustrasjon from '../../../components/panel-med-illustrasjon/PanelMedIllustrasjon';
+import StrukturertTekst from '../../../components/strukturert-tekst/StrukturertTekst';
 import Ukekalkulator from './ukekalkulator/Ukekalkulator';
-import { getAntallUtbetalingsuker, Utbetalingsalternativ } from './ukekalkulator/utils';
-import './hvorLenge.less';
 import UtvidetInformasjon from 'app/pages/kalkulator/utvidetinformasjon/UtvidetInformasjon';
+import './hvorLenge.less';
 
 const infoSvg = require('../../../assets/ark/ark-info.svg').default;
 
@@ -59,12 +60,12 @@ interface HvorLengeProps {
     id: string;
 }
 
-type Props = HvorLengeProps & IntlProps;
+type Props = HvorLengeProps & InjectedIntlProps;
 
 interface State {
     valgtSituasjon: Foreldresituasjon;
     valgtKvote?: Kvote;
-    antallUtbetalingsuker?: Utbetalingsalternativ[];
+    antallUtbetalingsuker: Utbetalingsalternativ[];
 }
 
 class HvorLenge extends React.Component<Props, State> {
@@ -105,16 +106,16 @@ class HvorLenge extends React.Component<Props, State> {
     };
 
     render = () => {
-        const { id, lang } = this.props;
+        const { id, intl } = this.props;
 
         return (
             <PanelMedIllustrasjon
                 id={id}
-                title={getTranslation('om_foreldrepenger.hvor_lenge.tittel', lang)}
+                title={getTranslation('om_foreldrepenger.hvor_lenge.tittel', intl)}
                 svg={infoSvg}>
                 <div className={cls.className}>
                     <StrukturertTekst
-                        tekst={getContent('om-foreldrepenger/hvor-lenge/hvor-lenge', lang)}
+                        tekst={getContent('om-foreldrepenger/hvor-lenge/hvor-lenge', intl)}
                     />
                     <Innholdsfaner
                         tabs={getTabs(this.onKvoteSelected)}
@@ -124,14 +125,14 @@ class HvorLenge extends React.Component<Props, State> {
                     <UtvidetInformasjon
                         apneLabel={getTranslation(
                             'om_foreldrepenger.hvor_lenge.forslag.åpne',
-                            lang
+                            intl
                         )}
                         lukkLabel={getTranslation(
                             'om_foreldrepenger.hvor_lenge.forslag.lukke',
-                            lang
+                            intl
                         )}>
                         <StrukturertTekst
-                            tekst={getContent('om-foreldrepenger/hvor-lenge/forslag-fra-bld', lang)}
+                            tekst={getContent('om-foreldrepenger/hvor-lenge/forslag-fra-bld', intl)}
                         />
                     </UtvidetInformasjon>
                 </div>
@@ -140,4 +141,4 @@ class HvorLenge extends React.Component<Props, State> {
     };
 }
 
-export default withIntl(HvorLenge);
+export default injectIntl(HvorLenge);

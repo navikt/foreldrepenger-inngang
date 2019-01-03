@@ -3,9 +3,10 @@ import NavDatovelger from 'nav-datovelger';
 import TypografiBase from 'nav-frontend-typografi';
 
 import { BEMWrapper } from '../../utils/bem';
-import { getTranslation, withIntl, IntlProps } from '../../intl/intl';
+import { injectIntl, InjectedIntlProps } from 'react-intl';
 import { StatelessComponent } from 'enzyme';
 import CustomSVGFromSprite from 'app/utils/CustomSVG';
+import getTranslation from 'app/utils/i18nUtils';
 
 const okIcon = require('nav-frontend-ikoner-assets/assets/ok-sirkel.svg').default;
 
@@ -16,12 +17,12 @@ interface Props {
     parentCls: BEMWrapper;
 }
 
-const Datovelger: StatelessComponent<Props & IntlProps> = ({
+const Datovelger: StatelessComponent<Props & InjectedIntlProps> = ({
     date,
     dateIsValid,
     onChange,
     parentCls,
-    lang
+    intl
 }) => {
     return (
         <div
@@ -29,7 +30,7 @@ const Datovelger: StatelessComponent<Props & IntlProps> = ({
             aria-haspopup={true}
             className={parentCls.element('datovelger')}>
             <TypografiBase type="element">
-                {getTranslation('søk_foreldrepenger.første_dag_spørsmål', lang)}
+                {getTranslation('søk_foreldrepenger.første_dag_spørsmål', intl)}
             </TypografiBase>
             <div className={parentCls.element('container')}>
                 <NavDatovelger.Datovelger
@@ -51,4 +52,4 @@ const Datovelger: StatelessComponent<Props & IntlProps> = ({
     );
 };
 
-export default withIntl(Datovelger);
+export default injectIntl(Datovelger);

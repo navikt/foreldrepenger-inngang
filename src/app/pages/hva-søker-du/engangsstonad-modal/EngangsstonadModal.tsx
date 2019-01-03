@@ -1,5 +1,5 @@
 import BEMHelper from '../../../utils/bem';
-import { getTranslation, IntlProps, Language, withIntl } from '../../../intl/intl';
+import { InjectedIntlProps, injectIntl } from 'react-intl';
 import Modal from 'nav-frontend-modal';
 import TypografiBase from 'nav-frontend-typografi';
 import Lenke from 'nav-frontend-lenker';
@@ -11,21 +11,23 @@ import KnappBase from 'nav-frontend-knapper';
 import './engangsstonad-modal.less';
 import { FlexibleSvg } from '../../../utils/CustomSVG';
 import WithLink from '../../../components/with-link/WithLink';
+import getTranslation from 'app/utils/i18nUtils';
 
 const cls = BEMHelper('engangs-modal-sokPapir');
 
-interface Props {
+interface OwnProps {
     modalIsOpen: boolean;
     linktxt: string;
-    lang: Language;
 }
 
-class EngangsstonadModal extends React.Component<Props & IntlProps> {
+type Props = OwnProps & InjectedIntlProps;
+
+class EngangsstonadModal extends React.Component<Props> {
     state: {
         modalIsOpen: boolean;
     };
 
-    constructor(props: Props & IntlProps) {
+    constructor(props: Props & InjectedIntlProps) {
         super(props);
     }
 
@@ -62,7 +64,7 @@ class EngangsstonadModal extends React.Component<Props & IntlProps> {
                     closeButton={false}
                     contentLabel={getTranslation(
                         'hva_søker_du.engangsstønad_modal',
-                        this.props.lang
+                        this.props.intl
                     )}>
                     <div className={cls.element('topIconContainer')}>
                         <FlexibleSvg
@@ -81,7 +83,7 @@ class EngangsstonadModal extends React.Component<Props & IntlProps> {
                         <StrukturertTekst
                             tekst={getContent(
                                 'hva-søker-du/engangsstonad-modal-sok-papir',
-                                this.props.lang
+                                this.props.intl
                             )}
                         />
                         <div className={cls.element('knapper')}>
@@ -95,7 +97,7 @@ class EngangsstonadModal extends React.Component<Props & IntlProps> {
                                     <TypografiBase type={'normaltekst'}>
                                         {getTranslation(
                                             'hva_søker_du.engangsstønad.sokPapir.modal.knapp.standard',
-                                            this.props.lang
+                                            this.props.intl
                                         )}
                                     </TypografiBase>
                                 </KnappBase>
@@ -108,7 +110,7 @@ class EngangsstonadModal extends React.Component<Props & IntlProps> {
                                     <TypografiBase type={'normaltekst'}>
                                         {getTranslation(
                                             'hva_søker_du.engangsstønad.sokPapir.modal.knapp.hoved',
-                                            this.props.lang
+                                            this.props.intl
                                         )}
                                     </TypografiBase>
                                 </KnappBase>
@@ -121,4 +123,4 @@ class EngangsstonadModal extends React.Component<Props & IntlProps> {
     }
 }
 
-export default withIntl(EngangsstonadModal);
+export default injectIntl(EngangsstonadModal);

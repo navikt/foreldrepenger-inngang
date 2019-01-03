@@ -1,20 +1,17 @@
 import * as React from 'react';
-import TypografiBase from 'nav-frontend-typografi';
-import { FlexibleSvg } from '../../../utils/CustomSVG';
-import BEMHelper from '../../../utils/bem';
-import './header.less';
-import MediaQuery from 'react-responsive';
-import { getRandomInt } from '../../../utils/random';
-import { getTranslation, withIntl, Language } from '../../../intl/intl';
 import { detErJul } from 'app/utils/datoUtils';
+import { FlexibleSvg } from '../../../utils/CustomSVG';
+import { getRandomInt } from '../../../utils/random';
+import { injectIntl, InjectedIntlProps } from 'react-intl';
+import BEMHelper from '../../../utils/bem';
+import getTranslation from 'app/utils/i18nUtils';
+import MediaQuery from 'react-responsive';
+import TypografiBase from 'nav-frontend-typografi';
+import './header.less';
 
 const cls = BEMHelper('header');
 
 const NUM_FAMILIES = 5;
-
-interface Props {
-    lang: Language;
-}
 
 const getRandomSvgForHeader = () => {
     const randomFamily = getRandomInt(1, NUM_FAMILIES);
@@ -24,7 +21,7 @@ const getRandomSvgForHeader = () => {
         : require(`../../../assets/familier-hjemme/familie-hjemme-${randomFamily}.svg`).default;
 };
 
-const Header = ({ lang }: Props) => {
+const Header = ({ intl }: InjectedIntlProps) => {
     const svg = getRandomSvgForHeader();
 
     return (
@@ -33,10 +30,10 @@ const Header = ({ lang }: Props) => {
                 <div className={cls.element('content')}>
                     <div className={cls.element('text')}>
                         <TypografiBase type="sidetittel">
-                            {getTranslation('informasjonstavle.tittel', lang)}
+                            {getTranslation('informasjonstavle.tittel', intl)}
                         </TypografiBase>
                         <TypografiBase type="normaltekst">
-                            {getTranslation('informasjonstavle.ingress', lang)}
+                            {getTranslation('informasjonstavle.ingress', intl)}
                         </TypografiBase>
                     </div>
                     <div role="presentation" className={cls.element('svgContainer')}>
@@ -63,4 +60,4 @@ const Header = ({ lang }: Props) => {
     );
 };
 
-export default withIntl(Header);
+export default injectIntl(Header);

@@ -192,7 +192,7 @@
     "om_foreldrepenger.hvor_lenge.fordeling.krav.fellesPerioden": "Aktivitetskrav til far 1",
     "om_foreldrepenger.hvor_lenge.fordeling.tre_uker_før_fødsel": "I tillegg til mødrekvoten, får mor også tre uker før termin",
     "om_foreldrepenger.hvor_lenge.fordeling.i_tillegg_til_foreldrepenger": "I tillegg til foreldrepenger, får mor også tre uker før termin",
-    "om_foreldrepenger.hvor_lenge.fordeling.snakkeboble.tittel": "{{antallUker100}} uker ved 100 prosent foreldrepenger, {{antallUker80}} uker ved 80 prosent foreldrepenger.",
+    "om_foreldrepenger.hvor_lenge.fordeling.snakkeboble.tittel": "{antallUker100} uker ved 100 prosent foreldrepenger, {antallUker80} uker ved 80 prosent foreldrepenger.",
 
     "om_foreldrepenger.hvor_lenge.forslag.åpne": "Endring av foreldrepengeperioden ved 80 prosent",
     "om_foreldrepenger.hvor_lenge.forslag.lukke": "Lukk informasjon",
@@ -259,8 +259,6 @@
     "om_foreldrepenger.beregning.arbeidstaker.inntekter_som_tas_med": "Inntekter som tas med i beregningen",
     "om_foreldrepenger.beregning.arbeidstaker.inntekter_som_ikke_tas_med": "Inntekter som ikke tas med",
     "om_foreldrepenger.beregning.arbeidstaker.dager_uten_arbeid": "Dager uten arbeid som teller med i beregningen",
-    "om_foreldrepenger.beregning.harYtelse": "Utbetaling\nfra NAV",
-    "om_foreldrepenger.beregning.andreInntektskilder": "Militær- eller sivilforsvaret",
     "om_foreldrepenger.beregning.selvstendig": "Selvstendig næringsdrivende",
     "om_foreldrepenger.beregning.harYtelse": "Utbetaling\nfra NAV",
     "om_foreldrepenger.beregning.andreInntektskilder": "Militær- eller sivilforsvaret",

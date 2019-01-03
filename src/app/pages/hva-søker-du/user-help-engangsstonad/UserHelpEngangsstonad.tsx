@@ -1,27 +1,21 @@
 import * as React from 'react';
-// import Lenke from 'nav-frontend-lenker';
-import HjelpetekstBase from 'nav-frontend-hjelpetekst';
-import '../user-help/userHelp.less';
 import BEMHelper from 'app/utils/bem';
 import EngangsstonadModal from '../engangsstonad-modal/EngangsstonadModal';
-import { Language } from '../../../intl/intl';
+import HjelpetekstBase from 'nav-frontend-hjelpetekst';
+import '../user-help/userHelp.less';
 
 const cls = BEMHelper('userHelp');
 
-const UserHelpEngangsstonad = ({
-    linkText,
-    linkUrl,
-    helpText,
-    lang
-}: {
+interface Props {
     linkText: string;
     linkUrl: string;
     helpText: string;
-    lang: Language;
-}) => {
+}
+
+const UserHelpEngangsstonad = ({ linkText, linkUrl, helpText }: Props) => {
     return (
         <div role="link" className={cls.className}>
-            <EngangsstonadModal modalIsOpen={false} lang={lang} linktxt={linkText} />
+            <EngangsstonadModal modalIsOpen={false} linktxt={linkText} />
             <HjelpetekstBase className={cls.element('popup')} id="hjelpetekst">
                 {helpText}
             </HjelpetekstBase>

@@ -1,9 +1,10 @@
 import * as React from 'react';
 import { getContent } from '../../../utils/getContent';
-import { getTranslation, withIntl, IntlProps } from '../../../intl/intl';
+import { injectIntl, InjectedIntlProps } from 'react-intl';
 import BEMHelper from '../../../utils/bem';
 import Ferieforskyvning from './Ferieforskyvning';
 import FerieforskyvningMobil from './FerieforskyvningMobil';
+import getTranslation from 'app/utils/i18nUtils';
 import LesMer from '../../../components/les-mer/LesMer';
 import MediaQuery from 'react-responsive';
 import PanelMedIllustrasjon from '../../../components/panel-med-illustrasjon/PanelMedIllustrasjon';
@@ -23,16 +24,16 @@ interface Props {
     id: string;
 }
 
-const Ferie: React.StatelessComponent<Props & IntlProps> = ({ id, lang }) => {
+const Ferie: React.StatelessComponent<Props & InjectedIntlProps> = ({ id, intl }) => {
     return (
         <PanelMedIllustrasjon
             id={id}
             svg={ferieSvg}
-            title={getTranslation('om_foreldrepenger.ferie.tittel', lang)}>
-            <StrukturertTekst tekst={getContent(content, lang)} />
+            title={getTranslation('om_foreldrepenger.ferie.tittel', intl)}>
+            <StrukturertTekst tekst={getContent(content, intl)} />
             <div className={cls.element('eksempel')}>
                 <TypografiBase type="normaltekst">
-                    {getTranslation('om_foreldrepenger.ferie.eksempel_label', lang)}
+                    {getTranslation('om_foreldrepenger.ferie.eksempel_label', intl)}
                 </TypografiBase>
                 <MediaQuery minWidth={576}>
                     <Ferieforskyvning />
@@ -41,15 +42,15 @@ const Ferie: React.StatelessComponent<Props & IntlProps> = ({ id, lang }) => {
                     <FerieforskyvningMobil />
                 </MediaQuery>
             </div>
-            <LesMer intro={getTranslation('om_foreldrepenger.ferie.rett_til_utsettelse', lang)}>
-                <StrukturertTekst tekst={getContent(rettTilUtsettelseContent, lang)} />
+            <LesMer intro={getTranslation('om_foreldrepenger.ferie.rett_til_utsettelse', intl)}>
+                <StrukturertTekst tekst={getContent(rettTilUtsettelseContent, intl)} />
             </LesMer>
-            <LesMer intro={getTranslation('om_foreldrepenger.ferie.utsette', lang)}>
-                <StrukturertTekst tekst={getContent(fåUtsettelseContent, lang)} />
+            <LesMer intro={getTranslation('om_foreldrepenger.ferie.utsette', intl)}>
+                <StrukturertTekst tekst={getContent(fåUtsettelseContent, intl)} />
             </LesMer>
-            <StrukturertTekst tekst={getContent(feriepenger, lang)} />
+            <StrukturertTekst tekst={getContent(feriepenger, intl)} />
         </PanelMedIllustrasjon>
     );
 };
 
-export default withIntl(Ferie);
+export default injectIntl(Ferie);

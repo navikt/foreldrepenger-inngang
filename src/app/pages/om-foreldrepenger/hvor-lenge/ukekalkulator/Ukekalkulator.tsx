@@ -1,12 +1,13 @@
 import * as React from 'react';
-import TypografiBase from 'nav-frontend-typografi';
-import BEMHelper from '../../../../utils/bem';
-import { getTranslation, IntlProps, withIntl } from '../../../../intl/intl';
+import { InjectedIntlProps, injectIntl } from 'react-intl';
+import { Utbetalingsalternativ } from './utils';
 import AntallBarn from './AntallBarn';
 import AntallUker from './AntallUker';
+import BEMHelper from '../../../../utils/bem';
 import DinLønn from './din-lønn/DinLønn';
+import getTranslation from 'app/utils/i18nUtils';
+import TypografiBase from 'nav-frontend-typografi';
 import './ukekalkulator.less';
-import { Utbetalingsalternativ } from './utils';
 
 const cls = BEMHelper('ukekalkulator');
 
@@ -14,7 +15,7 @@ interface KalkulatorProps {
     antallUtbetalingsuker: Utbetalingsalternativ[];
 }
 
-type Props = KalkulatorProps & IntlProps;
+type Props = KalkulatorProps & InjectedIntlProps;
 
 interface State {
     selectedNumberOfWeeks: number;
@@ -85,7 +86,7 @@ class Ukekalkulator extends React.Component<Props, State> {
                     <AntallBarn
                         parentCls={cls}
                         childCount={1}
-                        label={getTranslation('ett_barn', this.props.lang)}
+                        label={getTranslation('ett_barn', this.props.intl)}
                     />
                     <AntallUkerWrapper
                         numberOfWeeks={this.props.antallUtbetalingsuker[0][100]}
@@ -100,7 +101,7 @@ class Ukekalkulator extends React.Component<Props, State> {
                     <AntallBarn
                         parentCls={cls}
                         childCount={2}
-                        label={getTranslation('tvillinger', this.props.lang)}
+                        label={getTranslation('tvillinger', this.props.intl)}
                     />
                     <AntallUkerWrapper
                         numberOfWeeks={this.props.antallUtbetalingsuker[1][100]}
@@ -115,7 +116,7 @@ class Ukekalkulator extends React.Component<Props, State> {
                     <AntallBarn
                         parentCls={cls}
                         childCount={3}
-                        label={getTranslation('flere_barn', this.props.lang)}
+                        label={getTranslation('flere_barn', this.props.intl)}
                     />
                     <AntallUkerWrapper
                         numberOfWeeks={this.props.antallUtbetalingsuker[2][100]}
@@ -164,4 +165,4 @@ const addAntallUkerAttributes = (
     );
 };
 
-export default withIntl(Ukekalkulator);
+export default injectIntl(Ukekalkulator);
