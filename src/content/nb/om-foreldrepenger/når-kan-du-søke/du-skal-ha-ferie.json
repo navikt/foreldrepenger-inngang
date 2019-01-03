@@ -1,25 +1,17 @@
 [
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "children": [
             {
-                "type": "span",
-                "text": "Du må søke om utsettelse ",
-                "marks": []
+                "text": "Du må søke om utsettelse "
             },
-            { "type": "span", "text": "før", "marks": ["bold"] },
-            { "type": "span", "text": " ferien din starter.", "marks": [] }
-        ],
-        "markDefs": []
+            { "text": "før", "marks": ["bold"] },
+            { "text": " ferien din starter." }
+        ]
     },
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "children": [
-            { "type": "span", "text": "Les mer om ", "marks": [] },
+            { "text": "Les mer om " },
             {
-                "type": "span",
                 "text": "foreldrepenger hvis du skal på ferie",
                 "marks": ["url_foreldrepenger_hvis_du_skal_på_ferie"]
             }

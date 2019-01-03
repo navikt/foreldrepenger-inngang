@@ -1,103 +1,76 @@
 [
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "children": [
             {
-                "type": "span",
                 "text": "Hvis dere får barn ved surrogati",
                 "marks": ["bold"]
             }
         ]
     },
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "children": [
             {
-                "type": "span",
                 "text": "Du som er "
             },
             {
-                "type": "span",
                 "text": "biologisk far",
                 "marks": ["bold"]
             },
             {
-                "type": "span",
                 "text": " til barnet får vanligvis hele foreldrepengeperioden som "
             },
             {
-                "type": "span",
                 "text": "far 1."
             },
             {
-                "type": "span",
                 "text": " Den andre faren kan få foreldrepenger hvis han "
             },
             {
-                "type": "span",
                 "text": "stebarnsadopterer",
                 "marks": ["bold"]
             },
             {
-                "type": "span",
                 "text": " og det fortsatt er dager igjen av foreldrepengeperioden."
             }
         ]
     },
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "children": [
             {
-                "type": "span",
                 "text": "Farskapet til deg som biologisk far må være godkjent i Norge for at du skal få foreldrepenger."
             }
         ]
     },
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "children": [
             {
-                "type": "span",
                 "text": "Hvis dere begge er adoptivforeldre",
                 "marks": ["bold"]
             }
         ]
     },
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "children": [
             {
-                "type": "span",
                 "text": "Dere kan "
             },
             {
-                "type": "span",
                 "text": "velge",
                 "marks": ["bold"]
             },
             {
-                "type": "span",
                 "text": " hvem av dere som skal starte foreldrepengeperioden som "
             },
             {
-                "type": "span",
                 "text": "far 1."
             },
             {
-                "type": "span",
                 "text": " Du som starter får "
             },
             {
-                "type": "span",
                 "text": "15 uker "
             },
             {
-                "type": "span",
                 "text": "satt av til deg. Perioden din starter ved omsorgsovertakelsen."
             }
         ]

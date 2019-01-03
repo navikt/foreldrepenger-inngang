@@ -1,12 +1,10 @@
 [
     {
         "type": "avsnitt-uten-padding",
-        "style": "normaltekst",
+
         "children": [
             {
-                "type": "span",
-                "text": "Søk om svangerskapspenger hvis du ikke kan jobbe når du er gravid fordi det kan skade det ufødte barnet.",
-                "marks": []
+                "text": "Søk om svangerskapspenger hvis du ikke kan jobbe når du er gravid fordi det kan skade det ufødte barnet."
             }
         ]
     }

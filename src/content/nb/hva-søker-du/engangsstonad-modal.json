@@ -1,79 +1,59 @@
 [
     {
-        "type": "avsnitt",
         "style": "undertittel",
         "children": [
             {
-                "type": "span",
                 "text": "Far, medmor eller adopsjon",
                 "marks": ["bold"]
             }
         ]
     },
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "children": [
             {
-                "type": "span",
                 "text": "Hvis du er far eller medmor til barnet, kan du i noen tilfeller få engangsstønad. Det kan gjelde"
             }
         ]
     },
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "listItem": "bullet",
         "level": 1,
         "children": [
             {
-                "type": "span",
                 "text": "for hvert barn du adopterer alene"
             }
         ]
     },
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "listItem": "bullet",
         "level": 1,
         "children": [
             {
-                "type": "span",
                 "text": "om du overtar foreldreansvar eller dersom den andre forelderen dør"
             }
         ]
     },
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "listItem": "bullet",
         "level": 1,
         "children": [
             {
-                "type": "span",
                 "text": "når du får tildelt foreldreansvar"
             }
         ]
     },
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "listItem": "bullet",
         "level": 1,
         "children": [
             {
-                "type": "span",
                 "text": "hvis du innen 56 uker etter barnet ble født eller adoptert, har overtatt omsorgen for barnet med sikte på å overta foreldreansvaret alene"
             }
         ]
     },
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "children": [
             {
-                "type": "span",
                 "text": "Klikk her for å søke på papir",
                 "marks": ["modal_link_to", "external_link"]
             }
@@ -87,15 +67,11 @@
         ]
     },
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "children": [
             {
-                "type": "span",
                 "text": "Den elektroniske søknaden støtter ikke adopsjon. "
             },
             {
-                "type": "span",
                 "text": "Klikk her for å søke på papir",
                 "marks": ["modal_link_to", "external_link"]
             }

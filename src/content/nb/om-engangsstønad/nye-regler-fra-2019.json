@@ -1,40 +1,31 @@
 [
     {
-        "type": "avsnitt",
         "style": "undertittel",
         "children": [
             {
-                "type": "span",
-                "text": "Ny sats fra 1. januar 2019",
-                "marks": []
+                "text": "Ny sats fra 1. januar 2019"
             }
-        ],
-        "markDefs": []
+        ]
     },
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "children": [
             {
-                "type": "span",
-                "text": "Fra 1. januar 2019 øker stønaden med 20.000 kroner til ",
-                "marks": []
+                "text": "Fra 1. januar 2019 øker stønaden med 20.000 kroner til "
             },
-            { "type": "span", "text": "83.140 kroner", "marks": ["bold"] },
-            { "type": "span", "text": ".", "marks": [] }
-        ],
-        "markDefs": []
+            { "text": "83.140 kroner", "marks": ["bold"] },
+            { "text": "." }
+        ]
     },
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "children": [
             {
-                "type": "span",
-                "text": "Har du fått innvilget og utbetalt engangsstønad i 2018 for barn som fødes i 2019? Da vil du få etterbetalt det resterende beløpet når NAV mottar fødselsmelding fra folkeregisteret. Du trenger ikke kontakte NAV eller sende ny søknad. Etterbetalingen skjer ti dager etter at vi har mottatt fødselsmeldingen.",
-                "marks": []
-            }
-        ],
-        "markDefs": []
+                "text": "Endringen vil få virkning for fødsler og adopsjoner som skjer "
+            },
+            {
+                "text": "1. januar 2019 eller senere",
+                "marks": ["bold"]
+            },
+            { "text": "." }
+        ]
     }
 ]

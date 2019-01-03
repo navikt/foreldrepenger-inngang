@@ -1,40 +1,28 @@
 [
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "listItem": "bullet",
         "level": 1,
         "children": [
             {
-                "type": "span",
-                "text": "Lønnsinntekt og ytelser som er likestilt med lønnsinntekt",
-                "marks": []
+                "text": "Lønnsinntekt og ytelser som er likestilt med lønnsinntekt"
             }
         ]
     },
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "listItem": "bullet",
         "level": 1,
         "children": [
             {
-                "type": "span",
-                "text": "Godtgjørelser fra egen arbeidsinnsats, for eksempel bonus og honorar du har fått",
-                "marks": []
+                "text": "Godtgjørelser fra egen arbeidsinnsats, for eksempel bonus og honorar du har fått"
             }
         ]
     },
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "listItem": "bullet",
         "level": 1,
         "children": [
             {
-                "type": "span",
-                "text": "Goder som du mottar i annet enn penger, for eksempel fri bil, mobiltelefon og internett, hvis disse faller bort under foreldrepengeperioden",
-                "marks": []
+                "text": "Goder som du mottar i annet enn penger, for eksempel fri bil, mobiltelefon og internett, hvis disse faller bort under foreldrepengeperioden"
             }
         ]
     }

@@ -1,16 +1,11 @@
 [
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "children": [
             {
-                "type": "span",
-                "text": "Far eller medmor kan tidligst søke om foreldrepenger når ",
-                "marks": []
+                "text": "Far eller medmor kan tidligst søke om foreldrepenger når "
             },
-            { "type": "span", "text": "barnet er født", "marks": ["bold"] },
-            { "type": "span", "text": ".", "marks": [] }
-        ],
-        "markDefs": []
+            { "text": "barnet er født", "marks": ["bold"] },
+            { "text": "." }
+        ]
     }
 ]

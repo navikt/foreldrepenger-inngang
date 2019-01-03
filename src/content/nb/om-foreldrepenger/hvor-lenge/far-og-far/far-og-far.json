@@ -1,22 +1,15 @@
 [
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "children": [
             {
-                "type": "span",
-                "text": "Hvordan foreldrepengeperioden er delt mellom dere, kommer an på om dere får barn ved surrogati og den andre ",
-                "marks": []
+                "text": "Hvordan foreldrepengeperioden er delt mellom dere, kommer an på om dere får barn ved surrogati og den andre "
             },
-            { "type": "span", "text": "stebarnsadopterer", "marks": ["bold"] },
+            { "text": "stebarnsadopterer", "marks": ["bold"] },
             {
-                "type": "span",
-                "text": ", eller om dere begge er ",
-                "marks": []
+                "text": ", eller om dere begge er "
             },
-            { "type": "span", "text": "adoptivforeldre", "marks": ["bold"] },
-            { "type": "span", "text": " til samme barn. ", "marks": [] }
-        ],
-        "markDefs": []
+            { "text": "adoptivforeldre", "marks": ["bold"] },
+            { "text": " til samme barn. " }
+        ]
     }
 ]

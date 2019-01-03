@@ -25,7 +25,14 @@ const StrukturertTekst: StatelessComponent<Props> = ({ tekst, definisjoner }) =>
 };
 
 const renderAvsnitt = (definisjoner?: Definisjoner) => (avsnitt: Avsnitt, index: number) => {
-    const { type, style, markDefs, children, listItem, level } = avsnitt;
+    const {
+        type = 'avsnitt',
+        style = 'normaltekst',
+        markDefs = [],
+        children = [],
+        listItem,
+        level = 0
+    } = avsnitt;
 
     if (level > 0) {
         const renderListElement = renderTekstsnutt(markDefs, definisjoner);
@@ -61,7 +68,17 @@ const renderTekstsnutt = (markDefs: MarkDefinition[], variabler?: Definisjoner) 
     tekstsnutt: Tekstsnutt,
     index: number
 ) => {
-    const { type: snuttype, text, marks } = tekstsnutt;
+    let snuttype = 'span';
+    let text: string = '';
+    let marks: string[] = [];
+
+    if (typeof tekstsnutt !== 'string') {
+        snuttype = tekstsnutt.type || 'span';
+        text = tekstsnutt.text;
+        marks = tekstsnutt.marks || [];
+    } else {
+        text = tekstsnutt;
+    }
 
     const variablesAvailable = variabler && variabler[text] && marks && marks.includes('variable');
     let toRender: ReactNode = variabler && variablesAvailable ? variabler[text] : text;
@@ -80,38 +97,36 @@ const renderTekstsnutt = (markDefs: MarkDefinition[], variabler?: Definisjoner) 
         }
     }
 
-    if (marks) {
-        marks.forEach((mark) => {
-            switch (mark) {
-                case 'bold': {
-                    toRender = <b>{toRender}</b>;
-                    break;
-                }
+    marks.forEach((mark) => {
+        switch (mark) {
+            case 'bold': {
+                toRender = <b>{toRender}</b>;
+                break;
+            }
 
-                case 'italic': {
-                    toRender = <i>{toRender}</i>;
-                    break;
-                }
+            case 'italic': {
+                toRender = <i>{toRender}</i>;
+                break;
+            }
 
-                case 'variable': {
-                    break;
-                }
+            case 'variable': {
+                break;
+            }
 
-                default: {
-                    if (markDefs) {
-                        const markDefinition = markDefs.find((m) => m.key === mark);
-                        if (markDefinition) {
-                            toRender = (
-                                <MarkWrapper mark={markDefinition} otherMarks={marks}>
-                                    {toRender}
-                                </MarkWrapper>
-                            );
-                        }
+            default: {
+                if (markDefs) {
+                    const markDefinition = markDefs.find((m) => m.key === mark);
+                    if (markDefinition) {
+                        toRender = (
+                            <MarkWrapper mark={markDefinition} otherMarks={marks}>
+                                {toRender}
+                            </MarkWrapper>
+                        );
                     }
                 }
             }
-        });
-    }
+        }
+    });
 
     return addKeyToComponent(index, toRender);
 };

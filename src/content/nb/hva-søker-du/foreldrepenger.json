@@ -1,12 +1,10 @@
 [
     {
         "type": "avsnitt-uten-padding",
-        "style": "normaltekst",
+
         "children": [
             {
-                "type": "span",
-                "text": "Søk om foreldrepenger og utsettelse, eller gjør endringer hvis du allerede mottar foreldrepenger og skal ha ferie, jobbe eller en av dere er syke.",
-                "marks": []
+                "text": "Søk om foreldrepenger og utsettelse, eller gjør endringer hvis du allerede mottar foreldrepenger og skal ha ferie, jobbe eller en av dere er syke."
             }
         ]
     }

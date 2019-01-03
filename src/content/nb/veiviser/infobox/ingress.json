@@ -1,22 +1,16 @@
 [
-  {
-    "type": "avsnitt",
-    "style": "normaltekst",
-    "children": [
-      {
-        "type": "span",
-        "text": "Foreldrepenger skal erstatte inntekten din når du skal være hjemme med barnet."
-      }
-    ]
-  },
-  {
-    "type": "avsnitt",
-    "style": "normaltekst",
-    "children": [
-      {
-        "type": "span",
-        "text": "Engangsstønad kan du få hvis du venter barn og ikke har vært i arbeid det siste året. Da kan du få en engangssum istedenfor foreldrepenger."
-      }
-    ]
-  }
+    {
+        "children": [
+            {
+                "text": "Foreldrepenger skal erstatte inntekten din når du skal være hjemme med barnet."
+            }
+        ]
+    },
+    {
+        "children": [
+            {
+                "text": "Engangsstønad kan du få hvis du venter barn og ikke har vært i arbeid det siste året. Da kan du få en engangssum istedenfor foreldrepenger."
+            }
+        ]
+    }
 ]

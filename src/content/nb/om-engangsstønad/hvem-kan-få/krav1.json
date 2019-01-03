@@ -1,27 +1,18 @@
 [
     {
-        "type": "avsnitt",
         "style": "undertittel",
-        "children": [
-            { "type": "span", "text": "Jeg er mor til barnet", "marks": [] }
-        ]
+        "children": [{ "text": "Jeg er mor til barnet" }]
     },
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "children": [
             {
-              "type": "span",
                 "text": "I noen tilfeller kan "
             },
             {
-                "type": "span",
                 "text": "far eller medmor få engangsstønad.",
                 "marks": ["url_les_mer"]
             }
         ],
-        "markDefs": [
-            { "key": "url_les_mer", "type": "link", "href": "#far-eller-medmor" }
-        ]
+        "markDefs": [{ "key": "url_les_mer", "type": "link", "href": "#far-eller-medmor" }]
     }
 ]

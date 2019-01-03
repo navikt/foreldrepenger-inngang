@@ -1,74 +1,47 @@
 [
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "children": [
-            { "type": "span", "text": "De første ", "marks": [] },
-            { "type": "span", "text": "seks ukene", "marks": ["bold"] },
+            { "text": "De første " },
+            { "text": "seks ukene", "marks": ["bold"] },
             {
-                "type": "span",
-                "text": " med foreldrepenger må du ta ut rett etter fødselen. Disse ukene kan ikke kombineres med arbeid eller ferie. De siste ",
-                "marks": []
+                "text": " med foreldrepenger må du ta ut rett etter fødselen. Disse ukene kan ikke kombineres med arbeid eller ferie. De siste "
             },
-            { "type": "span", "text": "ni ukene", "marks": ["bold"] },
+            { "text": "ni ukene", "marks": ["bold"] },
             {
-                "type": "span",
-                "text": " kan du ta ut rett etterpå eller spare til senere.",
-                "marks": []
+                "text": " kan du ta ut rett etterpå eller spare til senere."
             }
-        ],
-        "markDefs": []
+        ]
     },
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "children": [
             {
-                "type": "span",
                 "text": "Adopterer dere, kan du ta ut din del når som helst etter omsorgsovertakelsen."
             }
         ]
     },
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "children": [
             {
-                "type": "span",
-                "text": "Hvis du er så syk at du er helt avhengig av hjelp til å ta deg av barnet, kan medmor søke om å overta mødrekvoten din.",
-                "marks": []
+                "text": "Hvis du er så syk at du er helt avhengig av hjelp til å ta deg av barnet, kan medmor søke om å overta mødrekvoten din."
             }
-        ],
-        "markDefs": []
-    },
-    {
-        "type": "avsnitt",
-        "style": "element",
-        "children": [
-            { "type": "span", "text": "Foreldrepenger før fødsel", "marks": [] }
         ]
     },
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
+        "style": "element",
+        "children": [{ "text": "Foreldrepenger før fødsel" }]
+    },
+    {
         "children": [
             {
-                "type": "span",
-                "text": "Du får foreldrepenger fra og ",
-                "marks": []
+                "text": "Du får foreldrepenger fra og "
             },
             {
-                "type": "span",
                 "text": "med tre uker før terminen",
                 "marks": ["bold"]
             },
             {
-                "type": "span",
-                "text": ". Du kan også ta ut foreldrepenger inntil 12 uker før termin, men da blir det færre uker av fellesperioden.",
-                "marks": []
+                "text": ". Du kan også ta ut foreldrepenger inntil 12 uker før termin, men da blir det færre uker av fellesperioden."
             }
-        ],
-        "markDefs": []
+        ]
     }
-
 ]

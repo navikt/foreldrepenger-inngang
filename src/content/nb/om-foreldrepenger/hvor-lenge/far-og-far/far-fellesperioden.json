@@ -1,124 +1,91 @@
 [
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "children": [
             {
-                "type": "span",
                 "text": "Hvis dere begge er adoptivforeldre",
                 "marks": ["bold"]
             }
         ]
     },
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "children": [
             {
-                "type": "span",
                 "text": "Fellesperioden er ukene med foreldrepenger som dere kan dele."
             }
         ]
     },
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "children": [
             {
-                "type": "span",
                 "text": "Når far 2 tar ut foreldrepengene fra fellesdelen, må far 1 jobbe, studere eller være i annen godkjent aktivitet."
             }
         ]
     },
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "children": [
             {
-                "type": "span",
                 "text": "Aktivitetskravet til far 1",
                 "marks": ["bold"]
             }
         ]
     },
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "children": [
             {
-                "type": "span",
                 "text": "Far 1 må enten"
             }
         ]
     },
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "listItem": "bullet",
         "level": 1,
         "children": [
             {
-                "type": "span",
                 "text": "være i arbeid"
             }
         ]
     },
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "listItem": "bullet",
         "level": 1,
         "children": [
             {
-                "type": "span",
                 "text": "ta utdanning på heltid"
             }
         ]
     },
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "listItem": "bullet",
         "level": 1,
         "children": [
             {
-                "type": "span",
                 "text": "kombinere utdanning med arbeid som til sammen blir heltid"
             }
         ]
     },
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "listItem": "bullet",
         "level": 1,
         "children": [
             {
-                "type": "span",
                 "text": "være helt avhengig av hjelp til å ta seg av barnet på grunn av sykdom"
             }
         ]
     },
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "listItem": "bullet",
         "level": 1,
         "children": [
             {
-                "type": "span",
                 "text": "delta i kvalifiseringsprogrammet"
             }
         ]
     },
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "listItem": "bullet",
         "level": 1,
         "children": [
             {
-                "type": "span",
                 "text": "delta på heltid i introduksjonsprogrammet etter kapittel 2 for nyankomne innvandrere"
             }
         ]

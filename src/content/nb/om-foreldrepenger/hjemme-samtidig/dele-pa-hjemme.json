@@ -1,41 +1,30 @@
 [
-  {
-    "type": "avsnitt",
-    "style": "normaltekst",
-    "children": [
-      {
-        "type": "span",
-        "text": "Hvis dere vil bytte på å være hjemme og i jobb, kan dere kombinere foreldrepenger med delvis arbeid samtidig. Da tar dere til sammen 100 prosent foreldrepenger."
-      }
-    ]
-  },
-  {
-    "type": "avsnitt",
-    "style": "normaltekst",
-    "children": [
-      {
-        "type": "span",
-        "text": "Hvis far vil ta ut 50 prosent foreldrepenger "
-      },
-      {
-        "type": "span",
-        "text": "fra fellesperioden",
-        "marks": ["bold"]
-      },
-      {
-        "type": "span",
-        "text": " samtidig med at mor tar ut 50 prosent, må mor fylle aktivitetskravet med 50 prosent. Det kan hun gjøre ved å være 50 prosent i jobb. "
-      }
-    ]
-  },
-  {
-    "type": "avsnitt",
-    "style": "normaltekst",
-    "children": [
-      {
-        "type": "span",
-        "text": "Hvis dere vil kombinere foreldrepenger samtidig, kan ikke foreldrepengene være mer enn 100 prosent til sammen. Husk at dere begge må søke."
-      }
-    ]
-  }
+    {
+        "children": [
+            {
+                "text": "Hvis dere vil bytte på å være hjemme og i jobb, kan dere kombinere foreldrepenger med delvis arbeid samtidig. Da tar dere til sammen 100 prosent foreldrepenger."
+            }
+        ]
+    },
+    {
+        "children": [
+            {
+                "text": "Hvis far vil ta ut 50 prosent foreldrepenger "
+            },
+            {
+                "text": "fra fellesperioden",
+                "marks": ["bold"]
+            },
+            {
+                "text": " samtidig med at mor tar ut 50 prosent, må mor fylle aktivitetskravet med 50 prosent. Det kan hun gjøre ved å være 50 prosent i jobb. "
+            }
+        ]
+    },
+    {
+        "children": [
+            {
+                "text": "Hvis dere vil kombinere foreldrepenger samtidig, kan ikke foreldrepengene være mer enn 100 prosent til sammen. Husk at dere begge må søke."
+            }
+        ]
+    }
 ]

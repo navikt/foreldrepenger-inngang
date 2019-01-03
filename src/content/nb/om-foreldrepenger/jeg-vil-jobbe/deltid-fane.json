@@ -1,12 +1,9 @@
 [
-  {
-    "type": "avsnitt",
-    "style": "normaltekst",
-    "children": [
-      {
-        "type": "span",
-        "text": "Du kan jobbe delvis når du tar ut foreldrepenger. For eksempel kan du jobbe én dag i uken (20 prosent stilling) og være hjemmeværende de neste fire (80 prosent av tiden) i foreldrepermisjon, slik illustrasjonen viser."
-      }
-    ]
-  }
+    {
+        "children": [
+            {
+                "text": "Du kan jobbe delvis når du tar ut foreldrepenger. For eksempel kan du jobbe én dag i uken (20 prosent stilling) og være hjemmeværende de neste fire (80 prosent av tiden) i foreldrepermisjon, slik illustrasjonen viser."
+            }
+        ]
+    }
 ]

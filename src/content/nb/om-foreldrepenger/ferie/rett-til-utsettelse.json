@@ -1,48 +1,31 @@
 [
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "children": [
             {
-                "type": "span",
-                "text": "Du kan utsette foreldrepengene dine med:",
-                "marks": []
-            }
-        ],
-        "markDefs": []
-    },
-    {
-        "type": "avsnitt",
-        "style": "normaltekst",
-        "listItem": "bullet",
-        "level": 1,
-        "children": [
-            {
-                "type": "span",
-                "text": "ferie inntil fire uker og én dag for hvert år",
-                "marks": []
+                "text": "Du kan utsette foreldrepengene dine med:"
             }
         ]
     },
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
-        "listItem": "bullet",
-        "level": 1,
-        "children": [
-            { "type": "span", "text": "ferie fra i fjor", "marks": [] }
-        ]
-    },
-    {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "listItem": "bullet",
         "level": 1,
         "children": [
             {
-                "type": "span",
-                "text": "inntil ti feriedager på forskudd fra neste år",
-                "marks": []
+                "text": "ferie inntil fire uker og én dag for hvert år"
+            }
+        ]
+    },
+    {
+        "listItem": "bullet",
+        "level": 1,
+        "children": [{ "text": "ferie fra i fjor" }]
+    },
+    {
+        "listItem": "bullet",
+        "level": 1,
+        "children": [
+            {
+                "text": "inntil ti feriedager på forskudd fra neste år"
             }
         ]
     }

@@ -1,25 +1,19 @@
 [
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "children": [
             {
-                "type": "span",
-                "text": "Hvis du har vært i militæret, siviltjeneste eller sivilforsvaret, beregnes foreldrepengene dine til minst ",
-                "marks": []
+                "text": "Hvis du har vært i militæret, siviltjeneste eller sivilforsvaret, beregnes foreldrepengene dine til minst "
             },
             {
-                "type": "span",
                 "text": "treGangerGrunnbeløpet",
                 "marks": ["bold", "variable"]
             },
-            { "type": "span", "text": " kroner (tre ganger ", "marks": [] },
+            { "text": " kroner (tre ganger " },
             {
-                "type": "span",
                 "text": "grunnbeløpet",
                 "marks": ["url_grunnbeløpet", "external_link"]
             },
-            { "type": "span", "text": ").", "marks": [] }
+            { "text": ")." }
         ],
         "markDefs": [
             {

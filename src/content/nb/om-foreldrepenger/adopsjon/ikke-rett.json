@@ -1,14 +1,9 @@
 [
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "children": [
             {
-                "type": "span",
-                "text": "Du kan ikke få foreldrepenger hvis barnet du adopterer er over 15 år, eller det er ektefellen sitt barn.",
-                "marks": []
+                "text": "Du kan ikke få foreldrepenger hvis barnet du adopterer er over 15 år, eller det er ektefellen sitt barn."
             }
-        ],
-        "markDefs": []
+        ]
     }
 ]

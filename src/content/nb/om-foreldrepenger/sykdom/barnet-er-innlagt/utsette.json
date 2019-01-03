@@ -1,35 +1,27 @@
 [
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "listItem": "bullet",
         "level": 1,
         "children": [
-            { "type": "span", "text": "Send inn ", "marks": [] },
+            { "text": "Send inn " },
             {
-                "type": "span",
                 "text": "søknad",
                 "marks": ["bold"]
             },
-            { "type": "span", "text": " om å utsette foreldrepengene.", "marks": [] }
+            { "text": " om å utsette foreldrepengene." }
         ]
     },
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "listItem": "bullet",
         "level": 1,
         "children": [
-            { "type": "span", "text": "Legg ved ", "marks": [] },
+            { "text": "Legg ved " },
             {
-                "type": "span",
                 "text": "dokumentasjon på innleggelsen",
                 "marks": ["bold"]
             },
             {
-                "type": "span",
-                "text": " fra sykehuset eller helseinstitusjonen.",
-                "marks": []
+                "text": " fra sykehuset eller helseinstitusjonen."
             }
         ]
     }

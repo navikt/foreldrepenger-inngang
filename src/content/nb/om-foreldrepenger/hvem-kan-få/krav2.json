@@ -1,33 +1,21 @@
 [
     {
-        "type": "avsnitt",
         "style": "undertittel",
         "children": [
-            {
-                "type": "span",
-                "text": "Jeg har tjent minst "
-            },
+            "Jeg har tjent minst ",
             {
                 "type": "span_nowrap",
                 "text": "48 441 kr"
             },
-            {
-                "type": "span",
-                "text": " i året"
-            }
+            " i året"
         ]
     },
     {
         "type": "inline",
-        "style": "normaltekst",
+
         "children": [
+            "Omregnet til årsinntekt må inntekten din tilsvare et halvt ",
             {
-                "type": "span",
-                "text": "Omregnet til årsinntekt må inntekten din tilsvare et halvt ",
-                "marks": []
-            },
-            {
-                "type": "span",
                 "text": "grunnbeløp (G)",
                 "marks": ["external_link", "url_grunnbeløp"]
             }

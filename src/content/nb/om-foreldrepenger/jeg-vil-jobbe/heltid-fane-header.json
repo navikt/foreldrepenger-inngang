@@ -1,22 +1,16 @@
 [
-  {
-    "type": "avsnitt",
-    "style": "normaltekst",
-    "children": [
-      {
-        "type": "span",
-        "text": "Du kan jobbe heltid når du tar ut foreldrepenger"
-      }
-    ]
-  },
-  {
-    "type": "avsnitt",
-    "style": "normaltekst",
-    "children": [
-      {
-        "type": "span",
-        "text": "For eksempel kan du jobbe 4 uker midt i perioden din for foreldrepenger."
-      }
-    ]
-  }
+    {
+        "children": [
+            {
+                "text": "Du kan jobbe heltid når du tar ut foreldrepenger"
+            }
+        ]
+    },
+    {
+        "children": [
+            {
+                "text": "For eksempel kan du jobbe 4 uker midt i perioden din for foreldrepenger."
+            }
+        ]
+    }
 ]

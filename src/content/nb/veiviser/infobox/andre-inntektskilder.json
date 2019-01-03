@@ -1,77 +1,54 @@
 [
-  {
-    "type": "avsnitt",
-    "style": "normaltekst",
-    "children": [
-      {
-        "type": "span",
-        "text": "Disse inntektene kan gi deg rett til foreldrepenger: "
-      }
-    ]
-  },
-  {
-    "type": "avsnitt",
-    "style": "normaltekst",
-    "listItem": "bullet",
-    "level": 1,
-    "children": [
-      {
-        "type": "span",
-        "text": "Vernepliktig i militæret",
-        "marks": []
-      }
-    ]
-  },
-  {
-    "type": "avsnitt",
-    "style": "normaltekst",
-    "listItem": "bullet",
-    "level": 1,
-    "children": [
-      {
-        "type": "span",
-        "text": "Jobbet i et annet EØS-land",
-        "marks": []
-      }
-    ]
-  },
-  {
-    "type": "avsnitt",
-    "style": "normaltekst",
-    "listItem": "bullet",
-    "level": 1,
-    "children": [
-      {
-        "type": "span",
-        "text": "Ventelønn",
-        "marks": []
-      }
-    ]
-  },
-  {
-    "type": "avsnitt",
-    "style": "normaltekst",
-    "listItem": "bullet",
-    "level": 1,
-    "children": [
-      {
-        "type": "span",
-        "text": "Sluttpakke",
-        "marks": []
-      }
-    ]
-  },
-  {
-    "type": "avsnitt",
-    "style": "normaltekst",
-    "listItem": "bullet",
-    "level": 1,
-    "children": [
-      {
-        "type": "span",
-        "text": "Lønn fra arbeidsgiver under videre- eller etterutdanning",
-        "marks": []
-      }
-    ]
-  }
+    {
+        "children": [
+            {
+                "text": "Disse inntektene kan gi deg rett til foreldrepenger: "
+            }
+        ]
+    },
+    {
+        "listItem": "bullet",
+        "level": 1,
+        "children": [
+            {
+                "text": "Vernepliktig i militæret"
+            }
+        ]
+    },
+    {
+        "listItem": "bullet",
+        "level": 1,
+        "children": [
+            {
+                "text": "Jobbet i et annet EØS-land"
+            }
+        ]
+    },
+    {
+        "listItem": "bullet",
+        "level": 1,
+        "children": [
+            {
+                "text": "Ventelønn"
+            }
+        ]
+    },
+    {
+        "listItem": "bullet",
+        "level": 1,
+        "children": [
+            {
+                "text": "Sluttpakke"
+            }
+        ]
+    },
+    {
+        "listItem": "bullet",
+        "level": 1,
+        "children": [
+            {
+                "text": "Lønn fra arbeidsgiver under videre- eller etterutdanning"
+            }
+        ]
+    }
 ]

@@ -1,21 +1,13 @@
 [
     {
-        "type": "avsnitt",
         "style": "element",
-        "children": [
-            { "type": "span", "text": "Bekreftelse på terminen", "marks": [] }
-        ]
+        "children": [{ "text": "Bekreftelse på terminen" }]
     },
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "children": [
             {
-                "type": "span",
-                "text": "Er du fast ansatt hos en arbeidsgiver, trenger du ikke sende terminbekreftelse til NAV.",
-                "marks": []
+                "text": "Er du fast ansatt hos en arbeidsgiver, trenger du ikke sende terminbekreftelse til NAV."
             }
-        ],
-        "markDefs": []
+        ]
     }
 ]

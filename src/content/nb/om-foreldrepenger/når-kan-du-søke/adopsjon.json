@@ -1,16 +1,11 @@
 [
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "children": [
             {
-                "type": "span",
-                "text": "Ved adopsjon kan dere tidligst søke om foreldrepenger når dere har dato for ",
-                "marks": []
+                "text": "Ved adopsjon kan dere tidligst søke om foreldrepenger når dere har dato for "
             },
-            { "type": "span", "text": "omsorgsovertakelse", "marks": ["bold"] },
-            { "type": "span", "text": ".", "marks": [] }
-        ],
-        "markDefs": []
+            { "text": "omsorgsovertakelse", "marks": ["bold"] },
+            { "text": "." }
+        ]
     }
 ]

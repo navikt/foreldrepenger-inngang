@@ -1,43 +1,30 @@
 [
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "children": [
             {
-                "type": "span",
-                "text": "Utfra tallene du har oppgitt antar vi at du ",
-                "marks": []
+                "text": "Utfra tallene du har oppgitt antar vi at du "
             },
-            { "type": "span", "text": "INNTEKTSSITUASJON", "marks": ["variable"] },
-            { "type": "span", "text": " ", "marks": [] },
-            { "type": "span", "text": "ÅRLIG_SNITTLØNN", "marks": ["variable", "bold"] },
-            { "type": "span", "text": " kroner", "marks": ["bold"] },
+            { "text": "INNTEKTSSITUASJON", "marks": ["variable"] },
+            { "text": " " },
+            { "text": "ÅRLIG_SNITTLØNN", "marks": ["variable", "bold"] },
+            { "text": " kroner", "marks": ["bold"] },
             {
-                "type": "span",
-                "text": ". For å ha rett til foreldrepenger må du ",
-                "marks": []
+                "text": ". For å ha rett til foreldrepenger må du "
             },
-            { "type": "span", "text": "INNTEKTSSITUASJON_VERB", "marks": ["variable"] },
+            { "text": "INNTEKTSSITUASJON_VERB", "marks": ["variable"] },
             {
-                "type": "span",
-                "text": " minst ",
-                "marks": []
+                "text": " minst "
             },
-            { "type": "span", "text": "EN_HALV_G", "marks": ["bold", "variable"] },
-            { "type": "span", "text": " kr", "marks": ["bold"] },
+            { "text": "EN_HALV_G", "marks": ["bold", "variable"] },
+            { "text": " kr", "marks": ["bold"] },
             {
-                "type": "span",
-                "text": "  i året. Hvis du ikke gjør det, kan du søke om en engangssum istedenfor foreldrepenger. ",
-                "marks": []
+                "text": "  i året. Hvis du ikke gjør det, kan du søke om en engangssum istedenfor foreldrepenger. "
             }
         ]
     },
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "children": [
             {
-                "type": "span",
                 "text": "Les mer om engangsstønad",
                 "marks": ["url_Les_mer_om_engangsstønad"]
             }

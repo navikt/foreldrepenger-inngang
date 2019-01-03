@@ -1,20 +1,14 @@
 [
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "children": [
             {
-                "type": "span",
-                "text": "Mor kan tidligst søke om foreldrepenger ved ",
-                "marks": []
+                "text": "Mor kan tidligst søke om foreldrepenger ved "
             },
             {
-                "type": "span",
                 "text": "26. svangerskapsuke",
                 "marks": ["bold"]
             },
-            { "type": "span", "text": ".", "marks": [] }
-        ],
-        "markDefs": []
+            { "text": "." }
+        ]
     }
 ]

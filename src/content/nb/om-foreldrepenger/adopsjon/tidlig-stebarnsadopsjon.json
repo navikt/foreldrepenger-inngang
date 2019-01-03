@@ -1,14 +1,9 @@
 [
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "children": [
             {
-                "type": "span",
-                "text": "Du kan få foreldrepenger hvis du adopterer stebarnet ditt i løpet av foreldrepengeperioden.",
-                "marks": []
+                "text": "Du kan få foreldrepenger hvis du adopterer stebarnet ditt i løpet av foreldrepengeperioden."
             }
-        ],
-        "markDefs": []
+        ]
     }
 ]

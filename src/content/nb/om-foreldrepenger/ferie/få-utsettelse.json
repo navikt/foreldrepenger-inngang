@@ -1,36 +1,27 @@
 [
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "listItem": "bullet",
         "level": 1,
         "children": [
-            { "type": "span", "text": "Avtal med ", "marks": [] },
-            { "type": "span", "text": "arbeidsgiveren", "marks": ["bold"] },
+            { "text": "Avtal med " },
+            { "text": "arbeidsgiveren", "marks": ["bold"] },
             {
-                "type": "span",
-                "text": " din når du skal ta ut ferien.",
-                "marks": []
+                "text": " din når du skal ta ut ferien."
             }
         ]
     },
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "listItem": "bullet",
         "level": 1,
         "children": [
             {
-                "type": "span",
-                "text": "Arbeidsgiveren din bekrefter ferien i ",
-                "marks": []
+                "text": "Arbeidsgiveren din bekrefter ferien i "
             },
             {
-                "type": "span",
                 "text": "inntektsmeldingen",
                 "marks": ["url_inntektsmeldingen", "external_link"]
             },
-            { "type": "span", "text": " som de skal sende til NAV.", "marks": [] }
+            { "text": " som de skal sende til NAV." }
         ],
         "markDefs": [
             {
@@ -41,46 +32,34 @@
         ]
     },
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "listItem": "bullet",
         "level": 1,
         "children": [
-            { "type": "span", "text": "I ", "marks": [] },
+            { "text": "I " },
             {
-                "type": "span",
                 "text": "foreldrepengesøknaden",
                 "marks": ["bold"]
             },
-            { "type": "span", "text": " oppgir du at du skal ", "marks": [] },
-            { "type": "span", "text": "utsette", "marks": ["bold"] },
+            { "text": " oppgir du at du skal " },
+            { "text": "utsette", "marks": ["bold"] },
             {
-                "type": "span",
-                "text": " perioden fordi du skal på ferie.",
-                "marks": []
+                "text": " perioden fordi du skal på ferie."
             }
         ]
     },
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "listItem": "bullet",
         "level": 1,
         "children": [
             {
-                "type": "span",
-                "text": "Hvis du ikke vet tidspunktet for ferien når du søker, kan du senere logge inn på ",
-                "marks": []
+                "text": "Hvis du ikke vet tidspunktet for ferien når du søker, kan du senere logge inn på "
             },
             {
-                "type": "span",
                 "text": "Dine foreldrepenger",
                 "marks": ["url_dine_foreldrepenger", "external_link"]
             },
             {
-                "type": "span",
-                "text": " og sende en endringssøknad.",
-                "marks": []
+                "text": " og sende en endringssøknad."
             }
         ],
         "markDefs": [
@@ -92,16 +71,12 @@
         ]
     },
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "children": [
-            { "type": "span", "text": "Søkefrist", "marks": ["bold"] },
-            { "type": "span", "text": ": Du må søke ", "marks": [] },
-            { "type": "span", "text": "før", "marks": ["bold"] },
+            { "text": "Søkefrist", "marks": ["bold"] },
+            { "text": ": Du må søke " },
+            { "text": "før", "marks": ["bold"] },
             {
-                "type": "span",
-                "text": " ferien din starter.",
-                "marks": []
+                "text": " ferien din starter."
             }
         ]
     }

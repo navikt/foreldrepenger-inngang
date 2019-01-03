@@ -1,48 +1,36 @@
 [
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "children": [
             {
-                "type": "span",
                 "text": "Vanligvis blir foreldrepengene dine beregnet til gjennomsnittet av inntekten din de "
             },
             {
-                "type": "span",
                 "text": "tre siste ferdiglignede årene.",
                 "marks": ["bold"]
             }
         ]
     },
     {
-        "type": "avsnitt",
-        "style": "normaltekst",
         "children": [
             {
-                "type": "span",
                 "text": "Er virksomheten eller arbeidssituasjonen din varig endret, kan inntekten du har når foreldrepengeperioden din starter brukes istedenfor. Inntekt over 12 ganger grunnbeløpet i folketrygden tas ikke med i beregningen. "
             }
         ]
     },
     {
-        "type": "avsnitt",
         "style": "normaltekst",
         "children": [
             {
-                "type": "span",
                 "text": "De samme reglene gjelder også hvis du mottar "
             },
             {
-                "type": "span",
                 "text": "sykepenger, foreldre- eller svangerskapspenger ",
                 "marks": ["bold"]
             },
             {
-                "type": "span",
                 "text": "eller stønader ved pleie av "
             },
             {
-                "type": "span",
                 "text": "syke barn.",
                 "marks": ["bold"]
             }
@@ -53,16 +41,13 @@
         "style": "normaltekst",
         "children": [
             {
-                "type": "span",
                 "text": "Hvis du både er "
             },
             {
-                "type": "span",
                 "text": "selvstendig næringsdrivende og frilanser eller arbeidstaker",
                 "marks": ["bold"]
             },
             {
-                "type": "span",
                 "text": ", blir foreldrepengene dine beregnet ut fra begge inntektene dine. Inntekten din som frilanser blir alltid lagt til grunn for beregningen. Frilansinntekter opp til seks ganger grunnbeløpet dekkes alltid fullt ut."
             }
         ]
