@@ -1,16 +1,12 @@
 [
     {
         "children": [
-            {
-                "text": "Du vil få raskere svar på søknaden din hvis du søker elektronisk i stedet for å sende papirskjema i posten."
-            }
+            "Du vil få raskere svar på søknaden din hvis du søker elektronisk i stedet for å sende papirskjema i posten."
         ]
     },
     {
         "children": [
-            {
-                "text": "For å søke på nett må du ha bank-id fra banken din eller en annen elektronisk id. "
-            },
+            "For å søke på nett må du ha bank-id fra banken din eller en annen elektronisk id. ",
             {
                 "text": "Slik skaffer du deg elektronisk ID.",
                 "marks": ["modal_link_engangsstonad", "external_link"]

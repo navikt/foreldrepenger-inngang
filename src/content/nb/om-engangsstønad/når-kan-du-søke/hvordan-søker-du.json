@@ -1,11 +1,9 @@
 [
     {
         "children": [
-            { "text": "Du må " },
+            "Du må ",
             { "text": "senest", "marks": ["bold"] },
-            {
-                "text": " søke seks måneder etter at barnet er født eller adoptert, ellers mister du som hovedregel retten til engangsstønad."
-            }
+            " søke seks måneder etter at barnet er født eller adoptert, ellers mister du som hovedregel retten til engangsstønad."
         ]
     }
 ]

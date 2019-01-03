@@ -1,54 +1,32 @@
 [
     {
         "children": [
-            {
-                "text": "Får du utbetalt en av disse ytelsene fra NAV, kan du ha rett til foreldrepenger:"
-            }
+            "Får du utbetalt en av disse ytelsene fra NAV, kan du ha rett til foreldrepenger:"
         ]
     },
     {
         "listItem": "bullet",
         "level": 1,
-        "children": [
-            {
-                "text": "Sykepenger"
-            }
-        ]
+        "children": ["Sykepenger"]
     },
     {
         "listItem": "bullet",
         "level": 1,
-        "children": [
-            {
-                "text": "Foreldre- og svangerskapspenger"
-            }
-        ]
+        "children": ["Foreldre- og svangerskapspenger"]
     },
     {
         "listItem": "bullet",
         "level": 1,
-        "children": [
-            {
-                "text": "Arbeidsavklaringspenger"
-            }
-        ]
+        "children": ["Arbeidsavklaringspenger"]
     },
     {
         "listItem": "bullet",
         "level": 1,
-        "children": [
-            {
-                "text": "Dagpenger"
-            }
-        ]
+        "children": ["Dagpenger"]
     },
     {
         "listItem": "bullet",
         "level": 1,
-        "children": [
-            {
-                "text": "Omsorgs-, pleie- eller opplæringspenger ved sykt barn"
-            }
-        ]
+        "children": ["Omsorgs-, pleie- eller opplæringspenger ved sykt barn"]
     }
 ]

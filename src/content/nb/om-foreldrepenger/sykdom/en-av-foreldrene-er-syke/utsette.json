@@ -3,39 +3,31 @@
         "listItem": "bullet",
         "level": 1,
         "children": [
-            { "text": "I " },
+            "I ",
             {
                 "text": "foreldrepengesøknaden",
                 "marks": ["bold"]
             },
-            {
-                "text": " oppgir du at du skal "
-            },
+            " oppgir du at du skal ",
             {
                 "text": "utsette",
                 "marks": ["bold"]
             },
-            {
-                "text": " en periode fordi du er syk eller innlagt."
-            }
+            " en periode fordi du er syk eller innlagt."
         ]
     },
     {
         "listItem": "bullet",
         "level": 1,
         "children": [
-            { "text": "Hvis du " },
+            "Hvis du ",
             { "text": "allerede har søkt", "marks": ["bold"] },
-            {
-                "text": ", logger du på "
-            },
+            ", logger du på ",
             {
                 "text": "Dine foreldrepenger",
                 "marks": ["url_dine_foreldrepenger", "external_link"]
             },
-            {
-                "text": " og sender en endringssøknad i isteden."
-            }
+            " og sender en endringssøknad i isteden."
         ],
         "markDefs": [
             {
@@ -47,40 +39,27 @@
     },
     {
         "style": "element",
-        "children": [
-            {
-                "text": "Dette må du legge ved søknaden"
-            }
-        ]
+        "children": ["Dette må du legge ved søknaden"]
     },
     {
         "listItem": "bullet",
         "level": 1,
         "children": [
-            { "text": "Du er blitt " },
+            "Du er blitt ",
             { "text": "syk", "marks": ["bold"] },
-            {
-                "text": ": Legg ved en legeerklæring. Den må beskrive hvordan sykdommen gjør deg helt avhengig av hjelp til å ta deg av barnet, og hvor lenge sykdommen vil vare."
-            }
+            ": Legg ved en legeerklæring. Den må beskrive hvordan sykdommen gjør deg helt avhengig av hjelp til å ta deg av barnet, og hvor lenge sykdommen vil vare."
         ]
     },
     {
         "listItem": "bullet",
         "level": 1,
         "children": [
-            { "text": "Du er " },
+            "Du er ",
             { "text": "innlagt", "marks": ["bold"] },
-            {
-                "text": ": Legg ved dokumentasjon på innleggelsen fra helseinstitusjonen."
-            }
+            ": Legg ved dokumentasjon på innleggelsen fra helseinstitusjonen."
         ]
     },
     {
-        "children": [
-            { "text": "Søkefrist", "marks": ["bold"] },
-            {
-                "text": ": Du må søke innen tre måneder."
-            }
-        ]
+        "children": [{ "text": "Søkefrist", "marks": ["bold"] }, ": Du må søke innen tre måneder."]
     }
 ]

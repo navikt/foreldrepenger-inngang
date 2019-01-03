@@ -1,25 +1,17 @@
 [
     {
         "children": [
-            {
-                "text": "Utfra tallene du har oppgitt antar vi at du "
-            },
+            "Utfra tallene du har oppgitt antar vi at du ",
             { "text": "INNTEKTSSITUASJON", "marks": ["variable"] },
-            { "text": " " },
+            " ",
             { "text": "ÅRLIG_SNITTLØNN", "marks": ["variable", "bold"] },
             { "text": " kroner", "marks": ["bold"] },
-            {
-                "text": ". For å ha rett til foreldrepenger må du "
-            },
+            ". For å ha rett til foreldrepenger må du ",
             { "text": "INNTEKTSSITUASJON_VERB", "marks": ["variable"] },
-            {
-                "text": " minst "
-            },
+            " minst ",
             { "text": "EN_HALV_G", "marks": ["bold", "variable"] },
             { "text": " kr", "marks": ["bold"] },
-            {
-                "text": "  i året. Hvis du ikke gjør det, kan du søke om en engangssum istedenfor foreldrepenger. "
-            }
+            "  i året. Hvis du ikke gjør det, kan du søke om en engangssum istedenfor foreldrepenger. "
         ]
     },
     {

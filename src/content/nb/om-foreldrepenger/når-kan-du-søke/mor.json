@@ -1,14 +1,12 @@
 [
     {
         "children": [
-            {
-                "text": "Mor kan tidligst søke om foreldrepenger ved "
-            },
+            "Mor kan tidligst søke om foreldrepenger ved ",
             {
                 "text": "26. svangerskapsuke",
                 "marks": ["bold"]
             },
-            { "text": "." }
+            "."
         ]
     }
 ]

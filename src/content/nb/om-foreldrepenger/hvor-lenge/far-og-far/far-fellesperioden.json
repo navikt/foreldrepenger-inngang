@@ -8,17 +8,11 @@
         ]
     },
     {
-        "children": [
-            {
-                "text": "Fellesperioden er ukene med foreldrepenger som dere kan dele."
-            }
-        ]
+        "children": ["Fellesperioden er ukene med foreldrepenger som dere kan dele."]
     },
     {
         "children": [
-            {
-                "text": "Når far 2 tar ut foreldrepengene fra fellesdelen, må far 1 jobbe, studere eller være i annen godkjent aktivitet."
-            }
+            "Når far 2 tar ut foreldrepengene fra fellesdelen, må far 1 jobbe, studere eller være i annen godkjent aktivitet."
         ]
     },
     {
@@ -30,64 +24,38 @@
         ]
     },
     {
-        "children": [
-            {
-                "text": "Far 1 må enten"
-            }
-        ]
+        "children": ["Far 1 må enten"]
+    },
+    {
+        "listItem": "bullet",
+        "level": 1,
+        "children": ["være i arbeid"]
+    },
+    {
+        "listItem": "bullet",
+        "level": 1,
+        "children": ["ta utdanning på heltid"]
+    },
+    {
+        "listItem": "bullet",
+        "level": 1,
+        "children": ["kombinere utdanning med arbeid som til sammen blir heltid"]
+    },
+    {
+        "listItem": "bullet",
+        "level": 1,
+        "children": ["være helt avhengig av hjelp til å ta seg av barnet på grunn av sykdom"]
+    },
+    {
+        "listItem": "bullet",
+        "level": 1,
+        "children": ["delta i kvalifiseringsprogrammet"]
     },
     {
         "listItem": "bullet",
         "level": 1,
         "children": [
-            {
-                "text": "være i arbeid"
-            }
-        ]
-    },
-    {
-        "listItem": "bullet",
-        "level": 1,
-        "children": [
-            {
-                "text": "ta utdanning på heltid"
-            }
-        ]
-    },
-    {
-        "listItem": "bullet",
-        "level": 1,
-        "children": [
-            {
-                "text": "kombinere utdanning med arbeid som til sammen blir heltid"
-            }
-        ]
-    },
-    {
-        "listItem": "bullet",
-        "level": 1,
-        "children": [
-            {
-                "text": "være helt avhengig av hjelp til å ta seg av barnet på grunn av sykdom"
-            }
-        ]
-    },
-    {
-        "listItem": "bullet",
-        "level": 1,
-        "children": [
-            {
-                "text": "delta i kvalifiseringsprogrammet"
-            }
-        ]
-    },
-    {
-        "listItem": "bullet",
-        "level": 1,
-        "children": [
-            {
-                "text": "delta på heltid i introduksjonsprogrammet etter kapittel 2 for nyankomne innvandrere"
-            }
+            "delta på heltid i introduksjonsprogrammet etter kapittel 2 for nyankomne innvandrere"
         ]
     }
 ]

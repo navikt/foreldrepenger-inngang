@@ -1,13 +1,11 @@
 [
     {
         "style": "element",
-        "children": [{ "text": "Bekreftelse på terminen" }]
+        "children": ["Bekreftelse på terminen"]
     },
     {
         "children": [
-            {
-                "text": "Er du fast ansatt hos en arbeidsgiver, trenger du ikke sende terminbekreftelse til NAV."
-            }
+            "Er du fast ansatt hos en arbeidsgiver, trenger du ikke sende terminbekreftelse til NAV."
         ]
     }
 ]

@@ -1,24 +1,16 @@
 [
     {
         "style": "element",
+        "children": ["Feriepenger av foreldrepenger"]
+    },
+    {
         "children": [
-            {
-                "text": "Feriepenger av foreldrepenger"
-            }
+            "Hvis du er arbeidstaker har du rett til feriepenger av foreldrepenger. Hvis arbeidsgiveren betaler lønn under permisjonen, utbetales feriepengene til arbeidsgiveren. "
         ]
     },
     {
         "children": [
-            {
-                "text": "Hvis du er arbeidstaker har du rett til feriepenger av foreldrepenger. Hvis arbeidsgiveren betaler lønn under permisjonen, utbetales feriepengene til arbeidsgiveren. "
-            }
-        ]
-    },
-    {
-        "children": [
-            {
-                "text": "Feriepengene utgjør 10,2 prosent av det som er utbetalt de første 12 eller 15 ukene av foreldrepengeperioden, før skatt. "
-            }
+            "Feriepengene utgjør 10,2 prosent av det som er utbetalt de første 12 eller 15 ukene av foreldrepengeperioden, før skatt. "
         ]
     }
 ]

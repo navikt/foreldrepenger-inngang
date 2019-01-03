@@ -1,19 +1,17 @@
 [
     {
         "children": [
-            {
-                "text": "Hvis du har vært i militæret, siviltjeneste eller sivilforsvaret, beregnes foreldrepengene dine til minst "
-            },
+            "Hvis du har vært i militæret, siviltjeneste eller sivilforsvaret, beregnes foreldrepengene dine til minst ",
             {
                 "text": "treGangerGrunnbeløpet",
                 "marks": ["bold", "variable"]
             },
-            { "text": " kroner (tre ganger " },
+            " kroner (tre ganger ",
             {
                 "text": "grunnbeløpet",
                 "marks": ["url_grunnbeløpet", "external_link"]
             },
-            { "text": ")." }
+            ")."
         ],
         "markDefs": [
             {

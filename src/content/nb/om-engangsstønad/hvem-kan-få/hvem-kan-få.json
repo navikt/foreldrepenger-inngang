@@ -2,20 +2,14 @@
     {
         "style": "ingress",
         "children": [
-            {
-                "text": "Du kan få engangsstønad hvis du "
-            },
+            "Du kan få engangsstønad hvis du ",
             {
                 "text": "ikke har hatt inntekt",
                 "marks": ["bold"]
             },
-            {
-                "text": " som gir deg rett til foreldrepenger. Vanligvis er det "
-            },
+            " som gir deg rett til foreldrepenger. Vanligvis er det ",
             { "text": "to krav", "marks": ["bold"] },
-            {
-                "text": " du må oppfylle for å få engangsstønad."
-            }
+            " du må oppfylle for å få engangsstønad."
         ]
     }
 ]

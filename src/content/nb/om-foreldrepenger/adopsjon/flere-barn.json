@@ -1,34 +1,28 @@
 [
     {
         "children": [
-            {
-                "text": "Hvis dere adopterer flere barn samtidig, får dere flere uker med foreldrepenger."
-            }
+            "Hvis dere adopterer flere barn samtidig, får dere flere uker med foreldrepenger."
         ]
     },
     {
         "listItem": "bullet",
         "level": 1,
         "children": [
-            { "text": "Adopterer dere " },
+            "Adopterer dere ",
             { "text": "to barn", "marks": ["bold"] },
-            {
-                "text": ", får dere 17 uker ekstra ved 100 prosent foreldrepenger og 21 uker ekstra ved 80 prosent foreldrepenger."
-            }
+            ", får dere 17 uker ekstra ved 100 prosent foreldrepenger og 21 uker ekstra ved 80 prosent foreldrepenger."
         ]
     },
     {
         "listItem": "bullet",
         "level": 1,
         "children": [
-            { "text": "Adopterer dere " },
+            "Adopterer dere ",
             {
                 "text": "tre eller flere barn",
                 "marks": ["bold"]
             },
-            {
-                "text": ", får dere 46 uker ekstra ved 100 prosent foreldrepenger og 56 uker ekstra ved 80 prosent foreldrepenger."
-            }
+            ", får dere 46 uker ekstra ved 100 prosent foreldrepenger og 56 uker ekstra ved 80 prosent foreldrepenger."
         ]
     }
 ]

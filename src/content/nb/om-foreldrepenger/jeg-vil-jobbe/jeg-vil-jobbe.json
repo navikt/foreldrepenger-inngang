@@ -1,83 +1,59 @@
 [
     {
-        "children": [
-            {
-                "text": "Du kan kombinere foreldrepengene med arbeid. Du kan velge mellom:"
-            }
-        ]
+        "children": ["Du kan kombinere foreldrepengene med arbeid. Du kan velge mellom:"]
     },
     {
         "listItem": "bullet",
         "level": 1,
         "children": [
-            {
-                "text": "jobbe "
-            },
+            "jobbe ",
             {
                 "text": "heltid og utsette ",
                 "marks": ["bold"]
             },
-            {
-                "text": "foreldrepengeperioden din"
-            }
+            "foreldrepengeperioden din"
         ]
     },
     {
         "listItem": "bullet",
         "level": 1,
         "children": [
-            {
-                "text": "jobbe "
-            },
+            "jobbe ",
             {
                 "text": "deltid og forlenge ",
                 "marks": ["bold"]
             },
-            {
-                "text": "foreldrepengeperioden din"
-            }
+            "foreldrepengeperioden din"
         ]
     },
     {
         "children": [
-            {
-                "text": "Jobber du delvis blir "
-            },
+            "Jobber du delvis blir ",
             {
                 "text": "foreldrepengene redusert ",
                 "marks": ["bold"]
             },
-            {
-                "text": "etter hvor mye du jobber. Samtidig blir "
-            },
+            "etter hvor mye du jobber. Samtidig blir ",
             {
                 "text": "permisjonen din forlenget. ",
                 "marks": ["bold"]
             },
-            {
-                "text": "Du kan bare kombinere foreldrepenger med delvis jobb med "
-            },
+            "Du kan bare kombinere foreldrepenger med delvis jobb med ",
             {
                 "text": " en arbeidsgiver ",
                 "marks": ["bold"]
             },
-            {
-                "text": "om gangen."
-            }
+            "om gangen."
         ]
     },
     {
         "children": [
-            {
-                "text": "Hvis dere vil "
-            },
+            "Hvis dere vil ",
             {
                 "text": "kombinere foreldrepengene samtidig",
                 "marks": ["bold"]
             },
-            {
-                "text": ", kan ikke foreldrepengene være mer enn 100 prosent til sammen. Husk at begge må søke."
-            }
+            ", kan ikke foreldrepengene være mer enn 100 prosent til sammen. Husk at begge må søke."
         ]
     }
 ]

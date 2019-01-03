@@ -1,32 +1,20 @@
 [
     {
-        "children": [
-            {
-                "text": "Du kan utsette foreldrepengene dine med:"
-            }
-        ]
+        "children": ["Du kan utsette foreldrepengene dine med:"]
     },
     {
         "listItem": "bullet",
         "level": 1,
-        "children": [
-            {
-                "text": "ferie inntil fire uker og én dag for hvert år"
-            }
-        ]
+        "children": ["ferie inntil fire uker og én dag for hvert år"]
     },
     {
         "listItem": "bullet",
         "level": 1,
-        "children": [{ "text": "ferie fra i fjor" }]
+        "children": ["ferie fra i fjor"]
     },
     {
         "listItem": "bullet",
         "level": 1,
-        "children": [
-            {
-                "text": "inntil ti feriedager på forskudd fra neste år"
-            }
-        ]
+        "children": ["inntil ti feriedager på forskudd fra neste år"]
     }
 ]

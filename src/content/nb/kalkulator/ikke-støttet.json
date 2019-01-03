@@ -1,14 +1,10 @@
 [
     {
-        "children": [
-            {
-                "text": "Du kan inntil videre ikke bruke denne tjenesten."
-            }
-        ]
+        "children": ["Du kan inntil videre ikke bruke denne tjenesten."]
     },
     {
         "children": [
-            { "text": "Les mer om " },
+            "Les mer om ",
             {
                 "text": "beregningsregler for selvstendig næringsdrivende fra 2019",
                 "marks": ["url_om_beregningsregler_for_selvstendig_næringsdrivende_fra_2019"]

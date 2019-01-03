@@ -2,9 +2,7 @@
     {
         "style": "ingress",
         "children": [
-            {
-                "text": "Regn ut hvor mye du kan få i foreldrepenger. Kalkulatoren kan brukes av deg som skal starte foreldrepengeperioden i 2019 eller senere."
-            }
+            "Regn ut hvor mye du kan få i foreldrepenger. Kalkulatoren kan brukes av deg som skal starte foreldrepengeperioden i 2019 eller senere."
         ]
     }
 ]

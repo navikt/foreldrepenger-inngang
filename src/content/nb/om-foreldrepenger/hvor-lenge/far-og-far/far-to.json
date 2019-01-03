@@ -9,23 +9,17 @@
     },
     {
         "children": [
-            {
-                "text": "Den av dere som starter som "
-            },
+            "Den av dere som starter som ",
             {
                 "text": "far 2",
                 "marks": ["bold"]
             },
-            {
-                "text": " får også "
-            },
+            " får også ",
             {
                 "text": "15 uker",
                 "marks": ["bold"]
             },
-            {
-                "text": " satt av til deg. Ukene kan du ta samlet, dele opp eller kombinere med arbeid. Du må ta ut dine uker senest når fellesperioden er ferdig, eller søke om utsettelse. Hvis du blir så syk at du er helt avhengig av hjelp til å ta deg av barnet, kan far 1 søke om å overta ukene dine."
-            }
+            " satt av til deg. Ukene kan du ta samlet, dele opp eller kombinere med arbeid. Du må ta ut dine uker senest når fellesperioden er ferdig, eller søke om utsettelse. Hvis du blir så syk at du er helt avhengig av hjelp til å ta deg av barnet, kan far 1 søke om å overta ukene dine."
         ]
     },
     {
@@ -38,23 +32,17 @@
     },
     {
         "children": [
-            {
-                "text": "Du kan få foreldrepenger hvis stebarnsadopsjonen har gått i orden og det fortsatt er dager igjen av foreldrepengeperioden. Men du har "
-            },
+            "Du kan få foreldrepenger hvis stebarnsadopsjonen har gått i orden og det fortsatt er dager igjen av foreldrepengeperioden. Men du har ",
             {
                 "text": "ikke plikt",
                 "marks": ["bold"]
             },
-            {
-                "text": " til å ta ut ukene satt av til deg, som ved adopsjon. Det betyr at "
-            },
+            " til å ta ut ukene satt av til deg, som ved adopsjon. Det betyr at ",
             {
                 "text": "biologisk far kan overta",
                 "marks": ["bold"]
             },
-            {
-                "text": " ukene dine hvis det passer best for dere."
-            }
+            " ukene dine hvis det passer best for dere."
         ]
     }
 ]

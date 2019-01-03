@@ -1,24 +1,18 @@
 [
     {
         "children": [
-            {
-                "text": "Siden lønnen din er høyere enn utbetalingsgrensen på "
-            },
+            "Siden lønnen din er høyere enn utbetalingsgrensen på ",
             { "text": "UTBETALINGSGRENSE", "marks": ["bold", "variable"] },
             {
                 "text": " kr",
                 "marks": ["bold"]
             },
-            {
-                "text": " i året (seks ganger "
-            },
+            " i året (seks ganger ",
             {
                 "text": "grunnbeløpet",
                 "marks": ["external_link", "url_grunnbeløp"]
             },
-            {
-                "text": "), blir dette grunnlaget for utregningen under."
-            }
+            "), blir dette grunnlaget for utregningen under."
         ],
         "markDefs": [
             {

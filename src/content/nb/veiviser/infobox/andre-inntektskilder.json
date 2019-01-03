@@ -1,54 +1,30 @@
 [
     {
-        "children": [
-            {
-                "text": "Disse inntektene kan gi deg rett til foreldrepenger: "
-            }
-        ]
+        "children": ["Disse inntektene kan gi deg rett til foreldrepenger: "]
     },
     {
         "listItem": "bullet",
         "level": 1,
-        "children": [
-            {
-                "text": "Vernepliktig i militæret"
-            }
-        ]
+        "children": ["Vernepliktig i militæret"]
     },
     {
         "listItem": "bullet",
         "level": 1,
-        "children": [
-            {
-                "text": "Jobbet i et annet EØS-land"
-            }
-        ]
+        "children": ["Jobbet i et annet EØS-land"]
     },
     {
         "listItem": "bullet",
         "level": 1,
-        "children": [
-            {
-                "text": "Ventelønn"
-            }
-        ]
+        "children": ["Ventelønn"]
     },
     {
         "listItem": "bullet",
         "level": 1,
-        "children": [
-            {
-                "text": "Sluttpakke"
-            }
-        ]
+        "children": ["Sluttpakke"]
     },
     {
         "listItem": "bullet",
         "level": 1,
-        "children": [
-            {
-                "text": "Lønn fra arbeidsgiver under videre- eller etterutdanning"
-            }
-        ]
+        "children": ["Lønn fra arbeidsgiver under videre- eller etterutdanning"]
     }
 ]

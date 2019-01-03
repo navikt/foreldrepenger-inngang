@@ -1,11 +1,9 @@
 [
     {
         "children": [
-            {
-                "text": "Ved adopsjon kan du tidligst søke når du har dato for "
-            },
+            "Ved adopsjon kan du tidligst søke når du har dato for ",
             { "text": "omsorgsovertakelse", "marks": ["bold"] },
-            { "text": "." }
+            "."
         ]
     }
 ]

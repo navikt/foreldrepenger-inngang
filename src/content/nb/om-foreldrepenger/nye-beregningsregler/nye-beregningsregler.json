@@ -2,23 +2,19 @@
     {
         "style": "ingress",
         "children": [
-            {
-                "text": "Nye beregningsregler gjelder for deg som skal starte foreldrepengeperioden den "
-            },
+            "Nye beregningsregler gjelder for deg som skal starte foreldrepengeperioden den ",
             {
                 "text": "1. januar 2019 eller senere",
                 "marks": ["bold"]
             },
-            { "text": "." }
+            "."
         ]
     },
     {
         "children": [
-            {
-                "text": "Foreldrepenger skal beregnes og fastsettes som en "
-            },
+            "Foreldrepenger skal beregnes og fastsettes som en ",
             { "text": "månedsinntekt", "marks": ["bold"] },
-            { "text": "." }
+            "."
         ]
     },
     {
@@ -38,187 +34,141 @@
     },
     {
         "style": "undertittel",
-        "children": [{ "text": "Hvis du er arbeidstaker" }]
+        "children": ["Hvis du er arbeidstaker"]
     },
     {
         "children": [
-            {
-                "text": "Foreldrepengene dine regnes vanligvis ut fra gjennomsnittet av inntekten du har hatt i de "
-            },
+            "Foreldrepengene dine regnes vanligvis ut fra gjennomsnittet av inntekten du har hatt i de ",
             {
                 "text": "tre siste kalendermånedene",
                 "marks": ["bold"]
             },
-            {
-                "text": " før foreldrepengeperioden din starter. Dette gjelder både hvis du er fast ansatt eller har skiftende arbeidsperioder eller inntekter."
-            }
+            " før foreldrepengeperioden din starter. Dette gjelder både hvis du er fast ansatt eller har skiftende arbeidsperioder eller inntekter."
         ]
     },
     {
         "children": [
-            {
-                "text": "Hvis det er mer enn 25 prosent forskjell mellom årsinntekten din og inntekten din de tre siste månedene, må vi vurdere hvilken inntekt som er mest representativ i din situasjon. "
-            }
+            "Hvis det er mer enn 25 prosent forskjell mellom årsinntekten din og inntekten din de tre siste månedene, må vi vurdere hvilken inntekt som er mest representativ i din situasjon. "
         ]
     },
     {
         "listItem": "bullet",
         "level": 1,
         "children": [
-            {
-                "text": "Hvis arbeidsforholdet ditt har vart "
-            },
+            "Hvis arbeidsforholdet ditt har vart ",
             { "text": "under tre måneder", "marks": ["bold"] },
-            {
-                "text": ", skal foreldrepengene regnes ut fra inntekten du har hatt i den perioden du har vært i jobb. Inntekten din regnes om til en månedsinntekt."
-            }
+            ", skal foreldrepengene regnes ut fra inntekten du har hatt i den perioden du har vært i jobb. Inntekten din regnes om til en månedsinntekt."
         ]
     },
     {
         "listItem": "bullet",
         "level": 1,
         "children": [
-            { "text": "Hvis du har hatt " },
+            "Hvis du har hatt ",
             { "text": "ferie", "marks": ["bold"] },
-            {
-                "text": " eller korte perioder med tilfeldig "
-            },
+            " eller korte perioder med tilfeldig ",
             { "text": "ulønnet permisjon", "marks": ["bold"] },
-            {
-                "text": " i perioden du har hatt inntekt, fastsettes inntekten din til det du vanligvis ville hatt hvis du hadde vært i jobb. "
-            }
+            " i perioden du har hatt inntekt, fastsettes inntekten din til det du vanligvis ville hatt hvis du hadde vært i jobb. "
         ]
     },
     {
         "listItem": "bullet",
         "level": 1,
         "children": [
-            { "text": "Hvis " },
+            "Hvis ",
             {
                 "text": "arbeidsforholdet ditt avsluttes",
                 "marks": ["bold"]
             },
-            {
-                "text": " før du starter foreldrepengeperioden, blir foreldrepengene dine beregnet etter inntekten din de tre siste månedene før arbeidsforholdet ble avsluttet."
-            }
+            " før du starter foreldrepengeperioden, blir foreldrepengene dine beregnet etter inntekten din de tre siste månedene før arbeidsforholdet ble avsluttet."
         ]
     },
     {
         "style": "undertittel",
-        "children": [{ "text": "Hvis du er frilanser" }]
+        "children": ["Hvis du er frilanser"]
     },
     {
         "children": [
-            {
-                "text": "Foreldrepengene dine regnes vanligvis ut fra gjennomsnittet av inntekten du har hatt i de "
-            },
+            "Foreldrepengene dine regnes vanligvis ut fra gjennomsnittet av inntekten du har hatt i de ",
             {
                 "text": "tre siste kalendermånedene",
                 "marks": ["bold"]
             },
-            {
-                "text": " før foreldrepengeperioden din starter."
-            }
+            " før foreldrepengeperioden din starter."
         ]
     },
     {
         "children": [
-            {
-                "text": "Hvis det er mer enn 25 prosent forskjell mellom årsinntekten din og inntekten din de tre siste månedene, må vi vurdere hvilken inntekt som er mest representativ i din situasjon. "
-            }
+            "Hvis det er mer enn 25 prosent forskjell mellom årsinntekten din og inntekten din de tre siste månedene, må vi vurdere hvilken inntekt som er mest representativ i din situasjon. "
         ]
     },
     {
         "listItem": "bullet",
         "level": 1,
         "children": [
-            { "text": "Hvis du har jobbet så " },
+            "Hvis du har jobbet så ",
             { "text": "kort tid", "marks": ["bold"] },
-            {
-                "text": " at det ikke er rapportert frilansinntekt for tre hele måneder til a-ordningen, skal inntekten for dette kortere tidsrommet brukes i beregningen."
-            }
+            " at det ikke er rapportert frilansinntekt for tre hele måneder til a-ordningen, skal inntekten for dette kortere tidsrommet brukes i beregningen."
         ]
     },
     {
         "style": "undertittel",
-        "children": [
-            {
-                "text": "Hvis du er selvstendig næringsdrivende"
-            }
-        ]
+        "children": ["Hvis du er selvstendig næringsdrivende"]
     },
     {
         "children": [
-            {
-                "text": "Foreldrepengene dine blir vanligvis beregnet til gjennomsnittet av inntekten din de "
-            },
+            "Foreldrepengene dine blir vanligvis beregnet til gjennomsnittet av inntekten din de ",
             {
                 "text": "tre siste ferdiglignede årene",
                 "marks": ["bold"]
             },
-            {
-                "text": ". Hvis virksomheten din eller arbeidssituasjonen er "
-            },
+            ". Hvis virksomheten din eller arbeidssituasjonen er ",
             { "text": "varig endret", "marks": ["bold"] },
-            {
-                "text": ", kan inntekten du har når foreldrepengeperioden din starter brukes istedenfor. De samme reglene gjelder også hvis du mottar "
-            },
+            ", kan inntekten du har når foreldrepengeperioden din starter brukes istedenfor. De samme reglene gjelder også hvis du mottar ",
             {
                 "text": "sykepenger, foreldre- eller svangerskapspenger",
                 "marks": ["bold"]
             },
-            {
-                "text": " eller stønader ved pleie av "
-            },
+            " eller stønader ved pleie av ",
             { "text": "syke barn", "marks": ["bold"] },
-            { "text": "." }
+            "."
         ]
     },
     {
         "style": "undertittel",
-        "children": [
-            {
-                "text": "Hvis du har flere inntektskilder"
-            }
-        ]
+        "children": ["Hvis du har flere inntektskilder"]
     },
     {
         "listItem": "bullet",
         "level": 1,
         "children": [
-            { "text": "Hvis du både er " },
+            "Hvis du både er ",
             {
                 "text": "arbeidstaker og frilanser",
                 "marks": ["bold"]
             },
-            {
-                "text": " skal inntektene beregnes hver for seg og legges sammen til ett beløp. Hvis du har en samlet inntekt over seks ganger grunnbeløpet, er det inntekten din som arbeidstaker som legges i bunnen av beregningen."
-            }
+            " skal inntektene beregnes hver for seg og legges sammen til ett beløp. Hvis du har en samlet inntekt over seks ganger grunnbeløpet, er det inntekten din som arbeidstaker som legges i bunnen av beregningen."
         ]
     },
     {
         "listItem": "bullet",
         "level": 1,
         "children": [
-            { "text": "Hvis du både er " },
+            "Hvis du både er ",
             {
                 "text": "selvstendig næringsdrivende og frilanser eller arbeidstaker",
                 "marks": ["bold"]
             },
-            {
-                "text": ", blir foreldrepengene dine beregnet ut fra begge inntektene dine. Inntekten din som frilanser skal alltid ligge i bunnen for beregningen. Frilansinntekten opp til seks ganger grunnbeløpet dekkes alltid fullt ut."
-            }
+            ", blir foreldrepengene dine beregnet ut fra begge inntektene dine. Inntekten din som frilanser skal alltid ligge i bunnen for beregningen. Frilansinntekten opp til seks ganger grunnbeløpet dekkes alltid fullt ut."
         ]
     },
     {
         "style": "undertittel",
-        "children": [{ "text": "Utbetaling fra NAV" }]
+        "children": ["Utbetaling fra NAV"]
     },
     {
         "children": [
-            {
-                "text": "Her finner du en oversikt over hvor mye du får i foreldrepenger når du har utbetalt en ytelse fra NAV frem til foreldrepengeperioden din starter. "
-            }
+            "Her finner du en oversikt over hvor mye du får i foreldrepenger når du har utbetalt en ytelse fra NAV frem til foreldrepengeperioden din starter. "
         ]
     },
     {
@@ -226,9 +176,7 @@
         "level": 1,
         "children": [
             { "text": "Sykepenger", "marks": ["bold"] },
-            {
-                "text": ": Foreldrepengene dine blir beregnet til det samme som du vanligvis ville hatt i inntekt dersom du var i jobb."
-            }
+            ": Foreldrepengene dine blir beregnet til det samme som du vanligvis ville hatt i inntekt dersom du var i jobb."
         ]
     },
     {
@@ -236,9 +184,7 @@
         "level": 1,
         "children": [
             { "text": "Foreldrepenger", "marks": ["bold"] },
-            {
-                "text": ": Foreldrepengene dine blir beregnet til det samme som du vanligvis ville hatt i inntekt dersom du var i jobb. "
-            }
+            ": Foreldrepengene dine blir beregnet til det samme som du vanligvis ville hatt i inntekt dersom du var i jobb. "
         ]
     },
     {
@@ -246,9 +192,7 @@
         "level": 1,
         "children": [
             { "text": "Svangerskapspenger", "marks": ["bold"] },
-            {
-                "text": ": Foreldrepengene dine blir beregnet til det samme som du vanligvis ville hatt i inntekt dersom du var i jobb."
-            }
+            ": Foreldrepengene dine blir beregnet til det samme som du vanligvis ville hatt i inntekt dersom du var i jobb."
         ]
     },
     {
@@ -259,9 +203,7 @@
                 "text": "Stønad ved pleie av syke barn",
                 "marks": ["bold"]
             },
-            {
-                "text": ": Foreldrepengene dine blir beregnet til det samme som du vanligvis ville hatt i inntekt dersom du var i jobb."
-            }
+            ": Foreldrepengene dine blir beregnet til det samme som du vanligvis ville hatt i inntekt dersom du var i jobb."
         ]
     },
     {
@@ -269,9 +211,7 @@
         "level": 1,
         "children": [
             { "text": "Arbeidsavklaringspenger", "marks": ["bold"] },
-            {
-                "text": ": Foreldrepengene dine blir beregnet til det samme som du får i arbeidsavklaringspenger. "
-            }
+            ": Foreldrepengene dine blir beregnet til det samme som du får i arbeidsavklaringspenger. "
         ]
     },
     {
@@ -279,9 +219,7 @@
         "level": 1,
         "children": [
             { "text": "Dagpenger", "marks": ["bold"] },
-            {
-                "text": ": Foreldrepengene dine blir beregnet til det samme du får i dagpenger. Hvis du er mor og venter barn ved fødsel, kan du istedenfor få foreldrepengene dine beregnet etter et snitt av inntekten din i de seks beste av de ti siste månedene, hvis det gir deg en høyere utbetaling. NAV vil beregne hvilket alternativ er best for deg. "
-            }
+            ": Foreldrepengene dine blir beregnet til det samme du får i dagpenger. Hvis du er mor og venter barn ved fødsel, kan du istedenfor få foreldrepengene dine beregnet etter et snitt av inntekten din i de seks beste av de ti siste månedene, hvis det gir deg en høyere utbetaling. NAV vil beregne hvilket alternativ er best for deg. "
         ]
     }
 ]

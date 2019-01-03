@@ -1,32 +1,20 @@
 [
     {
         "children": [
-            {
-                "text": "Utfra tallene du har oppgitt antar vi at du "
-            },
+            "Utfra tallene du har oppgitt antar vi at du ",
             { "text": "INNTEKTSSITUASJON", "marks": ["variable"] },
-            {
-                "text": " "
-            },
+            " ",
             { "text": "ÅRLIG_SNITTLØNN", "marks": ["variable", "bold"] },
             { "text": " kroner", "marks": ["bold"] },
-            {
-                "text": ". Hvis det du faktisk "
-            },
+            ". Hvis det du faktisk ",
             { "text": "INNTEKTSSITUASJON_PRETERITUM", "marks": ["variable"] },
-            {
-                "text": " de tolv siste månedene er mindre enn "
-            },
+            " de tolv siste månedene er mindre enn ",
             { "text": "NEDRE_AVVIKSGRENSE", "marks": ["variable", "bold"] },
             { "text": " kr", "marks": ["bold"] },
-            {
-                "text": " eller høyere enn "
-            },
+            " eller høyere enn ",
             { "text": "ØVRE_AVVIKSGRENSE", "marks": ["variable", "bold"] },
             { "text": " kr", "marks": ["bold"] },
-            {
-                "text": ", kan du først få et svar på hva du får utbetalt når søknaden din er ferdigbehandlet."
-            }
+            ", kan du først få et svar på hva du får utbetalt når søknaden din er ferdigbehandlet."
         ]
     }
 ]

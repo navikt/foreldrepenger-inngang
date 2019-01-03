@@ -1,27 +1,19 @@
 [
     {
         "children": [
-            {
-                "text": "Du kan ta ut medmorkvoten fra "
-            },
+            "Du kan ta ut medmorkvoten fra ",
             { "text": "uke syv", "marks": ["bold"] },
-            {
-                "text": " etter fødselen eller vente til barnet er blitt litt større. Ukene kan du ta samlet, dele opp eller kombinere med delvis arbeid."
-            }
+            " etter fødselen eller vente til barnet er blitt litt større. Ukene kan du ta samlet, dele opp eller kombinere med delvis arbeid."
         ]
     },
     {
         "children": [
-            {
-                "text": "Du må ta ut medmorkvoten "
-            },
+            "Du må ta ut medmorkvoten ",
             {
                 "text": "senest når fellesperioden ",
                 "marks": ["bold"]
             },
-            {
-                "text": "er ferdig, eller søke om "
-            },
+            "er ferdig, eller søke om ",
             {
                 "text": "utsettelse.",
                 "marks": ["bold"]
@@ -30,16 +22,12 @@
     },
     {
         "children": [
-            {
-                "text": "Adopterer dere, kan du ta ut medmorkvoten når som helst etter omsorgsovertakelsen."
-            }
+            "Adopterer dere, kan du ta ut medmorkvoten når som helst etter omsorgsovertakelsen."
         ]
     },
     {
         "children": [
-            {
-                "text": "Hvis du blir så syk at du er helt avhengig av hjelp til å ta deg av barnet, kan mor søke om å overta medmorkvoten din."
-            }
+            "Hvis du blir så syk at du er helt avhengig av hjelp til å ta deg av barnet, kan mor søke om å overta medmorkvoten din."
         ]
     },
     {
@@ -53,9 +41,7 @@
     },
     {
         "children": [
-            {
-                "text": "Medmor er en som har fått juridisk foreldreansvar for barnet. Hvis du ikke har fått vedtak om medmorskap, kan du få foreldrepenger hvis du stebarnsadopterer og det fortsatt er dager igjen av foreldrepengeperioden."
-            }
+            "Medmor er en som har fått juridisk foreldreansvar for barnet. Hvis du ikke har fått vedtak om medmorskap, kan du få foreldrepenger hvis du stebarnsadopterer og det fortsatt er dager igjen av foreldrepengeperioden."
         ]
     }
 ]

@@ -1,48 +1,36 @@
 [
     {
         "children": [
-            {
-                "text": "For å ha rett til foreldrepenger må du ha jobbet seks av de ti siste månedene. Dager uten arbeid som teller med i opptjeningen:"
-            }
+            "For å ha rett til foreldrepenger må du ha jobbet seks av de ti siste månedene. Dager uten arbeid som teller med i opptjeningen:"
         ]
     },
     {
         "listItem": "bullet",
         "level": 1,
         "children": [
-            {
-                "text": "Hvis du har vært i jobb i "
-            },
+            "Hvis du har vært i jobb i ",
             {
                 "text": "fire uker sammenhengende ",
                 "marks": ["bold"]
             },
-            {
-                "text": "og det ikke er mer enn "
-            },
+            "og det ikke er mer enn ",
             {
                 "text": "fjorten dager ",
                 "marks": ["bold"]
             },
-            {
-                "text": "mellom hver gang du er på jobb, regnes også dager uten arbeid med i opptjeningstiden."
-            }
+            "mellom hver gang du er på jobb, regnes også dager uten arbeid med i opptjeningstiden."
         ]
     },
     {
         "listItem": "bullet",
         "level": 1,
         "children": [
-            {
-                "text": "Hvis du har en arbeidsavtale om "
-            },
+            "Hvis du har en arbeidsavtale om ",
             {
                 "text": "fast turnus",
                 "marks": ["bold"]
             },
-            {
-                "text": ", vil dagene du ikke er i jobb regnes med i opptjeningstiden, selv om du jobber sjeldnere enn hver 14. dag."
-            }
+            ", vil dagene du ikke er i jobb regnes med i opptjeningstiden, selv om du jobber sjeldnere enn hver 14. dag."
         ]
     },
     {
@@ -53,9 +41,7 @@
                 "text": "Ferie og avspasering ",
                 "marks": ["bold"]
             },
-            {
-                "text": "teller også med."
-            }
+            "teller også med."
         ]
     }
 ]

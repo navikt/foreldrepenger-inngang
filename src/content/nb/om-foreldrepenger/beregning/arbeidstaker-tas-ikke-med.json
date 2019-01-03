@@ -2,20 +2,18 @@
     {
         "listItem": "bullet",
         "level": 1,
-        "children": [{ "text": "Lønn for overtid" }]
+        "children": ["Lønn for overtid"]
     },
     {
         "listItem": "bullet",
         "level": 1,
-        "children": [{ "text": "Feriepenger" }]
+        "children": ["Feriepenger"]
     },
     {
         "listItem": "bullet",
         "level": 1,
         "children": [
-            {
-                "text": "Godtgjørelser som dekker utgifter i forbindelse med jobben din, for eksempel diettgodtgjørelse, bilgodtgjørelse, verktøygodtgjørelse og smussgodtgjørelse"
-            }
+            "Godtgjørelser som dekker utgifter i forbindelse med jobben din, for eksempel diettgodtgjørelse, bilgodtgjørelse, verktøygodtgjørelse og smussgodtgjørelse"
         ]
     }
 ]
