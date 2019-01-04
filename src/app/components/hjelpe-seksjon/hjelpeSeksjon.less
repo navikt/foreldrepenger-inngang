@@ -22,6 +22,11 @@
             margin-top: 1rem;
         }
     }
+    @supports (-ms-ime-align: auto) {
+        &__kontaktvalg {
+            justify-content: space-around;
+        }
+    }
 
     @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
         &__kontaktvalg {

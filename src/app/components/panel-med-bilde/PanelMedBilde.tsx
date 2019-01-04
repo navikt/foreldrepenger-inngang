@@ -49,7 +49,7 @@ const PanelMedBilde = ({
                             className={cls.element('svg')}
                             iconRef={svgFile}
                             height={80}
-                            width="100%"
+                            width="auto"
                         />
                     </MediaQuery>
                     <MediaQuery minWidth={800}>
@@ -57,7 +57,7 @@ const PanelMedBilde = ({
                             className={cls.element('svg')}
                             iconRef={svgFile}
                             height={110}
-                            width="100%"
+                            width="auto"
                         />
                     </MediaQuery>
                 </div>
