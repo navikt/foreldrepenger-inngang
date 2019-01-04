@@ -36,9 +36,7 @@
         background-color: @lavender;
         border-radius: 4px 4px 0 0;
         height: 100px;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
+        width: 100%;
         .purpleBottomBorder();
 
         @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
@@ -47,14 +45,16 @@
     }
 
     &__svgContainer {
-        flex: 1;
         display: flex;
+        flex: 1;
         flex-direction: column;
         align-items: center;
         justify-content: flex-end;
+        height: 100%;
+        float: left;
 
         @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-            display: inline-block;
+            width: 100%;
         }
     }
 
@@ -96,6 +96,14 @@
         transition: all 250ms;
     }
 
+    @media (min-width: @mobile-breakpoint) {
+        &__svgContainer {
+            @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+                width: 60%;
+            }
+        }
+    }
+
     @media (min-width: @tablet-breakpoint) {
         flex: 1;
 
@@ -131,9 +139,7 @@
 
         &__svgContainer {
             @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-                margin-top: 21px;
-                max-height: inherit;
-                height: 100%;
+                width: 100%;
             }
         }
     }
