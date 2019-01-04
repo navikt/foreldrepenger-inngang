@@ -31,15 +31,9 @@
         "children": [
             {
                 "type": "span",
-                "text": "Endringen vil få virkning for fødsler og adopsjoner som skjer ",
+                "text": "Har du fått innvilget og utbetalt engangsstønad i 2018 for barn som fødes i 2019? Da vil du få etterbetalt det resterende beløpet når NAV mottar fødselsmelding fra folkeregisteret. Du trenger ikke kontakte NAV eller sende ny søknad. Etterbetalingen skjer ti dager etter at vi har mottatt fødselsmeldingen.",
                 "marks": []
-            },
-            {
-                "type": "span",
-                "text": "1. januar 2019 eller senere",
-                "marks": ["bold"]
-            },
-            { "type": "span", "text": ".", "marks": [] }
+            }
         ],
         "markDefs": []
     }
