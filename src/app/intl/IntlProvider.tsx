@@ -4,9 +4,9 @@ import * as en from 'react-intl/locale-data/en';
 import * as nb from 'react-intl/locale-data/nb';
 import * as nn from 'react-intl/locale-data/nn';
 
-import enMessages from './en_GB.json';
-import nnMessages from './nn_NO.json';
-import nbMessages from './nb_NO.json';
+import enMessages from './locales/en_GB.json';
+import nnMessages from './locales/nn_NO.json';
+import nbMessages from './locales/nb_NO.json';
 
 export type Language = 'nb' | 'nn' | 'en';
 
