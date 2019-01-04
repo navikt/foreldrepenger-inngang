@@ -19,7 +19,7 @@ const Foreldrepenger: StatelessComponent<InjectedIntlProps> = ({ intl }) => {
                 }}
                 secondButton={{
                     text: getTranslation('hva_søker_du.ettersend_vedlegg', intl),
-                    url: Environment.SOK_FORELDREPENGER_URL,
+                    url: Environment.DINE_FORELDREPENGER_URL,
                     external: true
                 }}
                 helpSection={{
