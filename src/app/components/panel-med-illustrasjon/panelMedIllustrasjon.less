@@ -7,23 +7,28 @@
     border-radius: 0;
     padding: 2rem 1rem;
 
+    :last-child {
+        p {
+            :last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
     .innhold {
         align-self: flex-start;
         width: 100%;
+    }
 
-        &:nth-last-child(1) {
-            margin-bottom: 0;
-        }
+    .lesMer {
+        margin-bottom: 1rem;
     }
 
     .typo-innholdstittel {
         font-size: 1.5rem;
         margin-top: 1rem;
+        margin-bottom: 1rem;
         text-align: center;
-    }
-
-    .typo-ingress {
-        margin: 1rem 0;
     }
 
     &__roundSvgMask {
@@ -42,7 +47,11 @@
         width: 64px;
         height: 2px;
         background-color: black;
-        margin: 1rem 0;
+        margin-bottom: 2rem;
+    }
+
+    .factsWithIcon {
+        margin-bottom: 1.5rem;
     }
 
     @media (min-width: @mobile-breakpoint) {

@@ -1,20 +1,15 @@
 import * as React from 'react';
-
+import { EngangsstonadSectionProps } from './OmEngangsstønad';
 import { injectIntl, InjectedIntlProps } from 'react-intl';
 import getTranslation from 'app/utils/i18nUtils';
-import PanelMedIllustrasjon from 'app/components/panel-med-illustrasjon/PanelMedIllustrasjon';
 import Innhold, { getSource } from 'app/utils/innhold/Innhold';
+import PanelMedIllustrasjon from 'app/components/panel-med-illustrasjon/PanelMedIllustrasjon';
 
 const farSvg = require('../../assets/ark/ark-far-og-medmor.svg').default;
 
-interface OwnProps {
-    id: string;
-}
+type Props = EngangsstonadSectionProps & InjectedIntlProps;
 
-const TilFarEllerMedmor: React.StatelessComponent<InjectedIntlProps & OwnProps> = ({
-    id,
-    intl
-}) => (
+const TilFarEllerMedmor: React.StatelessComponent<Props> = ({ id, intl }) => (
     <PanelMedIllustrasjon
         id={id}
         title={getTranslation('om_engangsstønad.til_far.tittel', intl)}

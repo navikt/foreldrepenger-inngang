@@ -1,31 +1,23 @@
 import * as React from 'react';
+import { EngangsstonadSectionProps } from '../OmEngangsstønad';
 import { FlexibleSvg } from 'app/utils/CustomSVG';
-
 import { injectIntl, InjectedIntlProps } from 'react-intl';
-import BEMHelper from '../../../utils/bem';
 import Fact from 'app/components/facts-with-icon/Fact';
 import FactsWithIcon from 'app/components/facts-with-icon/FactsWithIcon';
 import Foreldrepar from 'app/components/foreldrepar/Foreldrepar';
 import getTranslation from 'app/utils/i18nUtils';
-import PanelMedIllustrasjon from '../../../components/panel-med-illustrasjon/PanelMedIllustrasjon';
 import Innhold, { getSource } from 'app/utils/innhold/Innhold';
-import './nårKanDuSøke.less';
+import PanelMedIllustrasjon from '../../../components/panel-med-illustrasjon/PanelMedIllustrasjon';
 
 const iconSvg = require('../../../assets/ark/ark-frister.svg').default;
 const morSvg = require('../../../assets/foreldre/mor2.svg').default;
 const adopsjonSvg = require('../../../assets/icons/stork.svg').default;
-const cls = BEMHelper('nårKanDuSøke');
 
-interface OwnProps {
-    id: string;
-}
-
-type Props = OwnProps & InjectedIntlProps;
+type Props = EngangsstonadSectionProps & InjectedIntlProps;
 
 const NårKanDuSøke: React.StatelessComponent<Props> = ({ id, intl }) => (
     <PanelMedIllustrasjon
         id={id}
-        className={cls.className}
         title={getTranslation('om_engangsstønad.når_kan_du_søke.tittel', intl)}
         svg={iconSvg}>
         <FactsWithIcon>
@@ -42,9 +34,7 @@ const NårKanDuSøke: React.StatelessComponent<Props> = ({ id, intl }) => (
                 content={getSource('om-engangsstønad/når-kan-du-søke/adopsjon', intl)}
             />
         </FactsWithIcon>
-        <Innhold
-            source={getSource('om-engangsstønad/når-kan-du-søke/hvordan-søker-du', intl)}
-        />
+        <Innhold source={getSource('om-engangsstønad/når-kan-du-søke/hvordan-søker-du', intl)} />
     </PanelMedIllustrasjon>
 );
 

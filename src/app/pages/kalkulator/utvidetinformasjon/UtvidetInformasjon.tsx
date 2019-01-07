@@ -45,7 +45,7 @@ class UtvidetInformasjon extends React.Component<Props, State> {
                     <InfoToggler
                         onToggle={() => this.setState({ apen: !this.state.apen })}
                         apen={this.state.apen}>
-                        <Normaltekst>
+                        <Normaltekst tag="span">
                             {this.state.apen ? lukkLabel : this.props.apneLabel}
                         </Normaltekst>
                     </InfoToggler>

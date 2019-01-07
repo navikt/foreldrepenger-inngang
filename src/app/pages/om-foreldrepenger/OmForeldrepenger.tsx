@@ -1,5 +1,5 @@
 import * as React from 'react';
-
+import { getSource } from 'app/utils/innhold/Innhold';
 import { InjectedIntlProps, injectIntl } from 'react-intl';
 import Adopsjon from './adopsjon/Adopsjon';
 import BEMHelper from '../../utils/bem';
@@ -22,7 +22,6 @@ import NyeRegler from './nye-regler/NyeRegler';
 import Sidebanner from '../../components/sidebanner/Sidebanner';
 import Sykdom from './sykdom/Sykdom';
 import '../infosider/infosider.less';
-import { getSource } from 'app/utils/innhold/Innhold';
 
 const cls = BEMHelper('infosider');
 

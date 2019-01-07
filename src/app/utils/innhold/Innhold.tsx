@@ -23,7 +23,8 @@ const xmlToReact = new XMLToReact({
     i: renderAs('i'),
     span: renderAs('span'),
     lesmer: renderAs(Node.LesMerPanel),
-    variabel: renderWithValues(Node.Variabel)
+    variabel: renderWithValues(Node.Variabel),
+    unbreakable: renderAs(Node.Unbreakable)
 });
 
 export const getSource = (path: string, intl: InjectedIntl): string => {

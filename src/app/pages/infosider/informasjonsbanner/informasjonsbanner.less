@@ -4,20 +4,27 @@
     margin: 0 1rem 2rem;
     border: 1px solid #ff9100;
     border-radius: 0.25rem;
+    padding: 2rem 1rem;
 
-    .alertstripe__ikon {
-        width: 3.5rem;
-        margin-right: 1rem;
-        border-right-width: 2px !important;
-        margin-top: 2rem;
-        margin-bottom: 2rem;
+    p:last-child {
+        margin-bottom: 0;
+    }
 
-        svg {
-            height: 2.5rem;
-            width: 2.5rem;
+    .alertstripe {
+        &__ikon {
+            width: 3.5rem;
+            margin-right: 1rem;
+            border-right-width: 2px !important;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
 
-            g {
-                fill: #ff9100;
+            svg {
+                height: 2.5rem;
+                width: 2.5rem;
+
+                g {
+                    fill: #ff9100;
+                }
             }
         }
     }

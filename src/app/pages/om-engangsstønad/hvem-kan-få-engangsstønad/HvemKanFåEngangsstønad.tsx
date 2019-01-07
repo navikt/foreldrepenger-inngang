@@ -6,6 +6,7 @@ import getTranslation from 'app/utils/i18nUtils';
 import Innhold, { getSource } from 'app/utils/innhold/Innhold';
 import PanelMedIllustrasjon from 'app/components/panel-med-illustrasjon/PanelMedIllustrasjon';
 import './hvemKanFåEngangsstønad.less';
+import { EngangsstonadSectionProps } from '../OmEngangsstønad';
 
 const cls = BEMHelper('hvemKanFåEngangsstønad');
 const engangsstønadSvg = require('../../../assets/engangsstønad.svg').default;
@@ -15,9 +16,11 @@ const hvaErEngangsstønadContent = 'om-engangsstønad/hvem-kan-få/hvem-kan-få'
 const engangssumContent = 'om-engangsstønad/hvem-kan-få/krav1';
 const utbetalingShortContent = 'om-engangsstønad/hvem-kan-få/krav2';
 
-const HvemKanFåEngangsstønad: React.StatelessComponent<InjectedIntlProps> = ({ intl }) => (
+type Props = EngangsstonadSectionProps & InjectedIntlProps;
+
+const HvemKanFåEngangsstønad: React.StatelessComponent<Props> = ({ id, intl }) => (
     <PanelMedIllustrasjon
-        id={'hvem-kan-fa-engangsstonad'}
+        id={id}
         title={getTranslation('om_engangsstønad.hva_er.tittel', intl)}
         svg={engangsstønadSvg}>
         <Innhold source={getSource(hvaErEngangsstønadContent, intl)} values={{ TALL: '42' }} />

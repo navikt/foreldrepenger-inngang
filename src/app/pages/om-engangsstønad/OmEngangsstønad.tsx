@@ -32,6 +32,10 @@ export type EngangsstonadSection =
     | 'nar-blir-pengene-utbetalt'
     | 'engangsstonad-til-far-eller-medmor';
 
+export interface EngangsstonadSectionProps {
+    id: EngangsstonadSection;
+}
+
 const sections: EngangsstonadSection[] = [
     'hvem-kan-fa-engangsstonad',
     'hva-kan-du-fa',
@@ -66,11 +70,11 @@ const OmEngangsstonad: React.StatelessComponent<Props & InjectedIntlProps> = ({
                             engangssum: ENGANGSSUM_PER_BARN.toLocaleString(intl.locale)
                         }}
                     />
-                    <HvemKanFåEngangsstønad />
-                    <HvaKanDuFå />
+                    <HvemKanFåEngangsstønad id={sections[0]} />
+                    <HvaKanDuFå id={sections[1]} />
                     <NårKanDuSøke id={sections[2]} />
-                    <NårBlirPengeneUtbetalt />
-                    <TilFarEllerMedmor id="engangsstonad-til-far-eller-medmor" />
+                    <NårBlirPengeneUtbetalt id={sections[3]} />
+                    <TilFarEllerMedmor id={sections[4]} />
                     <Hjelp />
                 </article>
             </MedInnholdsfortegnelse>

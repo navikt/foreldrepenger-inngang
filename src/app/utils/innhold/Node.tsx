@@ -40,6 +40,10 @@ export const Variabel = (props: { values: ValueMap; children: string }) => {
     return <span {...props}>{values[children] || 'tøys og tull'}</span>;
 };
 
+export const Unbreakable = (props: { children: React.ReactNode }) => (
+    <span className={cls.element('unbreakable')}>{props.children}</span>
+);
+
 export const Lenke = (props: { url: string; ekstern: string; children: React.ReactNode }) => (
     <WithLink addExternalIcon={!!props.ekstern} urlIsExternal={!!props.ekstern} {...props} />
 );
