@@ -8,9 +8,10 @@ import { injectIntl, InjectedIntl } from 'react-intl';
 
 const svg = require('./Sign.svg').default;
 
-const headerTXT = 'veiviser/header/header';
+const headerTXT = 'veiviser/introduksjon';
 
 const cls = BEMHelper('veiviser');
+
 const Header = ({ intl }: { intl: InjectedIntl }) => {
     return (
         <div className={cls.element('komponent-header')}>

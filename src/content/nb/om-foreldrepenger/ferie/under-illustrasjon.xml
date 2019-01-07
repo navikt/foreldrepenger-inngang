@@ -1,0 +1,22 @@
+<innhold>
+    <lesmer intro="Ferie som gir rett til å utsette">
+        <avsnitt>Du kan utsette foreldrepengene dine med:</avsnitt>
+        <liste>
+            <punkt>ferie inntil fire uker og én dag for hvert år</punkt>
+            <punkt>ferie fra i fjor</punkt>
+            <punkt>inntil ti feriedager på forskudd fra neste år</punkt>
+        </liste>
+    </lesmer>
+    <lesmer intro="Slik går du frem for å utsette når du har ferie">
+        <liste>
+            <punkt>Avtal med <b>arbeidsgiveren</b> din når du skal ta ut ferien.</punkt>
+            <punkt>Arbeidsgiveren din bekrefter ferien i <lenke url="https://www.nav.no/inntektsmelding" ekstern="true">inntektsmeldingen</lenke> som de skal sende til NAV.</punkt>
+            <punkt>I <b>foreldrepengesøknaden</b> oppgir du at du skal <b>utsette</b> perioden fordi du skal på ferie.</punkt>
+            <punkt>Hvis du ikke vet tidspunktet for ferien når du søker, kan du senere logge inn på <lenke url="https://foreldrepenger.nav.no/" ekstern="true">Dine foreldrepenger</lenke> og sende en endringssøknad.</punkt>
+        </liste>
+        <avsnitt><b>Søkefrist</b>: Du må søke <b>før</b> ferien din starter.</avsnitt>
+    </lesmer>
+    <avsnitt type="element">Feriepenger av foreldrepenger</avsnitt>
+    <avsnitt>Hvis du er arbeidstaker har du rett til feriepenger av foreldrepenger. Hvis arbeidsgiveren betaler lønn under permisjonen, utbetales feriepengene til arbeidsgiveren. </avsnitt>
+    <avsnitt>Feriepengene utgjør 10,2 prosent av det som er utbetalt de første 12 eller 15 ukene av foreldrepengeperioden, før skatt. </avsnitt>
+</innhold>

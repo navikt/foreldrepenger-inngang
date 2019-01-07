@@ -1,14 +1,12 @@
 import * as React from 'react';
-
 import { injectIntl, InjectedIntlProps } from 'react-intl';
 import BEMHelper from '../../../utils/bem';
 import Ferieforskyvning from './Ferieforskyvning';
 import FerieforskyvningMobil from './FerieforskyvningMobil';
 import getTranslation from 'app/utils/i18nUtils';
-import LesMer from '../../../components/les-mer/LesMer';
+import Innhold, { getSource } from 'app/utils/innhold/Innhold';
 import MediaQuery from 'react-responsive';
 import PanelMedIllustrasjon from '../../../components/panel-med-illustrasjon/PanelMedIllustrasjon';
-import Innhold, { getSource } from 'app/utils/innhold/Innhold';
 import TypografiBase from 'nav-frontend-typografi';
 import './ferie.less';
 
@@ -16,9 +14,7 @@ const cls = BEMHelper('ferie');
 
 const ferieSvg = require('../../../assets/ark/ark-ferie.svg').default;
 const content = 'om-foreldrepenger/ferie/ferie';
-const rettTilUtsettelseContent = 'om-foreldrepenger/ferie/rett-til-utsettelse';
-const fåUtsettelseContent = 'om-foreldrepenger/ferie/få-utsettelse';
-const feriepenger = 'om-foreldrepenger/ferie/feriepenger';
+const underIllustrasjonContent = 'om-foreldrepenger/ferie/under-illustrasjon';
 
 interface Props {
     id: string;
@@ -42,13 +38,7 @@ const Ferie: React.StatelessComponent<Props & InjectedIntlProps> = ({ id, intl }
                     <FerieforskyvningMobil />
                 </MediaQuery>
             </div>
-            <LesMer intro={getTranslation('om_foreldrepenger.ferie.rett_til_utsettelse', intl)}>
-                <Innhold source={getSource(rettTilUtsettelseContent, intl)} />
-            </LesMer>
-            <LesMer intro={getTranslation('om_foreldrepenger.ferie.utsette', intl)}>
-                <Innhold source={getSource(fåUtsettelseContent, intl)} />
-            </LesMer>
-            <Innhold source={getSource(feriepenger, intl)} />
+            <Innhold source={getSource(underIllustrasjonContent, intl)} />
         </PanelMedIllustrasjon>
     );
 };

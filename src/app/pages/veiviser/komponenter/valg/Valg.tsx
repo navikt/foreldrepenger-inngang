@@ -824,15 +824,7 @@ class Valg extends React.Component<Props, State> {
     render = () => (
         <div className={cls.className}>
             <div className={cls.element('ingress')}>
-                <Innhold source={getSource('veiviser/header/header', this.props.intl)} />
-                <UtvidetInformasjon
-                    apneLabel={getTranslation('veiviser.valg.hjelpetekst.ingress', this.props.intl)}
-                    lukkLabel={getTranslation('veiviser.valg.hjelpetekst.lukk', this.props.intl)}>
-                    <Innhold
-                        source={getSource('veiviser/infobox/ingress', this.props.intl)}
-                    />
-                </UtvidetInformasjon>
-                <Innhold source={getSource('veiviser/header/header2', this.props.intl)} />
+                <Innhold source={getSource('veiviser/introduksjon', this.props.intl)} />
             </div>
             <div className={cls.element('forelder')}>
                 <div className={cls.element('ingress-knapp')}>

@@ -5,6 +5,7 @@ import WithLink from 'app/components/with-link/WithLink';
 import './innhold.less';
 
 import BEMHelper from '../bem';
+import UtvidetInformasjon from 'app/pages/kalkulator/utvidetinformasjon/UtvidetInformasjon';
 
 const cls = BEMHelper('innhold');
 
@@ -43,9 +44,19 @@ export const Lenke = (props: { url: string; ekstern: string; children: React.Rea
     <WithLink addExternalIcon={!!props.ekstern} urlIsExternal={!!props.ekstern} {...props} />
 );
 
-export const LesMerPanel = (props: { intro: string; children: React.ReactNode }) => (
-    <LesMer intro={props.intro} children={props.children} />
-);
+export const LesMerPanel = (props: {
+    liten?: string;
+    intro: string;
+    children: React.ReactNode;
+}) => {
+    const { liten, intro, children } = props;
+
+    return liten ? (
+        <UtvidetInformasjon apneLabel={intro} children={children} />
+    ) : (
+        <LesMer intro={intro} children={children} />
+    );
+};
 
 export const Liste = (props: { type?: TypografiType; tag?: string; children: React.ReactNode }) => (
     <TypografiBase type={props.type || 'normaltekst'} {...props} tag={props.tag || 'ul'} />

@@ -1,13 +1,12 @@
 import * as React from 'react';
-import { Definisjoner } from 'app/utils/strukturertTekst';
+import { injectIntl, InjectedIntlProps } from 'react-intl';
+import { ValueMap } from 'app/utils/innhold/Node';
 import Innhold, { getSource } from 'app/utils/innhold/Innhold';
 
-import { injectIntl, InjectedIntlProps } from 'react-intl';
-
 interface OwnProps {
-    avviksvariabler?: Definisjoner;
-    utbetalingsgrensevariabler?: Definisjoner;
-    forLavLønnvariabler?: Definisjoner;
+    avviksvariabler?: ValueMap;
+    utbetalingsgrensevariabler?: ValueMap;
+    forLavLønnvariabler?: ValueMap;
 }
 
 type Props = OwnProps & InjectedIntlProps;
