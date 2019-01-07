@@ -1,10 +1,10 @@
 import * as React from 'react';
-import { getContent } from '../../../utils/getContent';
+
 import { injectIntl, InjectedIntlProps } from 'react-intl';
 import BEMHelper from '../../../utils/bem';
 import LesMer from '../../../components/les-mer/LesMer';
 import PanelMedIllustrasjon from '../../../components/panel-med-illustrasjon/PanelMedIllustrasjon';
-import StrukturertTekst from '../../../components/strukturert-tekst/StrukturertTekst';
+import Innhold, { getSource } from 'app/utils/innhold/Innhold';
 import './hjemmeSamtidig.less';
 import getTranslation from 'app/utils/i18nUtils';
 
@@ -27,22 +27,22 @@ const HjemmeSamtidig: React.StatelessComponent<Props & InjectedIntlProps> = ({ i
             id={id}
             title={getTranslation('om_foreldrepenger.hjemme_samtidig.tittel', intl)}
             svg={hjemmeSamtidigSvg}>
-            <StrukturertTekst tekst={getContent(ingress, intl)} />
+            <Innhold source={getSource(ingress, intl)} />
             <LesMer
                 intro={getTranslation('om_foreldrepenger.hjemme_samtidig.enHjemmeFulltid', intl)}>
-                <StrukturertTekst tekst={getContent(hjemmeFulltid, intl)} />
+                <Innhold source={getSource(hjemmeFulltid, intl)} />
             </LesMer>
 
             <LesMer intro={getTranslation('om_foreldrepenger.hjemme_samtidig.delePaHjemme', intl)}>
-                <StrukturertTekst tekst={getContent(delePaHjemme, intl)} />
+                <Innhold source={getSource(delePaHjemme, intl)} />
             </LesMer>
 
             <LesMer intro={getTranslation('om_foreldrepenger.hjemme_samtidig.farTvillinger', intl)}>
-                <StrukturertTekst tekst={getContent(narFarTvillinger, intl)} />
+                <Innhold source={getSource(narFarTvillinger, intl)} />
             </LesMer>
 
             <LesMer intro={getTranslation('om_foreldrepenger.hjemme_samtidig.permisjon', intl)}>
-                <StrukturertTekst tekst={getContent(permisjonVedFodsel, intl)} />
+                <Innhold source={getSource(permisjonVedFodsel, intl)} />
             </LesMer>
         </PanelMedIllustrasjon>
     );

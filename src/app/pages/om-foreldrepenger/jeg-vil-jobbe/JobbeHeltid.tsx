@@ -1,8 +1,8 @@
 import React from 'react';
 import { InjectedIntlProps, injectIntl } from 'react-intl';
 import LesMer from '../../../components/les-mer/LesMer';
-import StrukturertTekst from '../../../components/strukturert-tekst/StrukturertTekst';
-import { getContent } from '../../../utils/getContent';
+import Innhold, { getSource } from 'app/utils/innhold/Innhold';
+
 import BEMHelper from '../../../utils/bem';
 import { JegVilJobbeHeltid } from './komponenter/JegVilJobbeHeltid';
 import MediaQuery from 'react-responsive';
@@ -15,8 +15,8 @@ const cls = BEMHelper('jegVilJobbe');
 const JobbeHeltid: React.StatelessComponent<InjectedIntlProps> = ({ intl }) => {
     return (
         <div className={cls.element('jobbeHeltid')}>
-            <StrukturertTekst
-                tekst={getContent('om-foreldrepenger/jeg-vil-jobbe/heltid-fane-header', intl)}
+            <Innhold
+                source={getSource('om-foreldrepenger/jeg-vil-jobbe/heltid-fane-header', intl)}
             />
             <div className={cls.element('jobbeHeltid-icon')}>
                 <MediaQuery minWidth={576}>
@@ -28,11 +28,11 @@ const JobbeHeltid: React.StatelessComponent<InjectedIntlProps> = ({ intl }) => {
             </div>
             <div className={cls.element('firstDropdown')}>
                 <LesMer intro={getTranslation('om_foreldrepenger.jobbe.heltidsjobb', intl)}>
-                    <StrukturertTekst tekst={getContent(firstPanelContent, intl)} />
+                    <Innhold source={getSource(firstPanelContent, intl)} />
                 </LesMer>
             </div>
             <LesMer intro={getTranslation('om_foreldrepenger.jobbe.deltidsjobb', intl)}>
-                <StrukturertTekst tekst={getContent(secondPanelContent, intl)} />
+                <Innhold source={getSource(secondPanelContent, intl)} />
             </LesMer>
         </div>
     );

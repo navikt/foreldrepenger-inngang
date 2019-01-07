@@ -2,8 +2,8 @@ import React from 'react';
 import BEMHelper from '../../../../utils/bem';
 import { injectIntl, InjectedIntlProps, InjectedIntl } from 'react-intl';
 import TypografiBase from 'nav-frontend-typografi';
-import StrukturertTekst from '../../../../components/strukturert-tekst/StrukturertTekst';
-import { getContent } from '../../../../utils/getContent';
+import Innhold, { getSource } from 'app/utils/innhold/Innhold';
+
 import { RadioPanel, Input } from 'nav-frontend-skjema';
 import Tabs from 'nav-frontend-tabs';
 import { FlexibleSvg } from '../../../../utils/CustomSVG';
@@ -240,7 +240,7 @@ class Valg extends React.Component<Props, State> {
                 <UtvidetInformasjon
                     apneLabel={getTranslation(aapneLabel, this.props.intl)}
                     lukkLabel={getTranslation(lukeLabel, this.props.intl)}>
-                    <StrukturertTekst tekst={getContent(jsonContentPath, this.props.intl)} />
+                    <Innhold source={getSource(jsonContentPath, this.props.intl)} />
                 </UtvidetInformasjon>
             </div>
         );
@@ -824,15 +824,15 @@ class Valg extends React.Component<Props, State> {
     render = () => (
         <div className={cls.className}>
             <div className={cls.element('ingress')}>
-                <StrukturertTekst tekst={getContent('veiviser/header/header', this.props.intl)} />
+                <Innhold source={getSource('veiviser/header/header', this.props.intl)} />
                 <UtvidetInformasjon
                     apneLabel={getTranslation('veiviser.valg.hjelpetekst.ingress', this.props.intl)}
                     lukkLabel={getTranslation('veiviser.valg.hjelpetekst.lukk', this.props.intl)}>
-                    <StrukturertTekst
-                        tekst={getContent('veiviser/infobox/ingress', this.props.intl)}
+                    <Innhold
+                        source={getSource('veiviser/infobox/ingress', this.props.intl)}
                     />
                 </UtvidetInformasjon>
-                <StrukturertTekst tekst={getContent('veiviser/header/header2', this.props.intl)} />
+                <Innhold source={getSource('veiviser/header/header2', this.props.intl)} />
             </div>
             <div className={cls.element('forelder')}>
                 <div className={cls.element('ingress-knapp')}>

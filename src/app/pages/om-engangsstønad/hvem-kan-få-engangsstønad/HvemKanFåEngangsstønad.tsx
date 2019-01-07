@@ -1,12 +1,11 @@
 import * as React from 'react';
-import { getContent } from 'app/utils/getContent';
 import { injectIntl, InjectedIntlProps } from 'react-intl';
 import BEMHelper from 'app/utils/bem';
 import CustomSVGFromSprite from 'app/utils/CustomSVG';
-import PanelMedIllustrasjon from 'app/components/panel-med-illustrasjon/PanelMedIllustrasjon';
-import StrukturertTekst from 'app/components/strukturert-tekst/StrukturertTekst';
-import './hvemKanFåEngangsstønad.less';
 import getTranslation from 'app/utils/i18nUtils';
+import Innhold, { getSource } from 'app/utils/innhold/Innhold';
+import PanelMedIllustrasjon from 'app/components/panel-med-illustrasjon/PanelMedIllustrasjon';
+import './hvemKanFåEngangsstønad.less';
 
 const cls = BEMHelper('hvemKanFåEngangsstønad');
 const engangsstønadSvg = require('../../../assets/engangsstønad.svg').default;
@@ -21,15 +20,15 @@ const HvemKanFåEngangsstønad: React.StatelessComponent<InjectedIntlProps> = ({
         id={'hvem-kan-fa-engangsstonad'}
         title={getTranslation('om_engangsstønad.hva_er.tittel', intl)}
         svg={engangsstønadSvg}>
-        <StrukturertTekst tekst={getContent(hvaErEngangsstønadContent, intl)} />
+        <Innhold source={getSource(hvaErEngangsstønadContent, intl)} values={{ TALL: '42' }} />
         <div className={cls.element('kravContainer')}>
             <div className={cls.element('krav')}>
                 <CustomSVGFromSprite iconRef={checkmarkIcon} size={24} />
-                <StrukturertTekst tekst={getContent(engangssumContent, intl)} />
+                <Innhold source={getSource(engangssumContent, intl)} />
             </div>
             <div className={cls.element('krav')}>
                 <CustomSVGFromSprite iconRef={checkmarkIcon} size={24} />
-                <StrukturertTekst tekst={getContent(utbetalingShortContent, intl)} />
+                <Innhold source={getSource(utbetalingShortContent, intl)} />
             </div>
         </div>
     </PanelMedIllustrasjon>

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { getContent } from '../../../utils/getContent';
+
 import { injectIntl, InjectedIntlProps } from 'react-intl';
 import BEMHelper from '../../../utils/bem';
 import Ferieforskyvning from './Ferieforskyvning';
@@ -8,7 +8,7 @@ import getTranslation from 'app/utils/i18nUtils';
 import LesMer from '../../../components/les-mer/LesMer';
 import MediaQuery from 'react-responsive';
 import PanelMedIllustrasjon from '../../../components/panel-med-illustrasjon/PanelMedIllustrasjon';
-import StrukturertTekst from '../../../components/strukturert-tekst/StrukturertTekst';
+import Innhold, { getSource } from 'app/utils/innhold/Innhold';
 import TypografiBase from 'nav-frontend-typografi';
 import './ferie.less';
 
@@ -30,7 +30,7 @@ const Ferie: React.StatelessComponent<Props & InjectedIntlProps> = ({ id, intl }
             id={id}
             svg={ferieSvg}
             title={getTranslation('om_foreldrepenger.ferie.tittel', intl)}>
-            <StrukturertTekst tekst={getContent(content, intl)} />
+            <Innhold source={getSource(content, intl)} />
             <div className={cls.element('eksempel')}>
                 <TypografiBase type="normaltekst">
                     {getTranslation('om_foreldrepenger.ferie.eksempel_label', intl)}
@@ -43,12 +43,12 @@ const Ferie: React.StatelessComponent<Props & InjectedIntlProps> = ({ id, intl }
                 </MediaQuery>
             </div>
             <LesMer intro={getTranslation('om_foreldrepenger.ferie.rett_til_utsettelse', intl)}>
-                <StrukturertTekst tekst={getContent(rettTilUtsettelseContent, intl)} />
+                <Innhold source={getSource(rettTilUtsettelseContent, intl)} />
             </LesMer>
             <LesMer intro={getTranslation('om_foreldrepenger.ferie.utsette', intl)}>
-                <StrukturertTekst tekst={getContent(fåUtsettelseContent, intl)} />
+                <Innhold source={getSource(fåUtsettelseContent, intl)} />
             </LesMer>
-            <StrukturertTekst tekst={getContent(feriepenger, intl)} />
+            <Innhold source={getSource(feriepenger, intl)} />
         </PanelMedIllustrasjon>
     );
 };

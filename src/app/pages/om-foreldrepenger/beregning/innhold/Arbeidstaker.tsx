@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { injectIntl, InjectedIntlProps } from 'react-intl';
-import StrukturertTekst from '../../../../components/strukturert-tekst/StrukturertTekst';
-import { getContent } from '../../../../utils/getContent';
+import Innhold, { getSource } from 'app/utils/innhold/Innhold';
+
 import LesMer from 'app/components/les-mer/LesMer';
 import getTranslation from 'app/utils/i18nUtils';
 
@@ -13,27 +13,27 @@ const dagerUtenArbeid = 'om-foreldrepenger/beregning/arbeidstaker-dager-uten-arb
 const Arbeidstaker: React.StatelessComponent<InjectedIntlProps> = ({ intl }) => {
     return (
         <div>
-            <StrukturertTekst tekst={getContent(beregningTekstPath, intl)} />
+            <Innhold source={getSource(beregningTekstPath, intl)} />
             <LesMer
                 intro={getTranslation(
                     'om_foreldrepenger.beregning.arbeidstaker.inntekter_som_tas_med',
                     intl
                 )}>
-                <StrukturertTekst tekst={getContent(arbeidstakerTasMed, intl)} />
+                <Innhold source={getSource(arbeidstakerTasMed, intl)} />
             </LesMer>
             <LesMer
                 intro={getTranslation(
                     'om_foreldrepenger.beregning.arbeidstaker.inntekter_som_ikke_tas_med',
                     intl
                 )}>
-                <StrukturertTekst tekst={getContent(arbeidstakerTasIkkeMed, intl)} />
+                <Innhold source={getSource(arbeidstakerTasIkkeMed, intl)} />
             </LesMer>
             <LesMer
                 intro={getTranslation(
                     'om_foreldrepenger.beregning.arbeidstaker.dager_uten_arbeid',
                     intl
                 )}>
-                <StrukturertTekst tekst={getContent(dagerUtenArbeid, intl)} />
+                <Innhold source={getSource(dagerUtenArbeid, intl)} />
             </LesMer>
         </div>
     );

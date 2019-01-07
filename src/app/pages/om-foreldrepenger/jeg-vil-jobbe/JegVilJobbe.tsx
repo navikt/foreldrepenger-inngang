@@ -1,9 +1,9 @@
 import PanelMedIllustrasjon from '../../../components/panel-med-illustrasjon/PanelMedIllustrasjon';
 import { injectIntl, InjectedIntlProps } from 'react-intl';
-import StrukturertTekst from '../../../components/strukturert-tekst/StrukturertTekst';
+import Innhold, { getSource } from 'app/utils/innhold/Innhold';
 import BEMHelper from '../../../utils/bem';
 import './jegVilJobbe.less';
-import { getContent } from '../../../utils/getContent';
+
 import Tabs from 'nav-frontend-tabs';
 import JobbeHeltid from './JobbeHeltid';
 import JobbeDelvis from './JobbeDelvis';
@@ -53,7 +53,7 @@ class JegVilJobbe extends React.Component<Props> {
             className={cls.className}
             title={getTranslation('om_foreldrepenger.jobbe.tittel', this.props.intl)}
             svg={jobbeSvg}>
-            <StrukturertTekst tekst={getContent(content, this.props.intl)} />
+            <Innhold source={getSource(content, this.props.intl)} />
             <Tabs
                 kompakt={true}
                 defaultAktiv={0}

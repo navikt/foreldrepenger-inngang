@@ -1,12 +1,12 @@
 import * as React from 'react';
-import { getContent } from '../../utils/getContent';
+
 import { injectIntl, InjectedIntlProps } from 'react-intl';
 import BEMHelper from '../../utils/bem';
 import Breadcrumbs from '../../components/breadcrumbs/Breadcrumbs';
 import getTranslation from 'app/utils/i18nUtils';
 import PanelMedIllustrasjon from '../../components/panel-med-illustrasjon/PanelMedIllustrasjon';
 import Sidebanner from '../../components/sidebanner/Sidebanner';
-import StrukturertTekst from '../../components/strukturert-tekst/StrukturertTekst';
+import Innhold, { getSource } from 'app/utils/innhold/Innhold';
 
 interface Props {
     location: any;
@@ -31,8 +31,8 @@ const NyeBeregningsregler: React.StatelessComponent<Props & InjectedIntlProps> =
                             intl
                         )}
                         svg={headerSvg}>
-                        <StrukturertTekst
-                            tekst={getContent(
+                        <Innhold
+                            source={getSource(
                                 'om-foreldrepenger/nye-beregningsregler/nye-beregningsregler',
                                 intl
                             )}

@@ -2,8 +2,8 @@ import React from 'react';
 import BEMHelper from '../../../../utils/bem';
 import { FlexibleSvg } from '../../../../utils/CustomSVG';
 import './header.less';
-import StrukturertTekst from '../../../../components/strukturert-tekst/StrukturertTekst';
-import { getContent } from '../../../../utils/getContent';
+import Innhold, { getSource } from 'app/utils/innhold/Innhold';
+
 import { injectIntl, InjectedIntl } from 'react-intl';
 
 const svg = require('./Sign.svg').default;
@@ -21,7 +21,7 @@ const Header = ({ intl }: { intl: InjectedIntl }) => {
                 height={70}
             />
             <div className={cls.element('komponent-header-txt')}>
-                <StrukturertTekst tekst={getContent(headerTXT, intl)} />
+                <Innhold source={getSource(headerTXT, intl)} />
             </div>
         </div>
     );

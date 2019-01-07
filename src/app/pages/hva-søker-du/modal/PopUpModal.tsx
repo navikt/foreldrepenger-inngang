@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import { getContent } from '../../../utils/getContent';
+
 import { injectIntl, InjectedIntlProps } from 'react-intl';
 import BEMHelper from '../../../utils/bem';
 import getTranslation from 'app/utils/i18nUtils';
 import Lenke from 'nav-frontend-lenker';
 import Lukknapp from 'nav-frontend-lukknapp';
 import Modal from 'nav-frontend-modal';
-import StrukturertTekst from '../../../components/strukturert-tekst/StrukturertTekst';
+import Innhold, { getSource } from 'app/utils/innhold/Innhold';
 import TypografiBase from 'nav-frontend-typografi';
 import './popUpModal.less';
 
@@ -66,8 +66,8 @@ class PopUpModal extends Component<Props> {
                         <div className={cls.element('knapp')}>
                             <Lukknapp onClick={this.closeModal} />
                         </div>
-                        <StrukturertTekst
-                            tekst={getContent('hva-søker-du/engangsstonad-modal', this.props.intl)}
+                        <Innhold
+                            source={getSource('hva-søker-du/engangsstonad-modal', this.props.intl)}
                         />
                     </div>
                 </Modal>

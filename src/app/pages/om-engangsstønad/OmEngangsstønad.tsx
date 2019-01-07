@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { ENGANGSSUM_PER_BARN } from 'app/utils/beregningUtils';
-import { getContent } from 'app/utils/getContent';
+
 import { injectIntl, InjectedIntlProps } from 'react-intl';
 import BEMHelper from '../../utils/bem';
 import Breadcrumbs from '../../components/breadcrumbs/Breadcrumbs';
@@ -17,6 +17,7 @@ import NårKanDuSøke from './når-kan-du-søke/NårKanDuSøke';
 import Sidebanner from '../../components/sidebanner/Sidebanner';
 import TilFarEllerMedmor from './TilFarEllerMedmor';
 import '../infosider/infosider.less';
+import { getSource } from 'app/utils/innhold/Innhold';
 
 const infosiderCls = BEMHelper('infosider');
 
@@ -60,8 +61,8 @@ const OmEngangsstonad: React.StatelessComponent<Props & InjectedIntlProps> = ({
                 <article className={infosiderCls.element('article')}>
                     <Breadcrumbs path={location.pathname} />
                     <Informasjonsbanner
-                        tekst={getContent('om-engangsstønad/nye-regler-fra-2019', intl)}
-                        definisjoner={{
+                        source={getSource('om-engangsstønad/nye-regler-fra-2019', intl)}
+                        values={{
                             engangssum: ENGANGSSUM_PER_BARN.toLocaleString(intl.locale)
                         }}
                     />

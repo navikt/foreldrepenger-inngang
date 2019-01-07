@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { FrilanserIkon } from './ikoner/FrilanserIkon';
-import { getContent } from '../../../utils/getContent';
+
 import { getGrunnbeløpet } from 'app/utils/beregningUtils';
 import { injectIntl, InjectedIntlProps } from 'react-intl';
 import { Innholdsfane } from '../../../components/innholdsfaner/fane/Fane';
@@ -16,7 +16,7 @@ import PanelMedIllustrasjon from '../../../components/panel-med-illustrasjon/Pan
 import PoliceOfficerIkon from './ikoner/PoliceOfficerIkon';
 import Selvstendig from './innhold/Selvstendig';
 import SelvstendigIkon from './ikoner/SelvstendigIkon';
-import StrukturertTekst from '../../../components/strukturert-tekst/StrukturertTekst';
+import Innhold, { getSource } from 'app/utils/innhold/Innhold';
 import YtelseFraNavIkon from './ikoner/YtelseFraNavIkon';
 import './beregning.less';
 
@@ -62,9 +62,9 @@ const Beregning: React.StatelessComponent<Props & InjectedIntlProps> = ({ id, in
             id={id}
             title={getTranslation('om_foreldrepenger.beregning.tittel', intl)}
             svg={beregningSvg}>
-            <StrukturertTekst
-                tekst={getContent('om-foreldrepenger/beregning/beregning', intl)}
-                definisjoner={{
+            <Innhold
+                source={getSource('om-foreldrepenger/beregning/beregning', intl)}
+                values={{
                     seksG: (getGrunnbeløpet() * 6).toLocaleString(intl.locale)
                 }}
             />

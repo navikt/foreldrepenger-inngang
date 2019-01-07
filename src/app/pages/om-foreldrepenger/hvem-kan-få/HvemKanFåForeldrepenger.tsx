@@ -1,13 +1,12 @@
 import * as React from 'react';
-import { Avsnitt } from '../../../utils/strukturertTekst';
 import { detErJul } from 'app/utils/datoUtils';
-import { getContent } from '../../../utils/getContent';
+
 import { injectIntl, InjectedIntlProps } from 'react-intl';
 import BEMHelper from '../../../utils/bem';
 import CustomSVG from '../../../utils/CustomSVG';
 import getTranslation from 'app/utils/i18nUtils';
 import PanelMedIllustrasjon from '../../../components/panel-med-illustrasjon/PanelMedIllustrasjon';
-import StrukturertTekst from '../../../components/strukturert-tekst/StrukturertTekst';
+import Innhold, { getSource } from 'app/utils/innhold/Innhold';
 import SvgMask from 'app/components/svg-mask/SvgMask';
 import './hvemKanFåForeldrepenger.less';
 
@@ -38,24 +37,22 @@ const HvemKanFåForeldrepenger: React.StatelessComponent<Props & InjectedIntlPro
             title={getTranslation('om_foreldrepenger.for_å_få.tittel', intl)}
             svg={<SvgMask svg={foreldrepengerSvg} anchorToBottom={true} />}>
             <div className={cls.element('alignLeft')}>
-                <StrukturertTekst
-                    tekst={getContent('om-foreldrepenger/hvem-kan-få/ingress', intl)}
-                />
+                <Innhold source={getSource('om-foreldrepenger/hvem-kan-få/ingress', intl)} />
             </div>
             <div className={cls.element('kravTilForeldrepenger')}>
                 {kravTilForeldrepenger.map((krav) => (
-                    <KravTilForeldrepenger key={krav} ingress={getContent(krav, intl)} />
+                    <KravTilForeldrepenger key={krav} ingress={getSource(krav, intl)} />
                 ))}
             </div>
         </PanelMedIllustrasjon>
     );
 };
 
-const KravTilForeldrepenger = ({ ingress }: { ingress: Avsnitt[] }) => {
+const KravTilForeldrepenger = ({ ingress }: { ingress: string }) => {
     return (
         <div className={cls.element('krav')}>
             <CustomSVG iconRef={checkmarkIcon} size={24} />
-            <StrukturertTekst tekst={ingress} />
+            <Innhold source={ingress} />
         </div>
     );
 };

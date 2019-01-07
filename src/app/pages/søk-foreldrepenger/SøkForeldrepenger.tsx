@@ -11,8 +11,8 @@ import VeilederMessage from './Veiledermelding';
 import Datovelger from './Datovelger';
 import MediaQuery from 'react-responsive';
 import Sidebanner from 'app/components/sidebanner/Sidebanner';
-import StrukturertTekst from 'app/components/strukturert-tekst/StrukturertTekst';
-import { getContent } from 'app/utils/getContent';
+import Innhold, { getSource } from 'app/utils/innhold/Innhold';
+
 import HeaderInformasjon from '../../components/header-informasjon/HeaderInformasjon';
 import Environment from 'app/Environment';
 import './søkForeldrepenger.less';
@@ -53,8 +53,8 @@ class SøkForeldrepenger extends Component<Props & InjectedIntlProps> {
                         <Breadcrumbs path={location.pathname} />
                         <SvgBanner />
                         <PanelMedTittel title={getTranslation('foreldrepenger', this.props.intl)}>
-                            <StrukturertTekst
-                                tekst={getContent(
+                            <Innhold
+                                source={getSource(
                                     'hva-søker-du/søk-foreldrepenger',
                                     this.props.intl
                                 )}

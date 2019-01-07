@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { InjectedIntlProps, injectIntl } from 'react-intl';
 import LesMer from '../../../components/les-mer/LesMer';
-import StrukturertTekst from '../../../components/strukturert-tekst/StrukturertTekst';
-import { getContent } from '../../../utils/getContent';
+import Innhold, { getSource } from 'app/utils/innhold/Innhold';
+
 import BEMHelper from '../../../utils/bem';
 import { JegVilJobbeDeltid } from './komponenter/JegVilJobbeDeltid';
 import { JegVilJobbeDeltidExpandert } from './komponenter/JegVilJobbeDeltidExpandert';
@@ -86,8 +86,8 @@ class JobbeDelvis extends React.Component<InjectedIntlProps> {
     render = () => (
         <div className={cls.element('jobbeDelvis')}>
             <div className={cls.element('illustrasjon')}>
-                <StrukturertTekst
-                    tekst={getContent(
+                <Innhold
+                    source={getSource(
                         'om-foreldrepenger/jeg-vil-jobbe/deltid-fane',
                         this.props.intl
                     )}
@@ -119,11 +119,11 @@ class JobbeDelvis extends React.Component<InjectedIntlProps> {
             <div className={cls.element('firstDropdown')}>
                 <LesMer
                     intro={getTranslation('om_foreldrepenger.jobbe.heltidsjobb', this.props.intl)}>
-                    <StrukturertTekst tekst={getContent(firstPanelContent, this.props.intl)} />
+                    <Innhold source={getSource(firstPanelContent, this.props.intl)} />
                 </LesMer>
             </div>
             <LesMer intro={getTranslation('om_foreldrepenger.jobbe.deltidsjobb', this.props.intl)}>
-                <StrukturertTekst tekst={getContent(secondPanelContent, this.props.intl)} />
+                <Innhold source={getSource(secondPanelContent, this.props.intl)} />
             </LesMer>
         </div>
     );

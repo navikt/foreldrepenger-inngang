@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Definisjoner } from 'app/utils/strukturertTekst';
-import StrukturertTekst from 'app/components/strukturert-tekst/StrukturertTekst';
-import { getContent } from 'app/utils/getContent';
+import Innhold, { getSource } from 'app/utils/innhold/Innhold';
+
 import { injectIntl, InjectedIntlProps } from 'react-intl';
 
 interface OwnProps {
@@ -21,21 +21,21 @@ const Veiledermelding = ({
     return (
         <div>
             {avviksvariabler && (
-                <StrukturertTekst
-                    tekst={getContent('kalkulator/advarsel-avviksgrense', intl)}
-                    definisjoner={avviksvariabler}
+                <Innhold
+                    source={getSource('kalkulator/advarsel-avviksgrense', intl)}
+                    values={avviksvariabler}
                 />
             )}
             {forLavLønnvariabler && (
-                <StrukturertTekst
-                    tekst={getContent('kalkulator/advarsel-lav-lønn', intl)}
-                    definisjoner={forLavLønnvariabler}
+                <Innhold
+                    source={getSource('kalkulator/advarsel-lav-lønn', intl)}
+                    values={forLavLønnvariabler}
                 />
             )}
             {utbetalingsgrensevariabler && (
-                <StrukturertTekst
-                    tekst={getContent('kalkulator/advarsel-utbetalingsgrense', intl)}
-                    definisjoner={utbetalingsgrensevariabler}
+                <Innhold
+                    source={getSource('kalkulator/advarsel-utbetalingsgrense', intl)}
+                    values={utbetalingsgrensevariabler}
                 />
             )}
         </div>

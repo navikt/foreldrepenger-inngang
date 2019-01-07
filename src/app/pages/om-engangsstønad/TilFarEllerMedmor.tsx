@@ -1,9 +1,9 @@
 import * as React from 'react';
-import { getContent } from 'app/utils/getContent';
+
 import { injectIntl, InjectedIntlProps } from 'react-intl';
 import getTranslation from 'app/utils/i18nUtils';
 import PanelMedIllustrasjon from 'app/components/panel-med-illustrasjon/PanelMedIllustrasjon';
-import StrukturertTekst from 'app/components/strukturert-tekst/StrukturertTekst';
+import Innhold, { getSource } from 'app/utils/innhold/Innhold';
 
 const farSvg = require('../../assets/ark/ark-far-og-medmor.svg').default;
 
@@ -19,7 +19,7 @@ const TilFarEllerMedmor: React.StatelessComponent<InjectedIntlProps & OwnProps> 
         id={id}
         title={getTranslation('om_engangsstønad.til_far.tittel', intl)}
         svg={farSvg}>
-        <StrukturertTekst tekst={getContent('om-engangsstønad/til-far', intl)} />
+        <Innhold source={getSource('om-engangsstønad/til-far', intl)} />
     </PanelMedIllustrasjon>
 );
 

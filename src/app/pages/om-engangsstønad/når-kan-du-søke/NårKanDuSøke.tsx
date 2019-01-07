@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { FlexibleSvg } from 'app/utils/CustomSVG';
-import { getContent } from 'app/utils/getContent';
+
 import { injectIntl, InjectedIntlProps } from 'react-intl';
 import BEMHelper from '../../../utils/bem';
 import Fact from 'app/components/facts-with-icon/Fact';
@@ -8,7 +8,7 @@ import FactsWithIcon from 'app/components/facts-with-icon/FactsWithIcon';
 import Foreldrepar from 'app/components/foreldrepar/Foreldrepar';
 import getTranslation from 'app/utils/i18nUtils';
 import PanelMedIllustrasjon from '../../../components/panel-med-illustrasjon/PanelMedIllustrasjon';
-import StrukturertTekst from 'app/components/strukturert-tekst/StrukturertTekst';
+import Innhold, { getSource } from 'app/utils/innhold/Innhold';
 import './nårKanDuSøke.less';
 
 const iconSvg = require('../../../assets/ark/ark-frister.svg').default;
@@ -31,19 +31,19 @@ const NårKanDuSøke: React.StatelessComponent<Props> = ({ id, intl }) => (
         <FactsWithIcon>
             <Fact
                 icon={<FlexibleSvg width={40} height={40} iconRef={morSvg} />}
-                content={getContent('om-engangsstønad/når-kan-du-søke/når-kan-du-søke', intl)}
+                content={getSource('om-engangsstønad/når-kan-du-søke/når-kan-du-søke', intl)}
             />
             <Fact
                 icon={<Foreldrepar firstParent="far4" secondParent="medmor2" />}
-                content={getContent('om-engangsstønad/når-kan-du-søke/far-eller-medmor', intl)}
+                content={getSource('om-engangsstønad/når-kan-du-søke/far-eller-medmor', intl)}
             />
             <Fact
                 icon={<FlexibleSvg width={40} height={56} iconRef={adopsjonSvg} />}
-                content={getContent('om-engangsstønad/når-kan-du-søke/adopsjon', intl)}
+                content={getSource('om-engangsstønad/når-kan-du-søke/adopsjon', intl)}
             />
         </FactsWithIcon>
-        <StrukturertTekst
-            tekst={getContent('om-engangsstønad/når-kan-du-søke/hvordan-søker-du', intl)}
+        <Innhold
+            source={getSource('om-engangsstønad/når-kan-du-søke/hvordan-søker-du', intl)}
         />
     </PanelMedIllustrasjon>
 );
