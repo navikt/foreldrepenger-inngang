@@ -1,0 +1,12 @@
+<innhold>
+    <liste>
+        <punkt>I <b>foreldrepengesøknaden</b> oppgir du at du skal <b>utsette</b> en periode fordi du er syk eller innlagt.</punkt>
+        <punkt>Hvis du <b>allerede har søkt</b>, logger du på <lenke url="https://foreldrepenger.nav.no/" ekstern="true">Dine foreldrepenger</lenke> og sender en endringssøknad i isteden.</punkt>
+    </liste>
+    <avsnitt type="element">Dette må du legge ved søknaden</avsnitt>
+    <liste>
+        <punkt>Du er blitt <b>syk</b>: Legg ved en legeerklæring. Den må beskrive hvordan sykdommen gjør deg helt avhengig av hjelp til å ta deg av barnet, og hvor lenge sykdommen vil vare.</punkt>
+        <punkt>Du er <b>innlagt</b>: Legg ved dokumentasjon på innleggelsen fra helseinstitusjonen.</punkt>
+    </liste>
+    <avsnitt><b>Søkefrist</b>: Du må søke innen tre måneder.</avsnitt>
+</innhold>
