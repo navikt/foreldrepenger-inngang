@@ -28,7 +28,7 @@ const sykeOverta = 'om-foreldrepenger/sykdom/en-av-foreldrene-er-syke/overta';
 
 const BarnetErInnlagtWithoutIntl: React.StatelessComponent<InjectedIntlProps> = ({ intl }) => (
     <div>
-        <Innhold source={getSource(barnetErInnlagt, intl)} />
+        <Innhold className="blokk-m" source={getSource(barnetErInnlagt, intl)} />
         <div className={cls.element('eksempeltekst')}>
             <Normaltekst>
                 {getTranslation('om_foreldrepenger.sykdom.innlagt.eksempeltittel', intl)}
@@ -58,7 +58,7 @@ const BarnetErInnlagtWithoutIntl: React.StatelessComponent<InjectedIntlProps> = 
 
 const EnAvForeldreneErSykeWithoutIntl: React.StatelessComponent<InjectedIntlProps> = ({ intl }) => (
     <div>
-        <Innhold source={getSource(syke, intl)} />
+        <Innhold className="blokk-m" source={getSource(syke, intl)} />
         <div className={cls.element('eksempeltekst')}>
             <Normaltekst>
                 {getTranslation('om_foreldrepenger.sykdom.sykmeldt.eksempeltittel', intl)}

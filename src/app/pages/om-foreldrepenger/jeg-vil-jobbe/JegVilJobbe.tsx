@@ -1,5 +1,5 @@
 import PanelMedIllustrasjon from '../../../components/panel-med-illustrasjon/PanelMedIllustrasjon';
-import { injectIntl, InjectedIntlProps } from 'react-intl';
+import { InjectedIntlProps, injectIntl } from 'react-intl';
 import Innhold, { getSource } from 'app/utils/innhold/Innhold';
 import BEMHelper from '../../../utils/bem';
 import './jegVilJobbe.less';
@@ -53,7 +53,7 @@ class JegVilJobbe extends React.Component<Props> {
             className={cls.className}
             title={getTranslation('om_foreldrepenger.jobbe.tittel', this.props.intl)}
             svg={jobbeSvg}>
-            <Innhold source={getSource(content, this.props.intl)} />
+            <Innhold className="blokk-m" source={getSource(content, this.props.intl)} />
             <Tabs
                 kompakt={true}
                 defaultAktiv={0}
@@ -63,6 +63,12 @@ class JegVilJobbe extends React.Component<Props> {
                 onChange={this.updateContent}
             />
             {this.state.currentTab}
+            <Innhold
+                source={getSource(
+                    'om-foreldrepenger/jeg-vil-jobbe/slik-går-du-frem',
+                    this.props.intl
+                )}
+            />
         </PanelMedIllustrasjon>
     );
 }

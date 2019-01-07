@@ -130,8 +130,6 @@
 
     "dokumentasjon.banner": "Dokumentasjon som må legges ved",
     "dokumentasjon.tittel": "Dokumentasjon som må legges ved",
-    "dokumentasjon.arbeidsinntekt-eller-jobb-tittel": "Hvis du har hatt arbeidsinntekt eller er i jobb",
-    "dokumentasjon.termindato-selvstendig-tittel": "Du skal legge ved dokumentasjon på termindatoen din hvis du er gravid og ...",
 
     "hva_søker_du.tittel": "Hva vil du søke om?",
     "hva_søker_du.søk_foreldrepenger": "Gå til foreldrepengesøknaden",
@@ -226,8 +224,6 @@
     "om_foreldrepenger.menHvaHvis.hjemmeSamtidig": "hjemme samtidig",
 
     "om_foreldrepenger.jobbe.tittel": "Hvis du vil jobbe",
-    "om_foreldrepenger.jobbe.heltidsjobb": "Slik går du frem hvis du er arbeidstaker",
-    "om_foreldrepenger.jobbe.deltidsjobb": "Slik går du frem hvis du er selvstendig eller frilanser",
     "om_foreldrepenger.jobbe.fanetittel.jobbeHeltid": "Jobbe heltid (100 prosent)",
     "om_foreldrepenger.jobbe.fanetittel.jobbeDelvis": "Jobbe delvis",
     "om_foreldrepenger.jobbe.klikkForDetaljertInformasjon": "(klikk for detaljert informasjon)",

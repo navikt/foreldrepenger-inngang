@@ -1,17 +1,17 @@
 import * as React from 'react';
-import PanelMedIllustrasjon from '../../../components/panel-med-illustrasjon/PanelMedIllustrasjon';
-import { injectIntl, InjectedIntlProps, InjectedIntl } from 'react-intl';
-
-import { Undertittel } from 'nav-frontend-typografi';
-import FactsWithIcon from 'app/components/facts-with-icon/FactsWithIcon';
-import Fact from 'app/components/facts-with-icon/Fact';
-import BEMHelper from '../../../utils/bem';
-import './nårKanDuSøke.less';
-import Tabs from 'nav-frontend-tabs';
-import Innhold, { getSource } from 'app/utils/innhold/Innhold';
-import Foreldrepar from 'app/components/foreldrepar/Foreldrepar';
 import { FlexibleSvg } from 'app/utils/CustomSVG';
+import { injectIntl, InjectedIntlProps, InjectedIntl } from 'react-intl';
+import { Undertittel } from 'nav-frontend-typografi';
+import BEMHelper from '../../../utils/bem';
+import classnames from 'classnames';
+import Fact from 'app/components/facts-with-icon/Fact';
+import FactsWithIcon from 'app/components/facts-with-icon/FactsWithIcon';
+import Foreldrepar from 'app/components/foreldrepar/Foreldrepar';
 import getTranslation from 'app/utils/i18nUtils';
+import Innhold, { getSource } from 'app/utils/innhold/Innhold';
+import PanelMedIllustrasjon from '../../../components/panel-med-illustrasjon/PanelMedIllustrasjon';
+import Tabs from 'nav-frontend-tabs';
+import './nårKanDuSøke.less';
 
 const iconSvg = require('../../../assets/ark/ark-frister.svg').default;
 const morSvg = require('../../../assets/foreldre/mor2.svg').default;
@@ -86,6 +86,7 @@ class NårKanDuSøke extends React.Component<Props, State> {
                     />
                 </FactsWithIcon>
                 <Innhold
+                    className="blokk-m"
                     source={getSource('om-foreldrepenger/når-kan-du-søke/tidligst-svar', intl)}
                 />
                 <Undertittel>
@@ -99,9 +100,12 @@ class NårKanDuSøke extends React.Component<Props, State> {
                 {tabs.map((tab, index) => (
                     <div
                         key={index}
-                        className={cls.element(
-                            'tabContent',
-                            this.state.currentTabIndex !== index ? 'inactive' : undefined
+                        className={classnames(
+                            'blokk-m',
+                            cls.element(
+                                'tabContent',
+                                this.state.currentTabIndex !== index ? 'inactive' : undefined
+                            )
                         )}>
                         <Innhold source={tab.content} />
                     </div>

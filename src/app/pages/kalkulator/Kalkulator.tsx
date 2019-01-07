@@ -137,12 +137,13 @@ class Planlegger extends React.Component<InjectedIntlProps, State> {
                 <div className={infosiderCls.element('container')}>
                     <article className={infosiderCls.element('article')}>
                         <Breadcrumbs path={location.pathname} />
-
                         <PanelMedIllustrasjon
                             title={getTranslation('kalkulator.tittel', intl)}
                             svg={<SvgMask svg={pengerIcon} />}>
-                            <Innhold source={getSource('kalkulator/kalkulator', intl)} />
-
+                            <Innhold
+                                className="blokk-s"
+                                source={getSource('kalkulator/ingress', intl)}
+                            />
                             <TypografiBase type="undertittel">
                                 {getTranslation('kalkulator.valg.tittel', intl)}
                             </TypografiBase>

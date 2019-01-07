@@ -13,8 +13,16 @@ const renderWithValues = (type: NodeType) => (props: any, values: any) => ({
     }
 });
 
+const renderWithClassName = (type: NodeType) => (props: any, values: any) => ({
+    type,
+    props: {
+        ...props,
+        className: values.className
+    }
+});
+
 const xmlToReact = new XMLToReact({
-    innhold: renderAs(Node.Innhold),
+    innhold: renderWithClassName(Node.Innhold),
     avsnitt: renderAs(Node.Avsnitt),
     lenke: renderAs(Node.Lenke),
     liste: renderAs(Node.Liste),
@@ -41,9 +49,20 @@ export const getSource = (path: string, intl: InjectedIntl): string => {
     }
 };
 
-const Innhold = ({ source, values }: { source: string; values?: Node.ValueMap }) => {
+const Innhold = ({
+    source,
+    values = {},
+    className
+}: {
+    source: string;
+    values?: Node.ValueMap;
+    className?: string;
+}) => {
     try {
-        const toRender = xmlToReact.convert(source, values);
+        const toRender = xmlToReact.convert(source, {
+            ...values,
+            className
+        });
         return toRender;
     } catch (e) {
         console.error('Error converting XML to React components:', e);

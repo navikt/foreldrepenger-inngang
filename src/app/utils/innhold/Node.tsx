@@ -1,4 +1,5 @@
 import * as React from 'react';
+import classnames from 'classnames';
 import LesMer from 'app/components/les-mer/LesMer';
 import TypografiBase from 'nav-frontend-typografi';
 import WithLink from 'app/components/with-link/WithLink';
@@ -25,7 +26,9 @@ export interface ValueMap {
     [s: string]: string;
 }
 
-export const Innhold = (props: any) => <div {...props} className={cls.className} />;
+export const Innhold = (props: any) => (
+    <div {...props} className={classnames(cls.className, props.className)} />
+);
 
 export const Avsnitt = (props: { type?: TypografiType; children: React.ReactNode }) => (
     <TypografiBase

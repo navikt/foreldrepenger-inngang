@@ -14,7 +14,7 @@ const cls = BEMHelper('ferie');
 
 const ferieSvg = require('../../../assets/ark/ark-ferie.svg').default;
 const content = 'om-foreldrepenger/ferie/ferie';
-const underIllustrasjonContent = 'om-foreldrepenger/ferie/under-illustrasjon';
+const underIllustrasjonContent = 'om-foreldrepenger/ferie/utsette';
 
 interface Props {
     id: string;
