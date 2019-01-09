@@ -19,10 +19,9 @@ const getInformasjonsfaner = (intl: InjectedIntl): InformasjonsfaneProps[] => [
                 tittel: 'til far',
                 icon: 'far3',
                 punkter: [
-                    `${getTranslation(
-                        'om_foreldrepenger.hvor_lenge.fordeling.krav.aktivitetskrav_til',
-                        intl
-                    )} mor`
+                    getTranslation('om_foreldrepenger.hvor_lenge.fordeling.aktivitetskrav', intl, {
+                        subjekt: getTranslation('mor', intl)
+                    })
                 ]
             },
             component: <Innhold source={getSource(farsDel, intl)} />

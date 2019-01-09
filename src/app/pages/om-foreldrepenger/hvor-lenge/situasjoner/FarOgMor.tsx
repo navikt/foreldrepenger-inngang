@@ -26,7 +26,9 @@ const getInformasjonsfaner = (intl: InjectedIntl): InformasjonsfaneProps[] => [
                         'om_foreldrepenger.hvor_lenge.fordeling.tre_uker_før_fødsel',
                         intl
                     ),
-                    getTranslation('om_foreldrepenger.hvor_lenge.fordeling.krav.default', intl)
+                    getTranslation('om_foreldrepenger.hvor_lenge.fordeling.ingen_krav', intl, {
+                        subjekt: getTranslation('far', intl)
+                    })
                 ]
             },
             component: <Innhold source={getSource(morsdel, intl)} />
@@ -39,7 +41,11 @@ const getInformasjonsfaner = (intl: InjectedIntl): InformasjonsfaneProps[] => [
             snakkeboble: {
                 tittel: '',
                 icon: 'far1',
-                punkter: [getTranslation('om_foreldrepenger.hvor_lenge.fordeling.krav.far', intl)]
+                punkter: [
+                    getTranslation('om_foreldrepenger.hvor_lenge.fordeling.ingen_krav', intl, {
+                        subjekt: getTranslation('mor', intl)
+                    })
+                ]
             },
             component: <Innhold source={getSource(farsdel, intl)} />
         }
@@ -52,10 +58,9 @@ const getInformasjonsfaner = (intl: InjectedIntl): InformasjonsfaneProps[] => [
                 tittel: '',
                 icon: <Foreldrepar variant={4} firstParent="mor2" secondParent="far1" />,
                 punkter: [
-                    getTranslation(
-                        'om_foreldrepenger.hvor_lenge.fordeling.krav.aktivitetskrav_til.felles',
-                        intl
-                    )
+                    getTranslation('om_foreldrepenger.hvor_lenge.fordeling.krav', intl, {
+                        subjekt: getTranslation('mor', intl)
+                    })
                 ]
             },
             component: <Innhold source={getSource(fellesdel, intl)} />

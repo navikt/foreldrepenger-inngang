@@ -27,7 +27,9 @@ const getInformasjonsfaner = (intl: InjectedIntl): InformasjonsfaneProps[] => [
                         'om_foreldrepenger.hvor_lenge.fordeling.i_tillegg_til_foreldrepenger',
                         intl
                     ),
-                    getTranslation('om_foreldrepenger.hvor_lenge.fordeling.krav.default', intl)
+                    getTranslation('om_foreldrepenger.hvor_lenge.fordeling.ingen_krav', intl, {
+                        subjekt: getTranslation('far', intl)
+                    })
                 ]
             },
             component: <Innhold source={getSource(morsDel, intl)} />
@@ -41,7 +43,9 @@ const getInformasjonsfaner = (intl: InjectedIntl): InformasjonsfaneProps[] => [
                 tittel: 'til far',
                 icon: 'far1',
                 punkter: [
-                    getTranslation('om_foreldrepenger.hvor_lenge.fordeling.krav.som_far', intl)
+                    getTranslation('om_foreldrepenger.hvor_lenge.fordeling.ingen_krav', intl, {
+                        subjekt: getTranslation('mor', intl)
+                    })
                 ]
             },
             component: <Innhold source={getSource(farsDel, intl)} />

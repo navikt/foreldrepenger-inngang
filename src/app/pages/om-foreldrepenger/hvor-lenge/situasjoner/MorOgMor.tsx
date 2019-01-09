@@ -26,10 +26,9 @@ const getInformasjonsfaner = (intl: InjectedIntl): InformasjonsfaneProps[] => [
                         'om_foreldrepenger.hvor_lenge.fordeling.tre_uker_før_fødsel',
                         intl
                     ),
-                    getTranslation(
-                        'om_foreldrepenger.hvor_lenge.fordeling.krav.morOgMor_krav',
-                        intl
-                    )
+                    getTranslation('om_foreldrepenger.hvor_lenge.fordeling.ingen_krav', intl, {
+                        subjekt: getTranslation('medmor', intl)
+                    })
                 ]
             },
             component: <Innhold source={getSource(morsDel, intl)} />
@@ -43,7 +42,9 @@ const getInformasjonsfaner = (intl: InjectedIntl): InformasjonsfaneProps[] => [
                 tittel: '',
                 icon: 'medmor2',
                 punkter: [
-                    getTranslation('om_foreldrepenger.hvor_lenge.fordeling.krav.som_far', intl)
+                    getTranslation('om_foreldrepenger.hvor_lenge.fordeling.ingen_krav', intl, {
+                        subjekt: getTranslation('mor', intl)
+                    })
                 ]
             },
             component: <Innhold source={getSource(medmorsDel, intl)} />
@@ -57,10 +58,9 @@ const getInformasjonsfaner = (intl: InjectedIntl): InformasjonsfaneProps[] => [
                 tittel: '',
                 icon: <Foreldrepar firstParent="mor2" secondParent="medmor2" variant={4} />,
                 punkter: [
-                    `${getTranslation(
-                        'om_foreldrepenger.hvor_lenge.fordeling.krav.aktivitetskrav_til',
-                        intl
-                    )} mor`
+                    getTranslation('om_foreldrepenger.hvor_lenge.fordeling.aktivitetskrav', intl, {
+                        subjekt: getTranslation('mor', intl)
+                    })
                 ]
             },
             component: <Innhold source={getSource(fellesDel, intl)} />
