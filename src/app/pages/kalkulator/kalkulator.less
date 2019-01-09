@@ -8,8 +8,11 @@
         padding: 2rem;
     }
 
-    &__veiledermeldinger .innhold:last-child p {
-        margin-bottom: 0;
+    &__veiledermeldinger,
+    &__ikkeStøttet {
+        .innhold:last-child .innhold__avsnitt:last-child {
+            margin-bottom: 0;
+        }
     }
 
     .nav-veilederpanel {
