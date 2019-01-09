@@ -1,0 +1,4 @@
+<innhold>
+    <avsnitt>Utfra tallene du har oppgitt antar vi at du <variabel>INNTEKTSSITUASJON</variabel> <b><variabel>ÅRLIG_SNITTLØNN</variabel> kroner</b>. For å ha rett til foreldrepenger må du <variabel>INNTEKTSSITUASJON_VERB</variabel> minst <b><variabel>EN_HALV_G</variabel> kr</b>  i året. Hvis du ikke gjør det, kan du søke om en engangssum istedenfor foreldrepenger. </avsnitt>
+    <avsnitt><lenke url="/om-engangsstonad">Les mer om engangsstønad</lenke></avsnitt>
+</innhold>

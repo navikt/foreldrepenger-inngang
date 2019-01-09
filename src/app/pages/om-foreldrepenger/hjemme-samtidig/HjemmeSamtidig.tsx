@@ -5,7 +5,7 @@ import Innhold, { getSource } from 'app/utils/innhold/Innhold';
 import PanelMedIllustrasjon from '../../../components/panel-med-illustrasjon/PanelMedIllustrasjon';
 
 const hjemmeSamtidigSvg = require('../../../assets/ark/ark-hjemme-samtidig.svg').default;
-const ingress = 'om-foreldrepenger/hjemme-samtidig/ingress';
+const ingress = 'om-foreldrepenger/hjemme-samtidig/hjemme-samtidig';
 
 interface Props {
     id: string;

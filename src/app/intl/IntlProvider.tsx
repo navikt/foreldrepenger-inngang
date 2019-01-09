@@ -24,9 +24,9 @@ class IntlProvider extends React.Component<StateProps> {
     render() {
         let messages = nbMessages;
         if (this.props.language === 'en') {
-            messages = enMessages;
+            messages = { ...nbMessages, ...enMessages };
         } else if (this.props.language === 'nn') {
-            messages = nnMessages;
+            messages = { ...nbMessages, ...nnMessages };
         }
 
         return (

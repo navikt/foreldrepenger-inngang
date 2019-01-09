@@ -14,7 +14,7 @@ const TilFarEllerMedmor: React.StatelessComponent<Props> = ({ id, intl }) => (
         id={id}
         title={getTranslation('om_engangsstønad.til_far.tittel', intl)}
         svg={farSvg}>
-        <Innhold source={getSource('om-engangsstønad/til-far', intl)} />
+        <Innhold source={getSource('om-engangsstønad/far-eller-medmor', intl)} />
     </PanelMedIllustrasjon>
 );
 

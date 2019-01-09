@@ -2,7 +2,11 @@ import XMLToReact from '@condenast/xml-to-react';
 import * as Node from './Node';
 import { InjectedIntl } from 'react-intl';
 
+/* tslint:disable:no-console */
+
 type NodeType = React.ReactNode | string;
+
+const contentSubstitute = '<innhold />';
 
 const renderAs = (type: NodeType) => (props: any) => ({ type, props });
 const renderWithValues = (type: NodeType) => (props: any, values: any) => ({
@@ -35,17 +39,26 @@ const xmlToReact = new XMLToReact({
     unbreakable: renderAs(Node.Unbreakable)
 });
 
-export const getSource = (path: string, intl: InjectedIntl): string => {
+export const getSource = (path: string, intl: InjectedIntl): any => {
+    const inDevelopment = process.env.NODE_ENV === 'development';
+    const localeSnippet = intl.locale === 'nb' ? '' : `.${intl.locale}`;
+
     try {
-        const content = require(`../../../content/${intl.locale}/${path}.xml`);
-        return content;
+        return require(`../../../content/${path}${localeSnippet}.xml`);
     } catch (e) {
-        if (process.env.NODE_ENV === 'development') {
-            /* tslint:disable */
-            console.error('No content found:', e);
+        if (inDevelopment) {
+            console.warn('Translated content not found, using default language:', e.message);
         }
 
-        return '<innhold><avsnitt>Content not found</avsnitt></innhold>';
+        try {
+            return require(`../../../content/${path}.xml`);
+        } catch (e) {
+            if (inDevelopment) {
+                console.error('Content does not exist:', e);
+            }
+
+            return contentSubstitute;
+        }
     }
 };
 

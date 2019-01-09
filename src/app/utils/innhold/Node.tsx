@@ -40,7 +40,7 @@ export const Avsnitt = (props: { type?: TypografiType; children: React.ReactNode
 
 export const Variabel = (props: { values: ValueMap; children: string }) => {
     const { values, children } = props;
-    return <span {...props}>{values[children] || 'tøys og tull'}</span>;
+    return <span {...props}>{values[children]}</span>;
 };
 
 export const Unbreakable = (props: { children: React.ReactNode }) => (
