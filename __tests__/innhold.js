@@ -1,7 +1,7 @@
 const walk = require('walk');
 const fs = require('fs');
 
-const testInnhold = (sendInvalidFiles) => {
+const getContentFiles = (retrievedFiles) => {
     const contentFolder = 'src/content';
     const walker = walk.walk(contentFolder, { followLinks: false });
     let files = [];
@@ -12,34 +12,30 @@ const testInnhold = (sendInvalidFiles) => {
     });
 
     walker.on('end', () => {
-        files = files.sort().filter((file) => file.endsWith('.json'));
-        const invalidFiles = [];
-
-        for (const file of files) {
-            try {
-                const tekst = fs.readFileSync(file);
-                JSON.parse(tekst);
-            } catch (error) {
-                invalidFiles.push({
-                    file,
-                    error
-                });
-            }
-        }
-
-        sendInvalidFiles(invalidFiles);
+        retrievedFiles(files.filter((file) => file.endsWith('.xml')));
     });
 };
 
-test('innhold kompilerer', (done) => {
-    const receiveInvalidFiles = (invalidFiles) => {
-        if (invalidFiles.length > 0) {
-            console.error('Invalid files:', invalidFiles);
-        }
+test('innhold er oversatt', (done) => {
+    const retrievedFiles = (files) => {
+        const removeFileEnding = (file) => file.split('.')[0];
 
-        expect(invalidFiles.length).toBe(0);
+        const bokmålFiles = files
+            .filter((file) => !file.endsWith('.en.xml') && !file.endsWith('.nn.xml'))
+            .map(removeFileEnding);
+
+        const englishFiles = files
+            .sort()
+            .filter((file) => file.endsWith('.en.xml'))
+            .map(removeFileEnding);
+
+        const missingEnglish = bokmålFiles.filter(
+            (bokmålFile) => !englishFiles.includes(bokmålFile)
+        );
+
+        expect(missingEnglish).toHaveLength(0);
         done();
     };
 
-    testInnhold(receiveInvalidFiles);
+    getContentFiles(retrievedFiles);
 });
