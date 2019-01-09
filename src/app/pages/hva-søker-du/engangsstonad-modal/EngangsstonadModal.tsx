@@ -4,8 +4,8 @@ import Modal from 'nav-frontend-modal';
 import TypografiBase from 'nav-frontend-typografi';
 import Lenke from 'nav-frontend-lenker';
 import Lukknapp from 'nav-frontend-lukknapp';
-import StrukturertTekst from '../../../components/strukturert-tekst/StrukturertTekst';
-import { getContent } from '../../../utils/getContent';
+import Innhold, { getSource } from 'app/utils/innhold/Innhold';
+
 import React from 'react';
 import KnappBase from 'nav-frontend-knapper';
 import './engangsstonad-modal.less';
@@ -80,8 +80,8 @@ class EngangsstonadModal extends React.Component<Props> {
                         <div className={cls.element('knappRad')}>
                             <Lukknapp onClick={this.closeModal} />
                         </div>
-                        <StrukturertTekst
-                            tekst={getContent(
+                        <Innhold
+                            source={getSource(
                                 'hva-søker-du/engangsstonad-modal-sok-papir',
                                 this.props.intl
                             )}

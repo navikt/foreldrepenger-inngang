@@ -1,9 +1,9 @@
 import * as React from 'react';
-import { getContent } from '../../../../utils/getContent';
+
 import { injectIntl, InjectedIntlProps, InjectedIntl } from 'react-intl';
 import Foreldrepar from 'app/components/foreldrepar/Foreldrepar';
 import Informasjonsfaner, { InformasjonsfaneProps } from '../informasjons-faner/Informasjonsfaner';
-import StrukturertTekst from '../../../../components/strukturert-tekst/StrukturertTekst';
+import Innhold, { getSource } from 'app/utils/innhold/Innhold';
 import { addAntallUkerSomSnakkebobletittel } from './utils';
 import getTranslation from 'app/utils/i18nUtils';
 
@@ -23,7 +23,7 @@ const getInformasjonsfaner = (intl: InjectedIntl): InformasjonsfaneProps[] => [
                 punkter: [getTranslation('om_foreldrepenger.hvor_lenge.fordeling.krav.far1', intl)],
                 icon: 'far4'
             },
-            component: <StrukturertTekst tekst={getContent(far1, intl)} />
+            component: <Innhold source={getSource(far1, intl)} />
         }
     },
     {
@@ -35,7 +35,7 @@ const getInformasjonsfaner = (intl: InjectedIntl): InformasjonsfaneProps[] => [
                 icon: 'far2',
                 punkter: [getTranslation('om_foreldrepenger.hvor_lenge.fordeling.krav.far2', intl)]
             },
-            component: <StrukturertTekst tekst={getContent(far2, intl)} />
+            component: <Innhold source={getSource(far2, intl)} />
         }
     },
     {
@@ -52,7 +52,7 @@ const getInformasjonsfaner = (intl: InjectedIntl): InformasjonsfaneProps[] => [
                     )
                 ]
             },
-            component: <StrukturertTekst tekst={getContent(fellesPerioden, intl)} />
+            component: <Innhold source={getSource(fellesPerioden, intl)} />
         }
     }
 ];
@@ -60,14 +60,14 @@ const getInformasjonsfaner = (intl: InjectedIntl): InformasjonsfaneProps[] => [
 const FarOgFar = ({ intl }: InjectedIntlProps) => {
     return (
         <div>
-            <StrukturertTekst tekst={getContent(farOgFarContent, intl)} />
+            <Innhold source={getSource(farOgFarContent, intl)} />
             <Informasjonsfaner
                 title={getTranslation('om_foreldrepenger.hvor_lenge.fordeling.tittel', intl)}
                 tabs={getInformasjonsfaner(intl).map(
                     addAntallUkerSomSnakkebobletittel('farOgFar', intl)
                 )}
             />
-            <StrukturertTekst tekst={getContent(kalkulatorbeskrivelse, intl)} />
+            <Innhold source={getSource(kalkulatorbeskrivelse, intl)} />
         </div>
     );
 };

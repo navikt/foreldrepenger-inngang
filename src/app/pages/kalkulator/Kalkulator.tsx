@@ -6,8 +6,8 @@ import classnames from 'classnames';
 import TypografiBase from 'nav-frontend-typografi';
 import PanelMedIllustrasjon from 'app/components/panel-med-illustrasjon/PanelMedIllustrasjon';
 import { CheckboksPanelGruppe } from 'nav-frontend-skjema';
-import StrukturertTekst from 'app/components/strukturert-tekst/StrukturertTekst';
-import { getContent } from 'app/utils/getContent';
+import Innhold, { getSource } from 'app/utils/innhold/Innhold';
+
 import Lønnskalkulator from './lønnskalkulator/Lønnskalkulator';
 import {
     tjenerOverUtbetalingsgrensen,
@@ -137,12 +137,13 @@ class Planlegger extends React.Component<InjectedIntlProps, State> {
                 <div className={infosiderCls.element('container')}>
                     <article className={infosiderCls.element('article')}>
                         <Breadcrumbs path={location.pathname} />
-
                         <PanelMedIllustrasjon
                             title={getTranslation('kalkulator.tittel', intl)}
                             svg={<SvgMask svg={pengerIcon} />}>
-                            <StrukturertTekst tekst={getContent('kalkulator/kalkulator', intl)} />
-
+                            <Innhold
+                                className="blokk-s"
+                                source={getSource('kalkulator/ingress', intl)}
+                            />
                             <TypografiBase type="undertittel">
                                 {getTranslation('kalkulator.valg.tittel', intl)}
                             </TypografiBase>
@@ -159,8 +160,8 @@ class Planlegger extends React.Component<InjectedIntlProps, State> {
                                             fargetema="advarsel"
                                             ansikt="undrende"
                                             kompakt={true}>
-                                            <StrukturertTekst
-                                                tekst={getContent('kalkulator/ikke-støttet', intl)}
+                                            <Innhold
+                                                source={getSource('kalkulator/ikke-støttet', intl)}
                                             />
                                         </Veileder>
                                     </div>
@@ -182,8 +183,8 @@ class Planlegger extends React.Component<InjectedIntlProps, State> {
                                                     'kalkulator.lukk_info',
                                                     intl
                                                 )}>
-                                                <StrukturertTekst
-                                                    tekst={getContent(
+                                                <Innhold
+                                                    source={getSource(
                                                         'kalkulator/ytelser-som-gir-rett',
                                                         intl
                                                     )}

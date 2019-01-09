@@ -1,12 +1,12 @@
 import * as React from 'react';
-import { getContent } from '../../utils/getContent';
+
 import { injectIntl, InjectedIntlProps, InjectedIntl } from 'react-intl';
 import BEMHelper from 'app/utils/bem';
 import CustomSVGFromSprite from 'app/utils/CustomSVG';
 import externalUrls from 'app/utils/externalUrls';
 import getTranslation from 'app/utils/i18nUtils';
 import PanelMedIllustrasjon from '../panel-med-illustrasjon/PanelMedIllustrasjon';
-import StrukturertTekst from '../strukturert-tekst/StrukturertTekst';
+import Innhold, { getSource } from 'app/utils/innhold/Innhold';
 import TypografiBase from 'nav-frontend-typografi';
 import WithLink from 'app/components/with-link/WithLink';
 import './hjelpeSeksjon.less';
@@ -25,7 +25,7 @@ const Ferie: React.StatelessComponent<InjectedIntlProps> = ({ intl }) => {
             svg={svg}
             className={cls.className}
             title={getTranslation('om_foreldrepenger.hjelp.tittel', intl)}>
-            <StrukturertTekst tekst={getContent(content, intl)} />
+            <Innhold source={getSource(content, intl)} />
             <Kontaktvalg intl={intl} />
         </PanelMedIllustrasjon>
     );

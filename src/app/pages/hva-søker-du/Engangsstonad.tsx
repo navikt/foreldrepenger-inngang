@@ -1,18 +1,17 @@
 import * as React from 'react';
-import { getContent } from '../../utils/getContent';
 import { injectIntl, InjectedIntlProps } from 'react-intl';
 import ButtonPanel from './button-panel/ButtonPanel';
 import Environment from '../../Environment';
 import getTranslation from 'app/utils/i18nUtils';
 import PanelMedTittel from '../../components/panel-med-tittel/PanelMedTittel';
 import PopUpModal from './modal/PopUpModal';
-import StrukturertTekst from '../../components/strukturert-tekst/StrukturertTekst';
+import Innhold, { getSource } from 'app/utils/innhold/Innhold';
 import UserHelpEngangsstonad from './user-help-engangsstonad/UserHelpEngangsstonad';
 
 const Engangsstonad = ({ intl }: InjectedIntlProps) => {
     return (
         <PanelMedTittel title={getTranslation('engangsstønad', intl)}>
-            <StrukturertTekst tekst={getContent('hva-søker-du/engangsstønad', intl)} />
+            <Innhold source={getSource('hva-søker-du/engangsstønad', intl)} />
             <PopUpModal modalIsOpen={false} />
             <ButtonPanel
                 button={{

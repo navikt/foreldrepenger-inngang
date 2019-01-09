@@ -1,0 +1,49 @@
+.innhold {
+    &__tittel {
+        margin-top: 1rem;
+    }
+
+    &__tittel + .innhold__avsnitt {
+        margin-top: 0.25rem;
+    }
+
+    &__navFont {
+        font-family: 'Source Sans Pro', Arial, sans-serif;
+    }
+
+    &__unbreakable {
+        white-space: nowrap;
+    }
+
+    .lesMer {
+        width: 100%;
+    }
+
+    ul,
+    ol {
+        padding-left: 1.125rem;
+        margin: 0;
+    }
+
+    li {
+        padding-left: 1rem;
+        margin-bottom: 0.25rem;
+    }
+
+    ul,
+    ol,
+    h2,
+    p,
+    .lesMer,
+    .utvidetInformasjon {
+        margin-bottom: 1rem;
+    }
+
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+        max-width: 100%;
+
+        &__avsnitt {
+            max-width: 100%;
+        }
+    }
+}

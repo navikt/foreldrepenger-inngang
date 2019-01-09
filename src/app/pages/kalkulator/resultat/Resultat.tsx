@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { getContent } from 'app/utils/getContent';
+
 import { injectIntl, InjectedIntlProps } from 'react-intl';
 import { Resultater } from '../Kalkulator';
 import {
@@ -12,7 +12,7 @@ import Alertstriper from 'nav-frontend-alertstriper';
 import Alternativ from '../alternativ/Alternativ';
 import BEMHelper from 'app/utils/bem';
 import getTranslation from 'app/utils/i18nUtils';
-import StrukturertTekst from 'app/components/strukturert-tekst/StrukturertTekst';
+import Innhold, { getSource } from 'app/utils/innhold/Innhold';
 import TypografiBase from 'nav-frontend-typografi';
 import Veileder from 'app/components/veileder/Veileder';
 import Veiledermelding from '../Veiledermelding';
@@ -100,7 +100,7 @@ const Resultat = ({ results, fårUtbetaling, intl }: Props) => {
             {!tjenerForLite && (
                 <div className={cls.element('disclaimer')}>
                     <Alertstriper type="info">
-                        <StrukturertTekst tekst={getContent('kalkulator/disclaimer', intl)} />
+                        <Innhold source={getSource('kalkulator/disclaimer', intl)} />
                     </Alertstriper>
                 </div>
             )}

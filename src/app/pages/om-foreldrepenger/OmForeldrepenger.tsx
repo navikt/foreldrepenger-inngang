@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { getContent } from 'app/utils/getContent';
+import { getSource } from 'app/utils/innhold/Innhold';
 import { InjectedIntlProps, injectIntl } from 'react-intl';
 import Adopsjon from './adopsjon/Adopsjon';
 import BEMHelper from '../../utils/bem';
@@ -73,7 +73,7 @@ const OmForeldrepenger: React.StatelessComponent<Props & InjectedIntlProps> = ({
                 <article className={cls.element('article')}>
                     <Breadcrumbs path={location.pathname} />
                     <Informasjonsbanner
-                        tekst={getContent('om-foreldrepenger/nye-regler-fra-2019', intl)}
+                        source={getSource('om-foreldrepenger/nye-regler-fra-2019', intl)}
                     />
                     <HvemKanFåForeldrepenger id={sections[0]} />
                     <HvorLenge id={sections[1]} />

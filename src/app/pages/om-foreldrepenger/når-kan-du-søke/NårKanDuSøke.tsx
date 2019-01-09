@@ -1,17 +1,17 @@
 import * as React from 'react';
-import PanelMedIllustrasjon from '../../../components/panel-med-illustrasjon/PanelMedIllustrasjon';
-import { injectIntl, InjectedIntlProps, InjectedIntl } from 'react-intl';
-import { getContent } from 'app/utils/getContent';
-import { Undertittel } from 'nav-frontend-typografi';
-import FactsWithIcon from 'app/components/facts-with-icon/FactsWithIcon';
-import Fact from 'app/components/facts-with-icon/Fact';
-import BEMHelper from '../../../utils/bem';
-import './nårKanDuSøke.less';
-import Tabs from 'nav-frontend-tabs';
-import StrukturertTekst from 'app/components/strukturert-tekst/StrukturertTekst';
-import Foreldrepar from 'app/components/foreldrepar/Foreldrepar';
 import { FlexibleSvg } from 'app/utils/CustomSVG';
+import { injectIntl, InjectedIntlProps, InjectedIntl } from 'react-intl';
+import { Undertittel } from 'nav-frontend-typografi';
+import BEMHelper from '../../../utils/bem';
+import classnames from 'classnames';
+import Fact from 'app/components/facts-with-icon/Fact';
+import FactsWithIcon from 'app/components/facts-with-icon/FactsWithIcon';
+import Foreldrepar from 'app/components/foreldrepar/Foreldrepar';
 import getTranslation from 'app/utils/i18nUtils';
+import Innhold, { getSource } from 'app/utils/innhold/Innhold';
+import PanelMedIllustrasjon from '../../../components/panel-med-illustrasjon/PanelMedIllustrasjon';
+import Tabs from 'nav-frontend-tabs';
+import './nårKanDuSøke.less';
 
 const iconSvg = require('../../../assets/ark/ark-frister.svg').default;
 const morSvg = require('../../../assets/foreldre/mor2.svg').default;
@@ -21,15 +21,15 @@ const cls = BEMHelper('nårKanDuSøke');
 const getTabs = (intl: InjectedIntl) => [
     {
         label: getTranslation('om_foreldrepenger.når_kan_du_søke.utsette_sykdom', intl),
-        content: getContent('om-foreldrepenger/når-kan-du-søke/sykdom', intl)
+        content: getSource('om-foreldrepenger/når-kan-du-søke/sykdom', intl)
     },
     {
         label: getTranslation('om_foreldrepenger.når_kan_du_søke.utsette_jobbe', intl),
-        content: getContent('om-foreldrepenger/når-kan-du-søke/du-skal-jobbe', intl)
+        content: getSource('om-foreldrepenger/når-kan-du-søke/du-skal-jobbe', intl)
     },
     {
         label: getTranslation('om_foreldrepenger.når_kan_du_søke.utsette_ferie', intl),
-        content: getContent('om-foreldrepenger/når-kan-du-søke/du-skal-ha-ferie', intl)
+        content: getSource('om-foreldrepenger/når-kan-du-søke/du-skal-ha-ferie', intl)
     }
 ];
 
@@ -71,22 +71,23 @@ class NårKanDuSøke extends React.Component<Props, State> {
                 <FactsWithIcon>
                     <Fact
                         icon={<FlexibleSvg width={40} height={40} iconRef={morSvg} />}
-                        content={getContent('om-foreldrepenger/når-kan-du-søke/mor', intl)}
+                        content={getSource('om-foreldrepenger/når-kan-du-søke/mor', intl)}
                     />
                     <Fact
                         icon={<Foreldrepar firstParent="far4" secondParent="medmor2" />}
-                        content={getContent(
+                        content={getSource(
                             'om-foreldrepenger/når-kan-du-søke/far-eller-medmor',
                             intl
                         )}
                     />
                     <Fact
                         icon={<FlexibleSvg width={40} height={40} iconRef={adopsjonSvg} />}
-                        content={getContent('om-foreldrepenger/når-kan-du-søke/adopsjon', intl)}
+                        content={getSource('om-foreldrepenger/når-kan-du-søke/adopsjon', intl)}
                     />
                 </FactsWithIcon>
-                <StrukturertTekst
-                    tekst={getContent('om-foreldrepenger/når-kan-du-søke/tidligst-svar', intl)}
+                <Innhold
+                    className="blokk-m"
+                    source={getSource('om-foreldrepenger/når-kan-du-søke/tidligst-svar', intl)}
                 />
                 <Undertittel>
                     {getTranslation(
@@ -99,16 +100,19 @@ class NårKanDuSøke extends React.Component<Props, State> {
                 {tabs.map((tab, index) => (
                     <div
                         key={index}
-                        className={cls.element(
-                            'tabContent',
-                            this.state.currentTabIndex !== index ? 'inactive' : undefined
+                        className={classnames(
+                            'blokk-m',
+                            cls.element(
+                                'tabContent',
+                                this.state.currentTabIndex !== index ? 'inactive' : undefined
+                            )
                         )}>
-                        <StrukturertTekst tekst={tab.content} />
+                        <Innhold source={tab.content} />
                     </div>
                 ))}
 
-                <StrukturertTekst
-                    tekst={getContent(
+                <Innhold
+                    source={getSource(
                         'om-foreldrepenger/når-kan-du-søke/hvis-jeg-søker-for-sent',
                         intl
                     )}

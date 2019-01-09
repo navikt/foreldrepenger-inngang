@@ -1,8 +1,8 @@
 import * as React from 'react';
 import Informasjonsfaner, { InformasjonsfaneProps } from '../informasjons-faner/Informasjonsfaner';
-import StrukturertTekst from '../../../../components/strukturert-tekst/StrukturertTekst';
+import Innhold, { getSource } from 'app/utils/innhold/Innhold';
 import { injectIntl, InjectedIntl, InjectedIntlProps } from 'react-intl';
-import { getContent } from '../../../../utils/getContent';
+
 import { Kvote } from 'app/utils/foreldresituasjon';
 import { addAntallUkerSomSnakkebobletittel } from './utils';
 import getTranslation from 'app/utils/i18nUtils';
@@ -30,7 +30,7 @@ const getInformasjonsfaner = (intl: InjectedIntl): InformasjonsfaneProps[] => [
                     getTranslation('om_foreldrepenger.hvor_lenge.fordeling.krav.default', intl)
                 ]
             },
-            component: <StrukturertTekst tekst={getContent(morsDel, intl)} />
+            component: <Innhold source={getSource(morsDel, intl)} />
         }
     },
     {
@@ -44,7 +44,7 @@ const getInformasjonsfaner = (intl: InjectedIntl): InformasjonsfaneProps[] => [
                     getTranslation('om_foreldrepenger.hvor_lenge.fordeling.krav.som_far', intl)
                 ]
             },
-            component: <StrukturertTekst tekst={getContent(farsDel, intl)} />
+            component: <Innhold source={getSource(farsDel, intl)} />
         }
     }
 ];
@@ -62,7 +62,7 @@ class Aleneomsorg extends React.Component<Props> {
 
     render = () => (
         <div>
-            <StrukturertTekst tekst={getContent(content, this.props.intl)} />
+            <Innhold source={getSource(content, this.props.intl)} />
             <Informasjonsfaner
                 tabs={getInformasjonsfaner(this.props.intl).map(
                     addAntallUkerSomSnakkebobletittel('aleneomsorg', this.props.intl)
@@ -73,7 +73,7 @@ class Aleneomsorg extends React.Component<Props> {
                     this.props.intl
                 )}
             />
-            <StrukturertTekst tekst={getContent(kalkulatorbeskrivelse, this.props.intl)} />
+            <Innhold source={getSource(kalkulatorbeskrivelse, this.props.intl)} />
         </div>
     );
 }

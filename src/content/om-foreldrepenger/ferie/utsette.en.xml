@@ -1,0 +1,22 @@
+<innhold>
+    <lesmer intro="Holidays that entitle you to postpone">
+        <avsnitt>You can postpone your parental benefit by:</avsnitt>
+        <liste>
+            <punkt>holidays up to four weeks and one day each year</punkt>
+            <punkt>holidays from previous year</punkt>
+            <punkt>up to ten days of holiday in advance from the next year</punkt>
+        </liste>
+    </lesmer>
+    <lesmer intro="You can postpone using the following process">
+        <liste>
+            <punkt>Arrange with your <b>employer</b> as to when you will take holidays.</punkt>
+            <punkt>Your employer confirms your holiday in the <lenke url="https://www.nav.no/inntektsmelding" ekstern="true">income statement</lenke> that they send to NAV.</punkt>
+            <punkt>In the <b>parental benefit application</b>, you specify that you are <b>delaying</b> the period because you are having a holiday</punkt>
+            <punkt>If you do not know when you will be taking holidays when you apply, you can send an application at <lenke url="https://foreldrepenger.nav.no/" ekstern="true">Your Parental Benefit</lenke> to postpone at a later date.</punkt>
+        </liste>
+        <avsnitt><b>Deadline</b>: You have to apply <b>before</b> you start your holiday.</avsnitt>
+    </lesmer>
+    <avsnitt type="element">Holiday pay from the parental benefit</avsnitt>
+    <avsnitt>If you are an employee, you are entitled to holiday pay from the parental benefit. If the employer pays salary during the period of leave, the holiday pay is paid to the employer. </avsnitt>
+    <avsnitt>The holiday pay amounts to 10.2 per cent of what is paid out before tax in the first 12 or 15 weeks of the parental benefit period. </avsnitt>
+</innhold>

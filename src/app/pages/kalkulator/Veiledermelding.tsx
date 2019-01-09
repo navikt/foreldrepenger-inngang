@@ -1,13 +1,15 @@
 import * as React from 'react';
-import { Definisjoner } from 'app/utils/strukturertTekst';
-import StrukturertTekst from 'app/components/strukturert-tekst/StrukturertTekst';
-import { getContent } from 'app/utils/getContent';
 import { injectIntl, InjectedIntlProps } from 'react-intl';
+import { ValueMap } from 'app/utils/innhold/Node';
+import Innhold, { getSource } from 'app/utils/innhold/Innhold';
+import BEMHelper from 'app/utils/bem';
+
+const cls = BEMHelper('kalkulator');
 
 interface OwnProps {
-    avviksvariabler?: Definisjoner;
-    utbetalingsgrensevariabler?: Definisjoner;
-    forLavLønnvariabler?: Definisjoner;
+    avviksvariabler?: ValueMap;
+    utbetalingsgrensevariabler?: ValueMap;
+    forLavLønnvariabler?: ValueMap;
 }
 
 type Props = OwnProps & InjectedIntlProps;
@@ -17,29 +19,27 @@ const Veiledermelding = ({
     utbetalingsgrensevariabler,
     forLavLønnvariabler,
     intl
-}: Props) => {
-    return (
-        <div>
-            {avviksvariabler && (
-                <StrukturertTekst
-                    tekst={getContent('kalkulator/advarsel-avviksgrense', intl)}
-                    definisjoner={avviksvariabler}
-                />
-            )}
-            {forLavLønnvariabler && (
-                <StrukturertTekst
-                    tekst={getContent('kalkulator/advarsel-lav-lønn', intl)}
-                    definisjoner={forLavLønnvariabler}
-                />
-            )}
-            {utbetalingsgrensevariabler && (
-                <StrukturertTekst
-                    tekst={getContent('kalkulator/advarsel-utbetalingsgrense', intl)}
-                    definisjoner={utbetalingsgrensevariabler}
-                />
-            )}
-        </div>
-    );
-};
+}: Props) => (
+    <div className={cls.element('veiledermeldinger')}>
+        {avviksvariabler && (
+            <Innhold
+                source={getSource('kalkulator/advarsel-avviksgrense', intl)}
+                values={avviksvariabler}
+            />
+        )}
+        {forLavLønnvariabler && (
+            <Innhold
+                source={getSource('kalkulator/advarsel-lav-lønn', intl)}
+                values={forLavLønnvariabler}
+            />
+        )}
+        {utbetalingsgrensevariabler && (
+            <Innhold
+                source={getSource('kalkulator/advarsel-utbetalingsgrense', intl)}
+                values={utbetalingsgrensevariabler}
+            />
+        )}
+    </div>
+);
 
 export default injectIntl(Veiledermelding);

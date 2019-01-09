@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { Foreldresituasjon, Kvote } from 'app/utils/foreldresituasjon';
 import { getAntallUtbetalingsuker, Utbetalingsalternativ } from './ukekalkulator/utils';
-import { getContent } from '../../../utils/getContent';
 import { injectIntl, InjectedIntlProps } from 'react-intl';
 import { Innholdsfane } from '../../../components/innholdsfaner/fane/Fane';
 import Aleneomsorg from './situasjoner/Aleneomsorg';
@@ -12,10 +11,10 @@ import FarOgFar from './situasjoner/FarOgFar';
 import FarOgMor from './situasjoner/FarOgMor';
 import Foreldrepar from '../../../components/foreldrepar/Foreldrepar';
 import getTranslation from 'app/utils/i18nUtils';
+import Innhold, { getSource } from 'app/utils/innhold/Innhold';
 import Innholdsfaner from '../../../components/innholdsfaner/Innholdsfaner';
 import MorOgMor from './situasjoner/MorOgMor';
 import PanelMedIllustrasjon from '../../../components/panel-med-illustrasjon/PanelMedIllustrasjon';
-import StrukturertTekst from '../../../components/strukturert-tekst/StrukturertTekst';
 import Ukekalkulator from './ukekalkulator/Ukekalkulator';
 import UtvidetInformasjon from 'app/pages/kalkulator/utvidetinformasjon/UtvidetInformasjon';
 import './hvorLenge.less';
@@ -114,9 +113,7 @@ class HvorLenge extends React.Component<Props, State> {
                 title={getTranslation('om_foreldrepenger.hvor_lenge.tittel', intl)}
                 svg={infoSvg}>
                 <div className={cls.className}>
-                    <StrukturertTekst
-                        tekst={getContent('om-foreldrepenger/hvor-lenge/hvor-lenge', intl)}
-                    />
+                    <Innhold source={getSource('om-foreldrepenger/hvor-lenge/ingress', intl)} />
                     <Innholdsfaner
                         tabs={getTabs(this.onKvoteSelected)}
                         onSelect={this.onSituasjonSelected}
@@ -126,13 +123,9 @@ class HvorLenge extends React.Component<Props, State> {
                         apneLabel={getTranslation(
                             'om_foreldrepenger.hvor_lenge.forslag.åpne',
                             intl
-                        )}
-                        lukkLabel={getTranslation(
-                            'om_foreldrepenger.hvor_lenge.forslag.lukke',
-                            intl
                         )}>
-                        <StrukturertTekst
-                            tekst={getContent('om-foreldrepenger/hvor-lenge/forslag-fra-bld', intl)}
+                        <Innhold
+                            source={getSource('om-foreldrepenger/hvor-lenge/forslag-fra-bld', intl)}
                         />
                     </UtvidetInformasjon>
                 </div>

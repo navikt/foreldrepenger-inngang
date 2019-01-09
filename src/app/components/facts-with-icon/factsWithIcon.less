@@ -12,7 +12,11 @@
         flex-direction: row;
         justify-content: flex-start;
         align-items: center;
-        
+
+        p {
+            margin-bottom: 0;
+        }
+
         &:not(:last-child) {
             margin-bottom: 2rem;
         }
@@ -20,13 +24,15 @@
 
     &__svgContainer {
         width: 4.5rem;
+        display: flex;
+        justify-content: center;
     }
 
     .typo-normal {
         margin-left: 1.5rem;
     }
 
-    .strukturertTekst {
+    .innhold {
         flex: 1;
         margin-top: 0;
         align-self: center;

@@ -1,20 +1,19 @@
 import * as React from 'react';
 import './factsWithIcon.less';
 import BEMHelper from 'app/utils/bem';
-import { StrukturertTekst as StrukturertTekstType } from 'app/utils/strukturertTekst';
-import StrukturertTekst from '../strukturert-tekst/StrukturertTekst';
+import Innhold from 'app/utils/innhold/Innhold';
 
 const cls = BEMHelper('factsWithIcon');
 
 interface Props {
     icon: React.ReactNode;
-    content: StrukturertTekstType;
+    content: string;
 }
 
 const Fact = ({ icon, content }: Props) => (
     <div className={cls.element('fact')}>
         <div className={cls.element('svgContainer')}>{icon}</div>
-        <StrukturertTekst tekst={content} />
+        <Innhold source={content} />
     </div>
 );
 

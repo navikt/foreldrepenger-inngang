@@ -1,0 +1,33 @@
+<innhold>
+    <avsnitt>Your parental benefit is normally calculated based on the income you have when your parental benefit period commences. If you have:</avsnitt>
+    <liste>
+        <punkt>fixed work hours and monthly wage, the most recent month is used</punkt>
+        <punkt>fixed work hours and hourly wage, the last four weeks are used</punkt>
+        <punkt>varying income or percentage position, an average of the last three, six, or nine months is used</punkt>
+        <punkt>recently found work or changed pay, your income following the change is used</punkt>
+    </liste>
+    <avsnitt>If you had multiple part-time positions, your total income will apply when your parental benefit shall be calculated.</avsnitt>
+    <avsnitt>If your income is 25 percent greater or less than what you have earned for the last three years, either your current income will be used or the average of the last three years.</avsnitt>
+    
+    <lesmer intro="Income included in the calculation">
+        <liste>
+            <punkt>Earned income and benefits that are equivalent to earned income.</punkt>
+            <punkt>Remuneration from own work efforts, for example, bonus and fees you have received</punkt>
+            <punkt>Non-cash benefits that you receive, for example free car, mobile telephone and internet, if these are lost during the parental benefit period.</punkt>
+        </liste>
+    </lesmer>
+    <lesmer intro="Income that is not included">
+        <liste>
+            <punkt>Overtime pay</punkt>
+            <punkt>Holiday pay</punkt>
+            <punkt>Allowances that cover expenses in connection with your work, for example, daily allowance, car allowance, tool allowance and nuisance bonus.</punkt>
+        </liste>
+    </lesmer>
+    <lesmer intro="Days without work included in the calculation">
+        <liste>
+            <punkt>If you have been working <b>continuously for four weeks</b> and there are no more than <b>fourteen days</b> between each time you are at work, days without work are also included in the qualifying period.</punkt>
+            <punkt>If you have an employment agreement for <b>fast turnus</b>, the days you are not at work will be included in the qualifying period, even if you work less than every 14th day.</punkt>
+            <punkt><b>Holidays and time off in lieu</b> are also included.</punkt>
+        </liste>
+    </lesmer>
+</innhold>

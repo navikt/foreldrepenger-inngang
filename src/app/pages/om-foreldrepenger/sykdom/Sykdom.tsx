@@ -5,9 +5,9 @@ import { injectIntl, InjectedIntlProps } from 'react-intl';
 import CustomSVG from '../../../utils/CustomSVG';
 import Foreldrepar from '../../../components/foreldrepar/Foreldrepar';
 import Innholdsfaner from '../../../components/innholdsfaner/Innholdsfaner';
-import StrukturertTekst from '../../../components/strukturert-tekst/StrukturertTekst';
+import Innhold, { getSource } from 'app/utils/innhold/Innhold';
 import LesMer from '../../../components/les-mer/LesMer';
-import { getContent } from '../../../utils/getContent';
+
 import Illustrasjon from './Illustrasjon';
 import IllustrasjonMobil from './IllustrasjonMobil';
 import { Normaltekst } from 'nav-frontend-typografi';
@@ -28,7 +28,7 @@ const sykeOverta = 'om-foreldrepenger/sykdom/en-av-foreldrene-er-syke/overta';
 
 const BarnetErInnlagtWithoutIntl: React.StatelessComponent<InjectedIntlProps> = ({ intl }) => (
     <div>
-        <StrukturertTekst tekst={getContent(barnetErInnlagt, intl)} />
+        <Innhold className="blokk-m" source={getSource(barnetErInnlagt, intl)} />
         <div className={cls.element('eksempeltekst')}>
             <Normaltekst>
                 {getTranslation('om_foreldrepenger.sykdom.innlagt.eksempeltittel', intl)}
@@ -51,14 +51,14 @@ const BarnetErInnlagtWithoutIntl: React.StatelessComponent<InjectedIntlProps> = 
             </MediaQuery>
         </div>
         <LesMer intro={getTranslation('om_foreldrepenger.sykdom.innlagt.utsette', intl)}>
-            <StrukturertTekst tekst={getContent(barnetErInnlagtUtsette, intl)} />
+            <Innhold source={getSource(barnetErInnlagtUtsette, intl)} />
         </LesMer>
     </div>
 );
 
 const EnAvForeldreneErSykeWithoutIntl: React.StatelessComponent<InjectedIntlProps> = ({ intl }) => (
     <div>
-        <StrukturertTekst tekst={getContent(syke, intl)} />
+        <Innhold className="blokk-m" source={getSource(syke, intl)} />
         <div className={cls.element('eksempeltekst')}>
             <Normaltekst>
                 {getTranslation('om_foreldrepenger.sykdom.sykmeldt.eksempeltittel', intl)}
@@ -75,10 +75,10 @@ const EnAvForeldreneErSykeWithoutIntl: React.StatelessComponent<InjectedIntlProp
             </MediaQuery>
         </div>
         <LesMer intro={getTranslation('om_foreldrepenger.sykdom.innlagt.utsette', intl)}>
-            <StrukturertTekst tekst={getContent(sykeUtsette, intl)} />
+            <Innhold source={getSource(sykeUtsette, intl)} />
         </LesMer>
         <LesMer intro={getTranslation('om_foreldrepenger.sykdom.innlagt.overta', intl)}>
-            <StrukturertTekst tekst={getContent(sykeOverta, intl)} />
+            <Innhold source={getSource(sykeOverta, intl)} />
         </LesMer>
     </div>
 );

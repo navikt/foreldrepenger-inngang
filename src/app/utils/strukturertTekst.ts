@@ -22,19 +22,21 @@ export interface MarkDefinition {
     href?: string;
 }
 
-export interface Tekstsnutt {
-    type: TekstsnuttType;
+export interface TekstsnuttKompleks {
     text: string;
+    type?: TekstsnuttType;
     marks?: Array<MarkReference | Mark>;
 }
 
+export type Tekstsnutt = TekstsnuttKompleks | string;
+
 export interface Avsnitt {
-    type: AvsnittType;
-    style: TypografiType;
     children: Array<Tekstsnutt>;
-    markDefs: Array<MarkDefinition>;
-    level: number;
-    listItem: ListItem;
+    type?: AvsnittType;
+    style?: TypografiType;
+    markDefs?: Array<MarkDefinition>;
+    level?: number;
+    listItem?: ListItem;
 }
 
 export type Definisjoner = { [s: string]: string };

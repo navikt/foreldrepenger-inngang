@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { getContent } from '../../utils/getContent';
 import { injectIntl, InjectedIntlProps } from 'react-intl';
 import BEMHelper from '../../utils/bem';
 import Breadcrumbs from '../../components/breadcrumbs/Breadcrumbs';
@@ -7,8 +6,8 @@ import getTranslation from 'app/utils/i18nUtils';
 import HeaderInformasjon from '../../components/header-informasjon/HeaderInformasjon';
 import PanelMedIllustrasjon from '../../components/panel-med-illustrasjon/PanelMedIllustrasjon';
 import Sidebanner from '../../components/sidebanner/Sidebanner';
-import StrukturertTekst from '../../components/strukturert-tekst/StrukturertTekst';
 import SvgMask from 'app/components/svg-mask/SvgMask';
+import Innhold, { getSource } from 'app/utils/innhold/Innhold';
 
 interface Props {
     location: any;
@@ -28,7 +27,7 @@ const Dokumentasjon: React.StatelessComponent<Props & InjectedIntlProps> = ({ lo
                     <PanelMedIllustrasjon
                         title={getTranslation('dokumentasjon.tittel', intl)}
                         svg={<SvgMask svg={pageSvg} />}>
-                        <StrukturertTekst tekst={getContent('dokumentasjon/dokumentasjon', intl)} />
+                        <Innhold source={getSource('dokumentasjon/dokumentasjon', intl)} />
                     </PanelMedIllustrasjon>
                 </article>
             </div>

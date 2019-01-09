@@ -1,52 +1,54 @@
 import * as React from 'react';
 import { FrilanserIkon } from './ikoner/FrilanserIkon';
-import { getContent } from '../../../utils/getContent';
-import { injectIntl, InjectedIntlProps } from 'react-intl';
+import { getGrunnbeløpet } from 'app/utils/beregningUtils';
+import { injectIntl, InjectedIntlProps, InjectedIntl } from 'react-intl';
 import { Innholdsfane } from '../../../components/innholdsfaner/fane/Fane';
-import AndreInntekskilder from './innhold/AndreInntekskilder';
-import Arbeidstaker from './innhold/Arbeidstaker';
 import ArbeidstakerIkon from './ikoner/ArbeidstakerIkon';
 import BEMHelper from '../../../utils/bem';
-import Frilanser from './innhold/Frilanser';
 import getTranslation from 'app/utils/i18nUtils';
-import HarYtelser from './innhold/HarYtelser';
+import Innhold, { getSource } from 'app/utils/innhold/Innhold';
 import Innholdsfaner from '../../../components/innholdsfaner/Innholdsfaner';
 import PanelMedIllustrasjon from '../../../components/panel-med-illustrasjon/PanelMedIllustrasjon';
 import PoliceOfficerIkon from './ikoner/PoliceOfficerIkon';
-import Selvstendig from './innhold/Selvstendig';
 import SelvstendigIkon from './ikoner/SelvstendigIkon';
-import StrukturertTekst from '../../../components/strukturert-tekst/StrukturertTekst';
 import YtelseFraNavIkon from './ikoner/YtelseFraNavIkon';
 import './beregning.less';
 
 const beregningSvg = require('../../../assets/ark/ark-beregning.svg').default;
 const cls = BEMHelper('beregning');
 
-const tabs: Innholdsfane[] = [
+const getTabs = (intl: InjectedIntl): Innholdsfane[] => [
     {
         label: 'om_foreldrepenger.beregning.arbeidstaker',
         icon: <ArbeidstakerIkon />,
-        component: <Arbeidstaker />
+        component: <Innhold source={getSource('om-foreldrepenger/beregning/arbeidstaker', intl)} />
     },
     {
         label: 'om_foreldrepenger.beregning.selvstendig',
         icon: <SelvstendigIkon />,
-        component: <Selvstendig />
+        component: <Innhold source={getSource('om-foreldrepenger/beregning/selvstendig', intl)} />
     },
     {
         label: 'om_foreldrepenger.beregning.frilanser.ikontittel',
         icon: <FrilanserIkon />,
-        component: <Frilanser />
+        component: <Innhold source={getSource('om-foreldrepenger/beregning/frilanser', intl)} />
     },
     {
         label: 'om_foreldrepenger.beregning.harYtelse',
         icon: <YtelseFraNavIkon />,
-        component: <HarYtelser />
+        component: <Innhold source={getSource('om-foreldrepenger/beregning/har-ytelser', intl)} />
     },
     {
         label: 'om_foreldrepenger.beregning.andreInntektskilder',
         icon: <PoliceOfficerIkon />,
-        component: <AndreInntekskilder />
+        component: (
+            <Innhold
+                source={getSource('om-foreldrepenger/beregning/andre-inntekskilder', intl)}
+                values={{
+                    treGangerGrunnbeløpet: (getGrunnbeløpet() * 3).toLocaleString(intl.locale)
+                }}
+            />
+        )
     }
 ];
 
@@ -61,8 +63,13 @@ const Beregning: React.StatelessComponent<Props & InjectedIntlProps> = ({ id, in
             id={id}
             title={getTranslation('om_foreldrepenger.beregning.tittel', intl)}
             svg={beregningSvg}>
-            <StrukturertTekst tekst={getContent('om-foreldrepenger/beregning/beregning', intl)} />
-            <Innholdsfaner tabs={tabs} />
+            <Innhold
+                source={getSource('om-foreldrepenger/beregning/beregning', intl)}
+                values={{
+                    seksG: (getGrunnbeløpet() * 6).toLocaleString(intl.locale)
+                }}
+            />
+            <Innholdsfaner tabs={getTabs(intl)} />
         </PanelMedIllustrasjon>
     );
 };

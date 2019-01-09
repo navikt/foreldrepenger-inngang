@@ -1,0 +1,3 @@
+<innhold>
+    <avsnitt>Based on the figures you have provided, we assume that you <variabel>INNTEKTSSITUASJON</variabel> <b><variabel>ÅRLIG_SNITTLØNN</variabel> kroner</b>. If what you actually <variabel>INNTEKTSSITUASJON_PRETERITUM</variabel> in the past twelve months is less than <b><variabel>NEDRE_AVVIKSGRENSE</variabel> kr</b>  or higher than <b><variabel>ØVRE_AVVIKSGRENSE</variabel> kr</b>, you will first be informed about what you will receive when your application has been processed.</avsnitt>
+</innhold>

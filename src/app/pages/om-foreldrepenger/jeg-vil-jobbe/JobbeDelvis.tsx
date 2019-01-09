@@ -1,18 +1,15 @@
 import * as React from 'react';
+import { CSSTransition } from 'react-transition-group';
 import { InjectedIntlProps, injectIntl } from 'react-intl';
-import LesMer from '../../../components/les-mer/LesMer';
-import StrukturertTekst from '../../../components/strukturert-tekst/StrukturertTekst';
-import { getContent } from '../../../utils/getContent';
-import BEMHelper from '../../../utils/bem';
 import { JegVilJobbeDeltid } from './komponenter/JegVilJobbeDeltid';
 import { JegVilJobbeDeltidExpandert } from './komponenter/JegVilJobbeDeltidExpandert';
-import { CSSTransition } from 'react-transition-group';
-import TypografiBase from 'nav-frontend-typografi';
-import MediaQuery from 'react-responsive';
 import { JegVilJobbeDeltidExpandertMobil } from './komponenter/JegVilJobbeDeltidExpandertMobil';
+import BEMHelper from '../../../utils/bem';
+import classnames from 'classnames';
 import getTranslation from 'app/utils/i18nUtils';
-const firstPanelContent = 'om-foreldrepenger/jeg-vil-jobbe/heltidsjobb';
-const secondPanelContent = 'om-foreldrepenger/jeg-vil-jobbe/deltidsjobb';
+import Innhold, { getSource } from 'app/utils/innhold/Innhold';
+import MediaQuery from 'react-responsive';
+import TypografiBase from 'nav-frontend-typografi';
 const cls = BEMHelper('jegVilJobbe');
 
 class JobbeDelvis extends React.Component<InjectedIntlProps> {
@@ -84,10 +81,11 @@ class JobbeDelvis extends React.Component<InjectedIntlProps> {
     }
 
     render = () => (
-        <div className={cls.element('jobbeDelvis')}>
+        <div className={classnames('blokk-l', cls.element('jobbeDelvis'))}>
             <div className={cls.element('illustrasjon')}>
-                <StrukturertTekst
-                    tekst={getContent(
+                <Innhold
+                    className="blokk-s"
+                    source={getSource(
                         'om-foreldrepenger/jeg-vil-jobbe/deltid-fane',
                         this.props.intl
                     )}
@@ -116,15 +114,6 @@ class JobbeDelvis extends React.Component<InjectedIntlProps> {
                     );
                 })}
             </div>
-            <div className={cls.element('firstDropdown')}>
-                <LesMer
-                    intro={getTranslation('om_foreldrepenger.jobbe.heltidsjobb', this.props.intl)}>
-                    <StrukturertTekst tekst={getContent(firstPanelContent, this.props.intl)} />
-                </LesMer>
-            </div>
-            <LesMer intro={getTranslation('om_foreldrepenger.jobbe.deltidsjobb', this.props.intl)}>
-                <StrukturertTekst tekst={getContent(secondPanelContent, this.props.intl)} />
-            </LesMer>
         </div>
     );
 }

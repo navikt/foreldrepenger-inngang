@@ -1,10 +1,10 @@
 import * as React from 'react';
 import { addAntallUkerSomSnakkebobletittel } from './utils';
-import { getContent } from '../../../../utils/getContent';
+
 import { injectIntl, InjectedIntl, InjectedIntlProps } from 'react-intl';
 import Foreldrepar from '../../../../components/foreldrepar/Foreldrepar';
 import Informasjonsfaner, { InformasjonsfaneProps } from '../informasjons-faner/Informasjonsfaner';
-import StrukturertTekst from '../../../../components/strukturert-tekst/StrukturertTekst';
+import Innhold, { getSource } from 'app/utils/innhold/Innhold';
 import getTranslation from 'app/utils/i18nUtils';
 
 const content = 'om-foreldrepenger/hvor-lenge/mor-og-mor/mor-og-mor';
@@ -32,7 +32,7 @@ const getInformasjonsfaner = (intl: InjectedIntl): InformasjonsfaneProps[] => [
                     )
                 ]
             },
-            component: <StrukturertTekst tekst={getContent(morsDel, intl)} />
+            component: <Innhold source={getSource(morsDel, intl)} />
         }
     },
     {
@@ -46,7 +46,7 @@ const getInformasjonsfaner = (intl: InjectedIntl): InformasjonsfaneProps[] => [
                     getTranslation('om_foreldrepenger.hvor_lenge.fordeling.krav.som_far', intl)
                 ]
             },
-            component: <StrukturertTekst tekst={getContent(medmorsDel, intl)} />
+            component: <Innhold source={getSource(medmorsDel, intl)} />
         }
     },
     {
@@ -63,7 +63,7 @@ const getInformasjonsfaner = (intl: InjectedIntl): InformasjonsfaneProps[] => [
                     )} mor`
                 ]
             },
-            component: <StrukturertTekst tekst={getContent(fellesDel, intl)} />
+            component: <Innhold source={getSource(fellesDel, intl)} />
         }
     }
 ];
@@ -71,13 +71,13 @@ const getInformasjonsfaner = (intl: InjectedIntl): InformasjonsfaneProps[] => [
 const MorOgMor = ({ intl }: InjectedIntlProps) => {
     return (
         <div>
-            <StrukturertTekst tekst={getContent(content, intl)} />
+            <Innhold source={getSource(content, intl)} />
             <Informasjonsfaner
                 tabs={getInformasjonsfaner(intl).map(
                     addAntallUkerSomSnakkebobletittel('morOgMor', intl)
                 )}
             />
-            <StrukturertTekst tekst={getContent(kalkulatorbeskrivelse, intl)} />
+            <Innhold source={getSource(kalkulatorbeskrivelse, intl)} />
         </div>
     );
 };

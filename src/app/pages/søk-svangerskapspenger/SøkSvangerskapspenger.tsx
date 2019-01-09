@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { getContent } from 'app/utils/getContent';
+
 import { InjectedIntlProps, injectIntl } from 'react-intl';
 import BEMHelper from '../../utils/bem';
 import Breadcrumbs from '../../components/breadcrumbs/Breadcrumbs';
@@ -7,7 +7,7 @@ import classnames from 'classnames';
 import getTranslation from 'app/utils/i18nUtils';
 import PanelMedIllustrasjon from 'app/components/panel-med-illustrasjon/PanelMedIllustrasjon';
 import Sidebanner from 'app/components/sidebanner/Sidebanner';
-import StrukturertTekst from 'app/components/strukturert-tekst/StrukturertTekst';
+import Innhold, { getSource } from 'app/utils/innhold/Innhold';
 import './søkSvangerskapspenger.less';
 
 const hvaSøkerDuCls = BEMHelper('hvaSøkerDu');
@@ -29,8 +29,8 @@ class SøkForeldrepenger extends Component<Props & InjectedIntlProps> {
                     <PanelMedIllustrasjon
                         svg={infoSvg}
                         title={getTranslation('svangerskapspenger', this.props.intl)}>
-                        <StrukturertTekst
-                            tekst={getContent(
+                        <Innhold
+                            source={getSource(
                                 'hva-søker-du/søk-svangerskapspenger',
                                 this.props.intl
                             )}

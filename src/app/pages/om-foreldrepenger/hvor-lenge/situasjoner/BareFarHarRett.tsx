@@ -1,8 +1,8 @@
 import * as React from 'react';
 import Informasjonsfaner, { InformasjonsfaneProps } from '../informasjons-faner/Informasjonsfaner';
-import StrukturertTekst from '../../../../components/strukturert-tekst/StrukturertTekst';
+import Innhold, { getSource } from 'app/utils/innhold/Innhold';
 import { injectIntl, InjectedIntl, InjectedIntlProps } from 'react-intl';
-import { getContent } from '../../../../utils/getContent';
+
 import { addAntallUkerSomSnakkebobletittel } from './utils';
 import getTranslation from 'app/utils/i18nUtils';
 
@@ -25,7 +25,7 @@ const getInformasjonsfaner = (intl: InjectedIntl): InformasjonsfaneProps[] => [
                     )} mor`
                 ]
             },
-            component: <StrukturertTekst tekst={getContent(farsDel, intl)} />
+            component: <Innhold source={getSource(farsDel, intl)} />
         }
     }
 ];
@@ -33,13 +33,13 @@ const getInformasjonsfaner = (intl: InjectedIntl): InformasjonsfaneProps[] => [
 const BareFarHarRett = ({ intl }: InjectedIntlProps) => {
     return (
         <div>
-            <StrukturertTekst tekst={getContent(content, intl)} />
+            <Innhold source={getSource(content, intl)} />
             <Informasjonsfaner
                 tabs={getInformasjonsfaner(intl).map(
                     addAntallUkerSomSnakkebobletittel('bareFarHarRett', intl)
                 )}
             />
-            <StrukturertTekst tekst={getContent(kalkulatorbeskrivelse, intl)} />
+            <Innhold source={getSource(kalkulatorbeskrivelse, intl)} />
         </div>
     );
 };

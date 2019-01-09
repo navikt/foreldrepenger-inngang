@@ -1,9 +1,11 @@
 import * as React from 'react';
-import { getContent } from 'app/utils/getContent';
+import { ENGANGSSUM_PER_BARN } from 'app/utils/beregningUtils';
+
 import { injectIntl, InjectedIntlProps } from 'react-intl';
 import BEMHelper from '../../utils/bem';
 import Breadcrumbs from '../../components/breadcrumbs/Breadcrumbs';
 import Environment from 'app/Environment';
+import getTranslation from 'app/utils/i18nUtils';
 import HeaderInformasjon from '../../components/header-informasjon/HeaderInformasjon';
 import Hjelp from '../../components/hjelpe-seksjon/HjelpeSeksjon';
 import HvaKanDuFå from './HvaKanDuFå';
@@ -15,7 +17,7 @@ import NårKanDuSøke from './når-kan-du-søke/NårKanDuSøke';
 import Sidebanner from '../../components/sidebanner/Sidebanner';
 import TilFarEllerMedmor from './TilFarEllerMedmor';
 import '../infosider/infosider.less';
-import getTranslation from 'app/utils/i18nUtils';
+import { getSource } from 'app/utils/innhold/Innhold';
 
 const infosiderCls = BEMHelper('infosider');
 
@@ -29,6 +31,10 @@ export type EngangsstonadSection =
     | 'nar-kan-du-soke'
     | 'nar-blir-pengene-utbetalt'
     | 'engangsstonad-til-far-eller-medmor';
+
+export interface EngangsstonadSectionProps {
+    id: EngangsstonadSection;
+}
 
 const sections: EngangsstonadSection[] = [
     'hvem-kan-fa-engangsstonad',
@@ -59,13 +65,16 @@ const OmEngangsstonad: React.StatelessComponent<Props & InjectedIntlProps> = ({
                 <article className={infosiderCls.element('article')}>
                     <Breadcrumbs path={location.pathname} />
                     <Informasjonsbanner
-                        tekst={getContent('om-engangsstønad/nye-regler-fra-2019', intl)}
+                        source={getSource('om-engangsstønad/nye-regler-fra-2019', intl)}
+                        values={{
+                            engangssum: ENGANGSSUM_PER_BARN.toLocaleString(intl.locale)
+                        }}
                     />
-                    <HvemKanFåEngangsstønad />
-                    <HvaKanDuFå />
+                    <HvemKanFåEngangsstønad id={sections[0]} />
+                    <HvaKanDuFå id={sections[1]} />
                     <NårKanDuSøke id={sections[2]} />
-                    <NårBlirPengeneUtbetalt />
-                    <TilFarEllerMedmor id="engangsstonad-til-far-eller-medmor" />
+                    <NårBlirPengeneUtbetalt id={sections[3]} />
+                    <TilFarEllerMedmor id={sections[4]} />
                     <Hjelp />
                 </article>
             </MedInnholdsfortegnelse>
