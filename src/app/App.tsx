@@ -8,7 +8,7 @@ import './app.less';
 const DEFAULT_LANG: Language = 'nb';
 
 // Feature-toggling? Aldri hørt om.
-const ENABLE_LANGUAGE_TOGGLER = true;
+const ENABLE_LANGUAGE_TOGGLER = false;
 
 interface State {
     currentLanguage: Language;
