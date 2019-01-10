@@ -186,8 +186,6 @@
 
     "om_foreldrepenger.ferie.tittel": "Dersom du skal på ferie",
     "om_foreldrepenger.ferie.eksempel_label": "Eksempel på korleis du kan forlengje foreldrepengeperioden din når du utset:",
-    "om_foreldrepenger.ferie.rett_til_utsettelse": "Ferie som gir rett til å utsetje",
-    "om_foreldrepenger.ferie.utsette": "Slik går du fram for å utsetje",
 
     "om_foreldrepenger.nye_regler.tittel": "Nye reglar frå 1. juli 2018",
     "om_foreldrepenger.nye_regler_label": "Barnet er født eller adoptert",
@@ -216,23 +214,12 @@
 
     "om_foreldrepenger.hjemme_samtidig.tittel": "Heime samtidig",
     "om_foreldrepenger.hjemme_samtidig.ingress": "Dersom de vil vere heime med barnet samtidig eller byte på, har de fleire val.",
-    "om_foreldrepenger.hjemme_samtidig.enHjemmeFulltid": "Éin er heime fulltid, den andre inntil 50 prosent",
-    "om_foreldrepenger.hjemme_samtidig.delePaHjemme": "Dele på å vere heime",
-    "om_foreldrepenger.hjemme_samtidig.farTvillinger": " Når de får tvillingar eller fleire barn",
-    "om_foreldrepenger.hjemme_samtidig.permisjon": "Permisjon ved fødselen",
+    "om_forer.hjemme_samtidig.permisjon": "Permisjon ved fødselen",
 
     "om_foreldrepenger.adopsjon.tittel": "Adoptere",
-    "om_foreldrepenger.adopsjon.når_starter": "Når startar foreldrepengeperioden?",
-    "om_foreldrepenger.adopsjon.hvor_lenge": "Kor lenge kan du få foreldrepengar?",
-    "om_foreldrepenger.adopsjon.flere_barn": "Adopterer de fleire barn?",
-    "om_foreldrepenger.adopsjon.ikke_rett": "Adopsjon som ikkje gir rett til foreldrepengar",
-    "om_foreldrepenger.adopsjon.tidlig_stebarnsadopsjon": "Stebarnsadopsjon",
 
-    "om_foreldrepenger.beregning.tittel": "Kva kan eg få??",
+    "om_foreldrepenger.beregning.tittel": "Kva kan eg få?",
     "om_foreldrepenger.beregning.arbeidstaker": "Arbeidstakar",
-    "om_foreldrepenger.beregning.arbeidstaker.inntekter_som_tas_med": "Inntekter som blir tekne med i berekninga",
-    "om_foreldrepenger.beregning.arbeidstaker.inntekter_som_ikke_tas_med": "Inntekter som ikkje blir tekne med",
-    "om_foreldrepenger.beregning.arbeidstaker.dager_uten_arbeid": "Dagar utan arbeid som tel med i berekninga",
     "om_foreldrepenger.beregning.selvstendig": " Sjølvstendig næringsdrivande eller frilansar",
     "om_foreldrepenger.beregning.harYtelse": "Utbetaling\nfrå NAV",
     "om_foreldrepenger.beregning.andreInntektskilder": "Militær- eller sivilforsvaret",
