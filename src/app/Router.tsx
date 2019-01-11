@@ -6,7 +6,6 @@ import SøkSvangerskapspenger from './pages/søk-svangerskapspenger/SøkSvangers
 import OmForeldrepenger from './pages/om-foreldrepenger/OmForeldrepenger';
 import OmEngangsstønad from './pages/om-engangsstønad/OmEngangsstønad';
 import Dokumentasjon from './pages/dokumentasjon/Dokumentasjon';
-import NyeBeregningsregler from './pages/nye-beregningsregler/NyeBeregningsregler';
 import Kalkulator from './pages/kalkulator/Kalkulator';
 import Veiviser from './pages/veiviser/Veiviser';
 import { ValidPath } from './utils/validPath';
@@ -45,12 +44,6 @@ const Router = () => (
             path="/om-foreldrepenger"
             component={OmForeldrepenger}
             key="om-foreldrepenger"
-        />
-        <ValidRoute
-            exact={true}
-            path="/om-foreldrepenger/nye-beregningsregler"
-            component={NyeBeregningsregler}
-            key="nye-beregningsregler"
         />
         <ValidRoute exact={true} path="/veiviser" component={Veiviser} key="veiviser" />
         <Redirect to="/" />
