@@ -19,8 +19,6 @@
     "fødsel": "Fødsel",
     "foreldrepenger": "Foreldrepengar",
     "hjemme_samtidig": "Heime samtidig",
-    "jeg_har_hatt_inntekt": "Eg har hatt inntekt",
-    "jeg_har_inntekt": "Eg har inntekt",
     "klager": "Klagar",
     "kontakt_oss": "Kontakt oss",
     "lukk_informasjon": "Lukk informasjon",
@@ -59,6 +57,7 @@
     "route.om-engangsstonad": "Om eingongsstønad",
     "route.foreldrepenger": "Foreldrepengar",
     "route.svangerskapspenger": "Svangerskapspengar",
+    "route.dokumentasjon": "Dokumentasjon som må leggjast ved",
     "route.viktige-frister": "Viktige fristar",
     "route.blindside": "Uferdig side!",
     "route.nye-beregningsregler": "Nye berekningsreglar",
@@ -66,8 +65,9 @@
     "route.veiviser": "Kva har du rett til?",
 
     "informasjonstavle.tittel": "Foreldrepengar, eingongsstønad og svangerskapspengar",
-    "informasjonstavle.hva_kan_jeg_få": "Kva kan eg få?",
-    "informasjonstavle.hva_kan_jeg_få_ingress": "Bruk vegvisaren og finn ut om du skal søkje om foreldrepengar eller eingongsstønad",
+    "informasjonstavle.ingress": "Dette har du rett til når du ventar barn eller skal ha foreldrepermisjon.",
+    "informasjonstavle.hva_kan_du_få": "Kva kan du få?",
+    "informasjonstavle.hva_kan_du_få_ingress": "Finn ut om du kan ha rett til foreldrepengar eller eingongsstønad.",
     "informasjonstavle.hvor_mye": "Kor mykje?",
     "informasjonstavle.hvor_mye_ingress": "Rekn ut kor mykje du kan få i foreldrepengar.",
     "informasjonstavle.hvor_lenge": "Kor lenge?",
@@ -81,16 +81,16 @@
     "informasjonstavle.mer_informasjon.engangsstønad": "Dersom du ventar barn og ikkje hatt inntekt det siste året, kan du få ein eingongssum i staden for foreldrepengar.",
     "informasjonstavle.mer_informasjon.svangerskapspenger": "Dersom du ikkje kan jobbe når du er gravid fordi det kan skade det ufødde barnet, kan du få svangerskapspengar.",
 
-    "informasjonstavle.andre_lenker.tittel": "Relatert informasjon",
+    "informasjonstavle.andre_lenker.dokumentasjon": "Dokumentasjon som må leggjast ved",
     "informasjonstavle.andre_lenker.ettersende_vedlegg_til_søknad": "Ettersende vedlegg til søknad",
-    "informasjonstavle.andre_lenker.hvis_du_skal_på_ferie": "Dersom du skal på ferie",
-    "informasjonstavle.andre_lenker.regelverk": "Regelverk",
-    "informasjonstavle.andre_lenker.hvis_en_av_dere_blir_syke": "Dersom ein av dykk blir sjuke",
-    "informasjonstavle.andre_lenker.meld_fra_om_endringer": "Meld fra om endringar",
-    "informasjonstavle.andre_lenker.slik_klager_du": "Slik klagar du",
-    "informasjonstavle.andre_lenker.husk_å_søke_i_rett_tid": "Hugs å søkje i rett tid",
-    "informasjonstavle.andre_lenker.opphold_i_utlandet": "Opphald i utlandet",
     "informasjonstavle.andre_lenker.hvis_du_vil_jobbe": "Dersom du vil jobbe",
+    "informasjonstavle.andre_lenker.hvis_en_av_dere_blir_syke": "Dersom ein av dykk blir sjuke",
+    "informasjonstavle.andre_lenker.informasjon_om_kontantstøtte": "Informasjon om kontantstøtte",
+    "informasjonstavle.andre_lenker.meld_fra_om_endringer": "Meld fra om endringar",
+    "informasjonstavle.andre_lenker.opphold_i_utlandet": "Opphald i utlandet",
+    "informasjonstavle.andre_lenker.regelverk": "Regelverk",
+    "informasjonstavle.andre_lenker.slik_klager_du": "Slik klagar du",
+    "informasjonstavle.andre_lenker.tittel": "Relatert informasjon",
 
     "tjenester.tittel": "Kor mykje og kor lenge?",
     "tjenester.beregning_tittel": "Berekning av foreldrepengar",
@@ -126,9 +126,12 @@
     "kalkulator.lukk_info": "Lukk informasjon",
     "kalkulator.ytelser_som_gir_rett_tittel": "Utbetalingar som gir rett til foreldrepengar og spesielt om dagpengar og AAP",
 
+    "dokumentasjon.banner": "Dokumentasjon som må leggjast ved",
+    "dokumentasjon.tittel": "Dokumentasjon som må leggjast ved",
+
     "hva_søker_du.tittel": "Kva vil du søkje om?",
     "hva_søker_du.søk_foreldrepenger": "Søk om foreldrepengar",
-    "hva_søker_du.har_søkt_foreldrepenger": "Søk om endring",
+    "hva_søker_du.ettersend_vedlegg": "Ettersend vedlegg",
     "hva_søker_du.søk_engangsstønad": "Søk om eingongsstønad",
     "hva_søker_du.engangsstønad_modal": "Les om eingongsstønad til far, medmor eller ved adopsjon",
     "hva_søker_du.søk_svangerskapspenger": "Søk om svangerskapspengar",
@@ -145,13 +148,17 @@
     "søk_svangerskapspenger.tittel": "Søk svangerskapspengar",
 
     "hurtiglenke.hvem_kan_fa_foreldrepenger": "Kven kan få foreldrepengar?",
-    "hurtiglenke.hvor_lenge_kan_jeg_fa_foreldrepenger": "Kor lenge kan eg få foreldrepengar?",
-    "hurtiglenke.hva_kan_jeg_fa": "Kva kan eg få?",
+    "hurtiglenke.hvor_lenge_kan_du_fa_foreldrepenger": "Kor lenge kan du få foreldrepengar?",
+    "hurtiglenke.hva_kan_du_fa": "Kva kan du få?",
+    "hurtiglenke.nar_kan_du_soke": "Når kan du søkje?",
     "hurtiglenke.hvis_du_skal_pa_ferie": "Dersom du skal på ferie",
     "hurtiglenke.hvis_du_vil_jobbe": "Dersom du vil jobbe",
     "hurtiglenke.hvis_en_av_dere_blir_syke": "Dersom ein av dykk blir sjuk",
     "hurtiglenke.hjemme_samtidig": "Heime samtidig",
     "hurtiglenke.adoptere": "Adoptere",
+    "hurtiglenke.hvem_kan_fa_engangsstonad": "Kven kan få eingongsstønad?",
+    "hurtiglenke.nar_blir_pengene_utbetalt": "Når blir pengane betalte ut?",
+    "hurtiglenke.engangsstonad_til_far_eller_medmor": "Eingongsstønad til far eller medmor",
 
     "innholdsfortegnelse.søk_nå": "Søk no",
 
@@ -180,9 +187,18 @@
     "om_foreldrepenger.hvor_lenge.fordeling.aktivitetskrav": "Aktivitetskrav til {subjekt}",
     "om_foreldrepenger.hvor_lenge.fordeling.kan_ikke_overta": "Kan ikkje bli overteken av {subjekt}",
     "om_foreldrepenger.hvor_lenge.fordeling.krav_til_far": "Det samme gjelder ved adopsjon",
+    "om_foreldrepenger.hvor_lenge.fordeling.tre_uker_før_fødsel": "I tillegg til mødrekvoten, får mor også tre veker før termin",
+    "om_foreldrepenger.hvor_lenge.fordeling.i_tillegg_til_foreldrepenger": "I tillegg til foreldrepenger, får mor også tre veker før termin",
+    "om_foreldrepenger.hvor_lenge.fordeling.snakkeboble.tittel": "{antallUker100} veker ved 100 prosent foreldrepengar, {antallUker80} veker ved 80 prosent foreldrepengar.",
 
     "om_foreldrepenger.hvor_lenge.forslag.åpne": "Forslag om endring av foreldrepengeperioden ved 80 prosent",
     "om_foreldrepenger.hvor_lenge.forslag.lukke": "Lukk informasjon",
+
+    "om_foreldrepenger.når_kan_du_søke.tittel": "Når kan du søkje?",
+    "om_foreldrepenger.når_kan_du_søke.hvis_du_skal_utsette_fordi": " Dersom du skal utsetje fordi:",
+    "om_foreldrepenger.når_kan_du_søke.utsette_sykdom": " Ein av dykk blir sjuke",
+    "om_foreldrepenger.når_kan_du_søke.utsette_jobbe": "Du skal jobbe",
+    "om_foreldrepenger.når_kan_du_søke.utsette_ferie": "Du skal ha ferie",
 
     "om_foreldrepenger.ferie.tittel": "Dersom du skal på ferie",
     "om_foreldrepenger.ferie.eksempel_label": "Eksempel på korleis du kan forlengje foreldrepengeperioden din når du utset:",
@@ -202,8 +218,10 @@
     "om_foreldrepenger.menHvaHvis.hjemmeSamtidig": "heime samtidig",
 
     "om_foreldrepenger.jobbe.tittel": "Dersom du vil jobbe",
-    "om_foreldrepenger.jobbe.heltidsjobb": "Slik går du fram ved heiltidsjobb",
-    "om_foreldrepenger.jobbe.deltidsjobb": "Slik går du fram når du jobbar delvis",
+    "om_foreldrepenger.jobbe.fanetittel.jobbeHeltid": "Jobbe heiltid (100 prosent)",
+    "om_foreldrepenger.jobbe.fanetittel.jobbeDelvis": "Jobbe delvis",
+    "om_foreldrepenger.jobbe.klikkForDetaljertInformasjon": "(klikk for detaljert informasjon)",
+    "om_foreldrepenger.jobbe.kikkForLukkDetaljertInformasjon": "(klikk for å lukke)",
 
     "om_foreldrepenger.sykdom.tittel": "Dersom ein av dykk blir sjuk",
     "om_foreldrepenger.sykdom.innlagt": "Barnet er innlagt",
@@ -211,6 +229,9 @@
     "om_foreldrepenger.sykdom.innlagt.utsette": "Slik går du fram for å utsetje",
     "om_foreldrepenger.sykdom.innlagt.overta": "Slik går du fram for å overta",
     "om_foreldrepenger.sykdom.innlagt.eksempeltittel": "Eksempel på korleis du kan forlengje foreldrepengeperioden din når du utset:",
+    "om_foreldrepenger.sykdom.sykmeldt.eksempeltittel": " Eksempel på korleis du kan forlengje foreldrepengeperioden din når du utset:",
+    "om_foreldrepenger.sykdom.sykmeldt": " Sjukmeld",
+    "om_foreldrepenger.sykdom.barnet_er_innlagt": "Barnet er innlagt",
 
     "om_foreldrepenger.hjemme_samtidig.tittel": "Heime samtidig",
     "om_foreldrepenger.hjemme_samtidig.ingress": "Dersom de vil vere heime med barnet samtidig eller byte på, har de fleire val.",
@@ -223,6 +244,7 @@
     "om_foreldrepenger.beregning.selvstendig": " Sjølvstendig næringsdrivande eller frilansar",
     "om_foreldrepenger.beregning.harYtelse": "Utbetaling\nfrå NAV",
     "om_foreldrepenger.beregning.andreInntektskilder": "Militær- eller sivilforsvaret",
+    "om_foreldrepenger.beregning.frilanser.ikontittel": "Frilansar",
 
     "om_foreldrepenger.hjelp.tittel": "Fann du ikkje det du leita etter?",
 
@@ -231,6 +253,7 @@
     "om_engangsstønad.hva_kan_du_få.tittel": "Kva kan du få?",
     "om_engangsstønad.utbetaling.tittel": "Når blir pengane betalte ut?",
     "om_engangsstønad.til_far.tittel": "Eingongsstønad til far eller medmor",
+    "om_engangsstønad.når_kan_du_søke.tittel": "Når kan du søkje?",
 
     "veiviser.panelMedIllustrasjon.tittel": "Foreldrepengar eller eingongsstønad",
     "veiviser.sidebanner.tittel": "Kva har du rett på?",
@@ -243,6 +266,9 @@
     "veiviser.navgigasjonsboks.kalk.label": "Rekn ut kor mykje du kan få, ved hjelp av kalkulatoren",
     "veiviser.navigasjonsboks.planlegg.label": "Planlegg kor lenge du kan vere heime med barnet ditt",
     "veiviser.valg.beregnet.aarsinntekt": "Berekna årsinntekt",
+    "veiviser.valg.inntekt.subHeader": "Månadslønna di før skatt",
+    "veiviser.valg.inntekt.beregnet.subHeader": "Berekna årsinntekt før skatt",
+    "veiviser.valg.beregn.knapp": "Berekn inntekt",
 
     "veiviser.valg.spørsmål.mor.en": "Eg er arbeidstakar, frilansar, sjølvstendig næringsdrivande eller får utbetalingar frå NAV?",
     "veiviser.valg.spørsmål.mor.to": "Har du andre inntektskjelder?",
@@ -285,10 +311,14 @@
     "veiviser.valg.svar.far.seks.nei": "Nei, eg er ikkje medlem",
 
     "veiviser.valg.hjelpetekst.lukk": "Lukk informasjon",
+    "veiviser.valg.hjelpetekst.ingress": " Kva er forskjellen mellom foreldrepengar og eingongsstønad?",
+    "veiviser.valg.hjelpetekst.hattInntekt": "Kvifor seks av dei ti siste månadene?",
     "veiviser.valg.hjelpetekst.utbetalinger": "Kva er andre inntektskjelder?",
+    "veiviser.valg.hjelpetekst.utbetalinger.nav": " Kva utbetalingar frå NAV gir rett?",
     "veiviser.valg.hjelpetekst.mndInntekt": "Kor mykje må eg ha i månadslønn før skatt?",
     "veiviser.valg.hjelpetekst.andreInntekt": "Info til årsinntekt",
     "veiviser.valg.hjelpetekst.medlemskap": "Kva vil det seie å vere medlem?",
+    "veiviser.valg.hjelpetekst.medlem.folketrygden": " Kva vil det seie å vere medlem av folketrygda?",
 
     "veiviser.valg.resultat.overskrift.foreldrepenger": "Du har rett til foreldrepengar",
     "veiviser.valg.resultat.overskrift.foreldrepenger.ikkeRett": "Du har ikkje rett til foreldrepengar",
@@ -297,7 +327,10 @@
     "veiviser.valg.resultat.knapp.foreldrepenger": "søk om foreldrepengar",
     "veiviser.valg.resultat.knapp.engangsstonad": "søk om eingongstønad",
     "veiviser.valg.resultat.knapp.engangsstonad.info": "les meir om eingongsstønad",
+    "veiviser.valg.resultat.knapp.lesOmForeldrepenger": "les meir om foreldrepengar",
     "veiviser.valg.resultat.knapp.ikkerett.info": "les meir om foreldrepengar",
+    "veiviser.valg.resultat.engangsstonad.headertxt": " Det er berre i nokre få tilfelle du kan ha rett til eingongsstønad..",
+    "veiviser.valg.resultat.foreldrepenger.headertxt": " Du kan lese om korleis du kan ha rett til foreldrepengar.",
 
     "veiviser.valg.resultat.punkt.forste.godkjent": "Eg har hatt inntekt seks av dei ti siste månadene",
     "veiviser.valg.resultat.punkt.andre.godkjent": "Eg har tent minst 48 441 kr i året",
@@ -306,6 +339,9 @@
     "veiviser.valg.resultat.punkt.forste.underkjent": "Eg har ikkje hatt inntekt seks av dei ti siste månadene",
     "veiviser.valg.resultat.punkt.andre.underkjent": "Eg har tent under minstebeløpet på 48 441 kr i året",
     "veiviser.valg.resultat.punkt.tredje.underkjent": "Eg er ikkje medlem av folketrygda",
+
+    "veiviser.navgigasjonsboks.kalk.sublabel": " Rekn ut kor mye du kan få i foreldrepengar.",
+    "veiviser.navigasjonsboks.planlegg.sublabel": " Planlegg kor lenge du kan vere heime med barnet.",
 
     "blindside.veileder": "Så fint å ha deg her!\nDu har klikka deg inn på ei side som vi framleis held på med å lage.\nKlikk deg tilbake for å utforske meir :)",
     "blindside.tittel": "Under arbeid"

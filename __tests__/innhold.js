@@ -16,7 +16,7 @@ const getContentFiles = (retrievedFiles) => {
     });
 };
 
-test('innhold er oversatt', (done) => {
+test('innhold er oversatt til engelsk', (done) => {
     const retrievedFiles = (files) => {
         const removeFileEnding = (file) => file.split('.')[0];
 
@@ -34,6 +34,30 @@ test('innhold er oversatt', (done) => {
         );
 
         expect(missingEnglish).toHaveLength(0);
+        done();
+    };
+
+    getContentFiles(retrievedFiles);
+});
+
+test('innhold er oversatt til nynorsk', (done) => {
+    const retrievedFiles = (files) => {
+        const removeFileEnding = (file) => file.split('.')[0];
+
+        const bokmålFiles = files
+            .filter((file) => !file.endsWith('.en.xml') && !file.endsWith('.nn.xml'))
+            .map(removeFileEnding);
+
+        const nynorskFiles = files
+            .sort()
+            .filter((file) => file.endsWith('.nn.xml'))
+            .map(removeFileEnding);
+
+        const missingNynorsk = bokmålFiles.filter(
+            (bokmålFile) => !nynorskFiles.includes(bokmålFile)
+        );
+
+        expect(missingNynorsk).toHaveLength(0);
         done();
     };
 
