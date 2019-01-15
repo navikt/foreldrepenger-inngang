@@ -59,6 +59,7 @@
     "route.om-engangsstonad": "About lump-sum grant",
     "route.foreldrepenger": "Parental benefit",
     "route.svangerskapspenger": "Pregnancy benefit",
+    "route.dokumentasjon": "Documentation that must be attached",
     "route.viktige-frister": "Important deadlines",
     "route.blindside": "Uferdig side!",
     "route.hvor-mye": "How much?",
@@ -126,6 +127,9 @@
     "kalkulator.lukk_info": "Close information",
     "kalkulator.ytelser_som_gir_rett_tittel": "Payments that entitle you to the parental benefit and particular details regarding the unemployment benefit and work assessment allowance",
 
+    "dokumentasjon.banner": "Documentation that must be attached",
+    "dokumentasjon.tittel": "Documentation that must be attached",
+
     "hva_søker_du.tittel": "What do you wish to apply for?",
     "hva_søker_du.søk_foreldrepenger": "Apply for parental benefit",
     "hva_søker_du.ettersend_vedlegg": "Submit documentation",
@@ -183,6 +187,10 @@
     "om_foreldrepenger.hvor_lenge.fordeling.ingen_krav": "No requirements for what the {subjekt} does",
     "om_foreldrepenger.hvor_lenge.fordeling.aktivitetskrav": "Activity requirements for {subjekt}",
     "om_foreldrepenger.hvor_lenge.fordeling.kan_ikke_overta": "Cannot be taken over by {subjekt}",
+    "om_foreldrepenger.hvor_lenge.fordeling.krav_til_far": "The same rules apply to adoption",
+    "om_foreldrepenger.hvor_lenge.fordeling.tre_uker_før_fødsel": "In addition to the maternal quota, the mother also gets the last three weeks before the estimated date of delivery",
+    "om_foreldrepenger.hvor_lenge.fordeling.i_tillegg_til_foreldrepenger": "In addition to parental benefit, the mother also gets the last three weeks before the estimated date of delivery",
+    "om_foreldrepenger.hvor_lenge.fordeling.snakkeboble.tittel": "{antallUker100} weeks at a benefit rate of 100 per cent parental benefit, {antallUker80} weeks at a benefit rate of 80 per cent parental benefit",
 
     "om_foreldrepenger.hvor_lenge.forslag.åpne": " Proposal for adjustment of parental benefit period at 80 per cent",
     "om_foreldrepenger.hvor_lenge.forslag.lukke": "Close information",
@@ -213,8 +221,10 @@
     "om_foreldrepenger.menHvaHvis.hjemmeSamtidig": "home at the same time",
 
     "om_foreldrepenger.jobbe.tittel": "If you wish to work",
-    "om_foreldrepenger.jobbe.heltidsjobb": "If you have a full-time job, you proceed as follows",
-    "om_foreldrepenger.jobbe.deltidsjobb": "If you work part-time, you proceed as follows",
+    "om_foreldrepenger.jobbe.fanetittel.jobbeHeltid": "Work full-time (100 per cent)",
+    "om_foreldrepenger.jobbe.fanetittel.jobbeDelvis": "Work part-time",
+    "om_foreldrepenger.jobbe.klikkForDetaljertInformasjon": "(click for more detailed information)",
+    "om_foreldrepenger.jobbe.kikkForLukkDetaljertInformasjon": "(click to close)",
 
     "om_foreldrepenger.sykdom.tittel": "If one of you becomes sick",
     "om_foreldrepenger.sykdom.innlagt": "The child has been hospitalized",
@@ -222,8 +232,13 @@
     "om_foreldrepenger.sykdom.innlagt.utsette": "You can postpone using the following process",
     "om_foreldrepenger.sykdom.innlagt.overta": "To take over, you must proceed as follows",
     "om_foreldrepenger.sykdom.innlagt.eksempeltittel": "Example of how you can extend your parental benefit period when you postpone:",
+    "om_foreldrepenger.sykdom.sykmeldt.eksempeltittel": "Example of how you can extend your parental benefit period when you postpone:",
+    "om_foreldrepenger.sykdom.sykmeldt": "On sick leave",
+    "om_foreldrepenger.sykdom.barnet_er_innlagt": "The child is in a health institution",
 
     "om_foreldrepenger.hjemme_samtidig.tittel": "Home at the same time",
+    "om_foreldrepenger.hjemme_samtidig.ingress": "If you want to be home with the child at the same time or take turns, you have several options.",
+
     "om_foreldrepenger.adopsjon.tittel": "Adoption",
 
     "om_foreldrepenger.beregning.tittel": "What am I entitled to?",
@@ -231,6 +246,7 @@
     "om_foreldrepenger.beregning.selvstendig": "Self-employed or freelancer",
     "om_foreldrepenger.beregning.harYtelse": "Payment from NAV",
     "om_foreldrepenger.beregning.andreInntektskilder": "Military service or civil defence",
+    "om_foreldrepenger.beregning.frilanser.ikontittel": "Freelancer",
 
     "om_foreldrepenger.hjelp.tittel": "Were you unable to find what you were looking for?",
 
@@ -250,8 +266,13 @@
     "veiviser.sidebanner.knappMor.label": "Mother",
     "veiviser.sidebanner.knappMedmor.label": "Co-mother",
     "veiviser.navgigasjonsboks.kalk.label": "Calculate how much you can receive using the calculator",
+    "veiviser.navgigasjonsboks.kalk.sublabel": "Calculate how much parental benefit you are entitled to.",
     "veiviser.navigasjonsboks.planlegg.label": "Plan how long you can stay home with your child",
+    "veiviser.navigasjonsboks.planlegg.sublabel": "Plan how long you can stay at home with your child.",
     "veiviser.valg.beregnet.aarsinntekt": "Calculate annual income",
+    "veiviser.valg.inntekt.subHeader": "Your monthly pay before tax",
+    "veiviser.valg.inntekt.beregnet.subHeader": "Calculated annual income before tax",
+    "veiviser.valg.beregn.knapp": "Calculate income",
 
     "veiviser.valg.spørsmål.mor.en": "an employee, freelancer, self-employed or recipient of payments from NAV?",
     "veiviser.valg.spørsmål.mor.to": "Do you have other sources of income?",
@@ -294,10 +315,14 @@
     "veiviser.valg.svar.far.seks.nei": "No, I am not a member",
 
     "veiviser.valg.hjelpetekst.lukk": " Close information",
+    "veiviser.valg.hjelpetekst.ingress": "What is the difference between parental benefit and lump-sum grant?",
+    "veiviser.valg.hjelpetekst.hattInntekt": "Why six of the past ten months?",
+    "veiviser.valg.hjelpetekst.utbetalinger.nav": "Which payments from NAV provide entitlement?",
     "veiviser.valg.hjelpetekst.utbetalinger": " What are other sources of income?",
     "veiviser.valg.hjelpetekst.mndInntekt": " How much do I have to have in monthly pay before tax?",
     "veiviser.valg.hjelpetekst.andreInntekt": " Info for annual income",
     "veiviser.valg.hjelpetekst.medlemskap": " What will being a member entail?",
+    "veiviser.valg.hjelpetekst.medlem.folketrygden": "What is membership of the National Insurance scheme?",
 
     "veiviser.valg.resultat.overskrift.foreldrepenger": " You are entitled to the parental benefit",
     "veiviser.valg.resultat.overskrift.foreldrepenger.ikkeRett": " You are not entitled to the parental benefit",
@@ -306,7 +331,10 @@
     "veiviser.valg.resultat.knapp.foreldrepenger": " application for parental benefit",
     "veiviser.valg.resultat.knapp.engangsstonad": " application for lump-sum grant",
     "veiviser.valg.resultat.knapp.engangsstonad.info": " read more about the lump-sum grant",
+    "veiviser.valg.resultat.knapp.lesOmForeldrepenger": "read more about parental benefit",
     "veiviser.valg.resultat.knapp.ikkerett.info": " read more about the parental benefit",
+    "veiviser.valg.resultat.engangsstonad.headertxt": "There are only a few cases in which you may be entitled to a lump-sum grant.",
+    "veiviser.valg.resultat.foreldrepenger.headertxt": "Read more about how you may be entitled to parental benefit.",
 
     "veiviser.valg.resultat.punkt.forste.godkjent": " I have had an income in 6 of the last 10 months",
     "veiviser.valg.resultat.punkt.andre.godkjent": " I have earned at least NOK 48,441 for the year",
