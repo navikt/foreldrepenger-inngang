@@ -12,7 +12,13 @@ interface Props {
 }
 
 const CustomSVGFromSprite = ({ iconRef, size, className, ...other }: Props) => (
-    <FlexibleSvg iconRef={iconRef} height={size} width={size} className={className} {...other} />
+    <FlexibleSvg
+        iconRef={iconRef || { id: '', viewBox: '' }}
+        height={size}
+        width={size}
+        className={className}
+        {...other}
+    />
 );
 
 interface FlexibleProps {

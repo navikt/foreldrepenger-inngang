@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { InjectedIntlProps, injectIntl } from 'react-intl';
 import BEMHelper from '../../../utils/bem';
-import Environment from 'app/Environment';
+import Environment from '../../../Environment';
 import getTranslation from 'app/utils/i18nUtils';
 import TypografiBase from 'nav-frontend-typografi';
 import WithLink from '../../../components/with-link/WithLink';

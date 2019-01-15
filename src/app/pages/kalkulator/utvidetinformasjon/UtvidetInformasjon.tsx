@@ -1,12 +1,12 @@
 import * as React from 'react';
-import * as classnames from 'classnames';
+import classnames from 'classnames';
 import { guid } from 'nav-frontend-js-utils';
 
 import InfoToggler from './InfoToggler';
 import './utvidetInformasjon.less';
 import EkspanderbartInnhold from './EkspanderbartInnhold';
 import { Normaltekst } from 'nav-frontend-typografi';
-import getTranslation from 'app/utils/i18nUtils';
+import getTranslation from '../../../../app/utils/i18nUtils';
 import { injectIntl, InjectedIntlProps } from 'react-intl';
 
 interface OwnProps {

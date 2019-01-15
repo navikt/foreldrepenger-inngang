@@ -1,12 +1,12 @@
 import * as React from 'react';
 import classnames from 'classnames';
-import LesMer from 'app/components/les-mer/LesMer';
+import LesMer from '../../../app/components/les-mer/LesMer';
 import TypografiBase from 'nav-frontend-typografi';
-import WithLink from 'app/components/with-link/WithLink';
+import WithLink from '../../../app/components/with-link/WithLink';
 import './innhold.less';
 
 import BEMHelper from '../bem';
-import UtvidetInformasjon from 'app/pages/kalkulator/utvidetinformasjon/UtvidetInformasjon';
+import UtvidetInformasjon from '../../../app/pages/kalkulator/utvidetinformasjon/UtvidetInformasjon';
 
 const cls = BEMHelper('innhold');
 
