@@ -2,7 +2,7 @@ import * as React from 'react';
 import NavFrontendChevron from 'nav-frontend-chevron';
 
 import './infoToggler.less';
-import BEMHelper from 'app/utils/bem';
+import BEMHelper from '../../../../app/utils/bem';
 
 const cls = BEMHelper('infoToggler');
 

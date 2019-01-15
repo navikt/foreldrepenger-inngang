@@ -1,0 +1,12 @@
+<innhold>
+    <liste>
+        <punkt>In <b>the application for parental benefit</b>, enter the period in which you want to receive parental benefit.</punkt>
+        <punkt>If you <b>have already applied</b>, log in at <lenke url="https://foreldrepenger.nav.no/" ekstern="true">Your parental benefit</lenke> and submit a modification application instead.</punkt>
+    </liste>
+    <avsnitt type="element">You must attach this to your application</avsnitt>
+    <liste>
+        <punkt>The other parent is <b>sick, but at home</b>: Attach a medical certificate from a doctor. It must describe how the illness entails that the other parent is fully dependent on help to be able to take care of the child and how long the illness is expected to last.</punkt>
+        <punkt>The other parent is <b>in a health institution</b>: Attach documentation of admission from the health institution.</punkt>
+    </liste>
+    <avsnitt><b>Application deadline</b>: You must apply within three months.</avsnitt>
+</innhold>
