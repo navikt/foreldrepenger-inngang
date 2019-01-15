@@ -61,6 +61,23 @@ node {
          ])
     }
 
+    stage('Test') {
+        try {
+            sh 'npm test'
+            slackSend([
+                color: 'good',
+                message: "Testene for foreldrepenger-inngang er OK :tada:"
+            ])
+        } catch (Exception ex) {
+            slackSend([
+                color: 'danger',
+                message: "Testene for foreldrepenger-inngang feilet, sjekk status på $env.BUILD_URL"
+            ])
+            
+            throw new Exception("Testene for foreldrepenger-inngang feilet", ex)
+        }
+    }
+
     stage('Deploy to preprod') {
         withEnv(['HTTPS_PROXY=http://webproxy-utvikler.nav.no:8088',
                'NO_PROXY=localhost,127.0.0.1,.local,.adeo.no,.nav.no,.aetat.no,.devillo.no,.oera.no',
