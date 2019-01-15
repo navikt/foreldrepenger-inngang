@@ -1,4 +1,8 @@
 module.exports = {
+    transform: {
+        '^.+\\.jsx?$': 'babel-jest',
+        '^.+\\.tsx?$': 'ts-jest'
+    },
     setupTestFrameworkScriptFile: './jest/setup.ts',
     testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$',
     moduleNameMapper: {
@@ -7,13 +11,12 @@ module.exports = {
         '^uttaksplan/(.*)': '<rootDir>/src/uttaksplan/$1',
         '^common/(.*)': '<rootDir>/src/common/$1'
     },
+    moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
     globals: {
         'ts-jest': {
-            tsConfig: '<rootDir>/tsconfig.test.json',
-            babelConfig: true
+            tsConfigFile: './tsconfig.test.json',
+            useBabelrc: true
         }
     },
-    rootDir: '../',
-    preset: 'ts-jest/presets/js-with-babel',
-    testMatch: null
+    rootDir: '../'
 };

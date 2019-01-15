@@ -3,7 +3,6 @@ import React from 'react';
 import { mount } from 'enzyme';
 import Innhold from '../src/app/utils/innhold/Innhold';
 import { IntlProvider } from 'react-intl';
-import { WithLink } from '../src/app/components/with-link/WithLink';
 import { MemoryRouter } from 'react-router-dom';
 import { getContentFiles } from '../jest/utils';
 
