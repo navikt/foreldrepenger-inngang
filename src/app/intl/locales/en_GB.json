@@ -138,7 +138,7 @@
     "hva_søker_du.søk_svangerskapspenger": "Apply for pregnancy benefit",
     "hva_søker_du.ingen_elektronisk_id": "I do not have an electronic ID",
     "hva_søker_du.ingen_elektronisk_id_hjelp": "To apply online, you must have BankID from your bank or another electronic ID.",
-    "hva_søker_du.engangsstønad.sokPapir.modal.knapp.standard": "Go to the paper-based application",
+    "hva_søker_du.engangsstønad.sokPapir.modal.knapp.standard": "Go to the paper application",
     "hva_søker_du.engangsstønad.sokPapir.modal.knapp.hoved": "Go to the application",
 
     "søk_foreldrepenger.tittel": "Application for parental benefit",
@@ -274,7 +274,7 @@
     "veiviser.valg.inntekt.beregnet.subHeader": "Calculated annual income before tax",
     "veiviser.valg.beregn.knapp": "Calculate income",
 
-    "veiviser.valg.spørsmål.mor.en": "an employee, freelancer, self-employed or recipient of payments from NAV?",
+    "veiviser.valg.spørsmål.mor.en": "Are you an employee, freelancer, self-employed or recipient of payments from NAV?",
     "veiviser.valg.spørsmål.mor.to": "Do you have other sources of income?",
     "veiviser.valg.spørsmål.mor.tre": "How long have you had an income?",
     "veiviser.valg.spørsmål.mor.fire": "What is your average monthly wage before tax?",
