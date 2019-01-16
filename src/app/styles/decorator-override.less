@@ -114,3 +114,48 @@
 .nav-varsler .varsel .varsel-innhold p {
     margin-bottom: 4px
 }
+
+@media (max-width: 768px) { /* 768 mega-menu breakpoint. Set mobile second styling. HotFix for mobile version  */
+    .accessible-megamenu-panel .tilbaketilgruppe .home-link:before {
+        display: inline-block;
+        height: 30px;
+        background: transparent url('@{appresRoot}img/navno/gfx/mainmenu/hjem_hvit.png') no-repeat;
+        background-position: 66% 100%;
+        background-size: 43%;
+        margin-left: 1rem;
+    }
+
+    .accessible-megamenu-panel .tilbaketilgruppe .home-link:hover:before {
+        display: inline-block;
+        height: 30px;
+        background: transparent url('@{appresRoot}img/navno/gfx/mainmenu/hjem_hvit.png') no-repeat;
+        background-position: 66% 100%;
+        background-size: 43%;
+        margin-left: 1rem;
+    }
+
+    .hodefot a {
+        color: #ffff;
+    }
+
+    .topnavsection-wrapper {
+        z-index: 99;
+    }
+
+    .hodefot a:focus {
+        background-color: #333;
+        color: #0ca9e1;
+    }
+
+    .hodefot a:active {
+        color: #0ca9e1;
+    }
+
+    .hodefot p {
+        margin-bottom: 0.5rem;
+    }
+
+    .hodefot a:focus {
+        color: #0ca9e1;
+    }
+}
