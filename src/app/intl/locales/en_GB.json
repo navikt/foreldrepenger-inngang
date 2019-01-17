@@ -257,6 +257,10 @@
     "om_engangsstønad.utbetaling.tittel": "When will the money be paid out?",
     "om_engangsstønad.til_far.tittel": "Lump-sum grant to father or co-mother",
 
+    "veiviser.fane.mor": "Mother",
+    "veiviser.fane.far": "Father",
+    "veiviser.fane.medmor": "Co-Mother",
+    "veiviser.skrivInn.belop": "income in NOK",
     "veiviser.panelMedIllustrasjon.tittel": "Parental benefit or lump-sum grant",
     "veiviser.sidebanner.tittel": "What are you entitled to?",
     "veiviser.ingress.knapper": "I am",
