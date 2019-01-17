@@ -93,7 +93,7 @@ class EngangsstonadModal extends React.Component<Props> {
                                 }
                                 urlIsExternal={true}
                                 noStyling={false}>
-                                <KnappBase type={'standard'}>
+                                <KnappBase type={'standard'} className={cls.element('knappen gaTilSoknad')}>
                                     <TypografiBase type={'normaltekst'}>
                                         {getTranslation(
                                             'hva_søker_du.engangsstønad.sokPapir.modal.knapp.standard',
@@ -106,7 +106,7 @@ class EngangsstonadModal extends React.Component<Props> {
                                 url={'https://engangsstonad.nav.no'}
                                 urlIsExternal={true}
                                 noStyling={false}>
-                                <KnappBase type={'hoved'}>
+                                <KnappBase type={'hoved'} className={cls.element('knappen')} >
                                     <TypografiBase type={'normaltekst'}>
                                         {getTranslation(
                                             'hva_søker_du.engangsstønad.sokPapir.modal.knapp.hoved',
