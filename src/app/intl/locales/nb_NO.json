@@ -252,6 +252,10 @@
     "om_engangsstønad.til_far.tittel": "Engangsstønad til far eller medmor",
     "om_engangsstønad.når_kan_du_søke.tittel": "Når kan du søke?",
 
+    "veiviser.fane.mor": "Mor",
+    "veiviser.fane.far": "Far",
+    "veiviser.fane.medmor": "Medmor",
+    "veiviser.skrivInn.belop": "inntekt i kroner",
     "veiviser.panelMedIllustrasjon.tittel": "Foreldrepenger eller engangsstønad?",
     "veiviser.sidebanner.tittel": "Hva kan du få?",
     "veiviser.ingress.knapper": "Jeg er",

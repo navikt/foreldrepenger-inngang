@@ -98,7 +98,7 @@ class Valg extends React.Component<Props, State> {
 
     toggled = null;
     fade = false;
-    belop = 'inntekt i kroner';
+    belop = 'veiviser.skrivInn.belop';
 
     constructor(props: Props) {
         super(props);
@@ -144,7 +144,7 @@ class Valg extends React.Component<Props, State> {
                     noneChecked[j][k] = false;
                 }
             }
-            this.belop = 'inntekt i kroner';
+            this.belop = 'veiviser.skrivInn.belop';
             this.setState(
                 // oppdaterer state /m nye verdier
                 {
@@ -222,7 +222,7 @@ class Valg extends React.Component<Props, State> {
         let list;
         let content;
         list = valgListe;
-        this.belop = 'inntekt i kroner';
+        this.belop = 'veiviser.skrivInn.belop';
         dropdown ? (content = dropdown) : (content = <div />);
         list.push({
             nr: input,
@@ -852,7 +852,7 @@ class Valg extends React.Component<Props, State> {
                                             width={50}
                                         />
                                     </div>
-                                    {fane.label}
+                                    {getTranslation(fane.label, this.props.intl)}
                                 </div>
                             ),
                             onClick: this.updateToggle[index]
@@ -926,7 +926,10 @@ class Valg extends React.Component<Props, State> {
                                                     valg.rad,
                                                     valg.nr
                                                 )}
-                                                placeholder={this.belop}
+                                                placeholder={getTranslation(
+                                                    this.belop,
+                                                    this.props.intl
+                                                )}
                                             />
                                         </div>
                                         <div className={inputCls.element('radKnapp ')}>
