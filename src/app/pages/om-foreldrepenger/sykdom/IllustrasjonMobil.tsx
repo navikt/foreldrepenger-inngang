@@ -1,6 +1,14 @@
 import * as React from 'react';
+import { injectIntl, InjectedIntl } from 'react-intl';
+import getTranslation from 'app/utils/i18nUtils';
 
-const Illustrasjon = ({ grunnForForlengelse }: { grunnForForlengelse: string }) => (
+const Illustrasjon = ({
+    grunnForForlengelse,
+    intl
+}: {
+    grunnForForlengelse: string;
+    intl: InjectedIntl;
+}) => (
     <svg height="65px" width="100%" version="1.1" viewBox="0 0 375 65">
         <g fill="none" stroke="none" strokeWidth="1">
             <rect height="65" width="375" fill="none" x="0" y="0" />
@@ -19,7 +27,7 @@ const Illustrasjon = ({ grunnForForlengelse }: { grunnForForlengelse: string }) 
                 </tspan>
                 <tspan fontFamily="SourceSansPro-Regular, Source Sans Pro" x="194.892" y="11" />
                 <tspan fontFamily="SourceSansPro-Regular, Source Sans Pro" x="147.498" y="26">
-                    (2 uker)
+                    {getTranslation('om_foreldrepenger.sykdom.illustrasjon.ferievarighet', intl)}
                 </tspan>
             </text>
             <g fill="#FFFFFF" transform="translate(133.000000, 43.000000)">
@@ -44,10 +52,10 @@ const Illustrasjon = ({ grunnForForlengelse }: { grunnForForlengelse: string }) 
             />
             <text fill="#3E3832" fontFamily="SourceSansPro-Bold, Source Sans Pro" fontSize="12">
                 <tspan fontWeight="bold" x="300.66" y="11">
-                    Sluttdato
+                    {getTranslation('om_foreldrepenger.sykdom.illustrasjon.sluttdato', intl)}
                 </tspan>
                 <tspan fontFamily="SourceSansPro-Regular, Source Sans Pro" x="281.742" y="26">
-                    (forskyves 2 uker)
+                    {getTranslation('om_foreldrepenger.sykdom.illustrasjon.forskyves', intl)}
                 </tspan>
             </text>
             <polygon
@@ -103,4 +111,4 @@ const Illustrasjon = ({ grunnForForlengelse }: { grunnForForlengelse: string }) 
     </svg>
 );
 
-export default Illustrasjon;
+export default injectIntl(Illustrasjon);

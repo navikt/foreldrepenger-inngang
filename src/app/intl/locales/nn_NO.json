@@ -201,6 +201,7 @@
 
     "om_foreldrepenger.ferie.tittel": "Dersom du skal på ferie",
     "om_foreldrepenger.ferie.eksempel_label": "Eksempel på korleis du kan forlengje foreldrepengeperioden din når du utset:",
+    "om_foreldrepenger.ferie.illustrasjon": "Ferie",
 
     "om_foreldrepenger.nye_regler.tittel": "Nye reglar frå 1. juli 2018",
     "om_foreldrepenger.nye_regler_label": "Barnet er født eller adoptert",
@@ -231,6 +232,9 @@
     "om_foreldrepenger.sykdom.sykmeldt.eksempeltittel": " Eksempel på korleis du kan forlengje foreldrepengeperioden din når du utset:",
     "om_foreldrepenger.sykdom.sykmeldt": " Sjukmeld",
     "om_foreldrepenger.sykdom.barnet_er_innlagt": "Barnet er innlagt",
+    "om_foreldrepenger.sykdom.illustrasjon.forskyves": "(forskyves 2 veker)",
+    "om_foreldrepenger.sykdom.illustrasjon.sluttdato": "Sluttdato",
+    "om_foreldrepenger.sykdom.illustrasjon.ferievarighet": "(2 veker)",
 
     "om_foreldrepenger.hjemme_samtidig.tittel": "Heime samtidig",
     "om_foreldrepenger.hjemme_samtidig.ingress": "Dersom de vil vere heime med barnet samtidig eller byte på, har de fleire val.",

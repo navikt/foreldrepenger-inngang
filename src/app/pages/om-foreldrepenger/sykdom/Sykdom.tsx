@@ -1,19 +1,18 @@
 import * as React from 'react';
-import PanelMedIllustrasjon from '../../../components/panel-med-illustrasjon/PanelMedIllustrasjon';
-import BEMHelper from '../../../utils/bem';
 import { injectIntl, InjectedIntlProps } from 'react-intl';
+import { Normaltekst } from 'nav-frontend-typografi';
+import BEMHelper from '../../../utils/bem';
 import CustomSVG from '../../../utils/CustomSVG';
 import Foreldrepar from '../../../components/foreldrepar/Foreldrepar';
-import Innholdsfaner from '../../../components/innholdsfaner/Innholdsfaner';
-import Innhold, { getSource } from 'app/utils/innhold/Innhold';
-import LesMer from '../../../components/les-mer/LesMer';
-
+import getTranslation from 'app/utils/i18nUtils';
 import Illustrasjon from './Illustrasjon';
 import IllustrasjonMobil from './IllustrasjonMobil';
-import { Normaltekst } from 'nav-frontend-typografi';
-import './sykdom.less';
+import Innhold, { getSource } from 'app/utils/innhold/Innhold';
+import Innholdsfaner from '../../../components/innholdsfaner/Innholdsfaner';
+import LesMer from '../../../components/les-mer/LesMer';
 import MediaQuery from 'react-responsive';
-import getTranslation from 'app/utils/i18nUtils';
+import PanelMedIllustrasjon from '../../../components/panel-med-illustrasjon/PanelMedIllustrasjon';
+import './sykdom.less';
 
 const sykdomSvg = require('../../../assets/ark/ark-sykdom.svg').default;
 const cls = BEMHelper('sykdom');

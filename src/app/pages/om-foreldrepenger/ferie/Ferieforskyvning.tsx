@@ -1,6 +1,8 @@
 import * as React from 'react';
+import { InjectedIntlProps, injectIntl } from 'react-intl';
+import getTranslation from 'app/utils/i18nUtils';
 
-const Ferieforskyvning = () => (
+const Ferieforskyvning = ({ intl }: InjectedIntlProps) => (
     <svg height="81px" width="100%" version="1.1" viewBox="0 0 622 81">
         <defs>
             <path d="M7.6916556,-3.10752092e-16 L11.5083444,3.10752092e-16 C14.1829006,-1.80555915e-16 15.1527593,0.278476833 16.1305371,0.801398111 C17.1083149,1.32431939 17.8756806,2.09168511 18.3986019,3.06946289 C18.9215232,4.04724067 19.2,5.01709938 19.2,7.6916556 L19.2,11.5083444 C19.2,14.1829006 18.9215232,15.1527593 18.3986019,16.1305371 C17.8756806,17.1083149 17.1083149,17.8756806 16.1305371,18.3986019 C15.1527593,18.9215232 14.1829006,19.2 11.5083444,19.2 L7.6916556,19.2 C5.01709938,19.2 4.04724067,18.9215232 3.06946289,18.3986019 C2.09168511,17.8756806 1.32431939,17.1083149 0.801398111,16.1305371 C0.278476833,15.1527593 1.2037061e-16,14.1829006 -2.07168062e-16,11.5083444 L2.07168062e-16,7.6916556 C-1.2037061e-16,5.01709938 0.278476833,4.04724067 0.801398111,3.06946289 C1.32431939,2.09168511 2.09168511,1.32431939 3.06946289,0.801398111 C4.04724067,0.278476833 5.01709938,1.80555915e-16 7.6916556,-3.10752092e-16 Z" />
@@ -33,10 +35,16 @@ const Ferieforskyvning = () => (
             />
             <text fill="#06893A" fontFamily="SourceSansPro-Bold, Source Sans Pro" fontSize="12">
                 <tspan fontWeight="bold" x="283.002" y="33">
-                    Ferie
+                    {getTranslation('om_foreldrepenger.ferie.illustrasjon', intl)}
                 </tspan>
-                <tspan fontFamily="SourceSansPro-Regular, Source Sans Pro" x="311.994" y="33">
-                    (2 uker)
+                <tspan
+                    fontFamily="SourceSansPro-Regular, Source Sans Pro"
+                    x={
+                        290 +
+                        5 * getTranslation('om_foreldrepenger.ferie.illustrasjon', intl).length
+                    }
+                    y="33">
+                    {getTranslation('om_foreldrepenger.sykdom.illustrasjon.ferievarighet', intl)}
                 </tspan>
             </text>
             <path
@@ -45,10 +53,10 @@ const Ferieforskyvning = () => (
             />
             <text fill="#3E3832" fontFamily="SourceSansPro-Bold, Source Sans Pro" fontSize="12">
                 <tspan fontWeight="bold" x="544.16" y="18">
-                    Sluttdato
+                    {getTranslation('om_foreldrepenger.sykdom.illustrasjon.sluttdato', intl)}
                 </tspan>
                 <tspan fontFamily="SourceSansPro-Regular, Source Sans Pro" x="525.242" y="33">
-                    (forskyves 2 uker)
+                    {getTranslation('om_foreldrepenger.sykdom.illustrasjon.forskyves', intl)}
                 </tspan>
             </text>
             <polygon
@@ -126,4 +134,4 @@ const Ferieforskyvning = () => (
     </svg>
 );
 
-export default Ferieforskyvning;
+export default injectIntl(Ferieforskyvning);

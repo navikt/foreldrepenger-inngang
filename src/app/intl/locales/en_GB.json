@@ -203,6 +203,7 @@
 
     "om_foreldrepenger.ferie.tittel": " If you will be going on holiday",
     "om_foreldrepenger.ferie.eksempel_label": "Example of how you can extend your parental benefit period when you postpone:",
+    "om_foreldrepenger.ferie.illustrasjon": "Holiday",
     "om_foreldrepenger.ferie.rett_til_utsettelse": "Holidays that entitle you to postpone",
     "om_foreldrepenger.ferie.utsette": "You can postpone using the following process",
 
@@ -235,6 +236,9 @@
     "om_foreldrepenger.sykdom.sykmeldt.eksempeltittel": "Example of how you can extend your parental benefit period when you postpone:",
     "om_foreldrepenger.sykdom.sykmeldt": "On sick leave",
     "om_foreldrepenger.sykdom.barnet_er_innlagt": "The child is in a health institution",
+    "om_foreldrepenger.sykdom.illustrasjon.forskyves": "(offset 2 weeks)",
+    "om_foreldrepenger.sykdom.illustrasjon.sluttdato": "End date",
+    "om_foreldrepenger.sykdom.illustrasjon.ferievarighet": "(2 weeks)",
 
     "om_foreldrepenger.hjemme_samtidig.tittel": "Home at the same time",
     "om_foreldrepenger.hjemme_samtidig.ingress": "If you want to be home with the child at the same time or take turns, you have several options.",
