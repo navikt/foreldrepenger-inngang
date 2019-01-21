@@ -1,6 +1,22 @@
 import React from 'react';
+import { InjectedIntl, injectIntl } from 'react-intl';
+import getTranslation from '../../../../utils/i18nUtils';
 
-export const JegVilJobbeHeltidMobile = () => {
+const JegVilJobbeHeltidMobile = ({
+    jobb,
+    uker,
+    sluttdato,
+    forskyvning,
+    fodsel,
+    intl
+}: {
+    jobb: string;
+    uker: string;
+    sluttdato: string;
+    forskyvning: string;
+    fodsel: string;
+    intl: InjectedIntl;
+}) => {
     return (
         <svg height="100%" width="100%" version="1.1" viewBox="0 0 375 70">
             <g fill="none" stroke="none" strokeWidth="1">
@@ -49,7 +65,7 @@ export const JegVilJobbeHeltidMobile = () => {
                 />
                 <text fill="#159345" fontFamily="SourceSansPro-Bold, Source Sans Pro" fontSize="14">
                     <tspan x="149.53" y="12">
-                        Jobb
+                        {getTranslation(jobb, intl)}
                     </tspan>
                     <tspan fontFamily="SourceSansPro-Regular, Source Sans Pro" x="180.47" y="12" />
                     <tspan fontFamily="SourceSansPro-Regular, Source Sans Pro" x="142.831" y="30">
@@ -62,10 +78,10 @@ export const JegVilJobbeHeltidMobile = () => {
                 />
                 <text fill="#3E3832" fontFamily="SourceSansPro-Bold, Source Sans Pro" fontSize="14">
                     <tspan x="294.02" y="12">
-                        Sluttdato
+                        {getTranslation(sluttdato, intl)}
                     </tspan>
                     <tspan fontFamily="SourceSansPro-Regular, Source Sans Pro" x="271.949" y="30">
-                        (forskyves 4 uker)
+                        {getTranslation(uker, intl)}
                     </tspan>
                 </text>
                 <polygon
@@ -122,7 +138,7 @@ export const JegVilJobbeHeltidMobile = () => {
                     fontFamily="SourceSansPro-Regular, Source Sans Pro"
                     fontSize="14">
                     <tspan x="9.771" y="12">
-                        Fødsel
+                        {getTranslation(fodsel, intl)}
                     </tspan>
                 </text>
                 <g fill="#FFFFFF" transform="translate(133.000000, 48.000000)">
@@ -132,3 +148,5 @@ export const JegVilJobbeHeltidMobile = () => {
         </svg>
     );
 };
+
+export default injectIntl(JegVilJobbeHeltidMobile);

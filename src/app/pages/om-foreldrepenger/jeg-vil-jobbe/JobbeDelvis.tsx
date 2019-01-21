@@ -1,9 +1,9 @@
 import * as React from 'react';
 import { CSSTransition } from 'react-transition-group';
 import { InjectedIntlProps, injectIntl } from 'react-intl';
-import { JegVilJobbeDeltid } from './komponenter/JegVilJobbeDeltid';
-import { JegVilJobbeDeltidExpandert } from './komponenter/JegVilJobbeDeltidExpandert';
-import { JegVilJobbeDeltidExpandertMobil } from './komponenter/JegVilJobbeDeltidExpandertMobil';
+import JegVilJobbeDeltid from './komponenter/JegVilJobbeDeltid';
+import JegVilJobbeDeltidExpandert from './komponenter/JegVilJobbeDeltidExpandert';
+import JegVilJobbeDeltidExpandertMobil from './komponenter/JegVilJobbeDeltidExpandertMobil';
 import BEMHelper from '../../../utils/bem';
 import classnames from 'classnames';
 import getTranslation from 'app/utils/i18nUtils';
@@ -66,10 +66,20 @@ class JobbeDelvis extends React.Component<InjectedIntlProps> {
             list.push(
                 <div>
                     <MediaQuery minWidth={576}>
-                        <JegVilJobbeDeltidExpandert height={'100%'} width={'100%'} />
+                        <JegVilJobbeDeltidExpandert
+                            height={'100%'}
+                            width={'100%'}
+                            dager={'om_foreldrepenger.jobbe.jobbDelvis.dropdownSvg.dager'}
+                            jobbdag={'om_foreldrepenger.jobbe.jobbDelvis.dropdownSvg.jobbdag'}
+                            uke={'om_foreldrepenger.jobbe.jobbDelvis.dropdownSvg.uke'}
+                        />
                     </MediaQuery>
                     <MediaQuery maxWidth={575}>
-                        <JegVilJobbeDeltidExpandertMobil />
+                        <JegVilJobbeDeltidExpandertMobil
+                            dag={'om_foreldrepenger.jobbe.jobbDelvis.dropdownSvg.dager'}
+                            dager={'om_foreldrepenger.jobbe.jobbDelvis.dropdownSvg.dag'}
+                            uke={'om_foreldrepenger.jobbe.jobbDelvis.dropdownSvg.uke'}
+                        />
                     </MediaQuery>
                 </div>
             );
@@ -94,7 +104,19 @@ class JobbeDelvis extends React.Component<InjectedIntlProps> {
                     className={cls.element('mainIcon')}
                     role="button"
                     onClick={this.expandJegVilJobbe}>
-                    <JegVilJobbeDeltid width={this.state.width} height={this.state.height} />
+                    <JegVilJobbeDeltid
+                        width={this.state.width}
+                        height={this.state.height}
+                        foreldrepenger={
+                            'om_foreldrepenger.jobbe.jobbDelvis.statiskSvg.foreldrepenger'
+                        }
+                        prosentAndelFra={
+                            'om_foreldrepenger.jobbe.jobbDelvis.statiskSvg.prosentAndelFra'
+                        }
+                        prosentAndelTil={
+                            'om_foreldrepenger.jobbe.jobbDelvis.statiskSvg.prosentAndelTil'
+                        }
+                    />
                     <TypografiBase type={'normaltekst'}>
                         {getTranslation(this.state.message, this.props.intl)}
                     </TypografiBase>

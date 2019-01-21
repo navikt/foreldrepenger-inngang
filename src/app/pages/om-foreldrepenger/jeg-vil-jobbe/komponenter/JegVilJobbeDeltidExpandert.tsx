@@ -1,11 +1,21 @@
 import React from 'react';
+import { injectIntl, InjectedIntl } from 'react-intl';
+import getTranslation from '../../../../utils/i18nUtils';
 
-export const JegVilJobbeDeltidExpandert = ({
+const JegVilJobbeDeltidExpandert = ({
     width,
-    height
+    height,
+    jobbdag,
+    dager,
+    uke,
+    intl
 }: {
     width: string;
     height: string;
+    jobbdag: string;
+    dager: string;
+    uke: string;
+    intl: InjectedIntl;
 }) => {
     return (
         <svg
@@ -16,7 +26,6 @@ export const JegVilJobbeDeltidExpandert = ({
             xmlns="http://www.w3.org/2000/svg"
             xmlnsXlink="http://www.w3.org/1999/xlink">
             <title>Illustrasjon/Deltid - ekspandert</title>
-            <desc>Created with Sketch.</desc>
             <defs>
                 <polygon id="God-Jul-fra-team-bris" points="0 0 340.57082 0 530 0 530 108 0 108" />
                 <mask
@@ -78,7 +87,7 @@ export const JegVilJobbeDeltidExpandert = ({
                                             fontWeight="normal"
                                             fill="#3E3832">
                                             <tspan x="32.788" y="18">
-                                                4 dager
+                                                {getTranslation(dager, intl)}
                                             </tspan>
                                         </text>
                                     </g>
@@ -99,7 +108,7 @@ export const JegVilJobbeDeltidExpandert = ({
                                             fontWeight="bold"
                                             fill="#159345">
                                             <tspan x="1.772" y="48">
-                                                1 jobbdag
+                                                {getTranslation(jobbdag, intl)}
                                             </tspan>
                                         </text>
                                         <g
@@ -115,7 +124,7 @@ export const JegVilJobbeDeltidExpandert = ({
                                         fontWeight="normal"
                                         fill="#7F756C">
                                         <tspan x="0" y="16">
-                                            Uke 1
+                                            {getTranslation(uke, intl)} 1
                                         </tspan>
                                     </text>
                                 </g>
@@ -152,7 +161,7 @@ export const JegVilJobbeDeltidExpandert = ({
                                             fontWeight="normal"
                                             fill="#3E3832">
                                             <tspan x="32.788" y="19">
-                                                4 dager
+                                                {getTranslation(dager, intl)}
                                             </tspan>
                                         </text>
                                     </g>
@@ -173,7 +182,7 @@ export const JegVilJobbeDeltidExpandert = ({
                                             fontWeight="bold"
                                             fill="#159345">
                                             <tspan x="1.772" y="48">
-                                                1 jobbdag
+                                                {getTranslation(jobbdag, intl)}
                                             </tspan>
                                         </text>
                                         <g
@@ -189,7 +198,7 @@ export const JegVilJobbeDeltidExpandert = ({
                                         fontWeight="normal"
                                         fill="#7F756C">
                                         <tspan x="0" y="16">
-                                            Uke 2
+                                            {getTranslation(uke, intl)} 2
                                         </tspan>
                                     </text>
                                 </g>
@@ -226,7 +235,7 @@ export const JegVilJobbeDeltidExpandert = ({
                                             fontWeight="normal"
                                             fill="#3E3832">
                                             <tspan x="32.788" y="19">
-                                                4 dager
+                                                {getTranslation(dager, intl)}
                                             </tspan>
                                         </text>
                                     </g>
@@ -247,7 +256,7 @@ export const JegVilJobbeDeltidExpandert = ({
                                             fontWeight="bold"
                                             fill="#159345">
                                             <tspan x="1.772" y="48">
-                                                1 jobbdag
+                                                {getTranslation(jobbdag, intl)}
                                             </tspan>
                                         </text>
                                         <g
@@ -263,7 +272,7 @@ export const JegVilJobbeDeltidExpandert = ({
                                         fontWeight="normal"
                                         fill="#7F756C">
                                         <tspan x="0" y="16">
-                                            Uke 3
+                                            {getTranslation(uke, intl)} 3
                                         </tspan>
                                     </text>
                                 </g>
@@ -300,7 +309,7 @@ export const JegVilJobbeDeltidExpandert = ({
                                             fontWeight="normal"
                                             fill="#3E3832">
                                             <tspan x="32.788" y="19">
-                                                4 dager
+                                                {getTranslation(dager, intl)}
                                             </tspan>
                                         </text>
                                     </g>
@@ -321,7 +330,7 @@ export const JegVilJobbeDeltidExpandert = ({
                                             fontWeight="bold"
                                             fill="#159345">
                                             <tspan x="1.772" y="48">
-                                                1 jobbdag
+                                                {getTranslation(jobbdag, intl)}
                                             </tspan>
                                         </text>
                                         <g
@@ -337,7 +346,7 @@ export const JegVilJobbeDeltidExpandert = ({
                                         fontWeight="normal"
                                         fill="#7F756C">
                                         <tspan x="0" y="16">
-                                            Uke 4
+                                            {getTranslation(uke, intl)} 4
                                         </tspan>
                                     </text>
                                 </g>
@@ -356,3 +365,5 @@ export const JegVilJobbeDeltidExpandert = ({
         </svg>
     );
 };
+
+export default injectIntl(JegVilJobbeDeltidExpandert);

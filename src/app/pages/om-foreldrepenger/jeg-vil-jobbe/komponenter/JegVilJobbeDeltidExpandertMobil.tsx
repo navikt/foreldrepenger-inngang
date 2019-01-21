@@ -1,6 +1,18 @@
 import React from 'react';
+import { injectIntl, InjectedIntl } from 'react-intl';
+import getTranslation from '../../../../utils/i18nUtils';
 
-export const JegVilJobbeDeltidExpandertMobil = () => {
+const JegVilJobbeDeltidExpandertMobil = ({
+    dag,
+    dager,
+    uke,
+    intl
+}: {
+    dag: string;
+    dager: string;
+    uke: string;
+    intl: InjectedIntl;
+}) => {
     return (
         <svg
             width="100%"
@@ -52,7 +64,7 @@ export const JegVilJobbeDeltidExpandertMobil = () => {
                                     fontWeight="normal"
                                     fill="#3E3832">
                                     <tspan x="26.466" y="17">
-                                        4 dager
+                                        {getTranslation(dager, intl)}
                                     </tspan>
                                 </text>
                             </g>
@@ -73,7 +85,7 @@ export const JegVilJobbeDeltidExpandertMobil = () => {
                                     fontWeight="bold"
                                     fill="#159345">
                                     <tspan x="1.466" y="42">
-                                        1 dag
+                                        {getTranslation(dag, intl)}
                                     </tspan>
                                 </text>
                                 <g transform="translate(10.000000, 6.000000)" fill="#FFFFFF">
@@ -87,7 +99,7 @@ export const JegVilJobbeDeltidExpandertMobil = () => {
                                 fontWeight="normal"
                                 fill="#7F756C">
                                 <tspan x="1" y="14">
-                                    Uke 1
+                                    {getTranslation(uke, intl)}
                                 </tspan>
                             </text>
                         </g>
@@ -122,7 +134,7 @@ export const JegVilJobbeDeltidExpandertMobil = () => {
                                     fontWeight="normal"
                                     fill="#3E3832">
                                     <tspan x="26.466" y="17">
-                                        4 dager
+                                        {getTranslation(dager, intl)}
                                     </tspan>
                                 </text>
                             </g>
@@ -143,7 +155,7 @@ export const JegVilJobbeDeltidExpandertMobil = () => {
                                     fontWeight="bold"
                                     fill="#159345">
                                     <tspan x="1.466" y="42">
-                                        1 dag
+                                        {getTranslation(dag, intl)}
                                     </tspan>
                                 </text>
                                 <g transform="translate(10.000000, 6.000000)" fill="#FFFFFF">
@@ -157,7 +169,7 @@ export const JegVilJobbeDeltidExpandertMobil = () => {
                                 fontWeight="normal"
                                 fill="#7F756C">
                                 <tspan x="1" y="14">
-                                    Uke 2
+                                    {getTranslation(uke, intl)}
                                 </tspan>
                             </text>
                         </g>
@@ -192,7 +204,7 @@ export const JegVilJobbeDeltidExpandertMobil = () => {
                                     fontWeight="normal"
                                     fill="#3E3832">
                                     <tspan x="26.466" y="17">
-                                        4 dager
+                                        {getTranslation(dager, intl)}
                                     </tspan>
                                 </text>
                             </g>
@@ -213,7 +225,7 @@ export const JegVilJobbeDeltidExpandertMobil = () => {
                                     fontWeight="bold"
                                     fill="#159345">
                                     <tspan x="1.466" y="42">
-                                        1 dag
+                                        {getTranslation(dag, intl)}
                                     </tspan>
                                 </text>
                                 <g transform="translate(10.000000, 6.000000)" fill="#FFFFFF">
@@ -227,7 +239,7 @@ export const JegVilJobbeDeltidExpandertMobil = () => {
                                 fontWeight="normal"
                                 fill="#7F756C">
                                 <tspan x="1" y="14">
-                                    Uke 3
+                                    {getTranslation(uke, intl)}
                                 </tspan>
                             </text>
                         </g>
@@ -244,3 +256,5 @@ export const JegVilJobbeDeltidExpandertMobil = () => {
         </svg>
     );
 };
+
+export default injectIntl(JegVilJobbeDeltidExpandertMobil);
