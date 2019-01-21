@@ -6,10 +6,6 @@
     border-radius: 4px;
     .containText();
 
-    &:focus {
-        .buttonFocus();
-    }
-
     &:hover {
         box-shadow: @navGra40 0 2px 1px 0;
 
@@ -25,6 +21,10 @@
         .panelMedBilde__panelChevron {
             left: 6px;
         }
+    }
+
+    &:focus {
+        .buttonFocus();
     }
 
     &:nth-child(2),

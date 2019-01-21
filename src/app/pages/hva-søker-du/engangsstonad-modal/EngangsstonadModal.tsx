@@ -7,11 +7,10 @@ import Lukknapp from 'nav-frontend-lukknapp';
 import Innhold, { getSource } from 'app/utils/innhold/Innhold';
 
 import React from 'react';
-import KnappBase from 'nav-frontend-knapper';
 import './engangsstonad-modal.less';
 import { FlexibleSvg } from '../../../utils/CustomSVG';
-import WithLink from '../../../components/with-link/WithLink';
 import getTranslation from 'app/utils/i18nUtils';
+import Lenkeknapp from 'app/components/lenkeknapp/Lenkeknapp';
 
 const cls = BEMHelper('engangs-modal-sokPapir');
 
@@ -50,6 +49,20 @@ class EngangsstonadModal extends React.Component<Props> {
         if (typeof window !== 'undefined') {
             Modal.setAppElement('body');
         }
+
+        const papirSøknadUrl =
+            'https://www.nav.no/no/Person/Skjemaer-for-privatpersoner/Skjemaer/Familie/foreldrepenger-og-engangsstonad/Foreldrepenger+og+engangsst%C3%B8nad?method=mail&veiledertype=privatperson';
+        const papirSøknadKnapp = getTranslation(
+            'hva_søker_du.engangsstønad.sokPapir.modal.knapp.standard',
+            this.props.intl
+        );
+
+        const søknadUrl = 'https://engangsstonad.nav.no';
+        const søknadKnapp = getTranslation(
+            'hva_søker_du.engangsstønad.sokPapir.modal.knapp.hoved',
+            this.props.intl
+        );
+
         return (
             <div className={cls.className}>
                 <TypografiBase type="normaltekst">
@@ -87,36 +100,12 @@ class EngangsstonadModal extends React.Component<Props> {
                             )}
                         />
                         <div className={cls.element('knapper')}>
-                            <WithLink
-                                url={
-                                    'https://www.nav.no/no/Person/Skjemaer-for-privatpersoner/Skjemaer/Familie/foreldrepenger-og-engangsstonad/Foreldrepenger+og+engangsst%C3%B8nad?method=mail&veiledertype=privatperson'
-                                }
-                                urlIsExternal={true}
-                                noStyling={false}>
-                                <KnappBase
-                                    type={'standard'}
-                                    className={cls.element('knappen gaTilSoknad')}>
-                                    <TypografiBase type={'normaltekst'}>
-                                        {getTranslation(
-                                            'hva_søker_du.engangsstønad.sokPapir.modal.knapp.standard',
-                                            this.props.intl
-                                        )}
-                                    </TypografiBase>
-                                </KnappBase>
-                            </WithLink>
-                            <WithLink
-                                url={'https://engangsstonad.nav.no'}
-                                urlIsExternal={true}
-                                noStyling={false}>
-                                <KnappBase type={'hoved'} className={cls.element('knappen')}>
-                                    <TypografiBase type={'normaltekst'}>
-                                        {getTranslation(
-                                            'hva_søker_du.engangsstønad.sokPapir.modal.knapp.hoved',
-                                            this.props.intl
-                                        )}
-                                    </TypografiBase>
-                                </KnappBase>
-                            </WithLink>
+                            <Lenkeknapp urlIsExternal={true} url={papirSøknadUrl}>
+                                {papirSøknadKnapp}
+                            </Lenkeknapp>
+                            <Lenkeknapp type="hoved" url={søknadUrl} urlIsExternal={true}>
+                                {søknadKnapp}
+                            </Lenkeknapp>
                         </div>
                     </div>
                 </Modal>

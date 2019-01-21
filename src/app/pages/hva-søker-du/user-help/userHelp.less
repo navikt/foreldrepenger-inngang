@@ -1,15 +1,18 @@
 @import '../../../styles/variables.less';
 
 .userHelp {
+    align-items: center;
     display: flex;
     flex-direction: row;
-    align-items: center;
+    overflow: hidden;
 
     .hjelpetekst {
         padding-left: 0.5rem;
     }
 
     &__link {
+        overflow: hidden;
+        text-overflow: ellipsis;
         white-space: nowrap;
     }
 }
