@@ -1,12 +1,10 @@
 import * as React from 'react';
-import classnames from 'classnames';
 import { Panel } from 'nav-frontend-paneler';
-import { Hovedknapp } from 'nav-frontend-knapper';
-
 import BEMHelper from 'app/utils/bem';
+import classnames from 'classnames';
+import Lenkeknapp from 'app/components/lenkeknapp/Lenkeknapp';
 import Seksjonslenker from '../seksjonslenker/Seksjonslenker';
 import SvgMask from 'app/components/svg-mask/SvgMask';
-import WithLink from 'app/components/with-link/WithLink';
 import './innholdsfortegnelse.less';
 
 const cls = BEMHelper('innholdsfortegnelse');
@@ -27,9 +25,9 @@ const Innholdsfortegnelse: React.StatelessComponent<Props> = ({ sections, button
                 <SvgMask small={true} svg={icon} />
             </div>
             <Seksjonslenker sections={sections} />
-            <WithLink url={button.url} noStyling={true} urlIsExternal={true}>
-                <Hovedknapp className={cls.element('søkNå')}>{button.label}</Hovedknapp>
-            </WithLink>
+            <Lenkeknapp type="hoved" url={button.url} urlIsExternal={true}>
+                {button.label}
+            </Lenkeknapp>
         </Panel>
     );
 };

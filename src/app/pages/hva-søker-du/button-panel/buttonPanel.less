@@ -24,14 +24,6 @@
         margin-top: 1rem;
     }
 
-    &__knapp {
-        height: @button-height;
-        padding: 0 1rem;
-        width: 100%;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-
     @media (min-width: @mobile-breakpoint) {
         &__buttons {
             max-width: 100%;
@@ -39,27 +31,8 @@
 
             :nth-child(2) {
                 margin-top: 0;
-                margin-left: calc(0.5rem - 2 * @button-padding);
+                margin-left: 1rem;
             }
-
-            a {
-                overflow: hidden;
-                width: 100%;
-
-                // Padding tilsvarende focus-box-shadow, trengs pga. overflow i parent
-                padding: @button-padding;
-
-                // Lag litt ekstra rom i høyden slik at 'Hovedknapp' fra nav-frontend
-                // kan heves litt utover sin egen container, selv med overflow:hidden
-                // i parent-containeren.
-                padding-top: 0.5rem;
-            }
-        }
-
-        &__knapp {
-            flex: 1;
-            overflow: hidden;
-            text-overflow: ellipsis;
         }
     }
 
@@ -67,17 +40,12 @@
         flex-direction: row;
 
         &__buttons {
-            overflow: hidden;
             width: auto;
         }
 
         .userHelp {
             margin-top: 0;
-            margin-left: calc(0.5rem - @button-padding);
-        }
-
-        a {
-            width: initial;
+            margin-left: 1rem;
         }
     }
 }
