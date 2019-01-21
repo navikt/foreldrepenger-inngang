@@ -1,6 +1,7 @@
 const fs = require('fs');
 
 const LOCALES_PATH = '../src/app/intl/locales';
+const WRITE_MISSING_FILES_TO_FILE = false;
 
 const localeFileBokmål = require(`${LOCALES_PATH}/nb_NO.json`);
 const localeFileNynorsk = require(`${LOCALES_PATH}/nn_NO.json`);
@@ -20,7 +21,8 @@ const getMissingKeys = (defaultLanguage, targetLanguage) => {
         missingTranslations[missingKey] = defaultLocaleFile[missingKey];
     }
 
-    writeMissingTranslationsToFile(targetLanguage, missingTranslations);
+    WRITE_MISSING_FILES_TO_FILE &&
+        writeMissingTranslationsToFile(targetLanguage, missingTranslations);
     return missingKeys;
 };
 

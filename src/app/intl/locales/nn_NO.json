@@ -64,7 +64,7 @@
     "route.veiviser": "Kva har du rett til?",
 
     "informasjonstavle.tittel": "Foreldrepengar, eingongsstønad og svangerskapspengar",
-    "informasjonstavle.ingress": "Dette har du rett til når du ventar barn eller skal ha foreldrepermisjon.",
+    "informasjonstavle.ingress": "Dette har du rett til når du ventar barn eller skal ha foreldrepengar.",
     "informasjonstavle.hva_kan_du_få": "Kva kan du få?",
     "informasjonstavle.hva_kan_du_få_ingress": "Finn ut om du kan ha rett til foreldrepengar eller eingongsstønad.",
     "informasjonstavle.hvor_mye": "Kor mykje?",
@@ -201,6 +201,7 @@
 
     "om_foreldrepenger.ferie.tittel": "Dersom du skal på ferie",
     "om_foreldrepenger.ferie.eksempel_label": "Eksempel på korleis du kan forlengje foreldrepengeperioden din når du utset:",
+    "om_foreldrepenger.ferie.illustrasjon": "Ferie",
 
     "om_foreldrepenger.nye_regler.tittel": "Nye reglar frå 1. juli 2018",
     "om_foreldrepenger.nye_regler_label": "Barnet er født eller adoptert",
@@ -231,6 +232,9 @@
     "om_foreldrepenger.sykdom.sykmeldt.eksempeltittel": " Eksempel på korleis du kan forlengje foreldrepengeperioden din når du utset:",
     "om_foreldrepenger.sykdom.sykmeldt": " Sjukmeld",
     "om_foreldrepenger.sykdom.barnet_er_innlagt": "Barnet er innlagt",
+    "om_foreldrepenger.sykdom.illustrasjon.forskyves": "(forskyves 2 veker)",
+    "om_foreldrepenger.sykdom.illustrasjon.sluttdato": "Sluttdato",
+    "om_foreldrepenger.sykdom.illustrasjon.ferievarighet": "(2 veker)",
 
     "om_foreldrepenger.hjemme_samtidig.tittel": "Heime samtidig",
     "om_foreldrepenger.hjemme_samtidig.ingress": "Dersom de vil vere heime med barnet samtidig eller byte på, har de fleire val.",
@@ -253,6 +257,18 @@
     "om_engangsstønad.utbetaling.tittel": "Når blir pengane betalte ut?",
     "om_engangsstønad.til_far.tittel": "Eingongsstønad til far eller medmor",
     "om_engangsstønad.når_kan_du_søke.tittel": "Når kan du søkje?",
+    "om_foreldrepenger.jobbe.jobbeHeltidSvg.jobb": "Jobb",
+    "om_foreldrepenger.jobbe.jobbeHeltidSvg.uker": "(4 veker)",
+    "om_foreldrepenger.jobbe.jobbeHeltidSvg.sluttdato": "Sluttdato",
+    "om_foreldrepenger.jobbe.jobbeHeltidSvg.forskyvning": "(forskyvast 4 veker)",
+    "om_foreldrepenger.jobbe.jobbeHeltidSvg.fodsel": "Fødsel",
+    "om_foreldrepenger.jobbe.jobbDelvis.statiskSvg.foreldrepenger": "Foreldrepenger",
+    "om_foreldrepenger.jobbe.jobbDelvis.statiskSvg.prosentAndelFra": "Jobba 20 prosent",
+    "om_foreldrepenger.jobbe.jobbDelvis.statiskSvg.prosentAndelTil": "heime 80 prosent/",
+    "om_foreldrepenger.jobbe.jobbDelvis.dropdownSvg.jobbdag": "1 jobbdag",
+    "om_foreldrepenger.jobbe.jobbDelvis.dropdownSvg.dager": "4 dagar",
+    "om_foreldrepenger.jobbe.jobbDelvis.dropdownSvg.dag": "dag",
+    "om_foreldrepenger.jobbe.jobbDelvis.dropdownSvg.uke": "veke",
 
     "veiviser.fane.mor": "Mor",
     "veiviser.fane.far": "Far",

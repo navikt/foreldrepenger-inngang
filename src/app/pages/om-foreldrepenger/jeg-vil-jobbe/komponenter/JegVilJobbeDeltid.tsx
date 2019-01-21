@@ -1,6 +1,22 @@
 import React from 'react';
+import { injectIntl, InjectedIntl } from 'react-intl';
+import getTranslation from '../../../../utils/i18nUtils';
 
-export const JegVilJobbeDeltid = ({ width, height }: { width: string; height: string }) => {
+const JegVilJobbeDeltid = ({
+    width,
+    height,
+    foreldrepenger,
+    prosentAndelFra,
+    prosentAndelTil,
+    intl
+}: {
+    width: string;
+    height: string;
+    foreldrepenger: string;
+    prosentAndelFra: string;
+    prosentAndelTil: string;
+    intl: InjectedIntl;
+}) => {
     return (
         <svg
             width={width}
@@ -32,7 +48,7 @@ export const JegVilJobbeDeltid = ({ width, height }: { width: string; height: st
                                 fontWeight="normal"
                                 fill="#3E3832">
                                 <tspan x="9" y="16">
-                                    Foreldrepenger
+                                    {getTranslation(foreldrepenger, intl)}
                                 </tspan>
                             </text>
                             <g transform="translate(4.000000, 29.000000)">
@@ -79,7 +95,7 @@ export const JegVilJobbeDeltid = ({ width, height }: { width: string; height: st
                                 fontWeight="normal"
                                 fill="#3E3832">
                                 <tspan x="30" y="16">
-                                    Foreldrepenger
+                                    {getTranslation(foreldrepenger, intl)}
                                 </tspan>
                             </text>
                         </g>
@@ -124,7 +140,7 @@ export const JegVilJobbeDeltid = ({ width, height }: { width: string; height: st
                                 fontWeight="bold"
                                 fill="#3E3832">
                                 <tspan x="28" y="36">
-                                    Jobbe 20 prosent
+                                    {getTranslation(prosentAndelFra, intl)}
                                 </tspan>
                             </text>
                             <text
@@ -133,7 +149,7 @@ export const JegVilJobbeDeltid = ({ width, height }: { width: string; height: st
                                 fontWeight="bold"
                                 fill="#3E3832">
                                 <tspan x="17" y="16">
-                                    Hjemme 80 prosent /
+                                    {getTranslation(prosentAndelTil, intl)}
                                 </tspan>
                             </text>
                         </g>
@@ -143,3 +159,5 @@ export const JegVilJobbeDeltid = ({ width, height }: { width: string; height: st
         </svg>
     );
 };
+
+export default injectIntl(JegVilJobbeDeltid);

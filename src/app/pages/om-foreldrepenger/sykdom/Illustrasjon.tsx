@@ -1,6 +1,14 @@
 import * as React from 'react';
+import { injectIntl, InjectedIntl } from 'react-intl';
+import getTranslation from '../../../utils/i18nUtils';
 
-const Illustrasjon = ({ grunnForForlengelse }: { grunnForForlengelse: string }) => (
+const Illustrasjon = ({
+    grunnForForlengelse,
+    intl
+}: {
+    grunnForForlengelse: string;
+    intl: InjectedIntl;
+}) => (
     <svg height="65px" width="100%" version="1.1" viewBox="0 0 622 65">
         <g fill="none" stroke="none" strokeWidth="1">
             <rect height="65" width="622" fill="none" x="0" y="0" />
@@ -32,7 +40,7 @@ const Illustrasjon = ({ grunnForForlengelse }: { grunnForForlengelse: string }) 
                 </tspan>
                 <tspan fontFamily="SourceSansPro-Regular, Source Sans Pro" x="344.892" y="9" />
                 <tspan fontFamily="SourceSansPro-Regular, Source Sans Pro" x="297.498" y="24">
-                    (2 uker)
+                    {getTranslation('om_foreldrepenger.sykdom.illustrasjon.ferievarighet', intl)}
                 </tspan>
             </text>
             <path
@@ -41,10 +49,10 @@ const Illustrasjon = ({ grunnForForlengelse }: { grunnForForlengelse: string }) 
             />
             <text fill="#3E3832" fontFamily="SourceSansPro-Bold, Source Sans Pro" fontSize="12">
                 <tspan fontWeight="bold" x="544.16" y="9">
-                    Sluttdato
+                    {getTranslation('om_foreldrepenger.sykdom.illustrasjon.sluttdato', intl)}
                 </tspan>
                 <tspan fontFamily="SourceSansPro-Regular, Source Sans Pro" x="525.242" y="24">
-                    (forskyves 2 uker)
+                    {getTranslation('om_foreldrepenger.sykdom.illustrasjon.forskyves', intl)}
                 </tspan>
             </text>
             <polygon
@@ -103,4 +111,4 @@ const Illustrasjon = ({ grunnForForlengelse }: { grunnForForlengelse: string }) 
     </svg>
 );
 
-export default Illustrasjon;
+export default injectIntl(Illustrasjon);
