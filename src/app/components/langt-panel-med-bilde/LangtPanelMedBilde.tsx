@@ -1,12 +1,12 @@
 import * as React from 'react';
-import WithLink from 'app/components/with-link/WithLink';
-import BEMHelper from 'app/utils/bem';
-import { Undertittel, Normaltekst } from 'nav-frontend-typografi';
-import CustomSvg, { IconRef } from 'app/utils/CustomSVG';
 import { HoyreChevron } from 'nav-frontend-chevron';
-import Panel from 'nav-frontend-paneler';
-import './langtPanelMedBilde.less';
+import { Undertittel, Normaltekst } from 'nav-frontend-typografi';
+import BEMHelper from 'app/utils/bem';
+import classnames from 'classnames';
+import CustomSvg, { IconRef } from 'app/utils/CustomSVG';
 import MediaQuery from 'react-responsive';
+import WithLink from 'app/components/with-link/WithLink';
+import './langtPanelMedBilde.less';
 
 const cls = BEMHelper('langtPanelMedBilde');
 
@@ -18,18 +18,16 @@ interface Props {
 }
 
 const LangtPanelMedBilde: React.StatelessComponent<Props> = ({ svg, url, title, body }) => (
-    <WithLink url={url} noStyling={true}>
-        <Panel className={cls.className}>
-            <MediaQuery minWidth={576}>
-                <Desktopversjon svg={svg} title={title} body={body} />
-            </MediaQuery>
-            <MediaQuery maxWidth={575}>
-                <Mobilversjon svg={svg} title={title} body={body} />
-            </MediaQuery>
-            <div className={cls.element('chevron')}>
-                <HoyreChevron />
-            </div>
-        </Panel>
+    <WithLink url={url} noStyling={true} className={classnames(cls.className)}>
+        <MediaQuery minWidth={576}>
+            <Desktopversjon svg={svg} title={title} body={body} />
+        </MediaQuery>
+        <MediaQuery maxWidth={575}>
+            <Mobilversjon svg={svg} title={title} body={body} />
+        </MediaQuery>
+        <div className={cls.element('chevron')}>
+            <HoyreChevron />
+        </div>
     </WithLink>
 );
 
