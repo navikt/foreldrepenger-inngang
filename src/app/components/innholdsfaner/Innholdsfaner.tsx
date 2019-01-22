@@ -17,12 +17,12 @@ interface OwnProps {
 
 type Props = OwnProps & InjectedIntlProps;
 
-class Innholdsfaner extends React.Component<Props> {
-    state: {
-        currentTab: number;
-        componentToRender: React.ReactNode;
-    };
+interface State {
+    currentTab: number;
+    componentToRender: React.ReactNode;
+}
 
+class Innholdsfaner extends React.Component<Props, State> {
     constructor(props: Props) {
         super(props);
 
