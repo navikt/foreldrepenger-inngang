@@ -29,7 +29,7 @@ const Fane: React.StatelessComponent<Props & InjectedIntlProps> = ({
     intl
 }) => {
     return (
-        <div
+        <button
             tabIndex={0}
             role="tab"
             aria-selected={isSelected}
@@ -44,7 +44,7 @@ const Fane: React.StatelessComponent<Props & InjectedIntlProps> = ({
                 <TypografiBase type="normaltekst">{getTranslation(tab.label, intl)}</TypografiBase>
             </div>
             <div className={cls.element('selector')} />
-        </div>
+        </button>
     );
 };
 

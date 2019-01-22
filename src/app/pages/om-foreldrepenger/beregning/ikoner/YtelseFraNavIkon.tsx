@@ -3,7 +3,7 @@ import * as React from 'react';
 const YtelseFraNavIkon = () => {
     return (
         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
-            <g fill="none" fill-rule="evenodd">
+            <g fill="none" fillRule="evenodd">
                 <path
                     fill="#3E3832"
                     d="M11.999 24C5.373 24 0 18.628 0 12 0 5.374 5.373 0 11.999 0 18.627 0 24 5.373 24 12c0 6.628-5.373 12-12.001 12z"
