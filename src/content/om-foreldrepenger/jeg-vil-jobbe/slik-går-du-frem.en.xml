@@ -10,7 +10,7 @@
     </lesmer>
     <lesmer intro="If you are self-employed or a freelancer">
         <liste>
-            <punkt>In the <b>parental benefit application</b>, you specify that you are <b>delaying</b> the period because you are working or that you are working part time.</punkt>
+            <punkt>In the <b>parental benefit application</b>, you specify that you are <b>postponing</b> the period because you are working or that you are working part time.</punkt>
             <punkt>If you <b>have already applied</b>, log in at <lenke url="https://foreldrepenger.nav.no/" ekstern="true">Your parental benefit</lenke> and submit a modification application.</punkt>
         </liste>
         <avsnitt><b>Application deadline</b>: You must apply <b>before</b> you start working.</avsnitt>
