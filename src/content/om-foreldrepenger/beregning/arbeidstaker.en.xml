@@ -26,7 +26,7 @@
     <lesmer intro="Days without work included in the calculation">
         <liste>
             <punkt>If you have been working <b>continuously for four weeks</b> and there are no more than <b>fourteen days</b> between each time you are at work, days without work are also included in the qualifying period.</punkt>
-            <punkt>If you have an employment agreement for <b>fast turnus</b>, the days you are not at work will be included in the qualifying period, even if you work less than every 14th day.</punkt>
+            <punkt>If you have an employment agreement for <b>fixed shifts</b>, the days you are not at work will be included in the qualifying period, even if you work less than every 14th day.</punkt>
             <punkt><b>Holidays and time off in lieu</b> are also included.</punkt>
         </liste>
     </lesmer>
