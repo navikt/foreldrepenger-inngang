@@ -15,7 +15,7 @@ const Lenkeknapp = ({ url, urlIsExternal, type, children }: Props) => (
         url={url}
         urlIsExternal={urlIsExternal}
         noStyling={true}
-        className={classnames('knapp', `knapp--${type || 'standard'}`, 'lenkeknapp')}>
+        className={classnames('knapp', 'lenkeknapp', `knapp--${type || 'standard'}`)}>
         <span>{children}</span>
     </WithLink>
 );
