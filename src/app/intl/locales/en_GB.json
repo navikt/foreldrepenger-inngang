@@ -68,7 +68,7 @@
     "informasjonstavle.tittel": "Parental benefit, lump-sum grant and pregnancy benefit",
     "informasjonstavle.ingress": "These are your rights when expecting children or awaiting parental benefits.",
     "informasjonstavle.hva_kan_du_få": "What can I receive?",
-    "informasjonstavle.hva_kan_du_få_ingress": " Use the wizard to find out whether you should apply for the parental benefit or lump-sum grant",
+    "informasjonstavle.hva_kan_du_få_ingress": " Use the wizard to find out whether you should apply for the parental benefit or lump-sum grant.",
     "informasjonstavle.hvor_mye": "How much?",
     "informasjonstavle.hvor_mye_ingress": "Calculate the parental benefit you are entitled to.",
     "informasjonstavle.hvor_lenge": "How long?",
@@ -79,8 +79,8 @@
 
     "informasjonstavle.mer_informasjon.tittel": "Additional information",
     "informasjonstavle.mer_informasjon.foreldrepenger": "The parental benefit shall replace your income when you are at home with the child.",
-    "informasjonstavle.mer_informasjon.engangsstønad": "If you are expecting a child and have not had an income in the past year, you can receive a lump-sum instead of the parental benefit",
-    "informasjonstavle.mer_informasjon.svangerskapspenger": "If you cannot work when you are pregnant because it may harm the unborn child, you can receive the pregnancy benefit",
+    "informasjonstavle.mer_informasjon.engangsstønad": "If you are expecting a child and have not had an income in the past year, you can receive a lump-sum instead of the parental benefit.",
+    "informasjonstavle.mer_informasjon.svangerskapspenger": "If you cannot work when you are pregnant because it may harm the unborn child, you can receive the pregnancy benefit.",
 
     "informasjonstavle.andre_lenker.tittel": "Related information",
     "informasjonstavle.andre_lenker.ettersende_vedlegg_til_søknad": "Forward attachments for the application",
