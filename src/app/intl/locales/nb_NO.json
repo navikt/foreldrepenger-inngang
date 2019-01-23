@@ -81,7 +81,7 @@
 
     "informasjonstavle.andre_lenker.dokumentasjon": "Dokumentasjon som må legges ved",
     "informasjonstavle.andre_lenker.ettersende_vedlegg_til_søknad": "Ettersende vedlegg til søknad",
-    "informasjonstavle.andre_lenker.hvis_du_vil_jobbe": "Hvis du vil jobbe",
+    "informasjonstavle.andre_lenker.ofte_stilte_spørsmål": "Ofte stilte spørsmål",
     "informasjonstavle.andre_lenker.hvis_en_av_dere_blir_syke": "Hvis en av dere blir syke",
     "informasjonstavle.andre_lenker.informasjon_om_kontantstøtte": "Informasjon om kontantstøtte",
     "informasjonstavle.andre_lenker.meld_fra_om_endringer": "Meld fra om endringer",
@@ -157,6 +157,7 @@
     "hurtiglenke.hvem_kan_fa_engangsstonad": "Hvem kan få engangsstønad?",
     "hurtiglenke.nar_blir_pengene_utbetalt": "Når blir pengene utbetalt?",
     "hurtiglenke.engangsstonad_til_far_eller_medmor": "Engangsstønad til far eller medmor",
+    "hurtiglenke.ofte_stilte_sporsmal": "Ofte stilte spørsmål",
 
     "innholdsfortegnelse.søk_nå": "Søk nå",
 
@@ -257,6 +258,7 @@
     "om_foreldrepenger.beregning.frilanser.ikontittel": "Frilanser",
 
     "om_foreldrepenger.hjelp.tittel": "Fant du ikke det du lette etter?",
+    "om_foreldrepenger.ofte_stilte_spørsmål.tittel": "Ofte stilte spørsmål",
 
     "om_engangsstønad.tittel": "All informasjon om engangsstønad",
     "om_engangsstønad.hva_er.tittel": "Hvem kan få engangsstønad?",

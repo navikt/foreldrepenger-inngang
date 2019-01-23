@@ -84,6 +84,7 @@
 
     "informasjonstavle.andre_lenker.tittel": "Related information",
     "informasjonstavle.andre_lenker.ettersende_vedlegg_til_søknad": "Forward attachments for the application",
+    "informasjonstavle.andre_lenker.ofte_stilte_spørsmål": "Ofte stilte spørsmål",
     "informasjonstavle.andre_lenker.informasjon_om_kontantstøtte": "Information on cash benefit",
     "informasjonstavle.andre_lenker.regelverk": "Rules",
     "informasjonstavle.andre_lenker.hvis_en_av_dere_blir_syke": "If one of you becomes sick",
@@ -91,7 +92,6 @@
     "informasjonstavle.andre_lenker.slik_klager_du": "How to appeal",
     "informasjonstavle.andre_lenker.dokumentasjon": "Required documentation",
     "informasjonstavle.andre_lenker.opphold_i_utlandet": "Stays abroad",
-    "informasjonstavle.andre_lenker.hvis_du_vil_jobbe": "If you wish to work",
 
     "tjenester.tittel": "How much and how long?",
     "tjenester.beregning_tittel": "Calculation of parental benefit",
@@ -160,6 +160,7 @@
     "hurtiglenke.hvem_kan_fa_engangsstonad": "Who is entitled to the lump-sum grant?",
     "hurtiglenke.nar_blir_pengene_utbetalt": "When will the money be paid out?",
     "hurtiglenke.engangsstonad_til_far_eller_medmor": "Lump-sum grant to father or co-mother",
+    "hurtiglenke.ofte_stilte_sporsmal": "Frequently asked questions",
 
     "innholdsfortegnelse.søk_nå": "Apply now",
 
@@ -262,6 +263,7 @@
     "om_foreldrepenger.beregning.frilanser.ikontittel": "Freelancer",
 
     "om_foreldrepenger.hjelp.tittel": "Were you unable to find what you were looking for?",
+    "om_foreldrepenger.ofte_stilte_spørsmål.tittel": "Frequently asked questions",
 
     "om_engangsstønad.tittel": "All information regarding the lump-sum grant",
     "om_engangsstønad.hva_er.tittel": "Who is entitled to the lump-sum grant?",
