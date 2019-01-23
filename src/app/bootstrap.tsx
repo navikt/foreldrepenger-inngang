@@ -4,7 +4,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import ScrollToTop from './utils/ScrollToTop';
 import App from './App';
 
-import './styles/app.less';
+import './styles/index.less';
 
 const root = document.getElementById('app');
 
