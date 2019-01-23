@@ -17,16 +17,8 @@ const renderWithValues = (type: NodeType) => (props: any, values: any) => ({
     }
 });
 
-const renderWithClassName = (type: NodeType) => (props: any, values: any) => ({
-    type,
-    props: {
-        ...props,
-        className: values.className
-    }
-});
-
 const xmlToReact = new XMLToReact({
-    innhold: renderWithClassName(Node.Innhold),
+    innhold: renderAs(Node.Innhold),
     avsnitt: renderAs(Node.Avsnitt),
     lenke: renderAs(Node.Lenke),
     liste: renderAs(Node.Liste),

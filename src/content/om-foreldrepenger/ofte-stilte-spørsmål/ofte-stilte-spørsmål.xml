@@ -1,0 +1,34 @@
+<innhold>
+    <lesmer intro="Når får jeg svar på søknaden min?">
+        <avsnitt>Du får tidligst svar på søknaden din fire uker før foreldrepengeperioden din starter. Dette er fordi NAV trenger oppdaterte opplysninger for å behandle saken din.</avsnitt>
+    </lesmer>
+    <lesmer intro="Kan jeg få foreldrepenger når jeg er student?">
+        <avsnitt>For å ha rett til foreldrepenger må du ha hatt inntekt i 6 av de 10 siste månedene. Studielån fra Lånekassen gir ikke rett til foreldrepenger. Om du ikke har rett til foreldrepenger, kan du søke om engangsstønad. Du kan prøve vår <lenke url="/veiviser">veiviser</lenke> for å se hva du kan ha rett til.</avsnitt>
+    </lesmer>
+    <lesmer intro="Jeg får ytelse fra NAV. Kan jeg få foreldrepenger?">
+        <avsnitt>Hvis du får utbetalt en av disse ytelsene fra NAV, kan du ha rett til foreldrepenger:</avsnitt>
+        <liste>
+            <punkt>Sykepenger</punkt>
+            <punkt>Foreldrepenger </punkt>
+            <punkt>Svangerskapspenger</punkt>
+            <punkt>Arbeidsavklaringspenger</punkt>
+            <punkt>Dagpenger</punkt>
+            <punkt>Omsorgs-, pleie- eller opplæringspenger</punkt>
+        </liste>
+    </lesmer>
+    <lesmer intro="Hva er forskjellen mellom foreldrepenger og engangsstønad?">
+        <avsnitt>Foreldrepenger skal erstatte inntekten din når du skal være hjemme med barnet. Engangsstønad er en engangssum du kan få hvis du venter barn og ikke har hatt inntekt det siste året. Du kan velge engangsstønad selv om du har rett til foreldrepenger, men du kan kun få en av disse.</avsnitt>
+    </lesmer>
+    <lesmer intro="Hva er forskjellen på foreldrepengeperiode og fellesperiode?">
+        <avsnitt>Foreldrepengeperioden er hele perioden med foreldrepenger. Den består av tre uker foreldrepenger til mor før fødsel, mødrekvote, fedrekvote og en fellesperiode. Fellesperioden er den delen av foreldrepengeperioden som foreldrene kan dele.</avsnitt>
+    </lesmer>
+    <lesmer intro="Jeg sendte søknad for en uke siden, men jeg finner den ikke på siden min">
+        <avsnitt>Hvis foreldrepengeperioden til mor eller far startet i 2018 eller tidligere, kan det ta opptil ? uker før søknaden din blir registrert hos oss og synlig på Ditt NAV. Da du sendte søknaden fikk du en kvittering som bekreftet at vi har mottatt den.</avsnitt>
+    </lesmer>
+    <lesmer intro="Jeg skal ha ulønnet permisjon">
+        <avsnitt>Ulønnet permisjon avtaler du med arbeidsgiveren din. Du kan ikke utsette foreldrepengene dine når du har ulønnet permisjon. Den andre forelderen kan utsette foreldrepengene på grunn av heltidsarbeid, sykdom eller ferie i perioden du har ulønnet permisjon.</avsnitt>
+        <avsnitt>Ulønnet permisjon kan påvirke retten din til andre NAV ytelser, <lenke url="https://www.nav.no/no/Person/Arbeid/Sykmeldt%2C+arbeidsavklaringspenger+og+yrkesskade/Sykepenger/Sykepenger+til+sarskilte+grupper#chapter-5" ekstern="true">les mer her</lenke>.</avsnitt>
+    </lesmer>
+    <avsnitt type="systemtittel" className="center">Fant du ikke det du lette etter?</avsnitt>
+    <avsnitt className="center">Ta gjerne kontakt med oss på:</avsnitt>
+</innhold>

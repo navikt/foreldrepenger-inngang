@@ -22,9 +22,9 @@ const links = [
         href: 'https://www.nav.no/no/Person/Familie/Barnetrygd+og+kontantstotte/kontantst%C3%B8tte'
     },
     {
-        label: 'informasjonstavle.andre_lenker.hvis_du_vil_jobbe',
+        label: 'informasjonstavle.andre_lenker.ofte_stilte_spørsmål',
         internal: true,
-        href: '/om-foreldrepenger#hvis-du-vil-jobbe'
+        href: '/om-foreldrepenger#ofte-stilte-sporsmal'
     },
     {
         label: 'informasjonstavle.andre_lenker.hvis_en_av_dere_blir_syke',

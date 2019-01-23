@@ -10,7 +10,6 @@ import Environment from 'app/Environment';
 import Ferie from './ferie/Ferie';
 import getTranslation from 'app/utils/i18nUtils';
 import HeaderInformasjon from '../../components/header-informasjon/HeaderInformasjon';
-import Hjelp from '../../components/hjelpe-seksjon/HjelpeSeksjon';
 import HjemmeSamtidig from './hjemme-samtidig/HjemmeSamtidig';
 import HvemKanFåForeldrepenger from './hvem-kan-få/HvemKanFåForeldrepenger';
 import HvorLenge from './hvor-lenge/HvorLenge';
@@ -19,6 +18,7 @@ import JegVilJobbe from './jeg-vil-jobbe/JegVilJobbe';
 import MedInnholdsfortegnelse from '../infosider/MedInnholdsfortegnelse';
 import NårKanDuSøke from './når-kan-du-søke/NårKanDuSøke';
 import NyeRegler from './nye-regler/NyeRegler';
+import OfteStilteSpørsmål from './ofte-stilte-spørsmål/OfteStilteSpørsmål';
 import Sidebanner from '../../components/sidebanner/Sidebanner';
 import Sykdom from './sykdom/Sykdom';
 import '../infosider/infosider.less';
@@ -38,7 +38,8 @@ export type ForeldrepengerSection =
     | 'hvis-du-vil-jobbe'
     | 'hvis-en-av-dere-blir-syke'
     | 'hjemme-samtidig'
-    | 'adoptere';
+    | 'adoptere'
+    | 'ofte-stilte-sporsmal';
 
 const sections: ForeldrepengerSection[] = [
     'hvem-kan-fa-foreldrepenger',
@@ -49,7 +50,8 @@ const sections: ForeldrepengerSection[] = [
     'hvis-du-vil-jobbe',
     'hvis-en-av-dere-blir-syke',
     'hjemme-samtidig',
-    'adoptere'
+    'adoptere',
+    'ofte-stilte-sporsmal'
 ];
 
 const OmForeldrepenger: React.StatelessComponent<Props & InjectedIntlProps> = ({
@@ -85,7 +87,7 @@ const OmForeldrepenger: React.StatelessComponent<Props & InjectedIntlProps> = ({
                     <Sykdom id={sections[6]} />
                     <HjemmeSamtidig id={sections[7]} />
                     <Adopsjon id={sections[8]} />
-                    <Hjelp />
+                    <OfteStilteSpørsmål id={sections[9]} />
                 </article>
             </MedInnholdsfortegnelse>
         </div>
