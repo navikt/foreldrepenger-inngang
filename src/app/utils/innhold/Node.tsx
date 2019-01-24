@@ -32,17 +32,15 @@ export const Innhold = (props: any) => (
 
 export const Avsnitt = (props: {
     type?: TypografiType;
-    children: React.ReactNode;
     className?: string;
-}) => {
-    return (
-        <TypografiBase
-            className={classnames(cls.element('avsnitt'), props.className)}
-            type={props.type || 'normaltekst'}
-            {...props}
-        />
-    );
-};
+    children: React.ReactNode;
+}) => (
+    <TypografiBase
+        type={props.type || 'normaltekst'}
+        className={classnames(cls.element('avsnitt'), props.className)}
+        children={props.children}
+    />
+);
 
 export const Variabel = (props: { values: ValueMap; children: string }) => {
     const { values, children } = props;

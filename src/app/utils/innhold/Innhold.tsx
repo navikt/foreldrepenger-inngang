@@ -8,7 +8,10 @@ type NodeType = React.ReactNode | string;
 
 const contentSubstitute = '<innhold />';
 
-const renderAs = (type: NodeType) => (props: any) => ({ type, props });
+const renderAs = (type: NodeType) => (props: any) => ({
+    type,
+    props: { ...props, className: props.className || props.class }
+});
 const renderWithValues = (type: NodeType) => (props: any, values: any) => ({
     type,
     props: {

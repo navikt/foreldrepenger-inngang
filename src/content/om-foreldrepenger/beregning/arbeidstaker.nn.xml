@@ -8,7 +8,7 @@
     </liste>
     <avsnitt>Har du hatt fleire deltidsstillingar, er det den totale inntekta di som gjeld når vi skal berekne foreldrepengane dine.</avsnitt>
     <avsnitt>Dersom inntekta di er <b>25 prosent større eller mindre</b> enn det du har tent dei tre siste åra, bruker vi anten den noverande inntekta di eller gjennomsnittet av inntektene dei tre siste åra.</avsnitt>
-    <avsnitt>Også andre situasjonar kan gi deg rett til foreldrepengar. Dette kan vere:</avsnitt>
+    <avsnitt class="blokk-l">Også andre situasjonar kan gi deg rett til foreldrepengar. Dette kan vere:</avsnitt>
     <liste>
         <punkt>lønn frå arbeidsgivar under vidare- eller etterutdanning</punkt>
         <punkt>etterlønn frå arbeidsgivar</punkt>
