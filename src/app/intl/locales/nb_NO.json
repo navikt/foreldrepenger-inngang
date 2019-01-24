@@ -347,6 +347,8 @@
     "veiviser.valg.resultat.knapp.ikkerett.info": "les mer om foreldrepenger",
     "veiviser.valg.resultat.engangsstonad.headertxt": "Det er kun i noen få tilfeller du kan ha rett til engangsstønad.",
     "veiviser.valg.resultat.foreldrepenger.headertxt": "Du kan lese om hvordan du kan ha rett til foreldrepenger.",
+    "veiviser.valg.resultat.navigasjonsboks.hvormye.ariaLabel": "Gå til kalkulatoren. Her kan du estimere hvor mye foreldrepenger du kan få utbetalt",
+    "veiviser.valg.resultat.navigasjonsboks.hvorlenge.ariaLabel": "Gå til planleggeren. Her kaN du sette opp uttaksplan for din foreldre periode",
 
     "veiviser.valg.resultat.punkt.forste.godkjent": "Jeg har hatt inntekt seks av de ti siste månedene",
     "veiviser.valg.resultat.punkt.andre.godkjent": "Jeg har tjent minst 48 441 kr i året",

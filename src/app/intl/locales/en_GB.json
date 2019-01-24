@@ -352,6 +352,8 @@
     "veiviser.valg.resultat.knapp.ikkerett.info": "read more about the parental benefit",
     "veiviser.valg.resultat.engangsstonad.headertxt": "There are only a few cases in which you may be entitled to a lump-sum grant.",
     "veiviser.valg.resultat.foreldrepenger.headertxt": "Read more about how you may be entitled to parental benefit.",
+    "veiviser.valg.resultat.navigasjonsboks.hvormye.ariaLabel": "Go to the calculator. Here you can estimate how much parental benefit you can get paid",
+    "veiviser.valg.resultat.navigasjonsboks.hvorlenge.ariaLabel": "Go to the planner. Here you can set up withdrawal plan for your parenting period",
 
     "veiviser.valg.resultat.punkt.forste.godkjent": "I have had an income in 6 of the last 10 months",
     "veiviser.valg.resultat.punkt.andre.godkjent": "I have earned at least NOK 48,441 for the year",
