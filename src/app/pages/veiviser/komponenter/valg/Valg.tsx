@@ -20,6 +20,7 @@ import { getEnHalvG } from '../../../../utils/beregningUtils';
 import 'core-js';
 import 'raf/polyfill';
 import getTranslation from 'app/utils/i18nUtils';
+import Environment from "../../../../Environment";
 
 const cls = BEMHelper('valg');
 const resultat = BEMHelper('resultat');
@@ -620,7 +621,7 @@ class Valg extends React.Component<Props, State> {
                                     intl={this.props.intl}
                                     knappType={'hoved'}
                                     txt={'veiviser.valg.resultat.knapp.foreldrepenger'}
-                                    url={'/hva-soker-du/foreldrepenger'}
+                                    url={Environment.SOK_FORELDREPENGER_URL}
                                 />
                             )
                     );
