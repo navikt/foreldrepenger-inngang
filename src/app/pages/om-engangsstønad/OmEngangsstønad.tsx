@@ -30,7 +30,7 @@ export type EngangsstonadSection =
     | 'hva-kan-du-fa'
     | 'nar-kan-du-soke'
     | 'nar-blir-pengene-utbetalt'
-    | 'engangsstonad-til-far-eller-medmor';
+    | 'far-eller-medmor';
 
 export interface EngangsstonadSectionProps {
     id: EngangsstonadSection;
@@ -41,7 +41,7 @@ const sections: EngangsstonadSection[] = [
     'hva-kan-du-fa',
     'nar-kan-du-soke',
     'nar-blir-pengene-utbetalt',
-    'engangsstonad-til-far-eller-medmor'
+    'far-eller-medmor'
 ];
 
 const OmEngangsstonad: React.StatelessComponent<Props & InjectedIntlProps> = ({

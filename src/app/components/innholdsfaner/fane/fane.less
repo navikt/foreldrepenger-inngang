@@ -1,19 +1,19 @@
-@import '../../../styles/index.less';
+@import '../../../styles/assets.less';
 
 .fane {
-    padding: 1rem 0;
-    text-align: center;
+    background: none;
+    border: 0;
+    overflow: hidden;
+    align-items: center;
+    border-radius: 2px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
     font-size: 1.5rem;
+    justify-content: flex-start;
+    padding: 1rem 0;
+    text-align: center;
     width: 120px;
     z-index: 0;
-
-    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-        z-index: 2;
-    }
 
     &--most {
         width: unset;
@@ -29,6 +29,7 @@
     }
 
     &:focus {
+        z-index: 1;
         .buttonFocus();
     }
 
@@ -61,10 +62,12 @@
     }
 
     &__inner {
-        width: 85%;
-
         p {
             line-height: 20px;
         }
+    }
+
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+        z-index: 2;
     }
 }

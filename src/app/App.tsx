@@ -3,7 +3,6 @@ import IntlProvider, { Language } from './intl/IntlProvider';
 import LanguageToggle from './intl/language-toggle/LanguageToggle';
 import moment from 'moment';
 import Router from './Router';
-import './app.less';
 
 const DEFAULT_LANG: Language = 'nb';
 

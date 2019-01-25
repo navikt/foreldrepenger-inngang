@@ -67,8 +67,8 @@
 
     "informasjonstavle.tittel": "Parental benefit, lump-sum grant and pregnancy benefit",
     "informasjonstavle.ingress": "These are your rights when expecting children or awaiting parental benefits.",
-    "informasjonstavle.hva_kan_du_få": "What can I receive?",
-    "informasjonstavle.hva_kan_du_få_ingress": " Use the wizard to find out whether you should apply for the parental benefit or lump-sum grant",
+    "informasjonstavle.hva_kan_du_få": "What am I entitled to?",
+    "informasjonstavle.hva_kan_du_få_ingress": " Use the wizard to find out whether you should apply for the parental benefit or lump-sum grant.",
     "informasjonstavle.hvor_mye": "How much?",
     "informasjonstavle.hvor_mye_ingress": "Calculate the parental benefit you are entitled to.",
     "informasjonstavle.hvor_lenge": "How long?",
@@ -79,11 +79,12 @@
 
     "informasjonstavle.mer_informasjon.tittel": "Additional information",
     "informasjonstavle.mer_informasjon.foreldrepenger": "The parental benefit shall replace your income when you are at home with the child.",
-    "informasjonstavle.mer_informasjon.engangsstønad": "If you are expecting a child and have not had an income in the past year, you can receive a lump-sum instead of the parental benefit",
-    "informasjonstavle.mer_informasjon.svangerskapspenger": "If you cannot work when you are pregnant because it may harm the unborn child, you can receive the pregnancy benefit",
+    "informasjonstavle.mer_informasjon.engangsstønad": "If you are expecting a child and have not had an income in the past year, you can receive a lump-sum instead of the parental benefit.",
+    "informasjonstavle.mer_informasjon.svangerskapspenger": "If you cannot work when you are pregnant because it may harm the unborn child, you can receive the pregnancy benefit.",
 
     "informasjonstavle.andre_lenker.tittel": "Related information",
-    "informasjonstavle.andre_lenker.ettersende_vedlegg_til_søknad": "Forward attachments for the application",
+    "informasjonstavle.andre_lenker.ettersende_vedlegg_til_søknad": "Submit application attachments",
+    "informasjonstavle.andre_lenker.ofte_stilte_spørsmål": "Frequently asked questions",
     "informasjonstavle.andre_lenker.informasjon_om_kontantstøtte": "Information on cash benefit",
     "informasjonstavle.andre_lenker.regelverk": "Rules",
     "informasjonstavle.andre_lenker.hvis_en_av_dere_blir_syke": "If one of you becomes sick",
@@ -91,7 +92,6 @@
     "informasjonstavle.andre_lenker.slik_klager_du": "How to appeal",
     "informasjonstavle.andre_lenker.dokumentasjon": "Required documentation",
     "informasjonstavle.andre_lenker.opphold_i_utlandet": "Stays abroad",
-    "informasjonstavle.andre_lenker.hvis_du_vil_jobbe": "If you wish to work",
 
     "tjenester.tittel": "How much and how long?",
     "tjenester.beregning_tittel": "Calculation of parental benefit",
@@ -159,7 +159,8 @@
     "hurtiglenke.adoptere": "Adopting",
     "hurtiglenke.hvem_kan_fa_engangsstonad": "Who is entitled to the lump-sum grant?",
     "hurtiglenke.nar_blir_pengene_utbetalt": "When will the money be paid out?",
-    "hurtiglenke.engangsstonad_til_far_eller_medmor": "Lump-sum grant to father or co-mother",
+    "hurtiglenke.far_eller_medmor": "Lump-sum grant to father or co-mother",
+    "hurtiglenke.ofte_stilte_sporsmal": "Frequently asked questions",
 
     "innholdsfortegnelse.søk_nå": "Apply now",
 
@@ -256,12 +257,13 @@
 
     "om_foreldrepenger.beregning.tittel": "What am I entitled to?",
     "om_foreldrepenger.beregning.arbeidstaker": "Employee",
-    "om_foreldrepenger.beregning.selvstendig": "Self-employed or freelancer",
-    "om_foreldrepenger.beregning.harYtelse": "Payment from NAV",
-    "om_foreldrepenger.beregning.andreInntektskilder": "Military service or civil defence",
+    "om_foreldrepenger.beregning.selvstendig": "Self-employed\nor freelancer",
+    "om_foreldrepenger.beregning.harYtelse": "Payment\nfrom NAV",
+    "om_foreldrepenger.beregning.andreInntektskilder": "Military service\nor civil defence",
     "om_foreldrepenger.beregning.frilanser.ikontittel": "Freelancer",
 
     "om_foreldrepenger.hjelp.tittel": "Were you unable to find what you were looking for?",
+    "om_foreldrepenger.ofte_stilte_spørsmål.tittel": "Frequently asked questions",
 
     "om_engangsstønad.tittel": "All information regarding the lump-sum grant",
     "om_engangsstønad.hva_er.tittel": "Who is entitled to the lump-sum grant?",
@@ -291,14 +293,14 @@
     "veiviser.valg.inntekt.beregnet.subHeader": "Calculated annual income before tax",
     "veiviser.valg.beregn.knapp": "Calculate income",
 
-    "veiviser.valg.spørsmål.mor.en": "Are you an employee, freelancer, self-employed or recipient of payments from NAV?",
+    "veiviser.valg.spørsmål.mor.en": "Are you an employee, freelancer, self-employed or recipient of benefits from NAV?",
     "veiviser.valg.spørsmål.mor.to": "Do you have other sources of income?",
     "veiviser.valg.spørsmål.mor.tre": "How long have you had an income?",
     "veiviser.valg.spørsmål.mor.fire": "What is your average monthly wage before tax?",
     "veiviser.valg.spørsmål.mor.fem": "Are you a member of National Insurance scheme?",
     "veiviser.valg.spørsmål.mor.seks": "Any other means of being a member?",
 
-    "veiviser.valg.spørsmål.far.en": "I am an employee, freelancer, self-employed or recipient of payments from NAV?",
+    "veiviser.valg.spørsmål.far.en": "Are you an employee, freelancer, self-employed or recipient of benefits from NAV?",
     "veiviser.valg.spørsmål.far.to": "Do you have other sources of income?",
     "veiviser.valg.spørsmål.far.tre": "How long have you had an income?",
     "veiviser.valg.spørsmål.far.fire": " What is your average monthly wage before tax?",

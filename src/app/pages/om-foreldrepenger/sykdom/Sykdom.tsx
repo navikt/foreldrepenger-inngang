@@ -85,6 +85,12 @@ const EnAvForeldreneErSykeWithoutIntl: React.StatelessComponent<InjectedIntlProp
 const BarnetErInnlagt = injectIntl(BarnetErInnlagtWithoutIntl);
 const EnAvForeldreneErSyke = injectIntl(EnAvForeldreneErSykeWithoutIntl);
 
+const BabyWrapper = () => (
+    <div className={cls.element('babyWrapper')}>
+        <CustomSVG iconRef={barn} size={32} />
+    </div>
+);
+
 const tabs = [
     {
         label: 'om_foreldrepenger.sykdom.foreldre_syke',
@@ -94,7 +100,7 @@ const tabs = [
     {
         label: 'om_foreldrepenger.sykdom.innlagt',
         component: <BarnetErInnlagt />,
-        icon: <CustomSVG iconRef={barn} size={32} />
+        icon: <BabyWrapper />
     }
 ];
 

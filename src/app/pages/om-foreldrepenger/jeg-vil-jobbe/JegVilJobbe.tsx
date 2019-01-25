@@ -1,14 +1,13 @@
-import PanelMedIllustrasjon from '../../../components/panel-med-illustrasjon/PanelMedIllustrasjon';
-import { InjectedIntlProps, injectIntl } from 'react-intl';
-import Innhold, { getSource } from 'app/utils/innhold/Innhold';
-import BEMHelper from '../../../utils/bem';
-import './jegVilJobbe.less';
-
-import Tabs from 'nav-frontend-tabs';
-import JobbeHeltid from './JobbeHeltid';
-import JobbeDelvis from './JobbeDelvis';
 import * as React from 'react';
+import { InjectedIntlProps, injectIntl } from 'react-intl';
+import BEMHelper from '../../../utils/bem';
 import getTranslation from 'app/utils/i18nUtils';
+import Innhold, { getSource } from 'app/utils/innhold/Innhold';
+import JobbeDelvis from './JobbeDelvis';
+import JobbeHeltid from './JobbeHeltid';
+import PanelMedIllustrasjon from '../../../components/panel-med-illustrasjon/PanelMedIllustrasjon';
+import Tabs from 'nav-frontend-tabs';
+import './jegVilJobbe.less';
 
 const content = 'om-foreldrepenger/jeg-vil-jobbe/jeg-vil-jobbe';
 const jobbeSvg = require('../../../assets/ark/ark-jobbe.svg').default;

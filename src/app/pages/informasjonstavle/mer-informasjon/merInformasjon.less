@@ -1,32 +1,33 @@
-@import '../../../styles/index.less';
+@import '../../../styles/assets.less';
 
 @box-spacing: 1rem;
 
 .merInformasjon {
+    align-items: stretch;
     display: flex;
     flex-direction: column;
-    align-items: stretch;
     margin-bottom: 3rem;
 
     &__link {
+        align-items: stretch;
+        background-color: white;
+        border-radius: 4px;
+        color: black;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        align-items: stretch;
-        border-radius: 4px;
-        background-color: white;
-        color: black;
         padding: 20px;
         text-decoration: none;
         .containText();
 
-        &:nth-child(1), &:nth-child(2) {
+        &:nth-child(1),
+        &:nth-child(2) {
             margin-bottom: @box-spacing;
         }
-        
+
         &:hover {
             color: #0067c5;
-            box-shadow: #B7B1A9 0 2px 1px 0;
+            box-shadow: #b7b1a9 0 2px 1px 0;
             cursor: pointer;
 
             .typo-undertittel {
@@ -41,7 +42,7 @@
         &:focus {
             outline: none;
             background-color: white;
-            box-shadow: 0 0 0 3px #FFBD66;
+            box-shadow: 0 0 0 3px #ffbd66;
         }
 
         .typo-undertittel {
@@ -76,7 +77,8 @@
             flex: 1;
             flex-direction: column;
 
-            &:nth-child(1), &:nth-child(2) {
+            &:nth-child(1),
+            &:nth-child(2) {
                 margin-bottom: 0;
                 margin-right: @box-spacing;
             }

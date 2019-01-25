@@ -1,0 +1,35 @@
+@import '../../styles/assets.less';
+
+.kontaktvalg {
+    width: 100%;
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+
+    &__valg {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 2px 2px 0 0;
+        padding: 0.5rem 0.5rem 0;
+
+        &:focus {
+            background-color: unset;
+            .buttonFocus();
+        }
+
+        .typo-normal {
+            margin-top: 1rem;
+        }
+    }
+
+    @supports (-ms-ime-align: auto) {
+        justify-content: space-around;
+    }
+
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+        justify-content: space-around;
+    }
+}

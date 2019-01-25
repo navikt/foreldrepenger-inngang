@@ -7,8 +7,7 @@
         <punkt>recently found work or changed pay, your income following the change is used</punkt>
     </liste>
     <avsnitt>If you had multiple part-time positions, your total income will apply when your parental benefit shall be calculated.</avsnitt>
-    <avsnitt>If your income is 25 per cent greater or less than what you have earned for the last three years, either your current income will be used or the average of the last three years.</avsnitt>
-    
+    <avsnitt class="blokk-l">If your income is 25 per cent greater or less than what you have earned for the last three years, either your current income will be used or the average of the last three years.</avsnitt>
     <lesmer intro="Income included in the calculation">
         <liste>
             <punkt>Earned income and benefits that are equivalent to earned income.</punkt>

@@ -3,7 +3,6 @@ import BEMHelper from '../../../../utils/bem';
 import { injectIntl, InjectedIntlProps, InjectedIntl } from 'react-intl';
 import TypografiBase from 'nav-frontend-typografi';
 import Innhold, { getSource } from 'app/utils/innhold/Innhold';
-
 import { RadioPanel, Input } from 'nav-frontend-skjema';
 import Tabs from 'nav-frontend-tabs';
 import { FlexibleSvg } from '../../../../utils/CustomSVG';
@@ -21,6 +20,8 @@ import 'core-js';
 import 'raf/polyfill';
 import getTranslation from 'app/utils/i18nUtils';
 import Lenkeknapp from '../../../../components/lenkeknapp/Lenkeknapp';
+import Environment from "../../../../Environment";
+
 
 const cls = BEMHelper('valg');
 const resultat = BEMHelper('resultat');
@@ -621,7 +622,7 @@ class Valg extends React.Component<Props, State> {
                                     intl={this.props.intl}
                                     knappType={'hoved'}
                                     txt={'veiviser.valg.resultat.knapp.foreldrepenger'}
-                                    url={'/hva-soker-du/foreldrepenger'}
+                                    url={Environment.SOK_FORELDREPENGER_URL}
                                 />
                             )
                     );
@@ -1033,7 +1034,6 @@ const EngangsstonadKnapp = ({
     return (
         <div className={resultat.element('harRettKnapp group')}>
             <div className={resultat.element('harRettKol')}>
-                {/*<Lenkeknapp url={lenkeLeft} type={knappLeftStyle} urlIsExternal={false} children={getTranslation(knappLeft, intl)}/> */}
                 {buttonHeadertxtLeft}
                 <Lenkeknapp
                     url={lenkeLeft}

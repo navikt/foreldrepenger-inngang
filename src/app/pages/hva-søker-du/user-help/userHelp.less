@@ -4,7 +4,6 @@
     align-items: center;
     display: flex;
     flex-direction: row;
-    overflow: hidden;
 
     .hjelpetekst {
         padding-left: 0.5rem;
@@ -14,5 +13,11 @@
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
+    }
+
+    @media (min-width: @tablet-breakpoint) {
+        &__link {
+            max-width: 160px;
+        }
     }
 }
