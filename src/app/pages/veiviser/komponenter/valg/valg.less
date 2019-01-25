@@ -91,7 +91,6 @@
             .lenke {
                 border-bottom: none;
                 display: flex;
-                width: 100%;
                 justify-content: flex-start;
             }
             .knapp {
@@ -354,6 +353,11 @@
         }
     }
 
+    &__navigasjonsboks:focus {
+        outline: none;
+        box-shadow: 0 0 0 3px #ffbd66;
+    }
+
     &__boksGruppe {
         display: flex;
         flex-direction: row;
@@ -371,6 +375,11 @@
             .typo-normal {
                 margin-bottom: 1rem;
             }
+
+            .knapp--standard:focus {
+                background: none;
+            }
+
             .lenke > button {
                 overflow: hidden;
                 text-overflow: ellipsis;

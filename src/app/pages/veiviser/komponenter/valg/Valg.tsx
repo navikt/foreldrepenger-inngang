@@ -3,7 +3,6 @@ import BEMHelper from '../../../../utils/bem';
 import { injectIntl, InjectedIntlProps, InjectedIntl } from 'react-intl';
 import TypografiBase from 'nav-frontend-typografi';
 import Innhold, { getSource } from 'app/utils/innhold/Innhold';
-
 import { RadioPanel, Input } from 'nav-frontend-skjema';
 import Tabs from 'nav-frontend-tabs';
 import { FlexibleSvg } from '../../../../utils/CustomSVG';
@@ -20,7 +19,9 @@ import { getEnHalvG } from '../../../../utils/beregningUtils';
 import 'core-js';
 import 'raf/polyfill';
 import getTranslation from 'app/utils/i18nUtils';
+import Lenkeknapp from '../../../../components/lenkeknapp/Lenkeknapp';
 import Environment from "../../../../Environment";
+
 
 const cls = BEMHelper('valg');
 const resultat = BEMHelper('resultat');
@@ -1003,7 +1004,7 @@ const MainKnapp = ({
     knappType: any;
 }) => (
     <div className={resultat.element('harRettKnapp')}>
-        <Lenke href={url}>
+        <Lenke href={url} tabIndex={-1}>
             <KnappBase type={knappType}>{getTranslation(txt, intl)}</KnappBase>
         </Lenke>
     </div>
@@ -1034,15 +1035,21 @@ const EngangsstonadKnapp = ({
         <div className={resultat.element('harRettKnapp group')}>
             <div className={resultat.element('harRettKol')}>
                 {buttonHeadertxtLeft}
-                <Lenke className={'les-om-engangsstonad'} href={lenkeLeft}>
-                    <KnappBase type={knappLeftStyle}>{getTranslation(knappLeft, intl)}</KnappBase>
-                </Lenke>
+                <Lenkeknapp
+                    url={lenkeLeft}
+                    type={knappLeftStyle}
+                    urlIsExternal={false}
+                    children={getTranslation(knappLeft, intl)}
+                />
             </div>
             <div className={resultat.element('harRettKol')}>
                 {buttonHeadertxtRight}
-                <Lenke href={lenkeRight}>
-                    <KnappBase type={knappRightStyle}>{getTranslation(knappRight, intl)}</KnappBase>
-                </Lenke>
+                <Lenkeknapp
+                    url={lenkeRight}
+                    type={knappRightStyle}
+                    urlIsExternal={true}
+                    children={getTranslation(knappRight, intl)}
+                />
             </div>
         </div>
     );

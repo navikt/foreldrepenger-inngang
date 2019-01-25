@@ -3,17 +3,25 @@ import { FlexibleSvg } from '../../../../../utils/CustomSVG';
 import { injectIntl, InjectedIntlProps } from 'react-intl';
 import BEMHelper from '../../../../../utils/bem';
 import getTranslation from 'app/utils/i18nUtils';
-import Lenke from 'nav-frontend-lenker';
 import NavFrontendChevron from 'nav-frontend-chevron';
 import TypografiBase from 'nav-frontend-typografi';
+import WithLink from '../../../../../components/with-link/WithLink';
 const cls = BEMHelper('valg');
 
 const NavigasjonsBoks: React.StatelessComponent<InjectedIntlProps> = ({ intl }) => {
     return (
         <div className={cls.element('navigasjonsboks')}>
             <div className={cls.element('boksBorder')}>
-                <Lenke href={'/hvor-mye'}>
-                    <div className={cls.element('boks')} role="button">
+                <WithLink
+                    url={'/hvor-mye'}
+                    noStyling={true}
+                    urlIsExternal={false}
+                    className={cls.element('navigasjonsboks')}
+                    ariaLabel={getTranslation(
+                        'veiviser.valg.resultat.navigasjonsboks.hvormye.ariaLabel',
+                        intl
+                    )}>
+                    <div className={cls.element('boks')}>
                         <div className={cls.element('boksGruppe')}>
                             <div className={cls.element('boksBilde')}>
                                 <FlexibleSvg
@@ -38,11 +46,19 @@ const NavigasjonsBoks: React.StatelessComponent<InjectedIntlProps> = ({ intl }) 
                         </div>
                         <NavFrontendChevron />
                     </div>
-                </Lenke>
+                </WithLink>
             </div>
             <div className={cls.element('boksBorder sec')}>
-                <Lenke href={'https://tjenester.nav.no/foreldrepengeplanlegger'}>
-                    <div className={cls.element('boks')} role="button">
+                <WithLink
+                    url={'https://tjenester.nav.no/foreldrepengeplanlegger'}
+                    noStyling={true}
+                    urlIsExternal={true}
+                    className={cls.element('navigasjonsboks')}
+                    aria-label={getTranslation(
+                        'veiviser.valg.resultat.navigasjonsboks.hvorlenge.ariaLabel',
+                        intl
+                    )}>
+                    <div className={cls.element('boks')}>
                         <div className={cls.element('boksGruppe')}>
                             <div className={cls.element('boksBilde')}>
                                 <FlexibleSvg
@@ -71,7 +87,7 @@ const NavigasjonsBoks: React.StatelessComponent<InjectedIntlProps> = ({ intl }) 
                         </div>
                         <NavFrontendChevron />
                     </div>
-                </Lenke>
+                </WithLink>
             </div>
         </div>
     );
