@@ -67,7 +67,7 @@
 
     "informasjonstavle.tittel": "Parental benefit, lump-sum grant and pregnancy benefit",
     "informasjonstavle.ingress": "These are your rights when expecting children or awaiting parental benefits.",
-    "informasjonstavle.hva_kan_du_få": "What can I receive?",
+    "informasjonstavle.hva_kan_du_få": "What am I entitled to?",
     "informasjonstavle.hva_kan_du_få_ingress": " Use the wizard to find out whether you should apply for the parental benefit or lump-sum grant.",
     "informasjonstavle.hvor_mye": "How much?",
     "informasjonstavle.hvor_mye_ingress": "Calculate the parental benefit you are entitled to.",
@@ -293,14 +293,14 @@
     "veiviser.valg.inntekt.beregnet.subHeader": "Calculated annual income before tax",
     "veiviser.valg.beregn.knapp": "Calculate income",
 
-    "veiviser.valg.spørsmål.mor.en": "Are you an employee, freelancer, self-employed or recipient of payments from NAV?",
+    "veiviser.valg.spørsmål.mor.en": "Are you an employee, freelancer, self-employed or recipient of benefits from NAV?",
     "veiviser.valg.spørsmål.mor.to": "Do you have other sources of income?",
     "veiviser.valg.spørsmål.mor.tre": "How long have you had an income?",
     "veiviser.valg.spørsmål.mor.fire": "What is your average monthly wage before tax?",
     "veiviser.valg.spørsmål.mor.fem": "Are you a member of National Insurance scheme?",
     "veiviser.valg.spørsmål.mor.seks": "Any other means of being a member?",
 
-    "veiviser.valg.spørsmål.far.en": "I am an employee, freelancer, self-employed or recipient of payments from NAV?",
+    "veiviser.valg.spørsmål.far.en": "Are you an employee, freelancer, self-employed or recipient of benefits from NAV?",
     "veiviser.valg.spørsmål.far.to": "Do you have other sources of income?",
     "veiviser.valg.spørsmål.far.tre": "How long have you had an income?",
     "veiviser.valg.spørsmål.far.fire": " What is your average monthly wage before tax?",
