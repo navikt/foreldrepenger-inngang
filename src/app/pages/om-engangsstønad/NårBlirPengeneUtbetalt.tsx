@@ -5,7 +5,7 @@ import Innhold, { getSource } from 'app/utils/innhold/Innhold';
 import PanelMedIllustrasjon from 'app/components/panel-med-illustrasjon/PanelMedIllustrasjon';
 import { EngangsstonadSectionProps } from './OmEngangsstønad';
 
-const utbetalingSvg = require('../../assets/ark/ark-frister.svg').default;
+const utbetalingSvg = require('../../assets/ark/ark-timeglass.svg').default;
 
 type Props = EngangsstonadSectionProps & InjectedIntlProps;
 
