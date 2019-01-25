@@ -1,15 +1,15 @@
 <innhold>
-    <avsnitt>Vi informerer deg undervegs i søknaden dersom vi har behov for dokumentasjon frå deg.</avsnitt>
-    <avsnitt type="element">Dokumentasjon på inntekt</avsnitt>
+    <avsnitt type="ingress" class="center blokk-m">Vi informerer deg undervegs i søknaden dersom vi har behov for dokumentasjon frå deg.</avsnitt>
+    <avsnitt type="undertittel">Dokumentasjon på inntekt</avsnitt>
     <avsnitt>For å kunne berekne kva du skal ha utbetalt, må vi ha opplysningar om inntekta di.</avsnitt>
-    <avsnitt type="element">Dersom du har hatt arbeidsinntekt eller er i jobb</avsnitt>
+    <avsnitt type="undertittel">Dersom du har hatt arbeidsinntekt eller er i jobb</avsnitt>
     <liste>
         <punkt>Dersom du skal starte foreldrepengeperioden din i 2018, må du be arbeidsgivaren din sende inntektsopplysningar til NAV. Arbeidsgivaren kan bruke den <lenke url="https://www.nav.no/no/Bedrift/Tjenester+og+skjemaer/NAV-+og+Altinn-tjenester/digital" ekstern="true">digitale inntektsmeldinga</lenke> eller papirskjemaet <lenke url="https://www.nav.no/systemsider/alleSkjemaer/_attachment/1073750932?_ts=158b47d3008&download=true" ekstern="true">NAV 08-30.01</lenke>. Dersom arbeidsgivaren bruker papirskjemaet, kan du laste det opp saman med søknaden din.</punkt>
         <punkt>Dersom du skal starte foreldrepengeperioden din i 2019, må arbeidsgivaren din sende <lenke url="https://www.nav.no/no/Bedrift/Tjenester+og+skjemaer/NAV-+og+Altinn-tjenester/digital" ekstern="true">digital inntektsmelding</lenke> til NAV. Inntektsmeldinga kan tidlegast sendast fire veker før foreldrepengeperioden startar. </punkt>
         <punkt>Dersom du får utbetalt pengar frå NAV, treng du ikkje sende dokumentasjon på dette.</punkt>
     </liste>
     <avsnitt>Dersom du er <b>sjølvstendig næringsdrivande</b> eller <b>frilansar</b>, treng du ikkje å leggje ved nokon dokumentasjon. Vi hentar inn opplysningar frå offentlege register, og tek kontakt med deg dersom vi treng fleire opplysningar.</avsnitt>
-    <avsnitt type="element">Stadfesting på termin</avsnitt>
+    <avsnitt type="undertittel">Stadfesting på termin</avsnitt>
     <avsnitt>Dersom du er fast tilsett hos ein arbeidsgivar, treng du ikkje sende terminstadfesting til NAV.</avsnitt>
     <avsnitt type="element">Du skal leggje ved stadfesting på termindatoen din dersom</avsnitt>
     <liste>
@@ -18,7 +18,7 @@
     </liste>
     <avsnitt>Terminstadfestinga får du hos jordmora di eller legen din. Stadfestinga må vere datert i <b>26. svangerskapsveke</b> eller seinare.</avsnitt>
     <avsnitt>Dersom barnet er født i utlandet og ikkje er registrert i folkeregisteret, må du leggje ved fødselsattesten til barnet. </avsnitt>
-    <avsnitt type="element">Far eller medmor skal ha fellesperiode eller foreldrepengar</avsnitt>
+    <avsnitt type="undertittel">Far eller medmor skal ha fellesperiode eller foreldrepengar</avsnitt>
     <avsnitt>Du må leggje ved dokumentasjon på aktivitetskravet til mor når du skal vere heime i fellesperioden eller ha foreldrepengar. Er det berre du som har rett til foreldrepengar, må du også leggje ved dokumentasjon på aktivitetskravet til mor dersom du skal utsetje.</avsnitt>
     <avsnitt type="undertittel">Dokumentasjon som må leggjast ved søknad om eingongsstønad</avsnitt>
     <liste>

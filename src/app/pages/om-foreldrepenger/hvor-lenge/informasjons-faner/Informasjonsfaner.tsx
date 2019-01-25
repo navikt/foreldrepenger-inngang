@@ -1,12 +1,12 @@
 import React, { ReactNode } from 'react';
 import { InjectedIntlProps, injectIntl } from 'react-intl';
+import { Kvote } from 'app/utils/foreldresituasjon';
 import BEMHelper from '../../../../utils/bem';
 import Faneinnhold from './Faneinnhold';
+import getTranslation from 'app/utils/i18nUtils';
 import Tabs from 'nav-frontend-tabs';
 import TypografiBase from 'nav-frontend-typografi';
 import './informasjonsfaner.less';
-import { Kvote } from 'app/utils/foreldresituasjon';
-import getTranslation from 'app/utils/i18nUtils';
 
 const cls = BEMHelper('informasjonsfaner');
 

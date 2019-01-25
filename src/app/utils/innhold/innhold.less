@@ -1,10 +1,7 @@
 .innhold {
-    &__tittel {
-        margin-top: 1rem;
-    }
-
-    &__tittel + .innhold__avsnitt {
-        margin-top: 0.25rem;
+    p.innhold__avsnitt.typo-normal + h2,
+    p.innhold__avsnitt.typo-normal + h1 {
+        margin-top: 2.5rem;
     }
 
     &__navFont {
@@ -36,7 +33,9 @@
 
     ul,
     ol,
+    h1,
     h2,
+    h3,
     p,
     .lesMer,
     .utvidetInformasjon {

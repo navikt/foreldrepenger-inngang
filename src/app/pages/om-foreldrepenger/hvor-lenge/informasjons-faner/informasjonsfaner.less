@@ -13,18 +13,14 @@
 
     .nav-frontend-tabs {
         &__tab-list {
-            overflow: hidden;
+            justify-content: space-around;
         }
 
         &__tab-outer {
-            width: 100%;
-        }
+            margin-right: 0.5rem;
 
-        &__tab-inner {
-            margin: 0 auto;
-
-            &:focus {
-                .buttonFocus();
+            &:last-child {
+                margin-right: 0;
             }
         }
     }
