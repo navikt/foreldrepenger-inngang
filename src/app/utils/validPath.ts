@@ -6,4 +6,5 @@ export type ValidPath =
     | '/om-foreldrepenger'
     | '/om-engangsstonad'
     | '/dokumentasjon'
-    | '/veiviser';
+    | '/veiviser'
+    | '/om-svangerskapspenger';

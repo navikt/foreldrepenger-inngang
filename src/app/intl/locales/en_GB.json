@@ -161,6 +161,11 @@
     "hurtiglenke.nar_blir_pengene_utbetalt": "When will the money be paid out?",
     "hurtiglenke.far_eller_medmor": "Lump-sum grant to father or co-mother",
     "hurtiglenke.ofte_stilte_sporsmal": "Frequently asked questions",
+    "hurtiglenke.hvem_kan_fa_svangerskapspenger": "Who can get a pregnancy allowance?",
+    "hurtiglenke.omplassere_eller_tilrettelegge_arbeidet": "Relocate or facilitate the work",
+    "hurtiglenke.slik_soker_du": "This is how you apply",
+    "hurtiglenke.hvis_du_selv_er_syk": "If you are sick yourself",
+    "hurtiglenke.fant_du_ikke_det_du_lette_etter": "Didn't find what you were looking for?",
 
     "innholdsfortegnelse.søk_nå": "Apply now",
 
@@ -271,6 +276,10 @@
     "om_engangsstønad.hva_kan_du_få.tittel": "What can you receive?",
     "om_engangsstønad.utbetaling.tittel": "When will the money be paid out?",
     "om_engangsstønad.til_far.tittel": "Lump-sum grant to father or co-mother",
+
+    "om_svangerskapspenger.tittel": "Pregnancy allowance",
+    "om_svangerskapspenger.sok_na": "apply now",
+    "om_svangerskapspenger.hvem_kan_fa_svangerskapspenger.tittel": "\nWho can get a pregnancy allowance?",
 
     "veiviser.fane.mor": "Mother",
     "veiviser.fane.far": "Father",

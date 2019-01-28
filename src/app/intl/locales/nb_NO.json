@@ -61,6 +61,7 @@
     "route.blindside": "Uferdig side!",
     "route.hvor-mye": "Hvor mye?",
     "route.veiviser": " Hva kan du få?",
+    "route.om-svangerskapspenger": "om-svangerskapspenger",
 
     "informasjonstavle.tittel": "Foreldrepenger, engangsstønad og svangerskapspenger",
     "informasjonstavle.ingress": "Dette har du rett til når du venter barn eller skal ha foreldrepenger.",
@@ -158,6 +159,12 @@
     "hurtiglenke.nar_blir_pengene_utbetalt": "Når blir pengene utbetalt?",
     "hurtiglenke.far_eller_medmor": "Engangsstønad til far eller medmor",
     "hurtiglenke.ofte_stilte_sporsmal": "Ofte stilte spørsmål",
+    "hurtiglenke.hvem_kan_fa_svangerskapspenger": "Hvem kan få svangerskapspenger",
+    "hurtiglenke.omplassere_eller_tilrettelegge_arbeidet": "Omplassere eller tilrettelegge arbeidet",
+    "hurtiglenke.hva_kan_jeg_fa": "Hva kan jeg få?",
+    "hurtiglenke.slik_soker_du": "Slik søker du",
+    "hurtiglenke.hvis_du_selv_er_syk": "Hvis du selv er syk",
+    "hurtiglenke.fant_du_ikke_det_du_lette_etter": "Fant du ikke det du lette etter?",
 
     "innholdsfortegnelse.søk_nå": "Søk nå",
 
@@ -266,6 +273,10 @@
     "om_engangsstønad.utbetaling.tittel": "Når blir pengene utbetalt?",
     "om_engangsstønad.til_far.tittel": "Engangsstønad til far eller medmor",
     "om_engangsstønad.når_kan_du_søke.tittel": "Når kan du søke?",
+
+    "om_svangerskapspenger.tittel": "Svangerskapspenger",
+    "om_svangerskapspenger.sok_na": "Søk nå",
+    "om_svangerskapspenger.hvem_kan_fa_svangerskapspenger.tittel": "Hvem kan få svangerskapspenger?",
 
     "veiviser.fane.mor": "Mor",
     "veiviser.fane.far": "Far",
