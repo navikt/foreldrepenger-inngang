@@ -80,7 +80,7 @@
     "informasjonstavle.mer_informasjon.tittel": "Additional information",
     "informasjonstavle.mer_informasjon.foreldrepenger": "The parental benefit shall replace your income when you are at home with the child.",
     "informasjonstavle.mer_informasjon.engangsstønad": "If you are expecting a child and have not had an income in the past year, you can receive a lump-sum instead of the parental benefit.",
-    "informasjonstavle.mer_informasjon.svangerskapspenger": "If you cannot work when you are pregnant because it may harm the unborn child, you can receive the pregnancy benefit.",
+    "informasjonstavle.mer_informasjon.svangerskapspenger": "If you cannot work during pregnancy because it may harm the fetus, you may apply for a pregnancy benefit.",
 
     "informasjonstavle.andre_lenker.tittel": "Related information",
     "informasjonstavle.andre_lenker.ettersende_vedlegg_til_søknad": "Submit application attachments",
@@ -134,7 +134,7 @@
     "hva_søker_du.søk_foreldrepenger": "Apply for parental benefit",
     "hva_søker_du.ettersend_vedlegg": "Submit documentation",
     "hva_søker_du.søk_engangsstønad": "Apply for a lump-sum grant",
-    "hva_søker_du.engangsstønad_modal": "Read about the lump-sum grant to the father, co-mother or in connection with adoption",
+    "hva_søker_du.engangsstønad_modal": "Read about the lump-sum grant to the father, co-mother or when adopting",
     "hva_søker_du.søk_svangerskapspenger": "Apply for pregnancy benefit",
     "hva_søker_du.ingen_elektronisk_id": "I do not have an electronic ID",
     "hva_søker_du.ingen_elektronisk_id_hjelp": "To apply online, you must have BankID from your bank or another electronic ID.",
@@ -289,7 +289,7 @@
     "veiviser.navigasjonsboks.planlegg.label": "Plan how long you can stay home with your child",
     "veiviser.navigasjonsboks.planlegg.sublabel": "Plan how long you can stay at home with your child.",
     "veiviser.valg.beregnet.aarsinntekt": "Calculate annual income",
-    "veiviser.valg.inntekt.subHeader": "Your monthly pay before tax",
+    "veiviser.valg.inntekt.subHeader": "Your monthly income before tax",
     "veiviser.valg.inntekt.beregnet.subHeader": "Calculated annual income before tax",
     "veiviser.valg.beregn.knapp": "Calculate income",
 
@@ -297,14 +297,14 @@
     "veiviser.valg.spørsmål.mor.to": "Do you have other sources of income?",
     "veiviser.valg.spørsmål.mor.tre": "How long have you had an income?",
     "veiviser.valg.spørsmål.mor.fire": "What is your average monthly wage before tax?",
-    "veiviser.valg.spørsmål.mor.fem": "Are you a member of National Insurance scheme?",
+    "veiviser.valg.spørsmål.mor.fem": "Are you a member of National Insurance Scheme?",
     "veiviser.valg.spørsmål.mor.seks": "Any other means of being a member?",
 
     "veiviser.valg.spørsmål.far.en": "Are you an employee, freelancer, self-employed or recipient of benefits from NAV?",
     "veiviser.valg.spørsmål.far.to": "Do you have other sources of income?",
     "veiviser.valg.spørsmål.far.tre": "How long have you had an income?",
     "veiviser.valg.spørsmål.far.fire": " What is your average monthly wage before tax?",
-    "veiviser.valg.spørsmål.far.fem": " Are you a member of National Insurance scheme?",
+    "veiviser.valg.spørsmål.far.fem": " Are you a member of National Insurance Scheme?",
     "veiviser.valg.spørsmål.far.seks": "Any other means of being a member?",
 
     "veiviser.valg.svar.mor.en.ja": "Yes",
@@ -338,10 +338,10 @@
     "veiviser.valg.hjelpetekst.hattInntekt": "Why six of the past ten months?",
     "veiviser.valg.hjelpetekst.utbetalinger.nav": "Which payments from NAV provide entitlement?",
     "veiviser.valg.hjelpetekst.utbetalinger": "What are other sources of income?",
-    "veiviser.valg.hjelpetekst.mndInntekt": "How much do I have to have in income per year?",
+    "veiviser.valg.hjelpetekst.mndInntekt": "How much do I have to earn per year?",
     "veiviser.valg.hjelpetekst.andreInntekt": "Info for annual income",
     "veiviser.valg.hjelpetekst.medlemskap": "What will being a member entail?",
-    "veiviser.valg.hjelpetekst.medlem.folketrygden": "What is membership of the National Insurance scheme?",
+    "veiviser.valg.hjelpetekst.medlem.folketrygden": "What is membership of the National Insurance Scheme?",
 
     "veiviser.valg.resultat.overskrift.foreldrepenger": "You are entitled to the parental benefit",
     "veiviser.valg.resultat.overskrift.foreldrepenger.ikkeRett": "You are not entitled to the parental benefit",
@@ -359,11 +359,11 @@
 
     "veiviser.valg.resultat.punkt.forste.godkjent": "I have had an income in 6 of the last 10 months",
     "veiviser.valg.resultat.punkt.andre.godkjent": "I have earned at least NOK 48,441 for the year",
-    "veiviser.valg.resultat.punkt.tredje.godkjent": "I am a member of the National Insurance scheme",
+    "veiviser.valg.resultat.punkt.tredje.godkjent": "I am a member of the National Insurance Scheme",
 
     "veiviser.valg.resultat.punkt.forste.underkjent": "I have not had an income in 6 of the last 10 months",
     "veiviser.valg.resultat.punkt.andre.underkjent": "I have earned less than the minimum amount of NOK 48,441 for the year",
-    "veiviser.valg.resultat.punkt.tredje.underkjent": "I am not a member of the National Insurance scheme",
+    "veiviser.valg.resultat.punkt.tredje.underkjent": "I am not a member of the National Insurance Scheme",
 
     "blindside.veileder": "How nice to have you here! You have accessed a website that is still under construction. Click back to explore some more :) ",
     "blindside.tittel": "Under construction"
