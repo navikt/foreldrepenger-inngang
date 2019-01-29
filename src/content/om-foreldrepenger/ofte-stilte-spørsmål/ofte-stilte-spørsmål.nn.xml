@@ -1,34 +1,34 @@
 <innhold>
-    <lesmer intro="Når får jeg svar på søknaden min?">
-        <avsnitt>Du får tidligst svar på søknaden din fire uker før foreldrepengeperioden din starter. Dette er fordi NAV trenger oppdaterte opplysninger for å behandle saken din.</avsnitt>
+    <lesmer intro="Når får eg svar på søknaden min?">
+        <avsnitt>Du får tidlegast svar på søknaden din fire veker før foreldrepengeperioden din startar. Dette er fordi NAV treng oppdaterte opplysningar for å behandle saka di.</avsnitt>
     </lesmer>
-    <lesmer intro="Kan jeg få foreldrepenger når jeg er student?">
-        <avsnitt>For å ha rett til foreldrepenger må du ha hatt inntekt i 6 av de 10 siste månedene. Studielån eller stipend fra Lånekassen gir ikke rett til foreldrepenger. Om du ikke har rett til foreldrepenger, kan du søke om engangsstønad. Du kan prøve vår <lenke url="/veiviser">veiviser</lenke> for å se hva du kan ha rett til.</avsnitt>
+    <lesmer intro="Kan eg få foreldrepengar når eg er student?">
+        <avsnitt>For å ha rett til foreldrepengar må du ha hatt inntekt i seks av dei ti siste månadene. Studielån eller stipend frå Lånekassa gir ikkje rett til foreldrepengar. Om du ikkje har rett til foreldrepengar, kan du søkje om eingongsstønad. Du kan prøve vår <lenke url="/veiviser">veiviser</lenke> for å sjå kva du kan ha rett til.</avsnitt>
     </lesmer>
-    <lesmer intro="Jeg får ytelse fra NAV. Kan jeg få foreldrepenger?">
-        <avsnitt>Hvis du får utbetalt en av disse ytelsene fra NAV, kan du ha rett til foreldrepenger:</avsnitt>
+    <lesmer intro="Eg får yting frå NAV. Kan eg få foreldrepengar?">
+        <avsnitt>Dersom du får utbetalt ei av desse ytingane frå NAV, kan du ha rett til foreldrepengar:</avsnitt>
         <liste>
-            <punkt>Sykepenger</punkt>
-            <punkt>Foreldrepenger </punkt>
-            <punkt>Svangerskapspenger</punkt>
-            <punkt>Arbeidsavklaringspenger</punkt>
-            <punkt>Dagpenger</punkt>
-            <punkt>Omsorgs-, pleie- eller opplæringspenger</punkt>
+            <punkt>Sjukepengar</punkt>
+            <punkt>Foreldrepengar </punkt>
+            <punkt>Svangerskapspengar</punkt>
+            <punkt>Arbeidsavklaringspengar</punkt>
+            <punkt>Dagpengar</punkt>
+            <punkt>Omsorgs-, pleie- eller opplæringspengar</punkt>
         </liste>
     </lesmer>
-    <lesmer intro="Hva er forskjellen mellom foreldrepenger og engangsstønad?">
-        <avsnitt>Foreldrepenger skal sikre inntekten din når du skal være hjemme med barnet. Engangsstønad er en engangssum du kan få hvis du venter barn og ikke har hatt inntekt det siste året. Du kan velge engangsstønad selv om du har rett til foreldrepenger, men du kan kun få en av disse ytelsene.</avsnitt>
+    <lesmer intro="Kva er forskjellen mellom foreldrepengar og eingongsstønad?">
+        <avsnitt>Foreldrepengar skal sikre inntekta di når du skal vere heime med barnet. Eingongsstønad er ein eingongssum du kan få dersom du ventar barn og ikkje har hatt inntekt det siste året. Du kan velje eingongsstønad sjølv om du har rett til foreldrepengar, men du kan berre få  éi av desse ytingane.</avsnitt>
     </lesmer>
-    <lesmer intro="Hva er forskjellen på foreldrepengeperiode og fellesperiode?">
-        <avsnitt>Foreldrepengeperioden er hele perioden med foreldrepenger. Når begge foreldrene har rett til foreldrepenger består foreldrepengeperioden av tre uker foreldrepenger til mor før fødsel, mødrekvote, fedrekvote og en fellesperiode.</avsnitt>
+    <lesmer intro="Kva er forskjellen på foreldrepengeperiode og fellesperiode?">
+        <avsnitt>Foreldrepengeperioden er heile perioden med foreldrepengar. Når begge foreldra har rett til foreldrepengar, består foreldrepengeperioden av tre veker foreldrepengar til mor før fødsel, mødrekvote, fedrekvote og ein fellesperiode.</avsnitt>
     </lesmer>
-    <lesmer intro="Jeg har sendt inn søknad, men finner den ikke på Dine Foreldrepenger">
-        <avsnitt>Hvis foreldrepengeperioden til mor eller far startet i 2018 eller tidligere, kan det ta <b>opptil tre uker</b> før søknaden din blir registrert hos oss og synlig på <lenke url="https://foreldrepenger.nav.no" ekstern="true">Dine Foreldrepenger</lenke>. Da du sendte søknaden fikk du en kvittering som bekreftet at vi har mottatt den.</avsnitt>
+    <lesmer intro="Eg har sendt inn søknad, men finn han ikkje på Dine foreldrepenger">
+        <avsnitt>Dersom foreldrepengeperioden til mor eller far starta i 2018 eller tidlegare, kan det ta <b>opptil tre veker</b> før søknaden din blir registrert hos oss og synleg på <lenke url="https://foreldrepenger.nav.no" ekstern="true">Dine foreldrepengar</lenke>. Då du sende søknaden, fekk du ei kvittering som bekrefta at vi har fått han.</avsnitt>
     </lesmer>
-    <lesmer intro="Jeg skal ha ulønnet permisjon">
-        <avsnitt>Ulønnet permisjon avtaler du med arbeidsgiveren din. Du kan ikke utsette foreldrepengene dine når du har ulønnet permisjon. Den andre forelderen kan utsette foreldrepengene på grunn av heltidsarbeid, sykdom eller ferie i perioden du har ulønnet permisjon.</avsnitt>
-        <avsnitt>Ulønnet permisjon kan påvirke retten din til andre NAV ytelser og opptjening av rett til foreldrepenger for nytt barn. <lenke url="https://www.nav.no/no/Person/Arbeid/Sykmeldt%2C+arbeidsavklaringspenger+og+yrkesskade/Sykepenger/Sykepenger+til+sarskilte+grupper#chapter-5" ekstern="true">Her kan du lese mer om dine rettigheter.</lenke></avsnitt>
+    <lesmer intro="Eg skal ha ulønt permisjon">
+        <avsnitt>Ulønt permisjon avtaler du med arbeidsgivaren din. Du kan ikkje utsetje foreldrepengane dine når du har ulønt permisjon. Den andre forelderen kan utsetje foreldrepengane på grunn av heiltidsarbeid, sjukdom eller ferie i perioden du har ulønt permisjon.</avsnitt>
+        <avsnitt>Ulønt permisjon kan påverke retten din til andre NAV-ytingar og opptening av rett til foreldrepengar for nytt barn. <lenke url="https://www.nav.no/no/Person/Arbeid/Sykmeldt%2C+arbeidsavklaringspenger+og+yrkesskade/Sykepenger/Sykepenger+til+sarskilte+grupper#chapter-5" ekstern="true">Her kan du lese meir om kva du kan ha rett til.</lenke></avsnitt>
     </lesmer>
-    <avsnitt type="systemtittel" className="center">Fant du ikke det du lette etter?</avsnitt>
+    <avsnitt type="systemtittel" className="center">Fann du ikkje det du leita etter?</avsnitt>
     <avsnitt className="center">Ta gjerne kontakt med oss på:</avsnitt>
 </innhold>
