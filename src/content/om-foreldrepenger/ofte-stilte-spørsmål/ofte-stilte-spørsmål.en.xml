@@ -1,34 +1,34 @@
 <innhold>
-    <lesmer intro="Når får jeg svar på søknaden min?">
-        <avsnitt>Du får tidligst svar på søknaden din fire uker før foreldrepengeperioden din starter. Dette er fordi NAV trenger oppdaterte opplysninger for å behandle saken din.</avsnitt>
+    <lesmer intro="When will I get a response to my application?">
+        <avsnitt>You will receive a response to your application no earlier than four weeks before the start of your parental benefit period. This is because NAV needs up-to-date information to process your case.</avsnitt>
     </lesmer>
-    <lesmer intro="Kan jeg få foreldrepenger når jeg er student?">
-        <avsnitt>For å ha rett til foreldrepenger må du ha hatt inntekt i 6 av de 10 siste månedene. Studielån eller stipend fra Lånekassen gir ikke rett til foreldrepenger. Om du ikke har rett til foreldrepenger, kan du søke om engangsstønad. Du kan prøve vår <lenke url="/veiviser">veiviser</lenke> for å se hva du kan ha rett til.</avsnitt>
+    <lesmer intro="Can I receive parental benefit while I am a student?">
+        <avsnitt>To be entitled to parental benefit, you must have had income in six of the past ten months. Student loans and grants from the Norwegian State Educational Loan Fund ("Lånekassen") do not provide entitlement to parental benefit. If you are not entitled to parental benefit, you can apply for a lump-sum grant. Try our <lenke url="/veiviser">"veiviser"</lenke> to see what you may be entitled to.</avsnitt>
     </lesmer>
-    <lesmer intro="Jeg får ytelse fra NAV. Kan jeg få foreldrepenger?">
-        <avsnitt>Hvis du får utbetalt en av disse ytelsene fra NAV, kan du ha rett til foreldrepenger:</avsnitt>
+    <lesmer intro="I receive benefits from NAV. Am I entitled to receive parental benefit?">
+        <avsnitt>If you are receiving one of the following benefits from NAV, you may be entitled to parental benefit:</avsnitt>
         <liste>
-            <punkt>Sykepenger</punkt>
-            <punkt>Foreldrepenger </punkt>
-            <punkt>Svangerskapspenger</punkt>
-            <punkt>Arbeidsavklaringspenger</punkt>
-            <punkt>Dagpenger</punkt>
-            <punkt>Omsorgs-, pleie- eller opplæringspenger</punkt>
+            <punkt>Sickness benefit</punkt>
+            <punkt>Parental benefit </punkt>
+            <punkt>Pregnancy benefit</punkt>
+            <punkt>Work assessment allowance (AAP)</punkt>
+            <punkt>Unemployment benefit</punkt>
+            <punkt>Care benefit, attendance allowance or training allowance</punkt>
         </liste>
     </lesmer>
-    <lesmer intro="Hva er forskjellen mellom foreldrepenger og engangsstønad?">
-        <avsnitt>Foreldrepenger skal sikre inntekten din når du skal være hjemme med barnet. Engangsstønad er en engangssum du kan få hvis du venter barn og ikke har hatt inntekt det siste året. Du kan velge engangsstønad selv om du har rett til foreldrepenger, men du kan kun få en av disse ytelsene.</avsnitt>
+    <lesmer intro="What is the difference between parental benefit and lump-sum grant?">
+        <avsnitt>Parental benefit provides you with income while you are at home with your child. Lump-sum grant is benefit paid out as a single lump sum to people who are expecting a child and have not had income in the past year. You can choose to receive a lump-sum grant even if you are entitled to parental benefit, but you can only receive one of these benefits.</avsnitt>
     </lesmer>
-    <lesmer intro="Hva er forskjellen på foreldrepengeperiode og fellesperiode?">
-        <avsnitt>Foreldrepengeperioden er hele perioden med foreldrepenger. Når begge foreldrene har rett til foreldrepenger består foreldrepengeperioden av tre uker foreldrepenger til mor før fødsel, mødrekvote, fedrekvote og en fellesperiode.</avsnitt>
+    <lesmer intro="What is the difference between the parental benefit period and the shared period?">
+        <avsnitt>The parental benefit period is the entire period during which parental benefit is paid. When both parents are entitled to parental benefit, the parental benefit period consists of three weeks of parental benefit for the mother before delivery, a maternal quota, a paternal quota and a shared period.</avsnitt>
     </lesmer>
-    <lesmer intro="Jeg har sendt inn søknad, men finner den ikke på Dine Foreldrepenger">
-        <avsnitt>Hvis foreldrepengeperioden til mor eller far startet i 2018 eller tidligere, kan det ta <b>opptil tre uker</b> før søknaden din blir registrert hos oss og synlig på <lenke url="https://foreldrepenger.nav.no" ekstern="true">Dine Foreldrepenger</lenke>. Da du sendte søknaden fikk du en kvittering som bekreftet at vi har mottatt den.</avsnitt>
+    <lesmer intro="I have submitted an application, but cannot find it on Dine Foreldrepenger">
+        <avsnitt>If the mother’s or the father’s parental benefit period started in 2018 or earlier, it may take <b>up to three weeks</b> before your application is registered with us and visible on <lenke url="https://foreldrepenger.nav.no" ekstern="true">Dine Foreldrepenger ("Your Parental Benefit")</lenke>. When you submitted the application, you received a receipt confirming that we have received it.</avsnitt>
     </lesmer>
-    <lesmer intro="Jeg skal ha ulønnet permisjon">
-        <avsnitt>Ulønnet permisjon avtaler du med arbeidsgiveren din. Du kan ikke utsette foreldrepengene dine når du har ulønnet permisjon. Den andre forelderen kan utsette foreldrepengene på grunn av heltidsarbeid, sykdom eller ferie i perioden du har ulønnet permisjon.</avsnitt>
-        <avsnitt>Ulønnet permisjon kan påvirke retten din til andre NAV ytelser og opptjening av rett til foreldrepenger for nytt barn. <lenke url="https://www.nav.no/no/Person/Arbeid/Sykmeldt%2C+arbeidsavklaringspenger+og+yrkesskade/Sykepenger/Sykepenger+til+sarskilte+grupper#chapter-5" ekstern="true">Her kan du lese mer om dine rettigheter.</lenke></avsnitt>
+    <lesmer intro="I am going to take unpaid leave">
+        <avsnitt>You must arrange unpaid leave with your employer. You cannot postpone when you receive parental benefit if you are on unpaid leave. The other parent may postpone their parental benefit on grounds of full-time work, illness or holiday in the period you are on unpaid leave. </avsnitt>
+        <avsnitt>Unpaid leave may affect your entitlement to other NAV benefits and accumulation of rights to parental benefit for new children. <lenke url="https://www.nav.no/no/Person/Arbeid/Sykmeldt%2C+arbeidsavklaringspenger+og+yrkesskade/Sykepenger/Sykepenger+til+sarskilte+grupper#chapter-5" ekstern="true">Read more about your rights here.</lenke></avsnitt>
     </lesmer>
-    <avsnitt type="systemtittel" className="center">Fant du ikke det du lette etter?</avsnitt>
-    <avsnitt className="center">Ta gjerne kontakt med oss på:</avsnitt>
+    <avsnitt type="systemtittel" class="center">Didn’t find what you were looking for?</avsnitt>
+    <avsnitt class="center">Contact us on:</avsnitt>
 </innhold>
