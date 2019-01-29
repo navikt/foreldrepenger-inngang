@@ -1,25 +1,22 @@
 import * as React from 'react';
-import Sidebanner from 'app/components/sidebanner/Sidebanner';
-import Breadcrumbs from 'app/components/breadcrumbs/Breadcrumbs';
-import BEMHelper from 'app/utils/bem';
-import classnames from 'classnames';
-import TypografiBase from 'nav-frontend-typografi';
-import PanelMedIllustrasjon from 'app/components/panel-med-illustrasjon/PanelMedIllustrasjon';
 import { CheckboksPanelGruppe } from 'nav-frontend-skjema';
-import Innhold, { getSource } from 'app/utils/innhold/Innhold';
-
-import Lønnskalkulator from './lønnskalkulator/Lønnskalkulator';
+import { InjectedIntlProps, injectIntl } from 'react-intl';
 import {
     tjenerOverUtbetalingsgrensen,
     tjenerForLiteForForeldrepenger
 } from 'app/utils/beregningUtils';
-import Veileder from 'app/components/veileder/Veileder';
-import SvgMask from 'app/components/svg-mask/SvgMask';
-import './kalkulator.less';
-import Resultat from './resultat/Resultat';
-import UtvidetInformasjon from './utvidetinformasjon/UtvidetInformasjon';
-import { InjectedIntlProps, injectIntl } from 'react-intl';
+import BEMHelper from 'app/utils/bem';
+import Breadcrumbs from 'app/components/breadcrumbs/Breadcrumbs';
+import classnames from 'classnames';
 import getTranslation from 'app/utils/i18nUtils';
+import IkkeStøttet from './IkkeStøttet';
+import Innhold, { getSource } from 'app/utils/innhold/Innhold';
+import PanelMedIllustrasjon from 'app/components/panel-med-illustrasjon/PanelMedIllustrasjon';
+import Sidebanner from 'app/components/sidebanner/Sidebanner';
+import SvgMask from 'app/components/svg-mask/SvgMask';
+import TypografiBase from 'nav-frontend-typografi';
+import Utregning from './Utregning';
+import './kalkulator.less';
 
 const infosiderCls = BEMHelper('infosider');
 const cls = BEMHelper('kalkulator');
@@ -50,7 +47,7 @@ interface State {
     results?: Resultater;
 }
 
-class Planlegger extends React.Component<InjectedIntlProps, State> {
+class Kalkulator extends React.Component<InjectedIntlProps, State> {
     constructor(props: InjectedIntlProps) {
         super(props);
         this.state = {
@@ -58,7 +55,7 @@ class Planlegger extends React.Component<InjectedIntlProps, State> {
         };
     }
 
-    onSituasjonToggle = (event: React.SyntheticEvent<EventTarget>, situasjon: Arbeidssituasjon) => {
+    onSituasjonToggle = (_: React.SyntheticEvent<EventTarget>, situasjon: Arbeidssituasjon) => {
         const valgteSituasjoner = this.state.valgteSituasjoner.includes(situasjon)
             ? this.state.valgteSituasjoner.filter((vs) => vs !== situasjon)
             : [...this.state.valgteSituasjoner, situasjon];
@@ -91,12 +88,6 @@ class Planlegger extends React.Component<InjectedIntlProps, State> {
         }
     };
 
-    fårUtbetaling = () => this.state.valgteSituasjoner.includes('utbetaling_fra_nav');
-
-    fårLønn = () =>
-        this.state.valgteSituasjoner.includes('arbeidstaker_eller_frilanser') ||
-        this.state.valgteSituasjoner.includes('selvstendig_næringsdrivende');
-
     getCheckboxes = () =>
         muligeSituasjoner.map((situasjon) => ({
             checked: this.state.valgteSituasjoner.includes(situasjon),
@@ -105,28 +96,11 @@ class Planlegger extends React.Component<InjectedIntlProps, State> {
             value: situasjon
         }));
 
-    getTitleForChoices = () =>
-        `${
-            this.fårUtbetaling()
-                ? getTranslation('kalkulator.skriv_inn_utbetaling', this.props.intl)
-                : getTranslation('kalkulator.skriv_inn_lønn', this.props.intl)
-        } ${
-            this.state.valgteSituasjoner.includes('selvstendig_næringsdrivende')
-                ? getTranslation('årene', this.props.intl)
-                : getTranslation('månedene', this.props.intl)
-        }?`;
-
     render = () => {
         const { intl } = this.props;
 
-        const checkboxes = this.getCheckboxes();
-        const ingressTilUtbetaling = this.state.valgteSituasjoner.includes('utbetaling_fra_nav')
-            ? this.state.valgteSituasjoner.length > 1
-                ? 'kalkulator.skriv_inn_utbetaling_og_lønn_ingress'
-                : 'kalkulator.skriv_inn_utbetaling_ingress'
-            : 'kalkulator.skriv_inn_lønn_ingress';
-
-        const valgTittel = this.getTitleForChoices();
+        const checkboxesForSituasjoner = this.getCheckboxes();
+        const harValgtSituasjon = this.state.valgteSituasjoner.length > 0;
         const kombinasjonIkkeStøttet = this.state.valgteSituasjoner.includes(
             'selvstendig_næringsdrivende'
         );
@@ -149,63 +123,19 @@ class Planlegger extends React.Component<InjectedIntlProps, State> {
                             </TypografiBase>
                             <CheckboksPanelGruppe
                                 legend={getTranslation('kalkulator.valg.ingress', intl)}
-                                checkboxes={checkboxes}
+                                checkboxes={checkboxesForSituasjoner}
                                 onChange={this.onSituasjonToggle}
                             />
 
-                            {this.state.valgteSituasjoner.length > 0 &&
+                            {harValgtSituasjon &&
                                 (kombinasjonIkkeStøttet ? (
-                                    <div className={cls.element('ikkeStøttet')}>
-                                        <Veileder
-                                            fargetema="advarsel"
-                                            ansikt="undrende"
-                                            kompakt={true}>
-                                            <Innhold
-                                                source={getSource('kalkulator/ikke-støttet', intl)}
-                                            />
-                                        </Veileder>
-                                    </div>
+                                    <IkkeStøttet />
                                 ) : (
-                                    <div className={cls.element('flexDownwards')}>
-                                        <TypografiBase type="undertittel">
-                                            {valgTittel}
-                                        </TypografiBase>
-
-                                        {this.state.valgteSituasjoner.includes(
-                                            'utbetaling_fra_nav'
-                                        ) && (
-                                            <UtvidetInformasjon
-                                                apneLabel={getTranslation(
-                                                    'kalkulator.ytelser_som_gir_rett_tittel',
-                                                    intl
-                                                )}
-                                                lukkLabel={getTranslation(
-                                                    'kalkulator.lukk_info',
-                                                    intl
-                                                )}>
-                                                <Innhold
-                                                    source={getSource(
-                                                        'kalkulator/ytelser-som-gir-rett',
-                                                        intl
-                                                    )}
-                                                />
-                                            </UtvidetInformasjon>
-                                        )}
-                                        <TypografiBase type="normaltekst">
-                                            {getTranslation(ingressTilUtbetaling, intl)}
-                                        </TypografiBase>
-                                        <Lønnskalkulator
-                                            situasjoner={this.state.valgteSituasjoner}
-                                            onChange={this.onSnittlønnChange}
-                                        />
-
-                                        {this.state.results && (
-                                            <Resultat
-                                                results={this.state.results}
-                                                fårUtbetaling={this.fårUtbetaling()}
-                                            />
-                                        )}
-                                    </div>
+                                    <Utregning
+                                        valgteSituasjoner={this.state.valgteSituasjoner}
+                                        onSnittlønnChange={this.onSnittlønnChange}
+                                        results={this.state.results}
+                                    />
                                 ))}
                         </PanelMedIllustrasjon>
                     </article>
@@ -215,4 +145,4 @@ class Planlegger extends React.Component<InjectedIntlProps, State> {
     };
 }
 
-export default injectIntl(Planlegger);
+export default injectIntl(Kalkulator);
