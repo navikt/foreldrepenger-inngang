@@ -64,6 +64,7 @@
     "route.blindside": "Uferdig side!",
     "route.hvor-mye": "How much?",
     "route.veiviser": " What are you entitled to?",
+    "route.regelendringer": "Rule changes",
 
     "informasjonstavle.tittel": "Parental benefit, lump-sum grant and pregnancy benefit",
     "informasjonstavle.ingress": "These are your rights when expecting children or awaiting parental benefits.",
@@ -365,6 +366,6 @@
     "veiviser.valg.resultat.punkt.andre.underkjent": "I have earned less than the minimum amount of NOK 48,441 for the year",
     "veiviser.valg.resultat.punkt.tredje.underkjent": "I am not a member of the National Insurance Scheme",
 
-    "blindside.veileder": "How nice to have you here! You have accessed a website that is still under construction. Click back to explore some more :) ",
-    "blindside.tittel": "Under construction"
+    "regelendringer.tittel": "Rule changes",
+    "regelendringer.banner": "Rule changes"
 }

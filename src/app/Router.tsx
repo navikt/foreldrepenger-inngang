@@ -1,14 +1,15 @@
 import * as React from 'react';
 import { Route, Redirect, Switch, withRouter, RouteProps } from 'react-router-dom';
-import Informasjonstavle from './pages/informasjonstavle/Informasjonstavle';
-import HvaSøkerDu from './pages/hva-søker-du/HvaSøkerDu';
-import SøkSvangerskapspenger from './pages/søk-svangerskapspenger/SøkSvangerskapspenger';
-import OmForeldrepenger from './pages/om-foreldrepenger/OmForeldrepenger';
-import OmEngangsstønad from './pages/om-engangsstønad/OmEngangsstønad';
-import Dokumentasjon from './pages/dokumentasjon/Dokumentasjon';
-import Kalkulator from './pages/kalkulator/Kalkulator';
-import Veiviser from './pages/veiviser/Veiviser';
 import { ValidPath } from './utils/validPath';
+import Dokumentasjon from './pages/dokumentasjon/Dokumentasjon';
+import HvaSøkerDu from './pages/hva-søker-du/HvaSøkerDu';
+import Informasjonstavle from './pages/informasjonstavle/Informasjonstavle';
+import Kalkulator from './pages/kalkulator/Kalkulator';
+import OmEngangsstønad from './pages/om-engangsstønad/OmEngangsstønad';
+import OmForeldrepenger from './pages/om-foreldrepenger/OmForeldrepenger';
+import Regelendringer from './pages/regelendringer/Regelendringer';
+import SøkSvangerskapspenger from './pages/søk-svangerskapspenger/SøkSvangerskapspenger';
+import Veiviser from './pages/veiviser/Veiviser';
 
 interface ValidRouteProps extends RouteProps {
     path?: ValidPath;
@@ -46,6 +47,12 @@ const Router = () => (
             key="om-foreldrepenger"
         />
         <ValidRoute exact={true} path="/veiviser" component={Veiviser} key="veiviser" />
+        <ValidRoute
+            exact={true}
+            path="/regelendringer"
+            component={Regelendringer}
+            key="regelendringer"
+        />
         <Redirect to="/" />
     </Switch>
 );

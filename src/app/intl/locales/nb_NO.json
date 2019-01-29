@@ -61,6 +61,7 @@
     "route.blindside": "Uferdig side!",
     "route.hvor-mye": "Hvor mye?",
     "route.veiviser": " Hva kan du få?",
+    "route.regelendringer": "Aktuelle endringer",
 
     "informasjonstavle.tittel": "Foreldrepenger, engangsstønad og svangerskapspenger",
     "informasjonstavle.ingress": "Dette har du rett til når du venter barn eller skal ha foreldrepenger.",
@@ -362,6 +363,6 @@
     "veiviser.valg.resultat.punkt.andre.underkjent": "Jeg har tjent under minstebeløpet på 48 441 kr i året",
     "veiviser.valg.resultat.punkt.tredje.underkjent": "Jeg er ikke medlem av folketrygden",
 
-    "blindside.veileder": "Så fint å ha deg her!\nDu har klikket deg inn på en side som vi fremdeles holder på med å lage.\nKlikk deg tilbake for å utforske mer :)",
-    "blindside.tittel": "Under arbeid"
+    "regelendringer.tittel": "Aktuelle endringer",
+    "regelendringer.banner": "Aktuelle endringer"
 }

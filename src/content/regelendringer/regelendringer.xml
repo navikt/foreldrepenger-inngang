@@ -1,0 +1,20 @@
+<innhold>
+    <avsnitt className="blokk-m">Det er kommet flere endringer i lengden på foreldrepengeperioden og kvotene til foreldrene i 2018 og 2019. Her finner du en oversikt over endringene.</avsnitt>
+    <lesmer intro="Nye kvoter for 80 prosent foreldrepenger fra 1. januar 2019">
+        <avsnitt>Når foreldrepengeperioden starter i 2019 og dere har valgt 80 prosent foreldrepenger, er kvoten til hver av foreldrene på 19 uker.</avsnitt>
+    </lesmer>
+    <lesmer intro="Barn født eller adoptert 1. juli 2018 eller senere">
+        <avsnitt>Dersom barnet er født eller adoptert 1. juli 2018 eller senere, er kvoten til hver av foreldrene 15 uker. Den totale foreldrepengeperioden utvides med 17 eller 21 uker for hvert barn mer enn ett:</avsnitt>
+        <liste>
+            <punkt>17 uker ved 100 prosent foreldrepenger</punkt>
+            <punkt>21 uker ved 80 prosent foreldrepenger</punkt>
+        </liste>
+    </lesmer>
+    <lesmer intro="Barn født eller adoptert før 1. juli 2018">
+        <avsnitt>Dersom barnet er født eller adoptert før 1. juli 2018, er kvoten til hver av foreldrene 10 uker. Den totale foreldrepengeperioden utvides med fem eller syv uker for hvert barn mer enn ett:</avsnitt>
+        <liste>
+            <punkt>Fem uker ved 100 prosent foreldrepenger</punkt>
+            <punkt>Syv uker ved 80 prosent foreldrepenger</punkt>
+        </liste>
+    </lesmer>
+</innhold>
