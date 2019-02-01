@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { getSource } from 'app/utils/innhold/Innhold';
 import { InjectedIntlProps, injectIntl } from 'react-intl';
 import Adopsjon from './adopsjon/Adopsjon';
 import BEMHelper from '../../utils/bem';
@@ -13,11 +12,9 @@ import HeaderInformasjon from '../../components/header-informasjon/HeaderInforma
 import HjemmeSamtidig from './hjemme-samtidig/HjemmeSamtidig';
 import HvemKanFåForeldrepenger from './hvem-kan-få/HvemKanFåForeldrepenger';
 import HvorLenge from './hvor-lenge/HvorLenge';
-import Informasjonsbanner from '../infosider/informasjonsbanner/Informasjonsbanner';
 import JegVilJobbe from './jeg-vil-jobbe/JegVilJobbe';
 import MedInnholdsfortegnelse from '../infosider/MedInnholdsfortegnelse';
 import NårKanDuSøke from './når-kan-du-søke/NårKanDuSøke';
-import NyeRegler from './nye-regler/NyeRegler';
 import OfteStilteSpørsmål from './ofte-stilte-spørsmål/OfteStilteSpørsmål';
 import Sidebanner from '../../components/sidebanner/Sidebanner';
 import Sykdom from './sykdom/Sykdom';
@@ -74,12 +71,8 @@ const OmForeldrepenger: React.StatelessComponent<Props & InjectedIntlProps> = ({
                 }}>
                 <article className={cls.element('article')}>
                     <Breadcrumbs path={location.pathname} />
-                    <Informasjonsbanner
-                        source={getSource('om-foreldrepenger/nye-regler-fra-2019', intl)}
-                    />
                     <HvemKanFåForeldrepenger id={sections[0]} />
                     <HvorLenge id={sections[1]} />
-                    <NyeRegler />
                     <Beregning id={sections[2]} />
                     <NårKanDuSøke id={sections[3]} />
                     <Ferie id={sections[4]} />
