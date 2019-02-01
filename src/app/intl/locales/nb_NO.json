@@ -165,6 +165,9 @@
     "hurtiglenke.slik_soker_du": "Slik søker du",
     "hurtiglenke.hvis_du_selv_er_syk": "Hvis du selv er syk",
     "hurtiglenke.fant_du_ikke_det_du_lette_etter": "Fant du ikke det du lette etter?",
+    "hurtiglenke.hvor_lenge_kan_jeg_fa": "Hvor lenge kan du få?",
+    "hurtiglenke.jobb_delvis": "Jobb delvis",
+    "hurtiglenke.hvor_mye_kan_du_fa": "Hvor mye kan du få?",
 
     "innholdsfortegnelse.søk_nå": "Søk nå",
 
@@ -277,6 +280,13 @@
     "om_svangerskapspenger.tittel": "Svangerskapspenger",
     "om_svangerskapspenger.sok_na": "Søk nå",
     "om_svangerskapspenger.hvem_kan_fa_svangerskapspenger.tittel": "Hvem kan få svangerskapspenger?",
+    "om_svangerskapspenger.jobbDelvis.tittel": "Jobb delvis",
+    "om_svangerskapspenger.hvorLengeKanDuFa.tittel": "Hvor lenge kan du få",
+    "om_svangerskapspenger.hvorMyeKanDuFa.tittel": "Hvor mye kan du få?",
+    "om_svangerskapspenger.slikSokerDu.tittel": "Slik søker du",
+    "om_svangerskapspenger.slikSokerDu.faneEn.tittel": "Arbeidstaker",
+    "om_svangerskapspenger.slikSokerDu.faneTo.tittel": "Selvstendig næringdrivende eller frilanser",
+    "om_svangerskapspenger.hvisDuSelvErSyk.tittel": "Hvis du selv er syk",
 
     "veiviser.fane.mor": "Mor",
     "veiviser.fane.far": "Far",

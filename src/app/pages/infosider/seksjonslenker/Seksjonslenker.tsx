@@ -12,7 +12,7 @@ const cls = BEMHelper('seksjonslenker');
 
 const getFirstNumberAfter = (n: number, numbers: number[]) => {
     for (let i = 0; i < numbers.length; i++) {
-        if (n < numbers[i] - 100) {
+        if (n < numbers[i] -230) {
             return i - 1;
         }
     }

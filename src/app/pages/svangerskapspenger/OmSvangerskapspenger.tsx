@@ -5,12 +5,19 @@ import HeaderInformasjon from '../../components/header-informasjon/HeaderInforma
 import Environment from '../../Environment';
 import BEMHelper from '../../utils/bem';
 import Breadcrumbs from '../../components/breadcrumbs/Breadcrumbs';
-import MedInnholdsfortegnelse from "../infosider/MedInnholdsfortegnelse";
-import getTranslation from "../../utils/i18nUtils";
-import Sidebanner from "../../components/sidebanner/Sidebanner";
-import HvemKanFåSvangerskapspenger from "./innhold/HvemKanFåSvangerskapspenger";
+import MedInnholdsfortegnelse from '../infosider/MedInnholdsfortegnelse';
+import getTranslation from '../../utils/i18nUtils';
+import Sidebanner from '../../components/sidebanner/Sidebanner';
+import HvemKanFåSvangerskapspenger from './hvemKanFa/HvemKanFåSvangerskapspenger';
+import '../infosider/infosider.less';
+import SlikSokerDu from './slikSokerDu/SlikSokerDu';
+import HvisDuSelvErSyk from './hvisDuSelvErSyk/HvisDuSelvErSyk';
+import Hjelp from '../../components/hjelpe-seksjon/HjelpeSeksjon';
+import JobbDelvis from './jobbDelvis/JobbDelvis';
+import HvorLengeKanDuFa from './hvorLengeKanDuFa/HvorLengeKanDuFa';
+import HvorMyeKanDuFa from './hvorMyeKanDuFa/HvorMyeKanDuFa';
 
-const cls = BEMHelper('om-svangerskapspenger');
+const cls = BEMHelper('infosider');
 
 interface Props {
     location: any;
@@ -18,20 +25,19 @@ interface Props {
 
 export type SvangerskapSection =
     | 'hvem-kan-fa-svangerskapspenger'
-    | 'omplassere-eller-tilrettelegge-arbeidet'
-    | 'hva-kan-jeg-fa'
+    | 'jobb-delvis'
+    | 'hvor-lenge-kan-jeg-fa'
+    | 'hvor-mye-kan-du-fa'
     | 'slik-soker-du'
-    | 'hvis-du-selv-er-syk'
-    | 'fant-du-ikke-det-du-lette-etter';
-
+    | 'hvis-du-selv-er-syk';
 
 const sections: SvangerskapSection[] = [
     'hvem-kan-fa-svangerskapspenger',
-    'omplassere-eller-tilrettelegge-arbeidet',
-    'hva-kan-jeg-fa',
+    'jobb-delvis',
+    'hvor-lenge-kan-jeg-fa',
+    'hvor-mye-kan-du-fa',
     'slik-soker-du',
-    'hvis-du-selv-er-syk',
-    'fant-du-ikke-det-du-lette-etter'
+    'hvis-du-selv-er-syk'
 ];
 
 const OmSvangerskapspenger: React.StatelessComponent<Props & InjectedIntlProps> = ({
@@ -54,7 +60,13 @@ const OmSvangerskapspenger: React.StatelessComponent<Props & InjectedIntlProps> 
                 }}>
                 <article className={cls.element('article')}>
                     <Breadcrumbs path={location.pathname} />
-                    <HvemKanFåSvangerskapspenger id={sections[0]}/>
+                    <HvemKanFåSvangerskapspenger id={sections[0]} />
+                    <JobbDelvis id={sections[1]} />
+                    <HvorLengeKanDuFa id={sections[2]} />
+                    <HvorMyeKanDuFa id={sections[3]} />
+                    <SlikSokerDu id={sections[4]} />
+                    <HvisDuSelvErSyk id={sections[5]} />
+                    <Hjelp />
                 </article>
             </MedInnholdsfortegnelse>
         </div>

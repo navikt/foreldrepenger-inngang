@@ -5,7 +5,8 @@ import SvgMask from '../../../components/svg-mask/SvgMask';
 import BEMHelper from '../../../utils/bem';
 import Innhold, { getSource } from '../../../utils/innhold/Innhold';
 import getTranslation from '../../../utils/i18nUtils';
-import CustomSVG from "../../../utils/CustomSVG";
+import CustomSVG from '../../../utils/CustomSVG';
+import './hvemKanFåSvangerskapspenger.less';
 
 const cls = BEMHelper('hvemkanfaSvangerskapspenger');
 const seksjonsbilde = require('../../../assets/ark/ark-arbeider.svg').default;
@@ -22,7 +23,10 @@ const HvemKanFåSvangerskapspenger: React.StatelessComponent<Props & InjectedInt
     return (
         <PanelMedIllustrasjon
             id={id}
-            title={getTranslation('om_svangerskapspenger.hvem_kan_fa_svangerskapspenger.tittel', intl)}
+            title={getTranslation(
+                'om_svangerskapspenger.hvem_kan_fa_svangerskapspenger.tittel',
+                intl
+            )}
             svg={<SvgMask svg={seksjonsbilde} anchorToBottom={true} />}>
             <div className={cls.element('alignLeft')}>
                 <Innhold
@@ -32,10 +36,12 @@ const HvemKanFåSvangerskapspenger: React.StatelessComponent<Props & InjectedInt
                     )}
                 />
             </div>
-            <div>
-                {kravTilSvangerskapspengerStringPath.map((krav) => {
-                    <KravTilSvangerskapspenger key={krav} ingress={getSource(krav, intl)} />
-                })}
+            <div className={cls.element('kravTilSvangerskapspenger')}>
+                {kravTilSvangerskapspengerStringPath.map((krav) => (
+                    <div key={krav} className={cls.element('krav')}>
+                        <KravTilSvangerskapspenger ingress={getSource(krav, intl)} />
+                    </div>
+                ))}
             </div>
         </PanelMedIllustrasjon>
     );

@@ -166,6 +166,9 @@
     "hurtiglenke.slik_soker_du": "This is how you apply",
     "hurtiglenke.hvis_du_selv_er_syk": "If you are sick yourself",
     "hurtiglenke.fant_du_ikke_det_du_lette_etter": "Didn't find what you were looking for?",
+    "hurtiglenke.hvor_lenge_kan_jeg_fa": "How long can you get?",
+    "hurtiglenke.jobb_delvis": "Work part time",
+    "hurtiglenke.hvor_mye_kan_du_fa": "How much can you get?",
 
     "innholdsfortegnelse.søk_nå": "Apply now",
 
@@ -279,7 +282,14 @@
 
     "om_svangerskapspenger.tittel": "Pregnancy allowance",
     "om_svangerskapspenger.sok_na": "apply now",
-    "om_svangerskapspenger.hvem_kan_fa_svangerskapspenger.tittel": "\nWho can get a pregnancy allowance?",
+    "om_svangerskapspenger.hvem_kan_fa_svangerskapspenger.tittel": "Who can get a pregnancy allowance?",
+    "om_svangerskapspenger.jobbDelvis.tittel": "Work parttime",
+    "om_svangerskapspenger.hvorLengeKanDuFa.tittel": "How long can you get",
+    "om_svangerskapspenger.hvorMyeKanDuFa.tittel": "How much can you get?",
+    "om_svangerskapspenger.slikSokerDu.tittel": "This is how you apply",
+    "om_svangerskapspenger.slikSokerDu.faneEn.tittel": "employee",
+    "om_svangerskapspenger.slikSokerDu.faneTo.tittel": "Self-employed or freelancer",
+    "om_svangerskapspenger.hvisDuSelvErSyk.tittel": "If you are sick yourself",
 
     "veiviser.fane.mor": "Mother",
     "veiviser.fane.far": "Father",
