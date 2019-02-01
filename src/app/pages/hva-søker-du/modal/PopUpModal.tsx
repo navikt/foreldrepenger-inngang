@@ -50,7 +50,7 @@ class PopUpModal extends Component<Props> {
         return (
             <div className={cls.className}>
                 <TypografiBase type="normaltekst">
-                    <Lenke id="engangsstonadModal" href={'#'} onClick={this.openModal}>
+                    <Lenke id="engangsstonadModal" href={''} onClick={this.openModal}>
                         {getTranslation('hva_søker_du.engangsstønad_modal', this.props.intl)}
                     </Lenke>
                 </TypografiBase>
