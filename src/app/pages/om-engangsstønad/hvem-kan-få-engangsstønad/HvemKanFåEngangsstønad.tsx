@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { EngangsstonadSectionProps } from '../OmEngangsstønad';
 import { injectIntl, InjectedIntlProps } from 'react-intl';
 import BEMHelper from 'app/utils/bem';
 import CustomSVGFromSprite from 'app/utils/CustomSVG';
@@ -6,7 +7,6 @@ import getTranslation from 'app/utils/i18nUtils';
 import Innhold, { getSource } from 'app/utils/innhold/Innhold';
 import PanelMedIllustrasjon from 'app/components/panel-med-illustrasjon/PanelMedIllustrasjon';
 import './hvemKanFåEngangsstønad.less';
-import { EngangsstonadSectionProps } from '../OmEngangsstønad';
 
 const cls = BEMHelper('hvemKanFåEngangsstønad');
 const engangsstønadSvg = require('../../../assets/engangsstønad.svg').default;
@@ -23,7 +23,7 @@ const HvemKanFåEngangsstønad: React.StatelessComponent<Props> = ({ id, intl })
         id={id}
         title={getTranslation('om_engangsstønad.hva_er.tittel', intl)}
         svg={engangsstønadSvg}>
-        <Innhold source={getSource(hvaErEngangsstønadContent, intl)} values={{ TALL: '42' }} />
+        <Innhold source={getSource(hvaErEngangsstønadContent, intl)} />
         <div className={cls.element('kravContainer')}>
             <div className={cls.element('krav')}>
                 <CustomSVGFromSprite iconRef={checkmarkIcon} size={24} />

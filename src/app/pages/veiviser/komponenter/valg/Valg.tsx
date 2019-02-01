@@ -20,8 +20,8 @@ import 'core-js';
 import 'raf/polyfill';
 import getTranslation from 'app/utils/i18nUtils';
 import Lenkeknapp from '../../../../components/lenkeknapp/Lenkeknapp';
-import Environment from "../../../../Environment";
-
+import Environment from '../../../../Environment';
+import { Page } from 'app/types/Page';
 
 const cls = BEMHelper('valg');
 const resultat = BEMHelper('resultat');
@@ -643,7 +643,7 @@ class Valg extends React.Component<Props, State> {
                                         knappRight={'veiviser.valg.resultat.knapp.engangsstonad'}
                                         knappLeftStyle={'standard'}
                                         knappRightStyle={'hoved'}
-                                        lenkeLeft={'/om-engangsstonad'}
+                                        lenkeLeft={Page.OmEngangsstønad}
                                         lenkeRight={'https://engangsstonad.nav.no'}
                                         intl={this.props.intl}
                                     />
@@ -666,8 +666,8 @@ class Valg extends React.Component<Props, State> {
                                         }
                                         knappRightStyle={'standard'}
                                         knappLeftStyle={'standard'}
-                                        lenkeLeft={'/om-engangsstonad'}
-                                        lenkeRight={'/om-foreldrepenger'}
+                                        lenkeLeft={Page.OmEngangsstønad}
+                                        lenkeRight={Page.OmForeldrepenger}
                                         buttonHeadertxtLeft={
                                             <TypografiBase type={'normaltekst'}>
                                                 {getTranslation(
@@ -775,8 +775,8 @@ class Valg extends React.Component<Props, State> {
                                         }
                                         knappRightStyle={'standard'}
                                         knappLeftStyle={'standard'}
-                                        lenkeLeft={'/om-engangsstonad'}
-                                        lenkeRight={'/om-foreldrepenger'}
+                                        lenkeLeft={Page.OmEngangsstønad}
+                                        lenkeRight={Page.OmForeldrepenger}
                                         buttonHeadertxtLeft={
                                             <TypografiBase type={'normaltekst'}>
                                                 {getTranslation(
@@ -813,7 +813,7 @@ class Valg extends React.Component<Props, State> {
                             checked,
                             <MainKnapp
                                 intl={this.props.intl}
-                                url={'/om-foreldrepenger'}
+                                url={Page.OmForeldrepenger}
                                 txt={'veiviser.valg.resultat.knapp.ikkerett.info'}
                                 knappType={'standard'}
                             />

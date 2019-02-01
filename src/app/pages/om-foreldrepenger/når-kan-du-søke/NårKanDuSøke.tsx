@@ -12,7 +12,7 @@ import Innhold, { getSource } from 'app/utils/innhold/Innhold';
 import PanelMedIllustrasjon from '../../../components/panel-med-illustrasjon/PanelMedIllustrasjon';
 import Tabs from 'nav-frontend-tabs';
 import './nårKanDuSøke.less';
-import { ForeldrepengerSection } from '../OmForeldrepenger';
+import { ForeldrepengerSection } from 'app/types/Section';
 
 const iconSvg = require('../../../assets/ark/ark-frister.svg').default;
 const morSvg = require('../../../assets/foreldre/mor2.svg').default;

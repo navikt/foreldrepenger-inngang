@@ -1,11 +1,11 @@
 import * as React from 'react';
 import { injectIntl, InjectedIntlProps } from 'react-intl';
+import { ForeldrepengerSection } from 'app/types/Section';
 import BEMHelper from 'app/utils/bem';
 import getTranslation from 'app/utils/i18nUtils';
 import Innhold, { getSource } from 'app/utils/innhold/Innhold';
 import Kontaktvalg from 'app/components/kontaktvalg/Kontaktvalg';
 import PanelMedIllustrasjon from 'app/components/panel-med-illustrasjon/PanelMedIllustrasjon';
-import { ForeldrepengerSection } from '../OmForeldrepenger';
 import './ofteStilteSpørsmål.less';
 
 const svg = require('../../../assets/ark/ark-hjelp.svg').default;

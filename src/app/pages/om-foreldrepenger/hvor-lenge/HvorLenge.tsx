@@ -19,6 +19,7 @@ import PanelMedIllustrasjon from '../../../components/panel-med-illustrasjon/Pan
 import Ukekalkulator from './ukekalkulator/Ukekalkulator';
 import WithLink from 'app/components/with-link/WithLink';
 import './hvorLenge.less';
+import { Page } from 'app/types/Page';
 
 const infoSvg = require('../../../assets/ark/ark-info.svg').default;
 
@@ -121,7 +122,7 @@ class HvorLenge extends React.Component<Props, State> {
                     />
                     <Ukekalkulator antallUtbetalingsuker={this.state.antallUtbetalingsuker} />
                     <Normaltekst>
-                        <WithLink url="/regelendringer">
+                        <WithLink url={Page.Regelendringer}>
                             {getTranslation(
                                 'om_foreldrepenger.hvor_lenge.regelendringer_lenke',
                                 intl

@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { Route, Redirect, Switch, withRouter, RouteProps } from 'react-router-dom';
-import { ValidPath } from './utils/validPath';
+
+import { Page } from './types/Page';
 import Dokumentasjon from './pages/dokumentasjon/Dokumentasjon';
 import HvaSøkerDu from './pages/hva-søker-du/HvaSøkerDu';
 import Informasjonstavle from './pages/informasjonstavle/Informasjonstavle';
@@ -12,44 +13,49 @@ import SøkSvangerskapspenger from './pages/søk-svangerskapspenger/SøkSvangers
 import Veiviser from './pages/veiviser/Veiviser';
 
 interface ValidRouteProps extends RouteProps {
-    path?: ValidPath;
+    path?: Page;
 }
 
 const ValidRoute = (props: ValidRouteProps) => <Route {...props} />;
 
 const Router = () => (
     <Switch>
-        <ValidRoute exact={true} path="/" component={Informasjonstavle} key="informasjonstavle" />
         <ValidRoute
             exact={true}
-            path="/dokumentasjon"
+            path={Page.Root}
+            component={Informasjonstavle}
+            key="informasjonstavle"
+        />
+        <ValidRoute
+            exact={true}
+            path={Page.Dokumentasjon}
             component={Dokumentasjon}
             key="dokumentasjon"
         />
-        <ValidRoute exact={true} path="/hva-soker-du" component={HvaSøkerDu} key="hva-soker-du" />
+        <ValidRoute exact={true} path={Page.HvaSøkerDu} component={HvaSøkerDu} key="hva-soker-du" />
         <ValidRoute
             exact={true}
-            path="/hva-soker-du/svangerskapspenger"
+            path={Page.SøkSvangerskapspenger}
             component={SøkSvangerskapspenger}
             key="svangerskapspenger"
         />
-        <ValidRoute exact={true} path="/hvor-mye" component={Kalkulator} key="kalkulator" />
+        <ValidRoute exact={true} path={Page.HvorMye} component={Kalkulator} key="kalkulator" />
         <ValidRoute
             exact={true}
-            path="/om-engangsstonad"
+            path={Page.OmEngangsstønad}
             component={OmEngangsstønad}
             key="om-engangsstonad"
         />
         <ValidRoute
             exact={true}
-            path="/om-foreldrepenger"
+            path={Page.OmForeldrepenger}
             component={OmForeldrepenger}
             key="om-foreldrepenger"
         />
-        <ValidRoute exact={true} path="/veiviser" component={Veiviser} key="veiviser" />
+        <ValidRoute exact={true} path={Page.Veiviser} component={Veiviser} key="veiviser" />
         <ValidRoute
             exact={true}
-            path="/regelendringer"
+            path={Page.Regelendringer}
             component={Regelendringer}
             key="regelendringer"
         />

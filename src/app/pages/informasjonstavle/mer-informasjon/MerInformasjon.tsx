@@ -1,6 +1,7 @@
 import React, { StatelessComponent } from 'react';
 import { HoyreChevron } from 'nav-frontend-chevron';
 import { InjectedIntlProps, injectIntl } from 'react-intl';
+import { Page } from 'app/types/Page';
 import BEMHelper from '../../../utils/bem';
 import externalUrls from '../../../utils/externalUrls';
 import getTranslation from 'app/utils/i18nUtils';
@@ -17,13 +18,13 @@ const MerInformasjon: StatelessComponent<InjectedIntlProps> = ({ intl }) => {
             <MerInformasjonLink
                 title={getTranslation('foreldrepenger', intl)}
                 body={getTranslation('informasjonstavle.mer_informasjon.foreldrepenger', intl)}
-                url="/om-foreldrepenger"
+                url={Page.OmForeldrepenger}
                 urlIsExternal={false}
             />
             <MerInformasjonLink
                 title={getTranslation('engangsstønad', intl)}
                 body={getTranslation('informasjonstavle.mer_informasjon.engangsstønad', intl)}
-                url="/om-engangsstonad"
+                url={Page.OmEngangsstønad}
                 urlIsExternal={false}
             />
             <MerInformasjonLink
