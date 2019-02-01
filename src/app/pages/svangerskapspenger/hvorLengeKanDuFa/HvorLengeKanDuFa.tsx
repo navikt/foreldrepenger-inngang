@@ -17,7 +17,7 @@ const HvorLengeKanDuFa: React.StatelessComponent<Props & InjectedIntlProps> = ({
             title={getTranslation('om_svangerskapspenger.hvorLengeKanDuFa.tittel', intl)}
             svg={seksjonsbilde}>
             <Innhold
-                source={getSource('svangerskapspenger/hvor-lenge-kan-du-fa/hvorLengeKanDuFa', intl)}
+                source={getSource('svangerskapspenger/hvor-lenge-kan-du-fa/hvor-lenge-kan-du-fa', intl)}
             />
         </PanelMedIllustrasjon>
     );

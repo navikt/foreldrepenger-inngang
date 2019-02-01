@@ -4,7 +4,7 @@ import Innhold, { getSource } from '../../../../utils/innhold/Innhold';
 
 const SelvstendigNaringsdrivendeEllerFrilanser: React.StatelessComponent<InjectedIntlProps> = ({ intl }) => {
     return (
-        <Innhold source={getSource('svangerskapspenger/slik-soker-du/SelvStendigNaringsdrivendeEllerFrilanser', intl)} />
+        <Innhold source={getSource('svangerskapspenger/slik-soker-du/selv-stendigNaringsdrivende-eller-frilanser', intl)} />
     )
 };
 

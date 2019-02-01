@@ -17,7 +17,7 @@ const HvisDuSelvErSyk: React.StatelessComponent<Props & InjectedIntlProps> = ({ 
             title={getTranslation('om_svangerskapspenger.hvisDuSelvErSyk.tittel', intl)}
             svg={seksjonsBilde}>
             <Innhold
-                source={getSource('svangerskapspenger/hvis-du-selv-er-syk/hvisDuSelvErSyk', intl)}
+                source={getSource('svangerskapspenger/hvis-du-selv-er-syk/hvis-du-selv-er-syk', intl)}
             />
         </PanelMedIllustrasjon>
     );

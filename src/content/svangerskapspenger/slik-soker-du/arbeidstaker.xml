@@ -1,20 +1,7 @@
 <innhold>
     <liste>
-        <punkt>
-            Du søker på
-            <lenke url="https://www.arbeidstilsynet.no/tema/graviditet-og-arbeidsmiljo/skjema-for-tilrettelegging-for-gravide/" ekstern="true">
-                Arbeidstilsynets skjema
-            </lenke>
-             "omplassering/tilrettelegging pga. graviditet" (nr. 474 b).
-        </punkt>
-        <punkt>
-            Legen eller jordmoren fyller ut sin del av skjemaet. Skjemaet tar du med til arbeidsgiveren din.
-        </punkt>
-        <punkt>
-            Hvis arbeidsgiveren din ikke kan omplassere deg eller gi deg andre oppgaver, skal arbeidsgiveren fylle ut sin del av skjemaet før du sender det til NAV sammen med en
-            <lenke url="https://www.nav.no/no/Person/Skjemaer-for-privatpersoner/Forsteside+for+innsending" ekstern="true">
-                førsteside
-            </lenke>
-        </punkt>
+        <punkt>Du søker på <lenke url="https://www.arbeidstilsynet.no/tema/graviditet-og-arbeidsmiljo/skjema-for-tilrettelegging-for-gravide/" ekstern="true">Arbeidstilsynets skjema</lenke> "omplassering/tilrettelegging pga. graviditet" (nr. 474 b).</punkt>
+        <punkt>Legen eller jordmoren fyller ut sin del av skjemaet. Skjemaet tar du med til arbeidsgiveren din.</punkt>
+        <punkt>Hvis arbeidsgiveren din ikke kan omplassere deg eller gi deg andre oppgaver, skal arbeidsgiveren fylle ut sin del av skjemaet før du sender det til NAV sammen med en <lenke url="https://www.nav.no/no/Person/Skjemaer-for-privatpersoner/Forsteside+for+innsending" ekstern="true">førsteside</lenke></punkt>
     </liste>
 </innhold>

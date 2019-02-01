@@ -38,9 +38,7 @@ const HvemKanFåSvangerskapspenger: React.StatelessComponent<Props & InjectedInt
             </div>
             <div className={cls.element('kravTilSvangerskapspenger')}>
                 {kravTilSvangerskapspengerStringPath.map((krav) => (
-                    <div key={krav} className={cls.element('krav')}>
-                        <KravTilSvangerskapspenger ingress={getSource(krav, intl)} />
-                    </div>
+                        <KravTilSvangerskapspenger key={krav} ingress={getSource(krav, intl)} />
                 ))}
             </div>
         </PanelMedIllustrasjon>
