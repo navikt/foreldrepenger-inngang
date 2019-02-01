@@ -23,7 +23,7 @@ interface Props {
     children: ReactNode;
 }
 
-const SCROLL_OFFSET = 90;
+export const SCROLL_OFFSET = 230;
 
 export class WithLink extends React.Component<Props> {
     goToSection = (url: string) => (event: any) => {
@@ -42,7 +42,6 @@ export class WithLink extends React.Component<Props> {
         } else {
             const id = url.slice(1);
             const sectionNode = document.getElementById(id);
-
             if (sectionNode) {
                 window.scroll({
                     top: sectionNode.offsetTop - SCROLL_OFFSET,

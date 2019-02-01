@@ -5,14 +5,14 @@ import { Normaltekst } from 'nav-frontend-typografi';
 import BEMHelper from 'app/utils/bem';
 import getTranslation from 'app/utils/i18nUtils';
 import throttle from 'lodash/throttle';
-import WithLink from 'app/components/with-link/WithLink';
+import WithLink, {SCROLL_OFFSET} from 'app/components/with-link/WithLink';
 import './seksjonslenker.less';
 
 const cls = BEMHelper('seksjonslenker');
 
 const getFirstNumberAfter = (n: number, numbers: number[]) => {
     for (let i = 0; i < numbers.length; i++) {
-        if (n < numbers[i] - 100) {
+        if (n < numbers[i] - SCROLL_OFFSET) {
             return i - 1;
         }
     }

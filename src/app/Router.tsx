@@ -9,6 +9,7 @@ import Dokumentasjon from './pages/dokumentasjon/Dokumentasjon';
 import Kalkulator from './pages/kalkulator/Kalkulator';
 import Veiviser from './pages/veiviser/Veiviser';
 import { ValidPath } from './utils/validPath';
+import OmSvangerskapspenger from './pages/svangerskapspenger/OmSvangerskapspenger';
 
 interface ValidRouteProps extends RouteProps {
     path?: ValidPath;
@@ -46,6 +47,12 @@ const Router = () => (
             key="om-foreldrepenger"
         />
         <ValidRoute exact={true} path="/veiviser" component={Veiviser} key="veiviser" />
+        <ValidRoute
+            exact={true}
+            path="/om-svangerskapspenger"
+            component={OmSvangerskapspenger}
+            key="om-svangerskapspenger"
+        />
         <Redirect to="/" />
     </Switch>
 );

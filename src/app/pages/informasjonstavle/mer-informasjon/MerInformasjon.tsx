@@ -2,7 +2,6 @@ import React, { StatelessComponent } from 'react';
 import { HoyreChevron } from 'nav-frontend-chevron';
 import { InjectedIntlProps, injectIntl } from 'react-intl';
 import BEMHelper from '../../../utils/bem';
-import externalUrls from '../../../utils/externalUrls';
 import getTranslation from 'app/utils/i18nUtils';
 import Tekstomrade from 'nav-frontend-tekstomrade';
 import TypografiBase from 'nav-frontend-typografi';
@@ -29,8 +28,8 @@ const MerInformasjon: StatelessComponent<InjectedIntlProps> = ({ intl }) => {
             <MerInformasjonLink
                 title={getTranslation('svangerskapspenger', intl)}
                 body={getTranslation('informasjonstavle.mer_informasjon.svangerskapspenger', intl)}
-                url={externalUrls.les_mer_svangerskapspenger}
-                urlIsExternal={true}
+                url={'/om-svangerskapspenger'}
+                urlIsExternal={false}
             />
         </nav>
     );
