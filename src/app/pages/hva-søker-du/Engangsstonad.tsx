@@ -6,7 +6,7 @@ import getTranslation from 'app/utils/i18nUtils';
 import PanelMedTittel from '../../components/panel-med-tittel/PanelMedTittel';
 import PopUpModal from './modal/PopUpModal';
 import Innhold, { getSource } from 'app/utils/innhold/Innhold';
-import UserHelpEngangsstonad from './user-help-engangsstonad/UserHelpEngangsstonad';
+import UserHelpAlternativ from './user-help-alternativ/UserHelpAlternativ';
 
 const Engangsstonad = ({ intl }: InjectedIntlProps) => {
     return (
@@ -20,10 +20,11 @@ const Engangsstonad = ({ intl }: InjectedIntlProps) => {
                     external: true
                 }}
                 alternativHelpSection={
-                    <UserHelpEngangsstonad
+                    <UserHelpAlternativ
                         linkText={getTranslation('hva_søker_du.ingen_elektronisk_id', intl)}
-                        linkUrl={Environment.SOK_ENGANGSSTONAD_PAPIR_URL}
                         helpText={getTranslation('hva_søker_du.ingen_elektronisk_id_hjelp', intl)}
+                        papirsoknadUrl={Environment.SOK_ENGANGSSTONAD_PAPIR_URL}
+                        soknadUrl={Environment.SOK_ENGANGSSTONAD_URL}
                     />
                 }
             />

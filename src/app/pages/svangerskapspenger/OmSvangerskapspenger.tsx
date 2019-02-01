@@ -2,7 +2,6 @@ import React from 'react';
 import { InjectedIntlProps, injectIntl } from 'react-intl';
 import classnames from 'classnames';
 import HeaderInformasjon from '../../components/header-informasjon/HeaderInformasjon';
-import Environment from '../../Environment';
 import BEMHelper from '../../utils/bem';
 import Breadcrumbs from '../../components/breadcrumbs/Breadcrumbs';
 import MedInnholdsfortegnelse from '../infosider/MedInnholdsfortegnelse';
@@ -56,7 +55,7 @@ const OmSvangerskapspenger: React.StatelessComponent<Props & InjectedIntlProps> 
                 sections={sections}
                 button={{
                     label: getTranslation('om_svangerskapspenger.sok_na', intl),
-                    url: Environment.SOK_FORELDREPENGER_URL
+                    url: 'https://familie.nav.no/hva-soker-du/svangerskapspenger'
                 }}>
                 <article className={cls.element('article')}>
                     <Breadcrumbs path={location.pathname} />

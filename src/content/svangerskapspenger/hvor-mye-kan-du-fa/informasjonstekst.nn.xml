@@ -16,6 +16,7 @@
     <liste>
         <punkt>Viss du har jobba så kort tid at det ikkje er rapportert frilanserinntekt for dei tre heile månader til a-ordninga, skal inntekta for dette kortare tidsrommet brukast i beregningen.</punkt>
     </liste>
-    <avsnitt><b>Sjølvstendig næringsdrivande</b> Er du <b>sjølvstendig næringsdrivande</b> vert svangerskapspengene dine vangligvis berekna til gjennomsnittet av inntekta di dei <b>tre siste ferdiglignede åra.</b></avsnitt>
+    <avsnitt type="element">Sjølvstendig næringsdrivande</avsnitt>
+    <avsnitt>Er du <b>sjølvstendig næringsdrivande</b> vert svangerskapspengene dine vangligvis berekna til gjennomsnittet av inntekta di dei <b>tre siste ferdiglignede åra.</b></avsnitt>
     <avsnitt>Er verksemda eller arbeidstilhøvet ditt varig endra, kan inntekta du har når du startar med svangerskapspenger brukast i staden for. Inntekt over<lenke url ="https://www.nav.no/no/NAV+og+samfunn/Kontakt+NAV/Utbetalinger/Snarveier/satser--380089?kap=383506" ekstern="true"> 12 gonger grunnbeløpet</lenke> i folketrygda vert ikkje teke med i beregningen.</avsnitt>
 </innhold>

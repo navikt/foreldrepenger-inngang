@@ -1,5 +1,4 @@
 import * as React from 'react';
-// import Lenke from 'nav-frontend-lenker';
 import HjelpetekstBase from 'nav-frontend-hjelpetekst';
 import TypografiBase from 'nav-frontend-typografi';
 import './userHelp.less';
