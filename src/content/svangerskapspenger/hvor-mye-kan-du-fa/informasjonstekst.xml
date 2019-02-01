@@ -1,6 +1,6 @@
 <innhold>
     <avsnitt>Svangerskapspenger beregnes ut fra inntekten din. Du kan få utbetalt svangerskapspenger opp til <lenke url="https://www.nav.no/no/NAV+og+samfunn/Kontakt+NAV/Utbetalinger/Grunnbelopet+i+folketrygden" ekstern="true">seks ganger grunnbeløpet.</lenke></avsnitt>
-    <avsnitt><b>Arbeidstaker</b></avsnitt>
+    <avsnitt type="element">Arbeidstaker</avsnitt>
     <avsnitt>Er du <b>arbeidstaker</b> regnes svangerskapspengene dine vanligvis ut fra gjennomsnittet av inntekten du har hatt i de tre siste kalendermånedene før du får svangerskapspenger. Dette gjelder både hvis du er fast ansatt eller har varierende arbeidsperioder eller inntekter.
         Hvis det er mer enn 25 prosent forskjell mellom årsinntekten din og inntekten din de tre siste månedene, må vi vurdere hvilken inntekt som er mest representativ i din situasjon.</avsnitt>
     <liste>
@@ -8,7 +8,7 @@
         <punkt>Har du hatt <b>ferie</b> eller korte perioder med tilfeldig ulønnet permisjon i perioden du har hatt inntekt, fastsettes inntekten din til det du vanligvis ville hatt hvis du hadde vært i jobb.</punkt>
         <punkt>Hvis <b>arbeidsforholdet ditt avsluttes</b> før du får svangerskapspenger, blir svangerskapspengene beregnet etter inntekten din de tre siste månedene før arbeidsforholdet ble avsluttet.</punkt>
     </liste>
-    <avsnitt><b>Frilanser</b></avsnitt>
+    <avsnitt type="element">Frilanser</avsnitt>
     <avsnitt>Er du <b>frilanser</b> blir svangerskapspengene dine vanligvis regnet ut fra gjennomsnittet av inntekten du har hatt i de <b>tre siste kalendermånedene</b> før du får svangerskapspenger</avsnitt>
     <avsnitt>Hvis det er mer enn 25 prosent forskjell mellom årsinntekten din og inntekten din og inntekten din de tre siste månedene, må vi vurdere hvilken inntekt som er mest representativ i din situasjon.</avsnitt>
     <liste>
