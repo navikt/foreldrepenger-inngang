@@ -1,20 +1,19 @@
 <innhold>
-    <avsnitt>Svangerskapspengar blir berekna ut frå inntekta di. Du kan få utbetalt svangerskapspenger opp til <lenke url="https://www.nav.no/no/NAV+og+samfunn/Kontakt+NAV/Utbetalinger/Grunnbelopet+i+folketrygden" ekstern="true"> seks gonger grunnbeløpet.</lenke></avsnitt>
+    <avsnitt>Svangerskapspengar blir berekna ut frå inntekta di. Du kan få utbetalt svangerskapspengar opp til <lenke url="https://www.nav.no/no/NAV+og+samfunn/Kontakt+NAV/Utbetalinger/Grunnbelopet+i+folketrygden" ekstern="true"> seks gonger grunnbeløpet.</lenke></avsnitt>
     <avsnitt type="element">Arbeidstaker</avsnitt>
-    <avsnitt>Er du <b>arbeidstaker</b>, blir svangerskapspengane dine vanlegvis rekna ut frå gjennomsnittet av inntekta du har hatt i dei tre siste kalendermånadene før du får svangerskapspengar. Dette gjeld både dersom du er fast tilsett eller har varierande arbeidsperiodar eller inntekter.
-        Viss det er meir enn 25 prosent skilnad mellom årsinntekten din og inntekta di dei tre siste månadene, må vi vurdera kva for ei inntekt som er mest representativ i situasjonen din.</avsnitt>
+    <avsnitt>Er du <b>arbeidstaker</b>,, blir svangerskapspengane dine vanlegvis rekna ut frå gjennomsnittet av inntekta du har hatt i <b>dei tre siste kalendermånadene</b> før du får svangerskapspengar. Dette gjeld både dersom du er fast tilsett eller har varierande arbeidsperiodar eller inntekter.</avsnitt>
+    <avsnitt>Dersom det er meir enn 25 prosent forskjell mellom årsinntekta di og inntekta di dei tre siste månadene, må vi vurdere kva for inntekt som er mest representativ i situasjonen din.</avsnitt>
     <liste>
-        <punkt>Har arbeidsforholdet ditt vart <b>under tre månader</b>, skal svangerskapspenene reknast ut frå inntekta du har hatt i den perioden du har vore i jobb. Inntekta di vert rekna om til ei månadsinntekt.</punkt>
-        <punkt>Har du hatt <b>ferie</b> eller korte periodar med tilfeldig ulønt permisjon i perioden du har hatt inntekt, blir inntekta di fastsett til det du vanlegvis ville ha hatt dersom du hadde vore i jobb.
-        </punkt>
+        <punkt>Har arbeidsforholdet ditt vart <b>under tre månader</b>, skal svangerskapspengane reknast ut frå inntekta du har hatt i den perioden du har vore i jobb. Inntekta di blir rekna om til ei månadsinntekt.</punkt>
+        <punkt>Har du hatt <b>ferie</b> eller korte periodar med tilfeldig  <b>ulønt permisjon</b> i perioden du har hatt inntekt, blir inntekta di fastsett til det du vanlegvis ville ha hatt dersom du hadde vore i jobb.</punkt>
     </liste>
     <avsnitt type="element">Frilansar</avsnitt>
-    <avsnitt>Er du <b>frilansar</b> vert svangerskapspengene dine vanlegvis rekna ut frå gjennomsnittet av inntekta du har hatt i <b>dei tre siste kalendermånadene</b> før du får svangerskapspenger</avsnitt>
-    <avsnitt>Dersom det er meir enn 25 prosent forskjell mellom årsinntekta di og inntekta di dei tre siste månadene, må vi vurdere kva for inntekt som er mest representativ i situasjonen din..</avsnitt>
+    <avsnitt>Er du <b>frilansar</b>, blir svangerskapspengane dine vanlegvis rekna ut frå gjennomsnittet av inntekta du har hatt i dei <b>dei tre siste kalendermånadene</b> før du får svangerskapspengar.</avsnitt>
+    <avsnitt>Dersom det er meir enn 25 prosent forskjell mellom årsinntekta di og inntekta di dei tre siste månadene, må vi vurdere kva for inntekt som er mest representativ i situasjonen din.</avsnitt>
     <liste>
-        <punkt>Viss du har jobba så kort tid at det ikkje er rapportert frilanserinntekt for dei tre heile månader til a-ordninga, skal inntekta for dette kortare tidsrommet brukast i beregningen.</punkt>
+        <punkt>Dersom du har jobba så kort tid at det ikkje er rapportert frilansinntekt for tre heile månader til a-ordninga, skal inntekta for dette kortare tidsrommet brukast i berekninga.</punkt>
     </liste>
     <avsnitt type="element">Sjølvstendig næringsdrivande</avsnitt>
-    <avsnitt>Er du <b>sjølvstendig næringsdrivande</b> vert svangerskapspengene dine vangligvis berekna til gjennomsnittet av inntekta di dei <b>tre siste ferdiglignede åra.</b></avsnitt>
-    <avsnitt>Er verksemda eller arbeidstilhøvet ditt varig endra, kan inntekta du har når du startar med svangerskapspenger brukast i staden for. Inntekt over<lenke url ="https://www.nav.no/no/NAV+og+samfunn/Kontakt+NAV/Utbetalinger/Snarveier/satser--380089?kap=383506" ekstern="true"> 12 gonger grunnbeløpet</lenke> i folketrygda vert ikkje teke med i beregningen.</avsnitt>
+    <avsnitt>Er du <b>sjølvstendig næringsdrivande</b> , blir svangerskapspengane dine vanlegvis berekna til gjennomsnittet av inntekta di dei <b>tre siste ferdiglikna åra.</b></avsnitt>
+    <avsnitt>Er verksemda di eller arbeidssituasjonen din varig endra, kan inntekta du har når du startar med svangerskapspengar, brukast i staden. Inntekt over <lenke url ="https://www.nav.no/no/NAV+og+samfunn/Kontakt+NAV/Utbetalinger/Snarveier/satser--380089?kap=383506" ekstern="true"> tolv gonger grunnbeløpet</lenke> i folketrygda blir ikkje teken med i berekninga.</avsnitt>
 </innhold>
