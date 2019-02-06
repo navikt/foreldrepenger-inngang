@@ -63,6 +63,7 @@
     "route.hvor-mye": "Kor mykje?",
     "route.veiviser": "Kva har du rett til?",
     "route.regelendringer": "Aktuelle endringar",
+    "route.om-svangerskapspenger": "om-svangerskapspenger",
 
     "informasjonstavle.tittel": "Foreldrepengar, eingongsstønad og svangerskapspengar",
     "informasjonstavle.ingress": "Dette har du rett til når du ventar barn eller skal ha foreldrepengar.",
@@ -160,6 +161,15 @@
     "hurtiglenke.nar_blir_pengene_utbetalt": "Når blir pengane betalte ut?",
     "hurtiglenke.far_eller_medmor": "Eingongsstønad til far eller medmor",
     "hurtiglenke.ofte_stilte_sporsmal": "Ofte stilte spørsmål",
+    "hurtiglenke.hvem_kan_fa_svangerskapspenger": "Kven kan få svangerskapspenger",
+    "hurtiglenke.omplassere_eller_tilrettelegge_arbeidet": "Omplassera eller tilretteleggja arbeidet",
+    "hurtiglenke.hva_kan_jeg_fa": "Kva kan eg få?",
+    "hurtiglenke.slik_soker_du": "Slik søkjer du",
+    "hurtiglenke.hvis_du_selv_er_syk": "Viss du sjølv er sjuk",
+    "hurtiglenke.fant_du_ikke_det_du_lette_etter": "Fant du ikkje det du leitte etter?",
+    "hurtiglenke.hvor_lenge_kan_jeg_fa": "Kor lenge kan du få?",
+    "hurtiglenke.jobb_delvis": "Jobb delvis",
+    "hurtiglenke.hvor_mye_kan_du_fa": "Kor mye kan du få?",
 
     "innholdsfortegnelse.søk_nå": "Søk no",
 
@@ -250,13 +260,6 @@
 
     "om_foreldrepenger.hjelp.tittel": "Fann du ikkje det du leita etter?",
     "om_foreldrepenger.ofte_stilte_spørsmål.tittel": "Ofte stilte spørsmål",
-
-    "om_engangsstønad.tittel": "All informasjon om eingongsstønad",
-    "om_engangsstønad.hva_er.tittel": "Kven kan få eingongsstønad?",
-    "om_engangsstønad.hva_kan_du_få.tittel": "Kva kan du få?",
-    "om_engangsstønad.utbetaling.tittel": "Når blir pengane betalte ut?",
-    "om_engangsstønad.til_far.tittel": "Eingongsstønad til far eller medmor",
-    "om_engangsstønad.når_kan_du_søke.tittel": "Når kan du søkje?",
     "om_foreldrepenger.jobbe.jobbeHeltidSvg.jobb": "Jobb",
     "om_foreldrepenger.jobbe.jobbeHeltidSvg.uker": "(4 veker)",
     "om_foreldrepenger.jobbe.jobbeHeltidSvg.sluttdato": "Sluttdato",
@@ -269,6 +272,24 @@
     "om_foreldrepenger.jobbe.jobbDelvis.dropdownSvg.dager": "4 dagar",
     "om_foreldrepenger.jobbe.jobbDelvis.dropdownSvg.dag": "dag",
     "om_foreldrepenger.jobbe.jobbDelvis.dropdownSvg.uke": "veke",
+
+    "om_engangsstønad.tittel": "All informasjon om eingongsstønad",
+    "om_engangsstønad.hva_er.tittel": "Kven kan få eingongsstønad?",
+    "om_engangsstønad.hva_kan_du_få.tittel": "Kva kan du få?",
+    "om_engangsstønad.utbetaling.tittel": "Når blir pengane betalte ut?",
+    "om_engangsstønad.til_far.tittel": "Eingongsstønad til far eller medmor",
+    "om_engangsstønad.når_kan_du_søke.tittel": "Når kan du søkje?",
+
+    "om_svangerskapspenger.tittel": "Svangerskapspenger",
+    "om_svangerskapspenger.sok_na": "Søk no",
+    "om_svangerskapspenger.hvem_kan_fa_svangerskapspenger.tittel": "Kven kan få svangerskapspenger?",
+    "om_svangerskapspenger.jobbDelvis.tittel": "Jobb delvis",
+    "om_svangerskapspenger.hvorLengeKanDuFa.tittel": "Kor lenge kan du få",
+    "om_svangerskapspenger.hvorMyeKanDuFa.tittel": "kor mye kan du få?",
+    "om_svangerskapspenger.slikSokerDu.tittel": "Slik søkjer du",
+    "om_svangerskapspenger.slikSokerDu.faneEn.tittel": "Arbeidstaker",
+    "om_svangerskapspenger.slikSokerDu.faneTo.tittel": "Sjølvstendig næringdrivende eller frilansar",
+    "om_svangerskapspenger.hvisDuSelvErSyk.tittel": "viss du sjølv er sjuk",
 
     "veiviser.fane.mor": "Mor",
     "veiviser.fane.far": "Far",

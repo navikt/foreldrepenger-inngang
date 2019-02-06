@@ -8,6 +8,7 @@ import Informasjonstavle from './pages/informasjonstavle/Informasjonstavle';
 import Kalkulator from './pages/kalkulator/Kalkulator';
 import OmEngangsstønad from './pages/om-engangsstønad/OmEngangsstønad';
 import OmForeldrepenger from './pages/om-foreldrepenger/OmForeldrepenger';
+import OmSvangerskapspenger from './pages/svangerskapspenger/OmSvangerskapspenger';
 import Regelendringer from './pages/regelendringer/Regelendringer';
 import SøkSvangerskapspenger from './pages/søk-svangerskapspenger/SøkSvangerskapspenger';
 import Veiviser from './pages/veiviser/Veiviser';
@@ -58,6 +59,12 @@ const Router = () => (
             path={Page.Regelendringer}
             component={Regelendringer}
             key="regelendringer"
+        />
+        <ValidRoute
+            exact={true}
+            path={Page.OmSvangerskapspenger}
+            component={OmSvangerskapspenger}
+            key="om-svangerskapspenger"
         />
         <Redirect to="/" />
     </Switch>
