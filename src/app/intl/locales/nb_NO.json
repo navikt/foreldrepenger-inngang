@@ -245,8 +245,8 @@
     "om_foreldrepenger.jobbe.jobbDelvis.dropdownSvg.uke": "uke",
 
     "om_foreldrepenger.sykdom.tittel": "Hvis en av dere blir syke",
-    "om_foreldrepenger.sykdom.innlagt": "Barnet er innlagt",
-    "om_foreldrepenger.sykdom.foreldre_syke": "En av foreldrene er syke",
+    "om_foreldrepenger.sykdom.innlagt": "Barnet er\ninnlagt",
+    "om_foreldrepenger.sykdom.foreldre_syke": "En av foreldrene\ner syke",
     "om_foreldrepenger.sykdom.innlagt.utsette": "Slik går du frem for å utsette",
     "om_foreldrepenger.sykdom.innlagt.overta": "Slik går du frem for å overta",
     "om_foreldrepenger.sykdom.sykmeldt.eksempeltittel": "Eksempel på hvordan du kan forlenge foreldrepengeperioden din når du utsetter:",
