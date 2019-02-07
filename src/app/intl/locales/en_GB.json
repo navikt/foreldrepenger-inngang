@@ -68,8 +68,8 @@
 
     "informasjonstavle.tittel": "Parental benefit, lump-sum grant and pregnancy benefit",
     "informasjonstavle.ingress": "These are your rights when expecting children or awaiting parental benefits.",
-    "informasjonstavle.hva_kan_du_få": "What am I entitled to?",
-    "informasjonstavle.hva_kan_du_få_ingress": " Use the wizard to find out whether you should apply for the parental benefit or lump-sum grant.",
+    "informasjonstavle.hva_kan_du_få": "What are you entitled to?",
+    "informasjonstavle.hva_kan_du_få_ingress": "Use the wizard to find out whether you should apply for the parental benefit or lump-sum grant.",
     "informasjonstavle.hvor_mye": "How much?",
     "informasjonstavle.hvor_mye_ingress": "Calculate the parental benefit you are entitled to.",
     "informasjonstavle.hvor_lenge": "How long?",
@@ -151,7 +151,7 @@
 
     "hurtiglenke.hvem_kan_fa_foreldrepenger": "Who can receive the parental benefit?",
     "hurtiglenke.hvor_lenge_kan_du_fa_foreldrepenger": "How long can you receive the parental benefit?",
-    "hurtiglenke.hva_kan_du_fa": "What can you receive?",
+    "hurtiglenke.hva_kan_du_fa": "What are you entitled to?",
     "hurtiglenke.nar_kan_du_soke": "When can you apply?",
     "hurtiglenke.hvis_du_skal_pa_ferie": " If you will be going on holiday",
     "hurtiglenke.hvis_du_vil_jobbe": "If you wish to work",
@@ -265,7 +265,7 @@
 
     "om_foreldrepenger.adopsjon.tittel": "Adoption",
 
-    "om_foreldrepenger.beregning.tittel": "What am I entitled to?",
+    "om_foreldrepenger.beregning.tittel": "What are you entitled to?",
     "om_foreldrepenger.beregning.arbeidstaker": "Employee",
     "om_foreldrepenger.beregning.selvstendig": "Self-employed\nor freelancer",
     "om_foreldrepenger.beregning.harYtelse": "Payment\nfrom NAV",
@@ -278,7 +278,7 @@
     "om_engangsstønad.tittel": "All information regarding the lump-sum grant",
     "om_engangsstønad.hva_er.tittel": "Who is entitled to the lump-sum grant?",
     "om_engangsstønad.når_kan_du_søke.tittel": "When can you apply?",
-    "om_engangsstønad.hva_kan_du_få.tittel": "What can you receive?",
+    "om_engangsstønad.hva_kan_du_få.tittel": "What are you entitled to?",
     "om_engangsstønad.utbetaling.tittel": "When will the money be paid out?",
     "om_engangsstønad.til_far.tittel": "Lump-sum grant to father or co-mother",
 
