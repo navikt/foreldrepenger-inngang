@@ -1,15 +1,17 @@
 import * as React from 'react';
 import { CSSTransition } from 'react-transition-group';
 import { InjectedIntlProps, injectIntl } from 'react-intl';
+import classnames from 'classnames';
+import MediaQuery from 'react-responsive';
+import TypografiBase from 'nav-frontend-typografi';
+
+import BEMHelper from '../../../utils/bem';
+import getTranslation from 'app/utils/i18nUtils';
+import Innhold, { getSource } from 'app/utils/innhold/Innhold';
 import JegVilJobbeDeltid from './komponenter/JegVilJobbeDeltid';
 import JegVilJobbeDeltidExpandert from './komponenter/JegVilJobbeDeltidExpandert';
 import JegVilJobbeDeltidExpandertMobil from './komponenter/JegVilJobbeDeltidExpandertMobil';
-import BEMHelper from '../../../utils/bem';
-import classnames from 'classnames';
-import getTranslation from 'app/utils/i18nUtils';
-import Innhold, { getSource } from 'app/utils/innhold/Innhold';
-import MediaQuery from 'react-responsive';
-import TypografiBase from 'nav-frontend-typografi';
+
 const cls = BEMHelper('jegVilJobbe');
 
 class JobbeDelvis extends React.Component<InjectedIntlProps> {

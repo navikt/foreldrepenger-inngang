@@ -23,7 +23,7 @@ interface Props {
     children: ReactNode;
 }
 
-export const SCROLL_OFFSET = 100;
+export const SCROLL_OFFSET = 90;
 
 export class WithLink extends React.Component<Props> {
     goToSection = (url: string) => (event: any) => {

@@ -68,8 +68,8 @@
 
     "informasjonstavle.tittel": "Parental benefit, lump-sum grant and pregnancy benefit",
     "informasjonstavle.ingress": "These are your rights when expecting children or awaiting parental benefits.",
-    "informasjonstavle.hva_kan_du_få": "What am I entitled to?",
-    "informasjonstavle.hva_kan_du_få_ingress": " Use the wizard to find out whether you should apply for the parental benefit or lump-sum grant.",
+    "informasjonstavle.hva_kan_du_få": "What are you entitled to?",
+    "informasjonstavle.hva_kan_du_få_ingress": "Use the wizard to find out whether you should apply for the parental benefit or lump-sum grant.",
     "informasjonstavle.hvor_mye": "How much?",
     "informasjonstavle.hvor_mye_ingress": "Calculate the parental benefit you are entitled to.",
     "informasjonstavle.hvor_lenge": "How long?",
@@ -88,7 +88,7 @@
     "informasjonstavle.andre_lenker.ofte_stilte_spørsmål": "Frequently asked questions",
     "informasjonstavle.andre_lenker.informasjon_om_kontantstøtte": "Information on cash benefit",
     "informasjonstavle.andre_lenker.regelverk": "Rules",
-    "informasjonstavle.andre_lenker.hvis_en_av_dere_blir_syke": "If one of you becomes sick",
+    "informasjonstavle.andre_lenker.hvis_en_av_dere_blir_syke": "If one of you gets sick",
     "informasjonstavle.andre_lenker.meld_fra_om_endringer": "Report changes",
     "informasjonstavle.andre_lenker.slik_klager_du": "How to appeal",
     "informasjonstavle.andre_lenker.dokumentasjon": "Required documentation",
@@ -151,11 +151,11 @@
 
     "hurtiglenke.hvem_kan_fa_foreldrepenger": "Who can receive the parental benefit?",
     "hurtiglenke.hvor_lenge_kan_du_fa_foreldrepenger": "How long can you receive the parental benefit?",
-    "hurtiglenke.hva_kan_du_fa": "What can you receive?",
+    "hurtiglenke.hva_kan_du_fa": "What are you entitled to?",
     "hurtiglenke.nar_kan_du_soke": "When can you apply?",
     "hurtiglenke.hvis_du_skal_pa_ferie": " If you will be going on holiday",
     "hurtiglenke.hvis_du_vil_jobbe": "If you wish to work",
-    "hurtiglenke.hvis_en_av_dere_blir_syke": "If one of you becomes sick",
+    "hurtiglenke.hvis_en_av_dere_blir_syke": "If one of you gets sick",
     "hurtiglenke.hjemme_samtidig": "Home at the same time",
     "hurtiglenke.adoptere": "Adopting",
     "hurtiglenke.hvem_kan_fa_engangsstonad": "Who is entitled to the lump-sum grant?",
@@ -247,9 +247,9 @@
     "om_foreldrepenger.jobbe.jobbDelvis.dropdownSvg.dag": "1 day",
     "om_foreldrepenger.jobbe.jobbDelvis.dropdownSvg.uke": "week",
 
-    "om_foreldrepenger.sykdom.tittel": "If one of you becomes sick",
-    "om_foreldrepenger.sykdom.innlagt": "The child has been hospitalized",
-    "om_foreldrepenger.sykdom.foreldre_syke": "One of the parents is sick",
+    "om_foreldrepenger.sykdom.tittel": "If one of you gets sick",
+    "om_foreldrepenger.sykdom.innlagt": "The child has\nbeen hospitalized",
+    "om_foreldrepenger.sykdom.foreldre_syke": "One of the\nparents is sick",
     "om_foreldrepenger.sykdom.innlagt.utsette": "You can postpone using the following process",
     "om_foreldrepenger.sykdom.innlagt.overta": "To take over, you must proceed as follows",
     "om_foreldrepenger.sykdom.innlagt.eksempeltittel": "Example of how you can extend your parental benefit period when you postpone:",
@@ -265,7 +265,7 @@
 
     "om_foreldrepenger.adopsjon.tittel": "Adoption",
 
-    "om_foreldrepenger.beregning.tittel": "What am I entitled to?",
+    "om_foreldrepenger.beregning.tittel": "What are you entitled to?",
     "om_foreldrepenger.beregning.arbeidstaker": "Employee",
     "om_foreldrepenger.beregning.selvstendig": "Self-employed\nor freelancer",
     "om_foreldrepenger.beregning.harYtelse": "Payment\nfrom NAV",
@@ -278,7 +278,7 @@
     "om_engangsstønad.tittel": "All information regarding the lump-sum grant",
     "om_engangsstønad.hva_er.tittel": "Who is entitled to the lump-sum grant?",
     "om_engangsstønad.når_kan_du_søke.tittel": "When can you apply?",
-    "om_engangsstønad.hva_kan_du_få.tittel": "What can you receive?",
+    "om_engangsstønad.hva_kan_du_få.tittel": "What are you entitled to?",
     "om_engangsstønad.utbetaling.tittel": "When will the money be paid out?",
     "om_engangsstønad.til_far.tittel": "Lump-sum grant to father or co-mother",
 
@@ -291,7 +291,7 @@
     "om_svangerskapspenger.slikSokerDu.tittel": "This is how you apply",
     "om_svangerskapspenger.slikSokerDu.faneEn.tittel": "employee",
     "om_svangerskapspenger.slikSokerDu.faneTo.tittel": "Self-employed or freelancer",
-    "om_svangerskapspenger.hvisDuSelvErSyk.tittel": "If you're sick ",
+    "om_svangerskapspenger.hvisDuSelvErSyk.tittel": "If you're sick",
 
     "veiviser.fane.mor": "Mother",
     "veiviser.fane.far": "Father",
