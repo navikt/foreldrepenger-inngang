@@ -61,7 +61,7 @@
     "route.blindside": "Uferdig side!",
     "route.hvor-mye": "Hvor mye?",
     "route.veiviser": " Hva kan du få?",
-    "route.om-svangerskapspenger": "om-svangerskapspenger",
+    "route.om-svangerskapspenger": "Om svangerskapspenger",
 
     "informasjonstavle.tittel": "Foreldrepenger, engangsstønad og svangerskapspenger",
     "informasjonstavle.ingress": "Dette har du rett til når du venter barn eller skal ha foreldrepenger.",
@@ -279,7 +279,7 @@
     "om_engangsstønad.til_far.tittel": "Engangsstønad til far eller medmor",
     "om_engangsstønad.når_kan_du_søke.tittel": "Når kan du søke?",
 
-    "om_svangerskapspenger.tittel": "Svangerskapspenger",
+    "om_svangerskapspenger.tittel": "All informasjon om svangerskapspenger",
     "om_svangerskapspenger.sok_na": "Søk nå",
     "om_svangerskapspenger.hvem_kan_fa_svangerskapspenger.tittel": "Hvem kan få svangerskapspenger?",
     "om_svangerskapspenger.jobbDelvis.tittel": "Jobb delvis",
