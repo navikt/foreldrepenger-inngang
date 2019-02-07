@@ -232,8 +232,8 @@
     "om_foreldrepenger.jobbe.kikkForLukkDetaljertInformasjon": "(klikk for å lukke)",
 
     "om_foreldrepenger.sykdom.tittel": "Dersom ein av dykk blir sjuk",
-    "om_foreldrepenger.sykdom.innlagt": "Barnet er innlagt",
-    "om_foreldrepenger.sykdom.foreldre_syke": "Ein av foreldra er sjuk",
+    "om_foreldrepenger.sykdom.innlagt": "Barnet er\ninnlagt",
+    "om_foreldrepenger.sykdom.foreldre_syke": "Ein av foreldra\ner sjuk",
     "om_foreldrepenger.sykdom.innlagt.utsette": "Slik går du fram for å utsetje",
     "om_foreldrepenger.sykdom.innlagt.overta": "Slik går du fram for å overta",
     "om_foreldrepenger.sykdom.innlagt.eksempeltittel": "Eksempel på korleis du kan forlengje foreldrepengeperioden din når du utset:",
