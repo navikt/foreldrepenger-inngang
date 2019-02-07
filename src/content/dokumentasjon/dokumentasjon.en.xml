@@ -18,12 +18,19 @@
     </liste>
     <avsnitt>You get confirmation of your expected date of delivery from your midwife or doctor. This cannot be issued before the <b>26th week of pregnancy</b>.</avsnitt>
     <avsnitt>If the child is born outside Norway and is not registered in the National Registry, you must attach the child’s birth certificate. </avsnitt>
+    <avsnitt type="undertittel">Confirmation of caesarean section</avsnitt>
+    <avsnitt>If you are permanently employed by an employer, you do not need to send NAV a confirmation of your caesarean section.</avsnitt>
+    <avsnitt type="element">You must submit a confirmation of your caesarean section if:</avsnitt>
+    <liste>
+        <punkt>you are self-employed or freelance</punkt>
+        <punkt>you are not permanently employed by an employer</punkt>
+    </liste>
     <avsnitt type="undertittel">The father or co-mother must have the shared period or parental benefit</avsnitt>
     <avsnitt>You must provide documentation of the mother’s activity requirement if you are staying at home during the shared period or receiving parental benefit. If only you are entitled to parental benefit, you must also provide documentation of the mother’s activity requirement, if you are going to postpone your parental benefit period.</avsnitt>
     <avsnitt type="undertittel">Documentation that must be enclosed with an application for a lump-sum grant</avsnitt>
     <liste>
         <punkt>If you are applying before the child has been born, we need <b>confirmation of your expected date of delivery</b> from a midwife or your doctor. It must show that you are in at least the 26th week of pregnancy.</punkt>
         <punkt>Upload the confirmation of your expected date of delivery when you <b>fill out</b> and submit the application online.</punkt>
-        <punkt>In connection with adoption, you must submit documentation of the date of <b>assumption of care</b>. </punkt>
+        <punkt>In connection with adoption, you must submit documentation of the date of <b>assumption of care</b>.</punkt>
     </liste>
 </innhold>
