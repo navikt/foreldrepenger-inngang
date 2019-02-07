@@ -19,7 +19,7 @@ import Veiledermelding from '../Veiledermelding';
 import './resultat.less';
 
 const cls = BEMHelper('resultat');
-const pengerIcon = require('../../../assets/icons/penger.svg').default;
+const merPengerIcon = require('../../../assets/icons/mer-penger.svg').default;
 const mindrePengerIcon = require('../../../assets/icons/mindre-penger.svg').default;
 
 interface OwnProps {
@@ -86,7 +86,7 @@ const Resultat = ({ results, fårUtbetaling, intl }: Props) => {
                 <output className={cls.element('resultater')}>
                     <Alternativ
                         percentage={100}
-                        icon={pengerIcon}
+                        icon={merPengerIcon}
                         monthlyWage={snittlønnPerMåned}
                     />
                     <Alternativ
