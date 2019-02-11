@@ -1,13 +1,13 @@
 <innhold>
-    <avsnitt>Your parental benefit is normally calculated based on the income you have when your parental benefit period commences. If you have:</avsnitt>
+    <avsnitt>Your parental benefit will normally be calculated based on your average income of the <b>last three calendar months</b> before the start of your parental benefit period. This applies regardless of whether you are employed in a permanent position or have varying periods of work or income.</avsnitt>
+    <avsnitt>If there is a difference of more than 25 per cent between your annual income and your income for the last three months, we have to determine which income is most representative of your situation.</avsnitt>
     <liste>
-        <punkt>fixed work hours and monthly wage, the most recent month is used</punkt>
-        <punkt>fixed work hours and hourly wage, the last four weeks are used</punkt>
-        <punkt>varying income or percentage position, an average of the last three, six, or nine months is used</punkt>
-        <punkt>recently found work or changed pay, your income following the change is used</punkt>
+        <punkt>If your employment has lasted for <b>less than three months</b>, your parental benefit shall be calculated based on the income have had during the period in which you have been working. Your income will be converted into a monthly income.</punkt>
+        <punkt>If you have had <b>holiday</b> or short periods of random <b>unpaid leave</b> during the period in which you have had an income, your income will be determined on the basis of what you would normally have had if you had been working.</punkt>
+        <punkt>If your <b>employment ends</b> before you start your parental benefit period, your parental benefit will be calculated on the basis of your income for the last three months before the employment relationship ended.</punkt>
     </liste>
-    <avsnitt>If you had multiple part-time positions, your total income will apply when your parental benefit shall be calculated.</avsnitt>
-    <avsnitt class="blokk-l">If your income is 25 per cent greater or less than what you have earned for the last three years, either your current income will be used or the average of the last three years.</avsnitt>
+    <avsnitt>If you are both <b>employed and work freelance</b>, your earnings will be calculated separately and then added together to give a single figure. If you have a total income of over six times the National Insurance basic amount ("G"), your income as an employee will be used as the calculation basis.</avsnitt>
+    <avsnitt class="blokk-l">If you are both <b>self-employed and a freelancer or employed</b>, your parental benefit will be calculated based on both of your incomes. Your freelance income will always be used as the basis for calculation. Freelance income up to six times the National Insurance basic amount ("G") is always covered in full.</avsnitt>
     <lesmer intro="Income included in the calculation">
         <liste>
             <punkt>Earned income and benefits that are equivalent to earned income.</punkt>
