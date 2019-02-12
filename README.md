@@ -77,11 +77,11 @@ Alle XML-filene er omgitt av en `<innhold>`-tag. Denne kan inneholde `<avsnitt>`
 </innhold>
 ```
 
-Det er lagt inn tester (`npm run test`) som prøver å tolke XML-filene med parseren og sier i fra om det skjedde noe galt.
+Avansert eksempel: Se  ([src/content/dokumentasjon/dokumentasjon.xml](https://github.com/navikt/foreldrepenger-inngang/blob/master/src/content/dokumentasjon/dokumentasjon.xml).
 
 ### Testing av XML-filer
 
-Avansert eksempel: Se  ([src/content/dokumentasjon/dokumentasjon.xml](https://github.com/navikt/foreldrepenger-inngang/blob/master/src/content/dokumentasjon/dokumentasjon.xml).
+Det er lagt inn tester (`npm run test`) som prøver å tolke XML-filene med parseren og sier i fra om det skjedde noe galt.
 
 # Henvendelser
 
