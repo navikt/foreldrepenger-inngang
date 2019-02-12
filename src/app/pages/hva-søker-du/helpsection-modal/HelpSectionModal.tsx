@@ -5,7 +5,7 @@ import TypografiBase from 'nav-frontend-typografi';
 import Lenke from 'nav-frontend-lenker';
 import Lukknapp from 'nav-frontend-lukknapp';
 import Innhold, { getSource } from 'app/utils/innhold/Innhold';
-import React from 'react';
+import React, { useState } from 'react';
 import './helpSection-modal.less';
 import { FlexibleSvg } from '../../../utils/CustomSVG';
 import getTranslation from 'app/utils/i18nUtils';
@@ -22,94 +22,67 @@ interface OwnProps {
 
 type Props = OwnProps & InjectedIntlProps;
 
-class HelpSectionModal extends React.Component<Props> {
-    state: {
-        modalIsOpen: boolean;
-    };
+const HelpSectionModal = (props: Props) => {
+    const { modalIsOpen, linktxt, papirsøknadUrl, søknadUrl, intl } = props;
+    const [isOpen, toggle] = useState(modalIsOpen);
 
-    constructor(props: Props & InjectedIntlProps) {
-        super(props);
-    }
-
-    componentWillMount() {
-        this.setState({
-            modalIsOpen: false
-        });
-    }
-
-    openModal = (e: any) => {
+    const openModal = (e: any) => {
         e.preventDefault();
-        this.setState({ modalIsOpen: true });
+        toggle(true);
     };
 
-    closeModal = () => {
-        this.setState({ modalIsOpen: false });
+    const closeModal = () => {
+        toggle(false);
     };
 
-    render() {
-        if (typeof window !== 'undefined') {
-            Modal.setAppElement('body');
-        }
-
-        const papirSøknadKnapp = getTranslation(
-            'hva_søker_du.engangsstønad.sokPapir.modal.knapp.standard',
-            this.props.intl
-        );
-
-        const søknadKnapp = getTranslation(
-            'hva_søker_du.engangsstønad.sokPapir.modal.knapp.hoved',
-            this.props.intl
-        );
-
-        return (
-            <div className={cls.className}>
-                <TypografiBase type="normaltekst">
-                    <Lenke id="engangsstonadModal" href={'#'} onClick={this.openModal}>
-                        {this.props.linktxt}
-                    </Lenke>
-                </TypografiBase>
-                <Modal
-                    className={'modal--overflow-visible'}
-                    isOpen={this.state.modalIsOpen}
-                    onRequestClose={this.closeModal}
-                    closeButton={false}
-                    contentLabel={getTranslation(
-                        'hva_søker_du.engangsstønad_modal',
-                        this.props.intl
-                    )}>
-                    <div className={cls.element('topIconContainer')}>
-                        <FlexibleSvg
-                            className={cls.element('icon')}
-                            iconRef={
-                                require('../../../assets/icons/check_circle_filled.svg').default
-                            }
-                            width={80}
-                            height={80}
-                        />
-                    </div>
-                    <div className={cls.element('body')}>
-                        <div className={cls.element('knappRad')}>
-                            <Lukknapp onClick={this.closeModal} />
-                        </div>
-                        <Innhold
-                            source={getSource('hva-søker-du/helpSection-modal', this.props.intl)}
-                        />
-                        <div className={cls.element('knapper')}>
-                            <Lenkeknapp urlIsExternal={true} url={this.props.papirsøknadUrl}>
-                                {papirSøknadKnapp}
-                            </Lenkeknapp>
-                            <Lenkeknapp
-                                type="hoved"
-                                url={this.props.søknadUrl}
-                                urlIsExternal={true}>
-                                {søknadKnapp}
-                            </Lenkeknapp>
-                        </div>
-                    </div>
-                </Modal>
-            </div>
-        );
+    if (typeof window !== 'undefined') {
+        Modal.setAppElement('body');
     }
-}
+
+    return (
+        <div className={cls.className}>
+            <TypografiBase type="normaltekst">
+                <Lenke id="engangsstonadModal" href={'#'} onClick={openModal}>
+                    {linktxt}
+                </Lenke>
+            </TypografiBase>
+            <Modal
+                className={'modal--overflow-visible'}
+                isOpen={isOpen}
+                onRequestClose={closeModal}
+                closeButton={false}
+                contentLabel={getTranslation('hva_søker_du.engangsstønad_modal', intl)}>
+                <div className={cls.element('topIconContainer')}>
+                    <FlexibleSvg
+                        className={cls.element('icon')}
+                        iconRef={require('../../../assets/icons/check_circle_filled.svg').default}
+                        width={80}
+                        height={80}
+                    />
+                </div>
+                <div className={cls.element('body')}>
+                    <div className={cls.element('knappRad')}>
+                        <Lukknapp onClick={closeModal} />
+                    </div>
+                    <Innhold source={getSource('hva-søker-du/helpSection-modal', intl)} />
+                    <div className={cls.element('knapper')}>
+                        <Lenkeknapp urlIsExternal={true} url={papirsøknadUrl}>
+                            {getTranslation(
+                                'hva_søker_du.engangsstønad.sokPapir.modal.knapp.standard',
+                                intl
+                            )}
+                        </Lenkeknapp>
+                        <Lenkeknapp type="hoved" url={søknadUrl} urlIsExternal={true}>
+                            {getTranslation(
+                                'hva_søker_du.engangsstønad.sokPapir.modal.knapp.hoved',
+                                intl
+                            )}
+                        </Lenkeknapp>
+                    </div>
+                </div>
+            </Modal>
+        </div>
+    );
+};
 
 export default injectIntl(HelpSectionModal);
