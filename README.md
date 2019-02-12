@@ -1,5 +1,3 @@
-# Inngang til foreldrepenger, engangsstønad og svangerskapspenger
-
 # Inngangssider til foreldrepenger, engangsstønad og svangerskapspenger
 
 ## Komme i gang
