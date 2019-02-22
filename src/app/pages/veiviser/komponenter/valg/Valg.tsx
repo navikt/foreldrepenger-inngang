@@ -63,7 +63,7 @@ const svarFarMedmor = [
 interface TabContent {
     faner: any[];
     aktivereResultatLenker: () => void;
-    CancelResultatLenker: () => void;
+    cancelResultatLenker: () => void;
 }
 
 interface State {
@@ -146,7 +146,7 @@ class Valg extends React.Component<Props, State> {
                 }
             }
             this.belop = 'veiviser.skrivInn.belop';
-            this.props.CancelResultatLenker();
+            this.props.cancelResultatLenker();
             this.setState(
                 // oppdaterer state /m nye verdier
                 {
@@ -260,7 +260,7 @@ class Valg extends React.Component<Props, State> {
                     checked[i][j] = false;
                 }
             }
-            this.props.CancelResultatLenker();
+            this.props.cancelResultatLenker();
             this.setState({
                 inputVal: initValue,
                 buttonCls: '',
@@ -416,7 +416,7 @@ class Valg extends React.Component<Props, State> {
 
     checkResult(checkBoxNiva: number, svar: number, radNiva: number) {
         if (this.state.result.length !== 0) {
-            this.props.CancelResultatLenker();
+            this.props.cancelResultatLenker();
             this.setState({ result: [], resultFade: true }, () =>
                 this.appendRow(checkBoxNiva, svar, radNiva)
             );

@@ -40,8 +40,8 @@ interface Props {
 const Veiviser: FunctionComponent<Props> = ({ location, intl }) => {
     const [visResultat, toggleResultat] = useState(false);
 
-    const onToggle = (visResultat: boolean) => () => {
-        toggleResultat(visResultat);
+    const onToggle = (resultatVerdi: boolean) => () => {
+        toggleResultat(resultatVerdi);
     };
 
     return (
@@ -61,10 +61,10 @@ const Veiviser: FunctionComponent<Props> = ({ location, intl }) => {
                         <Valg
                             faner={faner}
                             aktivereResultatLenker={onToggle(true)}
-                            CancelResultatLenker={onToggle(false)}
+                            cancelResultatLenker={onToggle(false)}
                         />
                     </PanelMedIllustrasjon>
-                    {visResultat && ([<NavigasjonsBoks/>].map((res: any, index: number) => {
+                    {visResultat && ([<NavigasjonsBoks key="resultat-lenker"/>].map((res: any, index: number) => {
                         return (
                             <CSSTransition
                                 key={index}
