@@ -1,6 +1,6 @@
 import React from 'react';
 import BEMHelper from '../../../../utils/bem';
-import { injectIntl, InjectedIntlProps, InjectedIntl } from 'react-intl';
+import { injectIntl, InjectedIntlProps } from 'react-intl';
 import TypografiBase from 'nav-frontend-typografi';
 import Innhold, { getSource } from 'app/utils/innhold/Innhold';
 import { RadioPanel, Input } from 'nav-frontend-skjema';
@@ -12,19 +12,16 @@ import UtvidetInformasjon from '../../../kalkulator/utvidetinformasjon/UtvidetIn
 import DuHarRett from './komponenter/DuHarRett';
 import ResultatPunkt from './komponenter/ResultatPunkt';
 import Logo from './komponenter/Logo';
-import NavigasjonsBoks from './komponenter/NavigasjonsBoks';
-import './valg.less';
-import Lenke from 'nav-frontend-lenker';
 import { getEnHalvG } from '../../../../utils/beregningUtils';
 import 'core-js';
 import 'raf/polyfill';
 import getTranslation from 'app/utils/i18nUtils';
-import Lenkeknapp from '../../../../components/lenkeknapp/Lenkeknapp';
 import Environment from "../../../../Environment";
-
+import MainKnapp from "./komponenter/MainKnapp";
+import EngangsstonadKnapp from "./komponenter/EngangsstonadKnapp";
+import './valg.less';
 
 const cls = BEMHelper('valg');
-const resultat = BEMHelper('resultat');
 const inputCls = BEMHelper('input');
 
 const sprmalMor = [
@@ -65,6 +62,8 @@ const svarFarMedmor = [
 
 interface TabContent {
     faner: any[];
+    aktivereResultatLenker: () => void;
+    CancelResultatLenker: () => void;
 }
 
 interface State {
@@ -147,6 +146,7 @@ class Valg extends React.Component<Props, State> {
                 }
             }
             this.belop = 'veiviser.skrivInn.belop';
+            this.props.CancelResultatLenker();
             this.setState(
                 // oppdaterer state /m nye verdier
                 {
@@ -260,6 +260,7 @@ class Valg extends React.Component<Props, State> {
                     checked[i][j] = false;
                 }
             }
+            this.props.CancelResultatLenker();
             this.setState({
                 inputVal: initValue,
                 buttonCls: '',
@@ -268,6 +269,7 @@ class Valg extends React.Component<Props, State> {
                 checkbox: checked,
                 result: []
             });
+
         } else {
             const initValue = e.target.value;
             this.setState({ inputVal: initValue, buttonCls: '', inntektCls: '' });
@@ -383,7 +385,7 @@ class Valg extends React.Component<Props, State> {
             />
         );
         if (checked[2][0] && checked[3][0] && (checked[4][0] || checked[5][0])) {
-            res.push(<NavigasjonsBoks />);
+            this.props.aktivereResultatLenker();
         }
         this.setState({ result: res }, () =>
             setTimeout(() => {
@@ -414,6 +416,7 @@ class Valg extends React.Component<Props, State> {
 
     checkResult(checkBoxNiva: number, svar: number, radNiva: number) {
         if (this.state.result.length !== 0) {
+            this.props.CancelResultatLenker();
             this.setState({ result: [], resultFade: true }, () =>
                 this.appendRow(checkBoxNiva, svar, radNiva)
             );
@@ -618,8 +621,8 @@ class Valg extends React.Component<Props, State> {
                                 <Logo />,
                                 'veiviser.valg.resultat.overskrift.foreldrepenger',
                                 checked,
+
                                 <MainKnapp
-                                    intl={this.props.intl}
                                     knappType={'hoved'}
                                     txt={'veiviser.valg.resultat.knapp.foreldrepenger'}
                                     url={Environment.SOK_FORELDREPENGER_URL}
@@ -645,7 +648,6 @@ class Valg extends React.Component<Props, State> {
                                         knappRightStyle={'hoved'}
                                         lenkeLeft={'/om-engangsstonad'}
                                         lenkeRight={'https://engangsstonad.nav.no'}
-                                        intl={this.props.intl}
                                     />
                                 )
                         );
@@ -684,7 +686,6 @@ class Valg extends React.Component<Props, State> {
                                                 )}{' '}
                                             </TypografiBase>
                                         }
-                                        intl={this.props.intl}
                                     />
                                 )
                         );
@@ -728,7 +729,6 @@ class Valg extends React.Component<Props, State> {
                                 'veiviser.valg.resultat.overskrift.foreldrepenger',
                                 checked,
                                 <MainKnapp
-                                    intl={this.props.intl}
                                     knappType={'hoved'}
                                     txt={'veiviser.valg.resultat.knapp.foreldrepenger'}
                                     url={'/hva-soker-du/foreldrepenger'}
@@ -754,7 +754,6 @@ class Valg extends React.Component<Props, State> {
                                         knappRightStyle={'hoved'}
                                         lenkeLeft={'/om-engangsstonad'}
                                         lenkeRight={'https://engangsstonad.nav.no'}
-                                        intl={this.props.intl}
                                     />
                                 )
                         );
@@ -793,7 +792,6 @@ class Valg extends React.Component<Props, State> {
                                                 )}{' '}
                                             </TypografiBase>
                                         }
-                                        intl={this.props.intl}
                                     />
                                 ) // SETT INN
                         );
@@ -812,7 +810,6 @@ class Valg extends React.Component<Props, State> {
                             'veiviser.valg.resultat.overskrift.foreldrepenger.ikkeRett',
                             checked,
                             <MainKnapp
-                                intl={this.props.intl}
                                 url={'/om-foreldrepenger'}
                                 txt={'veiviser.valg.resultat.knapp.ikkerett.info'}
                                 knappType={'standard'}
@@ -992,65 +989,6 @@ class Valg extends React.Component<Props, State> {
 }
 export default injectIntl(Valg);
 
-const MainKnapp = ({
-    intl,
-    url,
-    txt,
-    knappType
-}: {
-    intl: InjectedIntl;
-    url: string;
-    txt: string;
-    knappType: any;
-}) => (
-    <div className={resultat.element('harRettKnapp')}>
-        <Lenke href={url} tabIndex={-1}>
-            <KnappBase type={knappType}>{getTranslation(txt, intl)}</KnappBase>
-        </Lenke>
-    </div>
-);
 
-const EngangsstonadKnapp = ({
-    intl,
-    knappLeft,
-    knappRight,
-    knappLeftStyle,
-    knappRightStyle,
-    lenkeLeft,
-    lenkeRight,
-    buttonHeadertxtLeft,
-    buttonHeadertxtRight
-}: {
-    intl: InjectedIntl;
-    knappLeft: string;
-    knappRight: string;
-    knappLeftStyle: any;
-    knappRightStyle: any;
-    lenkeLeft: string;
-    lenkeRight: string;
-    buttonHeadertxtLeft?: object;
-    buttonHeadertxtRight?: object;
-}) => {
-    return (
-        <div className={resultat.element('harRettKnapp group')}>
-            <div className={resultat.element('harRettKol')}>
-                {buttonHeadertxtLeft}
-                <Lenkeknapp
-                    url={lenkeLeft}
-                    type={knappLeftStyle}
-                    urlIsExternal={false}
-                    children={getTranslation(knappLeft, intl)}
-                />
-            </div>
-            <div className={resultat.element('harRettKol')}>
-                {buttonHeadertxtRight}
-                <Lenkeknapp
-                    url={lenkeRight}
-                    type={knappRightStyle}
-                    urlIsExternal={true}
-                    children={getTranslation(knappRight, intl)}
-                />
-            </div>
-        </div>
-    );
-};
+
+

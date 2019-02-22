@@ -16,7 +16,7 @@
         </liste>
         <avsnitt><b>Søkefrist</b>: Du må søkje <b>før</b> ferien din startar.</avsnitt>
     </lesmer>
-    <avsnitt type="element">Feriepengar av foreldrepengane</avsnitt>
+    <avsnitt className="top-spacing" type="undertittel">Feriepengar av foreldrepengane</avsnitt>
     <avsnitt>Dersom du er arbeidstakar, har du rett til feriepengar av foreldrepengane. Dersom arbeidsgjevaren betaler lønn under permisjonen, blir feriepengane betalte ut til arbeidsgjevaren.</avsnitt>
     <avsnitt>Feriepengane utgjer 10,2 prosent av det som er utbetalt dei første 12 eller 15 vekene av foreldrepengeperioden, før skatt.</avsnitt>
 </innhold>

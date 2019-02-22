@@ -1,4 +1,5 @@
 <innhold>
+
     <lesmer intro="Når får jeg svar på søknaden min?">
         <avsnitt>Du får tidligst svar på søknaden din fire uker før foreldrepengeperioden din starter. Dette er fordi NAV trenger oppdaterte opplysninger for å behandle saken din.</avsnitt>
     </lesmer>
@@ -29,6 +30,8 @@
         <avsnitt>Ulønnet permisjon avtaler du med arbeidsgiveren din. Du kan ikke utsette foreldrepengene dine når du har ulønnet permisjon. Den andre forelderen kan utsette foreldrepengene på grunn av heltidsarbeid, sykdom eller ferie i perioden du har ulønnet permisjon.</avsnitt>
         <avsnitt>Ulønnet permisjon kan påvirke retten din til andre NAV ytelser og opptjening av rett til foreldrepenger for nytt barn. <lenke url="https://www.nav.no/no/Person/Arbeid/Sykmeldt%2C+arbeidsavklaringspenger+og+yrkesskade/Sykepenger/Sykepenger+til+sarskilte+grupper#chapter-5" ekstern="true">Her kan du lese mer om dine rettigheter.</lenke></avsnitt>
     </lesmer>
-    <avsnitt type="systemtittel" className="center">Fant du ikke det du lette etter?</avsnitt>
+
+    <avsnitt type="undertittel" className="center top-spacing">Fant du ikke det du lette etter?</avsnitt>
     <avsnitt className="center">Ta gjerne kontakt med oss på:</avsnitt>
+
 </innhold>

@@ -9,8 +9,10 @@ import PanelMedIllustrasjon from '../../components/panel-med-illustrasjon/PanelM
 import './veiviser.less';
 import SvgMask from '../../components/svg-mask/SvgMask';
 import getTranslation from 'app/utils/i18nUtils';
+import * as CSSTransition from 'react-transition-group/CSSTransition';
+import NavigasjonsBoks from "./komponenter/valg/komponenter/NavigasjonsBoks";
 
-const signSVG = require('../../assets/ark/ark-sign.svg').default;
+const signSVG = require('../../assets/ark/ark-veiviser.svg').default;
 
 const cls = BEMHelper('veiviser');
 
@@ -33,26 +35,70 @@ interface Props {
     location: any;
 }
 
-type OwnProps = Props & InjectedIntlProps;
+interface State {
+    resultat: object[];
+    transition: boolean;
+}
 
-const Veiviser: React.StatelessComponent<OwnProps> = ({ location, intl }) => {
-    return (
+class Veiviser extends React.Component<Props & InjectedIntlProps, State> {
+    constructor(props: Props & InjectedIntlProps) {
+        super(props);
+        this.state = {
+            resultat: [],
+            transition: false
+        };
+    }
+
+    getResultatLenker = () => {
+        const ammendItem = [...this.state.resultat];
+        ammendItem.push(<NavigasjonsBoks/>);
+        this.setState({
+            resultat: ammendItem
+        })
+    };
+
+    removeResultatLenker = () => {
+        this.setState({
+            resultat: []
+        })
+    };
+
+    render = () => (
         <div className={cls.className}>
             <div className={cls.element('header')}>
-                <Sidebanner text={getTranslation('veiviser.sidebanner.tittel', intl)} />
+                <Sidebanner text={getTranslation('veiviser.sidebanner.tittel', this.props.intl)} />
             </div>
             <div className={cls.element('body')}>
                 <div className={cls.element('content')}>
                     <Breadcrumbs path={location.pathname} />
                     <PanelMedIllustrasjon
-                        title={getTranslation('veiviser.panelMedIllustrasjon.tittel', intl)}
+                        title={getTranslation(
+                            'veiviser.panelMedIllustrasjon.tittel',
+                            this.props.intl
+                        )}
                         svg={<SvgMask svg={signSVG} anchorToBottom={true} />}>
-                        <Valg faner={faner} />
+                        <Valg
+                            faner={faner}
+                            aktivereResultatLenker={this.getResultatLenker}
+                            CancelResultatLenker={this.removeResultatLenker}
+                        />
                     </PanelMedIllustrasjon>
+                    {this.state.resultat.map((res: any, index: number) => {
+                        return (
+                            <CSSTransition
+                                key={index}
+                                appear={true}
+                                in={true}
+                                classNames="message"
+                                timeout={1000}>
+                                {res}
+                            </CSSTransition>
+                        );
+                    })}
                 </div>
             </div>
         </div>
     );
-};
+}
 
 export default injectIntl(Veiviser);

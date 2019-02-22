@@ -1,12 +1,6 @@
 @import '../../styles/assets.less';
 
 .veiviser {
-    .panel.panelMedIllustrasjon {
-        padding-left: 0;
-        padding-right: 0;
-        padding-bottom: 0;
-    }
-
     &__body {
         display: flex;
         flex-direction: column;
@@ -19,6 +13,17 @@
         max-width: 800px;
         justify-content: center;
         padding-bottom: 1rem;
+    }
+
+    .message-appear {
+        opacity: 0.01;
+        transform: scale(0.9) translateY(50%);
+    }
+
+    .message-enter-done {
+        opacity: 1;
+        transform: scale(1) translateY(0%);
+        transition: all 1000ms ease-out;
     }
 
     @media (min-width: @mobile-breakpoint) {

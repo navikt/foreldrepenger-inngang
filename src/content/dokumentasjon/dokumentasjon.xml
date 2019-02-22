@@ -1,13 +1,14 @@
 <innhold>
-    <avsnitt type="ingress" class="center blokk-m">Vi informerer deg underveis i søknaden dersom vi har behov for dokumentasjon fra deg.</avsnitt>
+    <avsnitt type="ingress" class="blokk-m">Vi informerer deg underveis i søknaden dersom vi har behov for dokumentasjon fra deg.</avsnitt>
     <avsnitt type="undertittel">Dokumentasjon på inntekt</avsnitt>
     <avsnitt>For å kunne beregne hva du skal ha utbetalt, må vi ha opplysninger om inntekten din.</avsnitt>
-    <avsnitt type="undertittel">Hvis du har hatt arbeidsinntekt eller er i jobb</avsnitt>
+    <avsnitt type="element">Hvis du har hatt arbeidsinntekt eller er i jobb</avsnitt>
     <liste>
         <punkt>Du må be arbeidsgiveren din sende <lenke url="https://www.nav.no/no/Bedrift/Tjenester+og+skjemaer/NAV-+og+Altinn-tjenester/digital" ekstern="true">digital inntektsmelding</lenke> til NAV. Inntektsmeldingen kan tidligst sendes fire uker før foreldrepengeperioden starter.</punkt>
         <punkt>Hvis du får utbetalt penger fra NAV, trenger du ikke sende dokumentasjon på dette.</punkt>
     </liste>
-    <avsnitt>Hvis du er <b>selvstendig næringsdrivende</b> eller <b>frilanser</b> trenger du <b>ikke</b> å legge ved noe dokumentasjon. Vi henter inn opplysninger fra offentlige registre, og <b>tar kontakt</b> med deg hvis vi trenger flere opplysninger.</avsnitt>
+    <avsnitt type="element">Hvis du er selvstendig næringsdrivende eller frilanser</avsnitt>
+    <avsnitt>Du trenger <b>ikke</b> å legge ved noe dokumentasjon. Vi henter inn opplysninger fra offentlige registre, og <b>tar kontakt</b> med deg hvis vi trenger flere opplysninger.</avsnitt>
     <avsnitt type="undertittel">Bekreftelse på termin</avsnitt>
     <avsnitt>Hvis du er fast ansatt hos en arbeidsgiver, trenger du ikke sende terminbekreftelse til NAV.</avsnitt>
     <avsnitt type="element">Du skal legge ved bekreftelse på termindatoen din hvis</avsnitt>

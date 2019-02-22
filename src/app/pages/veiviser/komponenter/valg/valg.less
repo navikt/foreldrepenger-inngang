@@ -10,19 +10,23 @@
     align-items: center;
     border-radius: 4px;
 
+
+
+    .nav-frontend-tabs--kompakt .nav-frontend-tabs__tab-inner--aktiv {
+        top: 2px;
+        border: 1px solid transparent;
+    }
+
     &__ingress {
         width: 100%;
         justify-content: center;
         text-align: left;
-        padding: 0 1rem 0 1rem;
     }
     .resultat {
         &__stonadRett {
             display: flex;
             flex-direction: column;
-            padding-top: 0.5rem;
             min-width: 100%;
-            padding-bottom: 2rem;
             margin-bottom: 0;
             background-color: white;
             border-bottom-right-radius: 4px;
@@ -103,7 +107,7 @@
         display: flex;
         flex-direction: row;
         justify-content: center;
-        padding-bottom: 3rem;
+        padding-bottom: 2.5rem;
     }
 
     &__valg-fane {
@@ -140,8 +144,6 @@
         width: 100%;
         display: flex;
         justify-content: space-around;
-        padding-left: 1rem;
-        padding-right: 1rem;
     }
 
     &__knapp-element {
@@ -158,8 +160,7 @@
     }
 
     &__ingress-knapp {
-        text-align: center;
-        padding-bottom: 0.3rem;
+        margin-bottom: 1rem;
     }
 
     &__label {
@@ -170,8 +171,6 @@
         display: flex;
         flex-direction: column;
         width: 100%;
-        padding-left: 1rem;
-        padding-right: 1rem;
     }
 
     .inputPanel__label {
@@ -184,7 +183,7 @@
         flex-direction: column;
         text-align: left;
         justify-content: left;
-        margin-bottom: 3rem;
+        margin-bottom: 2.5rem;
     }
 
     &__valg-checkboxes {
@@ -211,9 +210,7 @@
     }
 
     .radioPanel {
-        margin-left: 0;
-        margin-right: 0.5rem;
-        margin-bottom: 0.3rem;
+        margin-bottom: 0.5rem;
         width: 100%;
     }
 
@@ -251,7 +248,6 @@
         &__rad {
             display: flex;
             flex-direction: column;
-            padding-top: 1rem;
         }
 
         &__radKnapp {
@@ -313,15 +309,16 @@
         display: flex;
         flex-direction: column;
         width: 100%;
-        margin-top: -0.5rem;
         z-index: 3;
     }
 
     &__boksBorder {
         width: 100%;
         background-color: #efefef;
-        padding-top: 2.5rem;
-        padding-bottom: 2rem;
+
+        .langtPanelMedBilde {
+            margin-bottom: 0;
+        }
     }
 
     &__boksBorder.sec {
@@ -444,18 +441,7 @@
     /* @Mobile breakpoint: styling for screen size lager then 576px */
     @media (min-width: @mobile-breakpoint) {
         &__ingress {
-            padding: 0 5rem 0 5rem;
             text-align: left;
-        }
-
-        .nav-frontend-tabs__tab-list {
-            padding-left: 3rem;
-            padding-right: 3rem;
-        }
-
-        &__kort {
-            padding-left: 2rem;
-            padding-right: 2rem;
         }
 
         &__valg-checkboxes {
@@ -465,6 +451,10 @@
         .radioPanel {
             width: 50%;
             margin-bottom: 0;
+
+            &:not(:nth-child(1)) {
+                margin-left: 1rem;
+            }
         }
 
         .input {
@@ -473,9 +463,6 @@
             }
 
             &__felt {
-                margin-left: 0.3rem;
-                margin-bottom: 2.5rem;
-
                 .knapp.knapp--flat {
                     margin-left: 1rem;
                 }
@@ -521,7 +508,6 @@
         @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
             .resultat {
                 &__stonadBody {
-                    padding: 1rem 0 2rem 0.6rem;
                     margin: 0 3rem 0 3rem;
                 }
             }
@@ -535,10 +521,6 @@
                     padding-bottom: 1rem;
                     text-align: left;
                 }
-            }
-
-            &__stonadRett {
-                padding: 0 2rem 2rem 2rem;
             }
 
             &__harRettKnapp {
@@ -560,9 +542,6 @@
 
     @media (min-width: @tablet-breakpoint) {
         .resultat {
-            &__stonadRett {
-                padding: 0 5rem 2rem 5rem;
-            }
 
             &__harRettKnapp {
                 margin-top: 1rem;
@@ -590,10 +569,6 @@
                     padding-bottom: 0;
                 }
             }
-        }
-        &__kort {
-            padding-left: 5rem;
-            padding-right: 5rem;
         }
     }
 }
