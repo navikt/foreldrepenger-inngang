@@ -5,7 +5,6 @@ import getTranslation from '../../../utils/i18nUtils';
 import Innhold, { getSource } from '../../../utils/innhold/Innhold';
 import BEMHelper from '../../../utils/bem';
 import Arbeidstaker from './faner/Arbeidstaker';
-// import './slikSokerDu.less';
 import SelvstendigNaringsdrivendeEllerFrilanser from './faner/SelvstendigNaringsdrivendeEllerFrilanser';
 import ArbeidstakerIkon from '../../om-foreldrepenger/beregning/ikoner/ArbeidstakerIkon';
 import { FrilanserIkon } from '../../om-foreldrepenger/beregning/ikoner/FrilanserIkon';

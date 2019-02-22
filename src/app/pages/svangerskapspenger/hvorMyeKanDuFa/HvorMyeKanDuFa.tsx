@@ -7,7 +7,6 @@ import BEMHelper from '../../../utils/bem';
 import ArbeidstakerIkon from '../../om-foreldrepenger/beregning/ikoner/ArbeidstakerIkon';
 import { FrilanserIkon } from '../../om-foreldrepenger/beregning/ikoner/FrilanserIkon';
 import SelvstendigIkon from '../../om-foreldrepenger/beregning/ikoner/SelvstendigIkon';
-import './hvorMyeKanDuFa.less';
 import Arbeidstaker from './faner/Arbeidstaker';
 import Frilanser from './faner/Frilanser';
 import SelvStendigNaring from './faner/SelvStendigNaring';
