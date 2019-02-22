@@ -6,7 +6,7 @@ import getTranslation from 'app/utils/i18nUtils';
 import Innhold, { getSource } from 'app/utils/innhold/Innhold';
 import PanelMedIllustrasjon from 'app/components/panel-med-illustrasjon/PanelMedIllustrasjon';
 
-const arbeidstakerSvg = require('../../assets/ark/ark-arbeidstaker.svg').default;
+const arbeidstakerSvg = require('../../assets/ark/ark-beregning.svg').default;
 
 type Props = EngangsstonadSectionProps & InjectedIntlProps;
 
