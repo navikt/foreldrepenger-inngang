@@ -1,8 +1,8 @@
-import React from 'react';
+import React, {FunctionComponent, useState} from 'react';
 import BEMHelper from '../../utils/bem';
 import Sidebanner from '../../components/sidebanner/Sidebanner';
 import Breadcrumbs from '../../components/breadcrumbs/Breadcrumbs';
-import { InjectedIntlProps, injectIntl } from 'react-intl';
+import { injectIntl } from 'react-intl';
 import Valg from './komponenter/valg/Valg';
 import PanelMedIllustrasjon from '../../components/panel-med-illustrasjon/PanelMedIllustrasjon';
 
@@ -11,6 +11,7 @@ import SvgMask from '../../components/svg-mask/SvgMask';
 import getTranslation from 'app/utils/i18nUtils';
 import * as CSSTransition from 'react-transition-group/CSSTransition';
 import NavigasjonsBoks from "./komponenter/valg/komponenter/NavigasjonsBoks";
+import InjectedIntl = ReactIntl.InjectedIntl;
 
 const signSVG = require('../../assets/ark/ark-veiviser.svg').default;
 
@@ -33,40 +34,20 @@ const faner = [
 
 interface Props {
     location: any;
+    intl: InjectedIntl;
 }
 
-interface State {
-    resultat: object[];
-    transition: boolean;
-}
+const Veiviser: FunctionComponent<Props> = ({ location, intl }) => {
+    const [visResultat, toggleResultat] = useState(false);
 
-class Veiviser extends React.Component<Props & InjectedIntlProps, State> {
-    constructor(props: Props & InjectedIntlProps) {
-        super(props);
-        this.state = {
-            resultat: [],
-            transition: false
-        };
-    }
-
-    getResultatLenker = () => {
-        const ammendItem = [...this.state.resultat];
-        ammendItem.push(<NavigasjonsBoks/>);
-        this.setState({
-            resultat: ammendItem
-        })
+    const onToggle = (visResultat: boolean) => () => {
+        toggleResultat(visResultat);
     };
 
-    removeResultatLenker = () => {
-        this.setState({
-            resultat: []
-        })
-    };
-
-    render = () => (
+    return (
         <div className={cls.className}>
             <div className={cls.element('header')}>
-                <Sidebanner text={getTranslation('veiviser.sidebanner.tittel', this.props.intl)} />
+                <Sidebanner text={getTranslation('veiviser.sidebanner.tittel', intl)} />
             </div>
             <div className={cls.element('body')}>
                 <div className={cls.element('content')}>
@@ -74,16 +55,16 @@ class Veiviser extends React.Component<Props & InjectedIntlProps, State> {
                     <PanelMedIllustrasjon
                         title={getTranslation(
                             'veiviser.panelMedIllustrasjon.tittel',
-                            this.props.intl
+                            intl
                         )}
                         svg={<SvgMask svg={signSVG} anchorToBottom={true} />}>
                         <Valg
                             faner={faner}
-                            aktivereResultatLenker={this.getResultatLenker}
-                            CancelResultatLenker={this.removeResultatLenker}
+                            aktivereResultatLenker={onToggle(true)}
+                            CancelResultatLenker={onToggle(false)}
                         />
                     </PanelMedIllustrasjon>
-                    {this.state.resultat.map((res: any, index: number) => {
+                    {visResultat && ([<NavigasjonsBoks/>].map((res: any, index: number) => {
                         return (
                             <CSSTransition
                                 key={index}
@@ -94,7 +75,7 @@ class Veiviser extends React.Component<Props & InjectedIntlProps, State> {
                                 {res}
                             </CSSTransition>
                         );
-                    })}
+                    }))}
                 </div>
             </div>
         </div>
