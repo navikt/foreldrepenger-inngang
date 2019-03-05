@@ -74,7 +74,7 @@
     "informasjonstavle.hvor_lenge_ingress": "Planlegg kor lenge du kan vere heime med barnet.",
 
     "informasjonstavle.velg_søknadsskjema.tittel": "Vel søknadsskjema",
-    "informasjonstavle.velg_søknadsskjema.ingress": "Her finn du alle skjemaer for mor og far. Foreldrepengar, utsetjing, endring og eingongsstønad, alt på same stad.",
+    "informasjonstavle.velg_søknadsskjema.ingress": "Både mor, far og medmor bruker same skjema for å søkje om foreldrepengar eller gjere endringar. Her finn du òg skjema for å søkje eingongsstønad og svangerskapspengar.",
 
     "informasjonstavle.mer_informasjon.tittel": "Utfyllande informasjon",
     "informasjonstavle.mer_informasjon.foreldrepenger": "Foreldrepengene skal erstatte inntekta di når du skal vere heime med barnet.",
@@ -130,7 +130,7 @@
     "dokumentasjon.tittel": "Dokumentasjon som må leggjast ved",
 
     "hva_søker_du.tittel": "Kva vil du søkje om?",
-    "hva_søker_du.foreldrepenger.tittel": "Foreldrepengar",
+    "hva_søker_du.foreldrepenger.tittel": "Foreldrepengar – eitt skjema for alle",
     "hva_søker_du.søk_foreldrepenger": "Søk om foreldrepengar",
     "hva_søker_du.ettersend_vedlegg": "Ettersend vedlegg",
     "hva_søker_du.søk_engangsstønad": "Søk om eingongsstønad",
