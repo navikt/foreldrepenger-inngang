@@ -73,7 +73,7 @@
     "informasjonstavle.hvor_lenge_ingress": "Planlegg hvor lenge du kan være hjemme med barnet.",
 
     "informasjonstavle.velg_søknadsskjema.tittel": "Velg søknadsskjema",
-    "informasjonstavle.velg_søknadsskjema.ingress": "Her finner du alle skjemaer for mor og far når du venter barn eller skal ha foreldrepenger.",
+    "informasjonstavle.velg_søknadsskjema.ingress": "Både mor, far og medmor bruker samme skjema for å søke om foreldrepenger eller gjøre endringer. Her finner du også skjema for å søke engangsstønad og svangerskapspenger.",
 
     "informasjonstavle.mer_informasjon.tittel": "Utfyllende informasjon",
     "informasjonstavle.mer_informasjon.foreldrepenger": "Foreldrepengene skal erstatte inntekten din når du skal være hjemme med barnet.",
@@ -131,6 +131,7 @@
     "dokumentasjon.tittel": "Dokumentasjon som må legges ved",
 
     "hva_søker_du.tittel": "Hva vil du søke om?",
+    "hva_søker_du.foreldrepenger.tittel": "Foreldrepenger – ett skjema for alle",
     "hva_søker_du.søk_foreldrepenger": "Gå til foreldrepengesøknaden",
     "hva_søker_du.ettersend_vedlegg": "Ettersend vedlegg",
     "hva_søker_du.søk_engangsstønad": "Søk om engangsstønad",

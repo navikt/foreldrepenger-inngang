@@ -10,7 +10,7 @@ import UserHelpAlternativ from './user-help-alternativ/UserHelpAlternativ';
 
 const Foreldrepenger: React.StatelessComponent<InjectedIntlProps> = ({ intl }) => {
     return (
-        <PanelMedTittel title={getTranslation('foreldrepenger', intl)}>
+        <PanelMedTittel title={getTranslation('hva_søker_du.foreldrepenger.tittel', intl)}>
             <Innhold source={getSource('hva-søker-du/foreldrepenger', intl)} />
             <ButtonPanel
                 button={{
