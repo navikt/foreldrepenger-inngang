@@ -4,7 +4,7 @@
     <liste>
         <punkt>If your employment has lasted for <b>less than three months</b>, your parental benefit shall be calculated based on the income have had during the period in which you have been working. Your income will be converted into a monthly income.</punkt>
         <punkt>If you have had <b>holiday</b> or short periods of random <b>unpaid leave</b> during the period in which you have had an income, your income will be determined on the basis of what you would normally have had if you had been working.</punkt>
-        <punkt>If your <b>employment ends</b> before you start your parental benefit period, your parental benefit will be calculated on the basis of your income for the last three months before the employment relationship ended.</punkt>
+        <punkt>If your <b>employment ends</b> before you start your parental benefit period and you have no other work, your parental benefit will be calculated on the basis of your income for the last three months before the employment relationship ended.</punkt>
     </liste>
     <avsnitt>If you are both <b>employed and work freelance</b>, your earnings will be calculated separately and then added together to give a single figure. If you have a total income of over six times the National Insurance basic amount ("G"), your income as an employee will be used as the calculation basis.</avsnitt>
     <avsnitt class="blokk-l">If you are both <b>self-employed and a freelancer or employed</b>, your parental benefit will be calculated based on both of your incomes. Your freelance income will always be used as the basis for calculation. Freelance income up to six times the National Insurance basic amount ("G") is always covered in full.</avsnitt>
@@ -22,7 +22,7 @@
             <punkt>Allowances that cover expenses in connection with your work, for example, daily allowance, car allowance, tool allowance and nuisance bonus.</punkt>
         </liste>
     </lesmer>
-    <lesmer intro="Days without work included in the calculation">
+    <lesmer intro="Days without work included in the qualifying period">
         <liste>
             <punkt>If you have been working <b>continuously for four weeks</b> and there are no more than <b>fourteen days</b> between each time you are at work, days without work are also included in the qualifying period.</punkt>
             <punkt>If you have an employment agreement for <b>fixed shifts</b>, the days you are not at work will be included in the qualifying period, even if you work less than every 14th day.</punkt>
