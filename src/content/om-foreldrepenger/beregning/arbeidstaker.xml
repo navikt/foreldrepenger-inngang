@@ -7,7 +7,7 @@
         <punkt>Hvis <b>arbeidsforholdet ditt avsluttes</b> før du starter foreldrepengeperioden og du ikke har annet arbeid, blir foreldrepengene dine beregnet etter inntekten din de tre siste månedene før arbeidsforholdet ble avsluttet.</punkt>
     </liste>
     <avsnitt>Hvis du både er <b>arbeidstaker og frilanser</b> skal inntektene beregnes hver for seg og legges sammen til ett beløp. Hvis du har en samlet inntekt over seks ganger grunnbeløpet, blir inntekten din som arbeidstaker lagt til grunn i beregningen.</avsnitt>
-    <avsnitt class="blokk-l">Hvis du både er <b>selvstendig næringsdrivende og frilanser eller arbeidstaker</b>, blir foreldrepengene dine beregnet ut fra begge inntektene dine. Inntekten din som frilanser blir alltid lagt til grunn for beregningen. Frilansinntekter opp til seks ganger grunnbeløpet dekkes alltid fullt ut.</avsnitt>
+    <avsnitt class="blokk-l">Hvis du både er <b>selvstendig næringsdrivende og frilanser eller arbeidstaker</b>, blir foreldrepengene dine beregnet ut fra begge inntektene dine. Inntekten din som arbeidstaker/frilanser blir alltid lagt til grunn for beregningen. Arbeids-/frilansinntekter opp til seks ganger grunnbeløpet dekkes alltid fullt ut.</avsnitt>
     <lesmer intro="Inntekter som tas med i beregningen">
         <liste>
             <punkt>Lønnsinntekt og ytelser som er likestilt med lønnsinntekt</punkt>
