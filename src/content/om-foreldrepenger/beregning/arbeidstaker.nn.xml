@@ -6,8 +6,9 @@
         <punkt>Dersom du har hatt ferie eller korte periodar med tilfeldig ulønt permisjon i perioden du har hatt inntekt, blir inntekta di fastsett til det du vanlegvis ville ha hatt om du hadde vore i jobb.</punkt>
         <punkt>Dersom arbeidsforholdet ditt blir avslutta før du startar foreldrepengeperioden og du ikkje har anna arbeid, blir foreldrepengane dine berekna etter inntekta di dei tre siste månadene før arbeidsforholdet blei avslutta.</punkt>
     </liste>
-    <avsnitt>Er du både arbeidstakar og frilansar, skal inntektene bereknast kvar for seg og leggjast saman til eitt beløp. Har du ei samla inntekt over seks gonger grunnbeløpet, blir inntekta di som arbeidstakar lagd til grunn i berekninga.</avsnitt>
-    <avsnitt class="blokk-l">Er du både sjølvstendig næringsdrivande og frilansar eller arbeidstakar, blir foreldrepengane dine berekna ut frå begge inntektene dine. Inntekta di som frilansar blir alltid lagd til grunn for berekninga. Frilansinntekter opp til seks gonger grunnbeløpet blir alltid fullt dekte.</avsnitt>
+    <avsnitt>Når du er både <b>arbeidstakar og frilansar</b>, skal inntektene bereknast kvar for seg og leggjast saman til eitt beløp. Har du ei samla inntekt over seks gonger grunnbeløpet, blir inntekta di som arbeidstakar lagt til grunn i berekninga.</avsnitt>
+    <avsnitt>Når du er både <b>arbeidstakar og sjølvstendig</b> næringsdrivande, blir foreldrepengane dine berekna ut frå begge inntektene dine.  Inntekta di som arbeidstakar blir lagt til grunn først i berekninga.</avsnitt>
+    <avsnitt class="blokk-l">Dersom gjennomnsittet av inntekta di dei tre siste ferdiglikna åra er høgare enn arbeidsinntekta di, og arbeidsinntekta di ikkje er over seks gonger grunnbeløpet, blir differansen utbetalt som næringsinntekt. Ved utbetaling dekkjast alltid inntekter opp til seks gonger brunnbeløpet.</avsnitt>
     <lesmer intro="Inntekter som blir tekne med i berekninga">
         <liste>
             <punkt>Lønnsinntekt og ytingar som er likestilte med lønnsinntekt</punkt>
