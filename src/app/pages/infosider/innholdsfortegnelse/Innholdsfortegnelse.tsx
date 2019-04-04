@@ -1,10 +1,10 @@
-import * as React from 'react';
-import { Panel } from 'nav-frontend-paneler';
+import React, { useRef } from 'react';
 import BEMHelper from 'app/utils/bem';
 import classnames from 'classnames';
 import Lenkeknapp from 'app/components/lenkeknapp/Lenkeknapp';
 import Seksjonslenker from '../seksjonslenker/Seksjonslenker';
 import SvgMask from 'app/components/svg-mask/SvgMask';
+import useComponentSize from 'app/hooks/useComponentSize';
 import './innholdsfortegnelse.less';
 
 const cls = BEMHelper('innholdsfortegnelse');
@@ -19,8 +19,16 @@ interface Props {
 }
 
 const Innholdsfortegnelse: React.StatelessComponent<Props> = ({ sections, button }) => {
+    const ref = useRef(null);
+    const { height } = useComponentSize(ref);
+
     return (
-        <Panel className={classnames(cls.className)}>
+        <div
+            ref={ref}
+            className={classnames('panel', cls.className)}
+            style={{
+                top: `calc(50% - ${height / 2}px)`
+            }}>
             <div className={cls.element('icon')}>
                 <SvgMask small={true} svg={icon} />
             </div>
@@ -28,7 +36,7 @@ const Innholdsfortegnelse: React.StatelessComponent<Props> = ({ sections, button
             <Lenkeknapp type="hoved" url={button.url} urlIsExternal={true}>
                 {button.label}
             </Lenkeknapp>
-        </Panel>
+        </div>
     );
 };
 

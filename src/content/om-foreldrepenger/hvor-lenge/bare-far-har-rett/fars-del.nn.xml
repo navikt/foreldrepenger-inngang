@@ -1,8 +1,7 @@
 <innhold>
     <avsnitt>Når berre du har rett til foreldrepengar, kan du starte foreldrepengeperioden din frå <b>veke sju</b> etter fødselen. Adopterer de, startar foreldrepengeperioden din frå <b>omsorgsovertakinga</b>.</avsnitt>
-    <avsnitt>Startar du seinare, får du færre veker med foreldrepengar.</avsnitt>
+    <avsnitt>Startar du seinare, får du færre veker med foreldrepengar dersom du ikkje søker om utsetjing.</avsnitt>
     <avsnitt>Dersom det ikkje passer å ta full permisjon frå jobben, kan du ta ut foreldrepengane dine i kombinasjon med delvis arbeid eller utsetje fordi du jobbar heiltid.</avsnitt>
-    <avsnitt>Dersom mor er <b>uføretrygda</b>, kan du ta ut inntil 15 veker med foreldrepengar før det blir stilt krav til at mor er i jobb, studerer eller er i annan aktivitet.</avsnitt>
     <avsnitt type="element">Aktivitetskravet til mor</avsnitt>
     <avsnitt>Både når du tek ut foreldrepengar eller utset, må mor anten</avsnitt>
     <liste>
@@ -13,4 +12,5 @@
         <punkt>delta i kvalifiseringsprogrammet</punkt>
         <punkt>delta på heiltid i introduksjonsprogrammet etter kapittel 2 for nyinnkomne innvandrarar</punkt>
     </liste>
+    <avsnitt>Dersom mor er <b>uføretrygda</b>, kan du ta ut inntil 15 veker med foreldrepengar før det blir stilt krav til at mor er i jobb, studerer eller er i annan aktivitet.</avsnitt>
 </innhold>

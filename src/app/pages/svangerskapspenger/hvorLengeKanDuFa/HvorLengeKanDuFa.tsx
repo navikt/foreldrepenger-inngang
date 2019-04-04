@@ -4,7 +4,7 @@ import PanelMedIllustrasjon from '../../../components/panel-med-illustrasjon/Pan
 import getTranslation from '../../../utils/i18nUtils';
 import Innhold, { getSource } from '../../../utils/innhold/Innhold';
 
-const seksjonsbilde = require('../../../assets/ark/ark-calendar.svg').default;
+const seksjonsbilde = require('../../../assets/ark/ark-info.svg').default;
 
 interface Props {
     id: string;
@@ -17,7 +17,10 @@ const HvorLengeKanDuFa: React.StatelessComponent<Props & InjectedIntlProps> = ({
             title={getTranslation('om_svangerskapspenger.hvorLengeKanDuFa.tittel', intl)}
             svg={seksjonsbilde}>
             <Innhold
-                source={getSource('svangerskapspenger/hvor-lenge-kan-du-fa/hvor-lenge-kan-du-fa', intl)}
+                source={getSource(
+                    'svangerskapspenger/hvor-lenge-kan-du-fa/hvor-lenge-kan-du-fa',
+                    intl
+                )}
             />
         </PanelMedIllustrasjon>
     );

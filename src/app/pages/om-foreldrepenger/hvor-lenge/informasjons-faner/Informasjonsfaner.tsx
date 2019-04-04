@@ -62,7 +62,7 @@ class Informasjonsfaner extends React.Component<Props> {
     render = () => (
         <div className={cls.className}>
             <div className={cls.element('header')}>
-                <TypografiBase type="element">
+                <TypografiBase type="undertittel">
                     {this.props.title
                         ? this.props.title
                         : this.props.tabs.length > 1

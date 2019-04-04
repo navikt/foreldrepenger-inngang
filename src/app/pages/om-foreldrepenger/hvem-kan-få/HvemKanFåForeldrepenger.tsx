@@ -36,9 +36,7 @@ const HvemKanFåForeldrepenger: React.StatelessComponent<Props & InjectedIntlPro
             id={id}
             title={getTranslation('om_foreldrepenger.for_å_få.tittel', intl)}
             svg={<SvgMask svg={foreldrepengerSvg} anchorToBottom={true} />}>
-            <div className={cls.element('alignLeft')}>
-                <Innhold source={getSource('om-foreldrepenger/hvem-kan-få/ingress', intl)} />
-            </div>
+            <Innhold source={getSource('om-foreldrepenger/hvem-kan-få/ingress', intl)} />
             <div className={cls.element('kravTilForeldrepenger')}>
                 {kravTilForeldrepenger.map((krav) => (
                     <KravTilForeldrepenger key={krav} ingress={getSource(krav, intl)} />

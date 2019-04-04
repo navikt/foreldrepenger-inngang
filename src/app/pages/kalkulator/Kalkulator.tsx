@@ -32,7 +32,7 @@ const muligeSituasjoner: Arbeidssituasjon[] = [
     'selvstendig_næringsdrivende'
 ];
 
-const pengerIcon = require('../../assets/icons/penger.svg').default;
+const pengerIcon = require('../../assets/icons/money-80.svg').default;
 
 export interface Resultater {
     snittlønnPerMåned: number;

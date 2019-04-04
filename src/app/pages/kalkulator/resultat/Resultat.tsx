@@ -19,8 +19,8 @@ import Veiledermelding from '../Veiledermelding';
 import './resultat.less';
 
 const cls = BEMHelper('resultat');
-const pengerIcon = require('../../../assets/icons/penger.svg').default;
-const mindrePengerIcon = require('../../../assets/icons/mindre-penger.svg').default;
+const pengerIcon = require('../../../assets/icons/money-100.svg').default;
+const mindrePengerIcon = require('../../../assets/icons/money-80.svg').default;
 
 interface OwnProps {
     results: Resultater;

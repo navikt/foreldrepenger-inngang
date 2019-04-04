@@ -63,7 +63,7 @@
     "route.hvor-mye": "Kor mykje?",
     "route.veiviser": "Kva har du rett til?",
     "route.regelendringer": "Aktuelle endringar",
-    "route.om-svangerskapspenger": "om-svangerskapspenger",
+    "route.om-svangerskapspenger": "Om svangerskapspengar",
 
     "informasjonstavle.tittel": "Foreldrepengar, eingongsstønad og svangerskapspengar",
     "informasjonstavle.ingress": "Dette har du rett til når du ventar barn eller skal ha foreldrepengar.",
@@ -74,8 +74,8 @@
     "informasjonstavle.hvor_lenge": "Kor lenge?",
     "informasjonstavle.hvor_lenge_ingress": "Planlegg kor lenge du kan vere heime med barnet.",
 
-    "informasjonstavle.velg_søknadsskjema.tittel": "Vel søknadsskjema",
-    "informasjonstavle.velg_søknadsskjema.ingress": "Her finn du alle skjemaer for mor og far. Foreldrepengar, utsetjing, endring og eingongsstønad, alt på same stad.",
+    "informasjonstavle.velg_søknadsskjema.tittel": "Søknadsskjema",
+    "informasjonstavle.velg_søknadsskjema.ingress": "Både mor, far og medmor bruker same skjema for å søkje om foreldrepengar eller gjere endringar. Her finn du òg skjema for å søkje eingongsstønad og svangerskapspengar.",
 
     "informasjonstavle.mer_informasjon.tittel": "Utfyllande informasjon",
     "informasjonstavle.mer_informasjon.foreldrepenger": "Foreldrepengene skal erstatte inntekta di når du skal vere heime med barnet.",
@@ -131,6 +131,7 @@
     "dokumentasjon.tittel": "Dokumentasjon som må leggjast ved",
 
     "hva_søker_du.tittel": "Kva vil du søkje om?",
+    "hva_søker_du.foreldrepenger.tittel": "Foreldrepengar – eitt skjema for alle",
     "hva_søker_du.søk_foreldrepenger": "Søk om foreldrepengar",
     "hva_søker_du.ettersend_vedlegg": "Ettersend vedlegg",
     "hva_søker_du.søk_engangsstønad": "Søk om eingongsstønad",
@@ -168,14 +169,14 @@
     "hurtiglenke.hvis_du_selv_er_syk": "Viss du sjølv er sjuk",
     "hurtiglenke.fant_du_ikke_det_du_lette_etter": "Fant du ikkje det du leitte etter?",
     "hurtiglenke.hvor_lenge_kan_jeg_fa": "Kor lenge kan du få?",
-    "hurtiglenke.jobb_delvis": "Jobb delvis",
-    "hurtiglenke.hvor_mye_kan_du_fa": "Kor mye kan du få?",
+    "hurtiglenke.jobb_delvis": "Jobbe delvis",
+    "hurtiglenke.hvor_mye_kan_du_fa": "Kor mykje kan du få?",
 
     "innholdsfortegnelse.søk_nå": "Søk no",
 
     "om_foreldrepenger.faner.label": "Vel situasjonen din:",
     "om_foreldrepenger.tittel": "All informasjon om foreldrepengar",
-    "om_foreldrepenger.for_å_få.tittel": "Kven kan få foreldrepengar?",
+    "om_foreldrepenger.for_å_få.tittel": "Kven kan få svangerskapspengar?",
 
     "om_foreldrepenger.hvor_lenge.tittel": "Kor lenge kan eg få foreldrepengar?",
     "om_foreldrepenger.hvor_lenge.eksempel": "Eksempel med fast inntekt på 22 000 kroner per månad",
@@ -221,11 +222,6 @@
 
     "om_foreldrepenger.nye_beregningsregler.header": "Nye reglar for berekning av foreldrepengar 1. januar 2019",
 
-    "om_foreldrepenger.menHvaHvis.ferie": "ta ut ferie",
-    "om_foreldrepenger.menHvaHvis.jobb_i_periode": "jobbe i perioden",
-    "om_foreldrepenger.menHvaHvis.blirSyk": "nokon blir sjuke",
-    "om_foreldrepenger.menHvaHvis.hjemmeSamtidig": "heime samtidig",
-
     "om_foreldrepenger.jobbe.tittel": "Dersom du vil jobbe",
     "om_foreldrepenger.jobbe.fanetittel.jobbeHeltid": "Jobbe heiltid (100 prosent)",
     "om_foreldrepenger.jobbe.fanetittel.jobbeDelvis": "Jobbe delvis",
@@ -233,8 +229,8 @@
     "om_foreldrepenger.jobbe.kikkForLukkDetaljertInformasjon": "(klikk for å lukke)",
 
     "om_foreldrepenger.sykdom.tittel": "Dersom ein av dykk blir sjuk",
-    "om_foreldrepenger.sykdom.innlagt": "Barnet er innlagt",
-    "om_foreldrepenger.sykdom.foreldre_syke": "Ein av foreldra er sjuk",
+    "om_foreldrepenger.sykdom.innlagt": "Barnet er\ninnlagt",
+    "om_foreldrepenger.sykdom.foreldre_syke": "Ein av foreldra\ner sjuk",
     "om_foreldrepenger.sykdom.innlagt.utsette": "Slik går du fram for å utsetje",
     "om_foreldrepenger.sykdom.innlagt.overta": "Slik går du fram for å overta",
     "om_foreldrepenger.sykdom.innlagt.eksempeltittel": "Eksempel på korleis du kan forlengje foreldrepengeperioden din når du utset:",
@@ -280,16 +276,19 @@
     "om_engangsstønad.til_far.tittel": "Eingongsstønad til far eller medmor",
     "om_engangsstønad.når_kan_du_søke.tittel": "Når kan du søkje?",
 
-    "om_svangerskapspenger.tittel": "Svangerskapspenger",
+    "om_svangerskapspenger.tittel": "All informasjon om Svangerskapspengar",
     "om_svangerskapspenger.sok_na": "Søk no",
-    "om_svangerskapspenger.hvem_kan_fa_svangerskapspenger.tittel": "Kven kan få svangerskapspenger?",
-    "om_svangerskapspenger.jobbDelvis.tittel": "Jobb delvis",
+    "om_svangerskapspenger.hvem_kan_fa_svangerskapspenger.tittel": "Kven kan få svangerskapspengar?",
+    "om_svangerskapspenger.jobbDelvis.tittel": "Jobbe delvis",
     "om_svangerskapspenger.hvorLengeKanDuFa.tittel": "Kor lenge kan du få",
-    "om_svangerskapspenger.hvorMyeKanDuFa.tittel": "kor mye kan du få?",
+    "om_svangerskapspenger.hvorMyeKanDuFa.tittel": "Kor mykje kan du få?",
+    "om_svangerskapspenger.hvorMyeKanDuFa.faneTittel.arbeidstaker": "Arbeidstakar",
+    "om_svangerskapspenger.hvorMyeKanDuFa.faneTittel.frilanser": "Frilansar",
+    "om_svangerskapspenger.hvorMyeKanDuFa.faneTittel.selvstendignaring": "Sjølvstendig næringsdrivande",
     "om_svangerskapspenger.slikSokerDu.tittel": "Slik søkjer du",
-    "om_svangerskapspenger.slikSokerDu.faneEn.tittel": "Arbeidstaker",
-    "om_svangerskapspenger.slikSokerDu.faneTo.tittel": "Sjølvstendig næringdrivende eller frilansar",
-    "om_svangerskapspenger.hvisDuSelvErSyk.tittel": "viss du sjølv er sjuk",
+    "om_svangerskapspenger.slikSokerDu.faneEn.tittel": "Arbeidstakar",
+    "om_svangerskapspenger.slikSokerDu.faneTo.tittel": "Sjølvstendig næringdrivande eller frilansar",
+    "om_svangerskapspenger.hvisDuSelvErSyk.tittel": "Dersom du sjølv er sjuk",
 
     "veiviser.fane.mor": "Mor",
     "veiviser.fane.far": "Far",
@@ -297,7 +296,7 @@
     "veiviser.skrivInn.belop": "inntekt i kroner",
     "veiviser.panelMedIllustrasjon.tittel": "Foreldrepengar eller eingongsstønad",
     "veiviser.sidebanner.tittel": "Kva har du rett på?",
-    "veiviser.ingress.knapper": "Eg er",
+    "veiviser.ingress.knapper": "Kven er du?",
     "veiviser.resultat.knapp.foreldrepenger": "Søk om foreldrepengar",
     "veiviser.resultat.knapp.engangsstønad": "Søk om eingongsstønad",
     "veiviser.sidebanner.knappFar.label": "Far",

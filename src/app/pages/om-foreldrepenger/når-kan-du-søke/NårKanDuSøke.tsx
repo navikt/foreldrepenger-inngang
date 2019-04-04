@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useState } from 'react';
 import { FlexibleSvg } from 'app/utils/CustomSVG';
 import { injectIntl, InjectedIntlProps, InjectedIntl } from 'react-intl';
 import { Undertittel } from 'nav-frontend-typografi';
@@ -11,8 +11,8 @@ import getTranslation from 'app/utils/i18nUtils';
 import Innhold, { getSource } from 'app/utils/innhold/Innhold';
 import PanelMedIllustrasjon from '../../../components/panel-med-illustrasjon/PanelMedIllustrasjon';
 import Tabs from 'nav-frontend-tabs';
-import './nårKanDuSøke.less';
 import { ForeldrepengerSection } from 'app/types/Section';
+import './nårKanDuSøke.less';
 
 const iconSvg = require('../../../assets/ark/ark-frister.svg').default;
 const morSvg = require('../../../assets/foreldre/mor2.svg').default;
@@ -40,87 +40,66 @@ interface OwnProps {
 
 type Props = OwnProps & InjectedIntlProps;
 
-interface State {
-    currentTabIndex: React.ReactNode;
-}
+const NårKanDuSøke = ({ id, intl }: Props) => {
+    const [tabIndex, setTabIndex] = useState(0);
 
-class NårKanDuSøke extends React.Component<Props, State> {
-    constructor(props: Props) {
-        super(props);
-
-        this.state = {
-            currentTabIndex: 0
-        };
-    }
-
-    onTabChange = (event: any, tabIndex: number) => {
-        this.setState({
-            currentTabIndex: tabIndex
-        });
+    const onTabChange = (_: any, newTabIndex: number) => {
+        setTabIndex(newTabIndex);
     };
 
-    render = () => {
-        const { id, intl } = this.props;
-        const tabs = getTabs(intl);
+    const tabs = getTabs(intl);
 
-        return (
-            <PanelMedIllustrasjon
-                id={id}
-                className={cls.className}
-                title={getTranslation('om_foreldrepenger.når_kan_du_søke.tittel', intl)}
-                svg={iconSvg}>
-                <FactsWithIcon>
-                    <Fact
-                        icon={<FlexibleSvg width={40} height={40} iconRef={morSvg} />}
-                        content={getSource('om-foreldrepenger/når-kan-du-søke/mor', intl)}
-                    />
-                    <Fact
-                        icon={<Foreldrepar firstParent="far4" secondParent="medmor2" />}
-                        content={getSource(
-                            'om-foreldrepenger/når-kan-du-søke/far-eller-medmor',
-                            intl
-                        )}
-                    />
-                    <Fact
-                        icon={<FlexibleSvg width={40} height={40} iconRef={adopsjonSvg} />}
-                        content={getSource('om-foreldrepenger/når-kan-du-søke/adopsjon', intl)}
-                    />
-                </FactsWithIcon>
-                <Innhold
-                    className="blokk-m"
-                    source={getSource('om-foreldrepenger/når-kan-du-søke/tidligst-svar', intl)}
+    return (
+        <PanelMedIllustrasjon
+            id={id}
+            className={cls.className}
+            title={getTranslation('om_foreldrepenger.når_kan_du_søke.tittel', intl)}
+            svg={iconSvg}>
+            <FactsWithIcon>
+                <Fact
+                    icon={<FlexibleSvg width={40} height={40} iconRef={morSvg} />}
+                    content={getSource('om-foreldrepenger/når-kan-du-søke/mor', intl)}
                 />
-                <Undertittel>
-                    {getTranslation(
-                        'om_foreldrepenger.når_kan_du_søke.hvis_du_skal_utsette_fordi',
-                        intl
-                    )}
-                </Undertittel>
-                <Tabs kompakt={true} tabs={tabs} onChange={this.onTabChange} />
-
-                {tabs.map((tab, index) => (
-                    <div
-                        key={index}
-                        className={classnames(
-                            'blokk-m',
-                            cls.element(
-                                'tabContent',
-                                this.state.currentTabIndex !== index ? 'inactive' : undefined
-                            )
-                        )}>
-                        <Innhold source={tab.content} />
-                    </div>
-                ))}
-
-                <Innhold
-                    source={getSource(
-                        'om-foreldrepenger/når-kan-du-søke/hvis-jeg-søker-for-sent',
-                        intl
-                    )}
+                <Fact
+                    icon={<Foreldrepar firstParent="far4" secondParent="medmor2" />}
+                    content={getSource('om-foreldrepenger/når-kan-du-søke/far-eller-medmor', intl)}
                 />
-            </PanelMedIllustrasjon>
-        );
-    };
-}
+                <Fact
+                    icon={<FlexibleSvg width={40} height={40} iconRef={adopsjonSvg} />}
+                    content={getSource('om-foreldrepenger/når-kan-du-søke/adopsjon', intl)}
+                />
+            </FactsWithIcon>
+            <Innhold
+                className="blokk-m"
+                source={getSource('om-foreldrepenger/når-kan-du-søke/tidligst-svar', intl)}
+            />
+            <Undertittel>
+                {getTranslation(
+                    'om_foreldrepenger.når_kan_du_søke.hvis_du_skal_utsette_fordi',
+                    intl
+                )}
+            </Undertittel>
+            <Tabs kompakt={true} tabs={tabs} onChange={onTabChange} />
+
+            {tabs.map((tab, index) => (
+                <div
+                    key={index}
+                    className={classnames(
+                        'blokk-m',
+                        cls.element('tabContent', tabIndex !== index ? 'inactive' : undefined)
+                    )}>
+                    <Innhold source={tab.content} />
+                </div>
+            ))}
+
+            <Innhold
+                source={getSource(
+                    'om-foreldrepenger/når-kan-du-søke/hvis-jeg-søker-for-sent',
+                    intl
+                )}
+            />
+        </PanelMedIllustrasjon>
+    );
+};
 
 export default injectIntl(NårKanDuSøke);

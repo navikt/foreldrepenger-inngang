@@ -1,4 +1,4 @@
-import React, { StatelessComponent } from 'react';
+import React from 'react';
 
 import { injectIntl, InjectedIntlProps } from 'react-intl';
 import ButtonPanel from './button-panel/ButtonPanel';
@@ -6,10 +6,11 @@ import Environment from 'app/Environment';
 import getTranslation from 'app/utils/i18nUtils';
 import PanelMedTittel from '../../components/panel-med-tittel/PanelMedTittel';
 import Innhold, { getSource } from 'app/utils/innhold/Innhold';
+import UserHelpAlternativ from './user-help-alternativ/UserHelpAlternativ';
 
-const Foreldrepenger: StatelessComponent<InjectedIntlProps> = ({ intl }) => {
+const Foreldrepenger: React.StatelessComponent<InjectedIntlProps> = ({ intl }) => {
     return (
-        <PanelMedTittel title={getTranslation('foreldrepenger', intl)}>
+        <PanelMedTittel title={getTranslation('hva_søker_du.foreldrepenger.tittel', intl)}>
             <Innhold source={getSource('hva-søker-du/foreldrepenger', intl)} />
             <ButtonPanel
                 button={{
@@ -22,11 +23,14 @@ const Foreldrepenger: StatelessComponent<InjectedIntlProps> = ({ intl }) => {
                     url: Environment.DINE_FORELDREPENGER_URL,
                     external: true
                 }}
-                helpSection={{
-                    linkText: getTranslation('hva_søker_du.ingen_elektronisk_id', intl),
-                    linkUrl: Environment.SOK_FORELDREPENGER_PAPIR_URL,
-                    helpText: getTranslation('hva_søker_du.ingen_elektronisk_id_hjelp', intl)
-                }}
+                alternativHelpSection={
+                    <UserHelpAlternativ
+                        linkText={getTranslation('hva_søker_du.ingen_elektronisk_id', intl)}
+                        helpText={getTranslation('hva_søker_du.ingen_elektronisk_id_hjelp', intl)}
+                        papirsoknadUrl={Environment.SOK_FORELDREPENGER_PAPIR_URL}
+                        soknadUrl={Environment.SOK_FORELDREPENGER_URL}
+                    />
+                }
             />
         </PanelMedTittel>
     );

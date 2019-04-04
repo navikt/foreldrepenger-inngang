@@ -1,11 +1,12 @@
 import React from 'react';
+import classnames from 'classnames';
 import { InjectedIntlProps, injectIntl } from 'react-intl';
+import MediaQuery from 'react-responsive';
+
+import BEMHelper from '../../../utils/bem';
+import Innhold, { getSource } from 'app/utils/innhold/Innhold';
 import JegVilJobbeHeltid from './komponenter/JegVilJobbeHeltid';
 import JegVilJobbeHeltidMobile from './komponenter/JegVilJobbeHeltidMobile';
-import BEMHelper from '../../../utils/bem';
-import classnames from 'classnames';
-import Innhold, { getSource } from 'app/utils/innhold/Innhold';
-import MediaQuery from 'react-responsive';
 
 const cls = BEMHelper('jegVilJobbe');
 

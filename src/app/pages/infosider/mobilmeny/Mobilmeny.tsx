@@ -1,19 +1,18 @@
-import * as React from 'react';
-import { Element } from 'nav-frontend-typografi';
+import React, { useRef, RefObject, useState, FunctionComponent } from 'react';
 import { Hovedknapp } from 'nav-frontend-knapper';
 import { InjectedIntlProps, injectIntl } from 'react-intl';
 import { Panel } from 'nav-frontend-paneler';
-import BEMHelper from 'app/utils/bem';
 import classnames from 'classnames';
-import getTranslation from 'app/utils/i18nUtils';
-import NavFrontendChevron from 'nav-frontend-chevron';
-import Seksjonslenker from '../seksjonslenker/Seksjonslenker';
-import SvgMask from 'app/components/svg-mask/SvgMask';
-import WithLink from 'app/components/with-link/WithLink';
+
 import './mobilmeny.less';
+import BEMHelper from 'app/utils/bem';
+import getTranslation from 'app/utils/i18nUtils';
+import MobilMenyHeader from './MobilMenyHeader';
+import Seksjonslenker from '../seksjonslenker/Seksjonslenker';
+import useComponentAwareClick from 'app/hooks/useComponentAwareClick';
+import WithLink from 'app/components/with-link/WithLink';
 
 const cls = BEMHelper('mobilmeny');
-const icon = require('../../../assets/icons/rakett.svg').default;
 
 interface OwnProps {
     sections: string[];
@@ -25,124 +24,57 @@ interface OwnProps {
 
 type Props = OwnProps & InjectedIntlProps;
 
-interface State {
-    currentSection?: string;
-    expanded: boolean;
-}
+const Mobilmeny: FunctionComponent<Props> = ({ sections, button, intl }: Props) => {
+    const menuRef: RefObject<HTMLDivElement> = useRef(null);
+    const [isOpen, toggleMenu] = useState<boolean>(false);
+    const [currentSection, setSection] = useState<string | undefined>(undefined);
 
-class Mobilmeny extends React.Component<Props, State> {
-    menuRef: React.RefObject<HTMLDivElement>;
-
-    constructor(props: Props) {
-        super(props);
-
-        this.menuRef = React.createRef();
-        this.state = {
-            expanded: false
-        };
-    }
-
-    componentWillMount = () => {
-        document.addEventListener('click', this.handleClick);
-    };
-
-    componentWillUnmount = () => {
-        document.removeEventListener('click', this.handleClick);
-    };
-
-    handleClick = (event: MouseEvent) => {
-        if (this.menuRef.current) {
-            const target = event.target as HTMLElement;
-            const targetIsHref = target.tagName === 'A';
-            const clickedOutsideMenu = !this.menuRef.current.contains(target);
-
-            if (targetIsHref || clickedOutsideMenu) {
-                this.closeMenu();
+    const onMenuClick = (clickedOnMenu: boolean, clickedOnLinkOrHeader: boolean) => {
+        if (isOpen) {
+            if (!clickedOnMenu || clickedOnLinkOrHeader) {
+                toggleMenu(false);
             }
+        } else if (clickedOnMenu) {
+            toggleMenu(true);
         }
     };
 
-    closeMenu = () => {
-        this.setState({
-            expanded: false
-        });
+    const onSectionChange = (section: string) => {
+        setSection(section);
+        if (!section) {
+            toggleMenu(false);
+        }
     };
 
-    handleSectionChange = (section: string) => {
-        this.setState({
-            currentSection: section,
+    const shouldCloseMenuWhenClicked = ['lenke', 'mobilmeny__header'];
+    useComponentAwareClick(menuRef, onMenuClick, shouldCloseMenuWhenClicked);
 
-            // Lukk menyen hvis brukeren har scrollet til toppen.
-            expanded: section ? this.state.expanded : false
-        });
-    };
-
-    handleToggle = () => {
-        this.setState({
-            expanded: !this.state.expanded
-        });
-    };
-
-    render = () => {
-        const tittel =
-            this.state.currentSection ||
-            getTranslation('om_foreldrepenger.tittel', this.props.intl);
-
-        return (
-            <nav
-                className={classnames(classnames(cls.className), {
-                    [cls.element('hidden')]: !this.state.currentSection
-                })}
-                ref={this.menuRef}>
-                <Panel>
-                    <MobilMenyHeader
-                        header={tittel}
-                        expanded={this.state.expanded}
-                        onClick={this.handleToggle}
-                    />
-                    <div
-                        className={cls.element(
-                            'expandable',
-                            this.state.expanded ? 'expanded' : undefined
-                        )}>
-                        <div className={cls.element('lenker')}>
-                            <Seksjonslenker
-                                sections={this.props.sections}
-                                onSectionChange={this.handleSectionChange}
-                            />
-                        </div>
-                        <WithLink
-                            className={cls.element('søkNå')}
-                            urlIsExternal={true}
-                            url={this.props.button.url}
-                            noStyling={true}>
-                            <Hovedknapp>{this.props.button.label}</Hovedknapp>
-                        </WithLink>
+    return (
+        <nav
+            ref={menuRef}
+            className={classnames(classnames(cls.className), {
+                [cls.element('hidden')]: !currentSection
+            })}>
+            <Panel>
+                <MobilMenyHeader
+                    header={currentSection || getTranslation('om_foreldrepenger.tittel', intl)}
+                    isOpen={isOpen}
+                />
+                <div className={cls.element('expandable', isOpen ? 'expanded' : undefined)}>
+                    <div className={cls.element('lenker')}>
+                        <Seksjonslenker sections={sections} onSectionChange={onSectionChange} />
                     </div>
-                </Panel>
-            </nav>
-        );
-    };
-}
-
-const MobilMenyHeader = ({
-    onClick,
-    expanded,
-    header
-}: {
-    onClick: () => void;
-    expanded: boolean;
-    header: string;
-}) => (
-    <div onClick={onClick} className={cls.element('header', expanded ? 'expanded' : undefined)}>
-        <div className={cls.element('flexLeft')}>
-            <div className={cls.element('icon')}>
-                <SvgMask smaller={true} svg={icon} />
-            </div>
-        </div>
-        <Element>{header}</Element>
-        <NavFrontendChevron stor={true} type={expanded ? 'opp' : 'ned'} />
-    </div>
-);
+                    <WithLink
+                        className={cls.element('søkNå')}
+                        urlIsExternal={true}
+                        url={button.url}
+                        noStyling={true}>
+                        <Hovedknapp>{button.label}</Hovedknapp>
+                    </WithLink>
+                </div>
+            </Panel>
+        </nav>
+    );
+};
 
 export default injectIntl(Mobilmeny);

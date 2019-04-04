@@ -1,6 +1,7 @@
 @import '../../styles/assets.less';
 
 .kontaktvalg {
+    margin-bottom: 1rem;
     width: 100%;
     margin-top: 1.5rem;
     display: flex;
@@ -25,11 +26,13 @@
         }
     }
 
-    @supports (-ms-ime-align: auto) {
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
         justify-content: space-around;
     }
+}
 
-    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+@supports (-ms-ime-align: auto) {
+    .kontaktvalg {
         justify-content: space-around;
     }
 }
