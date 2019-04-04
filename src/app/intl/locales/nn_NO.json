@@ -62,6 +62,7 @@
     "route.blindside": "Uferdig side!",
     "route.hvor-mye": "Kor mykje?",
     "route.veiviser": "Kva har du rett til?",
+    "route.regelendringer": "Aktuelle endringar",
     "route.om-svangerskapspenger": "Om svangerskapspengar",
 
     "informasjonstavle.tittel": "Foreldrepengar, eingongsstønad og svangerskapspengar",
@@ -383,6 +384,6 @@
     "veiviser.navgigasjonsboks.kalk.sublabel": " Rekn ut kor mye du kan få i foreldrepengar.",
     "veiviser.navigasjonsboks.planlegg.sublabel": " Planlegg kor lenge du kan vere heime med barnet.",
 
-    "blindside.veileder": "Så fint å ha deg her!\nDu har klikka deg inn på ei side som vi framleis held på med å lage.\nKlikk deg tilbake for å utforske meir :)",
-    "blindside.tittel": "Under arbeid"
+    "regelendringer.tittel": "Aktuelle endringar",
+    "regelendringer.banner": "Aktuelle endringar"
 }

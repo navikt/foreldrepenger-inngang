@@ -61,6 +61,7 @@
     "route.blindside": "Uferdig side!",
     "route.hvor-mye": "Hvor mye?",
     "route.veiviser": " Hva kan du få?",
+    "route.regelendringer": "Aktuelle endringer",
     "route.om-svangerskapspenger": "Om svangerskapspenger",
 
     "informasjonstavle.tittel": "Foreldrepenger, engangsstønad og svangerskapspenger",
@@ -182,6 +183,7 @@
     "om_foreldrepenger.hvor_lenge.eksempel": "Eksempel med fast inntekt på\n{eksempelKronerPerMåned} kroner per måned",
     "om_foreldrepenger.hvor_lenge.hurtiglenker": "Men hva hvis ...",
     "om_foreldrepenger.hvor_lenge.kalkulatorlenke": "Beregn foreldrepengene dine",
+    "om_foreldrepenger.hvor_lenge.regelendringer_lenke": "Aktuelle endringer i foreldrepenger perioden 2018/2019",
 
     "om_foreldrepenger.hvor_lenge.fordeling.tittel": "Slik er periodene delt mellom dere",
     "om_foreldrepenger.hvor_lenge.fordeling.tittel_alene": "Slik er foreldrepengeperioden din",
@@ -382,6 +384,6 @@
     "veiviser.valg.resultat.punkt.andre.underkjent": "Jeg har tjent under minstebeløpet på 48 441 kr i året",
     "veiviser.valg.resultat.punkt.tredje.underkjent": "Jeg er ikke medlem av folketrygden",
 
-    "blindside.veileder": "Så fint å ha deg her!\nDu har klikket deg inn på en side som vi fremdeles holder på med å lage.\nKlikk deg tilbake for å utforske mer :)",
-    "blindside.tittel": "Under arbeid"
+    "regelendringer.tittel": "Aktuelle endringer",
+    "regelendringer.banner": "Aktuelle endringer"
 }

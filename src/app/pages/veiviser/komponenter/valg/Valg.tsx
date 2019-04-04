@@ -16,10 +16,11 @@ import { getEnHalvG } from '../../../../utils/beregningUtils';
 import 'core-js';
 import 'raf/polyfill';
 import getTranslation from 'app/utils/i18nUtils';
-import Environment from "../../../../Environment";
-import MainKnapp from "./komponenter/MainKnapp";
-import EngangsstonadKnapp from "./komponenter/EngangsstonadKnapp";
+import { Page } from 'app/types/Page';
+import Environment from '../../../../Environment';
+import EngangsstonadKnapp from './komponenter/EngangsstonadKnapp';
 import './valg.less';
+import MainKnapp from './komponenter/MainKnapp';
 
 const cls = BEMHelper('valg');
 const inputCls = BEMHelper('input');
@@ -269,7 +270,6 @@ class Valg extends React.Component<Props, State> {
                 checkbox: checked,
                 result: []
             });
-
         } else {
             const initValue = e.target.value;
             this.setState({ inputVal: initValue, buttonCls: '', inntektCls: '' });
@@ -646,7 +646,7 @@ class Valg extends React.Component<Props, State> {
                                         knappRight={'veiviser.valg.resultat.knapp.engangsstonad'}
                                         knappLeftStyle={'standard'}
                                         knappRightStyle={'hoved'}
-                                        lenkeLeft={'/om-engangsstonad'}
+                                        lenkeLeft={Page.OmEngangsstønad}
                                         lenkeRight={'https://engangsstonad.nav.no'}
                                     />
                                 )
@@ -668,8 +668,8 @@ class Valg extends React.Component<Props, State> {
                                         }
                                         knappRightStyle={'standard'}
                                         knappLeftStyle={'standard'}
-                                        lenkeLeft={'/om-engangsstonad'}
-                                        lenkeRight={'/om-foreldrepenger'}
+                                        lenkeLeft={Page.OmEngangsstønad}
+                                        lenkeRight={Page.OmForeldrepenger}
                                         buttonHeadertxtLeft={
                                             <TypografiBase type={'normaltekst'}>
                                                 {getTranslation(
@@ -774,8 +774,8 @@ class Valg extends React.Component<Props, State> {
                                         }
                                         knappRightStyle={'standard'}
                                         knappLeftStyle={'standard'}
-                                        lenkeLeft={'/om-engangsstonad'}
-                                        lenkeRight={'/om-foreldrepenger'}
+                                        lenkeLeft={Page.OmEngangsstønad}
+                                        lenkeRight={Page.OmForeldrepenger}
                                         buttonHeadertxtLeft={
                                             <TypografiBase type={'normaltekst'}>
                                                 {getTranslation(
@@ -810,7 +810,7 @@ class Valg extends React.Component<Props, State> {
                             'veiviser.valg.resultat.overskrift.foreldrepenger.ikkeRett',
                             checked,
                             <MainKnapp
-                                url={'/om-foreldrepenger'}
+                                url={Page.OmForeldrepenger}
                                 txt={'veiviser.valg.resultat.knapp.ikkerett.info'}
                                 knappType={'standard'}
                             />
@@ -988,7 +988,3 @@ class Valg extends React.Component<Props, State> {
     );
 }
 export default injectIntl(Valg);
-
-
-
-

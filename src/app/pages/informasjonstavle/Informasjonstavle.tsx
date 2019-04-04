@@ -12,6 +12,7 @@ import MerInformasjon from './mer-informasjon/MerInformasjon';
 import PanelMedBilde from '../../components/panel-med-bilde/PanelMedBilde';
 import Tekstomrade from 'nav-frontend-tekstomrade';
 import './informasjonstavle.less';
+import { Page } from 'app/types/Page';
 
 const cls = BEMHelper('informasjonstavle');
 const velgSkjemaIcon = require('../../assets/icons/brev.svg').default;
@@ -28,7 +29,7 @@ const Informasjonstavle: StatelessComponent<InjectedIntlProps> = ({ intl }) => {
                         svg={velgSkjemaIcon}
                         title={getTranslation('informasjonstavle.velg_søknadsskjema.tittel', intl)}
                         body={getTranslation('informasjonstavle.velg_søknadsskjema.ingress', intl)}
-                        url="/hva-soker-du"
+                        url={Page.HvaSøkerDu}
                     />
                     <Subheader
                         text={getTranslation('informasjonstavle.mer_informasjon.tittel', intl)}
@@ -57,7 +58,7 @@ const Bildelenker = ({ intl }: { intl: InjectedIntl }) => {
                 svgName="veiviser"
                 title={getTranslation('informasjonstavle.hva_kan_du_få', intl)}
                 urlIsExternal={false}
-                url="/veiviser">
+                url={Page.Veiviser}>
                 <Tekstomrade>
                     {getTranslation('informasjonstavle.hva_kan_du_få_ingress', intl)}
                 </Tekstomrade>
@@ -77,7 +78,7 @@ const Bildelenker = ({ intl }: { intl: InjectedIntl }) => {
                 svgName="hvor-mye"
                 title={getTranslation('informasjonstavle.hvor_mye', intl)}
                 urlIsExternal={false}
-                url="/hvor-mye">
+                url={Page.HvorMye}>
                 <Tekstomrade>
                     {getTranslation('informasjonstavle.hvor_mye_ingress', intl)}
                 </Tekstomrade>

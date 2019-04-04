@@ -1,9 +1,9 @@
 import * as React from 'react';
+import BEMHelper from 'app/utils/bem';
 import HjelpetekstBase from 'nav-frontend-hjelpetekst';
 import TypografiBase from 'nav-frontend-typografi';
-import './userHelp.less';
 import WithLink from 'app/components/with-link/WithLink';
-import BEMHelper from 'app/utils/bem';
+import './userHelp.less';
 
 const cls = BEMHelper('userHelp');
 

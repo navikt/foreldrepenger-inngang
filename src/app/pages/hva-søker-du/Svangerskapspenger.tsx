@@ -1,10 +1,10 @@
 import * as React from 'react';
-import PanelMedTittel from '../../components/panel-med-tittel/PanelMedTittel';
-import ButtonPanel from './button-panel/ButtonPanel';
 import { injectIntl, InjectedIntlProps } from 'react-intl';
-import Innhold, { getSource } from 'app/utils/innhold/Innhold';
-
+import { Page } from 'app/types/Page';
+import ButtonPanel from './button-panel/ButtonPanel';
 import getTranslation from 'app/utils/i18nUtils';
+import Innhold, { getSource } from 'app/utils/innhold/Innhold';
+import PanelMedTittel from '../../components/panel-med-tittel/PanelMedTittel';
 
 const Svangerskapspenger = ({ intl }: InjectedIntlProps) => {
     return (
@@ -13,7 +13,7 @@ const Svangerskapspenger = ({ intl }: InjectedIntlProps) => {
             <ButtonPanel
                 button={{
                     text: getTranslation('hva_søker_du.søk_svangerskapspenger', intl),
-                    url: '/hva-soker-du/svangerskapspenger'
+                    url: Page.SøkSvangerskapspenger
                 }}
             />
         </PanelMedTittel>

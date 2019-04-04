@@ -1,5 +1,8 @@
 import * as React from 'react';
+import { ForeldrepengerSection } from 'app/types/Section';
+import { getForeldrepengerSectionUrl } from 'app/utils/pageUtils';
 import { InjectedIntlProps, injectIntl } from 'react-intl';
+import { Page } from 'app/types/Page';
 import BEMHelper from '../../../utils/bem';
 import Environment from '../../../Environment';
 import getTranslation from 'app/utils/i18nUtils';
@@ -11,7 +14,7 @@ const links = [
     {
         label: 'informasjonstavle.andre_lenker.dokumentasjon',
         internal: true,
-        href: '/dokumentasjon'
+        href: Page.Dokumentasjon
     },
     {
         label: 'informasjonstavle.andre_lenker.ettersende_vedlegg_til_søknad',
@@ -24,12 +27,12 @@ const links = [
     {
         label: 'informasjonstavle.andre_lenker.ofte_stilte_spørsmål',
         internal: true,
-        href: '/om-foreldrepenger#ofte-stilte-sporsmal'
+        href: getForeldrepengerSectionUrl(ForeldrepengerSection.OfteStilteSpørsmål)
     },
     {
         label: 'informasjonstavle.andre_lenker.hvis_en_av_dere_blir_syke',
         internal: true,
-        href: '/om-foreldrepenger#hvis-en-av-dere-blir-syke'
+        href: getForeldrepengerSectionUrl(ForeldrepengerSection.HvisEnAvDereBlirSyke)
     },
     {
         label: 'informasjonstavle.andre_lenker.meld_fra_om_endringer',

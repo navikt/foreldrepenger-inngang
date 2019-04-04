@@ -11,7 +11,7 @@ import getTranslation from 'app/utils/i18nUtils';
 import Innhold, { getSource } from 'app/utils/innhold/Innhold';
 import PanelMedIllustrasjon from '../../../components/panel-med-illustrasjon/PanelMedIllustrasjon';
 import Tabs from 'nav-frontend-tabs';
-import { ForeldrepengerSection } from '../OmForeldrepenger';
+import { ForeldrepengerSection } from 'app/types/Section';
 import './nårKanDuSøke.less';
 
 const iconSvg = require('../../../assets/ark/ark-frister.svg').default;
