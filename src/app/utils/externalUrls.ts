@@ -1,3 +1,5 @@
+import Environment from '../Environment';
+
 const externalUrls = {
     facebook: 'http://www.facebook.com/navforeldrepenger',
     chat:
@@ -16,6 +18,25 @@ const externalUrls = {
         'https://www.nav.no/no/Person/Familie/Relatert+informasjon/svangerskapspenger',
 
     foreldrepengeplanlegger: 'https://tjenester.nav.no/foreldrepengeplanlegger'
+};
+
+export type Søknadstyper = 'svangerskapspenger' | 'foreldrepenger' | 'engangsstønad';
+
+export const getSøknadsurl = (søknad: Søknadstyper, papir?: boolean): string => {
+    switch (søknad) {
+        case 'engangsstønad':
+            return papir
+                ? Environment.SOK_ENGANGSSTONAD_PAPIR_URL
+                : Environment.SOK_ENGANGSSTONAD_URL;
+        case 'foreldrepenger':
+            return papir
+                ? Environment.SOK_FORELDREPENGER_PAPIR_URL
+                : Environment.SOK_FORELDREPENGER_URL;
+        case 'svangerskapspenger':
+            return papir
+                ? Environment.SOK_SVANGERSKAPSPENGER_PAPIR_URL
+                : Environment.SOK_SVANGERSKAPSPENGER_URL;
+    }
 };
 
 export default externalUrls;

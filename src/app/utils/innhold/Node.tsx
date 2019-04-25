@@ -7,6 +7,8 @@ import './innhold.less';
 
 import BEMHelper from '../bem';
 import UtvidetInformasjon from '../../../app/pages/kalkulator/utvidetinformasjon/UtvidetInformasjon';
+import Lenkeknapp from '../../components/lenkeknapp/Lenkeknapp';
+import { getSøknadsurl, Søknadstyper } from '../externalUrls';
 
 const cls = BEMHelper('innhold');
 
@@ -54,6 +56,30 @@ export const Unbreakable = (props: { children: React.ReactNode }) => (
 export const Lenke = (props: { url: string; ekstern: string; children: React.ReactNode }) => (
     <WithLink addExternalIcon={!!props.ekstern} urlIsExternal={!!props.ekstern} {...props} />
 );
+
+export const SøkNåKnapp = (props: {
+    søknad: Søknadstyper;
+    sentrert?: boolean;
+    children: React.ReactNode;
+}) => {
+    const url = getSøknadsurl(props.søknad);
+    if (!url) {
+        return null;
+    }
+    const content = (
+        <Lenkeknapp url={url} urlIsExternal={true} type="hoved">
+            {props.children}
+        </Lenkeknapp>
+    );
+    if (props.sentrert) {
+        return (
+            <div style={{ textAlign: 'center' }}>
+                <span style={{ display: 'inline-block' }}>{content}</span>
+            </div>
+        );
+    }
+    return content;
+};
 
 export const LesMerPanel = (props: {
     liten?: string;
