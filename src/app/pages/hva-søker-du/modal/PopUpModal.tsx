@@ -36,7 +36,7 @@ const PopUpModal = ({ intl, modalIsOpen }: Props) => {
     }
 
     return (
-        <div className={cls.className}>
+        <div className={cls.block}>
             <TypografiBase type="normaltekst">
                 <Lenke id="engangsstonadModal" href={''} onClick={openModal}>
                     {getTranslation('hva_søker_du.engangsstønad_modal', intl)}

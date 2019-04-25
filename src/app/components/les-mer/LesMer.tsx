@@ -11,7 +11,7 @@ interface Props {
 }
 
 const LesMer: React.StatelessComponent<Props> = ({ intro, children }) => (
-    <div className={cls.className}>
+    <div className={cls.block}>
         <Expanderbartpanel border={true} tittel={intro} tittelProps="element">
             {children}
         </Expanderbartpanel>

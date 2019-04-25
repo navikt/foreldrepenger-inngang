@@ -106,7 +106,7 @@ class Kalkulator extends React.Component<InjectedIntlProps, State> {
         );
 
         return (
-            <div className={classnames(cls.className, infosiderCls.className)}>
+            <div className={classnames(cls.block, infosiderCls.block)}>
                 <Sidebanner text={getTranslation('kalkulator.bannertekst', intl)} />
                 <div className={infosiderCls.element('container')}>
                     <article className={infosiderCls.element('article')}>

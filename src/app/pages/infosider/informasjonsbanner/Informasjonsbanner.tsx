@@ -13,7 +13,7 @@ interface Props {
 }
 
 const Informasjonsbanner = ({ source, values }: Props) => (
-    <AlertStripeInfo className={cls.className}>
+    <AlertStripeInfo className={cls.block}>
         <Innhold source={source} values={values} />
     </AlertStripeInfo>
 );

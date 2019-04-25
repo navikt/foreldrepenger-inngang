@@ -67,7 +67,7 @@ const AndreLenker: React.StatelessComponent<InjectedIntlProps> = ({ intl }) => {
         </div>
     ));
 
-    return <nav className={cls.className}>{otherLinks}</nav>;
+    return <nav className={cls.block}>{otherLinks}</nav>;
 };
 
 export default injectIntl(AndreLenker);

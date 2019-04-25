@@ -78,7 +78,7 @@ class Ukekalkulator extends React.Component<Props, State> {
             <div
                 role="section"
                 aria-label="Kalkulator for foreldrepengeperiode"
-                className={cls.className}>
+                className={cls.block}>
                 <div className={cls.element('antallUkerOgBarn')}>
                     <div />
                     <TypografiBase type="normaltekst">100 %</TypografiBase>

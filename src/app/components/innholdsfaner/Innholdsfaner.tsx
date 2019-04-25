@@ -46,7 +46,7 @@ class Innholdsfaner extends React.Component<Props, State> {
     };
 
     render = () => (
-        <div className={cls.className}>
+        <div className={cls.block}>
             <MediaQuery maxWidth={799}>
                 <div className={cls.element('faner')}>
                     <TypografiBase className={cls.element('fanetittel')} type="element">

@@ -49,7 +49,7 @@ class JegVilJobbe extends React.Component<Props> {
     render = () => (
         <PanelMedIllustrasjon
             id={this.props.id}
-            className={cls.className}
+            className={cls.block}
             title={getTranslation('om_foreldrepenger.jobbe.tittel', this.props.intl)}
             svg={jobbeSvg}>
             <Innhold className="blokk-m" source={getSource(content, this.props.intl)} />

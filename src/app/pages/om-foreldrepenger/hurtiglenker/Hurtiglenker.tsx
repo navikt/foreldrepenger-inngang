@@ -16,7 +16,7 @@ interface OwnProps {
 type Props = OwnProps & InjectedIntlProps;
 
 const Hurtiglenker = ({ links, intl }: Props) => (
-    <PanelBase className={cls.className}>
+    <PanelBase className={cls.block}>
         {links.map((link) => {
             const stringToTranslate = link.replace(new RegExp('-', 'g'), '_');
 

@@ -8,7 +8,7 @@ import Arbeidstaker from './faner/Arbeidstaker';
 import SelvstendigNaringsdrivendeEllerFrilanser from './faner/SelvstendigNaringsdrivendeEllerFrilanser';
 import ArbeidstakerIkon from '../../om-foreldrepenger/beregning/ikoner/ArbeidstakerIkon';
 import { FrilanserIkon } from '../../om-foreldrepenger/beregning/ikoner/FrilanserIkon';
-import Innholdsfaner from "../../../components/innholdsfaner/Innholdsfaner";
+import Innholdsfaner from '../../../components/innholdsfaner/Innholdsfaner';
 
 const cls = BEMHelper('slikSokerDu');
 const seksjonsBilde = require('../../../assets/ark/ark-brev.svg').default;
@@ -31,19 +31,17 @@ const faner = [
 
 type Props = InputProps & InjectedIntlProps;
 
-const SlikSokerDu: React.StatelessComponent<Props> = ({intl, id}) => {
+const SlikSokerDu: React.StatelessComponent<Props> = ({ intl, id }) => {
     return (
         <PanelMedIllustrasjon
-            className={cls.className}
+            className={cls.block}
             id={id}
             title={getTranslation('om_svangerskapspenger.slikSokerDu.tittel', intl)}
             svg={seksjonsBilde}>
             <div>
-                <Innhold
-                    source={getSource('svangerskapspenger/slik-soker-du/ingress', intl)}
-                />
+                <Innhold source={getSource('svangerskapspenger/slik-soker-du/ingress', intl)} />
             </div>
-       <Innholdsfaner tabs={faner}/>
+            <Innholdsfaner tabs={faner} />
         </PanelMedIllustrasjon>
     );
 };

@@ -821,7 +821,7 @@ class Valg extends React.Component<Props, State> {
     }
 
     render = () => (
-        <div className={cls.className}>
+        <div className={cls.block}>
             <div className={cls.element('ingress')}>
                 <Innhold source={getSource('veiviser/introduksjon', this.props.intl)} />
             </div>

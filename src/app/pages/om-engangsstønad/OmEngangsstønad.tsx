@@ -49,7 +49,7 @@ const OmEngangsstonad: React.StatelessComponent<Props & InjectedIntlProps> = ({
     intl
 }) => {
     return (
-        <div className={infosiderCls.className}>
+        <div className={infosiderCls.block}>
             <HeaderInformasjon
                 title="Om engangsstønad"
                 description="Hvis du venter barn og ikke hatt inntekt det siste året, kan du få en engangssum fra NAV."

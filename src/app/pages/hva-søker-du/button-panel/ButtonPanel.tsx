@@ -25,7 +25,7 @@ interface Props {
 
 const ButtonPanel = ({ button, secondButton, helpSection, alternativHelpSection }: Props) => {
     return (
-        <div className={cls.className}>
+        <div className={cls.block}>
             <div className={cls.element('buttons')}>
                 <Lenkeknapp type="hoved" url={button.url} urlIsExternal={button.external}>
                     {button.text}

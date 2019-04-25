@@ -60,7 +60,7 @@ class Informasjonsfaner extends React.Component<Props> {
     };
 
     render = () => (
-        <div className={cls.className}>
+        <div className={cls.block}>
             <div className={cls.element('header')}>
                 <TypografiBase type="undertittel">
                     {this.props.title

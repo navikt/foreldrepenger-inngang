@@ -35,7 +35,7 @@ const Fane: React.StatelessComponent<Props & InjectedIntlProps> = ({
             aria-selected={isSelected}
             onClick={onSelect}
             onKeyPress={onSelect}
-            className={classnames(cls.className, {
+            className={classnames(cls.block, {
                 [cls.modifier('selected')]: isSelected,
                 [cls.modifier('most')]: mos
             })}>

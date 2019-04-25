@@ -13,7 +13,7 @@ const cls = BEMHelper('merInformasjon');
 
 const MerInformasjon: StatelessComponent<InjectedIntlProps> = ({ intl }) => {
     return (
-        <nav className={cls.className}>
+        <nav className={cls.block}>
             <MerInformasjonLink
                 title={getTranslation('foreldrepenger', intl)}
                 body={getTranslation('informasjonstavle.mer_informasjon.foreldrepenger', intl)}

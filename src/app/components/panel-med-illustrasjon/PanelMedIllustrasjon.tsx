@@ -25,7 +25,7 @@ const PanelMedIllustrasjon = ({
 
     return (
         <section aria-label={title} id={id} className={className}>
-            <PanelBase className={cls.className}>
+            <PanelBase className={cls.block}>
                 {illustration}
                 <TypografiBase type="innholdstittel">{title}</TypografiBase>
                 <div className={cls.element('divider')} />

@@ -114,7 +114,7 @@ class HvorLenge extends React.Component<Props, State> {
                 id={id}
                 title={getTranslation('om_foreldrepenger.hvor_lenge.tittel', intl)}
                 svg={infoSvg}>
-                <div className={cls.className}>
+                <div className={cls.block}>
                     <Innhold source={getSource('om-foreldrepenger/hvor-lenge/ingress', intl)} />
                     <Innholdsfaner
                         tabs={getTabs(this.onKvoteSelected)}

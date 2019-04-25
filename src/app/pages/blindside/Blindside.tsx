@@ -15,7 +15,7 @@ type Props = RouteComponentProps & InjectedIntlProps;
 
 const Blindside: React.StatelessComponent<Props> = ({ history, intl }) => {
     return (
-        <div className={cls.className}>
+        <div className={cls.block}>
             <Sidebanner text={getTranslation('blindside.tittel', intl)} />
             <div role="main" className={cls.element('body')}>
                 <Tilbakeknapp goBack={history.goBack} />

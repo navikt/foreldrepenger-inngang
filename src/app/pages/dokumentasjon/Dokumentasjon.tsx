@@ -18,7 +18,7 @@ const pageSvg = require('./../../assets/icons/brev.svg').default;
 
 const Dokumentasjon: React.StatelessComponent<Props & InjectedIntlProps> = ({ location, intl }) => {
     return (
-        <div className={infosiderCls.className}>
+        <div className={infosiderCls.block}>
             <DokumentasjonHeader />
             <Sidebanner text={getTranslation('dokumentasjon.banner', intl)} />
             <div className={infosiderCls.element('container')}>

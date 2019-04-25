@@ -15,7 +15,7 @@ const chatSvg = require('../../assets/icons/chat.svg').default;
 const telefonSvg = require('../../assets/icons/telefon.svg').default;
 
 const Kontaktvalg = ({ intl }: { intl: InjectedIntl }) => (
-    <div className={cls.className}>
+    <div className={cls.block}>
         <Valg
             icon={facebookSvg}
             href={externalUrls.facebook}

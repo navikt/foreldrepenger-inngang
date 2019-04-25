@@ -19,7 +19,7 @@ const velgSkjemaIcon = require('../../assets/icons/brev.svg').default;
 
 const Informasjonstavle: StatelessComponent<InjectedIntlProps> = ({ intl }) => {
     return (
-        <div className={cls.className}>
+        <div className={cls.block}>
             <InformasjonstavleHeader />
             <Header />
             <div className={cls.element('body')}>

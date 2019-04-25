@@ -23,7 +23,7 @@ const OfteStilteSpørsmål: React.StatelessComponent<Props> = ({ id, intl }) => 
         <PanelMedIllustrasjon
             id={id}
             svg={svg}
-            className={cls.className}
+            className={cls.block}
             title={getTranslation('om_foreldrepenger.ofte_stilte_spørsmål.tittel', intl)}>
             <Innhold source={getSource(content, intl)} />
             <Kontaktvalg />
