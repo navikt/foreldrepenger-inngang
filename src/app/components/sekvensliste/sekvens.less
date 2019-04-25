@@ -15,22 +15,21 @@
             width: @sekvens-diameter;
             height: @sekvens-diameter;
         }
-
-        &--withBackground::after {
-            display: block;
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: @sekvens-diameter;
-            height: @sekvens-diameter;
-            border-radius: 50%;
-            background-color: @lavender;
-        }
     }
 
     &__innhold {
+        z-index: 2;
         flex: 1 1 100%;
         align-self: center;
+    }
+
+    @media (max-width: @mobile-breakpoint) {
+        flex-wrap: wrap;
+
+        &__illustrasjon {
+            min-width: 100%;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
     }
 }

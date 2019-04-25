@@ -1,23 +1,44 @@
 @import '../../styles/assets.less';
 @import './sekvenslisteVariables.less';
 
+.verticalStroke() {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: (@sekvens-diameter / 2) - (@stroke-width/2);
+    width: @stroke-width;
+    background-color: @lavender;
+}
+
 .sekvensliste {
     position: relative;
 
-    &__sekvens:not(:last-child) {
+    &__sekvens {
         position: relative;
         min-height: @sekvens-diameter + 2rem;
         padding-bottom: 2rem;
 
         &:after {
-            content: "";
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: (@sekvens-diameter / 2) - (@stroke-width/2);
-            width: @stroke-width;
-            background-color: @lavender;
+            .verticalStroke();
         }
     }
 
+    &__sekvens:last-child {
+        padding-bottom: 0;
+
+        &:after {
+            display: none;
+        }
+    }
+
+    @media (max-width: @mobile-breakpoint) {
+        &__sekvens {
+            &:after {
+                display: block !important;
+                .verticalStroke();
+                left: calc(50% - @stroke-width/2);
+            }
+        }
+    }
 }
