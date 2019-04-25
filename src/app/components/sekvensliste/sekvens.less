@@ -9,8 +9,14 @@
     &__illustrasjon {
         flex: 0 0 @sekvens-diameter + 2rem;
         position: relative;
+        z-index: 2;
 
-        &:after {
+        svg {
+            width: @sekvens-diameter;
+            height: @sekvens-diameter;
+        }
+
+        &--withBackground::after {
             display: block;
             content: "";
             position: absolute;
