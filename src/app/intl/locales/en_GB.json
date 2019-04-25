@@ -388,5 +388,8 @@
     "veiviser.valg.resultat.punkt.tredje.underkjent": "I am not a member of the National Insurance Scheme",
 
     "regelendringer.tittel": "Rule changes",
-    "regelendringer.banner": "Rule changes"
+    "regelendringer.banner": "Rule changes",
+
+    "info.svangerskapspenger.harIkkeElektroniskID.tittel": "Har du IKKE elektronisk ID?"
+
 }

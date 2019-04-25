@@ -386,5 +386,7 @@
     "veiviser.valg.resultat.punkt.tredje.underkjent": "Jeg er ikke medlem av folketrygden",
 
     "regelendringer.tittel": "Aktuelle endringer",
-    "regelendringer.banner": "Aktuelle endringer"
+    "regelendringer.banner": "Aktuelle endringer",
+
+    "info.svangerskapspenger.harIkkeElektroniskID.tittel": "Har du IKKE elektronisk ID?"
 }
