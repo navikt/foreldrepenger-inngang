@@ -1,0 +1,29 @@
+@import '../../styles/assets.less';
+@import './sekvenslisteVariables.less';
+
+.sekvens {
+    padding-bottom: 1.5rem;
+    display: flex;
+    flex-wrap: nowrap;
+
+    &__illustrasjon {
+        flex: 0 0 @sekvens-diameter + 1rem;
+        position: relative;
+
+        &:after {
+            display: block;
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: @sekvens-diameter;
+            height: @sekvens-diameter;
+            border-radius: 50%;
+            background-color: @lavender;
+        }
+    }
+
+    &__innhold {
+        flex: 1 1 100%;
+    }
+}
