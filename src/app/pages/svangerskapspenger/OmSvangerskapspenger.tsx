@@ -15,6 +15,7 @@ import Hjelp from '../../components/hjelpe-seksjon/HjelpeSeksjon';
 import JobbDelvis from './jobbDelvis/JobbDelvis';
 import HvorLengeKanDuFa from './hvorLengeKanDuFa/HvorLengeKanDuFa';
 import HvorMyeKanDuFa from './hvorMyeKanDuFa/HvorMyeKanDuFa';
+import Environment from '../../Environment';
 
 const cls = BEMHelper('infosider');
 
@@ -55,7 +56,7 @@ const OmSvangerskapspenger: React.StatelessComponent<Props & InjectedIntlProps> 
                 sections={sections}
                 button={{
                     label: getTranslation('om_svangerskapspenger.sok_na', intl),
-                    url: 'https://familie.nav.no/hva-soker-du/svangerskapspenger'
+                    url: Environment.SOK_SVANGERSKAPSPENGER_URL
                 }}>
                 <article className={cls.element('article')}>
                     <Breadcrumbs path={location.pathname} />

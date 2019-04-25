@@ -12,6 +12,7 @@ const renderAs = (type: NodeType) => (props: any) => ({
     type,
     props: { ...props, className: props.className || props.class }
 });
+
 const renderWithValues = (type: NodeType) => (props: any, values: any) => ({
     type,
     props: {
@@ -31,7 +32,8 @@ const xmlToReact = new XMLToReact({
     span: renderAs('span'),
     lesmer: renderAs(Node.LesMerPanel),
     variabel: renderWithValues(Node.Variabel),
-    unbreakable: renderAs(Node.Unbreakable)
+    unbreakable: renderAs(Node.Unbreakable),
+    søkKnapp: renderAs(Node.SøkNåKnapp)
 });
 
 export const getSource = (path: string, intl: InjectedIntl): any => {

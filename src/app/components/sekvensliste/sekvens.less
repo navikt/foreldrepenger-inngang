@@ -1,0 +1,35 @@
+@import '../../styles/assets.less';
+@import './sekvenslisteVariables.less';
+
+.sekvens {
+    display: flex;
+    flex-wrap: nowrap;
+    min-height: @sekvens-diameter;
+
+    &__illustrasjon {
+        flex: 0 0 @sekvens-diameter + 2rem;
+        position: relative;
+        z-index: 2;
+
+        svg {
+            width: @sekvens-diameter;
+            height: @sekvens-diameter;
+        }
+    }
+
+    &__innhold {
+        z-index: 2;
+        flex: 1 1 100%;
+        align-self: center;
+    }
+
+    @media (max-width: @mobile-breakpoint) {
+        flex-wrap: wrap;
+
+        &__illustrasjon {
+            min-width: 100%;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+    }
+}
