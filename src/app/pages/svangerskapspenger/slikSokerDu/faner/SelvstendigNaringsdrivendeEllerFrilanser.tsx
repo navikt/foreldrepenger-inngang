@@ -73,7 +73,10 @@ const SelvstendigNaringsdrivendeEllerFrilanser: React.StatelessComponent<Injecte
                     intl
                 )}>
                 <Innhold
-                    source={getSource('svangerskapspenger/slik-soker-du/elektroniskId', intl)}
+                    source={getSource(
+                        'svangerskapspenger/slik-soker-du/elektroniskId-selvstendigFrilans',
+                        intl
+                    )}
                 />
             </UtvidetInformasjon>
         </>
