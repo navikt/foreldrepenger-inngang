@@ -386,5 +386,8 @@
     "veiviser.navigasjonsboks.planlegg.sublabel": " Planlegg kor lenge du kan vere heime med barnet.",
 
     "regelendringer.tittel": "Aktuelle endringar",
-    "regelendringer.banner": "Aktuelle endringar"
+    "regelendringer.banner": "Aktuelle endringar",
+
+    "info.svangerskapspenger.harIkkeElektroniskID.tittel": "Har du IKKE elektronisk ID?"
+
 }
