@@ -36,7 +36,7 @@ const PanelMedBilde = ({
 
     const toRender = (
         <WithLink
-            className={disabled ? '' : cls.className}
+            className={disabled ? '' : cls.block}
             url={url}
             noStyling={true}
             noTabbing={disabled}
@@ -73,7 +73,7 @@ const PanelMedBilde = ({
     );
 
     return disabled ? (
-        <div tabIndex={0} className={stopSign ? cls.className + ' stop-sign' : cls.className}>
+        <div tabIndex={0} className={stopSign ? cls.block + ' stop-sign' : cls.block}>
             <div className={cls.element('underArbeid')}>{underArbeid}</div>
             <div className={disabled ? '' + ' disabled' : ''}>{toRender}</div>
         </div>

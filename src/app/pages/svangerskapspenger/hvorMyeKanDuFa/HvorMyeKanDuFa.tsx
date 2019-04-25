@@ -41,7 +41,7 @@ const HvorMyeKanDuFa: React.StatelessComponent<Props & InjectedIntlProps> = ({ i
     return (
         <PanelMedIllustrasjon
             id={id}
-            className={cls.className}
+            className={cls.block}
             title={getTranslation('om_svangerskapspenger.hvorMyeKanDuFa.tittel', intl)}
             svg={seksjonsBilde}>
             <Innhold

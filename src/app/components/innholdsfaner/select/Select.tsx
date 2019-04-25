@@ -101,7 +101,7 @@ class Select extends React.Component<SelectProps, SelectState> {
                 ref={this.selectRef}
                 onClick={this.onClick}
                 onKeyPress={this.onClick}
-                className={classnames(cls.className, {
+                className={classnames(cls.block, {
                     [cls.modifier('open')]: this.state.open
                 })}>
                 <div className={cls.element('selected')}>

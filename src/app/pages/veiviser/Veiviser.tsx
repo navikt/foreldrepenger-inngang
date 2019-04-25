@@ -45,7 +45,7 @@ const Veiviser: FunctionComponent<Props> = ({ location, intl }) => {
     };
 
     return (
-        <div className={cls.className}>
+        <div className={cls.block}>
             <div className={cls.element('header')}>
                 <Sidebanner text={getTranslation('veiviser.sidebanner.tittel', intl)} />
             </div>

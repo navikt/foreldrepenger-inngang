@@ -8,6 +8,6 @@ interface Props {
     children: React.ReactNode;
 }
 
-const FactsWithIcon = ({ children }: Props) => <div className={cls.className}>{children}</div>;
+const FactsWithIcon = ({ children }: Props) => <div className={cls.block}>{children}</div>;
 
 export default FactsWithIcon;

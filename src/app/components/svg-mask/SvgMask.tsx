@@ -21,7 +21,7 @@ const SvgMask: StatelessComponent<Props> = ({ svg, small, smaller, anchorToBotto
 
     return (
         <div
-            className={classnames(cls.className, {
+            className={classnames(cls.block, {
                 [cls.modifier('small')]: small,
                 [cls.modifier('smaller')]: smaller
             })}>

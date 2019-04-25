@@ -20,7 +20,7 @@ const cls = BEMHelper('strukturertTekst');
 
 const StrukturertTekst: StatelessComponent<Props> = ({ tekst, definisjoner }) => {
     return (
-        <div className={cls.className}>{tekst ? tekst.map(renderAvsnitt(definisjoner)) : null}</div>
+        <div className={cls.block}>{tekst ? tekst.map(renderAvsnitt(definisjoner)) : null}</div>
     );
 };
 

@@ -27,7 +27,7 @@ export interface ValueMap {
 }
 
 export const Innhold = (props: any) => (
-    <div {...props} className={classnames(cls.className, props.className)} />
+    <div {...props} className={classnames(cls.block, props.className)} />
 );
 
 export const Avsnitt = (props: {

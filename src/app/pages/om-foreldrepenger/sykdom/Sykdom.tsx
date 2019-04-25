@@ -112,7 +112,7 @@ const Sykdom: React.StatelessComponent<Props & InjectedIntlProps> = ({ id, intl 
     return (
         <PanelMedIllustrasjon
             id={id}
-            className={cls.className}
+            className={cls.block}
             svg={sykdomSvg}
             title={getTranslation('om_foreldrepenger.sykdom.tittel', intl)}>
             <Innholdsfaner tabs={tabs} />

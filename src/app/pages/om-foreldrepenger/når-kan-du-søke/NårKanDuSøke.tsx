@@ -52,7 +52,7 @@ const NårKanDuSøke = ({ id, intl }: Props) => {
     return (
         <PanelMedIllustrasjon
             id={id}
-            className={cls.className}
+            className={cls.block}
             title={getTranslation('om_foreldrepenger.når_kan_du_søke.tittel', intl)}
             svg={iconSvg}>
             <FactsWithIcon>

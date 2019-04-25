@@ -25,7 +25,7 @@ const Header = ({ intl }: InjectedIntlProps) => {
     const svg = getRandomSvgForHeader();
 
     return (
-        <header className={cls.className}>
+        <header className={cls.block}>
             <div className={cls.element('wrapper')}>
                 <div className={cls.element('content')}>
                     <div className={cls.element('text')}>

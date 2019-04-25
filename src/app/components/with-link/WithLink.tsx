@@ -63,7 +63,7 @@ export class WithLink extends React.Component<Props> {
             ariaLabel,
             children
         } = this.props;
-        const classNames = classnames(cls.className, className, {
+        const classNames = classnames(cls.block, className, {
             [cls.element('noStyling')]: noStyling
         });
 

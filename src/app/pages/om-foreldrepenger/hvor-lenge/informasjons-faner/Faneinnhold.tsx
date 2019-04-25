@@ -21,7 +21,7 @@ const Faneinnhold = ({ snakkeboble, component }: Props) => {
     }
 
     return (
-        <div className={cls.className}>
+        <div className={cls.block}>
             <div style={veilederposisjon === 'høyre' ? { display: 'flex' } : {}}>
                 <Veileder
                     fargetema="normal"

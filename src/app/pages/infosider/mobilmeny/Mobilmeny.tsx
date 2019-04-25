@@ -52,7 +52,7 @@ const Mobilmeny: FunctionComponent<Props> = ({ sections, button, intl }: Props) 
     return (
         <nav
             ref={menuRef}
-            className={classnames(classnames(cls.className), {
+            className={classnames(classnames(cls.block), {
                 [cls.element('hidden')]: !currentSection
             })}>
             <Panel>

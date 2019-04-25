@@ -17,7 +17,7 @@ const UserHelp = ({
     helpText: string;
 }) => {
     return (
-        <div role="link" className={cls.className}>
+        <div role="link" className={cls.block}>
             <TypografiBase className={cls.element('link')} type="normaltekst">
                 <WithLink url={linkUrl} urlIsExternal={true}>
                     {linkText}

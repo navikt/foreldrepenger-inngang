@@ -45,7 +45,7 @@ const OmForeldrepenger: React.StatelessComponent<Props & InjectedIntlProps> = ({
     intl
 }) => {
     return (
-        <div className={classnames(cls.className)}>
+        <div className={classnames(cls.block)}>
             <HeaderInformasjon
                 title="Om foreldrepenger"
                 description="Foreldrepenger skal sikre deg inntekt når du ha foreldrepermisjon. Hvis du ikke hatt inntekt, kan du få en engangssum isteden."

@@ -59,7 +59,7 @@ interface Props {
 const Beregning: React.StatelessComponent<Props & InjectedIntlProps> = ({ id, intl }) => {
     return (
         <PanelMedIllustrasjon
-            className={cls.className}
+            className={cls.block}
             id={id}
             title={getTranslation('om_foreldrepenger.beregning.tittel', intl)}
             svg={beregningSvg}>

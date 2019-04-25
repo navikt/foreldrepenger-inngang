@@ -24,7 +24,7 @@ const DinLønn: React.StatelessComponent<Props & InjectedIntlProps> = ({
     const monthlyWage = EKSEMPEL_KRONER_PER_MÅNED;
 
     return (
-        <div className={cls.className}>
+        <div className={cls.block}>
             <div className={cls.element('prosentvalgContainer')}>
                 <Prosentvalg
                     parentCls={cls}

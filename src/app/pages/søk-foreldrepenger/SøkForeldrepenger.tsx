@@ -15,8 +15,8 @@ import Innhold, { getSource } from 'app/utils/innhold/Innhold';
 
 import HeaderInformasjon from '../../components/header-informasjon/HeaderInformasjon';
 import Environment from 'app/Environment';
-import './søkForeldrepenger.less';
 import getTranslation from 'app/utils/i18nUtils';
+import './søkForeldrepenger.less';
 
 const hvaSøkerDuCls = BEMHelper('hvaSøkerDu');
 const foreldrepengerCls = BEMHelper('søkForeldrepenger');
@@ -45,7 +45,7 @@ class SøkForeldrepenger extends Component<Props & InjectedIntlProps> {
 
     render = () => {
         return (
-            <div className={classnames(hvaSøkerDuCls.className, foreldrepengerCls.className)}>
+            <div className={classnames(hvaSøkerDuCls.block, foreldrepengerCls.block)}>
                 <SøkForeldrepengerHeader />
                 <Sidebanner text={getTranslation('hva_søker_du.tittel', this.props.intl)} />
                 <div role="main" className={hvaSøkerDuCls.element('body')}>

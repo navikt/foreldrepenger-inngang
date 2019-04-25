@@ -13,13 +13,13 @@ const cls = BEMHelper('infosider');
 const svg = require('../../assets/ark/ark-hjelp.svg').default;
 
 const Regelendringer = ({ intl, location }: InjectedIntlProps & RouteProps) => (
-    <div className={cls.className}>
+    <div className={cls.block}>
         <Sidebanner text={getTranslation('regelendringer.banner', intl)} />
         <div className={cls.element('container')}>
             <article className={cls.element('article')}>
                 <Breadcrumbs path={location ? location.pathname : ''} />
                 <PanelMedIllustrasjon
-                    className={cls.className}
+                    className={cls.block}
                     svg={svg}
                     title={getTranslation('regelendringer.tittel', intl)}>
                     <Innhold source={getSource('regelendringer/regelendringer', intl)} />

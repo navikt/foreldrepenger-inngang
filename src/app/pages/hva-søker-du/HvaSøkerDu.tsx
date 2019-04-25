@@ -19,7 +19,7 @@ interface Props {
 const HvaSøkerDu: React.StatelessComponent<Props & InjectedIntlProps> = ({ location, intl }) => {
     return (
         <div>
-            <div className={cls.className}>
+            <div className={cls.block}>
                 <Sidebanner text={getTranslation('hva_søker_du.tittel', intl)} />
                 <div role="main" className={cls.element('body')}>
                     <article className={cls.element('content')}>

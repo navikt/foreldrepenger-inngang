@@ -21,7 +21,7 @@ const infoSvg = require('../../assets/ark/ark-info.svg').default;
 
 class SøkForeldrepenger extends Component<Props & InjectedIntlProps> {
     render = () => (
-        <div className={classnames(hvaSøkerDuCls.className, svangerskapspengerCls.className)}>
+        <div className={classnames(hvaSøkerDuCls.block, svangerskapspengerCls.block)}>
             <Sidebanner text={getTranslation('hva_søker_du.tittel', this.props.intl)} />
             <div role="main" className={hvaSøkerDuCls.element('body')}>
                 <div className={hvaSøkerDuCls.element('content')}>

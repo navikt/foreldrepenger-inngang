@@ -16,7 +16,7 @@ interface Props {
 
 const UserHelpAlternativ = ({ linkText, helpText, papirsoknadUrl, soknadUrl }: Props) => {
     return (
-        <div role="link" className={cls.className}>
+        <div role="link" className={cls.block}>
             <HelpSectionModal
                 modalIsOpen={false}
                 linktxt={linkText}

@@ -40,7 +40,7 @@ const HelpSectionModal = (props: Props) => {
     }
 
     return (
-        <div className={cls.className}>
+        <div className={cls.block}>
             <TypografiBase type="normaltekst">
                 <Lenke id="engangsstonadModal" href={'#'} onClick={openModal}>
                     {linktxt}

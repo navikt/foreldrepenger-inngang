@@ -25,7 +25,7 @@ const Innholdsfortegnelse: React.StatelessComponent<Props> = ({ sections, button
     return (
         <div
             ref={ref}
-            className={classnames('panel', cls.className)}
+            className={classnames('panel', cls.block)}
             style={{
                 top: `calc(50% - ${height / 2}px)`
             }}>

@@ -44,7 +44,7 @@ const OmSvangerskapspenger: React.StatelessComponent<Props & InjectedIntlProps> 
     intl
 }) => {
     return (
-        <div className={classnames(cls.className)}>
+        <div className={classnames(cls.block)}>
             <HeaderInformasjon
                 title="Om Svangerskapspenger"
                 description=""

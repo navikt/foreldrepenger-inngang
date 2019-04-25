@@ -98,7 +98,7 @@ class Lønnskalkulator extends React.Component<Props, State> {
         const output = `${monthlyAverage} kr`;
 
         return (
-            <div className={cls.className}>
+            <div className={cls.block}>
                 <div className={cls.element('perioder')}>
                     {this.state.lastThreePeriods.map((period, index) => {
                         const value =

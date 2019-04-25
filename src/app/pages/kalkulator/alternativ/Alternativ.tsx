@@ -29,7 +29,7 @@ const Alternativ = ({ percentage, monthlyWage, icon, intl }: Props) => {
     const dailyPaymentFormatted = Math.round(dailyPayment).toLocaleString(intl.locale);
 
     return (
-        <output className={cls.className}>
+        <output className={cls.block}>
             <TypografiBase type="element">{`${percentage} ${getTranslation(
                 'kalkulator.resultat.undertittel',
                 intl
