@@ -1,0 +1,22 @@
+.callout {
+    @bkgColor: #efefef;
+    position: relative;
+    border-radius: .5rem;
+    background-color: @bkgColor;
+    padding: 1rem;
+
+    &:before {
+        content: "";
+        height: 0;
+        width: 0;
+        right: 100%;
+        top: 3rem;
+        border: solid transparent;
+        position: absolute;
+        pointer-events: none;
+        border-right-color: @bkgColor;
+        border-width: .75rem;
+        margin-top: -.75rem;
+        transform: scaleY(.75)
+    }
+}
