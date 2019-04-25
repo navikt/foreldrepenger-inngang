@@ -3,6 +3,7 @@ import BEMHelper from '../../utils/bem';
 
 import './sekvens.less';
 import Callout from '../callout/Callout';
+import MediaQuery from 'react-responsive';
 
 interface Props {
     illustrasjon: React.ReactNode;
@@ -15,7 +16,12 @@ const Sekvens: React.StatelessComponent<Props> = ({ illustrasjon, children }) =>
     <div className={bem.block}>
         <div className={bem.element('illustrasjon')}>{illustrasjon}</div>
         <div className={bem.element('innhold')}>
-            <Callout>{children}</Callout>
+            <MediaQuery minWidth={576}>
+                <Callout>{children}</Callout>
+            </MediaQuery>
+            <MediaQuery maxWidth={575}>
+                <Callout arrowPlacement="none">{children}</Callout>
+            </MediaQuery>
         </div>
     </div>
 );
