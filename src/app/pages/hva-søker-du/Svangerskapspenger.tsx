@@ -6,6 +6,7 @@ import Innhold, { getSource } from 'app/utils/innhold/Innhold';
 import PanelMedTittel from '../../components/panel-med-tittel/PanelMedTittel';
 import Environment from '../../Environment';
 import UserHelpAlternativ from './user-help-alternativ/UserHelpAlternativ';
+import { Page } from '../../types/Page';
 
 const Svangerskapspenger = ({ intl }: InjectedIntlProps) => {
     return (
@@ -14,8 +15,7 @@ const Svangerskapspenger = ({ intl }: InjectedIntlProps) => {
             <ButtonPanel
                 button={{
                     text: getTranslation('hva_søker_du.søk_svangerskapspenger', intl),
-                    url: Environment.SOK_SVANGERSKAPSPENGER_URL,
-                    external: true
+                    url: Page.SøkSøkerDuSvangerskapspenger
                 }}
                 alternativHelpSection={
                     <UserHelpAlternativ
