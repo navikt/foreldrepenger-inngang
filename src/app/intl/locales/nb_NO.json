@@ -78,7 +78,7 @@
     "informasjonstavle.velg_søknadsskjema.ingress": "Både mor, far og medmor bruker samme skjema for å søke om foreldrepenger eller gjøre endringer. Her finner du også skjema for å søke engangsstønad og svangerskapspenger.",
 
     "informasjonstavle.mer_informasjon.tittel": "Utfyllende informasjon",
-    "informasjonstavle.mer_informasjon.foreldrepenger": "Foreldrepengene skal erstatte inntekten din når du skal være hjemme med barnet.",
+    "informasjonstavle.mer_informasjon.foreldrepenger": "Foreldrepengene skal erstatte inntekten din når du skal være hjemme med barnet  i forbindelse med fødsel eller adopsjon.",
     "informasjonstavle.mer_informasjon.engangsstønad": "Hvis du venter barn og ikke hatt inntekt det siste året, kan du få en engangssum istedenfor foreldrepenger.",
     "informasjonstavle.mer_informasjon.svangerskapspenger": "Hvis du ikke kan jobbe når du er gravid fordi det kan skade det ufødte barnet, kan du få svangerskapspenger.",
 
@@ -155,8 +155,8 @@
     "hurtiglenke.hvor_lenge_kan_du_fa_foreldrepenger": "Hvor lenge kan du få foreldrepenger?",
     "hurtiglenke.hva_kan_du_fa": "Hva kan du få?",
     "hurtiglenke.nar_kan_du_soke": "Når kan du søke?",
-    "hurtiglenke.hvis_du_skal_pa_ferie": "Hvis du skal på ferie",
-    "hurtiglenke.hvis_du_vil_jobbe": "Hvis du vil jobbe",
+    "hurtiglenke.hvis_du_skal_pa_ferie": "Hvis du skal ha ferie",
+    "hurtiglenke.hvis_du_vil_jobbe": "Når du vil jobbe",
     "hurtiglenke.hvis_en_av_dere_blir_syke": "Hvis en av dere blir syk",
     "hurtiglenke.hjemme_samtidig": "Hjemme samtidig",
     "hurtiglenke.adoptere": "Adoptere",
@@ -212,7 +212,7 @@
     "om_foreldrepenger.når_kan_du_søke.utsette_jobbe": "Du skal jobbe",
     "om_foreldrepenger.når_kan_du_søke.utsette_ferie": "Du skal ha ferie",
 
-    "om_foreldrepenger.ferie.tittel": "Hvis du skal på ferie",
+    "om_foreldrepenger.ferie.tittel": "Hvis du skal ha ferie",
     "om_foreldrepenger.ferie.eksempel_label": "Eksempel på hvordan du kan forlenge foreldrepengeperioden din når du utsetter:",
     "om_foreldrepenger.ferie.illustrasjon": "Ferie",
 
@@ -225,7 +225,7 @@
 
     "om_foreldrepenger.nye_beregningsregler.header": "Nye regler for beregning av foreldrepenger 1. januar 2019",
 
-    "om_foreldrepenger.jobbe.tittel": "Hvis du vil jobbe",
+    "om_foreldrepenger.jobbe.tittel": "Når du vil jobbe",
     "om_foreldrepenger.jobbe.fanetittel.jobbeHeltid": "Jobbe heltid (100 prosent)",
     "om_foreldrepenger.jobbe.fanetittel.jobbeDelvis": "Jobbe delvis",
     "om_foreldrepenger.jobbe.klikkForDetaljertInformasjon": "(klikk for detaljert informasjon)",

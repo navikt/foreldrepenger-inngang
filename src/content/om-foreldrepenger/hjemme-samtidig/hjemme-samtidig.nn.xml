@@ -1,21 +1,31 @@
 <innhold>
     <avsnitt class="blokk-m">Dersom de vil vere heime med barnet samtidig eller byte på, har de fleire val.</avsnitt>
     <lesmer intro="Éin er heime fulltid, den andre inntil 50 prosent">
-        <avsnitt>Ein av dykk kan vere heime og få 100 prosent foreldrepengar frå kvoten sin. Den andre kan kombinere delvis jobb med inntil 50 prosent foreldrepengar frå fellesdelen. Då tek de til saman inntil 150 prosent foreldrepengar.</avsnitt>
+        <avsnitt>Dersom den eine forelderen tar ut 100 prosent av kvoten sin, kan de vere heime samtidig inntil 50 prosent frå veke sju etter fødselen. Dei første seks vekene er reserverte for mor av medisinske grunnar.</avsnitt>
+        <avsnitt><b>Eksempel:</b> Far tek ut 100 prosent fedrekvote i same perioden som mor jobbar 50 prosent og tek ut 50 prosent frå fellesperioden.</avsnitt>
+
     </lesmer>
     <lesmer intro="Dele på å vere heime">
-        <avsnitt>Dersom de vil byte på å vere heime og i jobb, kan de kombinere foreldrepengar med delvis arbeid samtidig. Då tek de til saman 100 prosent foreldrepengar.</avsnitt>
-        <avsnitt>Dersom far vil ta ut 50 prosent foreldrepengar <b>frå fellesperioden</b> samtidig med at mor tek ut 50 prosent, må mor fylle aktivitetskravet med 50 prosent. Det kan ho gjere ved å vere 50 prosent i jobb. </avsnitt>
-        <avsnitt>Dersom de vil kombinere foreldrepengar samtidig, kan ikkje foreldrepengane vere meir enn 100 prosent til saman. Hugs at de begge må søkje.</avsnitt>
+        <avsnitt>De kan dele på å vere heime og i jobb frå veke sju etter fødselen. Dei første seks vekene er reserverte for mor av medisinske grunnar.</avsnitt>
+        <avsnitt>Dersom de vil byte på å vere heime og i jobb i ein periode, kan de kombinere foreldrepengar med delvis arbeid. Då tar de ut til saman hundre prosent foreldrepengar.</avsnitt>
+        <avsnitt>Når far eller medmor skal ta ut foreldrepengar av fellesperioden, er det eit aktivitetskrav til mor i same perioden. Det vil seie at mor må vere i jobb eller i annan godkjend aktivitet i denne perioden.</avsnitt>
+        <avsnitt><b>Eksempel:</b> Far ønskjer å ta ut 50 prosent foreldrepengar frå fellesperioden i same perioden som mor tek ut 50 prosent foreldrepengar. Då må mor jobbe femti prosent for å fylle aktivitetskravet i denne perioden.</avsnitt>
     </lesmer>
-    <lesmer intro="Når de får tvillingar eller fleire barn">
-        <avsnitt>Dei ekstra vekene kan de ta samtidig når som helst i foreldrepengeperioden. Når berre far eller medmor har rett til foreldrepengar, kan vekene takast samtidig med at mor er heime.</avsnitt>
+    <lesmer intro="Når de får tvillingar eller fleire barn samtidig">
+        <avsnitt><b>Fødsel</b></avsnitt>
+        <avsnitt>Når de får fleire barn samtidig, får de fleire veker med foreldrepengar som de kan dele. Desse vekene kallar vi fleirbarnsveker, og de kan ta dei ut når som helst i foreldrepengeperioden. De kan ta dei ut samtidig, eller kvar for dykk. Det er ikkje krav til kva mor skal gjere når far eller medmor tek ut dagar med fleirbarnsveker.</avsnitt>
         <liste>
-            <punkt>Dersom mor tek ut fleirbarnsvekene, kan ikkje far ta ut foreldrepengar frå fellesperioden samtidig.</punkt>
-            <punkt>Dersom far tek ut fleirbarnsvekene, kan mor ta ut fellesperioden samtidig. Det er ikkje krav til kva far gjer, når mor tek foreldrepengar frå fellesperioden. </punkt>
+            <punkt><b>Tvillingar:</b> De får 17 veker ekstra ved 100 prosent foreldrepengar og 21 veker ekstra ved 80 prosent foreldrepengar.</punkt>
+            <punkt><b>Tre eller fleire barn:</b> De får 46 veker ekstra ved 100 prosent foreldrepengar og 56 veker ekstra ved 80 prosent foreldrepengar</punkt>
+        </liste>
+        <avsnitt><b>Adopsjon</b></avsnitt>
+        <avsnitt>Når de adopterer fleire barn samtidig, får de fleire veker med foreldrepengar som de kan dele. Desse vekene kallar vi fleirbarnsveker, og de kan ta dei ut når som helst i foreldrepengeperioden. De kan ta dei ut samtidig eller kvar for dykk. Det er ikkje krav til kva mor skal gjere når far eller medmor tek ut dagar med fleirbarnsveker.</avsnitt>
+        <liste>
+            <punkt>Adopterer de to barn, får de 17 veker ekstra ved 100 prosent foreldrepengar og 21 veker ekstra ved 80 prosent foreldrepengar.</punkt>
+            <punkt>Adopterer de tre eller fleire barn, får de 46 veker ekstra ved 100 prosent foreldrepengar og 56 veker ekstra ved 80 prosent foreldrepengar.</punkt>
         </liste>
     </lesmer>
-    <lesmer intro="Permisjon ved fødselen">
-        <avsnitt>Far eller medmor har rett til permisjon i to veker med mor når barnet blir født. Dette står i arbeidsmiljølova, men er ikkje ein del av foreldrepengeperioden frå NAV. Derfor må du spørje arbeidsgivaren din eller kontakte arbeidstilsynet dersom du lurer på noe.</avsnitt>
+    <lesmer intro="Far og medmor har rett til to veker permisjon etter fødsel">
+        <avsnitt>Far eller medmor har rett til permisjon i to veker når barnet er født, dette er ein del av arbeidsmiljølova. Sidan dei to vekene ikkje er ein del av foreldrepengeperioden frå NAV, må du spørje arbeidsgivaren din eller kontakte Arbeidstilsynet dersom du lurer på noko</avsnitt>
     </lesmer>
 </innhold>

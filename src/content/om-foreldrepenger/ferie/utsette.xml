@@ -1,11 +1,6 @@
 <innhold>
-    <lesmer intro="Ferie som gir rett til å utsette">
-        <avsnitt>Du kan utsette foreldrepengene dine med:</avsnitt>
-        <liste>
-            <punkt>ferie inntil fire uker og én dag for hvert år</punkt>
-            <punkt>ferie fra i fjor</punkt>
-            <punkt>inntil ti feriedager på forskudd fra neste år</punkt>
-        </liste>
+    <lesmer intro="Hvor lenge kan du utsette med ferie?">
+        <avsnitt>Du kan søke om å utsette foreldrepengeperioden din med ferie inntil 4 uker og 1 dag for hvert kalenderår. I tillegg kan du usette med ferie fra i fjor, og inntil 10 feriedager på forskudd for neste år. Det er den lovbestemte delen av ferien som gir rett til å utsette foreldrepengene.</avsnitt>
     </lesmer>
     <lesmer intro="Slik går du frem for å utsette når du har ferie">
         <liste>

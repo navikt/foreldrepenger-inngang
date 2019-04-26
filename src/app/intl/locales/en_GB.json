@@ -80,7 +80,7 @@
     "informasjonstavle.velg_søknadsskjema.ingress": "Both mother, father and co-mother use the same form to apply for parental benefit or to make changes. Here you will also find a form for applying lump-sum grant and pregnancy allowance.",
 
     "informasjonstavle.mer_informasjon.tittel": "Additional information",
-    "informasjonstavle.mer_informasjon.foreldrepenger": "The parental benefit shall replace your income when you are at home with the child.",
+    "informasjonstavle.mer_informasjon.foreldrepenger": "The parental benefit shall replace your income when you are at home with the child in connection with birth or adoption.",
     "informasjonstavle.mer_informasjon.engangsstønad": "If you are expecting a child and have not had an income in the past year, you can receive a lump-sum instead of the parental benefit.",
     "informasjonstavle.mer_informasjon.svangerskapspenger": "If you cannot work during pregnancy because it may harm the unborn child, you may apply for a pregnancy benefit.",
 
@@ -155,8 +155,8 @@
     "hurtiglenke.hvor_lenge_kan_du_fa_foreldrepenger": "How long can you receive the parental benefit?",
     "hurtiglenke.hva_kan_du_fa": "What are you entitled to?",
     "hurtiglenke.nar_kan_du_soke": "When can you apply?",
-    "hurtiglenke.hvis_du_skal_pa_ferie": " If you will be going on holiday",
-    "hurtiglenke.hvis_du_vil_jobbe": "If you wish to work",
+    "hurtiglenke.hvis_du_skal_pa_ferie": "Taking annual leave (holiday)",
+    "hurtiglenke.hvis_du_vil_jobbe": "When you want to work",
     "hurtiglenke.hvis_en_av_dere_blir_syke": "If one of you gets sick",
     "hurtiglenke.hjemme_samtidig": "Home at the same time",
     "hurtiglenke.adoptere": "Adopting",
@@ -227,7 +227,7 @@
 
     "om_foreldrepenger.nye_beregningsregler.header": "New rules for calculating the parental benefit from 1 January 2019.",
 
-    "om_foreldrepenger.jobbe.tittel": "If you wish to work",
+    "om_foreldrepenger.jobbe.tittel": "When you want to work",
     "om_foreldrepenger.jobbe.fanetittel.jobbeHeltid": "Work full-time (100 per cent)",
     "om_foreldrepenger.jobbe.fanetittel.jobbeDelvis": "Work part-time",
     "om_foreldrepenger.jobbe.klikkForDetaljertInformasjon": "(click for more detailed information)",

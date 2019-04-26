@@ -78,7 +78,7 @@
     "informasjonstavle.velg_søknadsskjema.ingress": "Både mor, far og medmor bruker same skjema for å søkje om foreldrepengar eller gjere endringar. Her finn du òg skjema for å søkje eingongsstønad og svangerskapspengar.",
 
     "informasjonstavle.mer_informasjon.tittel": "Utfyllande informasjon",
-    "informasjonstavle.mer_informasjon.foreldrepenger": "Foreldrepengene skal erstatte inntekta di når du skal vere heime med barnet.",
+    "informasjonstavle.mer_informasjon.foreldrepenger": "Foreldrepengene skal erstatte inntekta di når du skal vere heime med barnet i samband med fødsel eller adopsjon.",
     "informasjonstavle.mer_informasjon.engangsstønad": "Dersom du ventar barn og ikkje hatt inntekt det siste året, kan du få ein eingongssum i staden for foreldrepengar.",
     "informasjonstavle.mer_informasjon.svangerskapspenger": "Dersom du ikkje kan jobbe når du er gravid fordi det kan skade det ufødde barnet, kan du få svangerskapspengar.",
 
@@ -153,8 +153,8 @@
     "hurtiglenke.hvor_lenge_kan_du_fa_foreldrepenger": "Kor lenge kan du få foreldrepengar?",
     "hurtiglenke.hva_kan_du_fa": "Kva kan du få?",
     "hurtiglenke.nar_kan_du_soke": "Når kan du søkje?",
-    "hurtiglenke.hvis_du_skal_pa_ferie": "Dersom du skal på ferie",
-    "hurtiglenke.hvis_du_vil_jobbe": "Dersom du vil jobbe",
+    "hurtiglenke.hvis_du_skal_pa_ferie": "Dersom du skal ha ferie",
+    "hurtiglenke.hvis_du_vil_jobbe": "Når du vil jobbe",
     "hurtiglenke.hvis_en_av_dere_blir_syke": "Dersom ein av dykk blir sjuk",
     "hurtiglenke.hjemme_samtidig": "Heime samtidig",
     "hurtiglenke.adoptere": "Adoptere",
@@ -176,7 +176,7 @@
 
     "om_foreldrepenger.faner.label": "Vel situasjonen din:",
     "om_foreldrepenger.tittel": "All informasjon om foreldrepengar",
-    "om_foreldrepenger.for_å_få.tittel": "Kven kan få svangerskapspengar?",
+    "om_foreldrepenger.for_å_få.tittel": "Kven kan få foreldrepengar?",
 
     "om_foreldrepenger.hvor_lenge.tittel": "Kor lenge kan eg få foreldrepengar?",
     "om_foreldrepenger.hvor_lenge.eksempel": "Eksempel med fast inntekt på 22 000 kroner per månad",
@@ -210,7 +210,7 @@
     "om_foreldrepenger.når_kan_du_søke.utsette_jobbe": "Du skal jobbe",
     "om_foreldrepenger.når_kan_du_søke.utsette_ferie": "Du skal ha ferie",
 
-    "om_foreldrepenger.ferie.tittel": "Dersom du skal på ferie",
+    "om_foreldrepenger.ferie.tittel": "Dersom du skal ha ferie",
     "om_foreldrepenger.ferie.eksempel_label": "Eksempel på korleis du kan forlengje foreldrepengeperioden din når du utset:",
     "om_foreldrepenger.ferie.illustrasjon": "Ferie",
 
@@ -223,7 +223,7 @@
 
     "om_foreldrepenger.nye_beregningsregler.header": "Nye reglar for berekning av foreldrepengar 1. januar 2019",
 
-    "om_foreldrepenger.jobbe.tittel": "Dersom du vil jobbe",
+    "om_foreldrepenger.jobbe.tittel": "Når du vil jobbe",
     "om_foreldrepenger.jobbe.fanetittel.jobbeHeltid": "Jobbe heiltid (100 prosent)",
     "om_foreldrepenger.jobbe.fanetittel.jobbeDelvis": "Jobbe delvis",
     "om_foreldrepenger.jobbe.klikkForDetaljertInformasjon": "(klikk for detaljert informasjon)",
