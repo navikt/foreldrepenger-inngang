@@ -152,7 +152,7 @@
     "hurtiglenke.hvem_kan_fa_foreldrepenger": "Kven kan få foreldrepengar?",
     "hurtiglenke.hvor_lenge_kan_du_fa_foreldrepenger": "Kor lenge kan du få foreldrepengar?",
     "hurtiglenke.hva_kan_du_fa": "Kva kan du få?",
-    "hurtiglenke.nar_kan_du_soke": "Når kan du søkje?",
+    "hurtiglenke.nar_kan_du_soke": "Søknadsfristar",
     "hurtiglenke.hvis_du_skal_pa_ferie": "Dersom du skal ha ferie",
     "hurtiglenke.hvis_du_vil_jobbe": "Når du vil jobbe",
     "hurtiglenke.hvis_en_av_dere_blir_syke": "Dersom ein av dykk blir sjuk",
@@ -204,7 +204,7 @@
     "om_foreldrepenger.hvor_lenge.fordeling.i_tillegg_til_foreldrepenger": "I tillegg til foreldrepenger, får mor også tre veker før termin",
     "om_foreldrepenger.hvor_lenge.fordeling.snakkeboble.tittel": "{antallUker100} veker ved 100 prosent foreldrepengar, {antallUker80} veker ved 80 prosent foreldrepengar.",
 
-    "om_foreldrepenger.når_kan_du_søke.tittel": "Når kan du søkje?",
+    "om_foreldrepenger.når_kan_du_søke.tittel": "Søknadsfristar",
     "om_foreldrepenger.når_kan_du_søke.hvis_du_skal_utsette_fordi": " Dersom du skal utsetje fordi:",
     "om_foreldrepenger.når_kan_du_søke.utsette_sykdom": " Ein av dykk blir sjuke",
     "om_foreldrepenger.når_kan_du_søke.utsette_jobbe": "Du skal jobbe",
@@ -275,7 +275,7 @@
     "om_engangsstønad.hva_kan_du_få.tittel": "Kva kan du få?",
     "om_engangsstønad.utbetaling.tittel": "Når blir pengane betalte ut?",
     "om_engangsstønad.til_far.tittel": "Eingongsstønad til far eller medmor",
-    "om_engangsstønad.når_kan_du_søke.tittel": "Når kan du søkje?",
+    "om_engangsstønad.når_kan_du_søke.tittel": "Søknadsfristar",
 
     "om_svangerskapspenger.tittel": "All informasjon om Svangerskapspengar",
     "om_svangerskapspenger.sok_na": "Søk no",
