@@ -1,12 +1,12 @@
 <innhold>
 
     <lesmer intro="Når får jeg svar på søknaden min?">
-        <avsnitt>Du får tidligst svar på søknaden din fire uker før foreldrepengeperioden din starter. Dette er fordi NAV trenger oppdaterte opplysninger for å behandle saken din.</avsnitt>
+        <avsnitt>Du kan tidligst få svar på søknaden din fire uker før foreldrepengeperioden din starter. Dette er fordi vi bruker de nyeste opplysningene om inntekten din når vi skal beregne hva du skal få i foreldrepenger</avsnitt>
     </lesmer>
     <lesmer intro="Kan jeg få foreldrepenger når jeg er student?">
         <avsnitt>For å ha rett til foreldrepenger må du ha hatt inntekt i 6 av de 10 siste månedene. Studielån eller stipend fra Lånekassen gir ikke rett til foreldrepenger. Om du ikke har rett til foreldrepenger, kan du søke om engangsstønad. Du kan prøve vår <lenke url="/veiviser">veiviser</lenke> for å se hva du kan ha rett til.</avsnitt>
     </lesmer>
-    <lesmer intro="Jeg får ytelse fra NAV. Kan jeg få foreldrepenger?">
+    <lesmer intro="Jeg får utbetalinger fra NAV. Kan jeg få foreldrepenger?">
         <avsnitt>Hvis du får utbetalt en av disse ytelsene fra NAV, kan du ha rett til foreldrepenger:</avsnitt>
         <liste>
             <punkt>Sykepenger</punkt>
