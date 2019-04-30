@@ -154,7 +154,7 @@
     "hurtiglenke.hvem_kan_fa_foreldrepenger": "Who can receive the parental benefit?",
     "hurtiglenke.hvor_lenge_kan_du_fa_foreldrepenger": "How long can you receive the parental benefit?",
     "hurtiglenke.hva_kan_du_fa": "What are you entitled to?",
-    "hurtiglenke.nar_kan_du_soke": "When can you apply?",
+    "hurtiglenke.nar_kan_du_soke": "Application deadlines",
     "hurtiglenke.hvis_du_skal_pa_ferie": "Taking annual leave (holiday)",
     "hurtiglenke.hvis_du_vil_jobbe": "When you want to work",
     "hurtiglenke.hvis_en_av_dere_blir_syke": "If one of you gets sick",
@@ -206,7 +206,7 @@
     "om_foreldrepenger.hvor_lenge.fordeling.i_tillegg_til_foreldrepenger": "In addition to parental benefit, the mother also gets the last three weeks before the estimated date of delivery",
     "om_foreldrepenger.hvor_lenge.fordeling.snakkeboble.tittel": "{antallUker100} weeks at a benefit rate of 100 per cent parental benefit, {antallUker80} weeks at a benefit rate of 80 per cent parental benefit",
 
-    "om_foreldrepenger.når_kan_du_søke.tittel": "When can you apply?",
+    "om_foreldrepenger.når_kan_du_søke.tittel": "Application deadlines",
     "om_foreldrepenger.når_kan_du_søke.hvis_du_skal_utsette_fordi": "If you are postponing because:",
     "om_foreldrepenger.når_kan_du_søke.utsette_sykdom": "One of you gets sick",
     "om_foreldrepenger.når_kan_du_søke.utsette_jobbe": "You are going to work",
