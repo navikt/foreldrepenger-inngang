@@ -80,7 +80,7 @@
     "informasjonstavle.mer_informasjon.tittel": "Utfyllande informasjon",
     "informasjonstavle.mer_informasjon.foreldrepenger": "Foreldrepengene skal erstatte inntekta di når du skal vere heime med barnet i samband med fødsel eller adopsjon.",
     "informasjonstavle.mer_informasjon.engangsstønad": "Dersom du ventar barn og ikkje hatt inntekt det siste året, kan du få ein eingongssum i staden for foreldrepengar.",
-    "informasjonstavle.mer_informasjon.svangerskapspenger": "Svangerskapspengar blir gitt til friske kvinner som ikkje kan jobbe under svangerskapet fordi det kan føre til skade på det ufødde barnet.",
+    "informasjonstavle.mer_informasjon.svangerskapspenger": "Friske gravide kvinner som ikkje kan fortsette å jobbe under svangerskapet fordi det kan utgjere ein risiko for barnet, kan få svangerskapspengar.",
 
     "informasjonstavle.andre_lenker.dokumentasjon": "Dokumentasjon som må leggjast ved",
     "informasjonstavle.andre_lenker.ettersende_vedlegg_til_søknad": "Ettersende vedlegg til søknad",
@@ -389,5 +389,4 @@
     "regelendringer.banner": "Aktuelle endringar",
 
     "info.svangerskapspenger.harIkkeElektroniskID.tittel": "Har du ikke elektronisk ID?"
-
 }
