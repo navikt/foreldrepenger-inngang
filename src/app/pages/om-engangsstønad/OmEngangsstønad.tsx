@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { ENGANGSSUM_PER_BARN } from 'app/utils/beregningUtils';
 
 import { injectIntl, InjectedIntlProps } from 'react-intl';
 import BEMHelper from '../../utils/bem';
@@ -10,14 +9,12 @@ import HeaderInformasjon from '../../components/header-informasjon/HeaderInforma
 import Hjelp from '../../components/hjelpe-seksjon/HjelpeSeksjon';
 import HvaKanDuFå from './HvaKanDuFå';
 import HvemKanFåEngangsstønad from './hvem-kan-få-engangsstønad/HvemKanFåEngangsstønad';
-import Informasjonsbanner from '../infosider/informasjonsbanner/Informasjonsbanner';
 import MedInnholdsfortegnelse from '../infosider/MedInnholdsfortegnelse';
 import NårBlirPengeneUtbetalt from './NårBlirPengeneUtbetalt';
 import NårKanDuSøke from './når-kan-du-søke/NårKanDuSøke';
 import Sidebanner from '../../components/sidebanner/Sidebanner';
 import TilFarEllerMedmor from './TilFarEllerMedmor';
 import '../infosider/infosider.less';
-import { getSource } from 'app/utils/innhold/Innhold';
 
 const infosiderCls = BEMHelper('infosider');
 
@@ -64,12 +61,6 @@ const OmEngangsstonad: React.StatelessComponent<Props & InjectedIntlProps> = ({
                 }}>
                 <article className={infosiderCls.element('article')}>
                     <Breadcrumbs path={location.pathname} />
-                    <Informasjonsbanner
-                        source={getSource('om-engangsstønad/nye-regler-fra-2019', intl)}
-                        values={{
-                            engangssum: ENGANGSSUM_PER_BARN.toLocaleString(intl.locale)
-                        }}
-                    />
                     <HvemKanFåEngangsstønad id={sections[0]} />
                     <HvaKanDuFå id={sections[1]} />
                     <NårKanDuSøke id={sections[2]} />
