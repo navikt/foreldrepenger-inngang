@@ -3,7 +3,7 @@ import { Foreldresituasjon, Kvote } from 'app/utils/foreldresituasjon';
 import { getAntallUtbetalingsuker, Utbetalingsalternativ } from './ukekalkulator/utils';
 import { injectIntl, InjectedIntlProps } from 'react-intl';
 import { Innholdsfane } from '../../../components/innholdsfaner/fane/Fane';
-// import { Normaltekst } from 'nav-frontend-typografi';
+import { Normaltekst } from 'nav-frontend-typografi';
 import Aleneomsorg from './situasjoner/Aleneomsorg';
 import BareFarHarRett from './situasjoner/BareFarHarRett';
 import BareMorHarRett from './situasjoner/BareMorHarRett';
@@ -17,9 +17,9 @@ import Innholdsfaner from '../../../components/innholdsfaner/Innholdsfaner';
 import MorOgMor from './situasjoner/MorOgMor';
 import PanelMedIllustrasjon from '../../../components/panel-med-illustrasjon/PanelMedIllustrasjon';
 import Ukekalkulator from './ukekalkulator/Ukekalkulator';
-// import WithLink from 'app/components/with-link/WithLink';
+import WithLink from 'app/components/with-link/WithLink';
 import './hvorLenge.less';
-// import { Page } from 'app/types/Page';
+import { Page } from 'app/types/Page';
 
 const infoSvg = require('../../../assets/ark/ark-info.svg').default;
 
@@ -121,14 +121,14 @@ class HvorLenge extends React.Component<Props, State> {
                         onSelect={this.onSituasjonSelected}
                     />
                     <Ukekalkulator antallUtbetalingsuker={this.state.antallUtbetalingsuker} />
-                    {/* <Normaltekst>
+                    <Normaltekst>
                         <WithLink url={Page.Regelendringer}>
                             {getTranslation(
                                 'om_foreldrepenger.hvor_lenge.regelendringer_lenke',
                                 intl
                             )}
                         </WithLink>
-                    </Normaltekst> */}
+                    </Normaltekst>
                 </div>
             </PanelMedIllustrasjon>
         );

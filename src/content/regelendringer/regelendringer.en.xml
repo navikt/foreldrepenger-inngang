@@ -1,20 +1,50 @@
 <innhold>
     <avsnitt className="blokk-m">Det er kommet flere endringer i lengden på foreldrepengeperioden og kvotene til foreldrene i 2018 og 2019. Her finner du en oversikt over endringene.</avsnitt>
-    <lesmer intro="Nye kvoter for 80 prosent foreldrepenger fra 1. januar 2019">
-        <avsnitt>Når foreldrepengeperioden starter i 2019 og dere har valgt 80 prosent foreldrepenger, er kvoten til hver av foreldrene på 19 uker.</avsnitt>
-    </lesmer>
-    <lesmer intro="Barn født eller adoptert 1. juli 2018 eller senere">
-        <avsnitt>Dersom barnet er født eller adoptert 1. juli 2018 eller senere, er kvoten til hver av foreldrene 15 uker. Den totale foreldrepengeperioden utvides med 17 eller 21 uker for hvert barn mer enn ett:</avsnitt>
+    <lesmer intro="80 prosent foreldrepenger fra 1. januar 2019">
+        <avsnitt>Når foreldrepengeperioden starter i 2019 og dere har valgt 80 prosent foreldrepenger:</avsnitt>
         <liste>
-            <punkt>17 uker ved 100 prosent foreldrepenger</punkt>
-            <punkt>21 uker ved 80 prosent foreldrepenger</punkt>
+            <punkt>16 uker fellesperiode</punkt>
+            <punkt>19 uker kvote til hver av foreldrene</punkt>
+        </liste>
+    </lesmer>
+    <lesmer intro="Barn født eller adoptert mellom 1. juli 2018 og 31. desember 2018">
+        <avsnitt>100 prosent foreldrepenger:</avsnitt>
+        <liste>
+            <punkt>16 uker fellesperiode</punkt>
+            <punkt>15 uker kvote til hver av foreldrene</punkt>
+        </liste>
+        <avsnitt>80 prosent foreldrepenger:</avsnitt>
+        <liste>
+            <punkt>26 uker fellesperiode</punkt>
+            <punkt>15 uker kvote til hver av foreldrene</punkt>
+        </liste>
+    </lesmer>
+    <lesmer intro="Tvillinger eller flere barn født eller adoptert 1. juli 2018 eller senere">
+        <avsnitt>Når dere får tvillinger eller flere barn samtidig får dere flere uker med foreldrepenger. Disse ukene kalles flerbarnsuker.</avsnitt>
+        <avsnitt>Tvillingfødsel og adopsjon av to barn samtidig</avsnitt>
+        <liste>
+            <punkt>17 flerbarnsuker ved 100 prosent foreldrepenger</punkt>
+            <punkt>21 flerbarnsuker ved 80 prosent foreldrepenger</punkt>
+        </liste>
+        <avsnitt>Fødsel og adopsjon av tre eller flere barn samtidig</avsnitt>
+        <liste>
+            <punkt>46 flerbarnsuker ved 100 prosent foreldrepenger</punkt>
+            <punkt>56 flerbarnsuker ved 80 prosent foreldrepenger</punkt>
         </liste>
     </lesmer>
     <lesmer intro="Barn født eller adoptert før 1. juli 2018">
-        <avsnitt>Dersom barnet er født eller adoptert før 1. juli 2018, er kvoten til hver av foreldrene 10 uker. Den totale foreldrepengeperioden utvides med fem eller syv uker for hvert barn mer enn ett:</avsnitt>
+        <avsnitt>100 prosent foreldrepenger:</avsnitt>
         <liste>
-            <punkt>Fem uker ved 100 prosent foreldrepenger</punkt>
-            <punkt>Syv uker ved 80 prosent foreldrepenger</punkt>
+            <punkt>26 uker fellesperiode</punkt>
+            <punkt>10 uker kvote til hver av foreldrene</punkt>
+            <punkt>5 uker med flerbarnsuker for hvert barn mer enn ett hvis dere fikk tvillinger eller flere barn</punkt>
+        </liste>
+        <avsnitt>80 prosent foreldrepenger:</avsnitt>
+        <liste>
+            <punkt>36 uker fellesperiode</punkt>
+            <punkt>10 uker kvote til hver av foreldrene</punkt>
+            <punkt>7 uker med flerbarnsuker for hvert barn mer enn ett hvis dere fikk tvillinger eller flere barn</punkt>
         </liste>
     </lesmer>
 </innhold>
+
