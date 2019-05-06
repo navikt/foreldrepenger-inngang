@@ -17,7 +17,7 @@ const externalUrls = {
     les_mer_svangerskapspenger:
         'https://www.nav.no/no/Person/Familie/Relatert+informasjon/svangerskapspenger',
 
-    foreldrepengeplanlegger: 'https://tjenester.nav.no/foreldrepengeplanlegger'
+    foreldrepengeplanlegger: 'https://foreldrepengeplanlegger.nav.no/foreldrepengeplanlegger'
 };
 
 export type Søknadstyper = 'svangerskapspenger' | 'foreldrepenger' | 'engangsstønad';
