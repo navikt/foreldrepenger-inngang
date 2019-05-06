@@ -3,6 +3,7 @@ import { injectIntl, InjectedIntlProps } from 'react-intl';
 import BEMHelper from '../../../../../utils/bem';
 import getTranslation from 'app/utils/i18nUtils';
 import LangtPanelMedBilde from '../../../../../components/langt-panel-med-bilde/LangtPanelMedBilde';
+import externalUrls from '../../../../../utils/externalUrls';
 const cls = BEMHelper('valg');
 const hvorMye = require('../../../../../assets/ark/ark-money2.svg').default;
 const hvorLenge = require('../../../../../assets/ark/ark-calendar.svg').default;
@@ -23,7 +24,7 @@ const NavigasjonsBoks: React.StatelessComponent<InjectedIntlProps> = ({ intl }) 
                     svg={hvorLenge}
                     title={getTranslation('veiviser.navigasjonsboks.planlegg.label', intl)}
                     body={getTranslation('veiviser.navigasjonsboks.planlegg.sublabel', intl)}
-                    url="https://tjenester.nav.no/foreldrepengeplanlegger"
+                    url={externalUrls.foreldrepengeplanlegger}
                 />
             </div>
         </div>

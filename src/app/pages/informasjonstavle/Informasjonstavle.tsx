@@ -13,6 +13,7 @@ import PanelMedBilde from '../../components/panel-med-bilde/PanelMedBilde';
 import Tekstomrade from 'nav-frontend-tekstomrade';
 import './informasjonstavle.less';
 import { Page } from 'app/types/Page';
+import externalUrls from '../../utils/externalUrls';
 
 const cls = BEMHelper('informasjonstavle');
 const velgSkjemaIcon = require('../../assets/icons/brev.svg').default;
@@ -68,7 +69,7 @@ const Bildelenker = ({ intl }: { intl: InjectedIntl }) => {
                 svgName="hvor-lenge"
                 title={getTranslation('informasjonstavle.hvor_lenge', intl)}
                 urlIsExternal={true}
-                url="https://tjenester.nav.no/foreldrepengeplanlegger">
+                url={externalUrls.foreldrepengeplanlegger}>
                 <Tekstomrade>
                     {getTranslation('informasjonstavle.hvor_lenge_ingress', intl)}
                 </Tekstomrade>
