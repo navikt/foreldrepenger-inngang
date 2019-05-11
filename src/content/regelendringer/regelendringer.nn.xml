@@ -1,49 +1,49 @@
 <innhold>
-    <avsnitt className="blokk-m">Det er kommet flere endringer i lengden på foreldrepengeperioden og kvotene til foreldrene i 2018 og 2019. Her finner du en oversikt over endringene.</avsnitt>
-    <lesmer intro="80 prosent foreldrepenger fra 1. januar 2019">
-        <avsnitt>Når foreldrepengeperioden starter i 2019 og dere har valgt 80 prosent foreldrepenger:</avsnitt>
+    <avsnitt className="blokk-m">Det er komme fleire endringar i lengda på foreldrepengeperioden og kvotane til foreldra i 2018 og 2019. Her finn du ei oversikt over endringane.</avsnitt>
+    <lesmer intro="80 prosent foreldrepengar fra 1. januar 2019">
+        <avsnitt>Når foreldrepengeperioden startar i 2019 og de har valt 80 prosent foreldrepengar:</avsnitt>
         <liste>
             <punkt>16 uker fellesperiode</punkt>
-            <punkt>19 uker kvote til hver av foreldrene</punkt>
+            <punkt>19 uker kvote til kvar av foreldra</punkt>
         </liste>
     </lesmer>
-    <lesmer intro="Barn født eller adoptert mellom 1. juli 2018 og 31. desember 2018">
-        <avsnitt>100 prosent foreldrepenger:</avsnitt>
+    <lesmer intro="Barn fødde eller adoptert mellom 1. juli 2018 og 31. desember 2018">
+        <avsnitt>100 prosent foreldrepengar:</avsnitt>
         <liste>
             <punkt>16 uker fellesperiode</punkt>
-            <punkt>15 uker kvote til hver av foreldrene</punkt>
+            <punkt>15 uker kvote Det er komme fleire endringar i lengda på foreldrepengeperioden og kvotane til foreldra i 2018 og 2019. Her finn du ei oversikt over endringane.</punkt>
         </liste>
-        <avsnitt>80 prosent foreldrepenger:</avsnitt>
+        <avsnitt>80 prosent foreldrepengar:</avsnitt>
         <liste>
             <punkt>26 uker fellesperiode</punkt>
-            <punkt>15 uker kvote til hver av foreldrene</punkt>
+            <punkt>15 uker kvote til kvar av foreldra</punkt>
         </liste>
     </lesmer>
-    <lesmer intro="Tvillinger eller flere barn født eller adoptert 1. juli 2018 eller senere">
-        <avsnitt>Når dere får tvillinger eller flere barn samtidig får dere flere uker med foreldrepenger. Disse ukene kalles flerbarnsuker.</avsnitt>
+    <lesmer intro="Tvillingar eller fleire barn fødde eller adoptert 1. juli 2018 eller senare">
+        <avsnitt>Når de får tvillingar eller fleire barn samtidig, får de fleire veker med foreldrepengar. Desse vekene blir kalla fleirbarnsveker.</avsnitt>
         <avsnitt>Tvillingfødsel og adopsjon av to barn samtidig</avsnitt>
         <liste>
-            <punkt>17 flerbarnsuker ved 100 prosent foreldrepenger</punkt>
-            <punkt>21 flerbarnsuker ved 80 prosent foreldrepenger</punkt>
+            <punkt>17 fleirbarnsveker ved 100 prosent foreldrepengar</punkt>
+            <punkt>21 fleirbarnsveker ved 80 prosent foreldrepengar</punkt>
         </liste>
-        <avsnitt>Fødsel og adopsjon av tre eller flere barn samtidig</avsnitt>
+        <avsnitt>Fødsel og adopsjon av tre eller fleire barn samtidig</avsnitt>
         <liste>
-            <punkt>46 flerbarnsuker ved 100 prosent foreldrepenger</punkt>
-            <punkt>56 flerbarnsuker ved 80 prosent foreldrepenger</punkt>
+            <punkt>46 fleirbarnsveker ved 100 prosent foreldrepengar</punkt>
+            <punkt>56 fleirbarnsveker ved 80 prosent foreldrepengar</punkt>
         </liste>
     </lesmer>
-    <lesmer intro="Barn født eller adoptert før 1. juli 2018">
-        <avsnitt>100 prosent foreldrepenger:</avsnitt>
+    <lesmer intro="Barn fødd eller adoptert før 1. juli 2018">
+        <avsnitt>100 prosent foreldrepengar:</avsnitt>
         <liste>
             <punkt>26 uker fellesperiode</punkt>
             <punkt>10 uker kvote til hver av foreldrene</punkt>
-            <punkt>5 uker med flerbarnsuker for hvert barn mer enn ett hvis dere fikk tvillinger eller flere barn</punkt>
+            <punkt>5 uker med fleirbarnsveker for kvart barn meir enn eitt</punkt>
         </liste>
-        <avsnitt>80 prosent foreldrepenger:</avsnitt>
+        <avsnitt>80 prosent foreldrepengar:</avsnitt>
         <liste>
-            <punkt>36 uker fellesperiode</punkt>
-            <punkt>10 uker kvote til hver av foreldrene</punkt>
-            <punkt>7 uker med flerbarnsuker for hvert barn mer enn ett hvis dere fikk tvillinger eller flere barn</punkt>
+            <punkt>36 veker fellesperiode</punkt>
+            <punkt>10 veker kvote til kvar av foreldra</punkt>
+            <punkt>7 veker med fleirbarnsveker for kvart barn meir enn eitt</punkt>
         </liste>
     </lesmer>
 </innhold>
