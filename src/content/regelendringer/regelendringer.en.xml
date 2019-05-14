@@ -1,49 +1,49 @@
 <innhold>
-    <avsnitt className="blokk-m">Det er kommet flere endringer i lengden på foreldrepengeperioden og kvotene til foreldrene i 2018 og 2019. Her finner du en oversikt over endringene.</avsnitt>
-    <lesmer intro="80 prosent foreldrepenger fra 1. januar 2019">
-        <avsnitt>Når foreldrepengeperioden starter i 2019 og dere har valgt 80 prosent foreldrepenger:</avsnitt>
+    <avsnitt className="blokk-m">Several changes have been made in 2018 and 2019 regarding the length of the parental benefit period and the parents’ quotas. Below is a summary of these changes.</avsnitt>
+    <lesmer intro="80 per cent parental benefit from 1 January 2019">
+        <avsnitt>If the parental benefit period starts in 2019 and you have chosen 80 per cent parental benefit:</avsnitt>
         <liste>
-            <punkt>16 uker fellesperiode</punkt>
-            <punkt>19 uker kvote til hver av foreldrene</punkt>
+            <punkt>Shared period = 16 weeks</punkt>
+            <punkt>Quota for each parent = 19 weeks</punkt>
         </liste>
     </lesmer>
-    <lesmer intro="Barn født eller adoptert mellom 1. juli 2018 og 31. desember 2018">
-        <avsnitt>100 prosent foreldrepenger:</avsnitt>
+    <lesmer intro="Children born or adopted between 1 July 2018 and 31 December 2018">
+        <avsnitt>100 per cent parental benefit:</avsnitt>
         <liste>
-            <punkt>16 uker fellesperiode</punkt>
-            <punkt>15 uker kvote til hver av foreldrene</punkt>
+            <punkt>Shared period = 16 weeks</punkt>
+            <punkt>Quota for each parent = 19 weeks</punkt>
         </liste>
-        <avsnitt>80 prosent foreldrepenger:</avsnitt>
+        <avsnitt>80 per cent parental benefit:</avsnitt>
         <liste>
-            <punkt>26 uker fellesperiode</punkt>
-            <punkt>15 uker kvote til hver av foreldrene</punkt>
-        </liste>
-    </lesmer>
-    <lesmer intro="Tvillinger eller flere barn født eller adoptert 1. juli 2018 eller senere">
-        <avsnitt>Når dere får tvillinger eller flere barn samtidig får dere flere uker med foreldrepenger. Disse ukene kalles flerbarnsuker.</avsnitt>
-        <avsnitt>Tvillingfødsel og adopsjon av to barn samtidig</avsnitt>
-        <liste>
-            <punkt>17 flerbarnsuker ved 100 prosent foreldrepenger</punkt>
-            <punkt>21 flerbarnsuker ved 80 prosent foreldrepenger</punkt>
-        </liste>
-        <avsnitt>Fødsel og adopsjon av tre eller flere barn samtidig</avsnitt>
-        <liste>
-            <punkt>46 flerbarnsuker ved 100 prosent foreldrepenger</punkt>
-            <punkt>56 flerbarnsuker ved 80 prosent foreldrepenger</punkt>
+           <punkt>Shared period = 26 weeks</punkt>
+            <punkt>Quota for each parent = 15 weeks</punkt>
         </liste>
     </lesmer>
-    <lesmer intro="Barn født eller adoptert før 1. juli 2018">
-        <avsnitt>100 prosent foreldrepenger:</avsnitt>
+    <lesmer intro="Twins or multiple children born or adopted on or after 1 July 2018">
+        <avsnitt>Parents who have twins or several children at the same time receive more weeks of parental benefit. These weeks are called “multiple children weeks”.</avsnitt>
+        <avsnitt>Twins and adoption of two children at the same time</avsnitt>
         <liste>
-            <punkt>26 uker fellesperiode</punkt>
-            <punkt>10 uker kvote til hver av foreldrene</punkt>
-            <punkt>5 uker med flerbarnsuker for hvert barn mer enn ett hvis dere fikk tvillinger eller flere barn</punkt>
+            <punkt>17 multiple children weeks if you have chosen 100 per cent parental benefit</punkt>
+            <punkt>21 multiple children weeks if you have chosen 80 per cent parental benefit</punkt>
         </liste>
-        <avsnitt>80 prosent foreldrepenger:</avsnitt>
+        <avsnitt>Birth and adoption of three or more children at the same time</avsnitt>
         <liste>
-            <punkt>36 uker fellesperiode</punkt>
-            <punkt>10 uker kvote til hver av foreldrene</punkt>
-            <punkt>7 uker med flerbarnsuker for hvert barn mer enn ett hvis dere fikk tvillinger eller flere barn</punkt>
+            <punkt>46 multiple children weeks if you have chosen 100 per cent parental benefit</punkt>
+            <punkt>56 multiple children weeks if you have chosen 100 per cent parental benefit</punkt>
+        </liste>
+    </lesmer>
+    <lesmer intro="Children born or adopted before 1 July 2018">
+        <avsnitt>100 per cent parental benefit:</avsnitt>
+        <liste>
+            <punkt>Shared period = 26 weeks</punkt>
+            <punkt>Quota for each parent = 10 weeks</punkt>
+            <punkt>Plus 5 multiple children weeks for each extra child</punkt>
+        </liste>
+        <avsnitt>80 per cent parental benefit::</avsnitt>
+        <liste>
+            <punkt>Shared period = 26 weeks</punkt>
+            <punkt>Quota for each parent = 10 weeks</punkt>
+            <punkt>Plus 7 multiple children weeks for each extra child</punkt>
         </liste>
     </lesmer>
 </innhold>
