@@ -1,6 +1,8 @@
 <innhold>
     <liste>
-        <punkt>Submit <b>an application</b> to postpone the parental benefit.</punkt>
-        <punkt>Include <b>documentation of admission</b> from the hospital or health institution.</punkt>
+        <punkt>In the application for parental benefit, state that you are going to postpone a period because the child is admitted to hospital or a health institution</punkt>
+        <punkt>If you have already applied, log in at <lenke url="https://foreldrepenger.nav.no" ekstern="true">Your parental benefit"</lenke> and submit a modification application instead.</avsnitt>
+        <avsnitt><b>You must attach this to your application</b></avsnitt>
+        <punkt>Attach documentation of admission from the hospital or health institution.</punkt>
     </liste>
 </innhold>
