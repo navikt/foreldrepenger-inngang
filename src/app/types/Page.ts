@@ -9,5 +9,6 @@ export enum Page {
     'SøkSøkerDuSvangerskapspenger' = '/om-svangerskapspenger#slik-soker-du',
     'Regelendringer' = '/om-foreldrepenger/regelendringer',
     'Dokumentasjon' = '/dokumentasjon',
-    'Veiviser' = '/veiviser'
+    'Veiviser' = '/veiviser',
+    'SøkeOmForelderpenger' = '/soke-om-foreldrepenger'
 }
