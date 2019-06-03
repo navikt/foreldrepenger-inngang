@@ -76,7 +76,9 @@ class Innholdsfaner extends React.Component<Props, State> {
                     ))}
                 </div>
             </MediaQuery>
-            <div role="tabpanel">{this.state.componentToRender}</div>
+            <div role="tabpanel" className="tabpanel">
+                {this.state.componentToRender}
+            </div>
         </div>
     );
 }

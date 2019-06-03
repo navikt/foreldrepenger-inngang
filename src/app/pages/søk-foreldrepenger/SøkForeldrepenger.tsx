@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Breadcrumbs from '../../components/breadcrumbs/Breadcrumbs';
 import { InjectedIntlProps, injectIntl, InjectedIntl } from 'react-intl';
+import classnames from 'classnames';
 import Sidebanner from 'app/components/sidebanner/Sidebanner';
 
 import HeaderInformasjon from '../../components/header-informasjon/HeaderInformasjon';
@@ -14,6 +15,12 @@ import './søkForeldrepenger.less';
 import BEMHelper from 'app/utils/bem';
 import { Innholdsfane } from 'app/components/innholdsfaner/fane/Fane';
 import Foreldrepar from 'app/components/foreldrepar/Foreldrepar';
+import InfoFarOgMor from './InfoFarOgMor';
+import InfoBareFarHarRett from './InfoBareFarHarRett';
+import InfoBareMorHarRett from './InfoBareMorHarRett';
+import InfoAleneomsorg from './InfoAleneomsorg';
+import InfoMorOgMor from './InfoMorOgMor';
+import InfoFarOgFar from './InfoFarOgFar';
 
 const infoSvg = require('../../assets/ark/ark-info.svg').default;
 
@@ -36,36 +43,37 @@ const tabs: Innholdsfane[] = [
     {
         label: 'farOgMor',
         icon: <Foreldrepar firstParent="far1" secondParent="mor2" />,
-        component: <SøkForeldrepengerHeader />
+        component: <InfoFarOgMor />
     },
     {
         label: 'bareFarHarRett',
         icon: <Foreldrepar firstParent="far3" secondParent="medmor1" variant={1} />,
-        component: <SøkForeldrepengerHeader />
+        component: <InfoBareFarHarRett />
     },
     {
         label: 'bareMorHarRett',
         icon: <Foreldrepar firstParent="far2" secondParent="mor1" variant={2} />,
-        component: <SøkForeldrepengerHeader />
+        component: <InfoBareMorHarRett />
     },
     {
         label: 'aleneomsorg',
         icon: <Foreldrepar firstParent="far1" secondParent="medmor1" variant={3} />,
-        component: <SøkForeldrepengerHeader />
+        component: <InfoAleneomsorg />
     },
     {
         label: 'morOgMor',
         icon: <Foreldrepar firstParent="mor2" secondParent="medmor2" />,
-        component: <SøkForeldrepengerHeader />
+        component: <InfoMorOgMor />
     },
     {
         label: 'farOgFar',
         icon: <Foreldrepar firstParent="far4" secondParent="far2" />,
-        component: <SøkForeldrepengerHeader />
+        component: <InfoFarOgFar />
     }
 ];
 
 const cls = BEMHelper('søkForeldrepenger');
+const infoCls = BEMHelper('infosider');
 
 class SøkForeldrepenger extends Component<Props & InjectedIntlProps> {
     constructor(props: Props) {
@@ -86,23 +94,28 @@ class SøkForeldrepenger extends Component<Props & InjectedIntlProps> {
         const { intl } = this.props;
 
         return (
-            <div className={cls.block}>
-                <div className={cls.element('container')}>
-                    <SøkForeldrepengerHeader />
-                    <Sidebanner
-                        text={getTranslation('søk_foreldrepenger.tittel', this.props.intl)}
-                    />
-                    <div role="main">
-                        <Breadcrumbs path={location.pathname} />
-                        <PanelMedIllustrasjon
-                            id={'test'}
-                            title={getTranslation('om_foreldrepenger.hvor_lenge.tittel', intl)}
-                            svg={infoSvg}>
-                            <div className={cls.block}>
-                                <Innholdsfaner tabs={tabs} onSelect={this.onSituasjonSelected} />
-                            </div>
-                        </PanelMedIllustrasjon>
-                    </div>
+            <div className={classnames(cls.block, infoCls.block)}>
+                <div className={infoCls.element('container')}>
+                    <article className={infoCls.element('article')}>
+                        <SøkForeldrepengerHeader />
+                        <Sidebanner
+                            text={getTranslation('søk_foreldrepenger.tittel', this.props.intl)}
+                        />
+                        <div role="main">
+                            <Breadcrumbs path={location.pathname} />
+                            <PanelMedIllustrasjon
+                                id={'test'}
+                                title={getTranslation('om_foreldrepenger.hvor_lenge.tittel', intl)}
+                                svg={infoSvg}>
+                                <div className={cls.block}>
+                                    <Innholdsfaner
+                                        tabs={tabs}
+                                        onSelect={this.onSituasjonSelected}
+                                    />
+                                </div>
+                            </PanelMedIllustrasjon>
+                        </div>
+                    </article>
                 </div>
             </div>
         );
