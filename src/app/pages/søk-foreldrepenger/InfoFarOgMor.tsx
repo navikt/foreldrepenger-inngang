@@ -33,8 +33,6 @@ const InfoFarOgMor: FunctionComponent<Props> = ({ intl }) => {
                     tittel="Vi får opplysninger om inntekten til mor"
                     innhold="søk-foreldrepenger/planlegg"
                 />
-            </Event>
-            <Event>
                 <EkspanderbarSnakkeboble
                     svg={svg}
                     tittel="Mor får svart på søknaden"
@@ -54,8 +52,6 @@ const InfoFarOgMor: FunctionComponent<Props> = ({ intl }) => {
                     tittel="Inntektsopplysningene til far kan komme inn"
                     innhold="søk-foreldrepenger/planlegg"
                 />
-            </Event>
-            <Event>
                 <EkspanderbarSnakkeboble
                     svg={svg}
                     tittel="Far kan få svar på søknaden"
