@@ -20,6 +20,19 @@
         }
     }
 
+    &__line {
+        &:before {
+            content: '';
+            position: absolute;
+            height: 4rem;
+            bottom: auto;
+            width: @borderBredde;
+            background-color: #c1b5d0;
+            left: @ikonBredde / 2 - @borderBredde / 2;
+            z-index: 0;
+        }
+    }
+
     &__event {
         position: relative;
 

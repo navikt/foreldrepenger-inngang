@@ -23,14 +23,42 @@ const InfoFarOgMor: FunctionComponent<Props> = ({ intl }) => {
             <Event title="22. svangerskapsuke">
                 <EkspanderbarSnakkeboble
                     svg={svg}
-                    tittel="Planlegg tiden hjemme med barnet"
+                    tittel="Mor kan søke om foreldrepenger"
                     innhold="søk-foreldrepenger/planlegg"
                 />
             </Event>
             <Event title="4 uker før mors første dag med foreldrepenger">
                 <EkspanderbarSnakkeboble
                     svg={svg}
-                    tittel="Planlegg tiden hjemme med barnet"
+                    tittel="Vi får opplysninger om inntekten til mor"
+                    innhold="søk-foreldrepenger/planlegg"
+                />
+            </Event>
+            <Event>
+                <EkspanderbarSnakkeboble
+                    svg={svg}
+                    tittel="Mor får svart på søknaden"
+                    innhold="søk-foreldrepenger/planlegg"
+                />
+            </Event>
+            <Event title="Barnet blir født">
+                <EkspanderbarSnakkeboble
+                    svg={svg}
+                    tittel="Far kan søke om foreldrepenger"
+                    innhold="søk-foreldrepenger/planlegg"
+                />
+            </Event>
+            <Event title="4 uker før fars første dag med foreldrepenger">
+                <EkspanderbarSnakkeboble
+                    svg={svg}
+                    tittel="Inntektsopplysningene til far kan komme inn"
+                    innhold="søk-foreldrepenger/planlegg"
+                />
+            </Event>
+            <Event>
+                <EkspanderbarSnakkeboble
+                    svg={svg}
+                    tittel="Far kan få svar på søknaden"
                     innhold="søk-foreldrepenger/planlegg"
                 />
             </Event>

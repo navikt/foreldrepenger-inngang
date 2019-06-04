@@ -14,8 +14,10 @@ interface Props {
 const Event: FunctionComponent<Props> = ({ children, title }) => {
     return (
         <div className={cls.element('event')}>
-            {title !== undefined && (
+            {title !== undefined ? (
                 <Undertittel className={cls.element('eventTitle')}>{title}</Undertittel>
+            ) : (
+                <div className={cls.element('line')} />
             )}
             <div className={cls.element('eventContent')}>{children}</div>
         </div>
