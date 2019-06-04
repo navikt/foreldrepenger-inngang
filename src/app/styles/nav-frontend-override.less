@@ -17,16 +17,24 @@
     background-color: #c1b5d0;
 }
 
-.infoContainer .ekspanderbartPanel {
-    &__hode {
-        background-color: transparent;
-    }
+.veileder {
+    &__override {
+        .ekspanderbartPanel {
+            &__hode {
+                background-color: transparent;
+            }
 
-    &__hode:hover {
-        box-shadow: none;
-    }
+            &__hode:hover {
+                box-shadow: none;
+            }
 
-    &__innhold {
-        background-color: transparent;
+            &__innhold {
+                background-color: transparent;
+            }
+        }
+
+        .nav-veileder__snakkeboble {
+            flex-grow: 1;
+        }
     }
 }
