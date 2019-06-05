@@ -9,7 +9,7 @@ interface Props {
 }
 
 const InfoFarOgMor: FunctionComponent<Props> = ({ intl }) => {
-    const kalender = require('../../components/panel-med-bilde/img/hvor-lenge.svg').default;
+    const kalender = require('../../assets/planlegge.svg').default;
     const morBrev = require('../../assets/foreldre/mor2-brev.svg').default;
     const inntektsOpplysninger = require('../../assets/inntektsopplysninger.svg').default;
     const fåSvar = require('../../assets/faa-svar.svg').default;

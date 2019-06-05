@@ -22,7 +22,7 @@ import InfoAleneomsorg from './InfoAleneomsorg';
 import InfoMorOgMor from './InfoMorOgMor';
 import InfoFarOgFar from './InfoFarOgFar';
 
-const infoSvg = require('../../assets/ark/ark-info.svg').default;
+const infoSvg = require('../../assets/hva-skjer-naar.svg').default;
 
 interface Props {
     route: any;
