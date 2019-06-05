@@ -1,100 +1,32 @@
 import React, { Component } from 'react';
-import classnames from 'classnames';
-import KnappBase from 'nav-frontend-knapper';
 import Breadcrumbs from '../../components/breadcrumbs/Breadcrumbs';
-import BEMHelper from '../../utils/bem';
-import { InjectedIntlProps, injectIntl } from 'react-intl';
-import SvgBanner from '../../components/svg-banner/SvgBanner';
-import PanelMedTittel from '../../components/panel-med-tittel/PanelMedTittel';
-import { datoForUttakErGyldig } from '../../utils/datoUtils';
-import VeilederMessage from './Veiledermelding';
-import Datovelger from './Datovelger';
-import MediaQuery from 'react-responsive';
+import { InjectedIntlProps, injectIntl, InjectedIntl } from 'react-intl';
+import classnames from 'classnames';
 import Sidebanner from 'app/components/sidebanner/Sidebanner';
-import Innhold, { getSource } from 'app/utils/innhold/Innhold';
 
 import HeaderInformasjon from '../../components/header-informasjon/HeaderInformasjon';
-import Environment from 'app/Environment';
 import getTranslation from 'app/utils/i18nUtils';
-import './søkForeldrepenger.less';
+import { Foreldresituasjon } from 'app/utils/foreldresituasjon';
+import PanelMedIllustrasjon from 'app/components/panel-med-illustrasjon/PanelMedIllustrasjon';
 
-const hvaSøkerDuCls = BEMHelper('hvaSøkerDu');
-const foreldrepengerCls = BEMHelper('søkForeldrepenger');
+import Innholdsfaner from 'app/components/innholdsfaner/Innholdsfaner';
+
+import './søkForeldrepenger.less';
+import BEMHelper from 'app/utils/bem';
+import { Innholdsfane } from 'app/components/innholdsfaner/fane/Fane';
+import Foreldrepar from 'app/components/foreldrepar/Foreldrepar';
+import InfoFarOgMor from './InfoFarOgMor';
+import InfoBareFarHarRett from './InfoBareFarHarRett';
+import InfoBareMorHarRett from './InfoBareMorHarRett';
+import InfoAleneomsorg from './InfoAleneomsorg';
+import InfoMorOgMor from './InfoMorOgMor';
+import InfoFarOgFar from './InfoFarOgFar';
+
+const infoSvg = require('../../assets/ark/ark-info.svg').default;
 
 interface Props {
     route: any;
-}
-
-class SøkForeldrepenger extends Component<Props & InjectedIntlProps> {
-    state: {
-        selectedDate?: Date;
-        dateIsValid: boolean;
-    } = {
-        selectedDate: undefined,
-        dateIsValid: true
-    };
-
-    setDate = (selectedDate: Date) => {
-        const dateIsValid = datoForUttakErGyldig(selectedDate);
-
-        this.setState({
-            selectedDate,
-            dateIsValid
-        });
-    };
-
-    render = () => {
-        return (
-            <div className={classnames(hvaSøkerDuCls.block, foreldrepengerCls.block)}>
-                <SøkForeldrepengerHeader />
-                <Sidebanner text={getTranslation('hva_søker_du.tittel', this.props.intl)} />
-                <div role="main" className={hvaSøkerDuCls.element('body')}>
-                    <div className={hvaSøkerDuCls.element('content')}>
-                        <Breadcrumbs path={location.pathname} />
-                        <SvgBanner />
-                        <PanelMedTittel title={getTranslation('foreldrepenger', this.props.intl)}>
-                            <Innhold
-                                source={getSource(
-                                    'hva-søker-du/søk-foreldrepenger',
-                                    this.props.intl
-                                )}
-                            />
-                            <Datovelger
-                                date={this.state.selectedDate}
-                                dateIsValid={!!this.state.selectedDate && this.state.dateIsValid}
-                                onChange={(date: Date) => this.setDate(date)}
-                                parentCls={foreldrepengerCls}
-                            />
-                            {this.state.selectedDate && !this.state.dateIsValid && (
-                                <VeilederMessage
-                                    parentCls={foreldrepengerCls}
-                                    selectedDate={this.state.selectedDate}
-                                />
-                            )}
-                            {this.state.selectedDate && (
-                                <a tabIndex={-1} href={Environment.SOK_FORELDREPENGER_URL}>
-                                    <KnappBase type="hoved" role="link">
-                                        <MediaQuery maxWidth={575}>
-                                            {getTranslation(
-                                                'søk_foreldrepenger.knapp_mobil',
-                                                this.props.intl
-                                            )}
-                                        </MediaQuery>
-                                        <MediaQuery minWidth={576}>
-                                            {getTranslation(
-                                                'søk_foreldrepenger.knapp',
-                                                this.props.intl
-                                            )}
-                                        </MediaQuery>
-                                    </KnappBase>
-                                </a>
-                            )}
-                        </PanelMedTittel>
-                    </div>
-                </div>
-            </div>
-        );
-    };
+    intl: InjectedIntl;
 }
 
 const SøkForeldrepengerHeader = () => {
@@ -106,5 +38,88 @@ const SøkForeldrepengerHeader = () => {
         />
     );
 };
+
+const tabs: Innholdsfane[] = [
+    {
+        label: 'farOgMor',
+        icon: <Foreldrepar firstParent="far1" secondParent="mor2" />,
+        component: <InfoFarOgMor />
+    },
+    {
+        label: 'bareFarHarRett',
+        icon: <Foreldrepar firstParent="far3" secondParent="medmor1" variant={1} />,
+        component: <InfoBareFarHarRett />
+    },
+    {
+        label: 'bareMorHarRett',
+        icon: <Foreldrepar firstParent="far2" secondParent="mor1" variant={2} />,
+        component: <InfoBareMorHarRett />
+    },
+    {
+        label: 'aleneomsorg',
+        icon: <Foreldrepar firstParent="far1" secondParent="medmor1" variant={3} />,
+        component: <InfoAleneomsorg />
+    },
+    {
+        label: 'morOgMor',
+        icon: <Foreldrepar firstParent="mor2" secondParent="medmor2" />,
+        component: <InfoMorOgMor />
+    },
+    {
+        label: 'farOgFar',
+        icon: <Foreldrepar firstParent="far4" secondParent="far2" />,
+        component: <InfoFarOgFar />
+    }
+];
+
+const cls = BEMHelper('søkForeldrepenger');
+const infoCls = BEMHelper('infosider');
+
+class SøkForeldrepenger extends Component<Props & InjectedIntlProps> {
+    constructor(props: Props) {
+        super(props);
+
+        this.state = {
+            valgtSituasjon: 'farOgMor'
+        };
+    }
+
+    onSituasjonSelected = (valgtSituasjon: Foreldresituasjon) => {
+        this.setState({
+            valgtSituasjon
+        });
+    };
+
+    render = () => {
+        const { intl } = this.props;
+
+        return (
+            <div className={classnames(cls.block, infoCls.block)}>
+                <div className={infoCls.element('container')}>
+                    <article className={infoCls.element('article')}>
+                        <SøkForeldrepengerHeader />
+                        <Sidebanner
+                            text={getTranslation('søk_foreldrepenger.tittel', this.props.intl)}
+                        />
+                        <div role="main">
+                            <Breadcrumbs path={location.pathname} />
+                            <PanelMedIllustrasjon
+                                id={'test'}
+                                title={getTranslation('om_foreldrepenger.hvor_lenge.tittel', intl)}
+                                svg={infoSvg}>
+                                <div className={cls.block}>
+                                    <Innholdsfaner
+                                        tabs={tabs}
+                                        onSelect={this.onSituasjonSelected}
+                                    />
+                                </div>
+                            </PanelMedIllustrasjon>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        );
+    };
+}
 
 export default injectIntl(SøkForeldrepenger);

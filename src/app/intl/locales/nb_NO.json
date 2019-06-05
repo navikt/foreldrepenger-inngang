@@ -61,7 +61,8 @@
     "route.viktige-frister": "Viktige frister",
     "route.blindside": "Uferdig side!",
     "route.hvor-mye": "Hvor mye?",
-    "route.veiviser": " Hva kan du få?",
+    "route.veiviser": "Hva kan du få?",
+    "route.soke-om-foreldrepenger": "Søke om foreldrepenger",
     "route.regelendringer": "Aktuelle endringer",
     "route.om-svangerskapspenger": "Om svangerskapspenger",
 
@@ -144,7 +145,7 @@
     "hva_søker_du.engangsstønad.sokPapir.modal.knapp.standard": "Gå til papirsøknaden",
     "hva_søker_du.engangsstønad.sokPapir.modal.knapp.hoved": "Gå til søknaden",
 
-    "søk_foreldrepenger.tittel": "Søk om foreldrepenger",
+    "søk_foreldrepenger.tittel": "Veiledning til søknadsprosessen",
     "søk_foreldrepenger.knapp": "Begynn søknad om foreldrepenger",
     "søk_foreldrepenger.knapp_mobil": "Begynn søknad",
     "søk_foreldrepenger.advarselmelding": "Du søker tidligere enn 6 uker før du skal ta ut foreldrepenger. Du kan begynne på søknaden, men det vil ikke være mulig å sende den inn før ",

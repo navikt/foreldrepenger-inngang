@@ -1,0 +1,64 @@
+.eventline {
+    @ikonBredde: 6.25rem;
+    @sirkelBredde: 1.5rem;
+    @borderBredde: 0.25rem;
+
+    position: relative;
+
+    &__eventTitle {
+        padding-left: 5rem;
+
+        &:before {
+            content: '';
+            position: absolute;
+            width: @sirkelBredde;
+            height: @sirkelBredde;
+            top: 0;
+            border-radius: 50%;
+            left: @ikonBredde / 2 - @sirkelBredde / 2;
+            border: @borderBredde solid #c1b5d0;
+            z-index: 1;
+        }
+    }
+
+    &__line {
+        &:before {
+            content: '';
+            position: absolute;
+            height: 4rem;
+            bottom: auto;
+            width: @borderBredde;
+            background-color: #c1b5d0;
+            left: @ikonBredde / 2 - @borderBredde / 2;
+            z-index: 0;
+        }
+    }
+
+    &__event {
+        position: relative;
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 21px;
+            bottom: -2px;
+            width: @borderBredde;
+            background-color: #c1b5d0;
+            left: @ikonBredde / 2 - @borderBredde / 2;
+            z-index: 0;
+        }
+
+        &:last-child {
+            &:before {
+                bottom: auto;
+                height: 4rem;
+            }
+
+            .ekspanderbarSnakkeboble + .ekspanderbarSnakkeboble {
+                &:before {
+                    bottom: auto;
+                }
+            }
+        }
+    }
+}
