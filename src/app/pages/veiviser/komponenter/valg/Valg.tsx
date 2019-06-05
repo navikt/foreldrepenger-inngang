@@ -613,7 +613,7 @@ class Valg extends React.Component<Props, State> {
                 checkBoxNiva = 5;
                 ++radNiva;
                 if (checked[2][0] && checked[3][0]) {
-                    // har hatt inntekt / annen inntekt + over 6mnd + over 48 441
+                    // har hatt inntekt / annen inntekt + over 6mnd + over 49 929
                     this.setState(
                         { antallRader: radNiva, teller: checkBoxNiva, checkbox: checked },
                         () =>
@@ -630,7 +630,7 @@ class Valg extends React.Component<Props, State> {
                             )
                     );
                 } else {
-                    // mangel på enten inntekt siste 6mnd eller inntekt over 48 441
+                    // mangel på enten inntekt siste 6mnd eller inntekt over 49 929
                     if (!this.state.parentToggled[0]) {
                         this.setState(
                             { antallRader: radNiva, teller: checkBoxNiva, checkbox: checked },
@@ -720,7 +720,7 @@ class Valg extends React.Component<Props, State> {
                 ++radNiva;
                 checkBoxNiva = 5;
                 if (checked[2][0] && checked[3][0]) {
-                    // har hatt inntekt / annen inntekt + over 6mnd + over 48 441
+                    // har hatt inntekt / annen inntekt + over 6mnd + over 49 929
                     this.setState(
                         { antallRader: radNiva, teller: checkBoxNiva, checkbox: checked },
                         () =>
@@ -736,7 +736,7 @@ class Valg extends React.Component<Props, State> {
                             )
                     );
                 } else {
-                    // mangel på enten inntekt siste 6mnd eller inntekt over 48 441
+                    // mangel på enten inntekt siste 6mnd eller inntekt over 49 929
                     if (!this.state.parentToggled[0]) {
                         this.setState(
                             { antallRader: radNiva, teller: checkBoxNiva, checkbox: checked },

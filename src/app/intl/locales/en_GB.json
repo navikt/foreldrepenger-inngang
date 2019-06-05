@@ -66,6 +66,7 @@
     "route.veiviser": " What are you entitled to?",
     "route.regelendringer": "Rule changes",
     "route.om-svangerskapspenger": "About pregnancy benefit",
+    "route.soke-om-foreldrepenger": "Søke om foreldrepenger",
 
     "informasjonstavle.tittel": "Parental benefit, lump-sum grant and pregnancy benefit",
     "informasjonstavle.ingress": "These are your rights when expecting children or awaiting parental benefits.",
@@ -348,8 +349,8 @@
     "veiviser.valg.svar.far.to.nei": "No, I do not have other sources of income",
     "veiviser.valg.svar.far.tre.ja": "At least 6 of the last 10 months",
     "veiviser.valg.svar.far.tre.nei": "Less than the last 6 months",
-    "veiviser.valg.svar.far.fire.ja": "Annual income of more than NOK 48 441",
-    "veiviser.valg.svar.far.fire.nei": "Annual income of less than NOK 48 441",
+    "veiviser.valg.svar.far.fire.ja": "Annual income of more than NOK 49 929",
+    "veiviser.valg.svar.far.fire.nei": "Annual income of less than NOK 49 929",
     "veiviser.valg.svar.far.fem.ja": "Yes, I live in Norway",
     "veiviser.valg.svar.far.fem.nei": "No, I do not live in Norway",
     "veiviser.valg.svar.far.seks.ja": "Yes, I am a member",
