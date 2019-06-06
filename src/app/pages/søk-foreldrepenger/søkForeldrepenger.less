@@ -11,6 +11,21 @@
         padding: 0;
     }
 
+    &__radioWrapper {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+
+        :first-child {
+            margin-right: 1rem;
+        }
+
+        .radioPanel {
+            width: 100%;
+        }
+    }
+
     @media (min-width: @mobile-breakpoint) {
         a {
             max-width: 370px;

@@ -1,14 +1,14 @@
 import React from 'react';
 import Eventline from 'app/components/eventline/Eventline';
-import Event from 'app/components/eventline/Event';
-import EkspanderbarSnakkeboble from 'app/components/ekspanderbar-snakkeboble/EkspanderbarSnakkeboble';
+// import Event from 'app/components/eventline/Event';
+// import EkspanderbarSnakkeboble from 'app/components/ekspanderbar-snakkeboble/EkspanderbarSnakkeboble';
 
 const InfoBareFarHarRett = () => {
-    const svg = require('../../components/panel-med-bilde/img/hvor-lenge.svg').default;
+    // const svg = require('../../components/panel-med-bilde/img/hvor-lenge.svg').default;
 
     return (
         <Eventline>
-            <Event title="Dere venter barn">
+            {/* <Event title="Dere venter barn">
                 <EkspanderbarSnakkeboble
                     svg={svg}
                     tittel="Planlegg tiden hjemme med barnet"
@@ -52,7 +52,7 @@ const InfoBareFarHarRett = () => {
                     tittel="Far kan få svar på søknaden"
                     innhold="søk-foreldrepenger/planlegg"
                 />
-            </Event>
+            </Event> */}
         </Eventline>
     );
 };
