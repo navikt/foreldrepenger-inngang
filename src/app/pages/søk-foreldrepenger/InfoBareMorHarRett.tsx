@@ -11,7 +11,7 @@ interface Props {
 
 const InfoBareMorHarRett: FunctionComponent<Props> = ({ intl }) => {
     const kalender = require('../../assets/planlegge.svg').default;
-    const morBrev = require('../../assets/foreldre/mor2-brev.svg').default;
+    const morBrev = require('../../assets/foreldre/mor1-brev.svg').default;
     const inntektsOpplysninger = require('../../assets/inntektsopplysninger.svg').default;
     const fåSvar = require('../../assets/faa-svar.svg').default;
 
@@ -34,10 +34,10 @@ const InfoBareMorHarRett: FunctionComponent<Props> = ({ intl }) => {
                     />
                 </EkspanderbarSnakkeboble>
             </Event>
-            <Event title="4 uker før mors første dag med foreldrepenger">
+            <Event title="4 uker før din første dag med foreldrepenger">
                 <EkspanderbarSnakkeboble
                     svg={inntektsOpplysninger}
-                    tittel="Vi får opplysninger om inntekten til mor">
+                    tittel="Vi får opplysninger om inntekten din">
                     <Innhold
                         source={getSource(
                             'søk-foreldrepenger/bare-mor-har-rett/opplysninger-inntekt-mor',
@@ -45,7 +45,7 @@ const InfoBareMorHarRett: FunctionComponent<Props> = ({ intl }) => {
                         )}
                     />
                 </EkspanderbarSnakkeboble>
-                <EkspanderbarSnakkeboble svg={fåSvar} tittel="Mor får svart på søknaden">
+                <EkspanderbarSnakkeboble svg={fåSvar} tittel="Mor får svar på søknaden">
                     <Innhold
                         source={getSource(
                             'søk-foreldrepenger/bare-mor-har-rett/mor-får-svar',

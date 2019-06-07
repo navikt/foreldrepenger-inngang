@@ -41,7 +41,7 @@ const InfoMorOgMor: FunctionComponent<Props> = ({ intl }) => {
                         )}
                     />
                 </EkspanderbarSnakkeboble>
-                <EkspanderbarSnakkeboble svg={fåSvar} tittel="Mor får svart på søknaden">
+                <EkspanderbarSnakkeboble svg={fåSvar} tittel="Mor får svar på søknaden">
                     <Innhold
                         source={getSource('søk-foreldrepenger/mor-og-mor/mor-får-svar', intl)}
                     />
