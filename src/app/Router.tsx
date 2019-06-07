@@ -12,7 +12,6 @@ import OmSvangerskapspenger from './pages/svangerskapspenger/OmSvangerskapspenge
 import Regelendringer from './pages/regelendringer/Regelendringer';
 import SøkSvangerskapspenger from './pages/søk-svangerskapspenger/SøkSvangerskapspenger';
 import SøkForeldrepenger from './pages/søk-foreldrepenger/SøkForeldrepenger';
-// import Veiviser from './pages/veiviser/Veiviser';
 
 interface ValidRouteProps extends RouteProps {
     path?: Page;
@@ -58,7 +57,7 @@ const Router = () => (
             exact={true}
             path={Page.SøkeOmForelderpenger}
             component={SøkForeldrepenger}
-            key="veiviser"
+            key="sok-foreldrepenger"
         />
         <ValidRoute
             exact={true}
