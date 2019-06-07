@@ -20,7 +20,11 @@ const externalUrls = {
     foreldrepengeplanlegger: 'https://foreldrepengeplanlegger.nav.no/foreldrepengeplanlegger'
 };
 
-export type Søknadstyper = 'svangerskapspenger' | 'foreldrepenger' | 'engangsstønad';
+export type Søknadstyper =
+    | 'svangerskapspenger'
+    | 'foreldrepenger'
+    | 'engangsstønad'
+    | 'planleggeren';
 
 export const getSøknadsurl = (søknad: Søknadstyper, papir?: boolean): string => {
     switch (søknad) {
@@ -36,6 +40,8 @@ export const getSøknadsurl = (søknad: Søknadstyper, papir?: boolean): string 
             return papir
                 ? Environment.SOK_SVANGERSKAPSPENGER_PAPIR_URL
                 : Environment.SOK_SVANGERSKAPSPENGER_URL;
+        case 'planleggeren':
+            return Environment.PLANLEGGEREN_URL;
     }
 };
 

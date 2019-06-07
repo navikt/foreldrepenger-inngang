@@ -5,13 +5,16 @@ import ScrollToTop from './utils/ScrollToTop';
 import App from './App';
 
 import './styles/index.less';
+import { Normaltekst } from 'nav-frontend-typografi';
 
 const root = document.getElementById('app');
 
 render(
     <Router>
         <ScrollToTop>
-            <App />
+            <Normaltekst tag="div">
+                <App />
+            </Normaltekst>
         </ScrollToTop>
     </Router>,
     root

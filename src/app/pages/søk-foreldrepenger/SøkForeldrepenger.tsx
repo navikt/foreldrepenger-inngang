@@ -21,8 +21,11 @@ import InfoBareMorHarRett from './InfoBareMorHarRett';
 import InfoAleneomsorg from './InfoAleneomsorg';
 import InfoMorOgMor from './InfoMorOgMor';
 import InfoFarOgFar from './InfoFarOgFar';
+import { RadioPanel } from 'nav-frontend-skjema';
+import { Undertittel } from 'nav-frontend-typografi';
+import Innhold, { getSource } from 'app/utils/innhold/Innhold';
 
-const infoSvg = require('../../assets/ark/ark-info.svg').default;
+const infoSvg = require('../../assets/hva-skjer-naar.svg').default;
 
 interface Props {
     route: any;
@@ -75,18 +78,30 @@ const tabs: Innholdsfane[] = [
 const cls = BEMHelper('søkForeldrepenger');
 const infoCls = BEMHelper('infosider');
 
-class SøkForeldrepenger extends Component<Props & InjectedIntlProps> {
+interface StateProps {
+    valgtSituasjon: string;
+    valgtProsess: string | undefined;
+}
+
+class SøkForeldrepenger extends Component<Props & InjectedIntlProps, StateProps> {
     constructor(props: Props) {
         super(props);
 
         this.state = {
-            valgtSituasjon: 'farOgMor'
+            valgtSituasjon: 'farOgMor',
+            valgtProsess: undefined
         };
     }
 
     onSituasjonSelected = (valgtSituasjon: Foreldresituasjon) => {
         this.setState({
             valgtSituasjon
+        });
+    };
+
+    onOversiktToggle = (valgtProsess: any) => {
+        this.setState({
+            valgtProsess
         });
     };
 
@@ -108,10 +123,51 @@ class SøkForeldrepenger extends Component<Props & InjectedIntlProps> {
                                 title={getTranslation('om_foreldrepenger.hvor_lenge.tittel', intl)}
                                 svg={infoSvg}>
                                 <div className={cls.block}>
-                                    <Innholdsfaner
-                                        tabs={tabs}
-                                        onSelect={this.onSituasjonSelected}
-                                    />
+                                    <Undertittel>Hva vil du ha oversikt over?</Undertittel>
+                                    <div className={cls.element('radioWrapper')}>
+                                        <RadioPanel
+                                            checked={this.state.valgtProsess === 'hele'}
+                                            name={'hele'}
+                                            onChange={(e) =>
+                                                this.onOversiktToggle(
+                                                    (e.target as HTMLInputElement).value
+                                                )
+                                            }
+                                            label={'Hele søknadsprosessen'}
+                                            value={'hele'}
+                                        />
+                                        <RadioPanel
+                                            checked={this.state.valgtProsess === 'endre'}
+                                            name={'endre'}
+                                            onChange={(e) =>
+                                                this.onOversiktToggle(
+                                                    (e.target as HTMLInputElement).value
+                                                )
+                                            }
+                                            label={'Endre noe etter jeg har søkt'}
+                                            value={'endre'}
+                                        />
+                                    </div>
+                                    {this.state.valgtProsess !== undefined &&
+                                        (this.state.valgtProsess === 'hele' ? (
+                                            <>
+                                                <Undertittel>Velg deres situasjon</Undertittel>
+                                                <Innholdsfaner
+                                                    tabs={tabs}
+                                                    onSelect={this.onSituasjonSelected}
+                                                />
+                                            </>
+                                        ) : (
+                                            <>
+                                                <Undertittel>Søke om endring</Undertittel>
+                                                <Innhold
+                                                    source={getSource(
+                                                        'søk-foreldrepenger/endre',
+                                                        intl
+                                                    )}
+                                                />
+                                            </>
+                                        ))}
                                 </div>
                             </PanelMedIllustrasjon>
                         </div>
