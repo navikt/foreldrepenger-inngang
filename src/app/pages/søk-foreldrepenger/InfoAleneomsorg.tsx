@@ -3,6 +3,7 @@ import { RadioPanel } from 'nav-frontend-skjema';
 import BEMHelper from 'app/utils/bem';
 import { Undertittel } from 'nav-frontend-typografi';
 import InfoAleneomsorgFar from './InfoAleneomsorgFar';
+import InfoAleneomsorgMor from './InfoAleneomsorgMor';
 
 const cls = BEMHelper('søkForeldrepenger');
 
@@ -28,7 +29,8 @@ const InfoAleneomsorg = () => {
                     value={'far'}
                 />
             </div>
-            {valgtForelder !== undefined && valgtForelder === 'far' && <InfoAleneomsorgFar />}
+            {valgtForelder !== undefined &&
+                (valgtForelder === 'far' ? <InfoAleneomsorgFar /> : <InfoAleneomsorgMor />)}
         </div>
     );
 };
