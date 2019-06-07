@@ -11,6 +11,7 @@ interface Props {
 
 const InfoBareFarHarRett: FunctionComponent<Props> = ({ intl }) => {
     const kalender = require('../../assets/planlegge.svg').default;
+    const dokumentasjon = require('../../assets/dokumentasjon.svg').default;
     const farBrev = require('../../assets/foreldre/far4-brev.svg').default;
     const inntektsOpplysninger = require('../../assets/inntektsopplysninger.svg').default;
     const fåSvar = require('../../assets/faa-svar.svg').default;
@@ -21,6 +22,16 @@ const InfoBareFarHarRett: FunctionComponent<Props> = ({ intl }) => {
                 <EkspanderbarSnakkeboble svg={kalender} tittel="Planlegg tiden hjemme med barnet">
                     <Innhold
                         source={getSource('søk-foreldrepenger/bare-far-har-rett/planlegg', intl)}
+                    />
+                </EkspanderbarSnakkeboble>
+                <EkspanderbarSnakkeboble
+                    svg={dokumentasjon}
+                    tittel="Du kan skaffe dokumentasjon på mors aktivitet">
+                    <Innhold
+                        source={getSource(
+                            'søk-foreldrepenger/bare-far-har-rett/dokumentasjon',
+                            intl
+                        )}
                     />
                 </EkspanderbarSnakkeboble>
             </Event>
