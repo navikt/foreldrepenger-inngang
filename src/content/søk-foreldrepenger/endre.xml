@@ -1,0 +1,12 @@
+<innhold>
+    <avsnitt>Du kan når som helst søke om endring når du allerede har søkt om foreldrepenger eller fått vedtak. Uansett årsak for endringen bruker du det samme skjemaet når du søker.</avsnitt>
+    <søkKnapp søknad="foreldrepenger" sentrert="true">Søk om endring</søkKnapp>
+    <avsnitt>Les mer om å søke om endring for følgende situasjoner</avsnitt>
+    <liste>
+        <punkt><lenke url="https://www.nav.no/no/Bedrift/Tjenester+og+skjemaer/NAV-+og+Altinn-tjenester/digital" ekstern="true">Utsette fordi du skal jobbe</lenke></punkt>
+        <punkt><lenke url="https://www.nav.no/no/Bedrift/Tjenester+og+skjemaer/NAV-+og+Altinn-tjenester/digital" ekstern="true">Utsette fordi du skal på ferie</lenke></punkt>
+        <punkt><lenke url="https://www.nav.no/no/Bedrift/Tjenester+og+skjemaer/NAV-+og+Altinn-tjenester/digital" ekstern="true">Utsette fordi du er syk</lenke></punkt>
+        <punkt><lenke url="https://www.nav.no/no/Bedrift/Tjenester+og+skjemaer/NAV-+og+Altinn-tjenester/digital" ekstern="true">Utsette fordi barnet er syk</lenke></punkt>
+        <punkt><lenke url="https://www.nav.no/no/Bedrift/Tjenester+og+skjemaer/NAV-+og+Altinn-tjenester/digital" ekstern="true">Overta foreldrepenger fordi den andre forelderen er syk</lenke></punkt>
+    </liste>
+</innhold>

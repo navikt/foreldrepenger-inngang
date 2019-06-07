@@ -23,6 +23,7 @@ import InfoMorOgMor from './InfoMorOgMor';
 import InfoFarOgFar from './InfoFarOgFar';
 import { RadioPanel } from 'nav-frontend-skjema';
 import { Undertittel } from 'nav-frontend-typografi';
+import Innhold, { getSource } from 'app/utils/innhold/Innhold';
 
 const infoSvg = require('../../assets/hva-skjer-naar.svg').default;
 
@@ -147,15 +148,26 @@ class SøkForeldrepenger extends Component<Props & InjectedIntlProps, StateProps
                                             value={'endre'}
                                         />
                                     </div>
-                                    {this.state.valgtProsess === 'hele' && (
-                                        <>
-                                            <Undertittel>Velg deres situasjon</Undertittel>
-                                            <Innholdsfaner
-                                                tabs={tabs}
-                                                onSelect={this.onSituasjonSelected}
-                                            />
-                                        </>
-                                    )}
+                                    {this.state.valgtProsess !== undefined &&
+                                        (this.state.valgtProsess === 'hele' ? (
+                                            <>
+                                                <Undertittel>Velg deres situasjon</Undertittel>
+                                                <Innholdsfaner
+                                                    tabs={tabs}
+                                                    onSelect={this.onSituasjonSelected}
+                                                />
+                                            </>
+                                        ) : (
+                                            <>
+                                                <Undertittel>Søke om endring</Undertittel>
+                                                <Innhold
+                                                    source={getSource(
+                                                        'søk-foreldrepenger/endre',
+                                                        intl
+                                                    )}
+                                                />
+                                            </>
+                                        ))}
                                 </div>
                             </PanelMedIllustrasjon>
                         </div>
