@@ -6,7 +6,6 @@
     <lesmer intro="Slik går du frem for å utsette når du har ferie">
         <liste>
             <punkt>Avtal med <b>arbeidsgiveren</b> din når du skal ta ut ferien.</punkt>
-            <punkt>Arbeidsgiveren din bekrefter ferien i <lenke url="https://www.nav.no/inntektsmelding" ekstern="true">inntektsmeldingen</lenke> som de skal sende til NAV.</punkt>
             <punkt>I <b>foreldrepengesøknaden</b> oppgir du at du skal <b>utsette</b> perioden fordi du skal på ferie.</punkt>
             <punkt>Hvis du ikke vet tidspunktet for ferien når du søker, kan du senere logge inn på <lenke url="https://foreldrepenger.nav.no/" ekstern="true">Dine foreldrepenger</lenke> og sende en endringssøknad.</punkt>
         </liste>
