@@ -1,9 +1,9 @@
 import React, { FunctionComponent } from 'react';
-import { InjectedIntl, injectIntl, FormattedHTMLMessage } from 'react-intl';
+import { InjectedIntl, FormattedHTMLMessage, injectIntl } from 'react-intl';
 import EkspanderbarSnakkeboble from 'app/components/ekspanderbar-snakkeboble/EkspanderbarSnakkeboble';
 import Eventline from 'app/components/eventline/Eventline';
 import Event from 'app/components/eventline/Event';
-import { Hovedknapp } from 'nav-frontend-knapper';
+import Innhold, { getSource } from 'app/utils/innhold/Innhold';
 
 interface Props {
     intl: InjectedIntl;
@@ -20,9 +20,7 @@ const InfoFarOgMor: FunctionComponent<Props> = ({ intl }) => {
         <Eventline>
             <Event title="Dere venter barn">
                 <EkspanderbarSnakkeboble svg={kalender} tittel="Planlegg tiden hjemme med barnet">
-                    <FormattedHTMLMessage id="søk_foreldrepenger.far_og_mor.dere_venter_barn.paragraf_1" />
-                    <FormattedHTMLMessage id="søk_foreldrepenger.far_og_mor.dere_venter_barn.paragraf_2" />
-                    <Hovedknapp>Test</Hovedknapp>
+                    <Innhold source={getSource('søk-foreldrepenger/far-og-mor/planlegg', intl)} />
                 </EkspanderbarSnakkeboble>
             </Event>
             <Event title="22. svangerskapsuke">
