@@ -1,6 +1,5 @@
 import React, { FunctionComponent } from 'react';
 import Ekspanderbartpanel from 'nav-frontend-ekspanderbartpanel';
-import Innhold, { getSource } from 'app/utils/innhold/Innhold';
 import CustomSVGFromSprite from 'app/utils/CustomSVG';
 import Veileder from 'nav-frontend-veileder';
 import { InjectedIntl, injectIntl } from 'react-intl';
@@ -14,10 +13,10 @@ interface Props {
     svg: any;
     intl: InjectedIntl;
     tittel: string;
-    innhold: string;
+    children: React.ReactNode;
 }
 
-const EkspanderbarSnakkeboble: FunctionComponent<Props> = ({ svg, tittel, innhold, intl }) => {
+const EkspanderbarSnakkeboble: FunctionComponent<Props> = ({ svg, tittel, children, intl }) => {
     return (
         <div className={cls.block}>
             <Veileder
@@ -26,11 +25,7 @@ const EkspanderbarSnakkeboble: FunctionComponent<Props> = ({ svg, tittel, innhol
                 posisjon="høyre"
                 storrelse="M"
                 center={true}
-                tekst={
-                    <Ekspanderbartpanel tittel={tittel}>
-                        <Innhold source={getSource(innhold, intl)} />
-                    </Ekspanderbartpanel>
-                }>
+                tekst={<Ekspanderbartpanel tittel={tittel}>{children}</Ekspanderbartpanel>}>
                 <CustomSVGFromSprite className="infoSvg" iconRef={svg} />
             </Veileder>
         </div>

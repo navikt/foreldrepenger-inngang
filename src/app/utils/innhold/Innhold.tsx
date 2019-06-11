@@ -36,7 +36,7 @@ const xmlToReact = new XMLToReact({
     søkKnapp: renderAs(Node.SøkNåKnapp)
 });
 
-export const getSource = (path: string, intl: InjectedIntl): any => {
+export const getSource = (path: string, intl: InjectedIntl): string => {
     const inDevelopment = process.env.NODE_ENV === 'development';
     const localeSnippet = intl.locale === 'nb' ? '' : `.${intl.locale}`;
 
