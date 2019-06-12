@@ -72,7 +72,7 @@ const InfoFarOgFar: FunctionComponent<Props> = ({ intl }) => {
                         />
                     </EkspanderbarSnakkeboble>
                 </Event>
-                <Event title="4 uker før far 2 sin første dag med foreldrepenger">
+                <Event title="4 uker før far 2 sin første dag med foreldrepenger eller utsettelse">
                     <EkspanderbarSnakkeboble
                         svg={inntektsOpplysninger}
                         tittel="Vi får opplysninger om inntekten til far 2">

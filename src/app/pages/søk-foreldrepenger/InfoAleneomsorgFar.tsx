@@ -18,7 +18,7 @@ const InfoAleneomsorgFar: FunctionComponent<Props> = ({ intl }) => {
 
     return (
         <Eventline>
-            <Event title="Dere venter barn">
+            <Event title="Du venter barn">
                 <EkspanderbarSnakkeboble svg={kalender} tittel="Planlegg tiden hjemme med barnet">
                     <Innhold
                         source={getSource('søk-foreldrepenger/aleneomsorg-far/planlegg', intl)}

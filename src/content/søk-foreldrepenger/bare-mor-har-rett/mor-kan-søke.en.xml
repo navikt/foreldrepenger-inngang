@@ -1,5 +1,5 @@
 <innhold>
-    <avsnitt>Som mor kan du tidligst søke om foreldrepenger ved 22. svangerskapsuke. Hvis du har fått en dato for planlagt keisersnitt, bruker du denne datoen som termindato når du søker.</avsnitt>
+    <avsnitt>Du kan tidligst søke om foreldrepenger ved 22. svangerskapsuke. Hvis du har fått en dato for planlagt keisersnitt, bruker du denne datoen som termindato når du søker.</avsnitt>
     <lesmer liten="true" intro="Har du glemte å søke foreldrepenger?">
         <avsnitt>Du kan søke tilbake i tid tre måneder etter at du gikk ut i permisjon. Søker du på et senere tidspunkt får du færre dager med foreldrepenger.</avsnitt>
     </lesmer>
@@ -10,9 +10,8 @@
     <lesmer liten="true" intro="Har du fått sluttpakke, ventelønn eller vært vernepliktig?">
         <avsnitt>Du må legge ved dokumentasjon på inntekten og perioden hvis du har hatt en av disse inntektskildene:</avsnitt>
         <liste>
-            <punkt>Vernepliktig i militæret</punkt>
+            <punkt>Førstegangstjenesten i forsvaret</punkt>
             <punkt>Sluttpakke</punkt>
-            <punkt>Lønn fra arbeidsgivere under videre- eller etterutdanning</punkt>
             <punkt>Ventelønn eller vartpenger</punkt>
         </liste>
     </lesmer>
