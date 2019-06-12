@@ -4,17 +4,18 @@
         <avsnitt>Du kan søke tilbake i tid tre måneder etter at du gikk ut i permisjon. Søker du på et senere tidspunkt får du færre dager med foreldrepenger.</avsnitt>
     </lesmer>
     <avsnitt>Når du skal søke, logger du deg inn med BankID fra banken din eller en annen elektronisk id. Spørsmålene du får i søknaden er tilpasset din situasjon og du får veiledning og informasjon underveis.</avsnitt>
+    <avsnitt>I løpet av søkaden kommer du til å bli bedt om å legge ved  dokumentasjon på omsorgsovertagelse.</avsnitt>
     <lesmer liten="true" intro="Har du fått sluttpakke, ventelønn eller vært i førstegangstjenesten?">
         <avsnitt>Du må legge ved dokumentasjon på inntekten og perioden hvis du har hatt en av disse inntektskildene:</avsnitt>
         <liste>
-            <punkt>førstegangstjenesten i forsvaret</punkt>
+            <punkt>førstegangstjeneste i forsvaret</punkt>
             <punkt>Sluttpakke</punkt>
             <punkt>Lønn fra arbeidsgivere under videre- eller etterutdanning</punkt>
             <punkt>Ventelønn eller vartpenger</punkt>
         </liste>
     </lesmer>
         <lesmer liten="true" intro="Skal du ha foreldrepenger i fellesperioden?">
-        <avsnitt>Du må legge ved dokumentasjon på aktivitetskravet til mor dersom du skal være hjemme i fellesperioden. Hun må enten:</avsnitt>
+        <avsnitt>Du må legge ved dokumentasjon på aktivitetskravet til far 1 dersom du skal være hjemme i fellesperioden. Han må enten:</avsnitt>
         <liste>
             <punkt>være i arbeid</punkt>
             <punkt>ta utdanning på heltid</punkt>
