@@ -26,7 +26,7 @@ const InfoBareFarHarRett: FunctionComponent<Props> = ({ intl }) => {
                 </EkspanderbarSnakkeboble>
                 <EkspanderbarSnakkeboble
                     svg={dokumentasjon}
-                    tittel="Du kan skaffe dokumentasjon på mors aktivitet">
+                    tittel="Du trenger dokumentasjon på at mor er i godkjent aktivitet">
                     <Innhold
                         source={getSource(
                             'søk-foreldrepenger/bare-far-har-rett/dokumentasjon',
