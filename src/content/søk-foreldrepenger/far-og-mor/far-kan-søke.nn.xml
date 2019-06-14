@@ -1,1 +1,32 @@
-Du kan søke tre måneder tilbake tid etter at du startet uttaket ditt med foreldrepenger. Søker du på et senere tidspunkt, får du færre dager med foreldrepenger.
+<innhold>
+    <avsnitt>Du kan tidligst søke om foreldrepenger når barnet er født.</avsnitt>
+    <avsnitt>Du må søke senest siste dag mor har foreldrepenger. Dette gjelder også om du ønsker å utsette foreldrepengeperioden din. Starter du senere, får du færre uker med foreldrepenger hvis du ikke har rett til å utsette perioden.</avsnitt>
+    <lesmer liten="true" intro="Har du glemte å søke foreldrepenger?">
+        <avsnitt>Du kan søke tre måneder tilbake tid etter at du startet uttaket ditt med foreldrepenger. Søker du på et senere tidspunkt, får du færre dager med foreldrepenger.</avsnitt>
+    </lesmer>
+    <avsnitt>Når du skal søke, logger du deg inn med BankID fra banken din eller en annen elektronisk id. Spørsmålene du får i søknaden er tilpasset din situasjon og du får veiledning og informasjon underveis.</avsnitt>
+    <lesmer liten="true" intro="Har du fått sluttpakke, ventelønn eller vært i førstegangstjenesten?">
+        <avsnitt>Du må legge ved dokumentasjon på inntekten og perioden hvis du har hatt en av disse inntektskildene:</avsnitt>
+        <liste>
+            <punkt>Førstegangstjeneste i forsvaret</punkt>
+            <punkt>Sluttpakke</punkt>
+            <punkt>Ventelønn eller vartpenger</punkt>
+        </liste>
+    </lesmer>
+    <lesmer liten="true" intro="Skal du ha foreldrepenger i fellesperioden?">
+        <avsnitt>Du må legge ved dokumentasjon på aktivitetskravet til mor dersom du skal være hjemme i fellesperioden. Hun må enten:</avsnitt>
+        <liste>
+            <punkt>være i arbeid</punkt>
+            <punkt>ta utdanning på heltid</punkt>
+            <punkt>kombinere utdanning med arbeid som til sammen blir heltid</punkt>
+            <punkt>være helt avhengig av hjelp til å ta seg av barnet på grunn av sykdom</punkt>
+            <punkt>Innlagt på sykehus eller helseinstitusjon</punkt>
+            <punkt>delta i kvalifiseringsprogrammet</punkt>
+            <punkt>delta på heltid i introduksjonsprogrammet etter kapittel 2 for nyankomne innvandrere</punkt>
+        </liste>
+    </lesmer>
+    </lesmer>
+    <søkKnapp søknad="foreldrepenger">Søk nå</søkKnapp>
+    <lesmer liten="true" intro="Er mor syk?">Hvis mor er syk eller innlagt på sykehus eller helseinstitusjon kan du søke om foreldrepenger før barnet er født. Da må du sende søknaden i posten.</lesmer>
+</innhold>
+
