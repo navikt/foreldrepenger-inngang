@@ -1,9 +1,23 @@
+@import '../../styles/assets.less';
+
 .eventline {
     @ikonBredde: 6.25rem;
     @sirkelBredde: 1.5rem;
     @borderBredde: 0.25rem;
 
     position: relative;
+
+    @media (max-width: @mobile-breakpoint) {
+        flex-wrap: wrap;
+
+        .nav-veileder__snakkeboblePil {
+            display: none;
+        }
+
+        .nav-veileder__frame {
+            display: none;
+        }
+    }
 
     &__eventTitle {
         padding-left: 5rem;
@@ -17,6 +31,16 @@
             left: @ikonBredde / 2 - @sirkelBredde / 2 - @borderBredde / 2;
             border: @borderBredde solid #c1b5d0;
             z-index: 1;
+        }
+
+        @media (max-width: @mobile-breakpoint) {
+            &:before {
+                display: none;
+            }
+
+            padding-left: 0rem;
+            text-align: center;
+            min-width: 100%;
         }
     }
 
@@ -32,6 +56,12 @@
             background-color: #c1b5d0;
             left: @ikonBredde / 2 - @borderBredde;
             z-index: 0;
+        }
+
+        @media (max-width: @mobile-breakpoint) {
+            &:before {
+                display: none;
+            }
         }
     }
 
