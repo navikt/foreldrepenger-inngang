@@ -2,7 +2,6 @@
     <avsnitt>Du kan søke om foreldrepenger når du vet dato for <b>omsorgsovertakelse</b>.</avsnitt>
     </lesmer>
     <avsnitt>Når du skal søke, logger du deg inn med BankID fra banken din eller en annen elektronisk id. Spørsmålene du får i søknaden er tilpasset din situasjon og du får veiledning og informasjon underveis.</avsnitt>
-    <avsnitt>I løpet av søkaden kommer du til å bli bedt om å legge ved  dokumentasjon på omsorgsovertagelse.</avsnitt>
     <lesmer liten="true" intro="Har du fått sluttpakke, ventelønn eller vært i førstegangstjenesten?">
         <avsnitt>Du må legge ved dokumentasjon på inntekten og perioden hvis du har hatt en av disse inntektskildene:</avsnitt>
         <liste>

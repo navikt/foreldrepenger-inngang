@@ -57,7 +57,7 @@ const InfoFarOgMor: FunctionComponent<Props> = ({ intl }) => {
             <Event title="4 uker før fars første dag med foreldrepenger eller utsettelse">
                 <EkspanderbarSnakkeboble
                     svg={inntektsOpplysninger}
-                    tittel="Inntektsopplysningene til far kan komme inn">
+                    tittel="Vi får opplysninger om inntekten til far">
                     <Innhold
                         source={getSource(
                             'søk-foreldrepenger/far-og-mor/opplysninger-inntekt-far',
