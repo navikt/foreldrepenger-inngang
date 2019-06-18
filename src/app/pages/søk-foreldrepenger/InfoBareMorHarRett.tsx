@@ -25,7 +25,7 @@ const InfoBareMorHarRett: FunctionComponent<Props> = ({ intl }) => {
                 </EkspanderbarSnakkeboble>
             </Event>
             <Event title="22. svangerskapsuke">
-                <EkspanderbarSnakkeboble svg={morBrev} tittel="Mor kan søke om foreldrepenger">
+                <EkspanderbarSnakkeboble svg={morBrev} tittel="Du kan søke om foreldrepenger">
                     <Innhold
                         source={getSource(
                             'søk-foreldrepenger/bare-mor-har-rett/mor-kan-søke',
