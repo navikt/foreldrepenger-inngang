@@ -5,9 +5,9 @@
     <lesmer liten="true" intro="Har du fått sluttpakke, ventelønn eller vært i førstegangstjenesten?">
         <avsnitt>Du må legge ved dokumentasjon på inntekten og perioden hvis du har hatt en av disse inntektskildene:</avsnitt>
         <liste>
-            <punkt>Førstegangstjeneste i forsvaret</punkt>
-            <punkt>Sluttpakke</punkt>
-            <punkt>Ventelønn eller vartpenger</punkt>
+            <punkt>førstegangstjeneste i forsvaret</punkt>
+            <punkt>sluttpakke</punkt>
+            <punkt>ventelønn eller vartpenger</punkt>
         </liste>
     </lesmer>
     <lesmer liten="true" intro="Skal du ha foreldrepenger i fellesperioden?">

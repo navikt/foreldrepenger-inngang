@@ -20,6 +20,7 @@ import Ukekalkulator from './ukekalkulator/Ukekalkulator';
 import WithLink from 'app/components/with-link/WithLink';
 import './hvorLenge.less';
 import { Page } from 'app/types/Page';
+import UtvidetInformasjon from 'app/pages/kalkulator/utvidetinformasjon/UtvidetInformasjon';
 
 const infoSvg = require('../../../assets/ark/ark-info.svg').default;
 
@@ -128,6 +129,12 @@ class HvorLenge extends React.Component<Props, State> {
                                 intl
                             )}
                         </WithLink>
+                        <UtvidetInformasjon
+                            lukkLabel={getTranslation('om_foreldrepenger.prematuruker.lesmer.lukk', intl)}
+                            apneLabel={getTranslation('om_foreldrepenger.prematuruker.lesmer', intl)}
+                        >
+                                {getTranslation('om_foreldrepenger.prematuruker.lesmer.innhold', intl)}
+                        </UtvidetInformasjon>
                     </Normaltekst>
                 </div>
             </PanelMedIllustrasjon>

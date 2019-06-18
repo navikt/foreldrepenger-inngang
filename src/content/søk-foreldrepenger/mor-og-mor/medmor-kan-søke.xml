@@ -1,13 +1,13 @@
 <innhold>
     <avsnitt>Du kan tidligst søke om foreldrepenger når barnet er født.</avsnitt>
-    <avsnitt>Du må søke senest siste dag mor har foreldrepenger. Dette gjelder også om du ønsker å utsette foreldrepengeperioden din. Starter du senere, får du færre uker med foreldrepenger hvis du ikke har rett til å utsette perioden.</avsnitt>
+    <avsnitt>Du må søke senest siste dag mor har foreldrepenger. Dette gjelder også om du ønsker å utsette foreldrepengeperioden din. Starter du senere, får du færre dager med foreldrepenger hvis du ikke har rett til å utsette perioden.</avsnitt>
     <avsnitt>Når du skal søke, logger du deg inn med BankID fra banken din eller en annen elektronisk id. Spørsmålene du får i søknaden er tilpasset din situasjon og du får veiledning og informasjon underveis.</avsnitt>
     <lesmer liten="true" intro="Har du fått sluttpakke, ventelønn eller vært i førstegangstjenesten?">
         <avsnitt>Du må legge ved dokumentasjon på inntekten og perioden hvis du har hatt en av disse inntektskildene:</avsnitt>
         <liste>
-            <punkt>Førstegangstjeneste i forsvaret</punkt>
-            <punkt>Sluttpakke</punkt>
-            <punkt>Ventelønn eller vartpenger</punkt>
+            <punkt>førstegangstjeneste i forsvaret</punkt>
+            <punkt>sluttpakke</punkt>
+            <punkt>ventelønn eller vartpenger</punkt>
         </liste>
     </lesmer>
     <lesmer liten="true" intro="Skal du ha foreldrepenger i fellesperioden?">
@@ -17,7 +17,7 @@
             <punkt>ta utdanning på heltid</punkt>
             <punkt>kombinere utdanning med arbeid som til sammen blir heltid</punkt>
             <punkt>være helt avhengig av hjelp til å ta seg av barnet på grunn av sykdom</punkt>
-            <punkt>Innlagt på sykehus eller helseinstitusjon</punkt>
+            <punkt>innlagt på sykehus eller helseinstitusjon</punkt>
             <punkt>delta i kvalifiseringsprogrammet</punkt>
             <punkt>delta på heltid i introduksjonsprogrammet etter kapittel 2 for nyankomne innvandrere</punkt>
         </liste>

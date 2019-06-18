@@ -5,13 +5,13 @@
     <lesmer liten="true" intro="Er du ikke fast ansatt?">
         <avsnitt>Hvis du ikke er fast ansatt hos en arbeidsgiver, må du sende bekreftelse på dato for termin eller keisersnitt til NAV. Bekreftelsen får du hos jordmor eller legen din. Den må være datert i 22. svangerskapsuke eller senere.</avsnitt>
     </lesmer>
-    <lesmer liten="true" intro="Har du fått sluttpakke, ventelønn eller vært førstegangstjenesten?">
+    <lesmer liten="true" intro="Har du fått sluttpakke, ventelønn eller i vært førstegangstjenesten?">
         <avsnitt>Du må legge ved dokumentasjon på inntekten og perioden hvis du har hatt en av disse inntektskildene:</avsnitt>
         <liste>
             <punkt>førstegangstjeneste i forsvaret</punkt>
-            <punkt>Sluttpakke</punkt>
-            <punkt>Lønn fra arbeidsgivere under videre- eller etterutdanning</punkt>
-            <punkt>Ventelønn eller vartpenger</punkt>
+            <punkt>sluttpakke</punkt>
+            <punkt>lønn fra arbeidsgivere under videre- eller etterutdanning</punkt>
+            <punkt>ventelønn eller vartpenger</punkt>
         </liste>
     </lesmer>
     <søkKnapp søknad="foreldrepenger">Søk nå</søkKnapp>

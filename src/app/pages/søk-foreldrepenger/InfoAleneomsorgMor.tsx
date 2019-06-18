@@ -25,7 +25,7 @@ const InfoAleneomsorgMor: FunctionComponent<Props> = ({ intl }) => {
                 </EkspanderbarSnakkeboble>
             </Event>
             <Event title="22. svangerskapsuke">
-                <EkspanderbarSnakkeboble svg={morBrev} tittel="Mor kan søke om foreldrepenger">
+                <EkspanderbarSnakkeboble svg={morBrev} tittel="Du kan søke om foreldrepenger">
                     <Innhold
                         source={getSource('søk-foreldrepenger/aleneomsorg-mor/mor-kan-søke', intl)}
                     />
@@ -42,7 +42,7 @@ const InfoAleneomsorgMor: FunctionComponent<Props> = ({ intl }) => {
                         )}
                     />
                 </EkspanderbarSnakkeboble>
-                <EkspanderbarSnakkeboble svg={fåSvar} tittel="Mor får svar på søknaden">
+                <EkspanderbarSnakkeboble svg={fåSvar} tittel="Du får svar på søknaden">
                     <Innhold
                         source={getSource('søk-foreldrepenger/aleneomsorg-mor/mor-får-svar', intl)}
                     />
