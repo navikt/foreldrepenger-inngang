@@ -45,7 +45,7 @@ const InfoBareFarHarRett: FunctionComponent<Props> = ({ intl }) => {
                     />
                 </EkspanderbarSnakkeboble>
             </Event>
-            <Event title="4 uker før din første dag med foreldrepenger">
+            <Event title="4 uker før din første dag med foreldrepenger eller utsettelse">
                 <EkspanderbarSnakkeboble
                     svg={inntektsOpplysninger}
                     tittel="Vi får opplysninger om inntekten din">
@@ -56,7 +56,7 @@ const InfoBareFarHarRett: FunctionComponent<Props> = ({ intl }) => {
                         )}
                     />
                 </EkspanderbarSnakkeboble>
-                <EkspanderbarSnakkeboble svg={fåSvar} tittel="Du får svar på søknaden">
+                <EkspanderbarSnakkeboble svg={fåSvar} tittel="Du kan få svar på søknaden">
                     <Innhold
                         source={getSource(
                             'søk-foreldrepenger/bare-far-har-rett/far-får-svar',

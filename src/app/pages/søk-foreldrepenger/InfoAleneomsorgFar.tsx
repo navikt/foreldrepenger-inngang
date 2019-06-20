@@ -50,7 +50,7 @@ const InfoAleneomsorgFar: FunctionComponent<Props> = ({ intl }) => {
                         )}
                     />
                 </EkspanderbarSnakkeboble>
-                <EkspanderbarSnakkeboble svg={fåSvar} tittel="Du får svar på søknaden">
+                <EkspanderbarSnakkeboble svg={fåSvar} tittel="Du kan få svar på søknaden">
                     <Innhold
                         source={getSource('søk-foreldrepenger/aleneomsorg-far/far-får-svar', intl)}
                     />
