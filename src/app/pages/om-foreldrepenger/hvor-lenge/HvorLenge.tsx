@@ -130,10 +130,20 @@ class HvorLenge extends React.Component<Props, State> {
                             )}
                         </WithLink>
                         <UtvidetInformasjon
-                            lukkLabel={getTranslation('om_foreldrepenger.prematuruker.lesmer.lukk', intl)}
-                            apneLabel={getTranslation('om_foreldrepenger.prematuruker.lesmer', intl)}
-                        >
-                                {getTranslation('om_foreldrepenger.prematuruker.lesmer.innhold', intl)}
+                            lukkLabel={getTranslation(
+                                'om_foreldrepenger.prematuruker.lesmer.lukk',
+                                intl
+                            )}
+                            apneLabel={getTranslation(
+                                'om_foreldrepenger.prematuruker.lesmer',
+                                intl
+                            )}>
+                            <Innhold
+                                source={getSource(
+                                    'om-foreldrepenger/hvor-lenge/prematuruker',
+                                    intl
+                                )}
+                            />
                         </UtvidetInformasjon>
                     </Normaltekst>
                 </div>
