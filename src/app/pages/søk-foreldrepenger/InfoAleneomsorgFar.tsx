@@ -28,7 +28,7 @@ const InfoAleneomsorgFar: FunctionComponent<Props> = ({ intl }) => {
             <Event title="Du får vite dato for termin eller omsorgsovertakelse">
                 <EkspanderbarSnakkeboble
                     svg={dokumentasjon}
-                    tittel="Du får dokumentasjon på omsorgsovertakelse">
+                    tittel="Du får dokumentasjon på at du er alene om omsorgen">
                     <Innhold
                         source={getSource('søk-foreldrepenger/aleneomsorg-far/dokumentasjon', intl)}
                     />
@@ -39,7 +39,7 @@ const InfoAleneomsorgFar: FunctionComponent<Props> = ({ intl }) => {
                     />
                 </EkspanderbarSnakkeboble>
             </Event>
-            <Event title="4 uker før din første dag med foreldrepenger">
+            <Event title="4 uker før din første dag med foreldrepenger eller utsettelse">
                 <EkspanderbarSnakkeboble
                     svg={inntektsOpplysninger}
                     tittel="Vi får opplysninger om inntekten din">

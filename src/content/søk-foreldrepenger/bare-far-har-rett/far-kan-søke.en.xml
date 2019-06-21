@@ -1,6 +1,6 @@
 <innhold>
     <avsnitt>Du kan tidligst søke om foreldrepenger når barnet er født.</avsnitt>
-    <avsnitt>Du må søke senest syv uker etter fødselen. Dette gjelder også om du ønsker å utsette foreldrepengeperioden din. Søker du på et senere tidspunkt, får du færre dager med foreldrepenger.</avsnitt>
+    <avsnitt>Du kan starte foreldrepengeperioden din fra uke syv etter fødselen. Starter du senere, får du færre uker med foreldrepenger hvis du ikke søker om utsettelse.</avsnitt>
     <avsnitt>Når du skal søke, logger du deg inn med BankID fra banken din eller en annen elektronisk id. Spørsmålene du får i søknaden er tilpasset din situasjon og du får veiledning og informasjon underveis.</avsnitt>
     <avsnitt>I søknaden vil du bli bedt om å legge ved dokumentasjon på at mor fyller aktivitetskravet.</avsnitt>
     <lesmer liten="true" intro="Har du fått sluttpakke, ventelønn eller vært i førstegangstjenesten?">
@@ -12,4 +12,5 @@
         </liste>
     </lesmer>
     <søkKnapp søknad="foreldrepenger">Søk nå</søkKnapp>
+    <lesmer liten="true" intro="Er mor syk?">Hvis mor er syk eller innlagt på sykehus eller helseinstitusjon kan du søke om foreldrepenger før barnet er født. Da må du sende søknaden i posten.</lesmer>
 </innhold>

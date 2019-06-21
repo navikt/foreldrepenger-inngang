@@ -188,9 +188,9 @@
     "om_foreldrepenger.hvor_lenge.kalkulatorlenke": "Calculate your parental benefit",
     "om_foreldrepenger.hvor_lenge.regelendringer_lenke": "Rule changes in 2018/2019",
 
-    "om_foreldrepenger.prematuruker.lesmer": "Er barn født før 33. svangerskapsuke?",
-    "om_foreldrepenger.prematuruker.lesmer.lukk": "Lukk informasjon",
-    "om_foreldrepenger.prematuruker.lesmer.innhold": "Hvis barnet blir født før 33. svangerskapsuke så blir perioden med foreldrepenger utvidet med samme antall uker og dager som barnet er født før termindato. Lengden på den utvidede perioden er uavhengig av om dere får ett eller flere barn og om dere 100 prosent foreldrepenger eller 80 prosent foreldrepenger. Dersom barnet etter fødselen er innlagt på sykehus, vil dere som regel kunne motta pleiepenger så lenge barnet er innlagt. Antallet dager med pleiepenger i perioden fra fødsel og fram til termindatoen trekkes fra den utvidede perioden. Har dere pleiepenger etter opprinnelig termindato, trekkes ikke disse dagene fra den utvidede perioden. Foreldrepengeperioden utsettes så lenge barnet er innlagt, og starter først når barnet er utskrevet fra sykehuset.",
+    "om_foreldrepenger.prematuruker.lesmer": "If a child is born before the 33rd week of pregnancy",
+    "om_foreldrepenger.prematuruker.lesmer.lukk": "Close",
+    "om_foreldrepenger.prematuruker.lesmer.innhold": "If a child is born before the 33rd week of pregnancy, the parental benefit period is extended by the same number of weeks and days that the child was born before the due date. The parental benefit will be extended by the same period regardless of whether you give birth to one or more children, or if you have 100 per cent parental benefit or 80 per cent parental benefit. If the child is hospitalised after birth, you will usually be able to receive attendance allowance while the child is hospitalised. If you receive attendance allowance during the period from birth to the original due date, these days will be deducted from the extended period. If you receive attendance allowance according to the original due date, these days will not be deducted from the extended period. The parental benefit will be postponed as long as the child is hospitalised, and does not start until the child is discharged from the hospital. You can read about your rights to attendance allowance here.",
 
     "om_foreldrepenger.hvor_lenge.fordeling.tittel": "The periods are divided between you as follows",
     "om_foreldrepenger.hvor_lenge.fordeling.tittel_alene": "Your parental benefit period is as follows",
