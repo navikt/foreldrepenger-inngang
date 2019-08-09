@@ -27,6 +27,7 @@
             position: absolute;
             width: @sirkelBredde;
             height: @sirkelBredde;
+            background: white;
             border-radius: 50%;
             left: @ikonBredde / 2 - @sirkelBredde / 2 - @borderBredde / 2;
             border: @borderBredde solid #c1b5d0;
@@ -35,17 +36,28 @@
 
         @media (max-width: @mobile-breakpoint) {
             &:before {
-                display: none;
+                left: 1rem;
             }
 
-            padding-left: 0rem;
+            &:after {
+                content: '';
+                position: absolute;
+                top: 0;
+                bottom: 2rem;
+                width: @borderBredde;
+                background-color: #c1b5d0;
+                left: 1.625rem;
+                z-index: 0;
+            }
+
             text-align: center;
-            min-width: 100%;
+            max-width: 80%;
         }
     }
 
     &__event .ekspanderbarSnakkeboble {
         position: relative;
+        z-index: 1;
 
         &:before {
             content: '';
@@ -60,7 +72,7 @@
 
         @media (max-width: @mobile-breakpoint) {
             &:before {
-                display: none;
+                left: 1.625rem;
             }
         }
     }
