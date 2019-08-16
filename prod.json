@@ -3,10 +3,13 @@
     "ingress-internal" : "https://familie.nais.oera.local",
     "application_name": "foreldrepenger-inngang",
     "env": {
-        "FORELDREPENGESOKNAD_API_URL": "https://foreldrepengesoknad-api.nav.no/rest",
-        "LOGINSERVICE_URL": "https://loginservice.nav.no/login",
-        "FEATURE_LOGGING": "on",
-        "FEATURE_MINI_DIALOG": "off",
-        "FEATURE_HISTORIKK":"off"
+        "SOK_FORELDREPENGER_URL": "https://foreldrepengesoknad.nav.no",
+        "SOK_FORELDREPENGER_PAPIR_URL": "https://www.nav.no/no/Person/Skjemaer-for-privatpersoner/Skjemaer/Familie/foreldrepenger-og-engangsstonad/Foreldrepenger+og+engangsst%C3%B8nad?method=mail&veiledertype=privatperson",
+        "SOK_ENGANGSSTONAD_URL": "https://engangsstonad.nav.no",
+        "SOK_ENGANGSSTONAD_PAPIR_URL": "https://www.nav.no/no/Person/Skjemaer-for-privatpersoner/Skjemaer/Familie/foreldrepenger-og-engangsstonad/Foreldrepenger+og+engangsst%C3%B8nad?method=mail&veiledertype=privatperson",
+        "ENDRE_SOKNAD_FORELDREPENGER_URL": "https://tjenester.nav.no/esso/saml2/jsp/spSSOInit.jsp?metaAlias=/sp&idpEntityID=idporten.difi.no-v3&NameIDFormat=transient&AuthLevel=4&goto=https://tjenester.nav.no/soknadforeldrepenger/app/start",
+        "DINE_FORELDREPENGER_URL": "https://foreldrepenger.nav.no",
+        "SOK_SVANGERSKAPSPENGER_URL": "https://svangerskapspengesoknad.nav.no/",
+        "SOK_SVANGERSKAPSPENGER_PAPIR_URL": "https://familie.nav.no/hva-soker-du/svangerskapspenger"
     }
 }
