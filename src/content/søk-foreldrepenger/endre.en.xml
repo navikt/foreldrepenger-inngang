@@ -1,12 +1,12 @@
 <innhold>
-    <avsnitt>Du kan søke om endring når som helst etter at du har sendt søknaden eller allerede har fått innvilget foreldrepenger. Uansett hva som er grunnen til at du vil søke om endring, bruker du det samme skjemaet.</avsnitt>
-    <søkKnapp søknad="foreldrepenger" sentrert="true">Søk om endring</søkKnapp>
-    <avsnitt>Les mer om å søke om endring for følgende situasjoner</avsnitt>
+    <avsnitt>You may apply for a change at any time after you have submitted the application or already have been granted parental benefit. Regardless of the reason you are applying for a change, you use the same form.</avsnitt>
+    <søkKnapp søknad="foreldrepenger" sentrert="true">Apply for change</søkKnapp>
+    <avsnitt>More about applying for a change for the following situations</avsnitt>
     <liste>
-        <punkt><lenke url="https://www.nav.no/no/Bedrift/Tjenester+og+skjemaer/NAV-+og+Altinn-tjenester/digital" ekstern="true">Utsette fordi du skal jobbe</lenke></punkt>
-        <punkt><lenke url="https://www.nav.no/no/Bedrift/Tjenester+og+skjemaer/NAV-+og+Altinn-tjenester/digital" ekstern="true">Utsette fordi du skal på ferie</lenke></punkt>
-        <punkt><lenke url="https://www.nav.no/no/Bedrift/Tjenester+og+skjemaer/NAV-+og+Altinn-tjenester/digital" ekstern="true">Utsette fordi du er syk</lenke></punkt>
-        <punkt><lenke url="https://www.nav.no/no/Bedrift/Tjenester+og+skjemaer/NAV-+og+Altinn-tjenester/digital" ekstern="true">Utsette fordi barnet er syk</lenke></punkt>
-        <punkt><lenke url="https://www.nav.no/no/Bedrift/Tjenester+og+skjemaer/NAV-+og+Altinn-tjenester/digital" ekstern="true">Overta foreldrepenger fordi den andre forelderen er syk</lenke></punkt>
+        <punkt><lenke url="https://www.nav.no/no/Bedrift/Tjenester+og+skjemaer/NAV-+og+Altinn-tjenester/digital" ekstern="true">Postponement because you will be working</lenke></punkt>
+        <punkt><lenke url="https://www.nav.no/no/Bedrift/Tjenester+og+skjemaer/NAV-+og+Altinn-tjenester/digital" ekstern="true">Postponement because you are going on holiday</lenke></punkt>
+        <punkt><lenke url="https://www.nav.no/no/Bedrift/Tjenester+og+skjemaer/NAV-+og+Altinn-tjenester/digital" ekstern="true">Postponement because you are sick</lenke></punkt>
+        <punkt><lenke url="https://www.nav.no/no/Bedrift/Tjenester+og+skjemaer/NAV-+og+Altinn-tjenester/digital" ekstern="true">Postponement because the child is sick</lenke></punkt>
+        <punkt><lenke url="https://www.nav.no/no/Bedrift/Tjenester+og+skjemaer/NAV-+og+Altinn-tjenester/digital" ekstern="true">Take over parental benefit because the other parent is sick</lenke></punkt>
     </liste>
 </innhold>

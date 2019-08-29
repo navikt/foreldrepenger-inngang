@@ -1,18 +1,19 @@
 <innhold>
-    <avsnitt>Vi anbefaler at du søker 4-6 uker før du skal ha foreldrepenger.</avsnitt>
-    <avsnitt>Du kan tidligst søke om foreldrepenger når du er i 22. svangerskapsuke. Hvis du har fått en dato for planlagt keisersnitt, bruker du denne datoen som termindato når du søker.</avsnitt>
-    <avsnitt>Når du skal søke, logger du deg inn med BankID fra banken din eller en annen elektronisk id. Spørsmålene du får i søknaden er tilpasset din situasjon og du får veiledning og informasjon underveis.</avsnitt>
-    <lesmer liten="true" intro="Er du ikke fast ansatt?">
-        <avsnitt>Hvis du ikke er fast ansatt hos en arbeidsgiver, må du sende bekreftelse på dato for termin eller keisersnitt til NAV. Bekreftelsen får du hos jordmor eller legen din. Den må være datert i 22. svangerskapsuke eller senere.</avsnitt>
+    <avsnitt>We recommend that you apply 4-6 weeks before you are entitled to parental benefit.</avsnitt>
+    <avsnitt>You cannot apply for parental benefit before the 22nd week of pregnancy. If you already have a date for a planned caesarean, use this date as the estimated date of delivery when you apply.</avsnitt>
+    <avsnitt>To apply, log in using your BankID system from your bank or another approved electronic ID. The questions asked in the application are adapted to your situation, and instructions and information are provided as you fill in the form.</avsnitt>
+    <lesmer liten="true" intro="Do you not have permanent employment?">
+        <avsnitt>If you are not permanently employed, you must send confirmation of the estimated date of delivery or caesarean to NAV. The expected date of delivery is provided by your midwife or doctor. This must be dated in 22nd week of pregnancy or later.</avsnitt>
     </lesmer>
-    <lesmer liten="true" intro="Har du fått sluttpakke, ventelønn eller vært i førstegangstjenesten?">
-        <avsnitt>Du må legge ved dokumentasjon på inntekten og perioden hvis du har hatt en av disse inntektskildene:</avsnitt>
+    <lesmer liten="true" intro="Have you received a severance package, interim pay or been in compulsory military service?">
+        <avsnitt>You must submit documentation of your income and the period if you have had one of these sources of income:</avsnitt>
         <liste>
-            <punkt>førstegangstjeneste i forsvaret</punkt>
-            <punkt>sluttpakke</punkt>
-            <punkt>lønn fra arbeidsgivere under videre- eller etterutdanning</punkt>
-            <punkt>ventelønn eller vartpenger</punkt>
+        <punkt>compulsory military service</punkt>
+        <punkt>severance package</punkt>
+        <punkt>salary from employer during further or continuing education</punkt>
+        <punkt>interim pay or allowance</punkt>
         </liste>
     </lesmer>
-    <søkKnapp søknad="foreldrepenger">Søk nå</søkKnapp>
+    <søkKnapp søknad="parental benefit">Apply now</søkKnapp>
 </innhold>
+<innhold>

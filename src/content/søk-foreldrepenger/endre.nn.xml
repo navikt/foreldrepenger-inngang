@@ -1,12 +1,12 @@
 <innhold>
-    <avsnitt>Du kan søke om endring når som helst etter at du har sendt søknaden eller allerede har fått innvilget foreldrepenger. Uansett hva som er grunnen til at du vil søke om endring, bruker du det samme skjemaet.</avsnitt>
+    <avsnitt>Du kan søkje om endring når som helst etter at du har sendt søknaden eller allereie har fått innvilga foreldrepengar. Uansett kva som er grunnen til at du vil søkje om endring, bruker du det same skjemaet.</avsnitt>
     <søkKnapp søknad="foreldrepenger" sentrert="true">Søk om endring</søkKnapp>
-    <avsnitt>Les mer om å søke om endring for følgende situasjoner</avsnitt>
+    <avsnitt>Les meir om å søkje om endring for følgjande situasjonar</avsnitt>
     <liste>
-        <punkt><lenke url="https://www.nav.no/no/Bedrift/Tjenester+og+skjemaer/NAV-+og+Altinn-tjenester/digital" ekstern="true">Utsette fordi du skal jobbe</lenke></punkt>
-        <punkt><lenke url="https://www.nav.no/no/Bedrift/Tjenester+og+skjemaer/NAV-+og+Altinn-tjenester/digital" ekstern="true">Utsette fordi du skal på ferie</lenke></punkt>
-        <punkt><lenke url="https://www.nav.no/no/Bedrift/Tjenester+og+skjemaer/NAV-+og+Altinn-tjenester/digital" ekstern="true">Utsette fordi du er syk</lenke></punkt>
-        <punkt><lenke url="https://www.nav.no/no/Bedrift/Tjenester+og+skjemaer/NAV-+og+Altinn-tjenester/digital" ekstern="true">Utsette fordi barnet er syk</lenke></punkt>
-        <punkt><lenke url="https://www.nav.no/no/Bedrift/Tjenester+og+skjemaer/NAV-+og+Altinn-tjenester/digital" ekstern="true">Overta foreldrepenger fordi den andre forelderen er syk</lenke></punkt>
+        <punkt><lenke url="https://www.nav.no/no/Bedrift/Tjenester+og+skjemaer/NAV-+og+Altinn-tjenester/digital" ekstern="true">Utsetje fordi du skal jobbe</lenke></punkt>
+        <punkt><lenke url="https://www.nav.no/no/Bedrift/Tjenester+og+skjemaer/NAV-+og+Altinn-tjenester/digital" ekstern="true">Utsetje fordi du skal på ferie</lenke></punkt>
+        <punkt><lenke url="https://www.nav.no/no/Bedrift/Tjenester+og+skjemaer/NAV-+og+Altinn-tjenester/digital" ekstern="true">Utsetje fordi du er sjuk</lenke></punkt>
+        <punkt><lenke url="https://www.nav.no/no/Bedrift/Tjenester+og+skjemaer/NAV-+og+Altinn-tjenester/digital" ekstern="true">Utsetje fordi barnet er sjukt</lenke></punkt>
+        <punkt><lenke url="https://www.nav.no/no/Bedrift/Tjenester+og+skjemaer/NAV-+og+Altinn-tjenester/digital" ekstern="true">Overta foreldrepengar fordi den andre forelderen er sjuk</lenke></punkt>
     </liste>
 </innhold>

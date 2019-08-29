@@ -1,28 +1,28 @@
 <innhold>
-    <avsnitt>Du kan søke om foreldrepenger når du vet dato for <b>omsorgsovertakelse</b>.</avsnitt>
+    <avsnitt>You may apply for parental benefit when you know the date of <b>assumption of care</b>.</avsnitt>
     </lesmer>
-    <avsnitt>Når du skal søke, logger du deg inn med BankID fra banken din eller en annen elektronisk id. Spørsmålene du får i søknaden er tilpasset din situasjon og du får veiledning og informasjon underveis.</avsnitt>
-    <avsnitt>I løpet av søkaden kommer du til å bli bedt om å legge ved dokumentasjon på omsorgsovertagelse.</avsnitt>
-    <lesmer liten="true" intro="Har du fått sluttpakke, ventelønn eller vært i førstegangstjenesten?">
-        <avsnitt>Du må legge ved dokumentasjon på inntekten og perioden hvis du har hatt en av disse inntektskildene:</avsnitt>
+    <avsnitt>To apply, log in using your BankID system from your bank or another approved electronic ID. The questions asked in the application are adapted to your situation, and instructions and information are provided as you fill in the form.</avsnitt>
+    <avsnitt>In the application you will be asked to enclose documentation of assumption of care.</avsnitt>
+    <lesmer liten="true" intro="Have you received a severance package, interim pay or been in compulsory military service?">
+        <avsnitt>You must submit documentation of your income and the period if you have had one of these sources of income:</avsnitt>
         <liste>
-            <punkt>førstegangstjeneste i forsvaret</punkt>
-            <punkt>sluttpakke</punkt>
-            <punkt>lønn fra arbeidsgivere under videre- eller etterutdanning</punkt>
-            <punkt>ventelønn eller vartpenger</punkt>
+<punkt>compulsory military service</punkt>
+<punkt>severance package</punkt>
+<punkt>salary from employer during further or continuing education</punkt>
+<punkt>interim pay or allowance</punkt>
         </liste>
     </lesmer>
-        <lesmer liten="true" intro="Skal du ha foreldrepenger i fellesperioden?">
-        <avsnitt>Du må legge ved dokumentasjon på aktivitetskravet til far 1 dersom du skal være hjemme i fellesperioden. Han må enten:</avsnitt>
+        <lesmer liten="true" intro="Will you be receiving parental benefit in the shared period?">
+        <avsnitt>You must provide documentation of father 1’s activity requirement if you are staying at home during the shared period. He must either:</avsnitt>
         <liste>
-            <punkt>være i arbeid</punkt>
-            <punkt>ta utdanning på heltid</punkt>
-            <punkt>kombinere utdanning med arbeid som til sammen blir heltid</punkt>
-            <punkt>være helt avhengig av hjelp til å ta seg av barnet på grunn av sykdom</punkt>
-            <punkt>være innlagt på sykehus eller helseinstitusjon</punkt>
-            <punkt>delta i kvalifiseringsprogrammet</punkt>
-            <punkt>delta på heltid i introduksjonsprogrammet etter kapittel 2 for nyankomne innvandrere</punkt>
+<punkt>be employed</punkt>
+<punkt>study full-time</punkt>
+<punkt>combine studying with work that together makes it full-time</punkt>
+<punkt>be fully dependent on assistance to take care of the child due to sickness</punkt>
+<punkt>be hospitalised at a hospital or health care institution</punkt>
+<punkt>participate in a qualification programme</punkt>
+<punkt>participate full-time in the Introduction Programme for newly arrived immigrants pursuant to chapter 2 of the Introduction Act</punkt>
         </liste>
     </lesmer>
-    <søkKnapp søknad="foreldrepenger">Søk nå</søkKnapp>
+    <søkKnapp søknad="parental benefit">Apply now</søkKnapp>
 </innhold>

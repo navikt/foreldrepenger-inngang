@@ -1,15 +1,18 @@
 <innhold>
-    <avsnitt>Både når du tar ut foreldrepenger eller utsetter må du kunne dokumentere at mor er i aktivitet. Hun må enten:</avsnitt>
-    <liste>
-        <punkt>be working</punkt>
-        <punkt>studying full-time</punkt>
-        <punkt>combining study with work that together makes it full-time</punkt>
-        <punkt>be fully dependent on assistance to take care of the child due to sickness</punkt>
-        <punkt>participating in a qualification programme</punkt>
-        <punkt>participating fulltime in the Introduction Programme for newly arrived immigrants pursuant to chapter 2 of the Introduction Act</punkt>
+    <avsnitt>Du må leggje ved dokumentasjon på aktivitetskravet til mor dersom du skal vere heime eller utsetje. Ho må anten:</avsnitt>
+   <liste>
+            <punkt>vere i arbeid</punkt>
+            <punkt>ta utdanning på heiltid</punkt>
+            <punkt>kombinere utdanning med arbeid som til saman blir heiltid</punkt>
+            <punkt>vere heilt avhengig av hjelp til å ta seg av barnet på grunn av sjukdom</punkt>
+            <punkt>vere innlagd på sjukehus eller helseinstitusjon</punkt>
+            <punkt>delta i kvalifiseringsprogrammet</punkt>
+            <punkt>delta på heiltid i introduksjonsprogrammet etter kapittel 2 for nyinnkomne innvandrarar</punkt>
+        </liste>
     </liste>
     <lesmer liten="true" intro="Er mor uføretrygdet?">
-    <avsnitt>Hvis mor er uføretrygdet, kan du ta ut inntil 15 uker ved 100 prosent foreldrepenger, eller 19 uker ved 80 prosent foreldrepenger uten at det er aktivitetskrav til mor. Disse ukene må du ta ut innen 46 uker etter at barnet er født om du velger 100 prosent foreldrepenger, eller 56 uker etter barnet er født hvis du velger 80 prosent foreldrepenger.</avsnitt> 
-    <avsnitt>Skal du ta ut mer enn disse ukene må mor være i jobb, studere eller i annen godkjent aktivitet når du skal være hjemme med barnet eller hvis du skal utsette foreldrepengene.</avsnitt>
+     <avsnitt>Dersom mor er uføretrygda, kan du ta ut inntil 15 veker ved 100 prosent foreldrepengar, eller 19 veker ved 80 prosent foreldrepengar utan at det er aktivitetskrav til mor. Desse vekene må du ta ut innan 46 veker etter at barnet er født, om du vel 100 prosent foreldrepengar, eller 56 veker etter at barnet er født, dersom du vel 80 prosent foreldrepengar.</avsnitt> 
+    <avsnitt>Skal du ta ut meir enn desse vekene, må mor vere i jobb, studere eller i annan godkjend aktivitet når du skal vere heime med barnet, eller dersom du skal utsetje foreldrepengane.</avsnitt>
     </lesmer>
 </innhold>
+

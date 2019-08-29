@@ -1,18 +1,18 @@
 <innhold>
-    <avsnitt>Vi anbefaler at du søker 4-6 uker før du skal ha foreldrepenger.</avsnitt>
-    <avsnitt>Du kan tidligst søke om foreldrepenger ved 22. svangerskapsuke. Hvis du har fått en dato for planlagt keisersnitt, bruker du denne datoen som termindato når du søker.</avsnitt>
-    <avsnitt>Når du skal søke, logger du deg inn med BankID fra banken din eller en annen elektronisk id. Spørsmålene du får i søknaden er tilpasset din situasjon og du får veiledning og informasjon underveis.</avsnitt>
-    <lesmer liten="true" intro="Er du ikke fast ansatt?">
-        <avsnitt>Hvis du ikke er fast ansatt hos en arbeidsgiver, må du sende bekreftelse på dato for termin eller keisersnitt til NAV. Bekreftelsen får du hos jordmor eller legen din. Den må være datert i 22. svangerskapsuke eller senere.</avsnitt>
+    <avsnitt>Vi rår til at du søkjer fire–seks veker før du skal ha foreldrepengar.</avsnitt>
+    <avsnitt>Du kan tidlegast søkje om foreldrepengar når du er i 22. svangerskapsveke. Dersom du har fått ein dato for planlagt keisarsnitt, bruker du denne datoen som termindato når du søkjer.</avsnitt>
+    <avsnitt>Når du skal søkje, loggar du deg inn med BankID frå banken din eller ein annan elektronisk id. Spørsmåla du får i søknaden, er tilpassa situasjonen din, og du får rettleiing og informasjon undervegs.</avsnitt>
+    <lesmer liten="true" intro="Er du ikkje fast tilsett?">
+        <avsnitt>Dersom du ikkje er fast tilsett hos ein arbeidsgivar, må du sende stadfesting på dato for termin eller keisarsnitt til NAV. Stadfestinga får du hos jordmor eller legen din. Ho må vere datert i 22. svangerskapsveke eller seinare.</avsnitt>
     </lesmer>
-    <lesmer liten="true" intro="Har du fått sluttpakke, ventelønn eller vært i førstegangstjenesten?">
-        <avsnitt>Du må legge ved dokumentasjon på inntekten og perioden hvis du har hatt en av disse inntektskildene:</avsnitt>
+    <lesmer liten="true" intro="Har du fått sluttpakke, ventelønn eller vore i førstegongstenesta?">
+        <avsnitt>Du må leggje ved dokumentasjon på inntekta og perioden dersom du har hatt ei av desse inntektskjeldene:</avsnitt>
         <liste>
-            <punkt>førstegangstjeneste i forsvaret</punkt>
+            <punkt>førstegongsteneste i forsvaret</punkt>
             <punkt>sluttpakke</punkt>
-            <punkt>lønn fra arbeidsgivere under videre- eller etterutdanning</punkt>
-            <punkt>ventelønn eller vartpenger</punkt>
+            <punkt>lønn frå arbeidsgivarar under vidare- eller etterutdanning</punkt>
+            <punkt>ventelønn eller vartpengar</punkt>
         </liste>
     </lesmer>
-    <søkKnapp søknad="foreldrepenger">Søk nå</søkKnapp>
+    <søkKnapp søknad="foreldrepengar">Søk no</søkKnapp>
 </innhold>

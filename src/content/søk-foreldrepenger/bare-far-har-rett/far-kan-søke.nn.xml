@@ -1,16 +1,16 @@
 <innhold>
-    <avsnitt>Du kan tidligst søke om foreldrepenger når barnet er født.</avsnitt>
-    <avsnitt>Du kan starte foreldrepengeperioden din fra uke syv etter fødselen. Starter du senere, får du færre uker med foreldrepenger hvis du ikke søker om utsettelse.</avsnitt>
-    <avsnitt>Når du skal søke, logger du deg inn med BankID fra banken din eller en annen elektronisk id. Spørsmålene du får i søknaden er tilpasset din situasjon og du får veiledning og informasjon underveis.</avsnitt>
-    <avsnitt>I søknaden vil du bli bedt om å legge ved dokumentasjon på at mor fyller aktivitetskravet.</avsnitt>
-    <lesmer liten="true" intro="Har du fått sluttpakke, ventelønn eller vært i førstegangstjenesten?">
-        <avsnitt>Du må legge ved dokumentasjon på inntekten og perioden hvis du har hatt en av disse inntektskildene:</avsnitt>
+    <avsnitt>Du kan tidlegast søkje om foreldrepengar når du veit datoen for <b>terminen</b> eller <b>omsorgsovertakinga</b>.</avsnitt>
+    <avsnitt>Du kan starte foreldrepengeperioden din frå veke sju etter fødselen. Startar du seinare, får du færre veker med foreldrepengar dersom du ikkje søkjer om utsetjing.</avsnitt>
+    <avsnitt>Når du skal søkje, loggar du deg inn med BankID frå banken din eller ein annan elektronisk id. Spørsmåla du får i søknaden, er tilpassa situasjonen din, og du får rettleiing og informasjon undervegs.</avsnitt>
+    <lesmer liten="true" intro="Har du fått sluttpakke, ventelønn eller vore i førstegongstenesta?">
+        <avsnitt>Du må leggje ved dokumentasjon på inntekta og perioden dersom du har hatt ei av desse inntektskjeldene:</avsnitt>
         <liste>
-            <punkt>førstegangstjeneste i forsvaret</punkt>
+            <punkt>førstegongsteneste i forsvaret</punkt>
             <punkt>sluttpakke</punkt>
-            <punkt>ventelønn eller vartpenger</punkt>
+            <punkt>lønn frå arbeidsgivarar under vidare- eller etterutdanning</punkt>
+            <punkt>ventelønn eller vartpengar</punkt>
         </liste>
     </lesmer>
-    <søkKnapp søknad="foreldrepenger">Søk nå</søkKnapp>
-    <lesmer liten="true" intro="Er mor syk?">Hvis mor er syk eller innlagt på sykehus eller helseinstitusjon kan du søke om foreldrepenger før barnet er født. Da må du sende søknaden i posten.</lesmer>
+    <søkKnapp søknad="foreldrepengar">Søk no</søkKnapp>
+     <lesmer liten="true" intro="Er mor sjuk?">Dersom mor er sjuk eller lagd inn på sjukehus eller helseinstitusjon, kan du søkje om foreldrepengar før barnet er født. Då må du sende søknaden i posten.</lesmer>
 </innhold>
