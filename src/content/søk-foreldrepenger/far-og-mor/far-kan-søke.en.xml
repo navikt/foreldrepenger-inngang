@@ -1,5 +1,5 @@
 <innhold>
-    <avsnitt>You may only apply for parental benefit when the child has been born.</avsnitt >
+    <avsnitt>You may only apply for parental benefit when the child has been born.</avsnitt>
     <avsnitt>You must apply no later than the last day the mother has parental benefit. This also applies if you are starting by postponing your parental benefit period. If you apply later, you will be granted fewer days of parental benefit.</avsnitt>
     <avsnitt>To apply, log in using your BankID system from your bank or another approved electronic ID. The questions asked in the application are adapted to your situation, and instructions and information are provided as you fill in the form.</avsnitt>
     <lesmer liten="true" intro="Have you received a severance package, interim pay or been in compulsory military service?">
@@ -21,7 +21,6 @@
             <punkt>participate in a qualification programme</punkt>
             <punkt>participate full-time in the Introduction Programme for newly arrived immigrants pursuant to chapter 2 of the Introduction Act</punkt>
         </liste>
-    </lesmer>
     </lesmer>
     <søkKnapp søknad="parental benefit">Apply now</søkKnapp>
     <lesmer liten="true" intro="Is the mother sick?">If the mother is sick or hospitalised in a hospital or health care institution, you may apply for parental benefit before the child is born. In this case, you must send the application by post.</lesmer>
