@@ -1,3 +1,3 @@
 <innhold>
-    <avsnitt>Utfra tallene du har oppgitt antar vi at du <variabel>INNTEKTSSITUASJON</variabel> <b><variabel>ÅRLIG_SNITTLØNN</variabel> kroner</b>. Hvis det du faktisk <variabel>INNTEKTSSITUASJON_PRETERITUM</variabel> de tolv siste månedene er mindre enn <b><variabel>NEDRE_AVVIKSGRENSE</variabel> kr</b> eller høyere enn <b><variabel>ØVRE_AVVIKSGRENSE</variabel> kr</b>, kan du først få et svar på hva du får utbetalt når søknaden din er ferdigbehandlet.</avsnitt>
+    <avsnitt>Utfra tallene du har oppgitt antar vi at du <variabel>INNTEKTSSITUASJON</variabel> <b><variabel>ÅRLIG_SNITTLØNN</variabel> kroner</b>. Hvis det du faktisk <variabel>INNTEKTSSITUASJON_PRETERITUM</variabel> de 12 siste månedene er mindre enn <b><variabel>NEDRE_AVVIKSGRENSE</variabel> kr</b> eller høyere enn <b><variabel>ØVRE_AVVIKSGRENSE</variabel> kr</b>, kan du først få et svar på hva du får utbetalt når søknaden din er ferdigbehandlet.</avsnitt>
 </innhold>

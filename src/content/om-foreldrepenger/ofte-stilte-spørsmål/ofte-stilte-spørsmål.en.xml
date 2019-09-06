@@ -1,6 +1,6 @@
 <innhold>
     <lesmer intro="When will I get a response to my application?">
-         <avsnitt>The earliest you will receive a response to your application is 4 weeks the start of your parental benefit period. This is because we use the most recent information about your income when we calculate how much parental benefit you will receive.</avsnitt>
+         <avsnitt>The earliest you will receive a response to your application is <b>4 weeks</b> the start of your parental benefit period. This is because we use the most recent information about your income when we calculate how much parental benefit you will receive.</avsnitt>
     </lesmer>
     <lesmer intro="Can I receive parental benefit while I am a student?">
         <avsnitt>To be entitled to parental benefit, you must have had income in six of the past ten months. Student loans and grants from the Norwegian State Educational Loan Fund ("Lånekassen") do not provide entitlement to parental benefit. If you are not entitled to parental benefit, you can apply for a lump-sum grant. Try our <lenke url="/veiviser">"veiviser"</lenke> to see what you may be entitled to.</avsnitt>
@@ -18,6 +18,7 @@
     </lesmer>
     <lesmer intro="What is the difference between parental benefit and lump-sum grant?">
         <avsnitt>Parental benefit provides you with income while you are at home with your child. Lump-sum grant is benefit paid out as a single lump sum to people who are expecting a child and have not had income in the past year. You can choose to receive a lump-sum grant even if you are entitled to parental benefit, but you can only receive one of these benefits.</avsnitt>
+        <avsnitt>Are you unsure of what you may be entitled to?<lenke url="https://familie.nav.no/veiviser" ekstern="true">Use the wizard to find out what you are entitled to.</lenke></avsnitt>
     </lesmer>
     <lesmer intro="What is the difference between the parental benefit period and the shared period?">
         <avsnitt>The parental benefit period is the entire period during which parental benefit is paid. When both parents are entitled to parental benefit, the parental benefit period consists of three weeks of parental benefit for the mother before delivery, a maternal quota, a paternal quota and a shared period.</avsnitt>

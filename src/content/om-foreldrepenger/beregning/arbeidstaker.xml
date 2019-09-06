@@ -1,14 +1,14 @@
 <innhold>
     <avsnitt>Foreldrepengene dine regnes vanligvis ut fra gjennomsnittet av inntekten du har hatt i de <b>3 siste kalendermånedene</b> før foreldrepengeperioden din starter. Dette gjelder både hvis du er fast ansatt eller har varierende arbeidsperioder eller inntekter.</avsnitt>
-    <avsnitt>Hvis det er mer enn 25 prosent forskjell mellom årsinntekten din og inntekten din de tre siste månedene, må vi vurdere hvilken inntekt som er mest representativ i din situasjon.</avsnitt>
+    <avsnitt>Hvis det er mer enn 25 prosent forskjell mellom årsinntekten din og inntekten din de 3 siste månedene, må vi vurdere hvilken inntekt som er mest representativ i din situasjon.</avsnitt>
     <liste>
         <punkt>Hvis arbeidsforholdet ditt har vart <b>under 3 måneder</b>, skal foreldrepengene regnes ut fra inntekten du har hatt i den perioden du har vært i jobb. Inntekten din regnes om til en månedsinntekt.</punkt>
         <punkt>Hvis du har hatt <b>ferie</b> eller korte perioder med tilfeldig <b>ulønnet permisjon</b> i perioden du har hatt inntekt, fastsettes inntekten din til det du vanligvis ville hatt hvis du hadde vært i jobb.</punkt>
-        <punkt>Hvis <b>arbeidsforholdet ditt avsluttes</b> før du starter foreldrepengeperioden og du ikke har annet arbeid, blir foreldrepengene dine beregnet etter inntekten din de tre siste månedene før arbeidsforholdet ble avsluttet.</punkt>
+        <punkt>Hvis <b>arbeidsforholdet ditt avsluttes</b> før du starter foreldrepengeperioden og du ikke har annet arbeid, blir foreldrepengene dine beregnet etter inntekten din de 3 siste månedene før arbeidsforholdet ble avsluttet.</punkt>
     </liste>
     <avsnitt>Når du er både <b>arbeidstaker og frilanser</b> skal inntektene beregnes hver for seg og legges sammen til ett beløp. Hvis du har en samlet inntekt over seks ganger grunnbeløpet, blir inntekten din som arbeidstaker lagt til grunn i beregningen.</avsnitt>
     <avsnitt>Når du er både <b>arbeidstaker og selvstendig</b> næringsdrivende blir foreldrepengene dine beregnet ut fra begge inntektene dine. Inntekten din som arbeidstaker blir lagt først til grunn.</avsnitt>
-    <avsnitt class="blokk-l">Hvis gjennomsnittet av inntekten din de tre siste ferdiglignede årene er høyere enn arbeidsinntekten din, og arbeidsinntekten din ikke er over seks ganger grunnbeløpet, utbetales differansen som næringsinntekt. Ved utbetaling dekkes alltid inntekter opp til seks ganger grunnbeløpet.</avsnitt>
+    <avsnitt class="blokk-l">Hvis gjennomsnittet av inntekten din de 3 siste ferdiglignede årene er høyere enn arbeidsinntekten din, og arbeidsinntekten din ikke er over seks ganger grunnbeløpet, utbetales differansen som næringsinntekt. Ved utbetaling dekkes alltid inntekter opp til seks ganger grunnbeløpet.</avsnitt>
     <lesmer intro="Inntekter som tas med i beregningen">
         <liste>
             <punkt>Lønnsinntekt og ytelser som er likestilt med lønnsinntekt</punkt>
@@ -25,7 +25,7 @@
     </lesmer>
     <lesmer intro="Dager uten arbeid som teller med i opptjeningstiden">
         <liste>
-            <punkt>Hvis du har vært i jobb i <b>fire uker sammenhengende</b> og det ikke er mer enn <b>fjorten dager</b> mellom hver gang du er på jobb, regnes også dager uten arbeid med i opptjeningstiden.</punkt>
+            <punkt>Hvis du har vært i jobb i <b>4 uker sammenhengende</b> og det ikke er mer enn <b>14 dager</b> mellom hver gang du er på jobb, regnes også dager uten arbeid med i opptjeningstiden.</punkt>
             <punkt>Hvis du har en arbeidsavtale om <b>fast turnus</b>, vil dagene du ikke er i jobb regnes med i opptjeningstiden, selv om du jobber sjeldnere enn hver 14. dag.</punkt>
             <punkt><b>Ferie og avspasering</b> teller også med.</punkt>
         </liste>

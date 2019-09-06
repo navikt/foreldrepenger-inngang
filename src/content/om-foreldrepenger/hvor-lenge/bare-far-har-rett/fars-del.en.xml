@@ -12,5 +12,7 @@
         <punkt>participating in a qualification programme</punkt>
         <punkt>participating fulltime in the Introduction Programme for newly arrived immigrants pursuant to chapter 2 of the Introduction Act</punkt>
     </liste>
-    <avsnitt>If the mother receives <b>disability benefit</b>, you can take up to 15 weeks of parental benefit before it is required that the mother has work, studies or is engaged in other activity.</avsnitt>
+    <lesmer intro="Is the mother receiving disability benefit?">
+    <avsnitt>If the mother is receiving <b>disability benefit</b>, you may take up to 15 weeks at 100 per cent parental benefit, or 19 weeks at 80 per cent parental benefit without the mother having an activity requirement. These weeks must be taken before 46 weeks after the child was born if you choose 100 per cent parental benefit, or 56 weeks after the child was born if you choose 80 per cent parental benefit. If you are taking more than these weeks, the mother must be working, studying or in another approved activity when you are at home with the child or if you are postponing parental benefit.</avsnitt>
+    </lesmer>
 </innhold>

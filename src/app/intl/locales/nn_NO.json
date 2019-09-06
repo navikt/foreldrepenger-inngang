@@ -205,8 +205,8 @@
     "om_foreldrepenger.hvor_lenge.fordeling.aktivitetskrav": "Aktivitetskrav til {subjekt}",
     "om_foreldrepenger.hvor_lenge.fordeling.kan_ikke_overta": "Kan ikkje bli overteken av {subjekt}",
     "om_foreldrepenger.hvor_lenge.fordeling.krav_til_far": "Det samme gjelder ved adopsjon",
-    "om_foreldrepenger.hvor_lenge.fordeling.tre_uker_før_fødsel": "I tillegg til mødrekvoten, får mor også tre veker før termin",
-    "om_foreldrepenger.hvor_lenge.fordeling.i_tillegg_til_foreldrepenger": "I tillegg til foreldrepengar, får mor også tre veker før termin",
+    "om_foreldrepenger.hvor_lenge.fordeling.tre_uker_før_fødsel": "I tillegg til mødrekvoten, får mor også 3 veker før termin",
+    "om_foreldrepenger.hvor_lenge.fordeling.i_tillegg_til_foreldrepenger": "I tillegg til foreldrepengar, får mor også 3 veker før termin",
     "om_foreldrepenger.hvor_lenge.fordeling.snakkeboble.tittel": "{antallUker100} veker ved 100 prosent foreldrepengar, {antallUker80} veker ved 80 prosent foreldrepengar.",
 
     "om_foreldrepenger.når_kan_du_søke.tittel": "Søknadsfristar",
@@ -222,9 +222,9 @@
     "om_foreldrepenger.nye_regler.tittel": "Nye reglar frå 1. juli 2018",
     "om_foreldrepenger.nye_regler_label": "Barnet er født eller adoptert",
     "om_foreldrepenger.nye_regler.før": "før 1. juli 2018",
-    "om_foreldrepenger.nye_regler.før_beskrivelse": "Av den totale foreldrepengeperioden er ti veker sette av til kvar av foreldra (kvoten). Får de fleire barn samtidig, får de fem eller sju veker ekstra for kvart barn meir enn eitt.",
+    "om_foreldrepenger.nye_regler.før_beskrivelse": "Av den totale foreldrepengeperioden er ti veker sette av til kvar av foreldra (kvoten). Får de fleire barn samtidig, får de 5 eller 7 veker ekstra for kvart barn meir enn eitt.",
     "om_foreldrepenger.nye_regler.etter": "etter 1. juli 2018",
-    "om_foreldrepenger.nye_regler.etter_beskrivelse": "Av den totale foreldrepengeperioden er 15 veker sette av til kvar av foreldra (kvoten). Får de to barn samtidig, får de 17 eller 21 veker ekstra. Får de tre eller fleire barn, får de 46 eller 56 veker ekstra.",
+    "om_foreldrepenger.nye_regler.etter_beskrivelse": "Av den totale foreldrepengeperioden er 15 veker sette av til kvar av foreldra (kvoten). Får de to barn samtidig, får de 17 eller 21 veker ekstra. Får de 3 eller fleire barn, får de 46 eller 56 veker ekstra.",
 
     "om_foreldrepenger.nye_beregningsregler.header": "Nye reglar for berekning av foreldrepengar 1. januar 2019",
 
@@ -257,7 +257,7 @@
     "om_foreldrepenger.beregning.arbeidstaker": "Arbeidstakar",
     "om_foreldrepenger.beregning.selvstendig": " Sjølvstendig næringsdrivande",
     "om_foreldrepenger.beregning.harYtelse": "Utbetaling\nfrå NAV",
-    "om_foreldrepenger.beregning.andreInntektskilder": "Militær- eller sivilforsvaret",
+    "om_foreldrepenger.beregning.andreInntektskilder": "Førstegongsteneste i forsvaret",
     "om_foreldrepenger.beregning.frilanser.ikontittel": "Frilansar",
 
     "om_foreldrepenger.hjelp.tittel": "Fann du ikkje det du leita etter?",
