@@ -59,7 +59,7 @@ const Bildelenker = ({ intl }: { intl: InjectedIntl }) => {
                 svgName="veiviser"
                 title={getTranslation('informasjonstavle.hva_kan_du_få', intl)}
                 urlIsExternal={false}
-                url={Page.SøkeOmForeldrepenger}>
+                url={Page.Veiviser}>
                 <Tekstomrade>
                     {getTranslation('informasjonstavle.hva_kan_du_få_ingress', intl)}
                 </Tekstomrade>
