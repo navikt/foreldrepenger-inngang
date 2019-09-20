@@ -120,10 +120,15 @@ class SøkForeldrepenger extends Component<Props & InjectedIntlProps, StateProps
                             <Breadcrumbs path={location.pathname} />
                             <PanelMedIllustrasjon
                                 id={'test'}
-                                title={getTranslation('om_foreldrepenger.hvor_lenge.tittel', intl)}
+                                title={getTranslation(
+                                    'søke_om_foreldrepenger.forside.bildetekst',
+                                    intl
+                                )}
                                 svg={infoSvg}>
                                 <div className={cls.block}>
-                                    <Undertittel>Hva vil du ha oversikt over?</Undertittel>
+                                    <Undertittel>
+                                        {getTranslation('søke_om_foreldrepenger.oversikt', intl)}
+                                    </Undertittel>
                                     <div className={cls.element('radioWrapper')}>
                                         <RadioPanel
                                             checked={this.state.valgtProsess === 'hele'}
@@ -133,7 +138,10 @@ class SøkForeldrepenger extends Component<Props & InjectedIntlProps, StateProps
                                                     (e.target as HTMLInputElement).value
                                                 )
                                             }
-                                            label={'Hele søknadsprosessen'}
+                                            label={getTranslation(
+                                                'søke_om_foreldrepenger.hele',
+                                                intl
+                                            )}
                                             value={'hele'}
                                         />
                                         <RadioPanel
@@ -144,14 +152,22 @@ class SøkForeldrepenger extends Component<Props & InjectedIntlProps, StateProps
                                                     (e.target as HTMLInputElement).value
                                                 )
                                             }
-                                            label={'Endre noe etter jeg har søkt'}
+                                            label={getTranslation(
+                                                'søke_om_foreldrepenger.endre',
+                                                intl
+                                            )}
                                             value={'endre'}
                                         />
                                     </div>
                                     {this.state.valgtProsess !== undefined &&
                                         (this.state.valgtProsess === 'hele' ? (
                                             <>
-                                                <Undertittel>Velg deres situasjon</Undertittel>
+                                                <Undertittel>
+                                                    {getTranslation(
+                                                        'søke_om_foreldrepenger.velgSituasjon',
+                                                        intl
+                                                    )}
+                                                </Undertittel>
                                                 <Innholdsfaner
                                                     tabs={tabs}
                                                     onSelect={this.onSituasjonSelected}
@@ -159,7 +175,12 @@ class SøkForeldrepenger extends Component<Props & InjectedIntlProps, StateProps
                                             </>
                                         ) : (
                                             <>
-                                                <Undertittel>Søke om endring</Undertittel>
+                                                <Undertittel>
+                                                    {getTranslation(
+                                                        'søke_om_foreldrepenger.søkOmEndring',
+                                                        intl
+                                                    )}
+                                                </Undertittel>
                                                 <Innhold
                                                     source={getSource(
                                                         'søk-foreldrepenger/endre',

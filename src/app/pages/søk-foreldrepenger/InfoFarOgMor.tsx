@@ -4,6 +4,7 @@ import EkspanderbarSnakkeboble from 'app/components/ekspanderbar-snakkeboble/Eks
 import Eventline from 'app/components/eventline/Eventline';
 import Event from 'app/components/eventline/Event';
 import Innhold, { getSource } from 'app/utils/innhold/Innhold';
+import getTranslation from 'app/utils/i18nUtils';
 
 interface Props {
     intl: InjectedIntl;
@@ -18,22 +19,26 @@ const InfoFarOgMor: FunctionComponent<Props> = ({ intl }) => {
 
     return (
         <Eventline>
-            <Event title="Dere venter barn">
-                <EkspanderbarSnakkeboble svg={kalender} tittel="Planlegg tiden hjemme med barnet">
+            <Event title={getTranslation('søke_om_foreldrepenger.farOgMor.venterBarn', intl)}>
+                <EkspanderbarSnakkeboble
+                    svg={kalender}
+                    tittel={getTranslation('søke_om_foreldrepenger.farOgMor.planleggTiden', intl)}>
                     <Innhold source={getSource('søk-foreldrepenger/far-og-mor/planlegg', intl)} />
                 </EkspanderbarSnakkeboble>
             </Event>
-            <Event title="22. svangerskapsuke">
-                <EkspanderbarSnakkeboble svg={morBrev} tittel="Mor kan søke om foreldrepenger">
+            <Event title={getTranslation('søke_om_foreldrepenger.farOgMor.svangerskapsuke', intl)}>
+                <EkspanderbarSnakkeboble
+                    svg={morBrev}
+                    tittel={getTranslation('søke_om_foreldrepenger.farOgMor.morKanSøke', intl)}>
                     <Innhold
                         source={getSource('søk-foreldrepenger/far-og-mor/mor-kan-søke', intl)}
                     />
                 </EkspanderbarSnakkeboble>
             </Event>
-            <Event title="4 uker før mors første dag med foreldrepenger">
+            <Event title={getTranslation('søke_om_foreldrepenger.farOgMor.fireUkerFørMor', intl)}>
                 <EkspanderbarSnakkeboble
                     svg={inntektsOpplysninger}
-                    tittel="Vi får opplysninger om inntekten til mor">
+                    tittel={getTranslation('søke_om_foreldrepenger.farOgMor.inntektMor', intl)}>
                     <Innhold
                         source={getSource(
                             'søk-foreldrepenger/far-og-mor/opplysninger-inntekt-mor',
@@ -41,23 +46,27 @@ const InfoFarOgMor: FunctionComponent<Props> = ({ intl }) => {
                         )}
                     />
                 </EkspanderbarSnakkeboble>
-                <EkspanderbarSnakkeboble svg={fåSvar} tittel="Mor kan få svar på søknaden">
+                <EkspanderbarSnakkeboble
+                    svg={fåSvar}
+                    tittel={getTranslation('søke_om_foreldrepenger.farOgMor.morFårSvar', intl)}>
                     <Innhold
                         source={getSource('søk-foreldrepenger/far-og-mor/mor-får-svar', intl)}
                     />
                 </EkspanderbarSnakkeboble>
             </Event>
-            <Event title="Barnet blir født">
-                <EkspanderbarSnakkeboble svg={farBrev} tittel="Far kan søke om foreldrepenger">
+            <Event title={getTranslation('søke_om_foreldrepenger.farOgMor.barnFødt', intl)}>
+                <EkspanderbarSnakkeboble
+                    svg={farBrev}
+                    tittel={getTranslation('søke_om_foreldrepenger.farOgMor.farKanSøke', intl)}>
                     <Innhold
                         source={getSource('søk-foreldrepenger/far-og-mor/far-kan-søke', intl)}
                     />
                 </EkspanderbarSnakkeboble>
             </Event>
-            <Event title="4 uker før fars første dag med foreldrepenger eller utsettelse">
+            <Event title={getTranslation('søke_om_foreldrepenger.farOgMor.fireUkerFørFar', intl)}>
                 <EkspanderbarSnakkeboble
                     svg={inntektsOpplysninger}
-                    tittel="Vi får opplysninger om inntekten til far">
+                    tittel={getTranslation('søke_om_foreldrepenger.farOgMor.inntektFar', intl)}>
                     <Innhold
                         source={getSource(
                             'søk-foreldrepenger/far-og-mor/opplysninger-inntekt-far',
@@ -65,7 +74,9 @@ const InfoFarOgMor: FunctionComponent<Props> = ({ intl }) => {
                         )}
                     />
                 </EkspanderbarSnakkeboble>
-                <EkspanderbarSnakkeboble svg={fåSvar} tittel="Far kan få svar på søknaden">
+                <EkspanderbarSnakkeboble
+                    svg={fåSvar}
+                    tittel={getTranslation('søke_om_foreldrepenger.farOgMor.farFårSvar', intl)}>
                     <Innhold
                         source={getSource('søk-foreldrepenger/far-og-mor/far-får-svar', intl)}
                     />
