@@ -11,8 +11,8 @@ import OmForeldrepenger from './pages/om-foreldrepenger/OmForeldrepenger';
 import OmSvangerskapspenger from './pages/svangerskapspenger/OmSvangerskapspenger';
 import Regelendringer from './pages/regelendringer/Regelendringer';
 import SøkSvangerskapspenger from './pages/søk-svangerskapspenger/SøkSvangerskapspenger';
-// import SøkForeldrepenger from './pages/søk-foreldrepenger/SøkForeldrepenger';
-import Veiviser from './pages/veiviser/Veiviser';
+import SøkForeldrepenger from './pages/søk-foreldrepenger/SøkForeldrepenger';
+// import Veiviser from './pages/veiviser/Veiviser';
 
 interface ValidRouteProps extends RouteProps {
     path?: Page;
@@ -56,8 +56,8 @@ const Router = () => (
         />
         <ValidRoute
             exact={true}
-            path={Page.Veiviser}
-            component={Veiviser}
+            path={Page.SøkeOmForeldrepenger}
+            component={SøkForeldrepenger}
             key="sok-foreldrepenger"
         />
         <ValidRoute

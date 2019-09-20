@@ -4,6 +4,7 @@ import Event from 'app/components/eventline/Event';
 import EkspanderbarSnakkeboble from 'app/components/ekspanderbar-snakkeboble/EkspanderbarSnakkeboble';
 import { InjectedIntl, injectIntl } from 'react-intl';
 import Innhold, { getSource } from 'app/utils/innhold/Innhold';
+import getTranslation from 'app/utils/i18nUtils';
 
 interface Props {
     intl: InjectedIntl;
@@ -20,35 +21,52 @@ const InfoFarOgFar: FunctionComponent<Props> = ({ intl }) => {
     return (
         <>
             <Eventline>
-                <Event title="Dere venter barn">
+                <Event title={getTranslation('søke_om_foreldrepenger.farOgFar.venterBarn', intl)}>
                     <EkspanderbarSnakkeboble
                         svg={kalender}
-                        tittel="Planlegg tiden hjemme med barnet">
+                        tittel={getTranslation(
+                            'søke_om_foreldrepenger.farOgFar.planleggTiden',
+                            intl
+                        )}>
                         <Innhold
                             source={getSource('søk-foreldrepenger/far-og-far/planlegg', intl)}
                         />
                     </EkspanderbarSnakkeboble>
                 </Event>
-                <Event title="Dere får vite dato for termin eller omsorgsovertakelse">
+                <Event
+                    title={getTranslation(
+                        'søke_om_foreldrepenger.farOgFar.terminEllerOmsorgsovertakelse',
+                        intl
+                    )}>
                     <EkspanderbarSnakkeboble
                         svg={dokumentasjon}
-                        tittel="Dere får dokumentasjon på omsorgsovertakelse">
+                        tittel={getTranslation(
+                            'søke_om_foreldrepenger.farOgFar.dokumentasjonTerminEllerOmsorgsovertakelse',
+                            intl
+                        )}>
                         <Innhold
                             source={getSource('søk-foreldrepenger/far-og-far/dokumentasjon', intl)}
                         />
                     </EkspanderbarSnakkeboble>
                     <EkspanderbarSnakkeboble
                         svg={far1Brev}
-                        tittel="Far 1 kan søke om foreldrepenger">
+                        tittel={getTranslation(
+                            'søke_om_foreldrepenger.farOgFar.far1KanSøke',
+                            intl
+                        )}>
                         <Innhold
                             source={getSource('søk-foreldrepenger/far-og-far/far-kan-søke', intl)}
                         />
                     </EkspanderbarSnakkeboble>
                 </Event>
-                <Event title="4 uker før far 1 sin første dag med foreldrepenger eller utsettelse">
+                <Event
+                    title={getTranslation('søke_om_foreldrepenger.farOgFar.fireUkerFørFar1', intl)}>
                     <EkspanderbarSnakkeboble
                         svg={inntektsOpplysninger}
-                        tittel="Vi får opplysninger om inntekten til far 1">
+                        tittel={getTranslation(
+                            'søke_om_foreldrepenger.farOgFar.inntektFar1',
+                            intl
+                        )}>
                         <Innhold
                             source={getSource(
                                 'søk-foreldrepenger/far-og-far/opplysninger-inntekt-far',
@@ -56,14 +74,22 @@ const InfoFarOgFar: FunctionComponent<Props> = ({ intl }) => {
                             )}
                         />
                     </EkspanderbarSnakkeboble>
-                    <EkspanderbarSnakkeboble svg={fåSvar} tittel="Far 1 får svar på søknaden">
+                    <EkspanderbarSnakkeboble
+                        svg={fåSvar}
+                        tittel={getTranslation(
+                            'søke_om_foreldrepenger.farOgFar.far1FårSvar',
+                            intl
+                        )}>
                         <Innhold
                             source={getSource('søk-foreldrepenger/far-og-far/far-får-svar', intl)}
                         />
                     </EkspanderbarSnakkeboble>
                     <EkspanderbarSnakkeboble
                         svg={far2Brev}
-                        tittel="Far 2 kan søke om foreldrepenger">
+                        tittel={getTranslation(
+                            'søke_om_foreldrepenger.farOgFar.far2KanSøke',
+                            intl
+                        )}>
                         <Innhold
                             source={getSource(
                                 'søk-foreldrepenger/far-og-far/medfar-kan-søke',
@@ -72,10 +98,14 @@ const InfoFarOgFar: FunctionComponent<Props> = ({ intl }) => {
                         />
                     </EkspanderbarSnakkeboble>
                 </Event>
-                <Event title="4 uker før far 2 sin første dag med foreldrepenger eller utsettelse">
+                <Event
+                    title={getTranslation('søke_om_foreldrepenger.farOgFar.fireUkerFørFar2', intl)}>
                     <EkspanderbarSnakkeboble
                         svg={inntektsOpplysninger}
-                        tittel="Vi får opplysninger om inntekten til far 2">
+                        tittel={getTranslation(
+                            'søke_om_foreldrepenger.farOgFar.inntektFar2',
+                            intl
+                        )}>
                         <Innhold
                             source={getSource(
                                 'søk-foreldrepenger/far-og-far/opplysninger-inntekt-medfar',
@@ -83,7 +113,12 @@ const InfoFarOgFar: FunctionComponent<Props> = ({ intl }) => {
                             )}
                         />
                     </EkspanderbarSnakkeboble>
-                    <EkspanderbarSnakkeboble svg={fåSvar} tittel="Far 2 får svar på søknaden">
+                    <EkspanderbarSnakkeboble
+                        svg={fåSvar}
+                        tittel={getTranslation(
+                            'søke_om_foreldrepenger.farOgFar.far2FårSvar',
+                            intl
+                        )}>
                         <Innhold
                             source={getSource(
                                 'søk-foreldrepenger/far-og-far/medfar-får-svar',

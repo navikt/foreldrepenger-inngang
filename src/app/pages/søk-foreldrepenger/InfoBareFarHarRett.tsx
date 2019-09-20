@@ -4,6 +4,7 @@ import Event from 'app/components/eventline/Event';
 import EkspanderbarSnakkeboble from 'app/components/ekspanderbar-snakkeboble/EkspanderbarSnakkeboble';
 import { InjectedIntl, injectIntl } from 'react-intl';
 import Innhold, { getSource } from 'app/utils/innhold/Innhold';
+import getTranslation from 'app/utils/i18nUtils';
 
 interface Props {
     intl: InjectedIntl;
@@ -18,15 +19,23 @@ const InfoBareFarHarRett: FunctionComponent<Props> = ({ intl }) => {
 
     return (
         <Eventline>
-            <Event title="Dere venter barn">
-                <EkspanderbarSnakkeboble svg={kalender} tittel="Planlegg tiden hjemme med barnet">
+            <Event title={getTranslation('søke_om_foreldrepenger.bareFarHarRett.venterBarn', intl)}>
+                <EkspanderbarSnakkeboble
+                    svg={kalender}
+                    tittel={getTranslation(
+                        'søke_om_foreldrepenger.bareFarHarRett.planleggTiden',
+                        intl
+                    )}>
                     <Innhold
                         source={getSource('søk-foreldrepenger/bare-far-har-rett/planlegg', intl)}
                     />
                 </EkspanderbarSnakkeboble>
                 <EkspanderbarSnakkeboble
                     svg={dokumentasjon}
-                    tittel="Du trenger dokumentasjon på at mor er i godkjent aktivitet">
+                    tittel={getTranslation(
+                        'søke_om_foreldrepenger.bareFarHarRett.dokumentasjon',
+                        intl
+                    )}>
                     <Innhold
                         source={getSource(
                             'søk-foreldrepenger/bare-far-har-rett/dokumentasjon',
@@ -35,8 +44,13 @@ const InfoBareFarHarRett: FunctionComponent<Props> = ({ intl }) => {
                     />
                 </EkspanderbarSnakkeboble>
             </Event>
-            <Event title="Barnet blir født">
-                <EkspanderbarSnakkeboble svg={farBrev} tittel="Du kan søke om foreldrepenger">
+            <Event title={getTranslation('søke_om_foreldrepenger.bareFarHarRett.barnFødt', intl)}>
+                <EkspanderbarSnakkeboble
+                    svg={farBrev}
+                    tittel={getTranslation(
+                        'søke_om_foreldrepenger.bareFarHarRett.farKanSøke',
+                        intl
+                    )}>
                     <Innhold
                         source={getSource(
                             'søk-foreldrepenger/bare-far-har-rett/far-kan-søke',
@@ -45,10 +59,17 @@ const InfoBareFarHarRett: FunctionComponent<Props> = ({ intl }) => {
                     />
                 </EkspanderbarSnakkeboble>
             </Event>
-            <Event title="4 uker før din første dag med foreldrepenger eller utsettelse">
+            <Event
+                title={getTranslation(
+                    'søke_om_foreldrepenger.bareFarHarRett.fireUkerFørFar',
+                    intl
+                )}>
                 <EkspanderbarSnakkeboble
                     svg={inntektsOpplysninger}
-                    tittel="Vi får opplysninger om inntekten din">
+                    tittel={getTranslation(
+                        'søke_om_foreldrepenger.bareFarHarRett.inntektFar',
+                        intl
+                    )}>
                     <Innhold
                         source={getSource(
                             'søk-foreldrepenger/bare-far-har-rett/opplysninger-inntekt-far',
@@ -56,7 +77,12 @@ const InfoBareFarHarRett: FunctionComponent<Props> = ({ intl }) => {
                         )}
                     />
                 </EkspanderbarSnakkeboble>
-                <EkspanderbarSnakkeboble svg={fåSvar} tittel="Du kan få svar på søknaden">
+                <EkspanderbarSnakkeboble
+                    svg={fåSvar}
+                    tittel={getTranslation(
+                        'søke_om_foreldrepenger.bareFarHarRett.farFårSvar',
+                        intl
+                    )}>
                     <Innhold
                         source={getSource(
                             'søk-foreldrepenger/bare-far-har-rett/far-får-svar',
