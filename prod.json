@@ -1,6 +1,6 @@
 {
     "ingress": "https://familie.nav.no",
-    "ingress-internal" : "https://familie.nais.oera.local",
+    "appres" : "appres.nav.no",   
     "application_name": "foreldrepenger-inngang",
     "env": {
         "SOK_FORELDREPENGER_URL": "https://foreldrepengesoknad.nav.no",
