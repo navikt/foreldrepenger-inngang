@@ -1,4 +1,6 @@
   {
+    "namespace" : "foreldrepenger",
+    "appres" : "appres-q1.nav.no",
     "ingress": "https://familie.dev-nav.no",
     "application_name": "foreldrepenger-inngang",
     "env": {
