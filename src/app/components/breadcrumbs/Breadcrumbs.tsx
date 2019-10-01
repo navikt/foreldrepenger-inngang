@@ -76,7 +76,7 @@ const Breadcrumbs = (props: Props) => {
             breadcrumbChain.push(
                 <TypografiBase
                     aria-label={current ? 'Denne siden' : 'Tidligere side'}
-                    aria-current={current ? 'page' : ''}
+                    aria-current={current ? 'page' : undefined}
                     key={`crumb${index}`}
                     type="normaltekst"
                     className={classnames(cls.element('item'), {
