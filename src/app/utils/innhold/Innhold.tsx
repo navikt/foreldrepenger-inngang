@@ -4,7 +4,7 @@ import { InjectedIntl } from 'react-intl';
 
 /* tslint:disable:no-console */
 
-type NodeType = React.ReactNode | string;
+type NodeType = React.ReactNode;
 
 const contentSubstitute = '<innhold />';
 
@@ -33,7 +33,8 @@ const xmlToReact = new XMLToReact({
     lesmer: renderAs(Node.LesMerPanel),
     variabel: renderWithValues(Node.Variabel),
     unbreakable: renderAs(Node.Unbreakable),
-    søkKnapp: renderAs(Node.SøkNåKnapp)
+    søkKnapp: renderAs(Node.SøkNåKnapp),
+    midstiltTittel: renderAs(Node.MidstiltTittel)
 });
 
 export const getSource = (path: string, intl: InjectedIntl): string => {

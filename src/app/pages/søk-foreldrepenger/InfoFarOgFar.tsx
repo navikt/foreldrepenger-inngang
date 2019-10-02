@@ -5,6 +5,7 @@ import EkspanderbarSnakkeboble from 'app/components/ekspanderbar-snakkeboble/Eks
 import { InjectedIntl, injectIntl } from 'react-intl';
 import Innhold, { getSource } from 'app/utils/innhold/Innhold';
 import getTranslation from 'app/utils/i18nUtils';
+import Veileder from 'app/components/veileder/Veileder';
 
 interface Props {
     intl: InjectedIntl;
@@ -128,6 +129,9 @@ const InfoFarOgFar: FunctionComponent<Props> = ({ intl }) => {
                     </EkspanderbarSnakkeboble>
                 </Event>
             </Eventline>
+            <Veileder type="plakat" fargetema="normal" kompakt={true}>
+                <Innhold source={getSource('søk-foreldrepenger/far-og-far/veilederinfo', intl)} />
+            </Veileder>
         </>
     );
 };
