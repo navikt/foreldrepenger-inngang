@@ -16,6 +16,7 @@
             <punkt>Dagpenger</punkt>
             <punkt>Omsorgs-, pleie- eller opplæringspenger</punkt>
         </liste>
+        <avsnitt>Er du usikker på hva du kan ha rett til? <lenke url="https://familie.nav.no/veiviser" ekstern="true">Bruk veiviseren og finn ut hva du kan få.</lenke></avsnitt>
     </lesmer>
     <lesmer intro="Hva er forskjellen mellom foreldrepenger og engangsstønad?">
         <avsnitt>Foreldrepenger skal sikre inntekten din når du skal være hjemme med barnet. Engangsstønad er en engangssum du kan få hvis du venter barn og ikke har hatt inntekt det siste året. Du kan velge engangsstønad selv om du har rett til foreldrepenger, men du kan kun få en av disse ytelsene.</avsnitt>
@@ -23,9 +24,7 @@
     </lesmer>
     <lesmer intro="Hva er forskjellen på foreldrepengeperiode og fellesperiode?">
         <avsnitt>Foreldrepengeperioden er hele perioden med foreldrepenger. Når begge foreldrene har rett til foreldrepenger består foreldrepengeperioden av 3 uker foreldrepenger til mor før fødsel, mødrekvote, fedrekvote og en fellesperiode.</avsnitt>
-    </lesmer>
-    <lesmer intro="Jeg har sendt inn søknad, men finner den ikke på Dine Foreldrepenger">
-        <avsnitt>Hvis foreldrepengeperioden til mor eller far startet i 2018 eller tidligere, kan det ta <b>opptil 3 uker</b> før søknaden din blir registrert hos oss og synlig på <lenke url="https://foreldrepenger.nav.no" ekstern="true">Dine Foreldrepenger</lenke>. Da du sendte søknaden fikk du en kvittering som bekreftet at vi har mottatt den.</avsnitt>
+        <avsnitt>Du kan bruke vår <lenke url="https://foreldrepengeplanlegger.nav.no/foreldrepengeplanlegger" ekstern="true">Foreldrepengeplanleggeren</lenke> for å planlegge hvor lenge du kan være hjemme med barnet.</avsnitt>
     </lesmer>
     <lesmer intro="Jeg skal ha ulønnet permisjon">
         <avsnitt>Ulønnet permisjon avtaler du med arbeidsgiveren din. Du kan ikke utsette foreldrepengene dine når du har ulønnet permisjon. Den andre forelderen kan utsette foreldrepengene på grunn av heltidsarbeid, sykdom eller ferie i perioden du har ulønnet permisjon.</avsnitt>

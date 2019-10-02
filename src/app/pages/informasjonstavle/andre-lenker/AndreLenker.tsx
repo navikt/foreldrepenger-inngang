@@ -46,7 +46,7 @@ const links = [
     {
         label: 'informasjonstavle.andre_lenker.regelverk',
         href:
-            'https://www.nav.no/rettskildene/Forside/Folketrygdloven/kapittel-14-ytelser-ved-svangerskap-f%C3%B8dsel-og-adopsjon'
+            'https://lovdata.no/nav/folketrygdloven/kap14'
     },
     {
         label: 'informasjonstavle.andre_lenker.slik_klager_du',

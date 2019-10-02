@@ -15,6 +15,7 @@
             <punkt>Unemployment benefit</punkt>
             <punkt>Care benefit, attendance allowance or training allowance</punkt>
         </liste>
+        <avsnitt>Are you unsure of what you may be entitled to?<lenke url="https://familie.nav.no/veiviser" ekstern="true">Use the wizard to find out what you are entitled to.</lenke></avsnitt>
     </lesmer>
     <lesmer intro="What is the difference between parental benefit and lump-sum grant?">
         <avsnitt>Parental benefit provides you with income while you are at home with your child. Lump-sum grant is benefit paid out as a single lump sum to people who are expecting a child and have not had income in the past year. You can choose to receive a lump-sum grant even if you are entitled to parental benefit, but you can only receive one of these benefits.</avsnitt>
@@ -22,9 +23,7 @@
     </lesmer>
     <lesmer intro="What is the difference between the parental benefit period and the shared period?">
         <avsnitt>The parental benefit period is the entire period during which parental benefit is paid. When both parents are entitled to parental benefit, the parental benefit period consists of three weeks of parental benefit for the mother before delivery, a maternal quota, a paternal quota and a shared period.</avsnitt>
-    </lesmer>
-    <lesmer intro="I have submitted an application, but cannot find it on Dine Foreldrepenger">
-        <avsnitt>If the mother’s or the father’s parental benefit period started in 2018 or earlier, it may take <b>up to three weeks</b> before your application is registered with us and visible on <lenke url="https://foreldrepenger.nav.no" ekstern="true">Dine Foreldrepenger ("Your Parental Benefit")</lenke>. When you submitted the application, you received a receipt confirming that we have received it.</avsnitt>
+        <avsnitt>You can use our <lenke url="https://foreldrepengeplanlegger.nav.no/foreldrepengeplanlegger" ekstern="true">parental benefit planner</lenke>to plan how long you can stay at home with your child.</avsnitt>
     </lesmer>
     <lesmer intro="I am going to take unpaid leave">
         <avsnitt>You must arrange unpaid leave with your employer. You cannot postpone when you receive parental benefit if you are on unpaid leave. The other parent may postpone their parental benefit on grounds of full-time work, illness or holiday in the period you are on unpaid leave. </avsnitt>
