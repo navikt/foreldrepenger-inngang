@@ -1,6 +1,6 @@
 {
     "ingress": "https://familie.nav.no",
-    "appres" : "appres.nav.no",   
+    "appres": "appres.nav.no",
     "application_name": "foreldrepenger-inngang",
     "env": {
         "APPRES_CMS_URL": "https://appres.nav.no",
@@ -11,6 +11,7 @@
         "ENDRE_SOKNAD_FORELDREPENGER_URL": "https://tjenester.nav.no/esso/saml2/jsp/spSSOInit.jsp?metaAlias=/sp&idpEntityID=idporten.difi.no-v3&NameIDFormat=transient&AuthLevel=4&goto=https://tjenester.nav.no/soknadforeldrepenger/app/start",
         "DINE_FORELDREPENGER_URL": "https://foreldrepenger.nav.no",
         "SOK_SVANGERSKAPSPENGER_URL": "https://svangerskapspengesoknad.nav.no/",
-        "SOK_SVANGERSKAPSPENGER_PAPIR_URL": "https://familie.nav.no/hva-soker-du/svangerskapspenger"
+        "SOK_SVANGERSKAPSPENGER_PAPIR_URL": "https://familie.nav.no/hva-soker-du/svangerskapspenger",
+        "PLANLEGGEREN_URL": "https://foreldrepengeplanlegger.nav.no/foreldrepengeplanlegger"
     }
 }
