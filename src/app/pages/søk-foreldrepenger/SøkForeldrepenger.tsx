@@ -110,12 +110,11 @@ class SøkForeldrepenger extends Component<Props & InjectedIntlProps, StateProps
 
         return (
             <div className={classnames(cls.block, infoCls.block)}>
+                <Sidebanner text={getTranslation('søk_foreldrepenger.tittel', this.props.intl)} />
                 <div className={infoCls.element('container')}>
                     <article className={infoCls.element('article')}>
                         <SøkForeldrepengerHeader />
-                        <Sidebanner
-                            text={getTranslation('søk_foreldrepenger.tittel', this.props.intl)}
-                        />
+
                         <div role="main">
                             <Breadcrumbs path={location.pathname} />
                             <PanelMedIllustrasjon
