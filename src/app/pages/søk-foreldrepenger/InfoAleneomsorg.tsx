@@ -26,14 +26,14 @@ const InfoAleneomsorg: React.FunctionComponent<Props> = ({ intl }) => {
                     checked={valgtForelder === 'mor'}
                     name={'mor'}
                     onChange={(e) => setValgtForelder((e.target as HTMLInputElement).value)}
-                    label={'Mor'}
+                    label={getTranslation('søke_om_foreldrepenger.aleneomsorg.mor', intl)}
                     value={'mor'}
                 />
                 <RadioPanel
                     checked={valgtForelder === 'far'}
                     name={'far'}
                     onChange={(e) => setValgtForelder((e.target as HTMLInputElement).value)}
-                    label={'Far'}
+                    label={getTranslation('søke_om_foreldrepenger.aleneomsorg.far', intl)}
                     value={'far'}
                 />
             </div>

@@ -4,6 +4,7 @@ import Event from 'app/components/eventline/Event';
 import EkspanderbarSnakkeboble from 'app/components/ekspanderbar-snakkeboble/EkspanderbarSnakkeboble';
 import { InjectedIntl, injectIntl } from 'react-intl';
 import Innhold, { getSource } from 'app/utils/innhold/Innhold';
+import getTranslation from 'app/utils/i18nUtils';
 
 interface Props {
     intl: InjectedIntl;
@@ -18,31 +19,56 @@ const InfoAleneomsorgFar: FunctionComponent<Props> = ({ intl }) => {
 
     return (
         <Eventline>
-            <Event title="Du venter barn">
-                <EkspanderbarSnakkeboble svg={kalender} tittel="Planlegg tiden hjemme med barnet">
+            <Event
+                title={getTranslation('søke_om_foreldrepenger.aleneomsorg.far.venterBarn', intl)}>
+                <EkspanderbarSnakkeboble
+                    svg={kalender}
+                    tittel={getTranslation(
+                        'søke_om_foreldrepenger.aleneomsorg.far.planleggTiden',
+                        intl
+                    )}>
                     <Innhold
                         source={getSource('søk-foreldrepenger/aleneomsorg-far/planlegg', intl)}
                     />
                 </EkspanderbarSnakkeboble>
             </Event>
-            <Event title="Du får vite dato for termin eller omsorgsovertakelse">
+            <Event
+                title={getTranslation(
+                    'søke_om_foreldrepenger.aleneomsorg.far.terminEllerOmsorgsovertakelse',
+                    intl
+                )}>
                 <EkspanderbarSnakkeboble
                     svg={dokumentasjon}
-                    tittel="Du får dokumentasjon på at du er alene om omsorgen">
+                    tittel={getTranslation(
+                        'søke_om_foreldrepenger.aleneomsorg.far.dokumentasjonAleneomsorg',
+                        intl
+                    )}>
                     <Innhold
                         source={getSource('søk-foreldrepenger/aleneomsorg-far/dokumentasjon', intl)}
                     />
                 </EkspanderbarSnakkeboble>
-                <EkspanderbarSnakkeboble svg={farBrev} tittel="Du kan søke om foreldrepenger">
+                <EkspanderbarSnakkeboble
+                    svg={farBrev}
+                    tittel={getTranslation(
+                        'søke_om_foreldrepenger.aleneomsorg.far.farKanSøke',
+                        intl
+                    )}>
                     <Innhold
                         source={getSource('søk-foreldrepenger/aleneomsorg-far/far-kan-søke', intl)}
                     />
                 </EkspanderbarSnakkeboble>
             </Event>
-            <Event title="4 uker før din første dag med foreldrepenger eller utsettelse">
+            <Event
+                title={getTranslation(
+                    'søke_om_foreldrepenger.aleneomsorg.far.fireUkerFørFar',
+                    intl
+                )}>
                 <EkspanderbarSnakkeboble
                     svg={inntektsOpplysninger}
-                    tittel="Vi får opplysninger om inntekten din">
+                    tittel={getTranslation(
+                        'søke_om_foreldrepenger.aleneomsorg.far.inntektFar',
+                        intl
+                    )}>
                     <Innhold
                         source={getSource(
                             'søk-foreldrepenger/aleneomsorg-far/opplysninger-inntekt-far',
@@ -50,7 +76,12 @@ const InfoAleneomsorgFar: FunctionComponent<Props> = ({ intl }) => {
                         )}
                     />
                 </EkspanderbarSnakkeboble>
-                <EkspanderbarSnakkeboble svg={fåSvar} tittel="Du kan få svar på søknaden">
+                <EkspanderbarSnakkeboble
+                    svg={fåSvar}
+                    tittel={getTranslation(
+                        'søke_om_foreldrepenger.aleneomsorg.far.farFårSvar',
+                        intl
+                    )}>
                     <Innhold
                         source={getSource('søk-foreldrepenger/aleneomsorg-far/far-får-svar', intl)}
                     />
