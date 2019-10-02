@@ -4,7 +4,7 @@
     <lesmer liten="true" intro="Have you received a severance package, interim pay or been in compulsory military service?">
     <avsnitt>You must submit documentation of your income and the period if you have had one of these sources of income:</avsnitt>
         <liste>
-            <punkt>compulsory military service</punkt>
+            <punkt>compulsory military service or the Norwegian Civil Defence</punkt>
             <punkt>severance package</punkt>
             <punkt>interim pay or allowance</punkt>
         </liste>
