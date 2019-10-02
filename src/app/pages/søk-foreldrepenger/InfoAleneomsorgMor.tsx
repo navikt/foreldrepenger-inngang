@@ -4,6 +4,7 @@ import Event from 'app/components/eventline/Event';
 import EkspanderbarSnakkeboble from 'app/components/ekspanderbar-snakkeboble/EkspanderbarSnakkeboble';
 import Innhold, { getSource } from 'app/utils/innhold/Innhold';
 import { injectIntl, InjectedIntl } from 'react-intl';
+import getTranslation from 'app/utils/i18nUtils';
 
 interface Props {
     intl: InjectedIntl;
@@ -17,24 +18,46 @@ const InfoAleneomsorgMor: FunctionComponent<Props> = ({ intl }) => {
 
     return (
         <Eventline>
-            <Event title="Du venter barn">
-                <EkspanderbarSnakkeboble svg={kalender} tittel="Planlegg tiden hjemme med barnet">
+            <Event
+                title={getTranslation('søke_om_foreldrepenger.aleneomsorg.mor.venterBarn', intl)}>
+                <EkspanderbarSnakkeboble
+                    svg={kalender}
+                    tittel={getTranslation(
+                        'søke_om_foreldrepenger.aleneomsorg.mor.planleggTiden',
+                        intl
+                    )}>
                     <Innhold
                         source={getSource('søk-foreldrepenger/aleneomsorg-mor/planlegg', intl)}
                     />
                 </EkspanderbarSnakkeboble>
             </Event>
-            <Event title="22. svangerskapsuke">
-                <EkspanderbarSnakkeboble svg={morBrev} tittel="Du kan søke om foreldrepenger">
+            <Event
+                title={getTranslation(
+                    'søke_om_foreldrepenger.aleneomsorg.mor.svangerskapsuke',
+                    intl
+                )}>
+                <EkspanderbarSnakkeboble
+                    svg={morBrev}
+                    tittel={getTranslation(
+                        'søke_om_foreldrepenger.aleneomsorg.mor.morKanSøke',
+                        intl
+                    )}>
                     <Innhold
                         source={getSource('søk-foreldrepenger/aleneomsorg-mor/mor-kan-søke', intl)}
                     />
                 </EkspanderbarSnakkeboble>
             </Event>
-            <Event title="4 uker før mors første dag med foreldrepenger">
+            <Event
+                title={getTranslation(
+                    'søke_om_foreldrepenger.aleneomsorg.mor.fireUkerFørMor',
+                    intl
+                )}>
                 <EkspanderbarSnakkeboble
                     svg={inntektsOpplysninger}
-                    tittel="Vi får opplysninger om inntekten din">
+                    tittel={getTranslation(
+                        'søke_om_foreldrepenger.aleneomsorg.mor.inntektMor',
+                        intl
+                    )}>
                     <Innhold
                         source={getSource(
                             'søk-foreldrepenger/aleneomsorg-mor/opplysninger-inntekt-mor',
@@ -42,7 +65,12 @@ const InfoAleneomsorgMor: FunctionComponent<Props> = ({ intl }) => {
                         )}
                     />
                 </EkspanderbarSnakkeboble>
-                <EkspanderbarSnakkeboble svg={fåSvar} tittel="Du kan få svar på søknaden">
+                <EkspanderbarSnakkeboble
+                    svg={fåSvar}
+                    tittel={getTranslation(
+                        'søke_om_foreldrepenger.aleneomsorg.mor.morFårSvar',
+                        intl
+                    )}>
                     <Innhold
                         source={getSource('søk-foreldrepenger/aleneomsorg-mor/mor-får-svar', intl)}
                     />
