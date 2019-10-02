@@ -5,7 +5,7 @@
     <lesmer intro="Kan eg få foreldrepengar når eg er student?">
         <avsnitt>For å ha rett til foreldrepengar må du ha hatt inntekt i 6 av dei 10 siste månadene. Studielån eller stipend frå Lånekassa gir ikkje rett til foreldrepengar. Om du ikkje har rett til foreldrepengar, kan du søkje om eingongsstønad. Du kan prøve vår <lenke url="/veiviser">veiviser</lenke> for å sjå kva du kan ha rett til.</avsnitt>
     </lesmer>
-    <lesmer intro="Eg får yting frå NAV. Kan eg få foreldrepengar?">
+    <lesmer intro="Eg får utbetaling frå NAV. Kan eg få foreldrepengar?">
         <avsnitt>Dersom du får utbetalt ei av desse ytingane frå NAV, kan du ha rett til foreldrepengar:</avsnitt>
         <liste>
             <punkt>Sjukepengar</punkt>
@@ -15,6 +15,7 @@
             <punkt>Dagpengar</punkt>
             <punkt>Omsorgs-, pleie- eller opplæringspengar</punkt>
         </liste>
+        <avsnitt>Er du usikker på kva du kan ha rett til? <lenke url="https://familie.nav.no/veiviser" ekstern="true">Bruk vegvisaren og finn ut kva du kan få</lenke></avsnitt>
     </lesmer>
     <lesmer intro="Kva er forskjellen mellom foreldrepengar og eingongsstønad?">
         <avsnitt>Foreldrepengar skal sikre inntekta di når du skal vere heime med barnet. Eingongsstønad er ein eingongssum du kan få dersom du ventar barn og ikkje har hatt inntekt det siste året. Du kan velje eingongsstønad sjølv om du har rett til foreldrepengar, men du kan berre få éi av desse ytingane.</avsnitt>
@@ -22,9 +23,7 @@
     </lesmer>
     <lesmer intro="Kva er forskjellen på foreldrepengeperiode og fellesperiode?">
         <avsnitt>Foreldrepengeperioden er heile perioden med foreldrepengar. Når begge foreldra har rett til foreldrepengar, består foreldrepengeperioden av 3 veker foreldrepengar til mor før fødsel, mødrekvote, fedrekvote og ein fellesperiode.</avsnitt>
-    </lesmer>
-    <lesmer intro="Eg har sendt inn søknad, men finn han ikkje på Dine foreldrepenger">
-        <avsnitt>Dersom foreldrepengeperioden til mor eller far starta i 2018 eller tidlegare, kan det ta <b>opptil 3 veker</b> før søknaden din blir registrert hos oss og synleg på <lenke url="https://foreldrepenger.nav.no" ekstern="true">Dine foreldrepengar</lenke>. Då du sende søknaden, fekk du ei kvittering som bekrefta at vi har fått han.</avsnitt>
+        <avsnitt>Du kan bruke vår <lenke url="https://foreldrepengeplanlegger.nav.no/foreldrepengeplanlegger" ekstern="true">Foreldrepengeplanleggar</lenke> for å planleggje kor lenge du kan være heime med barnet.</avsnitt>
     </lesmer>
     <lesmer intro="Eg skal ha ulønt permisjon">
         <avsnitt>Ulønt permisjon avtaler du med arbeidsgivaren din. Du kan ikkje utsetje foreldrepengane dine når du har ulønt permisjon. Den andre forelderen kan utsetje foreldrepengane på grunn av heiltidsarbeid, sjukdom eller ferie i perioden du har ulønt permisjon.</avsnitt>
