@@ -1,7 +1,7 @@
 import * as React from 'react';
 import classnames from 'classnames';
 import LesMer from '../../../app/components/les-mer/LesMer';
-import TypografiBase from 'nav-frontend-typografi';
+import TypografiBase, { Undertittel } from 'nav-frontend-typografi';
 import WithLink from '../../../app/components/with-link/WithLink';
 import './innhold.less';
 
@@ -55,6 +55,10 @@ export const Unbreakable = (props: { children: React.ReactNode }) => (
 
 export const Lenke = (props: { url: string; ekstern: string; children: React.ReactNode }) => (
     <WithLink addExternalIcon={!!props.ekstern} urlIsExternal={!!props.ekstern} {...props} />
+);
+
+export const MidstiltTittel = (props: any) => (
+    <Undertittel className={cls.element('midtstiltTittel')}>{props.children}</Undertittel>
 );
 
 export const SøkNåKnapp = (props: {
