@@ -12,7 +12,7 @@ import OmSvangerskapspenger from './pages/svangerskapspenger/OmSvangerskapspenge
 import Regelendringer from './pages/regelendringer/Regelendringer';
 import SøkSvangerskapspenger from './pages/søk-svangerskapspenger/SøkSvangerskapspenger';
 import SøkForeldrepenger from './pages/søk-foreldrepenger/SøkForeldrepenger';
-// import Veiviser from './pages/veiviser/Veiviser';
+import Veiviser from './pages/veiviser/Veiviser';
 
 interface ValidRouteProps extends RouteProps {
     path?: Page;
@@ -72,6 +72,7 @@ const Router = () => (
             component={OmSvangerskapspenger}
             key="om-svangerskapspenger"
         />
+        <ValidRoute exact={true} path={Page.Veiviser} component={Veiviser} key="veiviser" />
         <Redirect to="/" />
     </Switch>
 );

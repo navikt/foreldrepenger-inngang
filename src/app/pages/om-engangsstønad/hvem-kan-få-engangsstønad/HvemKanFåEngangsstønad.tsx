@@ -34,6 +34,7 @@ const HvemKanFåEngangsstønad: React.StatelessComponent<Props> = ({ id, intl })
                 <Innhold source={getSource(utbetalingShortContent, intl)} />
             </div>
         </div>
+        <Innhold source={getSource('om-engangsstønad/hvem-kan-få/veiviser', intl)} />
     </PanelMedIllustrasjon>
 );
 
