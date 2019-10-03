@@ -11,7 +11,23 @@
         <meta name="twitter:card" content="http://familie.nav.no/dist/assets/foreldrepenger.png" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="IE=11" />
-        <meta name="google-site-verification" content="IGSCxmuLPRTAu8ukd7saAP-MwI6xaVn-QB0v8l2dEZw" />{{{NAV_SCRIPTS}}} {{{NAV_MENU_RESOURCES}}} {{{NAV_STYLES}}}
+        <meta name="google-site-verification" content="IGSCxmuLPRTAu8ukd7saAP-MwI6xaVn-QB0v8l2dEZw" />
+        <script charset="UTF-8">
+            try {
+                window['adrum-start-time'] = new Date().getTime();
+                (function(config) {
+                    if (window.location.href.indexOf('familie.nav.no') > -1) {
+                        config.adrumExtUrlHttps = 'https://jsagent.nav.no';
+                        config.beaconUrlHttps = 'https://eumgw.nav.no';
+                        config.appKey = 'EUM-AAB-AXN';
+                        config.xd = { enable: false };
+                    }
+                })(window['adrum-config'] || (window['adrum-config'] = {}));
+            } catch {}
+        </script>
+        <script src='https://jsagent.nav.no/adrum/adrum.js'></script>
+
+        {{{NAV_SCRIPTS}}} {{{NAV_MENU_RESOURCES}}} {{{NAV_STYLES}}}
     </head>
     <body>
         {{{NAV_HEADING}}}

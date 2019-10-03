@@ -66,7 +66,7 @@
     "route.veiviser": " What are you entitled to?",
     "route.regelendringer": "Rule changes",
     "route.om-svangerskapspenger": "About pregnancy benefit",
-    "route.soke-om-foreldrepenger": "Søke om foreldrepenger",
+    "route.soke-om-foreldrepenger": "Applying for parental benefits",
 
     "informasjonstavle.tittel": "Parental benefit, lump-sum grant and pregnancy benefit",
     "informasjonstavle.ingress": "These are your rights when expecting children or awaiting parental benefits.",
@@ -301,7 +301,7 @@
     "søke_om_foreldrepenger.bareFarHarRett.planleggTiden": "Plan the time at home with the child",
     "søke_om_foreldrepenger.bareFarHarRett.dokumentasjon": "You need documentation to show that mom is doing an approved activity",
     "søke_om_foreldrepenger.bareFarHarRett.barnFødt": "The child is born",
-    "søke_om_foreldrepenger.bareFarHarRett.farKanSøke": "You apply for parental benefit",
+    "søke_om_foreldrepenger.bareFarHarRett.farKanSøke": "You may apply for parental benefit",
     "søke_om_foreldrepenger.bareFarHarRett.fireUkerFørFar": "4 weeks before your first day of parental benefit or postponement",
     "søke_om_foreldrepenger.bareFarHarRett.inntektFar": "We receive information about your income",
     "søke_om_foreldrepenger.bareFarHarRett.farFårSvar": "You may receive a response to the application",

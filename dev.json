@@ -1,5 +1,5 @@
 {
-    "appres" : "appres-q1.nav.no",
+    "appres": "appres-q1.nav.no",
     "ingress": "https://familie-q.nav.no",
     "application_name": "foreldrepenger-inngang",
     "env": {
@@ -11,6 +11,7 @@
         "ENDRE_SOKNAD_FORELDREPENGER_URL": "https://tjenester-t10.nav.no/soknadforeldrepenger/app/start",
         "DINE_FORELDREPENGER_URL": "https://foreldrepenger-q.nav.no/",
         "SOK_SVANGERSKAPSPENGER_URL": "https://svangerskapspengesoknad-q.nav.no/",
-        "SOK_SVANGERSKAPSPENGER_PAPIR_URL": "https://familie-q.nav.no/hva-soker-du/svangerskapspenger"
+        "SOK_SVANGERSKAPSPENGER_PAPIR_URL": "https://familie-q.nav.no/hva-soker-du/svangerskapspenger",
+        "PLANLEGGEREN_URL": "https://foreldrepengeplanlegger.nav.no/foreldrepengeplanlegger"
     }
 }
