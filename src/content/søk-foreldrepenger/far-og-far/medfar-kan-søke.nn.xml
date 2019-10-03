@@ -1,8 +1,7 @@
 <innhold>
-    <avsnitt>Du kan søkje om foreldrepengar når du veit datoen for <b>omsorgsovertakinga</b>.</avsnitt>
-    </lesmer>
+    <avsnitt>Du kan søkje om foreldrepengar når du veit datoen for <b>omsorgsovertakinga</b> eller <b>stebarnsadopsjon</b>.</avsnitt>
     <avsnitt>Når du skal søkje, loggar du deg inn med BankID frå banken din eller ein annan elektronisk id. Spørsmåla du får i søknaden, er tilpassa situasjonen din, og du får rettleiing og informasjon undervegs.</avsnitt>
-    <avsnitt>Medan du søkjer, kjem du til å bli beden om å leggje ved dokumentasjon på omsorgsovertakinga.</avsnitt>
+    <avsnitt>Medan du søkjer, kjem du til å bli beden om å leggje ved dokumentasjon på omsorgsovertakinga eller stebarnsadopsjonen.</avsnitt>
     <lesmer liten="true" intro="Har du fått sluttpakke, ventelønn eller vore i førstegongstenesta?">
         <avsnitt>Du må leggje ved dokumentasjon på inntekta og perioden dersom du har hatt ei av desse inntektskjeldene:</avsnitt>
         <liste>
@@ -10,6 +9,18 @@
             <punkt>sluttpakke</punkt>
             <punkt>lønn frå arbeidsgivarar under vidare- eller etterutdanning</punkt>
             <punkt>ventelønn eller vartpengar</punkt>
+        </liste>
+    </lesmer>
+    <lesmer liten="true" intro="Skal du ha foreldrepengar i fellesperioden?">
+    <avsnitt>Du må leggje ved dokumentasjon på aktivitetskravet til far 1 dersom du skal vere heime i fellesperioden. Han må anten:</avsnitt>
+        <liste>
+            <punkt>vere i arbeid</punkt>
+            <punkt>ta utdanning på heiltid</punkt>
+            <punkt>kombinere utdanning med arbeid som til saman blir heiltid</punkt>
+            <punkt>vere heilt avhengig av hjelp til å ta seg av barnet på grunn av sjukdom</punkt>
+            <punkt>vere innlagd på sjukehus eller helseinstitusjon</punkt>
+            <punkt>delta i kvalifiseringsprogrammet</punkt>
+            <punkt>delta på heiltid i introduksjonsprogrammet etter kapittel 2 for nyinnkomne innvandrarar</punkt>
         </liste>
     </lesmer>
     <søkKnapp søknad="foreldrepengar">Søk no</søkKnapp>
