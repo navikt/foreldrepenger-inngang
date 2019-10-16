@@ -8,9 +8,10 @@ import enMessages from './locales/en_GB.json';
 import nnMessages from './locales/nn_NO.json';
 import nbMessages from './locales/nb_NO.json';
 
+import areIntlLocalesSupported from 'intl-locales-supported';
+
 export type Language = 'nb' | 'nn' | 'en';
 
-const areIntlLocalesSupported = require('intl-locales-supported');
 const localesMyAppSupports = [
     'nb-NO'
 ];
