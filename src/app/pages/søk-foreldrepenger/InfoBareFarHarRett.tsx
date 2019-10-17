@@ -30,6 +30,8 @@ const InfoBareFarHarRett: FunctionComponent<Props> = ({ intl }) => {
                         source={getSource('søk-foreldrepenger/bare-far-har-rett/planlegg', intl)}
                     />
                 </EkspanderbarSnakkeboble>
+            </Event>
+            <Event title={getTranslation('søke_om_foreldrepenger.bareFarHarRett.barnFødt', intl)}>
                 <EkspanderbarSnakkeboble
                     svg={dokumentasjon}
                     tittel={getTranslation(
@@ -43,8 +45,6 @@ const InfoBareFarHarRett: FunctionComponent<Props> = ({ intl }) => {
                         )}
                     />
                 </EkspanderbarSnakkeboble>
-            </Event>
-            <Event title={getTranslation('søke_om_foreldrepenger.bareFarHarRett.barnFødt', intl)}>
                 <EkspanderbarSnakkeboble
                     svg={farBrev}
                     tittel={getTranslation(

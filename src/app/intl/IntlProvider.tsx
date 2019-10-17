@@ -8,7 +8,23 @@ import enMessages from './locales/en_GB.json';
 import nnMessages from './locales/nn_NO.json';
 import nbMessages from './locales/nb_NO.json';
 
+import areIntlLocalesSupported from 'intl-locales-supported';
+
 export type Language = 'nb' | 'nn' | 'en';
+
+const localesMyAppSupports = [
+    'nb-NO'
+];
+
+if (global.Intl) {
+    if (!areIntlLocalesSupported(localesMyAppSupports)) {
+        const IntlPolyfill    = require('intl');
+        Intl.NumberFormat   = IntlPolyfill.NumberFormat;
+        Intl.DateTimeFormat = IntlPolyfill.DateTimeFormat;
+    }
+} else {
+    global.Intl = require('intl');
+}
 
 interface StateProps {
     language: Language;

@@ -56,7 +56,7 @@ const Bildelenker = ({ intl }: { intl: InjectedIntl }) => {
     return (
         <nav className={cls.element('bildepaneler')}>
             <PanelMedBilde
-                svgName="veiviser"
+                svgName="hva-skjer-når"
                 title={getTranslation('informasjonstavle.hva_kan_du_få', intl)}
                 urlIsExternal={false}
                 url={Page.SøkeOmForeldrepenger}>
