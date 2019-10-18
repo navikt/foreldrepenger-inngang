@@ -3,6 +3,7 @@ import IntlProvider, { Language } from './intl/IntlProvider';
 import LanguageToggle from './intl/language-toggle/LanguageToggle';
 import moment from 'moment';
 import Router from './Router';
+import NAVChatBot from '@navikt/nav-chatbot';
 
 const DEFAULT_LANG: Language = 'nb';
 
@@ -42,6 +43,11 @@ class App extends React.Component<{}, State> {
                     {ENABLE_LANGUAGE_TOGGLER && (
                         <LanguageToggle toggleLanguage={this.toggleLanguage} />
                     )}
+                    <NAVChatBot
+                        customerKey="12345"
+                        queueKey="Q_CHAT_BOT"
+                        configId="c34298fe-3ea4-4d88-9343-c2d4e7bb3e10"
+                    />
                     <Router />
                 </div>
             </IntlProvider>
