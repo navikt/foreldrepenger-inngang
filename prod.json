@@ -8,7 +8,6 @@
         "SOK_FORELDREPENGER_PAPIR_URL": "https://www.nav.no/no/Person/Skjemaer-for-privatpersoner/Skjemaer/Familie/foreldrepenger-og-engangsstonad/Foreldrepenger+og+engangsst%C3%B8nad?method=mail&veiledertype=privatperson",
         "SOK_ENGANGSSTONAD_URL": "https://engangsstonad.nav.no",
         "SOK_ENGANGSSTONAD_PAPIR_URL": "https://www.nav.no/no/Person/Skjemaer-for-privatpersoner/Skjemaer/Familie/foreldrepenger-og-engangsstonad/Foreldrepenger+og+engangsst%C3%B8nad?method=mail&veiledertype=privatperson",
-        "ENDRE_SOKNAD_FORELDREPENGER_URL": "https://tjenester.nav.no/esso/saml2/jsp/spSSOInit.jsp?metaAlias=/sp&idpEntityID=idporten.difi.no-v3&NameIDFormat=transient&AuthLevel=4&goto=https://tjenester.nav.no/soknadforeldrepenger/app/start",
         "DINE_FORELDREPENGER_URL": "https://foreldrepenger.nav.no",
         "SOK_SVANGERSKAPSPENGER_URL": "https://svangerskapspengesoknad.nav.no/",
         "SOK_SVANGERSKAPSPENGER_PAPIR_URL": "https://familie.nav.no/hva-soker-du/svangerskapspenger",
