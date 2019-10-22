@@ -5,9 +5,9 @@
     "env": {
         "APPRES_CMS_URL": "https://appres.nav.no",
         "SOK_FORELDREPENGER_URL": "https://foreldrepengesoknad.nav.no",
-        "SOK_FORELDREPENGER_PAPIR_URL": "https://www.nav.no/no/Person/Skjemaer-for-privatpersoner/Skjemaer/Familie/foreldrepenger-og-engangsstonad/Foreldrepenger+og+engangsst%C3%B8nad?method=mail&veiledertype=privatperson",
+        "SOK_FORELDREPENGER_PAPIR_URL": "https://www.nav.no/soknader/nb/person/familie/foreldrepenger-og-engangsstonad",
         "SOK_ENGANGSSTONAD_URL": "https://engangsstonad.nav.no",
-        "SOK_ENGANGSSTONAD_PAPIR_URL": "https://www.nav.no/no/Person/Skjemaer-for-privatpersoner/Skjemaer/Familie/foreldrepenger-og-engangsstonad/Foreldrepenger+og+engangsst%C3%B8nad?method=mail&veiledertype=privatperson",
+        "SOK_ENGANGSSTONAD_PAPIR_URL": "https://www.nav.no/soknader/nb/person/familie/foreldrepenger-og-engangsstonad",
         "DINE_FORELDREPENGER_URL": "https://foreldrepenger.nav.no",
         "SOK_SVANGERSKAPSPENGER_URL": "https://svangerskapspengesoknad.nav.no/",
         "SOK_SVANGERSKAPSPENGER_PAPIR_URL": "https://familie.nav.no/hva-soker-du/svangerskapspenger",
