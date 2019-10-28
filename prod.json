@@ -1,5 +1,6 @@
 {
     "ingress": "https://familie.nav.no",
+    "ingress-nav": "https://www.nav.no/familie",
     "appres": "appres.nav.no",
     "application_name": "foreldrepenger-inngang",
     "env": {
