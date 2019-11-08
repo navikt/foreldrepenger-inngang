@@ -1,6 +1,6 @@
 <innhold>
     <lesmer intro="Kor finn eg informasjon om saka mi?">
-    <avsnitt>Du kan logge deg på <lenke url="https://foreldrepenger.nav.no" ekstern="true">Dine foreldrepengar</lenke> og sjå status for søknaden din. Her kan du òg ettersenda vedlegg til søknaden din. Viss du har søkt på papirskjema, kan du sjå status etter omkring 10 dagar.</avsnitt>
+    <avsnitt>Du kan logge deg på <lenke url="https://foreldrepenger.nav.no" ekstern="true">Dine foreldrepengar</lenke> og sjå status i saken din. Her kan du òg ettersenda vedlegg til søknaden din.</avsnitt>
     </lesmer>
     <lesmer intro="Når får eg svar på søknaden min?">
         <avsnitt>Du får tidlegast svar på søknaden din <b>4 veker</b> før foreldrepengeperioden din startar. Dette er fordi vi bruker dei nyaste opplysningane om inntekta di når vi skal berekne kva du skal få i foreldrepengar.</avsnitt>
@@ -14,7 +14,7 @@
             <punkt>Sjukepengar</punkt>
             <punkt>Foreldrepengar </punkt>
             <punkt>Svangerskapspengar</punkt>
-            <punkt>Arbeidsavklaringspengar</punkt>
+            <punkt>Arbeidsavklaringspengar (AAP)</punkt>
             <punkt>Dagpengar</punkt>
             <punkt>Pleiepengar</punkt>
         </liste>

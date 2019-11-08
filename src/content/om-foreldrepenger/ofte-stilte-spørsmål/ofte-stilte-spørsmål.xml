@@ -1,7 +1,7 @@
 <innhold>
 
     <lesmer intro="Hvor finner jeg informasjon om saken min?">
-    <avsnitt>Du kan logge deg på <lenke url="https://foreldrepenger.nav.no" ekstern="true">Dine foreldrepenger</lenke> og se status for søknaden din. Her kan du også ettersende vedlegg til søknaden din. Hvis du har søkt på papirskjema, kan du se status etter omkring 10 dager.</avsnitt>
+    <avsnitt>Du kan logge deg på <lenke url="https://foreldrepenger.nav.no" ekstern="true">Dine foreldrepenger</lenke> og se status i saken din. Her kan du også ettersende vedlegg til søknaden din.</avsnitt>
     </lesmer>
     <lesmer intro="Når får jeg svar på søknaden min?">
         <avsnitt>Du kan tidligst få svar på søknaden din <b>4 uker</b> før foreldrepengeperioden din starter. Dette er fordi vi bruker de nyeste opplysningene om inntekten din når vi skal beregne hva du skal få i foreldrepenger.</avsnitt>
