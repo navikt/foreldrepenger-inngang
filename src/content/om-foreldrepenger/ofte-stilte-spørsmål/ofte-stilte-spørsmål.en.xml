@@ -1,4 +1,7 @@
 <innhold>
+    <lesmer intro="Where can I find information about my case?">
+    <avsnitt>You can log in to<lenke url="https://foreldrepenger.nav.no" ekstern="true">Your parental allowance</lenke> and see the status of your application. You can also submit application attachments. If you have submitted the application on paper, you can see the status after about 10 days.</avsnitt>
+    </lesmer>
     <lesmer intro="When will I get a response to my application?">
          <avsnitt>The earliest you will receive a response to your application is <b>4 weeks</b> the start of your parental benefit period. This is because we use the most recent information about your income when we calculate how much parental benefit you will receive.</avsnitt>
     </lesmer>
