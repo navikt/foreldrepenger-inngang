@@ -17,6 +17,11 @@ const Svangerskapspenger = ({ intl }: InjectedIntlProps) => {
                     text: getTranslation('hva_søker_du.søk_svangerskapspenger', intl),
                     url: Page.SøkSøkerDuSvangerskapspenger
                 }}
+                secondButton={{
+                    text: getTranslation('hva_søker_du.ettersend_vedlegg', intl),
+                    url: Environment.DINE_FORELDREPENGER_URL,
+                    external: true
+                }}
                 alternativHelpSection={
                     <UserHelpAlternativ
                         linkText={getTranslation('hva_søker_du.ingen_elektronisk_id', intl)}

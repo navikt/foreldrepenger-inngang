@@ -19,6 +19,11 @@ const Engangsstonad = ({ intl }: InjectedIntlProps) => {
                     url: Environment.SOK_ENGANGSSTONAD_URL,
                     external: true
                 }}
+                secondButton={{
+                    text: getTranslation('hva_søker_du.ettersend_vedlegg', intl),
+                    url: Environment.DINE_FORELDREPENGER_URL,
+                    external: true
+                }}
                 alternativHelpSection={
                     <UserHelpAlternativ
                         linkText={getTranslation('hva_søker_du.ingen_elektronisk_id', intl)}
