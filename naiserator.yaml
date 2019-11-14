@@ -37,7 +37,7 @@ spec:
   ingresses:
     - {{ingress}}
 {{#if ingress-nav}}
-   - {{ingress-nav}}
+    - {{ingress-nav}}
 {{/if}}     
   resources:
     limits:
