@@ -10,7 +10,7 @@
             <punkt>Hvis du ikke vet tidspunktet for ferien når du søker, kan du senere logge inn på <lenke url="https://foreldrepenger.nav.no/" ekstern="true">Dine foreldrepenger</lenke> og sende en endringssøknad.</punkt>
         </liste>
         <avsnitt><b>Søkefrist</b>: Du må søke <b>før</b> ferien din starter.</avsnitt>
-        <søkKnapp søknad="foreldrepenger">Send inn søknad</søkKnapp>
+         <søkKnapp søknad="foreldrepenger" sentrert="true">Søk om utsettelse nå</søkKnapp>
     </lesmer>
     <avsnitt className="top-spacing" type="undertittel">Feriepenger av foreldrepenger</avsnitt>
     <avsnitt>Hvis du er arbeidstaker har du rett til feriepenger av foreldrepenger. Hvis arbeidsgiveren betaler lønn under permisjonen, utbetales feriepengene til arbeidsgiveren. </avsnitt>

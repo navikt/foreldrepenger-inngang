@@ -24,6 +24,6 @@
     </lesmer>
     <lesmer intro="Stebarnsadopsjon">
         <avsnitt>Du kan få foreldrepengar dersom du adopterer stebarnet ditt i løpet av foreldrepengeperioden. Du sender inn ein vanleg søknad om foreldrepengar og vel at søknaden gjeld stebarnsadopsjon.</avsnitt>
-        <søkKnapp søknad="foreldrepenger">Søk no</søkKnapp>
+        <søkKnapp søknad="foreldrepenger" sentrert="true">Søk om foreldrepengar</søkKnapp>
     </lesmer>
 </innhold>

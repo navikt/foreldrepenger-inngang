@@ -7,5 +7,5 @@
     <liste>    
         <punkt>Documentation of admission from the hospital or health institution.</punkt>
     </liste>
-    <søkKnapp søknad="foreldrepenger">Applay now</søkKnapp>
+    <søkKnapp søknad="foreldrepenger" sentrert="true">Apply now</søkKnapp>
 </innhold>

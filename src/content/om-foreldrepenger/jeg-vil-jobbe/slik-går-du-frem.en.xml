@@ -6,7 +6,7 @@
             <punkt>If you <b>have already applied</b>, log in at <lenke url="https://foreldrepenger.nav.no/" ekstern="true">Your parental benefit</lenke> and submit a modification application.</punkt>
         </liste>
         <avsnitt><b>Application deadline</b>: You must apply <b>before</b> you start working.</avsnitt>
-        <søkKnapp søknad="foreldrepenger">Applay now</søkKnapp>
+         <søkKnapp søknad="foreldrepenger" sentrert="true">Apply now</søkKnapp>
     </lesmer>
     <lesmer intro="If you are self-employed or a freelancer">
         <liste>
@@ -14,6 +14,6 @@
             <punkt>If you <b>have already applied</b>, log in at <lenke url="https://foreldrepenger.nav.no/" ekstern="true">Your parental benefit</lenke> and submit a modification application.</punkt>
         </liste>
         <avsnitt><b>Application deadline</b>: You must apply <b>before</b> you start working.</avsnitt>
-        <søkKnapp søknad="foreldrepenger">Applay now</søkKnapp>
+         <søkKnapp søknad="foreldrepenger" sentrert="true">Apply now</søkKnapp>
     </lesmer>
 </innhold>

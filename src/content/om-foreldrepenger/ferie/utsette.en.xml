@@ -11,7 +11,7 @@
             <punkt>If you do not know when you will be taking holidays when you apply, you can send an application at <lenke url="https://www.foreldrepenger.nav.no/" ekstern="true">Your Parental Benefit</lenke> to postpone at a later date.</punkt>
         </liste>
         <avsnitt><b>Deadline</b>: You have to apply <b>before</b> you start your holiday.</avsnitt>
-        <søkKnapp søknad="foreldrepenger">Applay now</søkKnapp>
+         <søkKnapp søknad="foreldrepenger" sentrert="true">Apply now</søkKnapp>
     </lesmer>
     <avsnitt className="top-spacing" type="undertittel">Holiday pay from the parental benefit</avsnitt>
     <avsnitt>If you are an employee, you are entitled to holiday pay from the parental benefit. If your employer is paying you salary during your period of leave, the holiday pay is paid to your employer. </avsnitt>
