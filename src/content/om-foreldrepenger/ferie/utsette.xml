@@ -6,11 +6,10 @@
     <lesmer intro="Slik går du frem for å utsette når du har ferie">
         <liste>
             <punkt>Avtal med <b>arbeidsgiveren</b> din når du skal ta ut ferien.</punkt>
-            <punkt>I <b>foreldrepengesøknaden</b> oppgir du at du skal <b>utsette</b> fordi du skal på ferie.</punkt>
+            <punkt>I <lenke url="https://foreldrepengesoknad.nav.no/" ekstern="true">foreldrepengesøknaden</lenke> legger du inn en <b>utsettelse</b> fordi du skal på ferie.</punkt>
             <punkt>Hvis du ikke vet tidspunktet for ferien når du søker, kan du senere logge inn på <lenke url="https://foreldrepenger.nav.no/" ekstern="true">Dine foreldrepenger</lenke> og sende en endringssøknad.</punkt>
         </liste>
         <avsnitt><b>Søkefrist</b>: Du må søke <b>før</b> ferien din starter.</avsnitt>
-         <søkKnapp søknad="foreldrepenger" sentrert="true">Søk om utsettelse nå</søkKnapp>
     </lesmer>
     <avsnitt className="top-spacing" type="undertittel">Feriepenger av foreldrepenger</avsnitt>
     <avsnitt>Hvis du er arbeidstaker har du rett til feriepenger av foreldrepenger. Hvis arbeidsgiveren betaler lønn under permisjonen, utbetales feriepengene til arbeidsgiveren. </avsnitt>

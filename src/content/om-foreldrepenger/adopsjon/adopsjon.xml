@@ -23,7 +23,6 @@
         <avsnitt>Du kan ikke få foreldrepenger hvis barnet du adopterer er over 15 år, eller det er ektefellen sitt barn.</avsnitt>
     </lesmer>
     <lesmer intro="Stebarnsadopsjon">
-        <avsnitt>Du kan få foreldrepenger hvis du adopterer stebarnet ditt i løpet av foreldrepengeperioden. Du sender inn en vanlig søknad om foreldrepenger og velger at søknaden gjelder stebarnsadopsjon.</avsnitt>
-        <søkKnapp søknad="foreldrepenger" sentrert="true">Søk om foreldrepenger</søkKnapp>
+        <avsnitt>Du kan få foreldrepenger hvis du adopterer stebarnet ditt i løpet av foreldrepengeperioden. Du sender inn en vanlig søknad om <lenke url="https://foreldrepengesoknad.nav.no/" ekstern="true">foreldrepenger</lenke> og velger at søknaden gjelder stebarnsadopsjon.</avsnitt>
     </lesmer>
 </innhold>
