@@ -7,6 +7,7 @@
             <punkt>Hvis du <b>allereie har søkt</b>, logger du på <lenke url="https://foreldrepenger.nav.no/" ekstern="true">Dine foreldrepengar</lenke> og sender ein endringssøknad.</punkt>
         </liste>
         <avsnitt><b>Søkefrist</b>: Du må søkje <b>før</b> du begynnar å jobbe.</avsnitt>
+        <søkKnapp søknad="foreldrepenger">Søk no</søkKnapp>
     </lesmer>
     <lesmer intro="Slik går du fram dersom du er sjølvstendig eller frilansar">
         <liste>
@@ -14,5 +15,6 @@
             <punkt>Hvis du <b>allereie har søkt</b>, logger du på <lenke url="https://foreldrepenger.nav.no/" ekstern="true">Dine foreldrepengar</lenke> og sender ein endringssøknad.</punkt>
         </liste>
         <avsnitt><b>Søkefrist</b>: Du må søkje <b>før</b> du begynnar å jobbe.</avsnitt>
+        <søkKnapp søknad="foreldrepenger">Søk no</søkKnapp>
     </lesmer>
 </innhold>

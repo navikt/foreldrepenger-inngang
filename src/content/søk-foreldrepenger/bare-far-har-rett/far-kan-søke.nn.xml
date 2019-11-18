@@ -11,6 +11,6 @@
             <punkt>ventelønn eller vartpengar</punkt>
         </liste>
     </lesmer>
-    <søkKnapp søknad="foreldrepengar">Søk no</søkKnapp>
+    <søkKnapp søknad="foreldrepenger">Søk no</søkKnapp>
      <lesmer liten="true" intro="Er mor sjuk?">Dersom mor er sjuk eller lagd inn på sjukehus eller helseinstitusjon, kan du søkje om foreldrepengar før barnet er født. Då må du sende søknaden i posten.</lesmer>
 </innhold>

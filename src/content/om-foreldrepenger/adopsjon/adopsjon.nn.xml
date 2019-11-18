@@ -10,7 +10,7 @@
     </lesmer>
     <lesmer intro="Kor lenge kan du få foreldrepengar?">
         <avsnitt>Foreldrepengeperioden er 46 uker hvis dere velger 100 prosent foreldrepengar, eller 56 veker ved 80 prosent foreldrepengar.</avsnitt>
-        <avsnitt>Vekene er fordelt mellom foreldra på same måte som ved foreldrepengar ved fødsel.</avsnitt>
+        <avsnitt>Vekene er fordelt mellom foreldra på same måte som ved <lenke url="#hvor-lenge-kan-du-fa-foreldrepenger">foreldrepengar ved fødsel.</lenke></avsnitt>
     </lesmer>
     <lesmer intro="Adopterer de fleire barn?">
         <avsnitt>Dersom de adopterer fleire barn samtidig, får de fleire veker med foreldrepengar.</avsnitt>
@@ -23,6 +23,7 @@
         <avsnitt>Du kan ikkje få foreldrepengar dersom barnet du adopterer, er over 15 år, eller det er ektefellen sitt barn.</avsnitt>
     </lesmer>
     <lesmer intro="Stebarnsadopsjon">
-        <avsnitt>Du kan få foreldrepengar dersom du adopterer stebarnet ditt i løpet av foreldrepengeperioden.</avsnitt>
+        <avsnitt>Du kan få foreldrepengar dersom du adopterer stebarnet ditt i løpet av foreldrepengeperioden. Du sender inn ein vanleg søknad om foreldrepengar og vel at søknaden gjeld stebarnsadopsjon.</avsnitt>
+        <søkKnapp søknad="foreldrepenger">Søk no</søkKnapp>
     </lesmer>
 </innhold>

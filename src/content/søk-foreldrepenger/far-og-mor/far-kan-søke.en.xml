@@ -22,6 +22,6 @@
             <punkt>participate full-time in the Introduction Programme for newly arrived immigrants pursuant to chapter 2 of the Introduction Act</punkt>
         </liste>
     </lesmer>
-    <søkKnapp søknad="parental benefit">Apply now</søkKnapp>
+    <søkKnapp søknad="foreldrepenger">Apply now</søkKnapp>
     <lesmer liten="true" intro="Is the mother sick?">If the mother is sick or hospitalised in a hospital or health care institution, you may apply for parental benefit before the child is born. In this case, you must send the application by post.</lesmer>
 </innhold>

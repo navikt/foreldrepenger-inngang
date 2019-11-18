@@ -10,6 +10,7 @@
             <punkt>Dersom du ikkje veit tidspunktet for ferien når du søkjer, kan du seinare sende søknad om å utsetje. Hugs at du må søkje før ferien din startar.</punkt>
         </liste>
         <avsnitt><b>Søkefrist</b>: Du må søkje <b>før</b> ferien din startar.</avsnitt>
+        <søkKnapp søknad="foreldrepenger">Send inn søknad</søkKnapp>
     </lesmer>
     <avsnitt className="top-spacing" type="undertittel">Feriepengar av foreldrepengane</avsnitt>
     <avsnitt>Dersom du er arbeidstakar, har du rett til feriepengar av foreldrepengane. Dersom arbeidsgjevaren betaler lønn under permisjonen, blir feriepengane betalte ut til arbeidsgjevaren.</avsnitt>

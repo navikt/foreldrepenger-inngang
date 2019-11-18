@@ -11,5 +11,5 @@
             <punkt>ventelønn eller vartpengar</punkt>
         </liste>
     </lesmer>
-    <søkKnapp søknad="foreldrepengar">Søk no</søkKnapp>
+    <søkKnapp søknad="foreldrepenger">Søk no</søkKnapp>
 </innhold>

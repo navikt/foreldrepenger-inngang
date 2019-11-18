@@ -7,4 +7,5 @@
     <liste>    
         <punkt>Dokumentasjon på innleggelsen fra sykehuset eller helseinstitusjonen.</punkt>
     </liste>
+    <søkKnapp søknad="foreldrepenger">Søk nå</søkKnapp>
 </innhold>
