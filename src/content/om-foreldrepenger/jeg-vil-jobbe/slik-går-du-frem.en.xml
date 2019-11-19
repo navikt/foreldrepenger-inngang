@@ -1,5 +1,5 @@
 <innhold>
-    <lesmer intro="If you are an employee">
+    <lesmer intro="How to apply if you are an employee">
         <liste>
             <punkt>Arrange with your <b>employer</b> when you are going to work and your employment percentage.</punkt>
              <punkt>You need a written agreement with your employer that you are going to work in the employment percentage. You do not need to send this to NAV.</punkt>
@@ -7,7 +7,7 @@
         </liste>
         <avsnitt><b>Application deadline</b>: You must apply <b>before</b> you start working.</avsnitt>
     </lesmer>
-    <lesmer intro="If you are self-employed or a freelancer">
+    <lesmer intro="How to apply if you are self-employed or a freelancer">
         <liste>
             <punkt>In the <b>parental benefit application</b>, you specify that you are <b>postponing</b> the period because you are working or that you are working part time.</punkt>
             <punkt>If you <b>have already applied</b>, log in at <lenke url="https://foreldrepenger.nav.no/" ekstern="true">Your parental benefit</lenke> and submit a modification application.</punkt>

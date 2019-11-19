@@ -1,5 +1,5 @@
 <innhold>
-    <lesmer intro="Slik går du frem hvis du er arbeidstaker">
+    <lesmer intro="Slik søker du hvis du er arbeidstaker">
         <liste>
             <punkt>Avtal med <b>arbeidsgiveren</b> din når du skal jobbe og stillingsprosenten.</punkt>
             <punkt>Du må ha en skriftlig avtale med arbeidsgiveren din om at du skal jobbe i den stillingsprosenten du oppgir. Du trenger ikke å sende denne til NAV.</punkt>
@@ -8,7 +8,7 @@
         </liste>
         <avsnitt><b>Søkefrist</b>: Du må søke <b>før</b> du begynner å jobbe.</avsnitt>
     </lesmer>
-    <lesmer intro="Slik går du frem hvis du er selvstendig eller frilanser">
+    <lesmer intro="Slik søker du hvis du er selvstendig eller frilanser">
         <liste>
             <punkt>I <b>foreldrepengesøknaden</b> legger du til en <b>utsettelse</b> fordi du skal jobbe heltid eller legg til en <b>periode</b> du skal kombinere foreldrepenger med delvis arbeid.</punkt>
             <punkt>Hvis du <b>allerede har søkt</b>, logger du på <lenke url="https://foreldrepenger.nav.no/" ekstern="true">Dine foreldrepenger</lenke> og sender en endringssøknad.</punkt>
