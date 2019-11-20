@@ -6,18 +6,19 @@
             <punkt>når dere overtar omsorgen for barnet i utlandet</punkt>
             <punkt>den dagen dere kommer til Norge sammen med barnet. Starter dere senere, får dere færre uker.</punkt>
         </liste>
-        <avsnitt>Dere kan selv velge hvem som skal være hjemme i permisjon. Når far skal ta ut foreldrepenger fra fellesperioden gjelder de samme reglene som ved fødsel, og det er aktivitetskrav til mor.</avsnitt>
+        <avsnitt>Dere kan selv velge hvem som skal starte å være hjemme i permisjon. Når far skal ta ut foreldrepenger fra fellesperioden gjelder de samme reglene som ved fødsel, og det er <lenke url="#hvor-lenge-kan-du-fa-foreldrepenger">aktivitetskrav</lenke> til mor.</avsnitt>
     </lesmer>
     <lesmer intro="Hvor lenge kan du få foreldrepenger?">
         <avsnitt>Foreldrepengeperioden er 46 uker hvis dere velger 100 prosent foreldrepenger, eller 56 uker ved 80 prosent foreldrepenger.</avsnitt>
         <avsnitt>Ukene er fordelt mellom foreldrene på samme måte som ved <lenke url="#hvor-lenge-kan-du-fa-foreldrepenger">foreldrepenger ved fødsel.</lenke></avsnitt>
     </lesmer>
     <lesmer intro="Adopterer dere flere barn?">
-        <avsnitt>Hvis dere adopterer flere barn samtidig, får dere flere uker med foreldrepenger.</avsnitt>
+        <avsnitt>Hvis dere adopterer flere barn samtidig, får dere flere uker med foreldrepenger. Disse ukene kalles flerbarnsuker og dere kan ta dem ut når som helst i foreldrepengeperioden. Dere kan ta de ut samtidig, eller hver for dere. Det er ikke krav til hva mor gjør når far eller medmor tar ut dager med flerbarnsuker.</avsnitt>
         <liste>
             <punkt>Adopterer dere <b>2 barn</b>, får dere 17 uker ekstra ved 100 prosent foreldrepenger og 21 uker ekstra ved 80 prosent foreldrepenger.</punkt>
             <punkt>Adopterer dere <b>3 eller flere barn</b>, får dere 46 uker ekstra ved 100 prosent foreldrepenger og 56 uker ekstra ved 80 prosent foreldrepenger.</punkt>
         </liste>
+        <avsnitt>Husk at dere må sende inn hver deres <lenke url="https://foreldrepengesoknad.nav.no" ekstern="true">søknad om foreldrepenger.</lenke></avsnitt>
     </lesmer>
     <lesmer intro="Adopsjon som ikke gir rett til foreldrepenger">
         <avsnitt>Du kan ikke få foreldrepenger hvis barnet du adopterer er over 15 år, eller det er ektefellen sitt barn.</avsnitt>

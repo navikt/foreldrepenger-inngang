@@ -6,18 +6,19 @@
             <punkt>når de overtek omsorga for barnet i utlandet</punkt>
             <punkt>den dagen de kjem til Noreg saman med barnet. Startar de seinare, får de færre veker.</punkt>
         </liste>
-        <avsnitt>De kan sjølve velje kven som skal vere heime i permisjon. Når far skal ta ut foreldrepengar frå fellesperioden, gjeld dei same reglane som ved fødsel, og det er aktivitetskrav til mor.</avsnitt>
+        <avsnitt>De kan sjølve velje kven som skal starte å vere heime i permisjon. Når far skal ta ut foreldrepengar frå fellesperioden, gjeld dei same reglane som ved fødsel, og det er <lenke url="#hvor-lenge-kan-du-fa-foreldrepenger">aktivitetskrav</lenke> til mor.</avsnitt>
     </lesmer>
     <lesmer intro="Kor lenge kan du få foreldrepengar?">
         <avsnitt>Foreldrepengeperioden er 46 uker hvis dere velger 100 prosent foreldrepengar, eller 56 veker ved 80 prosent foreldrepengar.</avsnitt>
         <avsnitt>Vekene er fordelt mellom foreldra på same måte som ved <lenke url="#hvor-lenge-kan-du-fa-foreldrepenger">foreldrepengar ved fødsel.</lenke></avsnitt>
     </lesmer>
     <lesmer intro="Adopterer de fleire barn?">
-        <avsnitt>Dersom de adopterer fleire barn samtidig, får de fleire veker med foreldrepengar.</avsnitt>
+        <avsnitt>Dersom de adopterer fleire barn samtidig, får de fleire veker med foreldrepengar. Desse vekene kallar vi fleirbarnsveker, og de kan ta dei ut når som helst i foreldrepengeperioden. De kan ta dei ut samtidig, eller kvar for dykk. Det er ikkje krav til kva mor skal gjere når far eller medmor tek ut dagar med fleirbarnsveker.</avsnitt>
         <liste>
             <punkt>Adopterer de <b>2 barn</b>, får de 17 veker ekstra ved 100 prosent foreldrepengar og 21 veker ekstra ved 80 prosent foreldrepengar.</punkt>
             <punkt>Adopterer de <b>3 eller fleire barn</b>, får de 46 veker ekstra ved 100 prosent foreldrepengar og 56 veker ekstra ved 80 prosent foreldrepengar.</punkt>
         </liste>
+        <avsnitt>Husk at de må sende inn kvar dykkar <lenke url="https://foreldrepengesoknad.nav.no" ekstern="true">søknad om foreldrepengar.</lenke></avsnitt>
     </lesmer>
     <lesmer intro="Adopsjon som ikkje gir rett til foreldrepengar">
         <avsnitt>Du kan ikkje få foreldrepengar dersom barnet du adopterer, er over 15 år, eller det er ektefellen sitt barn.</avsnitt>
