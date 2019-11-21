@@ -11,7 +11,7 @@
         "SOK_ENGANGSSTONAD_PAPIR_URL": "https://www-q1.nav.no/no/Person/Skjemaer-for-privatpersoner/Skjemaer/Familie/foreldrepenger-og-engangsstonad/Foreldrepenger+og+engangsst%C3%B8nad?method=mail&veiledertype=privatperson",
         "DINE_FORELDREPENGER_URL": "https://foreldrepenger.dev-nav.no/",
         "SOK_SVANGERSKAPSPENGER_URL": "https://svangerskapspengesoknad.dev-nav.no/",
-        "SOK_SVANGERSKAPSPENGER_PAPIR_URL": "https://familie.dev-nav.no/hva-soker-du/svangerskapspenger",
+        "SOK_SVANGERSKAPSPENGER_PAPIR_URL": "https://familie.dev-nav.no/om-svangerskapspenger#slik-soker-du",
         "PLANLEGGEREN_URL": "https://foreldrepengeplanlegger.dev-nav.no/foreldrepengeplanlegger"
     }
 }

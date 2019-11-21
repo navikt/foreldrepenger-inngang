@@ -109,8 +109,8 @@
     "kalkulator.situasjon.utbetaling_fra_nav": "Jeg får utbetaling fra NAV",
     "kalkulator.situasjon.selvstendig_næringsdrivende": "Selvstendig næringsdrivende",
 
-    "kalkulator.skriv_inn_lønn": "Hvor mye tjente du de tre siste",
-    "kalkulator.skriv_inn_utbetaling": "Hvor mye fikk du utbetalt de tre siste",
+    "kalkulator.skriv_inn_lønn": "Hvor mye tjente du de 3 siste",
+    "kalkulator.skriv_inn_utbetaling": "Hvor mye fikk du utbetalt de 3 siste",
     "kalkulator.skriv_inn_lønn_ingress": "Oppgi lønnen din før skatt",
     "kalkulator.skriv_inn_utbetaling_ingress": "Oppgi utbetaling før skatt",
     "kalkulator.skriv_inn_utbetaling_og_lønn_ingress": "Oppgi lønnen og utbetalingen din fra NAV før skatt",
@@ -402,14 +402,14 @@
 
     "veiviser.valg.spørsmål.mor.en": "Er du arbeidstaker, frilanser, selvstendig næringsdrivende eller mottar du utbetalinger fra NAV?",
     "veiviser.valg.spørsmål.mor.to": "Har du andre inntektskilder?",
-    "veiviser.valg.spørsmål.mor.tre": "Har du hatt inntekt seks av de ti siste månedene?",
+    "veiviser.valg.spørsmål.mor.tre": "Har du hatt inntekt 6 av de 10 siste månedene?",
     "veiviser.valg.spørsmål.mor.fire": " Hva er den gjennomsnittlige månedslønnen din før skatt?",
     "veiviser.valg.spørsmål.mor.fem": "Bor du i Norge?",
     "veiviser.valg.spørsmål.mor.seks": "For å få utbetaling fra NAV, må du være medlem av folketrygden. Er du medlem av folketrygden selv om du ikke bor i Norge?",
 
     "veiviser.valg.spørsmål.far.en": "Er du arbeidstaker, frilanser, selvstendig næringsdrivende eller mottar du utbetalinger fra NAV?",
     "veiviser.valg.spørsmål.far.to": "Har du andre inntektskilder?",
-    "veiviser.valg.spørsmål.far.tre": "Har du hatt inntekt seks av de ti siste månedene?",
+    "veiviser.valg.spørsmål.far.tre": "Har du hatt inntekt 6 av de 10 siste månedene?",
     "veiviser.valg.spørsmål.far.fire": " Hva er den gjennomsnittlige månedslønnen din før skatt?",
     "veiviser.valg.spørsmål.far.fem": "Bor du i Norge?",
     "veiviser.valg.spørsmål.far.seks": "For å få utbetaling fra NAV, må du være medlem av folketrygden. Er du medlem av folketrygden selv om du ikke bor i Norge?",
@@ -442,7 +442,7 @@
 
     "veiviser.valg.hjelpetekst.lukk": "Lukk informasjon",
     "veiviser.valg.hjelpetekst.ingress": "Hva er forskjellen mellom foreldrepenger og engangsstønad?",
-    "veiviser.valg.hjelpetekst.hattInntekt": "Hvorfor seks av de ti siste månedene?",
+    "veiviser.valg.hjelpetekst.hattInntekt": "Hvorfor 6 av de 10 siste månedene?",
     "veiviser.valg.hjelpetekst.utbetalinger": "Dette kan også gi deg rett",
     "veiviser.valg.hjelpetekst.utbetalinger.nav": "Hvilke utbetalinger fra NAV gir rett?",
     "veiviser.valg.hjelpetekst.mndInntekt": "Hvor mye må jeg ha tjent i året?",
@@ -464,11 +464,11 @@
     "veiviser.valg.resultat.navigasjonsboks.hvormye.ariaLabel": "Gå til kalkulatoren. Her kan du estimere hvor mye foreldrepenger du kan få utbetalt",
     "veiviser.valg.resultat.navigasjonsboks.hvorlenge.ariaLabel": "Gå til planleggeren. Her kaN du sette opp uttaksplan for din foreldre periode",
 
-    "veiviser.valg.resultat.punkt.forste.godkjent": "Jeg har hatt inntekt seks av de ti siste månedene",
+    "veiviser.valg.resultat.punkt.forste.godkjent": "Jeg har hatt inntekt 6 av de 10 siste månedene",
     "veiviser.valg.resultat.punkt.andre.godkjent": "Jeg har tjent minst 49 929 kr i året",
     "veiviser.valg.resultat.punkt.tredje.godkjent": "Jeg er medlem av folketrygden",
 
-    "veiviser.valg.resultat.punkt.forste.underkjent": "Jeg har ikke hatt inntekt seks av de ti siste månedene",
+    "veiviser.valg.resultat.punkt.forste.underkjent": "Jeg har ikke hatt inntekt 6 av de 10 siste månedene",
     "veiviser.valg.resultat.punkt.andre.underkjent": "Jeg har tjent under minstebeløpet på 49 929 kr i året",
     "veiviser.valg.resultat.punkt.tredje.underkjent": "Jeg er ikke medlem av folketrygden",
 
