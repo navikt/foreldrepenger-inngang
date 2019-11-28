@@ -61,7 +61,7 @@
     "route.viktige-frister": "Viktige frister",
     "route.blindside": "Uferdig side!",
     "route.hvor-mye": "Hvor mye?",
-    "route.veiviser": "Hva kan du få?",
+    "route.veiviser": "Hvor mye penger kan du få?",
     "route.soke-om-foreldrepenger": "Søke om foreldrepenger",
     "route.regelendringer": "Aktuelle endringer",
     "route.om-svangerskapspenger": "Om svangerskapspenger",
@@ -155,7 +155,7 @@
 
     "hurtiglenke.hvem_kan_fa_foreldrepenger": "Hvem kan få foreldrepenger?",
     "hurtiglenke.hvor_lenge_kan_du_fa_foreldrepenger": "Hvor lenge kan du få foreldrepenger?",
-    "hurtiglenke.hva_kan_du_fa": "Hva kan du få?",
+    "hurtiglenke.hva_kan_du_fa": "Hvor mye penger kan du få?",
     "hurtiglenke.nar_kan_du_soke": "Søknadsfrister",
     "hurtiglenke.hvis_du_skal_pa_ferie": "Hvis du skal ha ferie",
     "hurtiglenke.hvis_du_vil_jobbe": "Når du vil jobbe",
@@ -266,7 +266,7 @@
 
     "om_foreldrepenger.adopsjon.tittel": "Adoptere",
 
-    "om_foreldrepenger.beregning.tittel": "Hva kan du få?",
+    "om_foreldrepenger.beregning.tittel": "Hvor mye penger kan du få?",
     "om_foreldrepenger.beregning.arbeidstaker": "Arbeidstaker",
     "om_foreldrepenger.beregning.selvstendig": "Selvstendig næringsdrivende",
     "om_foreldrepenger.beregning.harYtelse": "Utbetaling\nfra NAV",
@@ -360,7 +360,7 @@
 
     "om_engangsstønad.tittel": "All informasjon om engangsstønad",
     "om_engangsstønad.hva_er.tittel": "Hvem kan få engangsstønad?",
-    "om_engangsstønad.hva_kan_du_få.tittel": "Hva kan du få?",
+    "om_engangsstønad.hva_kan_du_få.tittel": "Hvor mye penger kan du få?",
     "om_engangsstønad.utbetaling.tittel": "Når blir pengene utbetalt?",
     "om_engangsstønad.til_far.tittel": "Engangsstønad til far eller medmor",
     "om_engangsstønad.når_kan_du_søke.tittel": "Søknadsfrister",
@@ -384,7 +384,7 @@
     "veiviser.fane.medmor": "Medmor",
     "veiviser.skrivInn.belop": "inntekt i kroner",
     "veiviser.panelMedIllustrasjon.tittel": "Foreldrepenger eller engangsstønad?",
-    "veiviser.sidebanner.tittel": "Hva kan du få?",
+    "veiviser.sidebanner.tittel": "Hvor mye penger kan du få?",
     "veiviser.ingress.knapper": "Hvem er du?",
     "veiviser.resultat.knapp.foreldrepenger": "Søk om foreldrepenger",
     "veiviser.resultat.knapp.engangsstønad": "Søk om engangsstønad",
