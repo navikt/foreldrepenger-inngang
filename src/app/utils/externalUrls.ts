@@ -3,9 +3,9 @@ import Environment from '../Environment';
 const externalUrls = {
     facebook: 'http://www.facebook.com/navforeldrepenger',
     chat:
-        'https://www.nav.no/no/NAV+og+samfunn/Kontakt+NAV/Relatert+informasjon/chat-med-oss-om-foreldrepenger',
+        'https://www.nav.no/person/kontakt-oss/chat/familie',
     telefon:
-        'https://www.nav.no/no/NAV+og+samfunn/Kontakt+NAV/Kontakt+oss/kontakt-nav-p%C3%A5-telefon',
+        'https://www.nav.no/person/kontakt-oss/',
 
     søk_svangerskapspenger:
         'https://www.nav.no/no/Person/Familie/Venter+du+barn/svangerskapspenger#chapter-3',
