@@ -1,5 +1,5 @@
 <innhold>
     <avsnitt>Apply by logging in using your BankID system from your bank or some other approved electronic ID.</avsnitt>
     <avsnitt>The questions in the application are adapted to your situation, and instructions and information are provided as you fill in the form. You will be asked to upload the completed form from the Norwegian Labour Inspection Authority during the application process.</avsnitt>
-    <søkKnapp søknad="svangerskapspenger" sentrert="true">Søk nå</søkKnapp>
+    <søkOgEttersendKnapp søknad="svangerskapspenger">Apply now|Submit documentation</søkOgEttersendKnapp>
 </innhold>

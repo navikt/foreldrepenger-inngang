@@ -9,6 +9,7 @@ import BEMHelper from '../bem';
 import UtvidetInformasjon from '../../../app/pages/kalkulator/utvidetinformasjon/UtvidetInformasjon';
 import Lenkeknapp from '../../components/lenkeknapp/Lenkeknapp';
 import { getSøknadsurl, Søknadstyper } from '../externalUrls';
+import Environment from 'app/Environment';
 
 const cls = BEMHelper('innhold');
 
@@ -37,12 +38,12 @@ export const Avsnitt = (props: {
     className?: string;
     children: React.ReactNode;
 }) => (
-    <TypografiBase
-        type={props.type || 'normaltekst'}
-        className={classnames(cls.element('avsnitt'), props.className)}
-        children={props.children}
-    />
-);
+        <TypografiBase
+            type={props.type || 'normaltekst'}
+            className={classnames(cls.element('avsnitt'), props.className)}
+            children={props.children}
+        />
+    );
 
 export const Variabel = (props: { values: ValueMap; children: string }) => {
     const { values, children } = props;
@@ -95,10 +96,64 @@ export const LesMerPanel = (props: {
     return liten ? (
         <UtvidetInformasjon apneLabel={intro} children={children} />
     ) : (
-        <LesMer intro={intro} children={children} />
-    );
+            <LesMer intro={intro} children={children} />
+        );
 };
 
 export const Liste = (props: { type?: TypografiType; tag?: string; children: React.ReactNode }) => (
     <TypografiBase type={props.type || 'normaltekst'} {...props} tag={props.tag || 'ul'} />
 );
+
+export const EttersendKnapp = (props: {
+    sentrert?: boolean;
+    children: React.ReactNode;
+}) => {
+    const content = (
+        <Lenkeknapp url={Environment.DINE_FORELDREPENGER_URL} urlIsExternal={true}>
+            {props.children}
+        </Lenkeknapp>
+    );
+
+    if (props.sentrert) {
+        return (
+            <span style={{ display: 'inline' }}>{content}</span>
+        );
+    }
+
+    return content;
+};
+
+export const SøkOgEttersendKnapp = (props: {
+    søknad: Søknadstyper;
+    children: string;
+}) => {
+    const url = getSøknadsurl(props.søknad);
+    if (!url) {
+        return null;
+    }
+
+    const knappTekster = props.children.split('|');
+
+    const søkKnapp = (
+        <Lenkeknapp url={url} urlIsExternal={true} type="hoved">
+            {knappTekster[0]}
+        </Lenkeknapp>
+    );
+
+    const ettersendKnapp = (
+        <Lenkeknapp url={Environment.DINE_FORELDREPENGER_URL} urlIsExternal={true}>
+            {knappTekster[1]}
+        </Lenkeknapp>
+    );
+
+    return (
+        <div style={{ display: 'flex', justifyContent: 'space-evenly' }}>
+            <div>
+                {søkKnapp}
+            </div>
+            <div>
+                {ettersendKnapp}
+            </div>
+        </div>
+    )
+};

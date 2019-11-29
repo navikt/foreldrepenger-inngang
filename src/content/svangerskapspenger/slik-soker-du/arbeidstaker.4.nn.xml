@@ -1,5 +1,5 @@
 <innhold>
     <avsnitt>Du søker ved å logge du deg inn med BankID fra banken din eller en annen elektronisk id. </avsnitt>
     <avsnitt>Spørsmålene i søknaden er tilpasset din situasjon og du får veiledning og informasjon underveis.  Du vil bli bedt om å laste opp skjemaet fra Arbeidstilsynet i løpet av søknaden. </avsnitt>
-    <søkKnapp søknad="svangerskapspenger" sentrert="true">Søk nå</søkKnapp>
+    <søkOgEttersendKnapp søknad="svangerskapspenger">Søk nå|Ettersend vedlegg</søkOgEttersendKnapp>
 </innhold>

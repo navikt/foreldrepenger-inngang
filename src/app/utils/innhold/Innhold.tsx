@@ -34,6 +34,8 @@ const xmlToReact = new XMLToReact({
     variabel: renderWithValues(Node.Variabel),
     unbreakable: renderAs(Node.Unbreakable),
     søkKnapp: renderAs(Node.SøkNåKnapp),
+    ettersendKnapp: renderAs(Node.EttersendKnapp),
+    søkOgEttersendKnapp: renderAs(Node.SøkOgEttersendKnapp),
     midstiltTittel: renderAs(Node.MidstiltTittel)
 });
 
