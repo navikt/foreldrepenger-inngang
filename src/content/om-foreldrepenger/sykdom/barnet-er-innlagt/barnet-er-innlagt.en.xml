@@ -1,8 +1,22 @@
 <innhold>
-    <avsnitt>If the child is admitted to hospital or a health institution, the person who is with the child can postpone his or her parental benefit period and instead receive the attendance allowance.</avsnitt>
-    <avsnitt><lenke url="https://www.nav.no/no/Person/Familie/Sykdom+i+familien/pleiepenger+for+pleie+av+sykt+barn" ekstern="true">Read more about your rights to attendance allowance for sick child</lenke></avsnitt>
-    <avsnitt>In some cases, parents may be able to bring their baby home before it is discharged from hospital; for example, with assistance from the NAST service (Neonatal Ambulatory Medical Care). In these kinds of cases, the child will not be in hospital physically, but formally will not have been discharged either. Parents in this situation can postpone their parental benefit period. </avsnitt>
-    <avsnitt className="top-spacing" type="undertittel">If a child is born before the 33rd week of pregnancy</avsnitt>
-    <avsnitt>If a child is born before the 33rd week of pregnancy, the parental benefit period is extended by the same number of weeks and days that the child was born before the due date. The parental benefit will be extended by the same period regardless of whether you give birth to one or more children, or if you have 100 per cent parental benefit or 80 per cent parental benefit.</avsnitt>
-    <avsnitt>If the child is hospitalised after birth, you will usually be able to receive attendance allowance while the child is hospitalised. If you receive attendance allowance during the period from birth to the original due date, these days will be deducted from the extended period. If you receive attendance allowance according to the original due date, these days will not be deducted from the extended period. The parental benefit will be postponed as long as the child is hospitalised, and does not start until the child is discharged from the hospital. You can read about your rights to attendance allowance here.</avsnitt>
+	<avsnitt>
+		If the child is admitted to hospital or a health institution, the person who is with the child can postpone his or her parental benefit period and instead receive the attendance allowance.
+	</avsnitt>
+	<avsnitt>
+		<lenke url="https://www.nav.no/familie/sykdom-i-familien/nb/pleiepenger-for-sykt-barn" ekstern="true">
+			Read more about your rights to attendance allowance for sick child
+		</lenke>
+	</avsnitt>
+	<avsnitt>
+		In some cases, parents may be able to bring their baby home before it is discharged from hospital; for example, with assistance from the NAST service (Neonatal Ambulatory Medical Care). In these kinds of cases, the child will not be in hospital physically, but formally will not have been discharged either. Parents in this situation can postpone their parental benefit period.
+	</avsnitt>
+	<avsnitt className="top-spacing" type="undertittel">
+		If a child is born before the 33rd week of pregnancy
+	</avsnitt>
+	<avsnitt>
+		If a child is born before the 33rd week of pregnancy, the parental benefit period is extended by the same number of weeks and days that the child was born before the due date. The parental benefit will be extended by the same period regardless of whether you give birth to one or more children, or if you have 100 per cent parental benefit or 80 per cent parental benefit.
+	</avsnitt>
+	<avsnitt>
+		If the child is hospitalised after birth, you will usually be able to receive attendance allowance while the child is hospitalised. If you receive attendance allowance during the period from birth to the original due date, these days will be deducted from the extended period. If you receive attendance allowance according to the original due date, these days will not be deducted from the extended period. The parental benefit will be postponed as long as the child is hospitalised, and does not start until the child is discharged from the hospital. You can read about your rights to attendance allowance here.
+	</avsnitt>
 </innhold>

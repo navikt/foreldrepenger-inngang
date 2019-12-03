@@ -1,8 +1,22 @@
 <innhold>
-    <avsnitt>Dersom barnet blir lagt inn på sjukehus eller helseinstitusjon, kan den som er saman med barnet, utsetje foreldrepengeperioden sin og få pleiepengar i staden.</avsnitt>
-    <avsnitt><lenke url="https://www.nav.no/no/Person/Familie/Sykdom+i+familien/pleiepenger+for+pleie+av+sykt+barn" ekstern="true">Les meir om rettane dine til pleiepengar for sjukt barn</lenke></avsnitt>
-    <avsnitt>Foreldre vil i somme tilfelle kunne ta med barnet heim utan at det er skrive ut av sjukehuset, for eksempel med hjelp frå NAST (den ambulerande sjukepleietenesta ved nyfødtavdelinga). Barnet vil i slike tilfelle ikkje vere fysisk på sjukehuset, men vil heller ikkje bli formelt utskrive. Foreldra kan utsetje foreldrepengeperioden sin også i desse tilfella.</avsnitt>
-    <avsnitt className="top-spacing" type="undertittel">Hvis barnet er født før 33. svangerskapsveke</avsnitt>
-    <avsnitt>Dersom barnet blir født før 33. svangerskapsveke, blir perioden med foreldrepengar utvida med same talet veker og dagar som barnet er født før termindato. Foreldrepengane blir utvida med same perioden uavhengig av om de får eitt eller fleire barn, eller om de har 100 prosent foreldrepengar eller 80 prosent foreldrepengar.</avsnitt>
-    <avsnitt>Dersom barnet blir lagt inn på sjukehus etter fødselen, vil de som regel kunne få pleiepengar så lenge barnet er innlagt. Får de pleiepengar i perioden frå fødsel og fram til opphavleg termindato, blir desse dagane trekte frå den utvida perioden. Har de pleiepengar etter opphavleg termindato, blir desse dagane ikkje trekte frå den utvida perioden. Så lenge barnet er innlagt, blir foreldrepengane utsette, og startar først når barnet er utskrive frå sjukehuset.</avsnitt>
+	<avsnitt>
+		Dersom barnet blir lagt inn på sjukehus eller helseinstitusjon, kan den som er saman med barnet, utsetje foreldrepengeperioden sin og få pleiepengar i staden.
+	</avsnitt>
+	<avsnitt>
+		<lenke url="https://www.nav.no/familie/sykdom-i-familien/nb/pleiepenger-for-sykt-barn" ekstern="true">
+			Les meir om rettane dine til pleiepengar for sjukt barn
+		</lenke>
+	</avsnitt>
+	<avsnitt>
+		Foreldre vil i somme tilfelle kunne ta med barnet heim utan at det er skrive ut av sjukehuset, for eksempel med hjelp frå NAST (den ambulerande sjukepleietenesta ved nyfødtavdelinga). Barnet vil i slike tilfelle ikkje vere fysisk på sjukehuset, men vil heller ikkje bli formelt utskrive. Foreldra kan utsetje foreldrepengeperioden sin også i desse tilfella.
+	</avsnitt>
+	<avsnitt className="top-spacing" type="undertittel">
+		Hvis barnet er født før 33. svangerskapsveke
+	</avsnitt>
+	<avsnitt>
+		Dersom barnet blir født før 33. svangerskapsveke, blir perioden med foreldrepengar utvida med same talet veker og dagar som barnet er født før termindato. Foreldrepengane blir utvida med same perioden uavhengig av om de får eitt eller fleire barn, eller om de har 100 prosent foreldrepengar eller 80 prosent foreldrepengar.
+	</avsnitt>
+	<avsnitt>
+		Dersom barnet blir lagt inn på sjukehus etter fødselen, vil de som regel kunne få pleiepengar så lenge barnet er innlagt. Får de pleiepengar i perioden frå fødsel og fram til opphavleg termindato, blir desse dagane trekte frå den utvida perioden. Har de pleiepengar etter opphavleg termindato, blir desse dagane ikkje trekte frå den utvida perioden. Så lenge barnet er innlagt, blir foreldrepengane utsette, og startar først når barnet er utskrive frå sjukehuset.
+	</avsnitt>
 </innhold>
