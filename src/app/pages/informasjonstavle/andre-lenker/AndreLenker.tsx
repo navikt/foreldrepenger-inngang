@@ -22,7 +22,7 @@ const links = [
     },
     {
         label: 'informasjonstavle.andre_lenker.informasjon_om_kontantstøtte',
-        href: 'https://www.nav.no/no/Person/Familie/Barnetrygd+og+kontantstotte/kontantst%C3%B8tte'
+        href: 'https://www.nav.no/no/person/familie/barnetrygd-og-kontantstotte/kontantstotte2'
     },
     {
         label: 'informasjonstavle.andre_lenker.ofte_stilte_spørsmål',
