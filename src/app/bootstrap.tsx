@@ -12,7 +12,7 @@ import './styles/index.less';
 const root = document.getElementById('app');
 
 Sentry.init({
-    dsn: 'https://d3f3fc7e51f24438bdfb44c9ca3cd9bc@sentry.nav.no/19',
+    dsn: 'https://94b48adfe3f54da89bba5e481e3c0f31@sentry.gc.nav.no/5',
     environment: window.location.hostname,
     integrations: [new Sentry.Integrations.Breadcrumbs({ console: false })]
 });
