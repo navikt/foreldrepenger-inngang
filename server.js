@@ -5,6 +5,7 @@ const mustacheExpress = require('mustache-express');
 const Promise = require('promise');
 const getDecorator = require('./src/build/scripts/decorator');
 const createEnvSettingsFile = require('./src/build/scripts/envSettings');
+const morgan = require('morgan');
 
 const serveGzipped = (contentType) => (req, res, next) => {
     const acceptedEncodings = req.acceptsEncodings();
@@ -61,6 +62,7 @@ const server = express();
 server.set('views', `${__dirname}/dist`);
 server.set('view engine', 'mustache');
 server.engine('html', mustacheExpress());
+server.use(morgan('tiny'));
 
 server.use((req, res, next) => {
     res.removeHeader('X-Powered-By');
