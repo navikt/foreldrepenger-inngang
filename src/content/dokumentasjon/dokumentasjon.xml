@@ -4,7 +4,7 @@
     <avsnitt>For å kunne beregne hva du skal ha utbetalt, må vi ha opplysninger om inntekten din.</avsnitt>
     <avsnitt type="element">Hvis du har hatt arbeidsinntekt eller er i jobb</avsnitt>
     <liste>
-        <punkt>Du må be arbeidsgiveren din sende <lenke url="https://www.nav.no/no/Bedrift/Tjenester+og+skjemaer/NAV-+og+Altinn-tjenester/digital" ekstern="true">digital inntektsmelding</lenke> til NAV. Inntektsmeldingen kan tidligst sendes 4 uker før foreldrepengeperioden starter.</punkt>
+        <punkt>Du må be arbeidsgiveren din sende <lenke url="https://www.nav.no/no/bedrift/tjenester-og-skjemaer/nav-og-altinn-tjenester/inntektsmelding " ekstern="true">digital inntektsmelding</lenke> til NAV. Inntektsmeldingen kan tidligst sendes 4 uker før foreldrepengeperioden starter.</punkt>
         <punkt>Hvis du får utbetalt penger fra NAV, trenger du ikke sende dokumentasjon på dette.</punkt>
     </liste>
     <avsnitt type="element">Hvis du er selvstendig næringsdrivende eller frilanser</avsnitt>
