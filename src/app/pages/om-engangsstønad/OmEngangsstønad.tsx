@@ -70,8 +70,11 @@ const OmEngangsstonad: React.StatelessComponent<Props & InjectedIntlProps> = ({
                         <div style={{ marginBottom: '1rem' }}>
                             <FormattedHTMLMessage id="om_engangsstønad.infobanner2020.sum" />
                         </div>
-                        <div>
+                        <div style={{ marginBottom: '1rem' }}>
                             <FormattedHTMLMessage id="om_engangsstønad.infobanner2020.virkning" />
+                        </div>
+                        <div>
+                            <FormattedHTMLMessage id="om_engangsstønad.infobanner2020.ekstra" />
                         </div>
                     </AlertStripeInfo>
                     <HvemKanFåEngangsstønad id={sections[0]} />
