@@ -10,7 +10,6 @@ import OmEngangsstønad from './pages/om-engangsstønad/OmEngangsstønad';
 import OmForeldrepenger from './pages/om-foreldrepenger/OmForeldrepenger';
 import OmSvangerskapspenger from './pages/svangerskapspenger/OmSvangerskapspenger';
 import Regelendringer from './pages/regelendringer/Regelendringer';
-import SøkSvangerskapspenger from './pages/søk-svangerskapspenger/SøkSvangerskapspenger';
 import SøkForeldrepenger from './pages/søk-foreldrepenger/SøkForeldrepenger';
 import Veiviser from './pages/veiviser/Veiviser';
 
@@ -35,12 +34,6 @@ const Router = () => (
             key="dokumentasjon"
         />
         <ValidRoute exact={true} path={Page.HvaSøkerDu} component={HvaSøkerDu} key="hva-soker-du" />
-        <ValidRoute
-            exact={true}
-            path={Page.SøkSvangerskapspenger}
-            component={SøkSvangerskapspenger}
-            key="svangerskapspenger"
-        />
         <ValidRoute exact={true} path={Page.HvorMye} component={Kalkulator} key="kalkulator" />
         <ValidRoute
             exact={true}
