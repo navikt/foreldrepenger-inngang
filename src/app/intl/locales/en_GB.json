@@ -2,7 +2,6 @@
     "languageToggle.bokmål": "Bokmål",
     "languageToggle.nynorsk": "Nynorsk",
     "languageToggle.english": "English",
-
     "adopsjon_og_arbeidsgiver": " Adoption and employer",
     "adopsjon": "Adoption",
     "arbeidsgiver": "Employer",
@@ -36,21 +35,18 @@
     "ukjent": "unknown",
     "utbetaling": "Payment",
     "utbetalinger": "Payments",
-
     "farOgMor": "Father and mother",
     "farOgFar": "Father and father",
     "morOgMor": "Mother and mother",
     "bareFarHarRett": "Only the father is entitled",
     "bareMorHarRett": "Only the mother is entitled",
     "aleneomsorg": "Sole custody",
-
     "mor": "mother",
     "far": "father",
     "far1": "father 1",
     "far2": "father 2",
     "begge": "both",
     "medmor": "co-mother",
-
     "route.": "Parental benefit, lump-sum grant and pregnancy benefit",
     "route.tjenester": " How much and how long?",
     "route.beregning": "Calculation of parental benefit",
@@ -67,7 +63,6 @@
     "route.regelendringer": "Rule changes",
     "route.om-svangerskapspenger": "About pregnancy benefit",
     "route.soke-om-foreldrepenger": "Applying for parental benefits",
-
     "informasjonstavle.tittel": "Parental benefit, lump-sum grant and pregnancy benefit",
     "informasjonstavle.ingress": "These are your rights when expecting children or awaiting parental benefits.",
     "informasjonstavle.hva_kan_du_få": "What happens when?",
@@ -76,15 +71,12 @@
     "informasjonstavle.hvor_mye_ingress": "Calculate the parental benefit you are entitled to.",
     "informasjonstavle.hvor_lenge": "How long?",
     "informasjonstavle.hvor_lenge_ingress": "Plan how long you can stay home with the child.",
-
     "informasjonstavle.velg_søknadsskjema.tittel": "Application form",
     "informasjonstavle.velg_søknadsskjema.ingress": "Both mother, father and co-mother use the same form to apply for parental benefit or to make changes. Here you will also find a form for applying lump-sum grant and pregnancy allowance.",
-
     "informasjonstavle.mer_informasjon.tittel": "Additional information",
     "informasjonstavle.mer_informasjon.foreldrepenger": "The parental benefit shall replace your income when you are at home with the child in connection with birth or adoption.",
     "informasjonstavle.mer_informasjon.engangsstønad": "If you are expecting a child and have not had an income in the past year, you can receive a lump-sum instead of the parental benefit.",
     "informasjonstavle.mer_informasjon.svangerskapspenger": "Pregnancy benefit is granted to healthy women who cannot work during pregnancy because it may harm the unborn baby.",
-
     "informasjonstavle.andre_lenker.tittel": "Related information",
     "informasjonstavle.andre_lenker.ettersende_vedlegg_til_søknad": "Submit application attachments",
     "informasjonstavle.andre_lenker.ofte_stilte_spørsmål": "Frequently asked questions",
@@ -95,13 +87,11 @@
     "informasjonstavle.andre_lenker.slik_klager_du": "How to appeal",
     "informasjonstavle.andre_lenker.dokumentasjon": "Required documentation",
     "informasjonstavle.andre_lenker.opphold_i_utlandet": "Stays abroad",
-
     "tjenester.tittel": "How much and how long?",
     "tjenester.beregning_tittel": "Calculation of parental benefit",
     "tjenester.lenke_beregning": "Calculate how much you are entitled to",
     "tjenester.planlegger_tittel": "Parental benefit planner",
     "tjenester.lenke_planlegger": "Plan for how long you can be at home with your child",
-
     "kalkulator.bannertekst": "Calculation of parental benefit",
     "kalkulator.tittel": "How much?",
     "kalkulator.valg.tittel": "What is your current work situation?",
@@ -129,10 +119,8 @@
     "kalkulator.fikk": "received",
     "kalkulator.lukk_info": "Close information",
     "kalkulator.ytelser_som_gir_rett_tittel": "Payments that entitle you to the parental benefit and particular details regarding the unemployment benefit and work assessment allowance",
-
     "dokumentasjon.banner": "Documentation that must be attached",
     "dokumentasjon.tittel": "Documentation that must be attached",
-
     "hva_søker_du.tittel": "What do you wish to apply for?",
     "hva_søker_du.foreldrepenger.tittel": "Parental benefit",
     "hva_søker_du.søk_foreldrepenger": "Apply for parental benefit",
@@ -144,14 +132,12 @@
     "hva_søker_du.ingen_elektronisk_id_hjelp": "To apply online, you must have BankID from your bank or another electronic ID.",
     "hva_søker_du.engangsstønad.sokPapir.modal.knapp.standard": "Go to the paper application",
     "hva_søker_du.engangsstønad.sokPapir.modal.knapp.hoved": "Go to the application",
-
     "søk_foreldrepenger.tittel": "Application for parental benefit",
     "søk_foreldrepenger.knapp": "Start application for parental benefit",
     "søk_foreldrepenger.knapp_mobil": "Start application",
     "søk_foreldrepenger.advarselmelding": "You must apply more than 6 weeks before you will take the parental benefit. You can start the application, but it will not be possible to submit it until",
     "søk_foreldrepenger.første_dag_spørsmål": "When is the first day for receiving the parental benefit or for postponement?",
     "søk_svangerskapspenger.tittel": "Application for pregnancy benefit",
-
     "hurtiglenke.hvem_kan_fa_foreldrepenger": "Who can receive the parental benefit?",
     "hurtiglenke.hvor_lenge_kan_du_fa_foreldrepenger": "How long can you receive the parental benefit?",
     "hurtiglenke.hva_kan_du_fa": "What are you entitled to?",
@@ -174,22 +160,17 @@
     "hurtiglenke.hvor_lenge_kan_jeg_fa": "Duration",
     "hurtiglenke.jobb_delvis": "Work part time",
     "hurtiglenke.hvor_mye_kan_du_fa": "What are you entitled to?",
-
     "innholdsfortegnelse.søk_nå": "Apply now",
-
     "om_foreldrepenger.faner.label": "Select your situation:",
     "om_foreldrepenger.tittel": "All information regarding the parental benefit",
     "om_foreldrepenger.for_å_få.tittel": "Who can receive the parental benefit?",
-
     "om_foreldrepenger.hvor_lenge.tittel": "How long can you receive the parental benefit?",
     "om_foreldrepenger.hvor_lenge.eksempel": "Example with fixed income of NOK 22,000 per month",
     "om_foreldrepenger.hvor_lenge.hurtiglenker": "But what if ...",
     "om_foreldrepenger.hvor_lenge.kalkulatorlenke": "Calculate your parental benefit",
     "om_foreldrepenger.hvor_lenge.regelendringer_lenke": "Rule changes in 2018/2019",
-
     "om_foreldrepenger.prematuruker.lesmer": "If a child is born before the 33rd week of pregnancy",
     "om_foreldrepenger.prematuruker.lesmer.lukk": "Close",
-
     "om_foreldrepenger.hvor_lenge.fordeling.tittel": "The periods are divided between you as follows",
     "om_foreldrepenger.hvor_lenge.fordeling.tittel_alene": "Your parental benefit period is as follows",
     "om_foreldrepenger.hvor_lenge.fordeling.mødrekvote": "Maternal quota",
@@ -200,7 +181,6 @@
     "om_foreldrepenger.hvor_lenge.fordeling.alenefar": "As father",
     "om_foreldrepenger.hvor_lenge.fordeling.første_fedrekvote": "Father 1",
     "om_foreldrepenger.hvor_lenge.fordeling.andre_fedrekvote": "Father 2",
-
     "om_foreldrepenger.hvor_lenge.fordeling.krav": "Requirements for what the {subjekt} does",
     "om_foreldrepenger.hvor_lenge.fordeling.ingen_krav": "No requirements for what the {subjekt} does",
     "om_foreldrepenger.hvor_lenge.fordeling.aktivitetskrav": "Activity requirements for {subjekt}",
@@ -209,28 +189,23 @@
     "om_foreldrepenger.hvor_lenge.fordeling.tre_uker_før_fødsel": "In addition to the maternal quota, the mother also gets the last 3 weeks before the estimated date of delivery",
     "om_foreldrepenger.hvor_lenge.fordeling.i_tillegg_til_foreldrepenger": "In addition to parental benefit, the mother also gets the last 3 weeks before the estimated date of delivery",
     "om_foreldrepenger.hvor_lenge.fordeling.snakkeboble.tittel": "{antallUker100} weeks at a benefit rate of 100 per cent parental benefit, {antallUker80} weeks at a benefit rate of 80 per cent parental benefit",
-
     "om_foreldrepenger.når_kan_du_søke.tittel": "Application deadlines",
     "om_foreldrepenger.når_kan_du_søke.hvis_du_skal_utsette_fordi": "If you are postponing because:",
     "om_foreldrepenger.når_kan_du_søke.utsette_sykdom": "One of you gets sick",
     "om_foreldrepenger.når_kan_du_søke.utsette_jobbe": "You are going to work",
     "om_foreldrepenger.når_kan_du_søke.utsette_ferie": "You will be going on holiday",
-
     "om_foreldrepenger.ferie.tittel": " If you will be going on holiday",
     "om_foreldrepenger.ferie.eksempel_label": "Example of how you can extend your parental benefit period when you postpone:",
     "om_foreldrepenger.ferie.illustrasjon": "Holiday",
     "om_foreldrepenger.ferie.rett_til_utsettelse": "Holidays that entitle you to postpone",
     "om_foreldrepenger.ferie.utsette": "You can postpone using the following process",
-
     "om_foreldrepenger.nye_regler.tittel": "New rules from 1st July 2018",
     "om_foreldrepenger.nye_regler_label": "The child is born or adopted",
     "om_foreldrepenger.nye_regler.før": "before 1st July 2018",
     "om_foreldrepenger.nye_regler.før_beskrivelse": "10 weeks of the total parental benefit period is allocated to each of the parents (quota). If you have more than one child at the same time, you will receive five or seven extra weeks for each child after the first one.",
     "om_foreldrepenger.nye_regler.etter": "after 1st July 2018",
     "om_foreldrepenger.nye_regler.etter_beskrivelse": "15 weeks of the total parental benefit period is allocated to each of the parents (quota). If you have two children at the same time, you will receive 17 or 21 extra weeks. If you have 3 or more children, you will receive 46 or 56 extra weeks.",
-
     "om_foreldrepenger.nye_beregningsregler.header": "New rules for calculating the parental benefit from 1 January 2019.",
-
     "om_foreldrepenger.jobbe.tittel": "When you want to work",
     "om_foreldrepenger.jobbe.fanetittel.jobbeHeltid": "Work full-time (100 per cent)",
     "om_foreldrepenger.jobbe.fanetittel.jobbeDelvis": "Work part-time",
@@ -248,7 +223,6 @@
     "om_foreldrepenger.jobbe.jobbDelvis.dropdownSvg.dager": "4 days",
     "om_foreldrepenger.jobbe.jobbDelvis.dropdownSvg.dag": "1 day",
     "om_foreldrepenger.jobbe.jobbDelvis.dropdownSvg.uke": "week",
-
     "om_foreldrepenger.sykdom.tittel": "If one of you gets sick",
     "om_foreldrepenger.sykdom.innlagt": "The child has\nbeen hospitalized",
     "om_foreldrepenger.sykdom.foreldre_syke": "One of the\nparents is sick",
@@ -261,29 +235,23 @@
     "om_foreldrepenger.sykdom.illustrasjon.forskyves": "(offset 2 weeks)",
     "om_foreldrepenger.sykdom.illustrasjon.sluttdato": "End date",
     "om_foreldrepenger.sykdom.illustrasjon.ferievarighet": "(2 weeks)",
-
     "om_foreldrepenger.hjemme_samtidig.tittel": "Home at the same time",
     "om_foreldrepenger.hjemme_samtidig.ingress": "If you want to be home with the child at the same time or take turns, you have several options.",
-
     "om_foreldrepenger.adopsjon.tittel": "Adoption",
-
     "om_foreldrepenger.beregning.tittel": "What are you entitled to?",
     "om_foreldrepenger.beregning.arbeidstaker": "Employee",
     "om_foreldrepenger.beregning.selvstendig": "Self-employed",
     "om_foreldrepenger.beregning.harYtelse": "Payment\nfrom NAV",
     "om_foreldrepenger.beregning.andreInntektskilder": "Compulsory military service",
     "om_foreldrepenger.beregning.frilanser.ikontittel": "Freelancer",
-
     "om_foreldrepenger.hjelp.tittel": "Were you unable to find what you were looking for?",
     "om_foreldrepenger.ofte_stilte_spørsmål.tittel": "Frequently asked questions",
-
     "søke_om_foreldrepenger.forside.bildetekst": "What happens when?",
     "søke_om_foreldrepenger.oversikt": "What do you want to see an overview of?",
     "søke_om_foreldrepenger.hele": "The entire application process",
     "søke_om_foreldrepenger.endre": "Change something after I have applied",
     "søke_om_foreldrepenger.velgSituasjon": "Select your situation",
     "søke_om_foreldrepenger.søkOmEndring": "About modification application",
-
     "søke_om_foreldrepenger.farOgMor.venterBarn": "You are expecting a child",
     "søke_om_foreldrepenger.farOgMor.planleggTiden": "Plan the time at home with the child",
     "søke_om_foreldrepenger.farOgMor.svangerskapsuke": "22nd week of pregnancy",
@@ -296,7 +264,6 @@
     "søke_om_foreldrepenger.farOgMor.fireUkerFørFar": "4 weeks before dad's first day of parental benefit or postponement",
     "søke_om_foreldrepenger.farOgMor.inntektFar": "We receive information about dad's income",
     "søke_om_foreldrepenger.farOgMor.farFårSvar": "Dad may receive a response to the application",
-
     "søke_om_foreldrepenger.bareFarHarRett.venterBarn": "You are expecting a child",
     "søke_om_foreldrepenger.bareFarHarRett.planleggTiden": "Plan the time at home with the child",
     "søke_om_foreldrepenger.bareFarHarRett.dokumentasjon": "You need documentation to show that mom is doing an approved activity",
@@ -305,7 +272,6 @@
     "søke_om_foreldrepenger.bareFarHarRett.fireUkerFørFar": "4 weeks before your first day of parental benefit or postponement",
     "søke_om_foreldrepenger.bareFarHarRett.inntektFar": "We receive information about your income",
     "søke_om_foreldrepenger.bareFarHarRett.farFårSvar": "You may receive a response to the application",
-
     "søke_om_foreldrepenger.bareMorHarRett.venterBarn": "You are expecting a child",
     "søke_om_foreldrepenger.bareMorHarRett.planleggTiden": "Plan the time at home with the child",
     "søke_om_foreldrepenger.bareMorHarRett.svangerskapsuke": "22nd week of pregnancy",
@@ -313,7 +279,6 @@
     "søke_om_foreldrepenger.bareMorHarRett.fireUkerFørMor": "4 weeks before your first day of parental benefit",
     "søke_om_foreldrepenger.bareMorHarRett.inntektMor": "We receive information about your income",
     "søke_om_foreldrepenger.bareMorHarRett.morFårSvar": "You may receive a response to the application",
-
     "søke_om_foreldrepenger.aleneomsorg.morEllerFar": "Are you the father or the mother?",
     "søke_om_foreldrepenger.aleneomsorg.mor": "Mother",
     "søke_om_foreldrepenger.aleneomsorg.mor.venterBarn": "You are expecting a child",
@@ -332,7 +297,6 @@
     "søke_om_foreldrepenger.aleneomsorg.far.fireUkerFørFar": "4 weeks before your first day of parental benefit or postponement",
     "søke_om_foreldrepenger.aleneomsorg.far.inntektFar": "We receive information about your income",
     "søke_om_foreldrepenger.aleneomsorg.far.farFårSvar": "You may receive a response to the application",
-
     "søke_om_foreldrepenger.morOgMedmor.venterBarn": "You are expecting a child",
     "søke_om_foreldrepenger.morOgMedmor.planleggTiden": "Plan the time at home with the child",
     "søke_om_foreldrepenger.morOgMedmor.svangerskapsuke": "22nd week of pregnancy",
@@ -345,7 +309,6 @@
     "søke_om_foreldrepenger.morOgMedmor.fireUkerFørMedmor": "4 weeks before co-mother's first day of parental benefit or postponement",
     "søke_om_foreldrepenger.morOgMedmor.inntektMedmor": "We receive information about co-mother's income",
     "søke_om_foreldrepenger.morOgMedmor.medmorFårSvar": "Co-mother may receive a response to the application",
-
     "søke_om_foreldrepenger.farOgFar.venterBarn": "You are expecting a child",
     "søke_om_foreldrepenger.farOgFar.planleggTiden": "Plan the time at home with the child",
     "søke_om_foreldrepenger.farOgFar.terminEllerOmsorgsovertakelse": "You receive the expected date of delivery or transfer of custody",
@@ -358,14 +321,16 @@
     "søke_om_foreldrepenger.farOgFar.fireUkerFørFar2": "4 weeks before dad 2's first day of parental benefit or postponement",
     "søke_om_foreldrepenger.farOgFar.inntektFar2": "We receive information about dad 2's income",
     "søke_om_foreldrepenger.farOgFar.far2FårSvar": "Dad 2 may receive a response to the application",
-
     "om_engangsstønad.tittel": "All information regarding the lump-sum grant",
     "om_engangsstønad.hva_er.tittel": "Who is entitled to the lump-sum grant?",
     "om_engangsstønad.når_kan_du_søke.tittel": "When can you apply?",
     "om_engangsstønad.hva_kan_du_få.tittel": "What are you entitled to?",
     "om_engangsstønad.utbetaling.tittel": "When will the money be paid out?",
     "om_engangsstønad.til_far.tittel": "Lump-sum grant to father or co-mother",
-
+    "om_engangsstønad.infobanner2020": "Ny sats fra <strong>1. januar 2020</strong>",
+    "om_engangsstønad.infobanner2020.sum": "Fra 1. januar 2020 øker stønaden med 1 580 kroner til 84 720 kroner per barn",
+    "om_engangsstønad.infobanner2020.virkning": "Endringen vil få virkning for fødsler og adopsjoner som skjer <strong>1. januar 2020 eller senere</strong>",
+    "om_engangsstønad.infobanner2020.ekstra": "Hvis du har fått innvilget søknaden din om engangsstønad i 2019, men barnet blir født 2020, så vil du få etterbetalt 1 580 kroner. Vi sender deg et brev med informasjon og du trenger ikke ta kontakt med oss.",
     "om_svangerskapspenger.tittel": "All information regarding Pregnancy allowance",
     "om_svangerskapspenger.sok_na": "apply now",
     "om_svangerskapspenger.hvem_kan_fa_svangerskapspenger.tittel": "Who can get pregnancy allowance?",
@@ -379,7 +344,6 @@
     "om_svangerskapspenger.slikSokerDu.faneEn.tittel": "employee",
     "om_svangerskapspenger.slikSokerDu.faneTo.tittel": "Self-employed or freelancer",
     "om_svangerskapspenger.hvisDuSelvErSyk.tittel": "If you are sick",
-
     "veiviser.fane.mor": "Mother",
     "veiviser.fane.far": "Father",
     "veiviser.fane.medmor": "Co-Mother",
@@ -400,21 +364,18 @@
     "veiviser.valg.inntekt.subHeader": "Your monthly income before tax",
     "veiviser.valg.inntekt.beregnet.subHeader": "Calculated annual income before tax",
     "veiviser.valg.beregn.knapp": "Calculate income",
-
     "veiviser.valg.spørsmål.mor.en": "Are you an employee, freelancer, self-employed or recipient of benefits from NAV?",
     "veiviser.valg.spørsmål.mor.to": "Do you have other sources of income?",
     "veiviser.valg.spørsmål.mor.tre": "How long have you had an income?",
     "veiviser.valg.spørsmål.mor.fire": "What is your average monthly wage before tax?",
     "veiviser.valg.spørsmål.mor.fem": "Are you a member of National Insurance Scheme?",
     "veiviser.valg.spørsmål.mor.seks": "Any other means of being a member?",
-
     "veiviser.valg.spørsmål.far.en": "Are you an employee, freelancer, self-employed or recipient of benefits from NAV?",
     "veiviser.valg.spørsmål.far.to": "Do you have other sources of income?",
     "veiviser.valg.spørsmål.far.tre": "How long have you had an income?",
     "veiviser.valg.spørsmål.far.fire": " What is your average monthly wage before tax?",
     "veiviser.valg.spørsmål.far.fem": " Are you a member of National Insurance Scheme?",
     "veiviser.valg.spørsmål.far.seks": "Any other means of being a member?",
-
     "veiviser.valg.svar.mor.en.ja": "Yes",
     "veiviser.valg.svar.mor.en.nei": "No",
     "veiviser.valg.svar.mor.to.ja": " Yes, I have other sources of income",
@@ -427,7 +388,6 @@
     "veiviser.valg.svar.mor.fem.nei": "No, I do not live in Norway",
     "veiviser.valg.svar.mor.seks.ja": "Yes, I am a member",
     "veiviser.valg.svar.mor.seks.nei": "No, I am not a member",
-
     "veiviser.valg.svar.far.en.ja": "Yes",
     "veiviser.valg.svar.far.en.nei": "No",
     "veiviser.valg.svar.far.to.ja": "Yes, I have other sources of income",
@@ -440,7 +400,6 @@
     "veiviser.valg.svar.far.fem.nei": "No, I do not live in Norway",
     "veiviser.valg.svar.far.seks.ja": "Yes, I am a member",
     "veiviser.valg.svar.far.seks.nei": "No, I am not a member",
-
     "veiviser.valg.hjelpetekst.lukk": "Close information",
     "veiviser.valg.hjelpetekst.ingress": "What is the difference between parental benefit and lump-sum grant?",
     "veiviser.valg.hjelpetekst.hattInntekt": "Why 6 of the past 10 months?",
@@ -450,7 +409,6 @@
     "veiviser.valg.hjelpetekst.andreInntekt": "Info for annual income",
     "veiviser.valg.hjelpetekst.medlemskap": "What will being a member entail?",
     "veiviser.valg.hjelpetekst.medlem.folketrygden": "What is membership of the National Insurance Scheme?",
-
     "veiviser.valg.resultat.overskrift.foreldrepenger": "You are entitled to the parental benefit",
     "veiviser.valg.resultat.overskrift.foreldrepenger.ikkeRett": "You are not entitled to the parental benefit",
     "veiviser.valg.resultat.overskrift.Engangsstonad.mor": "You are entitled to the parental benefit",
@@ -464,17 +422,13 @@
     "veiviser.valg.resultat.foreldrepenger.headertxt": "Read more about how you may be entitled to parental benefit.",
     "veiviser.valg.resultat.navigasjonsboks.hvormye.ariaLabel": "Go to the calculator. Here you can estimate how much parental benefit you can get paid",
     "veiviser.valg.resultat.navigasjonsboks.hvorlenge.ariaLabel": "Go to the planner. Here you can set up withdrawal plan for your parenting period",
-
     "veiviser.valg.resultat.punkt.forste.godkjent": "I have had an income in 6 of the last 10 months",
     "veiviser.valg.resultat.punkt.andre.godkjent": "I have earned at least NOK 48,441 for the year",
     "veiviser.valg.resultat.punkt.tredje.godkjent": "I am a member of the National Insurance Scheme",
-
     "veiviser.valg.resultat.punkt.forste.underkjent": "I have not had an income in 6 of the last 10 months",
     "veiviser.valg.resultat.punkt.andre.underkjent": "I have earned less than the minimum amount of NOK 48,441 for the year",
     "veiviser.valg.resultat.punkt.tredje.underkjent": "I am not a member of the National Insurance Scheme",
-
     "regelendringer.tittel": "Relevant changes",
     "regelendringer.banner": "Relevant changes",
-
     "info.svangerskapspenger.harIkkeElektroniskID.tittel": "No electronic ID?"
 }

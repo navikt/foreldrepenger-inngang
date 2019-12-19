@@ -2,7 +2,6 @@
     "languageToggle.bokmål": "Bokmål",
     "languageToggle.nynorsk": "Nynorsk",
     "languageToggle.english": "Engelsk",
-
     "adopsjon_og_arbeidsgiver": "Adopsjon og arbeidsgivar",
     "adopsjon": "Adopsjon",
     "arbeidsgiver": "Arbeidsgivar",
@@ -34,21 +33,18 @@
     "ukjent": "ukjent",
     "utbetaling": "Utbetaling",
     "utbetalinger": "Utbetalingar",
-
     "farOgMor": "Far og mor",
     "farOgFar": "Far og far",
     "morOgMor": "Mor og mor",
     "bareFarHarRett": "Berre far\nhar rett",
     "bareMorHarRett": "Berre mor\nhar rett",
     "aleneomsorg": "Åleineomsorg",
-
     "mor": "mor",
     "far": "far",
     "far1": "far 1",
     "far2": "far 2",
     "begge": "begge",
     "medmor": "medmor",
-
     "route.": "Foreldrepengar, eingongsstønad og svangerskapspengar",
     "route.tjenester": "Kor mykje og kor lenge?",
     "route.beregning": "Berekning av foreldrepengar",
@@ -65,7 +61,6 @@
     "route.soke-om-foreldrepenger": "Søke om foreldrepengar",
     "route.regelendringer": "Aktuelle endringar",
     "route.om-svangerskapspenger": "Om svangerskapspengar",
-
     "informasjonstavle.tittel": "Foreldrepengar, eingongsstønad og svangerskapspengar",
     "informasjonstavle.ingress": "Dette har du rett til når du ventar barn eller skal ha foreldrepengar.",
     "informasjonstavle.hva_kan_du_få": "Kva skjer når?",
@@ -74,15 +69,12 @@
     "informasjonstavle.hvor_mye_ingress": "Rekn ut kor mykje du kan få i foreldrepengar.",
     "informasjonstavle.hvor_lenge": "Kor lenge?",
     "informasjonstavle.hvor_lenge_ingress": "Planlegg kor lenge du kan vere heime med barnet.",
-
     "informasjonstavle.velg_søknadsskjema.tittel": "Søknadsskjema - eitt skjema for alle",
     "informasjonstavle.velg_søknadsskjema.ingress": "Både mor, far og medmor bruker same skjema for å søkje om foreldrepengar eller gjere endringar. Her finn du òg skjema for å søkje eingongsstønad og svangerskapspengar.",
-
     "informasjonstavle.mer_informasjon.tittel": "Utfyllande informasjon",
     "informasjonstavle.mer_informasjon.foreldrepenger": "Foreldrepengene skal erstatte inntekta di når du skal vere heime med barnet i samband med fødsel eller adopsjon.",
     "informasjonstavle.mer_informasjon.engangsstønad": "Dersom du ventar barn og ikkje hatt inntekt det siste året, kan du få ein eingongssum i staden for foreldrepengar.",
     "informasjonstavle.mer_informasjon.svangerskapspenger": "Friske gravide kvinner som ikkje kan fortsette å jobbe under svangerskapet fordi det kan utgjere ein risiko for barnet, kan få svangerskapspengar.",
-
     "informasjonstavle.andre_lenker.dokumentasjon": "Dokumentasjon som må leggjast ved",
     "informasjonstavle.andre_lenker.ettersende_vedlegg_til_søknad": "Ettersende vedlegg til søknad",
     "informasjonstavle.andre_lenker.ofte_stilte_spørsmål": "Ofte stilte spørsmål",
@@ -93,13 +85,11 @@
     "informasjonstavle.andre_lenker.regelverk": "Regelverk",
     "informasjonstavle.andre_lenker.slik_klager_du": "Slik klagar du",
     "informasjonstavle.andre_lenker.tittel": "Relatert informasjon",
-
     "tjenester.tittel": "Kor mykje og kor lenge?",
     "tjenester.beregning_tittel": "Berekning av foreldrepengar",
     "tjenester.lenke_beregning": "Berekn kor mykje du har rett på",
     "tjenester.planlegger_tittel": "Foreldrepengeplanleggjaren",
     "tjenester.lenke_planlegger": "Planlegg for kor lenge du kan vere heime med barnet ditt",
-
     "kalkulator.bannertekst": "Berekning av foreldrepengar",
     "kalkulator.tittel": "Kor mykje?",
     "kalkulator.valg.tittel": "Kva er den noverande arbeidssituasjonen din?",
@@ -127,10 +117,8 @@
     "kalkulator.fikk": "fekk",
     "kalkulator.lukk_info": "Lukk informasjon",
     "kalkulator.ytelser_som_gir_rett_tittel": "Utbetalingar som gir rett til foreldrepengar og spesielt om dagpengar og AAP",
-
     "dokumentasjon.banner": "Dokumentasjon som må leggjast ved",
     "dokumentasjon.tittel": "Dokumentasjon som må leggjast ved",
-
     "hva_søker_du.tittel": "Kva vil du søkje om?",
     "hva_søker_du.foreldrepenger.tittel": "Foreldrepengar – eitt skjema for alle",
     "hva_søker_du.søk_foreldrepenger": "Søk om foreldrepengar",
@@ -142,14 +130,12 @@
     "hva_søker_du.ingen_elektronisk_id_hjelp": "For å søkje på nett må du ha BankID frå banken din eller ein annen elektronisk ID.",
     "hva_søker_du.engangsstønad.sokPapir.modal.knapp.standard": "Gå til papirsøknaden",
     "hva_søker_du.engangsstønad.sokPapir.modal.knapp.hoved": "Gå til søknaden",
-
     "søk_foreldrepenger.tittel": "Søk om foreldrepengar",
     "søk_foreldrepenger.knapp": "Begynn søknad om foreldrepengar",
     "søk_foreldrepenger.knapp_mobil": "Begynn søknad",
     "søk_foreldrepenger.advarselmelding": "Du søkjer tidlegare enn 6 veker før du skal ta ut foreldrepengar. Du kan begynne på søknaden, men det vil ikkje vere mogleg å sende han inn før",
     "søk_foreldrepenger.første_dag_spørsmål": "Når er første dag med foreldrepengar eller utsetjing?",
     "søk_svangerskapspenger.tittel": "Søk svangerskapspengar",
-
     "hurtiglenke.hvem_kan_fa_foreldrepenger": "Kven kan få foreldrepengar?",
     "hurtiglenke.hvor_lenge_kan_du_fa_foreldrepenger": "Kor lenge kan du få foreldrepengar?",
     "hurtiglenke.hva_kan_du_fa": "Kva kan du få utbetalt?",
@@ -172,22 +158,17 @@
     "hurtiglenke.hvor_lenge_kan_jeg_fa": "Kor lenge kan du få?",
     "hurtiglenke.jobb_delvis": "Jobbe delvis",
     "hurtiglenke.hvor_mye_kan_du_fa": "Kor mykje kan du få?",
-
     "innholdsfortegnelse.søk_nå": "Søk no",
-
     "om_foreldrepenger.faner.label": "Vel situasjonen din:",
     "om_foreldrepenger.tittel": "All informasjon om foreldrepengar",
     "om_foreldrepenger.for_å_få.tittel": "Kven kan få foreldrepengar?",
-
     "om_foreldrepenger.hvor_lenge.tittel": "Kor lenge kan eg få foreldrepengar?",
     "om_foreldrepenger.hvor_lenge.eksempel": "Eksempel med fast inntekt på 22 000 kroner per månad",
     "om_foreldrepenger.hvor_lenge.hurtiglenker": "Men kva dersom ....",
     "om_foreldrepenger.hvor_lenge.kalkulatorlenke": "Berekn foreldrepengane dine",
     "om_foreldrepenger.hvor_lenge.regelendringer_lenke": "Aktuelle endringar i foreldrepengeperioden 2018/2019",
-
     "om_foreldrepenger.prematuruker.lesmer": "Dersom barnet blir født før 33. svangerskapsveke",
     "om_foreldrepenger.prematuruker.lesmer.lukk": "Lukk informasjon",
-
     "om_foreldrepenger.hvor_lenge.fordeling.tittel": "Slik er periodane delte mellom dykk",
     "om_foreldrepenger.hvor_lenge.fordeling.tittel_alene": "Slik er foreldrepengeperioden din",
     "om_foreldrepenger.hvor_lenge.fordeling.mødrekvote": "Mødrekvoten",
@@ -198,7 +179,6 @@
     "om_foreldrepenger.hvor_lenge.fordeling.alenefar": "Som far",
     "om_foreldrepenger.hvor_lenge.fordeling.første_fedrekvote": "Far 1",
     "om_foreldrepenger.hvor_lenge.fordeling.andre_fedrekvote": "Far 2",
-
     "om_foreldrepenger.hvor_lenge.fordeling.krav": "Krav til kva {subjekt} gjer",
     "om_foreldrepenger.hvor_lenge.fordeling.ingen_krav": "Ingen krav til kva {subjekt} gjer",
     "om_foreldrepenger.hvor_lenge.fordeling.aktivitetskrav": "Aktivitetskrav til {subjekt}",
@@ -207,32 +187,26 @@
     "om_foreldrepenger.hvor_lenge.fordeling.tre_uker_før_fødsel": "I tillegg til mødrekvoten, får mor også 3 veker før termin",
     "om_foreldrepenger.hvor_lenge.fordeling.i_tillegg_til_foreldrepenger": "I tillegg til foreldrepengar, får mor også 3 veker før termin",
     "om_foreldrepenger.hvor_lenge.fordeling.snakkeboble.tittel": "{antallUker100} veker ved 100 prosent foreldrepengar, {antallUker80} veker ved 80 prosent foreldrepengar.",
-
     "om_foreldrepenger.når_kan_du_søke.tittel": "Søknadsfristar",
     "om_foreldrepenger.når_kan_du_søke.hvis_du_skal_utsette_fordi": " Dersom du skal utsetje fordi:",
     "om_foreldrepenger.når_kan_du_søke.utsette_sykdom": " Ein av dykk blir sjuke",
     "om_foreldrepenger.når_kan_du_søke.utsette_jobbe": "Du skal jobbe",
     "om_foreldrepenger.når_kan_du_søke.utsette_ferie": "Du skal ha ferie",
-
     "om_foreldrepenger.ferie.tittel": "Dersom du skal ha ferie",
     "om_foreldrepenger.ferie.eksempel_label": "Eksempel på korleis du kan forlengje foreldrepengeperioden din når du utset:",
     "om_foreldrepenger.ferie.illustrasjon": "Ferie",
-
     "om_foreldrepenger.nye_regler.tittel": "Nye reglar frå 1. juli 2018",
     "om_foreldrepenger.nye_regler_label": "Barnet er født eller adoptert",
     "om_foreldrepenger.nye_regler.før": "før 1. juli 2018",
     "om_foreldrepenger.nye_regler.før_beskrivelse": "Av den totale foreldrepengeperioden er 10 veker sette av til kvar av foreldra (kvoten). Får de fleire barn samtidig, får de 5 eller 7 veker ekstra for kvart barn meir enn eitt.",
     "om_foreldrepenger.nye_regler.etter": "etter 1. juli 2018",
     "om_foreldrepenger.nye_regler.etter_beskrivelse": "Av den totale foreldrepengeperioden er 15 veker sette av til kvar av foreldra (kvoten). Får de to barn samtidig, får de 17 eller 21 veker ekstra. Får de 3 eller fleire barn, får de 46 eller 56 veker ekstra.",
-
     "om_foreldrepenger.nye_beregningsregler.header": "Nye reglar for berekning av foreldrepengar 1. januar 2019",
-
     "om_foreldrepenger.jobbe.tittel": "Når du vil jobbe",
     "om_foreldrepenger.jobbe.fanetittel.jobbeHeltid": "Jobbe heiltid (100 prosent)",
     "om_foreldrepenger.jobbe.fanetittel.jobbeDelvis": "Jobbe delvis",
     "om_foreldrepenger.jobbe.klikkForDetaljertInformasjon": "(klikk for detaljert informasjon)",
     "om_foreldrepenger.jobbe.kikkForLukkDetaljertInformasjon": "(klikk for å lukke)",
-
     "om_foreldrepenger.sykdom.tittel": "Dersom ein av dykk blir sjuk",
     "om_foreldrepenger.sykdom.innlagt": "Barnet er\ninnlagt",
     "om_foreldrepenger.sykdom.foreldre_syke": "Ein av foreldra\ner sjuk",
@@ -245,20 +219,16 @@
     "om_foreldrepenger.sykdom.illustrasjon.forskyves": "(forskyves 2 veker)",
     "om_foreldrepenger.sykdom.illustrasjon.sluttdato": "Sluttdato",
     "om_foreldrepenger.sykdom.illustrasjon.ferievarighet": "(2 veker)",
-
     "om_foreldrepenger.hjemme_samtidig.tittel": "Heime samtidig",
     "om_foreldrepenger.hjemme_samtidig.ingress": "Dersom de vil vere heime med barnet samtidig eller byte på, har de fleire val.",
     "om_forer.hjemme_samtidig.permisjon": "Permisjon ved fødselen",
-
     "om_foreldrepenger.adopsjon.tittel": "Adoptere",
-
     "om_foreldrepenger.beregning.tittel": "Kva kan du få utbetalt?",
     "om_foreldrepenger.beregning.arbeidstaker": "Arbeidstakar",
     "om_foreldrepenger.beregning.selvstendig": " Sjølvstendig næringsdrivande",
     "om_foreldrepenger.beregning.harYtelse": "Utbetaling\nfrå NAV",
     "om_foreldrepenger.beregning.andreInntektskilder": "Førstegongs-teneste i forsvaret",
     "om_foreldrepenger.beregning.frilanser.ikontittel": "Frilansar",
-
     "om_foreldrepenger.hjelp.tittel": "Fann du ikkje det du leita etter?",
     "om_foreldrepenger.ofte_stilte_spørsmål.tittel": "Ofte stilte spørsmål",
     "om_foreldrepenger.jobbe.jobbeHeltidSvg.jobb": "Jobb",
@@ -273,14 +243,12 @@
     "om_foreldrepenger.jobbe.jobbDelvis.dropdownSvg.dager": "4 dagar",
     "om_foreldrepenger.jobbe.jobbDelvis.dropdownSvg.dag": "dag",
     "om_foreldrepenger.jobbe.jobbDelvis.dropdownSvg.uke": "veke",
-
     "søke_om_foreldrepenger.forside.bildetekst": "Kva skjer når?",
     "søke_om_foreldrepenger.oversikt": "Hva vil du ha oversikt over?",
     "søke_om_foreldrepenger.hele": "Heile søknadsprosessen",
     "søke_om_foreldrepenger.endre": "Endre noko etter at eg har søkt",
     "søke_om_foreldrepenger.velgSituasjon": "Velg situasjonen dykkar",
     "søke_om_foreldrepenger.søkOmEndring": "Søkje om endring",
-
     "søke_om_foreldrepenger.farOgMor.venterBarn": "De ventar barn",
     "søke_om_foreldrepenger.farOgMor.planleggTiden": "Planlegg tida heime med barnet",
     "søke_om_foreldrepenger.farOgMor.svangerskapsuke": "22. svangerskapsveke",
@@ -293,7 +261,6 @@
     "søke_om_foreldrepenger.farOgMor.fireUkerFørFar": "4 veker før fars første dag med foreldrepengar eller utsetjing",
     "søke_om_foreldrepenger.farOgMor.inntektFar": "Vi får opplysningar om inntekta til far",
     "søke_om_foreldrepenger.farOgMor.farFårSvar": "Far kan få svar på søknaden",
-
     "søke_om_foreldrepenger.bareFarHarRett.venterBarn": "De venter barn",
     "søke_om_foreldrepenger.bareFarHarRett.planleggTiden": "Planlegg tida heime med barnet",
     "søke_om_foreldrepenger.bareFarHarRett.dokumentasjon": "Du treng dokumentasjon på at mor er i godkjend aktivitet.",
@@ -302,7 +269,6 @@
     "søke_om_foreldrepenger.bareFarHarRett.fireUkerFørFar": "4 veker før din første dag med foreldrepengar eller utsetjing",
     "søke_om_foreldrepenger.bareFarHarRett.inntektFar": "Vi får opplysningar om inntekta di",
     "søke_om_foreldrepenger.bareFarHarRett.farFårSvar": "Du kan få svar på søknaden",
-
     "søke_om_foreldrepenger.bareMorHarRett.venterBarn": "De venter barn",
     "søke_om_foreldrepenger.bareMorHarRett.planleggTiden": "Planlegg tida heime med barnet",
     "søke_om_foreldrepenger.bareMorHarRett.svangerskapsuke": "22. svangerskapsveke",
@@ -310,7 +276,6 @@
     "søke_om_foreldrepenger.bareMorHarRett.fireUkerFørMor": "4 veker før din første dag med foreldrepengar",
     "søke_om_foreldrepenger.bareMorHarRett.inntektMor": "Vi får opplysninger om inntekta di",
     "søke_om_foreldrepenger.bareMorHarRett.morFårSvar": "Du kan få svar på søknaden",
-
     "søke_om_foreldrepenger.aleneomsorg.morEllerFar": "Er du far eller mor?",
     "søke_om_foreldrepenger.aleneomsorg.mor": "Mor",
     "søke_om_foreldrepenger.aleneomsorg.mor.venterBarn": "Du venter barn",
@@ -329,7 +294,6 @@
     "søke_om_foreldrepenger.aleneomsorg.far.fireUkerFørFar": "4 veker før din første dag med foreldrepengar eller utsetjing",
     "søke_om_foreldrepenger.aleneomsorg.far.inntektFar": "Vi får opplysninger om inntekta di",
     "søke_om_foreldrepenger.aleneomsorg.far.farFårSvar": "Du kan få svar på søknaden",
-
     "søke_om_foreldrepenger.morOgMedmor.venterBarn": "De venter barn",
     "søke_om_foreldrepenger.morOgMedmor.planleggTiden": "Planlegg tida heime med barnet",
     "søke_om_foreldrepenger.morOgMedmor.svangerskapsuke": "22. svangerskapsveke",
@@ -342,7 +306,6 @@
     "søke_om_foreldrepenger.morOgMedmor.fireUkerFørMedmor": "4 veker før medmors første dag med foreldrepengar eller utsetjing",
     "søke_om_foreldrepenger.morOgMedmor.inntektMedmor": "Vi får opplysningar om inntekta til medmor",
     "søke_om_foreldrepenger.morOgMedmor.medmorFårSvar": "Medmor kan få svar på søknaden",
-
     "søke_om_foreldrepenger.farOgFar.venterBarn": "De venter barn",
     "søke_om_foreldrepenger.farOgFar.planleggTiden": "Planlegg tida heime med barnet",
     "søke_om_foreldrepenger.farOgFar.terminEllerOmsorgsovertakelse": "Dere får vite dato for termin eller omsorgsovertakelse",
@@ -355,14 +318,16 @@
     "søke_om_foreldrepenger.farOgFar.fireUkerFørFar2": "4 veker før far 2 sin første dag med foreldrepengar eller utsetjing",
     "søke_om_foreldrepenger.farOgFar.inntektFar2": "Vi får opplysningar om inntekta til far 2",
     "søke_om_foreldrepenger.farOgFar.far2FårSvar": "Far 2 kan få svar på søknaden",
-
     "om_engangsstønad.tittel": "All informasjon om eingongsstønad",
     "om_engangsstønad.hva_er.tittel": "Kven kan få eingongsstønad?",
     "om_engangsstønad.hva_kan_du_få.tittel": "Kva kan du få utbetalt?",
     "om_engangsstønad.utbetaling.tittel": "Når blir pengane betalte ut?",
     "om_engangsstønad.til_far.tittel": "Eingongsstønad til far eller medmor",
     "om_engangsstønad.når_kan_du_søke.tittel": "Søknadsfristar",
-
+    "om_engangsstønad.infobanner2020": "Ny sats fra <strong>1. januar 2020</strong>",
+    "om_engangsstønad.infobanner2020.sum": "Fra 1. januar 2020 øker stønaden med 1 580 kroner til 84 720 kroner per barn",
+    "om_engangsstønad.infobanner2020.virkning": "Endringen vil få virkning for fødsler og adopsjoner som skjer <strong>1. januar 2020 eller senere</strong>",
+    "om_engangsstønad.infobanner2020.ekstra": "Dersom du har fått innvilga søknaden din om eingongsstønad i 2019, men barnet blir fødd i 2020, så vil du få etterbetalt 1580 kroner. Vi sender deg eit brev med informasjon og du treng ikkje ta kontakt med oss.",
     "om_svangerskapspenger.tittel": "All informasjon om Svangerskapspengar",
     "om_svangerskapspenger.sok_na": "Søk no",
     "om_svangerskapspenger.hvem_kan_fa_svangerskapspenger.tittel": "Kven kan få svangerskapspengar?",
@@ -376,7 +341,6 @@
     "om_svangerskapspenger.slikSokerDu.faneEn.tittel": "Arbeidstakar",
     "om_svangerskapspenger.slikSokerDu.faneTo.tittel": "Sjølvstendig næringdrivande eller frilansar",
     "om_svangerskapspenger.hvisDuSelvErSyk.tittel": "Dersom du sjølv er sjuk",
-
     "veiviser.fane.mor": "Mor",
     "veiviser.fane.far": "Far",
     "veiviser.fane.medmor": "Medmor",
@@ -395,21 +359,18 @@
     "veiviser.valg.inntekt.subHeader": "Månadslønna di før skatt",
     "veiviser.valg.inntekt.beregnet.subHeader": "Berekna årsinntekt før skatt",
     "veiviser.valg.beregn.knapp": "Berekn inntekt",
-
     "veiviser.valg.spørsmål.mor.en": "Eg er arbeidstakar, frilansar, sjølvstendig næringsdrivande eller får utbetalingar frå NAV?",
     "veiviser.valg.spørsmål.mor.to": "Har du andre inntektskjelder?",
     "veiviser.valg.spørsmål.mor.tre": "Kor lenge har du hatt inntekt?",
     "veiviser.valg.spørsmål.mor.fire": "Kva er den gjennomsnittlege månadslønna di før skatt?",
     "veiviser.valg.spørsmål.mor.fem": "Er du medlem av folketrygda?",
     "veiviser.valg.spørsmål.mor.seks": "Andre måtar å være medlem på?",
-
     "veiviser.valg.spørsmål.far.en": "Eg er arbeidstakar, frilansar, sjølvstendig næringsdrivande eller får utbetalingar frå NAV?",
     "veiviser.valg.spørsmål.far.to": "Har du andre inntektskjelder?",
     "veiviser.valg.spørsmål.far.tre": "Kor lenge har du hatt inntekt?",
     "veiviser.valg.spørsmål.far.fire": "Kva er den gjennomsnittlege månadslønna di før skatt?",
     "veiviser.valg.spørsmål.far.fem": "Er du medlem av folketrygda?",
     "veiviser.valg.spørsmål.far.seks": "Andre måtar å vere medlem på?",
-
     "veiviser.valg.svar.mor.en.ja": "Ja",
     "veiviser.valg.svar.mor.en.nei": "Nei",
     "veiviser.valg.svar.mor.to.ja": "Ja, eg har andre inntektskjelder",
@@ -422,7 +383,6 @@
     "veiviser.valg.svar.mor.fem.nei": "Nei, eg bur ikkje i Noreg",
     "veiviser.valg.svar.mor.seks.ja": "Ja, eg er medlem",
     "veiviser.valg.svar.mor.seks.nei": "Nei, eg er ikkje medlem",
-
     "veiviser.valg.svar.far.en.ja": "Ja",
     "veiviser.valg.svar.far.en.nei": "Nei",
     "veiviser.valg.svar.far.to.ja": "Ja, eg har andre inntektskjelder",
@@ -435,7 +395,6 @@
     "veiviser.valg.svar.far.fem.nei": "Nei, eg bur ikkje i Noreg",
     "veiviser.valg.svar.far.seks.ja": "Ja, eg er medlem",
     "veiviser.valg.svar.far.seks.nei": "Nei, eg er ikkje medlem",
-
     "veiviser.valg.hjelpetekst.lukk": "Lukk informasjon",
     "veiviser.valg.hjelpetekst.ingress": " Kva er forskjellen mellom foreldrepengar og eingongsstønad?",
     "veiviser.valg.hjelpetekst.hattInntekt": "Kvifor 6 av dei 10 siste månadene?",
@@ -445,7 +404,6 @@
     "veiviser.valg.hjelpetekst.andreInntekt": "Info til årsinntekt",
     "veiviser.valg.hjelpetekst.medlemskap": "Kva vil det seie å vere medlem?",
     "veiviser.valg.hjelpetekst.medlem.folketrygden": " Kva vil det seie å vere medlem av folketrygda?",
-
     "veiviser.valg.resultat.overskrift.foreldrepenger": "Du har rett til foreldrepengar",
     "veiviser.valg.resultat.overskrift.foreldrepenger.ikkeRett": "Du har ikkje rett til foreldrepengar",
     "veiviser.valg.resultat.overskrift.Engangsstonad.mor": "Du har rett til eingongsstønad",
@@ -459,20 +417,15 @@
     "veiviser.valg.resultat.foreldrepenger.headertxt": " Du kan lese om korleis du kan ha rett til foreldrepengar.",
     "veiviser.valg.resultat.navigasjonsboks.hvormye.ariaLabel": "Gå til kalkulatoren. Her kan du estimera kor mye foreldrepengar du kan få utbetalt",
     "veiviser.valg.resultat.navigasjonsboks.hvorlenge.ariaLabel": "Gå til planleggaren. Her kan du setja opp uttaksplan for foreldra din periode",
-
     "veiviser.valg.resultat.punkt.forste.godkjent": "Eg har hatt inntekt 6 av dei 10 siste månadene",
     "veiviser.valg.resultat.punkt.andre.godkjent": "Eg har tent minst 49 929 kr i året",
     "veiviser.valg.resultat.punkt.tredje.godkjent": "Eg er medlem av folketrygda",
-
     "veiviser.valg.resultat.punkt.forste.underkjent": "Eg har ikkje hatt inntekt 6 av dei 10 siste månadene",
     "veiviser.valg.resultat.punkt.andre.underkjent": "Eg har tent under minstebeløpet på 49 929 kr i året",
     "veiviser.valg.resultat.punkt.tredje.underkjent": "Eg er ikkje medlem av folketrygda",
-
     "veiviser.navgigasjonsboks.kalk.sublabel": " Rekn ut kor mye du kan få i foreldrepengar.",
     "veiviser.navigasjonsboks.planlegg.sublabel": " Planlegg kor lenge du kan vere heime med barnet.",
-
     "regelendringer.tittel": "Aktuelle endringar",
     "regelendringer.banner": "Aktuelle endringar",
-
     "info.svangerskapspenger.harIkkeElektroniskID.tittel": "Har du ikke elektronisk ID?"
 }
