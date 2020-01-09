@@ -2,7 +2,6 @@
     "namespace" : "foreldrepenger",
     "appres" : "appres-q1.nav.no",
     "ingress": "https://familie.dev-nav.no",
-    "application_name": "foreldrepenger-inngang",
     "env": {
         "APPRES_CMS_URL": "https://appres-q1.nav.no",
         "SOK_FORELDREPENGER_URL": "https://foreldrepengesoknad.dev-nav.no",
