@@ -1,10 +1,12 @@
 <innhold>
     <lesmer intro="Kor finn eg informasjon om saka mi?">
-    <avsnitt>Du kan logge deg på <lenke url="https://foreldrepenger.nav.no" ekstern="true">Dine foreldrepengar</lenke> og sjå status i saken din. Her kan du òg ettersenda vedlegg til søknaden din.</avsnitt>
+        <avsnitt>Du kan logge deg på <lenke url="https://foreldrepenger.nav.no" ekstern="true">Dine foreldrepengar</lenke> og sjå status i saken din. Her kan du òg ettersenda vedlegg til søknaden din.</avsnitt>
     </lesmer>
     <lesmer intro="Når får eg svar på søknaden min?">
         <avsnitt>Du får tidlegast svar på søknaden din <b>4 veker</b> før foreldrepengeperioden din startar. Dette er fordi vi bruker dei nyaste opplysningane om inntekta di når vi skal berekne kva du skal få i foreldrepengar.</avsnitt>
     </lesmer>
+    <lesmer intro="Utbetalingar">
+        <avsnitt>NAV utbetalar foreldrepengar innan den utbetales innen den 25. i måneden. Hvor mykje foreldrepengar du får utbetalt, ser du på Ditt NAV, under <lenke url="https://tjenester.nav.no/dittnav/oversikt" ekstern="true">utbetalingsoversikta.</lenke> Får du utbetalt foreldrepengane av arbeidsgivaren din må du kontakta arbeidsgivar for utbetalingdato og utbetalingsoversikt.</avsnitt>
     <lesmer intro="Kan eg få foreldrepengar når eg er student?">
         <avsnitt>For å ha rett til foreldrepengar må du ha hatt inntekt i 6 av dei 10 siste månadene. Studielån eller stipend frå Lånekassa gir ikkje rett til foreldrepengar. Om du ikkje har rett til foreldrepengar, kan du søkje om eingongsstønad. Du kan prøve vår <lenke url="/veiviser">veiviser</lenke> for å sjå kva du kan ha rett til.</avsnitt>
     </lesmer>
@@ -32,6 +34,7 @@
         <avsnitt>Ulønt permisjon avtaler du med arbeidsgivaren din. Du kan ikkje utsetje foreldrepengane dine når du har ulønt permisjon. Den andre forelderen kan utsetje foreldrepengane på grunn av heiltidsarbeid, sjukdom eller ferie i perioden du har ulønt permisjon.</avsnitt>
         <avsnitt>Ulønt permisjon kan påverke retten din til andre NAV-ytingar og opptening av rett til foreldrepengar for nytt barn. <lenke url="https://www.nav.no/no/Person/Arbeid/Sykmeldt%2C+arbeidsavklaringspenger+og+yrkesskade/Sykepenger/Sykepenger+til+sarskilte+grupper#chapter-5" ekstern="true">Her kan du lese meir om kva du kan ha rett til.</lenke></avsnitt>
     </lesmer>
+     </lesmer>
     <avsnitt type="undertittel" className="center top-spacing">Fann du ikkje det du leita etter?</avsnitt>
     <avsnitt className="center">Ta gjerne kontakt med oss på:</avsnitt>
 </innhold>
