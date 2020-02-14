@@ -14,7 +14,7 @@ import Tabs from 'nav-frontend-tabs';
 import { ForeldrepengerSection } from 'app/types/Section';
 import './nårKanDuSøke.less';
 
-const iconSvg = require('../../../assets/ark/ark-frister.svg').default;
+const iconSvg = require('../../../assets/ark/ark-timeglass-v2.svg').default;
 const morSvg = require('../../../assets/foreldre/mor2.svg').default;
 const adopsjonSvg = require('../../../assets/icons/stork.svg').default;
 const cls = BEMHelper('nårKanDuSøke');
@@ -93,6 +93,7 @@ const NårKanDuSøke = ({ id, intl }: Props) => {
             ))}
 
             <Innhold
+                className="blokk-m"
                 source={getSource(
                     'om-foreldrepenger/når-kan-du-søke/hvis-jeg-søker-for-sent',
                     intl
