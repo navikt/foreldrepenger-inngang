@@ -20,6 +20,7 @@ import OfteStilteSpørsmål from './ofte-stilte-spørsmål/OfteStilteSpørsmål'
 import Sidebanner from '../../components/sidebanner/Sidebanner';
 import Sykdom from './sykdom/Sykdom';
 import '../infosider/infosider.less';
+import Opptjening from './opptjening/Opptjening';
 
 const cls = BEMHelper('infosider');
 
@@ -30,6 +31,7 @@ interface Props {
 const sections: Section[] = [
     Section.HvemKanFå,
     Section.HvorLengeKanDuFå,
+    Section.Opptjening,
     Section.HvaKanDuFå,
     Section.NårKanDuSøke,
     Section.HvisDuSkalPåFerie,
@@ -62,6 +64,7 @@ const OmForeldrepenger: React.StatelessComponent<Props & InjectedIntlProps> = ({
                     <Breadcrumbs path={location.pathname} />
                     <HvemKanFåForeldrepenger id={Section.HvemKanFå} />
                     <HvorLenge id={Section.HvorLengeKanDuFå} />
+                    <Opptjening id={Section.Opptjening} />
                     <Beregning id={Section.HvaKanDuFå} />
                     <NårKanDuSøke id={Section.NårKanDuSøke} />
                     <Ferie id={Section.HvisDuSkalPåFerie} />

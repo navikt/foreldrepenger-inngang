@@ -8,7 +8,8 @@ export enum ForeldrepengerSection {
     HvisEnAvDereBlirSyke = 'hvis-en-av-dere-blir-syke',
     HjemmeSamtidig = 'hjemme-samtidig',
     Adoptere = 'adoptere',
-    OfteStilteSpørsmål = 'ofte-stilte-sporsmal'
+    OfteStilteSpørsmål = 'ofte-stilte-sporsmal',
+    Opptjening = 'opptjening'
 }
 
 export enum EngangsstønadSection {
