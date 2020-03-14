@@ -4,6 +4,7 @@ import BEMHelper from 'app/utils/bem';
 import { Undertittel, Normaltekst, Element } from 'nav-frontend-typografi';
 
 import './koronaInformasjon.less';
+import Lenke from 'nav-frontend-lenker';
 
 const bem = BEMHelper('koronaInformasjon');
 
@@ -19,7 +20,7 @@ const KoronaInformasjon = () => {
                 <div className={bem.element('textPadding')}>
                     <Element>Har du fått innvilget utsettelse men ikke startet utsettelsesperioden enda?</Element>
                     <Normaltekst>Hvis du og barnet er i karantene, men er friske, oppfyller du ikke vilkåret for å utsette foreldrepengene med fulltidsarbeid. Du kan søke om uttak av foreldrepenger i den perioden.
-Dere kan sende en søknad om å endre til fullt uttak. Foreldrepenger.nav.no</Normaltekst>
+Dere kan sende en søknad om å endre til fullt uttak. <Lenke href="https://foreldrepenger.nav.no" >Søk foreldrepenger</Lenke></Normaltekst>
                 </div>
                 <div className={bem.element('textPadding')}>
                     <Element>Kombinerer du jobb og permisjon når du blir syk eller satt i karantene?</Element>
