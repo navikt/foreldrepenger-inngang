@@ -14,6 +14,7 @@ import Tekstomrade from 'nav-frontend-tekstomrade';
 import './informasjonstavle.less';
 import { Page } from 'app/types/Page';
 import externalUrls from '../../utils/externalUrls';
+import KoronaInformasjon from './korona-informasjon/KoronaInformasjon';
 
 const cls = BEMHelper('informasjonstavle');
 const velgSkjemaIcon = require('../../assets/icons/brev.svg').default;
@@ -25,6 +26,7 @@ const Informasjonstavle: StatelessComponent<InjectedIntlProps> = ({ intl }) => {
             <Header />
             <div className={cls.element('body')}>
                 <div role="main" className={cls.element('content')}>
+                    <KoronaInformasjon />
                     <Bildelenker intl={intl} />
                     <LangtPanelMedBilde
                         svg={velgSkjemaIcon}
