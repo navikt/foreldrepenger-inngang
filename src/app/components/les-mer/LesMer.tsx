@@ -1,7 +1,8 @@
 import * as React from 'react';
-import Expanderbartpanel from 'nav-frontend-ekspanderbartpanel';
 import BEMHelper from '../../utils/bem';
 import './lesMer.less';
+import Ekspanderbartpanel from 'nav-frontend-ekspanderbartpanel';
+import { Element } from 'nav-frontend-typografi';
 
 const cls = BEMHelper('lesMer');
 
@@ -12,9 +13,9 @@ interface Props {
 
 const LesMer: React.StatelessComponent<Props> = ({ intro, children }) => (
     <div className={cls.block}>
-        <Expanderbartpanel border={true} tittel={intro} tittelProps="element">
+        <Ekspanderbartpanel border={true} tittel={<Element>{intro}</Element>}>
             {children}
-        </Expanderbartpanel>
+        </Ekspanderbartpanel>
     </div>
 );
 

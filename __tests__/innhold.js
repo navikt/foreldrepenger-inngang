@@ -59,7 +59,7 @@ describe('Innhold klarer å rendre XML-strings til React-komponenter', () => {
 
         expect(component.exists('div.lesMer')).toBe(true);
         expect(component.exists('div.ekspanderbartPanel')).toBe(true);
-        expect(component.find('span.typo-element').props().children).toEqual('Introduksjon');
+        expect(component.find('p.typo-element').props().children).toEqual('Introduksjon');
         component.find('button').simulate('click');
         expect(component.find('p.typo-normal').props().children).toEqual('Tekst');
     });
