@@ -27,7 +27,7 @@ const KoronaInformasjon = () => {
                         <Lenke
                             rel="noopener noreferrer"
                             target="_blank"
-                            href="https://www.nav.no/no/person/innhold-til-person-forside/nyttig-a-vite/sporsmal-og-svar-i-forbindelse-med-koronaviruset">
+                            href="https://www.nav.no/no/person/innhold-til-person-forside/nyttig-a-vite/koronavirus--informasjon-fra-nav">
                             Spørsmål og svar i forbindelse med koronaviruset
                         </Lenke>
                     </Normaltekst>
