@@ -18,7 +18,7 @@ const KoronaInformasjon = () => {
                     <div className={bem.element('tittel')}>
                         <Icon kind="info-sirkel-fyll" wrapperStyle={{ paddingRight: '1rem' }} />
                         <div className={bem.element('tittelTekst')}>
-                            Foreldrepenger og koronaviruset
+                            Koronavirus – informasjon fra NAV
                         </div>
                     </div>
                 }>
@@ -28,7 +28,7 @@ const KoronaInformasjon = () => {
                             rel="noopener noreferrer"
                             target="_blank"
                             href="https://www.nav.no/no/person/innhold-til-person-forside/nyttig-a-vite/koronavirus--informasjon-fra-nav">
-                            Spørsmål og svar i forbindelse med koronaviruset
+                            Her finner du informasjon fra NAV i forbindelse med koronaviruset.
                         </Lenke>
                     </Normaltekst>
                 </div>
