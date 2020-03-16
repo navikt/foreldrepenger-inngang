@@ -32,11 +32,9 @@ const EkspanderbartInnhold = ({
     return (
         <Collapse
             isOpened={erApen}
-            springConfig={{ stiffness: 250, damping: 30 }}
             className={classnames('ekspanderbartInnhold', {
                 'ekspanderbartInnhold--apen': erApen
-            })}
-            hasNestedCollapse={harEkspanderbartInnhold}>
+            })}>
             {content}
         </Collapse>
     );
