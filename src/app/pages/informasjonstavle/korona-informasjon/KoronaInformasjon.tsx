@@ -6,6 +6,7 @@ import { Normaltekst, Element } from 'nav-frontend-typografi';
 import './koronaInformasjon.less';
 import Lenke from 'nav-frontend-lenker';
 import Ekspanderbartpanel from 'nav-frontend-ekspanderbartpanel';
+import Lenkeknapp from 'app/components/lenkeknapp/Lenkeknapp';
 
 const bem = BEMHelper('koronaInformasjon');
 
@@ -179,9 +180,16 @@ const KoronaInformasjon = () => {
                         <Lenke
                             rel="noopener noreferrer"
                             target="_blank"
-                            href="https://www.nav.no/person/kontakt-oss/chat/familie ">
+                            href="https://www.nav.no/person/kontakt-oss/chat/familie">
                             Chat med oss
                         </Lenke>
+                    </Normaltekst>
+                </div>
+                <div className={bem.element('textPadding')}>
+                    <Normaltekst>
+                        <Lenkeknapp urlIsExternal={true} url="https://foreldrepenger.nav.no">
+                            Søk foreldrepenger
+                        </Lenkeknapp>
                     </Normaltekst>
                 </div>
             </Ekspanderbartpanel>
