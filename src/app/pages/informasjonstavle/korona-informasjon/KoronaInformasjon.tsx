@@ -152,7 +152,8 @@ const KoronaInformasjon = () => {
                     </Element>
                     <Normaltekst>
                         Nei, når den andre forelderen er hjemme og mottar foreldrepenger, kan du
-                        ikke bruke omsorgsdager på grunn av koronastengt barnehage eller skole.{' '}
+                        ikke bruke omsorgsdager hvis barnehagen eller skolen er stengt på grunn av
+                        korona.{' '}
                         <Lenke
                             rel="noopener noreferrer"
                             target="_blank"
