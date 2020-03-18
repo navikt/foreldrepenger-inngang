@@ -131,7 +131,7 @@ const KoronaInformasjon = () => {
                     </Normaltekst>
                 </div>
                 <div className={bem.element('textPadding')}>
-                    <Element>Er du gravid og i risikogruppen?</Element>
+                    <Element>Er du gravid og i arbeid, og i risikogruppen grunnet korona?</Element>
                     <Normaltekst>
                         Er du gravid, tar du kontakt med lege eller jordmor (etter retningslinjene
                         for kontakt gitt av helsemyndighetene) som gjør en vurdering av om
