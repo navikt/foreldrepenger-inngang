@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { injectIntl, InjectedIntlProps, FormattedHTMLMessage } from 'react-intl';
+import { injectIntl, InjectedIntlProps } from 'react-intl';
 import BEMHelper from '../../utils/bem';
 import Breadcrumbs from '../../components/breadcrumbs/Breadcrumbs';
 import Environment from 'app/Environment';
@@ -14,7 +14,6 @@ import NårBlirPengeneUtbetalt from './NårBlirPengeneUtbetalt';
 import NårKanDuSøke from './når-kan-du-søke/NårKanDuSøke';
 import Sidebanner from '../../components/sidebanner/Sidebanner';
 import TilFarEllerMedmor from './TilFarEllerMedmor';
-import { AlertStripeInfo } from 'nav-frontend-alertstriper';
 
 import '../infosider/infosider.less';
 
@@ -63,20 +62,6 @@ const OmEngangsstonad: React.StatelessComponent<Props & InjectedIntlProps> = ({
                 }}>
                 <article className={infosiderCls.element('article')}>
                     <Breadcrumbs path={location.pathname} />
-                    <AlertStripeInfo className={infosiderCls.element('infobanner2020')}>
-                        <div style={{ marginBottom: '1rem' }}>
-                            <FormattedHTMLMessage id="om_engangsstønad.infobanner2020" />
-                        </div>
-                        <div style={{ marginBottom: '1rem' }}>
-                            <FormattedHTMLMessage id="om_engangsstønad.infobanner2020.sum" />
-                        </div>
-                        <div style={{ marginBottom: '1rem' }}>
-                            <FormattedHTMLMessage id="om_engangsstønad.infobanner2020.virkning" />
-                        </div>
-                        <div>
-                            <FormattedHTMLMessage id="om_engangsstønad.infobanner2020.ekstra" />
-                        </div>
-                    </AlertStripeInfo>
                     <HvemKanFåEngangsstønad id={sections[0]} />
                     <HvaKanDuFå id={sections[1]} />
                     <NårKanDuSøke id={sections[2]} />
