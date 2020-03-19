@@ -92,8 +92,8 @@ const KoronaInformasjon = () => {
                 </div>
                 <div className={bem.element('textPadding')}>
                     <Element>
-                        Er du far, mor eller medmor i karantene med barnet, men den som skal ha
-                        foreldrepenger er syk?
+                        Er du far, mor eller medmor i karantene med barnet, har foreldrepenger, og
+                        blir syk?
                     </Element>
                     <Normaltekst>
                         Da kan du søke om å utsette foreldrepengene, eller at den andre forelderen
@@ -117,6 +117,18 @@ const KoronaInformasjon = () => {
                         kan søke om å utsette perioden din, og ta den ut på et senere tidspunkt. Må
                         du jobbe, men bare delvis kan du søke om graderte foreldrepenger i
                         kombinasjon med foreldrepenger.
+                    </Normaltekst>
+                </div>
+                <div className={bem.element('textPadding')}>
+                    <Element>
+                        Er du i foreldrepengeperiode eller har utsettelse, og blir permittert ?
+                    </Element>
+                    <Normaltekst>
+                        Du kan beholde periode med fulle foreldrepenger som er innvilget og påbegynt
+                        før permitteringen. Du kan også beholde en utsettelse som er innvilget før
+                        permitteringen. Du kan beholde de graderte foreldrepengene selv om du blir
+                        permittert. Vær oppmerksom på at dagpenger utbetales ikke sammen med
+                        foreldrepenger hvis du mottar mer enn 50 prosent foreldrepenger.
                     </Normaltekst>
                 </div>
                 <div className={bem.element('textPadding')}>
