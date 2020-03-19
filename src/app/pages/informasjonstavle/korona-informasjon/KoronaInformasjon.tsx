@@ -158,14 +158,8 @@ const KoronaInformasjon = () => {
                     </Normaltekst>
                 </div>
                 <div className={bem.element('textPadding')}>
-                    <Element>
-                        Er den andre forelderen hjemme og mottar foreldrepenger, og du lurer på om
-                        du kan bruke omsorgsdager?
-                    </Element>
+                    <Element>Har du spørsmål om dager med omsorgspenger?</Element>
                     <Normaltekst>
-                        Nei, når den andre forelderen er hjemme og mottar foreldrepenger, kan du
-                        ikke bruke omsorgsdager hvis barnehagen eller skolen er stengt på grunn av
-                        korona.{' '}
                         <Lenke
                             rel="noopener noreferrer"
                             target="_blank"
