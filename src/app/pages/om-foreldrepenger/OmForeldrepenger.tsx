@@ -19,8 +19,9 @@ import NårKanDuSøke from './når-kan-du-søke/NårKanDuSøke';
 import OfteStilteSpørsmål from './ofte-stilte-spørsmål/OfteStilteSpørsmål';
 import Sidebanner from '../../components/sidebanner/Sidebanner';
 import Sykdom from './sykdom/Sykdom';
-import '../infosider/infosider.less';
 import Opptjening from './opptjening/Opptjening';
+import EtterDuHarSøkt from './etter-du-har-søkt/EtterDuHarSøkt';
+import '../infosider/infosider.less';
 
 const cls = BEMHelper('infosider');
 
@@ -39,6 +40,7 @@ const sections: Section[] = [
     Section.HvisEnAvDereBlirSyke,
     Section.HjemmeSamtidig,
     Section.Adoptere,
+    Section.EtterDuHarSøkt,
     Section.OfteStilteSpørsmål
 ];
 
@@ -72,6 +74,7 @@ const OmForeldrepenger: React.StatelessComponent<Props & InjectedIntlProps> = ({
                     <Sykdom id={Section.HvisEnAvDereBlirSyke} />
                     <HjemmeSamtidig id={Section.HjemmeSamtidig} />
                     <Adopsjon id={Section.Adoptere} />
+                    <EtterDuHarSøkt id={Section.EtterDuHarSøkt} />
                     <OfteStilteSpørsmål id={Section.OfteStilteSpørsmål} />
                 </article>
             </MedInnholdsfortegnelse>
