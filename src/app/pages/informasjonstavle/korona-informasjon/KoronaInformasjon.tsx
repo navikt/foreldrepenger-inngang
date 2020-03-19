@@ -75,7 +75,7 @@ const KoronaInformasjon = () => {
                 <div className={bem.element('textPadding')}>
                     <Element>
                         Er du i karantene eller har blitt syk, og ønsker å utsette foreldrepengene,
-                        eller å overføre de til den andre forelderen??
+                        eller å overføre de til den andre forelderen?
                     </Element>
                     <Normaltekst>
                         Du kan velge om du ønsker å utsette foreldrepengene, eller den andre
