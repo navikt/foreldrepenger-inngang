@@ -9,7 +9,8 @@ export enum ForeldrepengerSection {
     HjemmeSamtidig = 'hjemme-samtidig',
     Adoptere = 'adoptere',
     OfteStilteSpørsmål = 'ofte-stilte-sporsmal',
-    Opptjening = 'opptjening'
+    Opptjening = 'opptjening',
+    EtterDuHarSøkt = 'etter-du-har-søkt'
 }
 
 export enum EngangsstønadSection {

@@ -19,6 +19,7 @@ import Environment from '../../Environment';
 import AlertStripe from 'nav-frontend-alertstriper';
 import { Normaltekst, Element } from 'nav-frontend-typografi';
 import Lenke from 'nav-frontend-lenker';
+import EtterDuHarSøktSvangerskapspenger from './etter-du-har-søkt/EtterDuHarSøktSvangerskapspenger';
 
 const cls = BEMHelper('infosider');
 
@@ -32,7 +33,8 @@ export type SvangerskapSection =
     | 'hvor-lenge-kan-jeg-fa'
     | 'hvor-mye-kan-du-fa'
     | 'slik-soker-du'
-    | 'hvis-du-selv-er-syk';
+    | 'hvis-du-selv-er-syk'
+    | 'etter-du-har-søkt';
 
 const sections: SvangerskapSection[] = [
     'hvem-kan-fa-svangerskapspenger',
@@ -40,7 +42,8 @@ const sections: SvangerskapSection[] = [
     'hvor-lenge-kan-jeg-fa',
     'hvor-mye-kan-du-fa',
     'slik-soker-du',
-    'hvis-du-selv-er-syk'
+    'hvis-du-selv-er-syk',
+    'etter-du-har-søkt'
 ];
 
 const OmSvangerskapspenger: React.StatelessComponent<Props & InjectedIntlProps> = ({
@@ -88,6 +91,7 @@ const OmSvangerskapspenger: React.StatelessComponent<Props & InjectedIntlProps> 
                     <HvorMyeKanDuFa id={sections[3]} />
                     <SlikSokerDu id={sections[4]} />
                     <HvisDuSelvErSyk id={sections[5]} />
+                    <EtterDuHarSøktSvangerskapspenger id={sections[6]} />
                     <Hjelp />
                 </article>
             </MedInnholdsfortegnelse>

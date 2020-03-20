@@ -1,5 +1,8 @@
 <innhold>
-    <avsnitt>You will normally be paid the lump-sum grant one week after your application was approved. The benefit is tax-free.</avsnitt>
-    <avsnitt> <lenke url="https://www.nav.no/no/NAV+og+samfunn/Om+NAV/Saksbehandlingstider+i+NAV" ekstern="true">The processing time is up to 6 weeks.</lenke></avsnitt>
-    <avsnitt>You can log in to <lenke url="https://foreldrepenger.nav.no" ekstern="true">your Nav</lenke> see the status of the case and see your payouts.</avsnitt>
+    <avsnitt type="element">After you have applied</avsnitt>
+    <avsnitt>You can log in to your personal parental benefit webpage <lenke url="https://foreldrepenger.nav.no" ekstern="true">your NAV</lenke>, and see the status of your case. Here you can also upload any outstanding documents and see an overview of your case.</avsnitt>
+    <avsnitt>If you have applied using a printed form, you will be able to see the status of your case here after about ten days.</avsnitt>
+    <avsnitt>The processing time is up to 6 weeks. <lenke url="https://www.nav.no/no/nav-og-samfunn/om-nav/saksbehandlingstider-i-nav" ekstern="true">See what the processing time is in your county</lenke></avsnitt>
+    <avsnitt type="element">Payments</avsnitt>
+    <avsnitt>You will normally be paid the lump-sum grant one week after your application was approved. The benefit is tax-free. <lenke url="https://tjenester.nav.no/dittnav/oversikt" ekstern="true">Go to the payment summary to see information about the payment.</lenke></avsnitt>
 </innhold>
