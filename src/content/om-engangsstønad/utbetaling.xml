@@ -1,5 +1,8 @@
 <innhold>
-    <avsnitt>Du får vanligvis utbetalt engangsstønaden én uke etter at søknaden din er innvilget. Engangsstønaden er skattefri. </avsnitt>
-    <avsnitt>Saksbehandlingstiden er vanligvis inntil 6 uker, <lenke url="https://www.nav.no/no/NAV+og+samfunn/Om+NAV/Saksbehandlingstider+i+NAV" ekstern="true">se hva saksbehandlingstiden er i fylket ditt.</lenke></avsnitt>
-    <avsnitt>Du kan logge deg på <lenke url="https://foreldrepenger.nav.no" ekstern="true">Ditt Nav</lenke> for å se status i saken og se dine utbetalinger.</avsnitt>
+    <avsnitt type="element">Etter du har søkt</avsnitt>
+    <avsnitt>Du kan logge deg inn på <lenke url="https://foreldrepenger.nav.no" ekstern="true">Ditt NAV</lenke>, og se status i saken din. Her kan du også ettersende vedlegg.</avsnitt>
+    <avsnitt>Hvis du har søkt på papirskjema, kan du se status i saken din etter omkring 10 dager.</avsnitt>
+    <avsnitt>Saksbehandlingstiden er vanligvis inntil 6 uker. <lenke url="https://www.nav.no/no/nav-og-samfunn/om-nav/saksbehandlingstider-i-nav" ekstern="true">Se hva saksbehandlingstiden er i fylket ditt</lenke></avsnitt>
+    <avsnitt type="element">Utbetalinger</avsnitt>
+    <avsnitt>Du får vanligvis utbetalt engangsstønaden én uke etter at søknaden din er innvilget. Engangsstønaden er skattefri. Du kan logge inn på Ditt NAV og <lenke url="https://tjenester.nav.no/dittnav/oversikt" ekstern="true">se utbetalingene</lenke> du har mottatt de siste tre årene.</avsnitt>
 </innhold>
