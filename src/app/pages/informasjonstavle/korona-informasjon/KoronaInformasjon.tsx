@@ -1,7 +1,7 @@
 import React from 'react';
 import Icon from 'nav-frontend-ikoner-assets';
 import BEMHelper from 'app/utils/bem';
-import { Normaltekst, Element } from 'nav-frontend-typografi';
+import { Normaltekst, Element, Undertittel } from 'nav-frontend-typografi';
 
 import './koronaInformasjon.less';
 import Lenke from 'nav-frontend-lenker';
@@ -22,15 +22,18 @@ const KoronaInformasjon = () => {
                         </div>
                     </div>
                 }>
+                <div className={bem.element('tittelPadding')}>
+                    <Undertittel>Du har blitt syk eller innlagt i helseinstitusjon</Undertittel>
+                </div>
                 <div className={bem.element('textPadding')}>
                     <Element>
-                        Er du i en utsettelsesperiode eller har fått innvilget utsettelse, men du er
-                        blitt syk eller satt i karantene?
+                        Er du i karantene eller har blitt syk, og ønsker å utsette foreldrepengene?
                     </Element>
                     <Normaltekst>
-                        Du beholder utsettelsen din. Blir du syk i en lengre periode enn du har fått
-                        innvilget utsettelse for, kan du søke om utsettelse på grunn av sykdom. Les
-                        mer om hvordan du søker{' '}
+                        Du kan velge om du ønsker å utsette foreldrepengene, eller den andre
+                        forelderen kan søke om å overta foreldrepengene fordi du er helt avhengig av
+                        hjelp for å ta deg av barnet, eller du ikke er sammen med barnet grunnet
+                        karantene. Les mer om hvordan du søker{' '}
                         <Lenke
                             rel="noopener noreferrer"
                             target="_blank"
@@ -41,41 +44,8 @@ const KoronaInformasjon = () => {
                 </div>
                 <div className={bem.element('textPadding')}>
                     <Element>
-                        Er du er i en periode hvor du kombinerer du jobb og foreldrepenger eller har
-                        du fått innvilget en periode med delvis arbeid og foreldrepenger, men nå har
-                        du blitt syk eller satt i karantene?
-                    </Element>
-                    <Normaltekst>
-                        Hvis du er syk eller satt i karantene i en periode der du har avtalt at du
-                        skal kombinere jobb og foreldrepenger, kan du beholde retten til dette. Hvis
-                        du er helt avhengig av hjelp til å ta deg av barnet kan du også søke om
-                        utsettelse eller den andre forelderen kan søke om å overta din periode. Les
-                        mer om hvordan du søker{' '}
-                        <Lenke
-                            rel="noopener noreferrer"
-                            target="_blank"
-                            href="https://familie.nav.no/om-foreldrepenger#hvis-en-av-dere-blir-syke">
-                            på våre nettsider
-                        </Lenke>
-                    </Normaltekst>
-                </div>
-                <div className={bem.element('textPadding')}>
-                    <Element>
-                        Er du far eller medmor, og du har påbegynt eller fått innvilget
-                        foreldrepenger i fellesperiode, eller det kun er deg som har rett til
-                        foreldrepenger – og så blir mor permittert eller satt i karantene?
-                    </Element>
-                    <Normaltekst>
-                        Så lenge mor har en bekreftelse på at hun skulle ha jobbet i den perioden du
-                        skal være hjemme, så har hennes permittering eller karantene ingen
-                        innvirkning på foreldrepengene dine. Hvis du skal sende inn søknad om uttak
-                        nå, så må du legge ved en bekreftelse på at mor skulle vært i arbeid.
-                    </Normaltekst>
-                </div>
-                <div className={bem.element('textPadding')}>
-                    <Element>
-                        Er du i karantene eller har blitt syk, og ønsker å utsette foreldrepengene,
-                        eller å overføre de til den andre forelderen?
+                        Er du i karantene eller har blitt syk, og ønsker å overføre foreldrepengene
+                        til den andre forelderen?
                     </Element>
                     <Normaltekst>
                         Du kan velge om du ønsker å utsette foreldrepengene, eller den andre
@@ -108,6 +78,122 @@ const KoronaInformasjon = () => {
                 </div>
                 <div className={bem.element('textPadding')}>
                     <Element>
+                        Er du i en utsettelsesperiode eller har fått innvilget utsettelse, men du er
+                        blitt syk eller satt i karantene?
+                    </Element>
+                    <Normaltekst>
+                        Du beholder utsettelsen din. Blir du syk i en lengre periode enn du har fått
+                        innvilget utsettelse for, kan du søke om utsettelse på grunn av sykdom. Les
+                        mer om hvordan du søker{' '}
+                        <Lenke
+                            rel="noopener noreferrer"
+                            target="_blank"
+                            href="https://familie.nav.no/om-foreldrepenger#hvis-en-av-dere-blir-syke">
+                            på våre nettsider
+                        </Lenke>
+                    </Normaltekst>
+                </div>
+                <div className={bem.element('textPadding')}>
+                    <Element>
+                        Er du er i en periode hvor du kombinerer du jobb og foreldrepenger, men nå
+                        har du blitt syk eller satt i karantene?
+                    </Element>
+                    <Normaltekst>
+                        Hvis du er syk eller satt i karantene i en periode der du har avtalt at du
+                        skal kombinere jobb og foreldrepenger, kan du beholde retten til dette. Hvis
+                        du er helt avhengig av hjelp til å ta deg av barnet kan du også søke om
+                        utsettelse eller den andre forelderen kan søke om å overta din periode. Les
+                        mer om hvordan du søker{' '}
+                        <Lenke
+                            rel="noopener noreferrer"
+                            target="_blank"
+                            href="https://familie.nav.no/om-foreldrepenger#hvis-en-av-dere-blir-syke">
+                            på våre nettsider
+                        </Lenke>
+                    </Normaltekst>
+                </div>
+                <div className={bem.element('textPadding')}>
+                    <Element>
+                        Har du fått innvilget en periode med delvis arbeid og foreldrepenger, men nå
+                        har du blitt syk eller satt i karantene?
+                    </Element>
+                    <Normaltekst>
+                        Hvis du er syk eller satt i karantene i en periode der du har avtalt at du
+                        skal kombinere jobb og foreldrepenger, kan du beholde retten til dette. Hvis
+                        du er helt avhengig av hjelp til å ta deg av barnet kan du også søke om
+                        utsettelse eller den andre forelderen kan søke om å overta din periode. Les
+                        mer om hvordan du søker{' '}
+                        <Lenke
+                            rel="noopener noreferrer"
+                            target="_blank"
+                            href="https://familie.nav.no/om-foreldrepenger#hvis-en-av-dere-blir-syke">
+                            på våre nettsider
+                        </Lenke>
+                    </Normaltekst>
+                </div>
+                <div className={bem.element('tittelPadding')}>
+                    <Undertittel>
+                        Den andre forelderen har blitt syk eller innlagt i helseinstitusjon
+                    </Undertittel>
+                </div>
+                <div className={bem.element('textPadding')}>
+                    <Element>
+                        Er du far eller medmor, og du har påbegynt eller fått innvilget
+                        foreldrepenger i fellesperiode – og så blir mor permittert eller satt i
+                        karantene?
+                    </Element>
+                    <Normaltekst>
+                        Så lenge mor har en bekreftelse på at hun skulle ha jobbet i den perioden du
+                        skal være hjemme, så har hennes permittering eller karantene ingen
+                        innvirkning på foreldrepengene dine. Hvis du skal sende inn søknad om
+                        foreldrepenger nå, så må du legge ved en bekreftelse på at mor skulle vært i
+                        arbeid.
+                    </Normaltekst>
+                </div>
+                <div className={bem.element('textPadding')}>
+                    <Element>
+                        Er du far eller medmor og det er kun du som har rett til foreldrepenger, og
+                        du har påbegynt – og så blir mor permittert eller satt i karantene?
+                    </Element>
+                    <Normaltekst>
+                        Så lenge mor har en bekreftelse på at hun skulle ha jobbet i den perioden du
+                        skal være hjemme, så har hennes permittering eller karantene ingen
+                        innvirkning på foreldrepengene dine.
+                    </Normaltekst>
+                </div>
+                <div className={bem.element('textPadding')}>
+                    <Element>
+                        Er du far eller medmor og det er kun du som har rett til foreldrepenger, og
+                        fått innvilget foreldrepenger i fellesperiode – og så blir mor permittert
+                        eller satt i karantene?
+                    </Element>
+                    <Normaltekst>
+                        Så lenge mor har en bekreftelse på at hun skulle ha jobbet i den perioden du
+                        skal være hjemme, så har hennes permittering eller karantene ingen
+                        innvirkning på foreldrepengene dine. Hvis du skal sende inn søknad om uttak
+                        nå, så må du legge ved en bekreftelse på at mor skulle vært i arbeid.
+                    </Normaltekst>
+                </div>
+                <div className={bem.element('tittelPadding')}>
+                    <Undertittel>Permittering</Undertittel>
+                </div>
+                <div className={bem.element('textPadding')}>
+                    <Element>
+                        Er du i foreldrepengeperiode eller har utsettelse, og blir permittert?
+                    </Element>
+                    <Normaltekst>
+                        Du kan beholde periode med fulle foreldrepenger som er innvilget og påbegynt
+                        før permitteringen. Du kan også beholde en utsettelse som er innvilget før
+                        permitteringen. Du kan beholde de graderte foreldrepengene selv om du blir
+                        permittert. Vær oppmerksom på at dagpenger utbetales ikke sammen med
+                        foreldrepenger hvis du mottar mer enn 60 prosent foreldrepenger.
+                    </Normaltekst>
+                </div>
+                <div className={bem.element('tittelPadding')}>
+                    <Undertittel>Er du blitt beordret ut i jobb eller i heimevernet?</Undertittel>
+                </div>
+                <div className={bem.element('textPadding')}>
+                    <Element>
                         Er du beordret ut i jobb eller i heimevernet, og ønsker at den andre
                         forelderen tar ut din kvote?
                     </Element>
@@ -121,18 +207,6 @@ const KoronaInformasjon = () => {
                 </div>
                 <div className={bem.element('textPadding')}>
                     <Element>
-                        Er du i foreldrepengeperiode eller har utsettelse, og blir permittert ?
-                    </Element>
-                    <Normaltekst>
-                        Du kan beholde periode med fulle foreldrepenger som er innvilget og påbegynt
-                        før permitteringen. Du kan også beholde en utsettelse som er innvilget før
-                        permitteringen. Du kan beholde de graderte foreldrepengene selv om du blir
-                        permittert. Vær oppmerksom på at dagpenger utbetales ikke sammen med
-                        foreldrepenger hvis du mottar mer enn 60 prosent foreldrepenger.
-                    </Normaltekst>
-                </div>
-                <div className={bem.element('textPadding')}>
-                    <Element>
                         Er du blir beordret ut i jobb, og rekker ikke søke om utsettelse?
                     </Element>
                     <Normaltekst>
@@ -141,6 +215,9 @@ const KoronaInformasjon = () => {
                         tilbake i tid så, får du mulighet til å skrive en begrunnelse til oss. Da
                         forklarer du kort situasjonen.
                     </Normaltekst>
+                </div>
+                <div className={bem.element('tittelPadding')}>
+                    <Undertittel>Andre utbetalinger fra NAV</Undertittel>
                 </div>
                 <div className={bem.element('textPadding')}>
                     <Element>Er du gravid og i arbeid, og i risikogruppen grunnet korona?</Element>
@@ -158,7 +235,25 @@ const KoronaInformasjon = () => {
                     </Normaltekst>
                 </div>
                 <div className={bem.element('textPadding')}>
-                    <Element>Har du spørsmål om dager med omsorgspenger?</Element>
+                    <Element>
+                        Kan du bruke omsorgsdager når den andre forelderen er hjemme og har
+                        foreldrepenger?
+                    </Element>
+                    <Normaltekst>
+                        Når den andre forelderen har foreldrepenger kan du bruke omsorgsdager hvis
+                    </Normaltekst>
+                    <ul>
+                        <li>den andre forelderen er for syk til å ta seg av barnet</li>
+                        <li>
+                            du skal passe et annet barn enn det barnet den andre forelderen får
+                            foreldrepenger for.
+                        </li>
+                    </ul>
+                </div>
+                <div className={bem.element('textPadding')}>
+                    <Element>
+                        Har du spørsmål om dager med omsorgspenger, og hvordan du søker?
+                    </Element>
                     <Normaltekst>
                         <Lenke
                             rel="noopener noreferrer"
