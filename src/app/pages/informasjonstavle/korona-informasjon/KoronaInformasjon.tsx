@@ -175,6 +175,60 @@ const KoronaInformasjon = () => {
                     </Normaltekst>
                 </div>
                 <div className={bem.element('tittelPadding')}>
+                    <Undertittel>
+                        Søke om utsettelse på grunn av sykdom eller innleggelse og dokumentasjon av
+                        sykdom
+                    </Undertittel>
+                </div>
+                <div className={bem.element('textPadding')}>
+                    <Element>Er du syk og skal søke om utsettelse av foreldrepengene dine?</Element>
+                    <Normaltekst>
+                        Når du er syk må legen din dokumentere at du er helt avhengig av hjelp til å
+                        ta deg av barnet. Det er nå ikke et krav til at du må legge ved
+                        dokumentasjon for de første 4 ukene du utsetter, du kan skrive en
+                        egenerklæring. I søknaden forteller du oss hvordan skaden eller sykdommen
+                        gjør deg helt avhengig av hjelp til å ta deg av barnet.
+                    </Normaltekst>
+                </div>
+                <div className={bem.element('textPadding')}>
+                    <Element>
+                        Er du innlagt i helseinstitusjon og skal søke om utsettelse av
+                        foreldrepengene dine?
+                    </Element>
+                    <Normaltekst>
+                        Når innlagt i helseinstitusjon må du dokumentere innleggelsen. Det er nå
+                        ikke et krav til at du må legge ved dokumentasjon, men du kan skrive en
+                        egenerklæring. I søknaden forteller du oss i hvilken helseinstitusjon du er
+                        innlagt.
+                    </Normaltekst>
+                </div>
+                <div className={bem.element('textPadding')}>
+                    <Element>
+                        Er den andre forelderen for syk til å ta seg av barnet og du skal overta
+                        foreldrepengene?
+                    </Element>
+                    <Normaltekst>
+                        Når den andre forelderen er for syk til å ta seg av barnet deres må legen
+                        dokumentere at den andre forelderen er helt avhengig av hjelp til å ta seg
+                        av barnet. Det er nå ikke et krav til at du må legge ved dokumentasjon for
+                        de første 4 ukene, du kan skrive en egenerklæring. I søknaden forteller du
+                        oss hvordan skaden eller sykdommen gjør at den andre forelderen helt
+                        avhengig av hjelp til å ta seg av barnet.
+                    </Normaltekst>
+                </div>
+                <div className={bem.element('textPadding')}>
+                    <Element>
+                        Er den andre forelderen innlagt i helseinstitusjon og du skal overta
+                        foreldrepengene?
+                    </Element>
+                    <Normaltekst>
+                        Når den andre forelderen er innlagt i helseinstitusjon må du dokumentere
+                        innleggelsen. Det er nå ikke et krav til at du må legge ved dokumentasjon
+                        for de første 4 ukene, men du kan skrive en egenerklæring. I søknaden
+                        forteller du oss i hvilken helseinstitusjon den andre forelderen er innlagt.
+                    </Normaltekst>
+                </div>
+                <div className={bem.element('tittelPadding')}>
                     <Undertittel>Permittering</Undertittel>
                 </div>
                 <div className={bem.element('textPadding')}>
@@ -194,6 +248,22 @@ const KoronaInformasjon = () => {
                 </div>
                 <div className={bem.element('textPadding')}>
                     <Element>
+                        Er du blitt beordret ut i en samfunnskritisk jobb, og skal kun jobbe delvis?
+                    </Element>
+                    <Normaltekst>
+                        Du kan da velge om du ønsker å søke om å kombinere foreldrepenger med arbeid
+                        eller om du ønsker å søke om å utsette hele foreldrepengeperiode. Det
+                        bestemmer du selv. Du finner en oversikt over hvilke arbeidsforhold som er{' '}
+                        <Lenke
+                            rel="noopener noreferrer"
+                            target="_blank"
+                            href="https://www.regjeringen.no/no/aktuelt/liste-over-kritiske-samfunnsfunksjoner-fastsatt/id2693800/">
+                            samfunnskritiske
+                        </Lenke>
+                    </Normaltekst>
+                </div>
+                <div className={bem.element('textPadding')}>
+                    <Element>
                         Er du beordret ut i jobb eller i heimevernet, og ønsker at den andre
                         forelderen tar ut din kvote?
                     </Element>
@@ -207,7 +277,7 @@ const KoronaInformasjon = () => {
                 </div>
                 <div className={bem.element('textPadding')}>
                     <Element>
-                        Er du blir beordret ut i jobb, og rekker ikke søke om utsettelse?
+                        Er du blitt beordret ut i jobb, og rekker ikke søke om utsettelse?
                     </Element>
                     <Normaltekst>
                         Du må søke om utsettelse så fort som mulig om du skal jobbe. Vi kan i slike
@@ -217,7 +287,7 @@ const KoronaInformasjon = () => {
                     </Normaltekst>
                 </div>
                 <div className={bem.element('tittelPadding')}>
-                    <Undertittel>Andre utbetalinger fra NAV</Undertittel>
+                    <Undertittel>Svangerskapspenger og andre utbetalinger fra NAV</Undertittel>
                 </div>
                 <div className={bem.element('textPadding')}>
                     <Element>Er du gravid og i arbeid, og i risikogruppen grunnet korona?</Element>
