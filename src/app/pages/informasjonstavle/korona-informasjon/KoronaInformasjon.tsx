@@ -196,10 +196,10 @@ const KoronaInformasjon = () => {
                         foreldrepengene dine?
                     </Element>
                     <Normaltekst>
-                        Når innlagt i helseinstitusjon må du dokumentere innleggelsen. Det er nå
-                        ikke et krav til at du må legge ved dokumentasjon, men du kan skrive en
-                        egenerklæring. I søknaden forteller du oss i hvilken helseinstitusjon du er
-                        innlagt.
+                        Når du er innlagt i helseinstitusjon må du dokumentere innleggelsen. Det er
+                        nå ikke et krav til at du må legge ved dokumentasjon for de 4 første ukene
+                        du utsetter, men du kan skrive en egenerklæring. I søknaden forteller du oss
+                        i hvilken helseinstitusjon du er innlagt.
                     </Normaltekst>
                 </div>
                 <div className={bem.element('textPadding')}>
