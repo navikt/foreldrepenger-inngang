@@ -38,7 +38,7 @@ const KoronaInformasjon = () => {
                             rel="noopener noreferrer"
                             target="_blank"
                             href="https://familie.nav.no/om-foreldrepenger#hvis-en-av-dere-blir-syke">
-                            på våre nettsider
+                            på våre nettsider.
                         </Lenke>
                     </Normaltekst>
                 </div>
@@ -56,7 +56,7 @@ const KoronaInformasjon = () => {
                             rel="noopener noreferrer"
                             target="_blank"
                             href="https://familie.nav.no/om-foreldrepenger#hvis-en-av-dere-blir-syke">
-                            på våre nettsider
+                            på våre nettsider.
                         </Lenke>
                     </Normaltekst>
                 </div>
@@ -72,7 +72,7 @@ const KoronaInformasjon = () => {
                             rel="noopener noreferrer"
                             target="_blank"
                             href="https://familie.nav.no/om-foreldrepenger#hvis-en-av-dere-blir-syke">
-                            Les mer om dine rettigheter og muligheter ved sykdom
+                            Les mer om dine rettigheter og muligheter ved sykdom.
                         </Lenke>
                     </Normaltekst>
                 </div>
@@ -89,7 +89,7 @@ const KoronaInformasjon = () => {
                             rel="noopener noreferrer"
                             target="_blank"
                             href="https://familie.nav.no/om-foreldrepenger#hvis-en-av-dere-blir-syke">
-                            på våre nettsider
+                            på våre nettsider.
                         </Lenke>
                     </Normaltekst>
                 </div>
@@ -108,7 +108,7 @@ const KoronaInformasjon = () => {
                             rel="noopener noreferrer"
                             target="_blank"
                             href="https://familie.nav.no/om-foreldrepenger#hvis-en-av-dere-blir-syke">
-                            på våre nettsider
+                            på våre nettsider.
                         </Lenke>
                     </Normaltekst>
                 </div>
@@ -127,7 +127,7 @@ const KoronaInformasjon = () => {
                             rel="noopener noreferrer"
                             target="_blank"
                             href="https://familie.nav.no/om-foreldrepenger#hvis-en-av-dere-blir-syke">
-                            på våre nettsider
+                            på våre nettsider.
                         </Lenke>
                     </Normaltekst>
                 </div>
@@ -233,6 +233,37 @@ const KoronaInformasjon = () => {
                 </div>
                 <div className={bem.element('textPadding')}>
                     <Element>
+                        Er du blitt permittert og lurer på hvor mye du kan få utbetalt i
+                        foreldrepenger?
+                    </Element>
+                    <Normaltekst>
+                        Hvis du er permittert og tidspunktet for beregning, som er dagen før du
+                        starter foreldrepengeperioden din, er i lønnspliktperioden (i løpet av de 20
+                        første dagene av permitteringen), så vil foreldrepengene dine som hovedregel
+                        beregnes til inntekten{' '}
+                        <Lenke
+                            rel="noopener noreferrer"
+                            target="_blank"
+                            href="https://www.nav.no/no/nav-og-samfunn/kontakt-nav/utbetalinger/grunnbelopet-i-folketrygden">
+                            opptil 6G.
+                        </Lenke>
+                    </Normaltekst>
+                    <br />
+                    <Normaltekst>
+                        Hvis tidspunktet for beregning, som er dagen før du starter
+                        foreldrepengeperioden din, er i perioden du mottar ordinære dagpenger ved
+                        permittering, så vil foreldrepengeperioden din beregnes etter samme regler
+                        som de som{' '}
+                        <Lenke
+                            rel="noopener noreferrer"
+                            target="_blank"
+                            href="https://familie.nav.no/om-foreldrepenger#hva-kan-du-fa">
+                            mottar dagpenger.
+                        </Lenke>
+                    </Normaltekst>
+                </div>
+                <div className={bem.element('textPadding')}>
+                    <Element>
                         Er du i foreldrepengeperiode eller har utsettelse, og blir permittert?
                     </Element>
                     <Normaltekst>
@@ -258,7 +289,7 @@ const KoronaInformasjon = () => {
                             rel="noopener noreferrer"
                             target="_blank"
                             href="https://www.regjeringen.no/no/aktuelt/liste-over-kritiske-samfunnsfunksjoner-fastsatt/id2693800/">
-                            samfunnskritiske her
+                            samfunnskritiske her.
                         </Lenke>
                     </Normaltekst>
                 </div>
@@ -269,9 +300,7 @@ const KoronaInformasjon = () => {
                     </Element>
                     <Normaltekst>
                         Nei, den andre forelderen kan ikke overta din kvote om du må ut i jobb. Du
-                        kan søke om å utsette perioden din, og ta den ut på et senere tidspunkt. Må
-                        du jobbe, men bare delvis kan du søke om graderte foreldrepenger i
-                        kombinasjon med foreldrepenger.
+                        kan søke om å utsette perioden din, og ta den ut på et senere tidspunkt.
                     </Normaltekst>
                 </div>
                 <div className={bem.element('textPadding')}>
@@ -288,7 +317,7 @@ const KoronaInformasjon = () => {
                             rel="noopener noreferrer"
                             target="_blank"
                             href="https://www.regjeringen.no/no/aktuelt/liste-over-kritiske-samfunnsfunksjoner-fastsatt/id2693800/">
-                            samfunnskritiske her
+                            samfunnskritiske her.
                         </Lenke>
                     </Normaltekst>
                 </div>
@@ -306,7 +335,7 @@ const KoronaInformasjon = () => {
                             rel="noopener noreferrer"
                             target="_blank"
                             href="https://familie.nav.no/om-svangerskapspenger#slik-soker-du">
-                            på våre nettsider
+                            på våre nettsider.
                         </Lenke>
                     </Normaltekst>
                 </div>
@@ -348,7 +377,7 @@ const KoronaInformasjon = () => {
                             rel="noopener noreferrer"
                             target="_blank"
                             href="https://www.nav.no/no/person/innhold-til-person-forside/nyttig-a-vite/koronavirus--informasjon-fra-nav">
-                            Her finner du informasjon fra NAV i forbindelse med koronaviruset.
+                            Her finner du informasjon fra NAV i forbindelse med koronaviruset
                         </Lenke>
                     </Normaltekst>
                 </div>
