@@ -318,7 +318,7 @@ const KoronaInformasjon = () => {
                     <Normaltekst>
                         Når den andre forelderen har foreldrepenger kan du bruke omsorgsdager hvis
                     </Normaltekst>
-                    <ul>
+                    <ul style={{ marginBottom: 0 }}>
                         <li>den andre forelderen er for syk til å ta seg av barnet</li>
                         <li>
                             du skal passe et annet barn enn det barnet den andre forelderen får
