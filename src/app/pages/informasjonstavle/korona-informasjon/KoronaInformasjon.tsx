@@ -258,7 +258,7 @@ const KoronaInformasjon = () => {
                             rel="noopener noreferrer"
                             target="_blank"
                             href="https://www.regjeringen.no/no/aktuelt/liste-over-kritiske-samfunnsfunksjoner-fastsatt/id2693800/">
-                            samfunnskritiske
+                            samfunnskritiske her
                         </Lenke>
                     </Normaltekst>
                 </div>
