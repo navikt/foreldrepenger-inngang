@@ -268,8 +268,7 @@ const KoronaInformasjon = () => {
                         forelderen tar ut din kvote?
                     </Element>
                     <Normaltekst>
-                        Nei, den andre forelderen kan ikke overta din kvote om du må ut i jobb,
-                        gjelder for eksempel helsepersonell, heimevernet eller sivilforsvaret. Du
+                        Nei, den andre forelderen kan ikke overta din kvote om du må ut i jobb. Du
                         kan søke om å utsette perioden din, og ta den ut på et senere tidspunkt. Må
                         du jobbe, men bare delvis kan du søke om graderte foreldrepenger i
                         kombinasjon med foreldrepenger.
