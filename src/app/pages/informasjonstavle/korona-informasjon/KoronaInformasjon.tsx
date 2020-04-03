@@ -280,10 +280,17 @@ const KoronaInformasjon = () => {
                         Er du blitt beordret ut i jobb, og rekker ikke søke om utsettelse?
                     </Element>
                     <Normaltekst>
-                        Du må søke om utsettelse så fort som mulig om du skal jobbe. Vi kan i slike
-                        tilfeller innvilge utsettelse tilbake i tid. Når du søker om utsettelse
-                        tilbake i tid så, får du mulighet til å skrive en begrunnelse til oss. Da
-                        forklarer du kort situasjonen.
+                        Du må søke om utsettelse så fort som mulig om du skal jobbe. Hvis du jobber
+                        i en samfunnskritisk jobb så kan vi i slike tilfeller innvilge utsettelse
+                        tilbake i tid. Når du søker om utsettelse tilbake i tid så, får du mulighet
+                        til å skrive en begrunnelse til oss. Da forklarer du kort situasjonen til
+                        oss. Du finner en oversikt over hvilke arbeidsforhold som er{' '}
+                        <Lenke
+                            rel="noopener noreferrer"
+                            target="_blank"
+                            href="https://www.regjeringen.no/no/aktuelt/liste-over-kritiske-samfunnsfunksjoner-fastsatt/id2693800/">
+                            samfunnskritiske her
+                        </Lenke>
                     </Normaltekst>
                 </div>
                 <div className={bem.element('tittelPadding')}>
