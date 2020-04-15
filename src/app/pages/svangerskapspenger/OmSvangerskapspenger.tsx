@@ -54,7 +54,7 @@ const OmSvangerskapspenger: React.StatelessComponent<Props & InjectedIntlProps> 
         <div className={classnames(cls.block)}>
             <HeaderInformasjon
                 title="Om Svangerskapspenger"
-                description=""
+                description="Svangerskapspenger gis til friske gravide kvinner som ikke kan fortsette å jobbe under svangerskapet fordi det kan medføre risiko for barnet."
                 siteUrl="https://familie.nav.no/om-svangerskapspenger"
             />
             <Sidebanner text={getTranslation('om_svangerskapspenger.tittel', intl)} />
