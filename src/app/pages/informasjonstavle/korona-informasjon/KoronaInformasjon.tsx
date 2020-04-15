@@ -95,8 +95,8 @@ const KoronaInformasjon = () => {
                 </div>
                 <div className={bem.element('textPadding')}>
                     <Element>
-                        Er du er i en periode hvor du kombinerer du jobb og foreldrepenger, men nå
-                        har du blitt syk eller satt i karantene?
+                        Er du er i en periode hvor du kombinerer jobb og foreldrepenger, men nå har
+                        du blitt syk eller satt i karantene?
                     </Element>
                     <Normaltekst>
                         Hvis du er syk eller satt i karantene i en periode der du har avtalt at du
@@ -164,8 +164,7 @@ const KoronaInformasjon = () => {
                 <div className={bem.element('textPadding')}>
                     <Element>
                         Er du far eller medmor og det er kun du som har rett til foreldrepenger, og
-                        fått innvilget foreldrepenger i fellesperiode – og så blir mor permittert
-                        eller satt i karantene?
+                        du har påbegynt – og så blir mor permittert eller satt i karantene?
                     </Element>
                     <Normaltekst>
                         Så lenge mor har en bekreftelse på at hun skulle ha jobbet i den perioden du
@@ -185,9 +184,15 @@ const KoronaInformasjon = () => {
                     <Normaltekst>
                         Når du er syk må legen din dokumentere at du er helt avhengig av hjelp til å
                         ta deg av barnet. Det er nå ikke et krav til at du må legge ved
-                        dokumentasjon for de første 4 ukene du utsetter, du kan skrive en
-                        egenerklæring. I søknaden forteller du oss hvordan skaden eller sykdommen
-                        gjør deg helt avhengig av hjelp til å ta deg av barnet.
+                        dokumentasjon for 4 uker du utsetter, du kan skrive en egenerklæring. I
+                        søknaden forteller du oss hvordan skaden eller sykdommen gjør deg helt
+                        avhengig av hjelp til å ta deg av barnet. Les mer om hvordan du søker{' '}
+                        <Lenke
+                            rel="noopener noreferrer"
+                            target="_blank"
+                            href="https://familie.nav.no/om-foreldrepenger#hvis-en-av-dere-blir-syke">
+                            på våre nettsider.
+                        </Lenke>
                     </Normaltekst>
                 </div>
                 <div className={bem.element('textPadding')}>
@@ -197,9 +202,15 @@ const KoronaInformasjon = () => {
                     </Element>
                     <Normaltekst>
                         Når du er innlagt i helseinstitusjon må du dokumentere innleggelsen. Det er
-                        nå ikke et krav til at du må legge ved dokumentasjon for de 4 første ukene
-                        du utsetter, men du kan skrive en egenerklæring. I søknaden forteller du oss
-                        i hvilken helseinstitusjon du er innlagt.
+                        nå ikke et krav til at du må legge ved dokumentasjon for 4 uker du utsetter,
+                        men du kan skrive en egenerklæring. I søknaden forteller du oss i hvilken
+                        helseinstitusjon du er innlagt. Les mer om hvordan du søker{' '}
+                        <Lenke
+                            rel="noopener noreferrer"
+                            target="_blank"
+                            href="https://familie.nav.no/om-foreldrepenger#hvis-en-av-dere-blir-syke">
+                            på våre nettsider.
+                        </Lenke>
                     </Normaltekst>
                 </div>
                 <div className={bem.element('textPadding')}>
@@ -212,8 +223,14 @@ const KoronaInformasjon = () => {
                         dokumentere at den andre forelderen er helt avhengig av hjelp til å ta seg
                         av barnet. Det er nå ikke et krav til at du må legge ved dokumentasjon for
                         de første 4 ukene, du kan skrive en egenerklæring. I søknaden forteller du
-                        oss hvordan skaden eller sykdommen gjør at den andre forelderen helt
-                        avhengig av hjelp til å ta seg av barnet.
+                        oss hvordan skaden eller sykdommen gjør at den andre forelderen er helt
+                        avhengig av hjelp til å ta seg av barnet. Les mer om hvordan du søker{' '}
+                        <Lenke
+                            rel="noopener noreferrer"
+                            target="_blank"
+                            href="https://familie.nav.no/om-foreldrepenger#hvis-en-av-dere-blir-syke">
+                            på våre nettsider.
+                        </Lenke>
                     </Normaltekst>
                 </div>
                 <div className={bem.element('textPadding')}>
@@ -226,6 +243,13 @@ const KoronaInformasjon = () => {
                         innleggelsen. Det er nå ikke et krav til at du må legge ved dokumentasjon
                         for de første 4 ukene, men du kan skrive en egenerklæring. I søknaden
                         forteller du oss i hvilken helseinstitusjon den andre forelderen er innlagt.
+                        Les mer om hvordan du søker{' '}
+                        <Lenke
+                            rel="noopener noreferrer"
+                            target="_blank"
+                            href="https://familie.nav.no/om-foreldrepenger#hvis-en-av-dere-blir-syke">
+                            på våre nettsider.
+                        </Lenke>
                     </Normaltekst>
                 </div>
                 <div className={bem.element('tittelPadding')}>
