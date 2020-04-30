@@ -33,7 +33,10 @@ const KoronaInformasjon = () => {
                         Du kan velge om du ønsker å utsette foreldrepengene, eller den andre
                         forelderen kan søke om å overta foreldrepengene fordi du er helt avhengig av
                         hjelp for å ta deg av barnet, eller du ikke er sammen med barnet grunnet
-                        karantene. Les mer om hvordan du søker{' '}
+                        karantene. Det er nå ikke et krav til at du må legge ved dokumentasjon for 4
+                        uker du utsetter, men du kan skrive en egenerklæring. I søknaden forteller
+                        du oss hvordan skaden eller sykdommen gjør deg eller den andre forelderen
+                        helt avhengig av hjelp til å ta seg av barnet. Les mer om hvordan du søker{' '}
                         <Lenke
                             rel="noopener noreferrer"
                             target="_blank"
@@ -51,7 +54,10 @@ const KoronaInformasjon = () => {
                         Du kan velge om du ønsker å utsette foreldrepengene, eller den andre
                         forelderen kan søke om å overta foreldrepengene fordi du er helt avhengig av
                         hjelp for å ta deg av barnet, eller du ikke er sammen med barnet grunnet
-                        karantene. Les mer om hvordan du søker{' '}
+                        karantene. Det er nå ikke et krav til at du må legge ved dokumentasjon for 4
+                        uker du utsetter, men du kan skrive en egenerklæring. I søknaden forteller
+                        du oss hvordan skaden eller sykdommen gjør deg eller den andre forelderen
+                        helt avhengig av hjelp til å ta seg av barnet. Les mer om hvordan du søker{' '}
                         <Lenke
                             rel="noopener noreferrer"
                             target="_blank"
@@ -67,7 +73,10 @@ const KoronaInformasjon = () => {
                     </Element>
                     <Normaltekst>
                         Da kan du søke om å utsette foreldrepengene, eller at den andre forelderen
-                        overtar foreldrepengene.{' '}
+                        overtar foreldrepengene. Det er nå ikke et krav til at du må legge ved
+                        dokumentasjon for 4 uker du utsetter, men du kan skrive en egenerklæring. I
+                        søknaden forteller du oss hvordan skaden eller sykdommen gjør deg eller den
+                        andre forelderen helt avhengig av hjelp til å ta seg av barnet.{' '}
                         <Lenke
                             rel="noopener noreferrer"
                             target="_blank"
@@ -83,8 +92,11 @@ const KoronaInformasjon = () => {
                     </Element>
                     <Normaltekst>
                         Du beholder utsettelsen din. Blir du syk i en lengre periode enn du har fått
-                        innvilget utsettelse for, kan du søke om utsettelse på grunn av sykdom. Les
-                        mer om hvordan du søker{' '}
+                        innvilget utsettelse for, kan du søke om utsettelse på grunn av sykdom. Det
+                        er nå ikke et krav til at du må legge ved dokumentasjon for 4 uker du
+                        utsetter, men du kan skrive en egenerklæring. I søknaden forteller du oss
+                        hvordan skaden eller sykdommen gjør deg helt avhengig av hjelp til å ta seg
+                        av barnet. Les mer om hvordan du søker{' '}
                         <Lenke
                             rel="noopener noreferrer"
                             target="_blank"
@@ -102,8 +114,11 @@ const KoronaInformasjon = () => {
                         Hvis du er syk eller satt i karantene i en periode der du har avtalt at du
                         skal kombinere jobb og foreldrepenger, kan du beholde retten til dette. Hvis
                         du er helt avhengig av hjelp til å ta deg av barnet kan du også søke om
-                        utsettelse eller den andre forelderen kan søke om å overta din periode. Les
-                        mer om hvordan du søker{' '}
+                        utsettelse eller den andre forelderen kan søke om å overta din periode. Det
+                        er nå ikke et krav til at du må legge ved dokumentasjon for 4 uker du
+                        utsetter, men du kan skrive en egenerklæring. I søknaden forteller du oss
+                        hvordan skaden eller sykdommen gjør deg eller den andre forelderen helt
+                        avhengig av hjelp til å ta seg av barnet. Les mer om hvordan du søker{' '}
                         <Lenke
                             rel="noopener noreferrer"
                             target="_blank"
@@ -119,10 +134,13 @@ const KoronaInformasjon = () => {
                     </Element>
                     <Normaltekst>
                         Hvis du er syk eller satt i karantene i en periode der du har avtalt at du
-                        skal kombinere jobb og foreldrepenger, kan du beholde retten til dette. Hvis
-                        du er helt avhengig av hjelp til å ta deg av barnet kan du også søke om
-                        utsettelse eller den andre forelderen kan søke om å overta din periode. Les
-                        mer om hvordan du søker{' '}
+                        skal kombinere jobb og foreldrepenger, kan du beholde retten til dette. Det
+                        er nå ikke et krav til at du må legge ved dokumentasjon for 4 uker du
+                        utsetter, men du kan skrive en egenerklæring. Hvis du er helt avhengig av
+                        hjelp til å ta deg av barnet kan du også søke om utsettelse eller den andre
+                        forelderen kan søke om å overta din periode. I søknaden forteller du oss
+                        hvordan skaden eller sykdommen gjør deg helt avhengig av hjelp til å ta seg
+                        av barnet. Les mer om hvordan du søker{' '}
                         <Lenke
                             rel="noopener noreferrer"
                             target="_blank"
@@ -221,10 +239,10 @@ const KoronaInformasjon = () => {
                     <Normaltekst>
                         Når den andre forelderen er for syk til å ta seg av barnet deres må legen
                         dokumentere at den andre forelderen er helt avhengig av hjelp til å ta seg
-                        av barnet. Det er nå ikke et krav til at du må legge ved dokumentasjon for
-                        de første 4 ukene, du kan skrive en egenerklæring. I søknaden forteller du
-                        oss hvordan skaden eller sykdommen gjør at den andre forelderen er helt
-                        avhengig av hjelp til å ta seg av barnet. Les mer om hvordan du søker{' '}
+                        av barnet. Det er nå ikke et krav til at du må legge ved dokumentasjon for 4
+                        uker, du kan skrive en egenerklæring. I søknaden forteller du oss hvordan
+                        skaden eller sykdommen gjør at den andre forelderen er helt avhengig av
+                        hjelp til å ta seg av barnet. Les mer om hvordan du søker{' '}
                         <Lenke
                             rel="noopener noreferrer"
                             target="_blank"
@@ -241,9 +259,9 @@ const KoronaInformasjon = () => {
                     <Normaltekst>
                         Når den andre forelderen er innlagt i helseinstitusjon må du dokumentere
                         innleggelsen. Det er nå ikke et krav til at du må legge ved dokumentasjon
-                        for de første 4 ukene, men du kan skrive en egenerklæring. I søknaden
-                        forteller du oss i hvilken helseinstitusjon den andre forelderen er innlagt.
-                        Les mer om hvordan du søker{' '}
+                        for 4 uker, men du kan skrive en egenerklæring. I søknaden forteller du oss
+                        i hvilken helseinstitusjon den andre forelderen er innlagt. Les mer om
+                        hvordan du søker{' '}
                         <Lenke
                             rel="noopener noreferrer"
                             target="_blank"
