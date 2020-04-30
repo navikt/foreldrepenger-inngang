@@ -7,7 +7,8 @@
         <punkt>If your <b>employment ends</b> before you start your parental benefit period and you have no other work, your parental benefit will be calculated on the basis of your income for the last 3 months before the employment relationship ended.</punkt>
     </liste>
     <avsnitt>If you are both <b>employed and work freelance</b>, your earnings will be calculated separately and then added together to give a single figure. If you have a total income of over 6 times the National Insurance basic amount ("G"), your income as an employee will be used as the calculation basis.</avsnitt>
-    <avsnitt class="blokk-l">If you are both <b>self-employed and a freelancer or employed</b>, your parental benefit will be calculated based on both of your incomes. Your freelance income will always be used as the basis for calculation. Freelance income up to 6 times the National Insurance basic amount ("G") is always covered in full.</avsnitt>
+    <avsnitt>If you are both <b>self-employed and a freelancer or employed</b>, your parental benefit will be calculated based on both of your incomes. Your freelance income will always be used as the basis for calculation. Freelance income up to 6 times the National Insurance basic amount ("G") is always covered in full.</avsnitt>
+    <avsnitt class="blokk-l">Unsure whether you are self-employed, freelancer or employee? <lenke url="https://www.nav.no/no/person/innhold-til-person-forside/nyttig-a-vite/er-jeg-selvstendig-naeringsdrivende-frilanser-eller-arbeidstaker" ekstern="true">Click here for guidance</lenke></avsnitt>
     <lesmer intro="Income included in the calculation">
         <liste>
             <punkt>Earned income and benefits that are equivalent to earned income.</punkt>
