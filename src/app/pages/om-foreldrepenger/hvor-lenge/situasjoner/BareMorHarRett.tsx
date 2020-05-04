@@ -7,7 +7,8 @@ import { addAntallUkerSomSnakkebobletittel } from './utils';
 import getTranslation from 'app/utils/i18nUtils';
 
 const content = 'om-foreldrepenger/hvor-lenge/bare-mor-har-rett/bare-mor-har-rett';
-const kalkulatorbeskrivelse = 'om-foreldrepenger/hvor-lenge/kalkulatorbeskrivelse';
+const bareMorHarRettBeskrivelse =
+    'om-foreldrepenger/hvor-lenge/bare-mor-har-rett/bare-mor-har-rett-beskrivelse';
 const morsDel = 'om-foreldrepenger/hvor-lenge/bare-mor-har-rett/mors-del';
 
 const getInformasjonsfaner = (intl: InjectedIntl): InformasjonsfaneProps[] => [
@@ -39,7 +40,7 @@ const BareMorHarRett = ({ intl }: InjectedIntlProps) => {
                     addAntallUkerSomSnakkebobletittel('bareMorHarRett', intl)
                 )}
             />
-            <Innhold source={getSource(kalkulatorbeskrivelse, intl)} />
+            <Innhold source={getSource(bareMorHarRettBeskrivelse, intl)} />
         </div>
     );
 };

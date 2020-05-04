@@ -8,7 +8,7 @@ import { addAntallUkerSomSnakkebobletittel } from './utils';
 import getTranslation from 'app/utils/i18nUtils';
 
 const farOgFarContent = 'om-foreldrepenger/hvor-lenge/far-og-far/far-og-far';
-const kalkulatorbeskrivelse = 'om-foreldrepenger/hvor-lenge/kalkulatorbeskrivelse';
+const farOgFarBeskrivelse = 'om-foreldrepenger/hvor-lenge/far-og-far/far-og-far-beskrivelse';
 const far1 = 'om-foreldrepenger/hvor-lenge/far-og-far/far-en';
 const far2 = 'om-foreldrepenger/hvor-lenge/far-og-far/far-to';
 const fellesPerioden = 'om-foreldrepenger/hvor-lenge/far-og-far/far-fellesperioden';
@@ -81,7 +81,7 @@ const FarOgFar = ({ intl }: InjectedIntlProps) => {
                     addAntallUkerSomSnakkebobletittel('farOgFar', intl)
                 )}
             />
-            <Innhold source={getSource(kalkulatorbeskrivelse, intl)} />
+            <Innhold source={getSource(farOgFarBeskrivelse, intl)} />
         </div>
     );
 };

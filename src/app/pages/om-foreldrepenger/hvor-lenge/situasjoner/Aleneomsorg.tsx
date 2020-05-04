@@ -8,7 +8,7 @@ import { addAntallUkerSomSnakkebobletittel } from './utils';
 import getTranslation from 'app/utils/i18nUtils';
 
 const content = 'om-foreldrepenger/hvor-lenge/aleneomsorg/aleneomsorg';
-const kalkulatorbeskrivelse = 'om-foreldrepenger/hvor-lenge/kalkulatorbeskrivelse';
+const aleneomsorgBeskrivelse = 'om-foreldrepenger/hvor-lenge/aleneomsorg/aleneomsorg-beskrivelse';
 const farsDel = 'om-foreldrepenger/hvor-lenge/aleneomsorg/fars-del';
 const morsDel = 'om-foreldrepenger/hvor-lenge/aleneomsorg/mors-del';
 
@@ -77,7 +77,7 @@ class Aleneomsorg extends React.Component<Props> {
                     this.props.intl
                 )}
             />
-            <Innhold source={getSource(kalkulatorbeskrivelse, this.props.intl)} />
+            <Innhold source={getSource(aleneomsorgBeskrivelse, this.props.intl)} />
         </div>
     );
 }
