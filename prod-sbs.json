@@ -3,7 +3,7 @@
     "ingress-nav": "https://www.nav.no/familie",
     "appres": "appres.nav.no",
     "env": {
-        "APPRES_CMS_URL": "https://appres.nav.no",
+        "APPRES_CMS_URL": "https://www.nav.no/dekoratoren",
         "SOK_FORELDREPENGER_URL": "https://foreldrepengesoknad.nav.no",
         "SOK_FORELDREPENGER_PAPIR_URL": "https://www.nav.no/soknader/nb/person/familie/foreldrepenger-og-engangsstonad",
         "SOK_ENGANGSSTONAD_URL": "https://engangsstonad.nav.no",

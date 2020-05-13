@@ -1,9 +1,9 @@
 {
     "ingress": "https://familie.nav.no",
     "namespace": "foreldrepenger",
-    "appres" : "appres.nav.no",   
+    "appres": "appres.nav.no",
     "env": {
-        "APPRES_CMS_URL": "https://appres.nav.no",
+        "APPRES_CMS_URL": "https://www.nav.no/dekoratoren",
         "SOK_FORELDREPENGER_URL": "https://foreldrepengesoknad.nav.no",
         "SOK_FORELDREPENGER_PAPIR_URL": "https://www.nav.no/no/Person/Skjemaer-for-privatpersoner/Skjemaer/Familie/foreldrepenger-og-engangsstonad/Foreldrepenger+og+engangsst%C3%B8nad?method=mail&veiledertype=privatperson",
         "SOK_ENGANGSSTONAD_URL": "https://engangsstonad.nav.no",

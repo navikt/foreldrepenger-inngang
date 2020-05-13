@@ -2,7 +2,7 @@
     "appres": "appres-q1.nav.no",
     "ingress": "https://familie-q.nav.no",
     "env": {
-        "APPRES_CMS_URL": "https://appres-q1.nav.no",
+        "APPRES_CMS_URL": "https://www-q1.nav.no/dekoratoren",
         "SOK_FORELDREPENGER_URL": "https://foreldrepengesoknad-q.nav.no",
         "SOK_FORELDREPENGER_PAPIR_URL": "https://www.nav.no/soknader/nb/person/familie/foreldrepenger-og-engangsstonad",
         "SOK_ENGANGSSTONAD_URL": "https://engangsstonad-q.nav.no",

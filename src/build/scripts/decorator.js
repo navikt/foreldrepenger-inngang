@@ -5,11 +5,8 @@ const request = require('request');
 const { JSDOM } = jsdom;
 
 const requestDecorator = (callback) => {
-    const baseUrl = process.env.APPRES_CMS_URL; 
-    return request(
-        `${baseUrl}/common-html/v4/navno?header-withmenu=true&styles=true&scripts=true&footer-withmenu=true`,
-        callback
-    );
+    const baseUrl = process.env.APPRES_CMS_URL;
+    return request(`${baseUrl}`, callback);
 };
 
 const getDecorator = () =>
