@@ -12,7 +12,7 @@ import Seksjonslenker from '../seksjonslenker/Seksjonslenker';
 import useComponentAwareClick from 'app/hooks/useComponentAwareClick';
 import WithLink from 'app/components/with-link/WithLink';
 
-const cls = BEMHelper('mobilmeny');
+const cls = BEMHelper('mobilmenyfamilie');
 
 interface OwnProps {
     sections: string[];
@@ -46,7 +46,7 @@ const Mobilmeny: FunctionComponent<Props> = ({ sections, button, intl }: Props) 
         }
     };
 
-    const shouldCloseMenuWhenClicked = ['lenke', 'mobilmeny__header'];
+    const shouldCloseMenuWhenClicked = ['lenke', cls.element('header')];
     useComponentAwareClick(menuRef, onMenuClick, shouldCloseMenuWhenClicked);
 
     return (
