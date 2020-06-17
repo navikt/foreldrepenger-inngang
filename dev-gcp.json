@@ -1,7 +1,7 @@
 {
-    "namespace": "foreldrepenger",
+    "namespace": "teamforeldrepenger",
     "appres": "appres-q1.nav.no",
-    "ingress": "https://familie.dev-nav.no",
+    "ingresses": ["https://familie.dev-nav.no"],
     "env": {
         "APPRES_CMS_URL": "https://www-q1.nav.no/dekoratoren",
         "SOK_FORELDREPENGER_URL": "https://foreldrepengesoknad.dev-nav.no",

@@ -34,11 +34,10 @@ spec:
       min: 2
       max: 2
       cpuThresholdPercentage: 50
-  ingresses:
-    - {{ingress}}
-{{#if ingress-nav}}
-    - {{ingress-nav}}
-{{/if}}     
+ ingresses:
+{{#each ingresses as |url|}}
+    - {{url}}
+{{/each}}
   resources:
     limits:
       cpu: 500m
