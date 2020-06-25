@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { IntlProvider as Provider } from 'react-intl';
+import { NumberFormat, toLocaleString } from '@formatjs/intl-numberformat';
 import moment from 'moment';
 
 import enMessages from './locales/en_GB.json';
@@ -11,6 +12,20 @@ export type Language = 'nb' | 'nn' | 'en';
 interface StateProps {
     language: Language;
 }
+
+NumberFormat.__addLocaleData(require('@formatjs/intl-numberformat/dist/locale-data/nb.json'));
+
+new NumberFormat('nb', {
+    style: 'unit',
+    unit: 'bit',
+    unitDisplay: 'long',
+}).format(1000);
+
+toLocaleString(1000, 'nb', {
+    style: 'unit',
+    unit: 'bit',
+    unitDisplay: 'long',
+});
 
 moment.locale('nb');
 
