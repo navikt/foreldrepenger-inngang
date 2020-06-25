@@ -40,12 +40,7 @@ export const forStortAvvik = (average: number, values: number[]): boolean => {
 };
 
 export const lastThreeYears = (): string[] => {
-    return [3, 2, 1].map((i) =>
-        moment()
-            .subtract(i, 'year')
-            .year()
-            .toString()
-    );
+    return [3, 2, 1].map((i) => moment().subtract(i, 'year').year().toString());
 };
 
 export const lastThreeMonths = (): string[] => {
@@ -58,10 +53,7 @@ export const lastThreeMonths = (): string[] => {
 };
 
 export const getLastYear = (): string => {
-    return moment()
-        .subtract(1, 'year')
-        .year()
-        .toString();
+    return moment().subtract(1, 'year').year().toString();
 };
 
 export const getDailyPayment = (monthlyWage: number) => (monthlyWage * 12) / 260;

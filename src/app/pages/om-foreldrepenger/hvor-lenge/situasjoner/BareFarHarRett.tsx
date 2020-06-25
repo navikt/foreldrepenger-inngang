@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Informasjonsfaner, { InformasjonsfaneProps } from '../informasjons-faner/Informasjonsfaner';
 import Innhold, { getSource } from 'app/utils/innhold/Innhold';
-import { injectIntl, InjectedIntl, InjectedIntlProps } from 'react-intl';
+import { IntlShape, useIntl } from 'react-intl';
 
 import { addAntallUkerSomSnakkebobletittel } from './utils';
 import getTranslation from 'app/utils/i18nUtils';
@@ -10,7 +10,7 @@ const content = 'om-foreldrepenger/hvor-lenge/bare-far-har-rett/bare-far-har-ret
 const bareFarHarRettBeskrivelse = 'om-foreldrepenger/hvor-lenge/bare-far-har-rett/bare-far-har-rett-beskrivelse';
 const farsDel = 'om-foreldrepenger/hvor-lenge/bare-far-har-rett/fars-del';
 
-const getInformasjonsfaner = (intl: InjectedIntl): InformasjonsfaneProps[] => [
+const getInformasjonsfaner = (intl: IntlShape): InformasjonsfaneProps[] => [
     {
         kvote: 'fedrekvote',
         label: getTranslation('om_foreldrepenger.hvor_lenge.fordeling.fedrekvote', intl),
@@ -20,16 +20,18 @@ const getInformasjonsfaner = (intl: InjectedIntl): InformasjonsfaneProps[] => [
                 icon: 'far3',
                 punkter: [
                     getTranslation('om_foreldrepenger.hvor_lenge.fordeling.aktivitetskrav', intl, {
-                        subjekt: getTranslation('mor', intl)
-                    })
-                ]
+                        subjekt: getTranslation('mor', intl),
+                    }),
+                ],
             },
-            component: <Innhold source={getSource(farsDel, intl)} />
-        }
-    }
+            component: <Innhold source={getSource(farsDel, intl)} />,
+        },
+    },
 ];
 
-const BareFarHarRett = ({ intl }: InjectedIntlProps) => {
+const BareFarHarRett = () => {
+    const intl = useIntl();
+
     return (
         <div>
             <Innhold source={getSource(content, intl)} />
@@ -41,4 +43,4 @@ const BareFarHarRett = ({ intl }: InjectedIntlProps) => {
     );
 };
 
-export default injectIntl(BareFarHarRett);
+export default BareFarHarRett;

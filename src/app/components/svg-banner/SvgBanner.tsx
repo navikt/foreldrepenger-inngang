@@ -25,7 +25,7 @@ class SvgBanner extends Component<Props> {
         super(props);
 
         this.state = {
-            svgIndex: this.props.svgIndex || getRandomInt(1, NUM_FAMILIES)
+            svgIndex: this.props.svgIndex || getRandomInt(1, NUM_FAMILIES),
         };
     }
 

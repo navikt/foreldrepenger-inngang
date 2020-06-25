@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { InjectedIntlProps, injectIntl } from 'react-intl';
+import { injectIntl, IntlShape } from 'react-intl';
 import { Utbetalingsalternativ } from './utils';
 import AntallBarn from './AntallBarn';
 import AntallUker from './AntallUker';
@@ -15,7 +15,11 @@ interface KalkulatorProps {
     antallUtbetalingsuker: Utbetalingsalternativ[];
 }
 
-type Props = KalkulatorProps & InjectedIntlProps;
+interface InjectedProps {
+    intl: IntlShape;
+}
+
+type Props = KalkulatorProps & InjectedProps;
 
 interface State {
     selectedNumberOfWeeks: number;
@@ -30,17 +34,17 @@ class Ukekalkulator extends React.Component<Props, State> {
         this.state = {
             selectedNumberOfWeeks: props.antallUtbetalingsuker[0][100],
             selectedNumberOfChildren: 1,
-            selectedPercentage: 100
+            selectedPercentage: 100,
         };
     }
 
-    componentDidReceiveProps = (nextProps: Props) => {
+    componentDidUpdate = (nextProps: Props) => {
         if (nextProps.antallUtbetalingsuker !== this.props.antallUtbetalingsuker) {
             this.setState({
                 selectedNumberOfWeeks:
                     nextProps.antallUtbetalingsuker[this.state.selectedNumberOfChildren - 1][
                         this.state.selectedPercentage
-                    ]
+                    ],
             });
         }
     };
@@ -53,7 +57,7 @@ class Ukekalkulator extends React.Component<Props, State> {
         this.setState({
             selectedNumberOfWeeks,
             selectedNumberOfChildren,
-            selectedPercentage
+            selectedPercentage,
         });
     };
 
@@ -64,7 +68,7 @@ class Ukekalkulator extends React.Component<Props, State> {
 
         this.setState({
             selectedPercentage,
-            selectedNumberOfWeeks
+            selectedNumberOfWeeks,
         });
     };
 
@@ -127,7 +131,7 @@ const addAntallUkerAttributes = (
 ) => ({
     numberOfWeeks,
     numberOfChildren,
-    percentage
+    percentage,
 }: {
     numberOfWeeks: number;
     numberOfChildren: number;

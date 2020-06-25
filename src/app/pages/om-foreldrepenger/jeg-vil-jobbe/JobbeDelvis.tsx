@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { CSSTransition } from 'react-transition-group';
-import { InjectedIntlProps, injectIntl } from 'react-intl';
+import { injectIntl, IntlShape } from 'react-intl';
 import classnames from 'classnames';
 import MediaQuery from 'react-responsive';
 import TypografiBase from 'nav-frontend-typografi';
@@ -14,7 +14,11 @@ import JegVilJobbeDeltidExpandertMobil from './komponenter/JegVilJobbeDeltidExpa
 
 const cls = BEMHelper('jegVilJobbe');
 
-class JobbeDelvis extends React.Component<InjectedIntlProps> {
+interface InjectedProps {
+    intl: IntlShape;
+}
+
+class JobbeDelvis extends React.Component<InjectedProps> {
     state: {
         svgList: any[];
         message: string;
@@ -22,13 +26,13 @@ class JobbeDelvis extends React.Component<InjectedIntlProps> {
         height: string;
     };
 
-    constructor(props: InjectedIntlProps) {
+    constructor(props: InjectedProps) {
         super(props);
         this.state = {
             svgList: [],
             message: 'om_foreldrepenger.jobbe.klikkForDetaljertInformasjon',
             width: '70%',
-            height: '70%'
+            height: '70%',
         };
 
         this.expandJegVilJobbe = this.expandJegVilJobbe.bind(this);
@@ -47,12 +51,12 @@ class JobbeDelvis extends React.Component<InjectedIntlProps> {
         if (window.innerWidth < 575) {
             this.setState({
                 width: '100%',
-                height: '100%'
+                height: '100%',
             });
         } else if (window.innerWidth > 576) {
             this.setState({
                 width: '70%',
-                height: '70%'
+                height: '70%',
             });
         }
     };
@@ -62,7 +66,7 @@ class JobbeDelvis extends React.Component<InjectedIntlProps> {
         if (list.length === 1) {
             this.setState({
                 svgList: [],
-                message: 'om_foreldrepenger.jobbe.klikkForDetaljertInformasjon'
+                message: 'om_foreldrepenger.jobbe.klikkForDetaljertInformasjon',
             });
         } else {
             list.push(
@@ -87,7 +91,7 @@ class JobbeDelvis extends React.Component<InjectedIntlProps> {
             );
             this.setState({
                 svgList: list,
-                message: 'om_foreldrepenger.jobbe.kikkForLukkDetaljertInformasjon'
+                message: 'om_foreldrepenger.jobbe.kikkForLukkDetaljertInformasjon',
             });
         }
     }

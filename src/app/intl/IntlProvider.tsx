@@ -1,8 +1,5 @@
 import * as React from 'react';
-import { addLocaleData, IntlProvider as Provider } from 'react-intl';
-import * as en from 'react-intl/locale-data/en';
-import * as nb from 'react-intl/locale-data/nb';
-import * as nn from 'react-intl/locale-data/nn';
+import { IntlProvider as Provider } from 'react-intl';
 
 import enMessages from './locales/en_GB.json';
 import nnMessages from './locales/nn_NO.json';
@@ -31,8 +28,6 @@ interface StateProps {
 class IntlProvider extends React.Component<StateProps> {
     constructor(props: StateProps) {
         super(props);
-
-        addLocaleData([...nb, ...nn, ...en]);
     }
 
     render() {

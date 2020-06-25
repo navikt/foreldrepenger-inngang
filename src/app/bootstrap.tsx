@@ -14,7 +14,7 @@ const root = document.getElementById('app');
 Sentry.init({
     dsn: 'https://94b48adfe3f54da89bba5e481e3c0f31@sentry.gc.nav.no/5',
     environment: window.location.hostname,
-    integrations: [new Sentry.Integrations.Breadcrumbs({ console: false })]
+    integrations: [new Sentry.Integrations.Breadcrumbs({ console: false })],
 });
 
 render(

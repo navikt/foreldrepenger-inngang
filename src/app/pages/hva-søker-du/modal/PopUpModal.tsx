@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { injectIntl, InjectedIntlProps } from 'react-intl';
+import { useIntl } from 'react-intl';
 import getTranslation from 'app/utils/i18nUtils';
 import Lenke from 'nav-frontend-lenker';
 import Lukknapp from 'nav-frontend-lukknapp';
@@ -17,9 +17,10 @@ interface OwnProps {
     modalIsOpen: boolean;
 }
 
-type Props = OwnProps & InjectedIntlProps;
+type Props = OwnProps;
 
-const PopUpModal = ({ intl, modalIsOpen }: Props) => {
+const PopUpModal = ({ modalIsOpen }: Props) => {
+    const intl = useIntl();
     const [isOpen, toggle] = useState(modalIsOpen);
 
     const openModal = (e: any) => {
@@ -59,4 +60,4 @@ const PopUpModal = ({ intl, modalIsOpen }: Props) => {
     );
 };
 
-export default injectIntl(PopUpModal);
+export default PopUpModal;

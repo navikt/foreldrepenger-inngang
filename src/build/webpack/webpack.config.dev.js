@@ -15,25 +15,25 @@ module.exports = merge(common, {
         rules: [
             {
                 test: /\.less$/,
-                use: ['style-loader', 'css-loader', 'postcss-loader', 'less-loader']
-            }
-        ]
+                use: ['style-loader', 'css-loader', 'postcss-loader', 'less-loader'],
+            },
+        ],
     },
 
     plugins: [
         new HtmlWebpackPlugin({
             template: './src/app/index.html',
             inject: 'body',
-            alwaysWriteToDisk: true
+            alwaysWriteToDisk: true,
         }),
         new HtmlWebpackHarddiskPlugin({
-            outputPath: path.resolve(__dirname, '../../../dist/dev')
+            outputPath: path.resolve(__dirname, '../../../dist/dev'),
         }),
         new MiniCssExtractPlugin({
             filename: 'css/[name].css',
             chunkFilename: 'css/[name].css',
             disable: false,
-            allChunks: true
-        })
-    ]
+            allChunks: true,
+        }),
+    ],
 });

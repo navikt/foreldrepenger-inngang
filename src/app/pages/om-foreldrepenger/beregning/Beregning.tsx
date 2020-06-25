@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { FrilanserIkon } from './ikoner/FrilanserIkon';
 import { getGrunnbeløpet } from 'app/utils/beregningUtils';
-import { injectIntl, InjectedIntlProps, InjectedIntl } from 'react-intl';
 import { Innholdsfane } from '../../../components/innholdsfaner/fane/Fane';
 import ArbeidstakerIkon from './ikoner/ArbeidstakerIkon';
 import BEMHelper from '../../../utils/bem';
@@ -14,35 +13,36 @@ import SelvstendigIkon from './ikoner/SelvstendigIkon';
 import YtelseFraNavIkon from './ikoner/YtelseFraNavIkon';
 import './beregning.less';
 import FiskerIkon from './ikoner/FiskerIkon';
+import { IntlShape, useIntl } from 'react-intl';
 
 const beregningSvg = require('../../../assets/ark/ark-beregning.svg').default;
 const cls = BEMHelper('beregning');
 
-const getTabs = (intl: InjectedIntl): Innholdsfane[] => [
+const getTabs = (intl: IntlShape): Innholdsfane[] => [
     {
         label: 'om_foreldrepenger.beregning.arbeidstaker',
         icon: <ArbeidstakerIkon />,
-        component: <Innhold source={getSource('om-foreldrepenger/beregning/arbeidstaker', intl)} />
+        component: <Innhold source={getSource('om-foreldrepenger/beregning/arbeidstaker', intl)} />,
     },
     {
         label: 'om_foreldrepenger.beregning.selvstendig',
         icon: <SelvstendigIkon />,
-        component: <Innhold source={getSource('om-foreldrepenger/beregning/selvstendig', intl)} />
+        component: <Innhold source={getSource('om-foreldrepenger/beregning/selvstendig', intl)} />,
     },
     {
         label: 'om_foreldrepenger.beregning.fisker',
         icon: <FiskerIkon />,
-        component: <Innhold source={getSource('om-foreldrepenger/beregning/fisker', intl)} />
+        component: <Innhold source={getSource('om-foreldrepenger/beregning/fisker', intl)} />,
     },
     {
         label: 'om_foreldrepenger.beregning.frilanser.ikontittel',
         icon: <FrilanserIkon />,
-        component: <Innhold source={getSource('om-foreldrepenger/beregning/frilanser', intl)} />
+        component: <Innhold source={getSource('om-foreldrepenger/beregning/frilanser', intl)} />,
     },
     {
         label: 'om_foreldrepenger.beregning.harYtelse',
         icon: <YtelseFraNavIkon />,
-        component: <Innhold source={getSource('om-foreldrepenger/beregning/har-ytelser', intl)} />
+        component: <Innhold source={getSource('om-foreldrepenger/beregning/har-ytelser', intl)} />,
     },
     {
         label: 'om_foreldrepenger.beregning.andreInntektskilder',
@@ -51,18 +51,20 @@ const getTabs = (intl: InjectedIntl): Innholdsfane[] => [
             <Innhold
                 source={getSource('om-foreldrepenger/beregning/andre-inntekskilder', intl)}
                 values={{
-                    treGangerGrunnbeløpet: (getGrunnbeløpet() * 3).toLocaleString(intl.locale)
+                    treGangerGrunnbeløpet: (getGrunnbeløpet() * 3).toLocaleString(intl.locale),
                 }}
             />
-        )
-    }
+        ),
+    },
 ];
 
 interface Props {
     id: string;
 }
 
-const Beregning: React.StatelessComponent<Props & InjectedIntlProps> = ({ id, intl }) => {
+const Beregning: React.StatelessComponent<Props> = ({ id }) => {
+    const intl = useIntl();
+
     return (
         <PanelMedIllustrasjon
             className={cls.block}
@@ -73,7 +75,7 @@ const Beregning: React.StatelessComponent<Props & InjectedIntlProps> = ({ id, in
             <Innhold
                 source={getSource('om-foreldrepenger/beregning/beregning', intl)}
                 values={{
-                    seksG: (getGrunnbeløpet() * 6).toLocaleString(intl.locale)
+                    seksG: (getGrunnbeløpet() * 6).toLocaleString(intl.locale),
                 }}
             />
             <Innholdsfaner tabs={getTabs(intl)} />
@@ -81,4 +83,4 @@ const Beregning: React.StatelessComponent<Props & InjectedIntlProps> = ({ id, in
     );
 };
 
-export default injectIntl(Beregning);
+export default Beregning;

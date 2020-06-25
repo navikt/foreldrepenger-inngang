@@ -1,6 +1,5 @@
 import React from 'react';
-import { injectIntl, InjectedIntlProps, InjectedIntl } from 'react-intl';
-import { StatelessComponent } from 'enzyme';
+import { useIntl } from 'react-intl';
 import { Undertittel } from 'nav-frontend-typografi';
 import AndreLenker from './andre-lenker/AndreLenker';
 import BEMHelper from '../../utils/bem';
@@ -19,7 +18,8 @@ import KoronaInformasjon from './korona-informasjon/KoronaInformasjon';
 const cls = BEMHelper('informasjonstavle');
 const velgSkjemaIcon = require('../../assets/icons/brev.svg').default;
 
-const Informasjonstavle: StatelessComponent<InjectedIntlProps> = ({ intl }) => {
+const Informasjonstavle: React.StatelessComponent = () => {
+    const intl = useIntl();
     return (
         <div className={cls.block}>
             <InformasjonstavleHeader />
@@ -27,7 +27,7 @@ const Informasjonstavle: StatelessComponent<InjectedIntlProps> = ({ intl }) => {
             <div className={cls.element('body')}>
                 <div role="main" className={cls.element('content')}>
                     <KoronaInformasjon />
-                    <Bildelenker intl={intl} />
+                    <Bildelenker />
                     <LangtPanelMedBilde
                         svg={velgSkjemaIcon}
                         title={getTranslation('informasjonstavle.velg_søknadsskjema.tittel', intl)}
@@ -50,7 +50,9 @@ const Subheader = ({ text }: { text: string }) => (
     </div>
 );
 
-const Bildelenker = ({ intl }: { intl: InjectedIntl }) => {
+const Bildelenker = () => {
+    const intl = useIntl();
+
     return (
         <nav className={cls.element('bildepaneler')}>
             <PanelMedBilde
@@ -93,4 +95,4 @@ const InformasjonstavleHeader = () => {
     );
 };
 
-export default injectIntl(Informasjonstavle);
+export default Informasjonstavle;

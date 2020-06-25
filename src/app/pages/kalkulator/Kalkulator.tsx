@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { CheckboksPanelGruppe } from 'nav-frontend-skjema';
-import { InjectedIntlProps, injectIntl } from 'react-intl';
+import { injectIntl, IntlShape } from 'react-intl';
 import { tjenerOverUtbetalingsgrensen, tjenerForLiteForForeldrepenger } from 'app/utils/beregningUtils';
 import BEMHelper from 'app/utils/bem';
 import Breadcrumbs from 'app/components/breadcrumbs/Breadcrumbs';
@@ -23,7 +23,7 @@ export type Arbeidssituasjon = 'arbeidstaker_eller_frilanser' | 'utbetaling_fra_
 const muligeSituasjoner: Arbeidssituasjon[] = [
     'arbeidstaker_eller_frilanser',
     'utbetaling_fra_nav',
-    'selvstendig_næringsdrivende'
+    'selvstendig_næringsdrivende',
 ];
 
 const pengerIcon = require('../../assets/icons/money-80.svg').default;
@@ -36,16 +36,20 @@ export interface Resultater {
     øvreAvviksgrense: number;
 }
 
+interface InjectedProps {
+    intl: IntlShape;
+}
+
 interface State {
     valgteSituasjoner: Arbeidssituasjon[];
     results?: Resultater;
 }
 
-class Kalkulator extends React.Component<InjectedIntlProps, State> {
-    constructor(props: InjectedIntlProps) {
+class Kalkulator extends React.Component<InjectedProps, State> {
+    constructor(props: InjectedProps) {
         super(props);
         this.state = {
-            valgteSituasjoner: []
+            valgteSituasjoner: [],
         };
     }
 
@@ -55,7 +59,7 @@ class Kalkulator extends React.Component<InjectedIntlProps, State> {
             : [...this.state.valgteSituasjoner, situasjon];
 
         this.setState({
-            valgteSituasjoner
+            valgteSituasjoner,
         });
     };
 
@@ -72,12 +76,12 @@ class Kalkulator extends React.Component<InjectedIntlProps, State> {
                     nedreAvviksgrense: årslønn - avviksgrense,
                     øvreAvviksgrense: årslønn + avviksgrense,
                     tjenerOverUtbetalingsgrensen: tjenerOverGrensen,
-                    tjenerForLite
-                }
+                    tjenerForLite,
+                },
             });
         } else {
             this.setState({
-                results: undefined
+                results: undefined,
             });
         }
     };
@@ -87,7 +91,7 @@ class Kalkulator extends React.Component<InjectedIntlProps, State> {
             checked: this.state.valgteSituasjoner.includes(situasjon),
             label: getTranslation(`kalkulator.situasjon.${situasjon}`, this.props.intl),
             id: situasjon,
-            value: situasjon
+            value: situasjon,
         }));
 
     render = () => {

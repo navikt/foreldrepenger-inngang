@@ -1,6 +1,6 @@
 import React, { useRef, RefObject, useState, FunctionComponent } from 'react';
 import { Hovedknapp } from 'nav-frontend-knapper';
-import { InjectedIntlProps, injectIntl } from 'react-intl';
+import { useIntl } from 'react-intl';
 import Panel from 'nav-frontend-paneler';
 import classnames from 'classnames';
 
@@ -22,9 +22,10 @@ interface OwnProps {
     };
 }
 
-type Props = OwnProps & InjectedIntlProps;
+type Props = OwnProps;
 
-const Mobilmeny: FunctionComponent<Props> = ({ sections, button, intl }: Props) => {
+const Mobilmeny: FunctionComponent<Props> = ({ sections, button }: Props) => {
+    const intl = useIntl();
     const menuRef: RefObject<HTMLDivElement> = useRef(null);
     const [isOpen, toggleMenu] = useState<boolean>(false);
     const [currentSection, setSection] = useState<string | undefined>(undefined);
@@ -53,7 +54,7 @@ const Mobilmeny: FunctionComponent<Props> = ({ sections, button, intl }: Props) 
         <nav
             ref={menuRef}
             className={classnames(classnames(cls.block), {
-                [cls.element('hidden')]: !currentSection
+                [cls.element('hidden')]: !currentSection,
             })}
         >
             <Panel>
@@ -74,4 +75,4 @@ const Mobilmeny: FunctionComponent<Props> = ({ sections, button, intl }: Props) 
     );
 };
 
-export default injectIntl(Mobilmeny);
+export default Mobilmeny;

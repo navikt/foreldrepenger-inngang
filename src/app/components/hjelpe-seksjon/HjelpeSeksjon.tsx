@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { injectIntl, InjectedIntlProps } from 'react-intl';
+import { useIntl } from 'react-intl';
 import BEMHelper from 'app/utils/bem';
 import getTranslation from 'app/utils/i18nUtils';
 import PanelMedIllustrasjon from '../panel-med-illustrasjon/PanelMedIllustrasjon';
@@ -12,7 +12,9 @@ const svg = require('../../assets/ark/ark-hjelp.svg').default;
 const content = 'om-foreldrepenger/hjelp/hjelp';
 const cls = BEMHelper('hjelp');
 
-const Ferie: React.StatelessComponent<InjectedIntlProps> = ({ intl }) => {
+const Ferie: React.StatelessComponent = () => {
+    const intl = useIntl();
+
     return (
         <PanelMedIllustrasjon
             svg={svg}
@@ -25,4 +27,4 @@ const Ferie: React.StatelessComponent<InjectedIntlProps> = ({ intl }) => {
     );
 };
 
-export default injectIntl(Ferie);
+export default Ferie;

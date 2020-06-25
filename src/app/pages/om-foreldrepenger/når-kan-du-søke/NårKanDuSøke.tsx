@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { FlexibleSvg } from 'app/utils/CustomSVG';
-import { injectIntl, InjectedIntlProps, InjectedIntl } from 'react-intl';
+import { IntlShape, useIntl } from 'react-intl';
 import { Undertittel } from 'nav-frontend-typografi';
 import BEMHelper from '../../../utils/bem';
 import classnames from 'classnames';
@@ -19,29 +19,30 @@ const morSvg = require('../../../assets/foreldre/mor2.svg').default;
 const adopsjonSvg = require('../../../assets/icons/stork.svg').default;
 const cls = BEMHelper('nårKanDuSøke');
 
-const getTabs = (intl: InjectedIntl) => [
+const getTabs = (intl: IntlShape) => [
     {
         label: getTranslation('om_foreldrepenger.når_kan_du_søke.utsette_sykdom', intl),
-        content: getSource('om-foreldrepenger/når-kan-du-søke/sykdom', intl)
+        content: getSource('om-foreldrepenger/når-kan-du-søke/sykdom', intl),
     },
     {
         label: getTranslation('om_foreldrepenger.når_kan_du_søke.utsette_jobbe', intl),
-        content: getSource('om-foreldrepenger/når-kan-du-søke/du-skal-jobbe', intl)
+        content: getSource('om-foreldrepenger/når-kan-du-søke/du-skal-jobbe', intl),
     },
     {
         label: getTranslation('om_foreldrepenger.når_kan_du_søke.utsette_ferie', intl),
-        content: getSource('om-foreldrepenger/når-kan-du-søke/du-skal-ha-ferie', intl)
-    }
+        content: getSource('om-foreldrepenger/når-kan-du-søke/du-skal-ha-ferie', intl),
+    },
 ];
 
 interface OwnProps {
     id: ForeldrepengerSection;
 }
 
-type Props = OwnProps & InjectedIntlProps;
+type Props = OwnProps;
 
-const NårKanDuSøke = ({ id, intl }: Props) => {
+const NårKanDuSøke = ({ id }: Props) => {
     const [tabIndex, setTabIndex] = useState(0);
+    const intl = useIntl();
 
     const onTabChange = (_: any, newTabIndex: number) => {
         setTabIndex(newTabIndex);
@@ -96,4 +97,4 @@ const NårKanDuSøke = ({ id, intl }: Props) => {
     );
 };
 
-export default injectIntl(NårKanDuSøke);
+export default NårKanDuSøke;

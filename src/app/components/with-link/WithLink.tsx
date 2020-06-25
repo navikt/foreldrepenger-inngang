@@ -36,7 +36,7 @@ export class WithLink extends React.Component<Props> {
             if (target) {
                 target.scrollIntoView({
                     behavior: 'smooth',
-                    block: 'start'
+                    block: 'start',
                 });
             }
         } else {
@@ -45,7 +45,7 @@ export class WithLink extends React.Component<Props> {
             if (sectionNode) {
                 window.scroll({
                     top: sectionNode.offsetTop - SCROLL_OFFSET,
-                    behavior: 'smooth'
+                    behavior: 'smooth',
                 });
             }
         }
@@ -61,10 +61,10 @@ export class WithLink extends React.Component<Props> {
             className,
             style,
             ariaLabel,
-            children
+            children,
         } = this.props;
         const classNames = classnames(cls.block, className, {
-            [cls.element('noStyling')]: noStyling
+            [cls.element('noStyling')]: noStyling,
         });
 
         if (urlIsExternal) {

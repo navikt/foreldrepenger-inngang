@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { injectIntl, InjectedIntlProps } from 'react-intl';
+import { useIntl } from 'react-intl';
 import getTranslation from 'app/utils/i18nUtils';
 import Innhold, { getSource } from 'app/utils/innhold/Innhold';
 import PanelMedIllustrasjon from '../../../components/panel-med-illustrasjon/PanelMedIllustrasjon';
@@ -10,7 +10,9 @@ interface Props {
     id: string;
 }
 
-const Adopjson: React.StatelessComponent<Props & InjectedIntlProps> = ({ id, intl }) => {
+const Adopjson: React.StatelessComponent<Props> = ({ id }) => {
+    const intl = useIntl();
+
     return (
         <PanelMedIllustrasjon
             id={id}
@@ -22,4 +24,4 @@ const Adopjson: React.StatelessComponent<Props & InjectedIntlProps> = ({ id, int
     );
 };
 
-export default injectIntl(Adopjson);
+export default Adopjson;

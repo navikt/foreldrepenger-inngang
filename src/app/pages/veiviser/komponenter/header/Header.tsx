@@ -4,7 +4,7 @@ import { FlexibleSvg } from '../../../../utils/CustomSVG';
 import './header.less';
 import Innhold, { getSource } from 'app/utils/innhold/Innhold';
 
-import { injectIntl, InjectedIntl } from 'react-intl';
+import { useIntl } from 'react-intl';
 
 const svg = require('./Sign.svg').default;
 
@@ -12,7 +12,9 @@ const headerTXT = 'veiviser/introduksjon';
 
 const cls = BEMHelper('veiviser');
 
-const Header = ({ intl }: { intl: InjectedIntl }) => {
+const Header = () => {
+    const intl = useIntl();
+
     return (
         <div className={cls.element('komponent-header')}>
             <FlexibleSvg className={cls.element('komponent-header-ikon')} iconRef={svg} width={35} height={70} />
@@ -23,4 +25,4 @@ const Header = ({ intl }: { intl: InjectedIntl }) => {
     );
 };
 
-export default injectIntl(Header);
+export default Header;

@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { injectIntl, InjectedIntlProps, InjectedIntl } from 'react-intl';
+import { IntlShape, useIntl } from 'react-intl';
 import classnames from 'classnames';
 import getTranslation from 'app/utils/i18nUtils';
 import PanelMedIllustrasjon from '../../../components/panel-med-illustrasjon/PanelMedIllustrasjon';
@@ -17,29 +17,30 @@ interface Props {
     id: string;
 }
 
-const getTabs = (intl: InjectedIntl) => [
+const getTabs = (intl: IntlShape) => [
     {
         label: getTranslation('om_foreldrepenger.opptjening.mor', intl),
-        content: getSource('om-foreldrepenger/opptjening/mor', intl)
+        content: getSource('om-foreldrepenger/opptjening/mor', intl),
     },
     {
         label: getTranslation('om_foreldrepenger.opptjening.farEllerMedmor', intl),
-        content: getSource('om-foreldrepenger/opptjening/far-eller-medmor', intl)
+        content: getSource('om-foreldrepenger/opptjening/far-eller-medmor', intl),
     },
     {
         label: getTranslation('om_foreldrepenger.opptjening.kunFarEllerMedmorHarRett', intl),
-        content: getSource('om-foreldrepenger/opptjening/bare-far-eller-medmor-rett', intl)
+        content: getSource('om-foreldrepenger/opptjening/bare-far-eller-medmor-rett', intl),
     },
     {
         label: getTranslation('om_foreldrepenger.opptjening.spesieltVedAdopsjon', intl),
-        content: getSource('om-foreldrepenger/opptjening/spesielt-ved-adopsjon', intl)
-    }
+        content: getSource('om-foreldrepenger/opptjening/spesielt-ved-adopsjon', intl),
+    },
 ];
 
 const cls = BEMHelper('opptjening');
 
-const Opptjening: React.StatelessComponent<Props & InjectedIntlProps> = ({ id, intl }) => {
+const Opptjening: React.StatelessComponent<Props> = ({ id }) => {
     const [tabIndex, setTabIndex] = React.useState(0);
+    const intl = useIntl();
 
     const onTabChange = (_: any, newTabIndex: number) => {
         setTabIndex(newTabIndex);
@@ -78,4 +79,4 @@ const Opptjening: React.StatelessComponent<Props & InjectedIntlProps> = ({ id, i
     );
 };
 
-export default injectIntl(Opptjening);
+export default Opptjening;

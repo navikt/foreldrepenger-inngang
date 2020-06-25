@@ -23,7 +23,7 @@ const SvgMask: StatelessComponent<Props> = ({ svg, small, smaller, anchorToBotto
         <div
             className={classnames(cls.block, {
                 [cls.modifier('small')]: small,
-                [cls.modifier('smaller')]: smaller
+                [cls.modifier('smaller')]: smaller,
             })}
         >
             <CustomSVGFromSprite

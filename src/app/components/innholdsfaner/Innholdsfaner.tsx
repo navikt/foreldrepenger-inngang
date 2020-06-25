@@ -1,5 +1,5 @@
 import React from 'react';
-import { InjectedIntlProps, injectIntl } from 'react-intl';
+import { injectIntl, IntlShape } from 'react-intl';
 import BEMHelper from '../../utils/bem';
 import Fane, { Innholdsfane } from './fane/Fane';
 import getTranslation from 'app/utils/i18nUtils';
@@ -15,7 +15,11 @@ interface OwnProps {
     onSelect?: (selectedTab: string) => void;
 }
 
-type Props = OwnProps & InjectedIntlProps;
+interface InjectedProps {
+    intl: IntlShape;
+}
+
+type Props = OwnProps & InjectedProps;
 
 interface State {
     currentTab: number;
@@ -28,7 +32,7 @@ class Innholdsfaner extends React.Component<Props, State> {
 
         this.state = {
             currentTab: 0,
-            componentToRender: props.tabs[0].component
+            componentToRender: props.tabs[0].component,
         };
     }
 
@@ -41,7 +45,7 @@ class Innholdsfaner extends React.Component<Props, State> {
 
         this.setState({
             currentTab: tabIndex,
-            componentToRender
+            componentToRender,
         });
     };
 

@@ -25,7 +25,7 @@ const MedInnholdsfortegnelse = ({ sections, button, children }: MedInnholdsforte
                     sections={sections}
                     button={{
                         label: button.label,
-                        url: button.url
+                        url: button.url,
                     }}
                 />
             </aside>
@@ -35,7 +35,7 @@ const MedInnholdsfortegnelse = ({ sections, button, children }: MedInnholdsforte
                 sections={sections}
                 button={{
                     label: button.label,
-                    url: button.url
+                    url: button.url,
                 }}
             />
         </MediaQuery>

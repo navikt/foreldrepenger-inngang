@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Arbeidssituasjon } from '../Kalkulator';
-import { injectIntl, InjectedIntlProps } from 'react-intl';
+import { injectIntl, IntlShape } from 'react-intl';
 import { Input } from 'nav-frontend-skjema';
 import { lastThreeYears, lastThreeMonths, computeAverage, MAKS_ANTALL_SIFFER } from 'app/utils/beregningUtils';
 import BEMHelper from 'app/utils/bem';
@@ -15,7 +15,11 @@ interface OwnProps {
     onChange: (monthlyAverage?: number) => void;
 }
 
-type Props = OwnProps & InjectedIntlProps;
+interface InjectedProps {
+    intl: IntlShape;
+}
+
+type Props = OwnProps & InjectedProps;
 
 interface State {
     monthlyAverage?: number;
@@ -33,7 +37,7 @@ class Lønnskalkulator extends React.Component<Props, State> {
         this.props.onChange(undefined);
     };
 
-    componentDidReceiveProps = (nextProps: Props) => {
+    componentDidUpdate = (nextProps: Props) => {
         if (this.props.situasjoner !== nextProps.situasjoner) {
             this.setState(this.recomputeState(nextProps.situasjoner));
             this.props.onChange(undefined);
@@ -49,7 +53,7 @@ class Lønnskalkulator extends React.Component<Props, State> {
         return {
             monthlyAverage: undefined,
             lastThreePeriods,
-            fieldValues
+            fieldValues,
         };
     };
 
@@ -80,7 +84,7 @@ class Lønnskalkulator extends React.Component<Props, State> {
 
         this.setState({
             fieldValues: newFieldValues,
-            monthlyAverage
+            monthlyAverage,
         });
     };
 

@@ -2,7 +2,7 @@ import * as React from 'react';
 import classnames from 'classnames';
 import TypografiBase from 'nav-frontend-typografi';
 import { BEMWrapper } from '../../../../../utils/bem';
-import { injectIntl, InjectedIntlProps } from 'react-intl';
+import { useIntl } from 'react-intl';
 
 interface OwnProps {
     parentCls: BEMWrapper;
@@ -13,13 +13,15 @@ interface OwnProps {
     isSelected: boolean;
 }
 
-type Props = OwnProps & InjectedIntlProps;
+type Props = OwnProps;
 
-const Prosentvalg = ({ parentCls, grandParentCls, percentage, onSelect, sum, isSelected, intl }: Props) => {
+const Prosentvalg = ({ parentCls, grandParentCls, percentage, onSelect, sum, isSelected }: Props) => {
+    const intl = useIntl();
+
     const combinedClassnames = classnames(
         grandParentCls.element('option'),
         {
-            [grandParentCls.element('option--selected')]: isSelected
+            [grandParentCls.element('option--selected')]: isSelected,
         },
         parentCls.element('prosentvalg')
     );
@@ -40,4 +42,4 @@ const Prosentvalg = ({ parentCls, grandParentCls, percentage, onSelect, sum, isS
     );
 };
 
-export default injectIntl(Prosentvalg);
+export default Prosentvalg;

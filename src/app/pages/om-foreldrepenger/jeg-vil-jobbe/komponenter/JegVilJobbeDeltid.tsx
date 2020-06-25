@@ -1,5 +1,5 @@
 import React from 'react';
-import { injectIntl, InjectedIntl } from 'react-intl';
+import { useIntl } from 'react-intl';
 import getTranslation from '../../../../utils/i18nUtils';
 
 const JegVilJobbeDeltid = ({
@@ -8,15 +8,15 @@ const JegVilJobbeDeltid = ({
     foreldrepenger,
     prosentAndelFra,
     prosentAndelTil,
-    intl
 }: {
     width: string;
     height: string;
     foreldrepenger: string;
     prosentAndelFra: string;
     prosentAndelTil: string;
-    intl: InjectedIntl;
 }) => {
+    const intl = useIntl();
+
     return (
         <svg
             width={width}
@@ -165,4 +165,4 @@ const JegVilJobbeDeltid = ({
     );
 };
 
-export default injectIntl(JegVilJobbeDeltid);
+export default JegVilJobbeDeltid;

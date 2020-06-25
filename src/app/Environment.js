@@ -7,7 +7,7 @@ const Environment = () => {
         DINE_FORELDREPENGER_URL: global.appSettings.DINE_FORELDREPENGER_URL,
         SOK_SVANGERSKAPSPENGER_URL: global.appSettings.SOK_SVANGERSKAPSPENGER_URL,
         SOK_SVANGERSKAPSPENGER_PAPIR_URL: global.appSettings.SOK_SVANGERSKAPSPENGER_PAPIR_URL,
-        PLANLEGGEREN_URL: global.appSettings.PLANLEGGEREN_URL
+        PLANLEGGEREN_URL: global.appSettings.PLANLEGGEREN_URL,
     };
 };
 

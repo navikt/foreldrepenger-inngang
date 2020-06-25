@@ -1,5 +1,5 @@
 import React from 'react';
-import { InjectedIntl, injectIntl } from 'react-intl';
+import { useIntl } from 'react-intl';
 import getTranslation from '../../../../../utils/i18nUtils';
 import BEMHelper from '../../../../../utils/bem';
 import Lenkeknapp from '../../../../../components/lenkeknapp/Lenkeknapp';
@@ -7,7 +7,6 @@ import Lenkeknapp from '../../../../../components/lenkeknapp/Lenkeknapp';
 const resultat = BEMHelper('resultat');
 
 const EngangsstonadKnapp = ({
-    intl,
     knappLeft,
     knappRight,
     knappLeftStyle,
@@ -15,9 +14,8 @@ const EngangsstonadKnapp = ({
     lenkeLeft,
     lenkeRight,
     buttonHeadertxtLeft,
-    buttonHeadertxtRight
+    buttonHeadertxtRight,
 }: {
-    intl: InjectedIntl;
     knappLeft: string;
     knappRight: string;
     knappLeftStyle: any;
@@ -27,6 +25,8 @@ const EngangsstonadKnapp = ({
     buttonHeadertxtLeft?: any;
     buttonHeadertxtRight?: any;
 }) => {
+    const intl = useIntl();
+
     return (
         <div className={resultat.element('harRettKnapp group')}>
             <div className={resultat.element('harRettKol')}>
@@ -45,4 +45,4 @@ const EngangsstonadKnapp = ({
     );
 };
 
-export default injectIntl(EngangsstonadKnapp);
+export default EngangsstonadKnapp;

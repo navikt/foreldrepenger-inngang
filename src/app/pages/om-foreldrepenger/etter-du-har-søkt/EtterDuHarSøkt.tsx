@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { injectIntl, InjectedIntlProps } from 'react-intl';
+import { useIntl } from 'react-intl';
 
 import getTranslation from 'app/utils/i18nUtils';
 import PanelMedIllustrasjon from '../../../components/panel-med-illustrasjon/PanelMedIllustrasjon';
@@ -11,7 +11,9 @@ interface Props {
     id: string;
 }
 
-const EtterDuHarSøkt: React.StatelessComponent<Props & InjectedIntlProps> = ({ id, intl }) => {
+const EtterDuHarSøkt: React.StatelessComponent<Props> = ({ id }) => {
+    const intl = useIntl();
+
     return (
         <PanelMedIllustrasjon
             id={id}
@@ -23,4 +25,4 @@ const EtterDuHarSøkt: React.StatelessComponent<Props & InjectedIntlProps> = ({ 
     );
 };
 
-export default injectIntl(EtterDuHarSøkt);
+export default EtterDuHarSøkt;

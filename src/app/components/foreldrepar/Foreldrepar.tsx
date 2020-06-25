@@ -28,7 +28,7 @@ const Foreldrepar: React.StatelessComponent<Props> = ({ firstParent, secondParen
         <div
             role="presentation"
             className={classnames(cls.block, {
-                [cls.element('closerParents')]: variant && variant === 4
+                [cls.element('closerParents')]: variant && variant === 4,
             })}
         >
             <Forelder className={cls.element('firstParent')} svg={firstSvg} lessOpacity={variant === 2} />

@@ -1,5 +1,5 @@
 import React from 'react';
-import { InjectedIntlProps, injectIntl, InjectedIntl } from 'react-intl';
+import { IntlShape, useIntl } from 'react-intl';
 import PanelMedIllustrasjon from '../../../components/panel-med-illustrasjon/PanelMedIllustrasjon';
 import getTranslation from '../../../utils/i18nUtils';
 import Innhold, { getSource } from '../../../utils/innhold/Innhold';
@@ -20,30 +20,32 @@ interface Props {
     id: string;
 }
 
-const getFaner = (intl: InjectedIntl) => [
+const getFaner = (intl: IntlShape) => [
     {
         label: 'om_svangerskapspenger.hvorMyeKanDuFa.faneTittel.arbeidstaker',
         icon: <ArbeidstakerIkon />,
-        component: <Arbeidstaker />
+        component: <Arbeidstaker />,
     },
     {
         label: 'om_svangerskapspenger.hvorMyeKanDuFa.faneTittel.frilanser',
         icon: <FrilanserIkon />,
-        component: <Frilanser />
+        component: <Frilanser />,
     },
     {
         label: 'om_svangerskapspenger.hvorMyeKanDuFa.faneTittel.selvstendignaring',
         icon: <SelvstendigIkon />,
-        component: <SelvStendigNaring />
+        component: <SelvStendigNaring />,
     },
     {
         label: 'om_foreldrepenger.beregning.fisker',
         icon: <FiskerIkon />,
-        component: <Innhold source={getSource('om-foreldrepenger/beregning/fisker', intl)} />
-    }
+        component: <Innhold source={getSource('om-foreldrepenger/beregning/fisker', intl)} />,
+    },
 ];
 
-const HvorMyeKanDuFa: React.StatelessComponent<Props & InjectedIntlProps> = ({ id, intl }) => {
+const HvorMyeKanDuFa: React.StatelessComponent<Props> = ({ id }) => {
+    const intl = useIntl();
+
     return (
         <PanelMedIllustrasjon
             id={id}
@@ -59,4 +61,4 @@ const HvorMyeKanDuFa: React.StatelessComponent<Props & InjectedIntlProps> = ({ i
     );
 };
 
-export default injectIntl(HvorMyeKanDuFa);
+export default HvorMyeKanDuFa;

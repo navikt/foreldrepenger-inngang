@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { injectIntl, InjectedIntlProps } from 'react-intl';
+import { useIntl } from 'react-intl';
 import BEMHelper, { BEMWrapper } from '../../../../../utils/bem';
 import getTranslation from 'app/utils/i18nUtils';
 import Prosentvalg from './Prosentvalg';
@@ -15,12 +15,8 @@ interface Props {
     onPercentageSelect: (p: number) => void;
 }
 
-const DinLønn: React.StatelessComponent<Props & InjectedIntlProps> = ({
-    grandParentCls,
-    selectedPercentage,
-    onPercentageSelect,
-    intl
-}) => {
+const DinLønn: React.StatelessComponent<Props> = ({ grandParentCls, selectedPercentage, onPercentageSelect }) => {
+    const intl = useIntl();
     const monthlyWage = EKSEMPEL_KRONER_PER_MÅNED;
 
     return (
@@ -45,11 +41,11 @@ const DinLønn: React.StatelessComponent<Props & InjectedIntlProps> = ({
             </div>
             <TypografiBase type="normaltekst" className={cls.element('eksempeltekst')}>
                 {getTranslation('om_foreldrepenger.hvor_lenge.eksempel', intl, {
-                    eksempelKronerPerMåned: EKSEMPEL_KRONER_PER_MÅNED.toLocaleString(intl.locale)
+                    eksempelKronerPerMåned: EKSEMPEL_KRONER_PER_MÅNED.toLocaleString(intl.locale),
                 })}
             </TypografiBase>
         </div>
     );
 };
 
-export default injectIntl(DinLønn);
+export default DinLønn;

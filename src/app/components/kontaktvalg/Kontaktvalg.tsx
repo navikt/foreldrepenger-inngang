@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { InjectedIntl, injectIntl } from 'react-intl';
+import { useIntl } from 'react-intl';
 import BEMHelper from 'app/utils/bem';
 import CustomSVGFromSprite from 'app/utils/CustomSVG';
 import externalUrls from 'app/utils/externalUrls';
@@ -14,13 +14,16 @@ const facebookSvg = require('../../assets/icons/facebook.svg').default;
 const chatSvg = require('../../assets/icons/chat.svg').default;
 const telefonSvg = require('../../assets/icons/telefon.svg').default;
 
-const Kontaktvalg = ({ intl }: { intl: InjectedIntl }) => (
-    <div className={cls.block}>
-        <Valg icon={facebookSvg} href={externalUrls.facebook} label={getTranslation('facebook', intl)} />
-        <Valg icon={chatSvg} href={externalUrls.chat} label={getTranslation('chat', intl)} />
-        <Valg icon={telefonSvg} href={externalUrls.telefon} label={getTranslation('telefon', intl)} />
-    </div>
-);
+const Kontaktvalg = () => {
+    const intl = useIntl();
+    return (
+        <div className={cls.block}>
+            <Valg icon={facebookSvg} href={externalUrls.facebook} label={getTranslation('facebook', intl)} />
+            <Valg icon={chatSvg} href={externalUrls.chat} label={getTranslation('chat', intl)} />
+            <Valg icon={telefonSvg} href={externalUrls.telefon} label={getTranslation('telefon', intl)} />
+        </div>
+    );
+};
 
 const Valg = ({ icon, label, href }: { icon: any; label: string; href: string }) => (
     <WithLink url={href} urlIsExternal={true} className={cls.element('valg')}>
@@ -29,4 +32,4 @@ const Valg = ({ icon, label, href }: { icon: any; label: string; href: string })
     </WithLink>
 );
 
-export default injectIntl(Kontaktvalg);
+export default Kontaktvalg;

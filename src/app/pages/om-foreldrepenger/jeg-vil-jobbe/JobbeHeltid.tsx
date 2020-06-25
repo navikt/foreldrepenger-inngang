@@ -1,6 +1,6 @@
 import React from 'react';
 import classnames from 'classnames';
-import { InjectedIntlProps, injectIntl } from 'react-intl';
+import { useIntl } from 'react-intl';
 import MediaQuery from 'react-responsive';
 
 import BEMHelper from '../../../utils/bem';
@@ -10,7 +10,9 @@ import JegVilJobbeHeltidMobile from './komponenter/JegVilJobbeHeltidMobile';
 
 const cls = BEMHelper('jegVilJobbe');
 
-const JobbeHeltid: React.StatelessComponent<InjectedIntlProps> = ({ intl }) => {
+const JobbeHeltid: React.StatelessComponent = () => {
+    const intl = useIntl();
+
     return (
         <div className={classnames(cls.element('jobbeHeltid'), 'blokk-l')}>
             <Innhold
@@ -40,4 +42,4 @@ const JobbeHeltid: React.StatelessComponent<InjectedIntlProps> = ({ intl }) => {
     );
 };
 
-export default injectIntl(JobbeHeltid);
+export default JobbeHeltid;

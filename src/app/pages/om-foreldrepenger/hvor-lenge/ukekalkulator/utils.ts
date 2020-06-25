@@ -8,17 +8,17 @@ export interface Utbetalingsalternativ {
 const UKER_FAR_OG_MOR = [
     { 100: 49, 80: 59 },
     { 100: 66, 80: 80 },
-    { 100: 95, 80: 115 }
+    { 100: 95, 80: 115 },
 ];
 const UKER_FAR_OG_FAR = [
     { 100: 46, 80: 56 },
     { 100: 63, 80: 77 },
-    { 100: 92, 80: 112 }
+    { 100: 92, 80: 112 },
 ];
 const UKER_BARE_FAR_HAR_RETT = [
     { 100: 40, 80: 50 },
     { 100: 57, 80: 71 },
-    { 100: 86, 80: 106 }
+    { 100: 86, 80: 106 },
 ];
 const UKER_MOR_OG_MOR = UKER_FAR_OG_MOR;
 const UKER_ALENEOMSORG_MOR = UKER_FAR_OG_MOR;

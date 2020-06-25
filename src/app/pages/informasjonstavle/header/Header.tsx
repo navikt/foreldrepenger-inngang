@@ -2,7 +2,7 @@ import * as React from 'react';
 import { detErJul } from 'app/utils/datoUtils';
 import { FlexibleSvg } from '../../../utils/CustomSVG';
 import { getRandomInt } from '../../../utils/random';
-import { injectIntl, InjectedIntlProps } from 'react-intl';
+import { useIntl } from 'react-intl';
 import BEMHelper from '../../../utils/bem';
 import getTranslation from 'app/utils/i18nUtils';
 import MediaQuery from 'react-responsive';
@@ -20,7 +20,8 @@ const getRandomSvgForHeader = () => {
         : require(`../../../assets/familier-hjemme/familie-hjemme-${randomFamily}.svg`).default;
 };
 
-const Header = ({ intl }: InjectedIntlProps) => {
+const Header = () => {
+    const intl = useIntl();
     const svg = getRandomSvgForHeader();
 
     return (
@@ -49,4 +50,4 @@ const Header = ({ intl }: InjectedIntlProps) => {
     );
 };
 
-export default injectIntl(Header);
+export default Header;

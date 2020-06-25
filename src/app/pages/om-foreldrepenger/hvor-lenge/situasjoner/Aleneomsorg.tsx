@@ -1,11 +1,11 @@
 import * as React from 'react';
 import Informasjonsfaner, { InformasjonsfaneProps } from '../informasjons-faner/Informasjonsfaner';
 import Innhold, { getSource } from 'app/utils/innhold/Innhold';
-import { injectIntl, InjectedIntl, InjectedIntlProps } from 'react-intl';
 
 import { Kvote } from 'app/utils/foreldresituasjon';
 import { addAntallUkerSomSnakkebobletittel } from './utils';
 import getTranslation from 'app/utils/i18nUtils';
+import { IntlShape, injectIntl } from 'react-intl';
 
 const content = 'om-foreldrepenger/hvor-lenge/aleneomsorg/aleneomsorg';
 const aleneomsorgBeskrivelse = 'om-foreldrepenger/hvor-lenge/aleneomsorg/aleneomsorg-beskrivelse';
@@ -14,7 +14,7 @@ const morsDel = 'om-foreldrepenger/hvor-lenge/aleneomsorg/mors-del';
 
 const DEFAULT_TAB: Kvote = 'mødrekvote';
 
-const getInformasjonsfaner = (intl: InjectedIntl): InformasjonsfaneProps[] => [
+const getInformasjonsfaner = (intl: IntlShape): InformasjonsfaneProps[] => [
     {
         kvote: DEFAULT_TAB,
         label: getTranslation(`om_foreldrepenger.hvor_lenge.fordeling.alenemor`, intl),
@@ -25,12 +25,12 @@ const getInformasjonsfaner = (intl: InjectedIntl): InformasjonsfaneProps[] => [
                 punkter: [
                     getTranslation('om_foreldrepenger.hvor_lenge.fordeling.i_tillegg_til_foreldrepenger', intl),
                     getTranslation('om_foreldrepenger.hvor_lenge.fordeling.ingen_krav', intl, {
-                        subjekt: getTranslation('far', intl)
-                    })
-                ]
+                        subjekt: getTranslation('far', intl),
+                    }),
+                ],
             },
-            component: <Innhold source={getSource(morsDel, intl)} />
-        }
+            component: <Innhold source={getSource(morsDel, intl)} />,
+        },
     },
     {
         kvote: 'fedrekvote',
@@ -41,20 +41,24 @@ const getInformasjonsfaner = (intl: InjectedIntl): InformasjonsfaneProps[] => [
                 icon: 'far1',
                 punkter: [
                     getTranslation('om_foreldrepenger.hvor_lenge.fordeling.ingen_krav', intl, {
-                        subjekt: getTranslation('mor', intl)
-                    })
-                ]
+                        subjekt: getTranslation('mor', intl),
+                    }),
+                ],
             },
-            component: <Innhold source={getSource(farsDel, intl)} />
-        }
-    }
+            component: <Innhold source={getSource(farsDel, intl)} />,
+        },
+    },
 ];
 
 interface OwnProps {
     onKvoteSelected: (kvote: Kvote) => void;
 }
 
-type Props = OwnProps & InjectedIntlProps;
+interface InjectedProps {
+    intl: IntlShape;
+}
+
+type Props = OwnProps & InjectedProps;
 
 class Aleneomsorg extends React.Component<Props> {
     componentDidMount = () => {

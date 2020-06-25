@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { injectIntl, InjectedIntlProps } from 'react-intl';
 import BEMHelper from '../../../../utils/bem';
 import CustomSVG from '../../../../utils/CustomSVG';
 import Veileder from 'nav-frontend-veileder';
@@ -9,7 +8,7 @@ import useWindowSize from 'app/hooks/useWindowSize';
 
 const cls = BEMHelper('faneinnhold');
 
-type Props = FaneinnholdProps & InjectedIntlProps;
+type Props = FaneinnholdProps;
 
 const Faneinnhold = ({ snakkeboble, component }: Props) => {
     const { width } = useWindowSize();
@@ -38,4 +37,4 @@ const Faneinnhold = ({ snakkeboble, component }: Props) => {
     );
 };
 
-export default injectIntl(Faneinnhold);
+export default Faneinnhold;

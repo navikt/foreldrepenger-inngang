@@ -10,7 +10,7 @@ export enum ForeldrepengerSection {
     Adoptere = 'adoptere',
     OfteStilteSpørsmål = 'ofte-stilte-sporsmal',
     Opptjening = 'opptjening',
-    EtterDuHarSøkt = 'etter-du-har-søkt'
+    EtterDuHarSøkt = 'etter-du-har-søkt',
 }
 
 export enum EngangsstønadSection {
@@ -18,5 +18,5 @@ export enum EngangsstønadSection {
     HvaKanDuFå = 'hva-kan-du-fa',
     NårKanDuSøke = 'nar-kan-du-soke',
     NårBlirPengeneUtbetalt = 'nar-blir-pengene-utbetalt',
-    FarEllerMedmor = 'far-eller-medmor'
+    FarEllerMedmor = 'far-eller-medmor',
 }

@@ -3,7 +3,7 @@ import NavDatovelger from 'nav-datovelger';
 import TypografiBase from 'nav-frontend-typografi';
 
 import { BEMWrapper } from '../../utils/bem';
-import { injectIntl, InjectedIntlProps } from 'react-intl';
+import { useIntl } from 'react-intl';
 import { StatelessComponent } from 'enzyme';
 import CustomSVGFromSprite from 'app/utils/CustomSVG';
 import getTranslation from 'app/utils/i18nUtils';
@@ -17,13 +17,9 @@ interface Props {
     parentCls: BEMWrapper;
 }
 
-const Datovelger: StatelessComponent<Props & InjectedIntlProps> = ({
-    date,
-    dateIsValid,
-    onChange,
-    parentCls,
-    intl
-}) => {
+const Datovelger: StatelessComponent<Props> = ({ date, dateIsValid, onChange, parentCls }) => {
+    const intl = useIntl();
+
     return (
         <div aria-label="Datovelger" aria-haspopup={true} className={parentCls.element('datovelger')}>
             <TypografiBase type="element">
@@ -35,12 +31,17 @@ const Datovelger: StatelessComponent<Props & InjectedIntlProps> = ({
                     kanVelgeUgyldigDato={true}
                     id="foreldrepenger-startdato"
                     locale="no"
-                    dato={date}
-                    onChange={(newDate: Date) => onChange(newDate)}
+                    valgtDato={date}
+                    onChange={(datoString: string) => {
+                        const nyDato = datoString && datoString !== 'Invalid date' ? new Date(datoString) : undefined;
+                        if (date !== nyDato && nyDato !== undefined) {
+                            onChange(nyDato);
+                        }
+                    }}
                     input={{
                         name: 'foreldrepenger-startdato',
                         id: 'foreldrepenger-startdato',
-                        placeholder: 'dd.mm.åååå'
+                        placeholder: 'dd.mm.åååå',
                     }}
                 />
                 {dateIsValid && <CustomSVGFromSprite iconRef={okIcon} size={24} />}
@@ -49,4 +50,4 @@ const Datovelger: StatelessComponent<Props & InjectedIntlProps> = ({
     );
 };
 
-export default injectIntl(Datovelger);
+export default Datovelger;

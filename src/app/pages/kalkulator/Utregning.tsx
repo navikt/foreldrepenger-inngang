@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { Arbeidssituasjon, Resultater } from './Kalkulator';
-import { InjectedIntl, injectIntl } from 'react-intl';
 import BEMHelper from 'app/utils/bem';
 import getTranslation from 'app/utils/i18nUtils';
 import Innhold, { getSource } from 'app/utils/innhold/Innhold';
@@ -8,6 +7,8 @@ import Lønnskalkulator from './lønnskalkulator/Lønnskalkulator';
 import Resultat from './resultat/Resultat';
 import TypografiBase from 'nav-frontend-typografi';
 import UtvidetInformasjon from './utvidetinformasjon/UtvidetInformasjon';
+import { useIntl } from 'react-intl';
+
 import './kalkulator.less';
 
 const cls = BEMHelper('kalkulator');
@@ -16,10 +17,10 @@ interface Props {
     valgteSituasjoner: Arbeidssituasjon[];
     onSnittlønnChange: (snittlønn?: number) => void;
     results?: Resultater;
-    intl: InjectedIntl;
 }
 
-const Utregning = ({ valgteSituasjoner, onSnittlønnChange, results, intl }: Props) => {
+const Utregning = ({ valgteSituasjoner, onSnittlønnChange, results }: Props) => {
+    const intl = useIntl();
     const fårUtbetaling = valgteSituasjoner.includes('utbetaling_fra_nav');
     const selvstendig = valgteSituasjoner.includes('selvstendig_næringsdrivende');
 
@@ -54,4 +55,4 @@ const Utregning = ({ valgteSituasjoner, onSnittlønnChange, results, intl }: Pro
     );
 };
 
-export default injectIntl(Utregning);
+export default Utregning;

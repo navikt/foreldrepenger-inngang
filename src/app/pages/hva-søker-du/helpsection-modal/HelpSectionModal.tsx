@@ -1,5 +1,5 @@
 import BEMHelper from '../../../utils/bem';
-import { InjectedIntlProps, injectIntl } from 'react-intl';
+import { useIntl } from 'react-intl';
 import Modal from 'nav-frontend-modal';
 import TypografiBase from 'nav-frontend-typografi';
 import Lenke from 'nav-frontend-lenker';
@@ -20,10 +20,11 @@ interface OwnProps {
     søknadUrl: string;
 }
 
-type Props = OwnProps & InjectedIntlProps;
+type Props = OwnProps;
 
 const HelpSectionModal = (props: Props) => {
-    const { modalIsOpen, linktxt, papirsøknadUrl, søknadUrl, intl } = props;
+    const { modalIsOpen, linktxt, papirsøknadUrl, søknadUrl } = props;
+    const intl = useIntl();
     const [isOpen, toggle] = useState(modalIsOpen);
 
     const openModal = (e: any) => {
@@ -80,4 +81,4 @@ const HelpSectionModal = (props: Props) => {
     );
 };
 
-export default injectIntl(HelpSectionModal);
+export default HelpSectionModal;

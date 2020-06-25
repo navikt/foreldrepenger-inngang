@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { injectIntl, InjectedIntlProps } from 'react-intl';
+import { useIntl } from 'react-intl';
 import ButtonPanel from './button-panel/ButtonPanel';
 import getTranslation from 'app/utils/i18nUtils';
 import Innhold, { getSource } from 'app/utils/innhold/Innhold';
@@ -8,19 +8,21 @@ import Environment from '../../Environment';
 import UserHelpAlternativ from './user-help-alternativ/UserHelpAlternativ';
 import { Page } from '../../types/Page';
 
-const Svangerskapspenger = ({ intl }: InjectedIntlProps) => {
+const Svangerskapspenger = () => {
+    const intl = useIntl();
+
     return (
         <PanelMedTittel title={getTranslation('svangerskapspenger', intl)}>
             <Innhold source={getSource('hva-søker-du/svangerskapspenger', intl)} />
             <ButtonPanel
                 button={{
                     text: getTranslation('hva_søker_du.søk_svangerskapspenger', intl),
-                    url: Page.SøkSøkerDuSvangerskapspenger
+                    url: Page.SøkSøkerDuSvangerskapspenger,
                 }}
                 secondButton={{
                     text: getTranslation('hva_søker_du.ettersend_vedlegg', intl),
                     url: Environment.DINE_FORELDREPENGER_URL,
-                    external: true
+                    external: true,
                 }}
                 alternativHelpSection={
                     <UserHelpAlternativ
@@ -35,4 +37,4 @@ const Svangerskapspenger = ({ intl }: InjectedIntlProps) => {
     );
 };
 
-export default injectIntl(Svangerskapspenger);
+export default Svangerskapspenger;

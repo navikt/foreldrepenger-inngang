@@ -1,9 +1,10 @@
 import React from 'react';
 import Innhold, { getSource } from '../../../../utils/innhold/Innhold';
-import { injectIntl, InjectedIntl } from 'react-intl';
+import { useIntl } from 'react-intl';
 
-const SelvStendigNaring = ({ intl }: { intl: InjectedIntl }) => (
-    <Innhold source={getSource('svangerskapspenger/hvor-mye-kan-du-fa/selvstendignaring', intl)} />
-);
+const SelvStendigNaring = () => {
+    const intl = useIntl();
+    return <Innhold source={getSource('svangerskapspenger/hvor-mye-kan-du-fa/selvstendignaring', intl)} />;
+};
 
-export default injectIntl(SelvStendigNaring);
+export default SelvStendigNaring;

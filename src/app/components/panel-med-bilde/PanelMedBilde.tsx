@@ -20,7 +20,7 @@ const PanelMedBilde = ({
     disabled,
     stopSign,
     bypassNavlab,
-    underArbeid
+    underArbeid,
 }: {
     svgName: any;
     title: string;

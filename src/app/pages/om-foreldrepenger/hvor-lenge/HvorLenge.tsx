@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Foreldresituasjon, Kvote } from 'app/utils/foreldresituasjon';
 import { getAntallUtbetalingsuker, Utbetalingsalternativ } from './ukekalkulator/utils';
-import { injectIntl, InjectedIntlProps } from 'react-intl';
+import { injectIntl, IntlShape } from 'react-intl';
 import { Innholdsfane } from '../../../components/innholdsfaner/fane/Fane';
 import { Normaltekst } from 'nav-frontend-typografi';
 import Aleneomsorg from './situasjoner/Aleneomsorg';
@@ -29,40 +29,44 @@ const getTabs = (onKvoteSelected: (undersituasjon: Kvote) => void): Innholdsfane
     {
         label: 'farOgMor',
         icon: <Foreldrepar firstParent="far1" secondParent="mor2" />,
-        component: <FarOgMor />
+        component: <FarOgMor />,
     },
     {
         label: 'bareFarHarRett',
         icon: <Foreldrepar firstParent="far3" secondParent="medmor1" variant={1} />,
-        component: <BareFarHarRett />
+        component: <BareFarHarRett />,
     },
     {
         label: 'bareMorHarRett',
         icon: <Foreldrepar firstParent="far2" secondParent="mor1" variant={2} />,
-        component: <BareMorHarRett />
+        component: <BareMorHarRett />,
     },
     {
         label: 'aleneomsorg',
         icon: <Foreldrepar firstParent="far1" secondParent="medmor1" variant={3} />,
-        component: <Aleneomsorg onKvoteSelected={onKvoteSelected} />
+        component: <Aleneomsorg onKvoteSelected={onKvoteSelected} />,
     },
     {
         label: 'morOgMor',
         icon: <Foreldrepar firstParent="mor2" secondParent="medmor2" />,
-        component: <MorOgMor />
+        component: <MorOgMor />,
     },
     {
         label: 'farOgFar',
         icon: <Foreldrepar firstParent="far4" secondParent="far2" />,
-        component: <FarOgFar />
-    }
+        component: <FarOgFar />,
+    },
 ];
 
 interface HvorLengeProps {
     id: string;
 }
 
-type Props = HvorLengeProps & InjectedIntlProps;
+interface InjectedProps {
+    intl: IntlShape;
+}
+
+type Props = HvorLengeProps & InjectedProps;
 
 interface State {
     valgtSituasjon: Foreldresituasjon;
@@ -76,14 +80,14 @@ class HvorLenge extends React.Component<Props, State> {
 
         this.state = {
             valgtSituasjon: 'farOgMor',
-            antallUtbetalingsuker: getAntallUtbetalingsuker('farOgMor')
+            antallUtbetalingsuker: getAntallUtbetalingsuker('farOgMor'),
         };
     }
 
     onSituasjonSelected = (valgtSituasjon: Foreldresituasjon) => {
         this.setState(
             {
-                valgtSituasjon
+                valgtSituasjon,
             },
             this.setAntallUtbetalingsuker
         );
@@ -92,7 +96,7 @@ class HvorLenge extends React.Component<Props, State> {
     onKvoteSelected = (valgtKvote?: Kvote) => {
         this.setState(
             {
-                valgtKvote
+                valgtKvote,
             },
             this.setAntallUtbetalingsuker
         );
@@ -100,7 +104,7 @@ class HvorLenge extends React.Component<Props, State> {
 
     setAntallUtbetalingsuker = () => {
         this.setState({
-            antallUtbetalingsuker: getAntallUtbetalingsuker(this.state.valgtSituasjon, this.state.valgtKvote)
+            antallUtbetalingsuker: getAntallUtbetalingsuker(this.state.valgtSituasjon, this.state.valgtKvote),
         });
     };
 

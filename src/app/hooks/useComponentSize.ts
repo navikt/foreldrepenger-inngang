@@ -5,7 +5,7 @@ const getSize = (element: HTMLElement | null) => {
         ? { width: 0, height: 0 }
         : {
               width: element.offsetWidth,
-              height: element.offsetHeight
+              height: element.offsetHeight,
           };
 };
 

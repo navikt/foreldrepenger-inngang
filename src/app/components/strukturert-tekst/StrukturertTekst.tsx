@@ -119,7 +119,7 @@ const renderTekstsnutt = (markDefs: MarkDefinition[], variabler?: Definisjoner) 
 const MarkWrapper = ({
     mark,
     otherMarks,
-    children
+    children,
 }: {
     mark: MarkDefinition;
     otherMarks: string[];

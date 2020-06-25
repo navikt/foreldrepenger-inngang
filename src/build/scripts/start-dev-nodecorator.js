@@ -12,7 +12,7 @@ createEnvSettingsFile(path.resolve(`${__dirname}/../../../dist/js/settings.js`))
 
 webpackConfig.entry = {
     reload: 'webpack-dev-server/client?http://localhost:8080/',
-    ...webpackConfig.entry
+    ...webpackConfig.entry,
 };
 
 const compiler = webpack(webpackConfig);
@@ -23,7 +23,7 @@ const server = new WebpackDevServer(
         NAV_STYLES: '',
         NAV_HEADING: '',
         NAV_FOOTER: '',
-        NAV_MENU_RESOURCES: ''
+        NAV_MENU_RESOURCES: '',
     })
 );
 

@@ -1,5 +1,5 @@
 import React, { ReactNodeArray } from 'react';
-import { injectIntl, InjectedIntl, InjectedIntlProps } from 'react-intl';
+import { IntlShape, useIntl } from 'react-intl';
 import { Link } from 'react-router-dom';
 import BEMHelper from '../../utils/bem';
 import classnames from 'classnames';
@@ -11,7 +11,7 @@ import useWindowSize from 'app/hooks/useWindowSize';
 
 const cls = BEMHelper('breadcrumbs');
 
-const parsePath = (path: string, intl: InjectedIntl) => {
+const parsePath = (path: string, intl: IntlShape) => {
     const parts = path.split('/');
 
     // Remove any trailing slash ("/")
@@ -25,7 +25,7 @@ const parsePath = (path: string, intl: InjectedIntl) => {
 
         return {
             url,
-            label: getTranslation(`route.${part}`, intl)
+            label: getTranslation(`route.${part}`, intl),
         };
     });
 };
@@ -34,11 +34,12 @@ interface OwnProps {
     path: string;
 }
 
-type Props = OwnProps & InjectedIntlProps;
+type Props = OwnProps;
 
 const Breadcrumbs = (props: Props) => {
+    const intl = useIntl();
     const { width } = useWindowSize();
-    const { path, intl } = props;
+    const { path } = props;
 
     const breadcrumbChain: ReactNodeArray = [];
     const parsedPath = parsePath(path, intl);
@@ -81,7 +82,7 @@ const Breadcrumbs = (props: Props) => {
                     key={`crumb${index}`}
                     type="normaltekst"
                     className={classnames(cls.element('item'), {
-                        [cls.element('current')]: current
+                        [cls.element('current')]: current,
                     })}
                 >
                     {current ? part.label : <Link to={part.url}>{part.label}</Link>}
@@ -97,4 +98,4 @@ const Breadcrumbs = (props: Props) => {
     );
 };
 
-export default injectIntl(Breadcrumbs);
+export default Breadcrumbs;

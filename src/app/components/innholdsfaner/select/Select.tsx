@@ -1,7 +1,7 @@
 import React from 'react';
 import BEMHelper from '../../../utils/bem';
 import { Innholdsfane } from '../fane/Fane';
-import { injectIntl, InjectedIntlProps } from 'react-intl';
+import { injectIntl, IntlShape } from 'react-intl';
 import Panel from 'nav-frontend-paneler';
 import TypografiBase from 'nav-frontend-typografi';
 import Chevron from 'nav-frontend-chevron';
@@ -18,7 +18,11 @@ interface OwnProps {
     choices: Innholdsfane[];
 }
 
-type SelectProps = OwnProps & InjectedIntlProps;
+interface InjectedProps {
+    intl: IntlShape;
+}
+
+type SelectProps = OwnProps & InjectedProps;
 
 interface SelectState {
     open: boolean;
@@ -33,7 +37,7 @@ class Select extends React.Component<SelectProps, SelectState> {
         super(props);
 
         this.state = {
-            open: false
+            open: false,
         };
     }
 
@@ -62,7 +66,7 @@ class Select extends React.Component<SelectProps, SelectState> {
 
     closePopup = () => {
         this.setState({
-            open: false
+            open: false,
         });
     };
 
@@ -88,7 +92,7 @@ class Select extends React.Component<SelectProps, SelectState> {
 
     onClick = () => {
         this.setState({
-            open: !this.state.open
+            open: !this.state.open,
         });
     };
 
@@ -103,7 +107,7 @@ class Select extends React.Component<SelectProps, SelectState> {
                 onClick={this.onClick}
                 onKeyPress={this.onClick}
                 className={classnames(cls.block, {
-                    [cls.modifier('open')]: this.state.open
+                    [cls.modifier('open')]: this.state.open,
                 })}
             >
                 <div className={cls.element('selected')}>
@@ -129,7 +133,7 @@ class Select extends React.Component<SelectProps, SelectState> {
                                     this.onChoiceClick(index);
                                 }}
                                 className={classnames(cls.element('choice'), {
-                                    [cls.element('choice', 'selected')]: this.props.selected.label === choice.label
+                                    [cls.element('choice', 'selected')]: this.props.selected.label === choice.label,
                                 })}
                                 tabIndex={0}
                             >

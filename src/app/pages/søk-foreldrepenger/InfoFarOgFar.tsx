@@ -2,16 +2,13 @@ import React, { FunctionComponent } from 'react';
 import Eventline from 'app/components/eventline/Eventline';
 import Event from 'app/components/eventline/Event';
 import EkspanderbarSnakkeboble from 'app/components/ekspanderbar-snakkeboble/EkspanderbarSnakkeboble';
-import { InjectedIntl, injectIntl } from 'react-intl';
+import { useIntl } from 'react-intl';
 import Innhold, { getSource } from 'app/utils/innhold/Innhold';
 import getTranslation from 'app/utils/i18nUtils';
 import Veileder from 'app/components/veileder/Veileder';
 
-interface Props {
-    intl: InjectedIntl;
-}
-
-const InfoFarOgFar: FunctionComponent<Props> = ({ intl }) => {
+const InfoFarOgFar: FunctionComponent = () => {
+    const intl = useIntl();
     const kalender = require('../../assets/planlegge.svg').default;
     const dokumentasjon = require('../../assets/dokumentasjon.svg').default;
     const far1Brev = require('../../assets/foreldre/far2-brev.svg').default;
@@ -91,4 +88,4 @@ const InfoFarOgFar: FunctionComponent<Props> = ({ intl }) => {
     );
 };
 
-export default injectIntl(InfoFarOgFar);
+export default InfoFarOgFar;

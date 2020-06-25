@@ -1,5 +1,5 @@
 import React from 'react';
-import Helmet from 'react-helmet';
+import { Helmet } from 'react-helmet';
 
 const HeaderInformasjon = ({
     title,
@@ -8,7 +8,7 @@ const HeaderInformasjon = ({
     propDescription,
     imageUrl,
     siteUrl,
-    imageLargeUrl
+    imageLargeUrl,
 }: {
     title?: string;
     siteDescription: string;

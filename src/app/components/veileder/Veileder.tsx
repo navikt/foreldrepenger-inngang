@@ -17,14 +17,14 @@ const Veileder = (props: VeilederProps) => {
     const { fargetema = 'normal', ansikt = 'glad', kompakt = true, children, type, className } = props;
 
     const svgProps = {
-        className: classnames('veileder', `veileder--${ansikt}`)
+        className: classnames('veileder', `veileder--${ansikt}`),
     };
 
     return (
         <Veilederpanel
             veilederProps={{
                 className,
-                children: <VeilederSvg svgProps={svgProps} />
+                children: <VeilederSvg svgProps={svgProps} />,
             }}
             svg={<VeilederSvg svgProps={svgProps} />}
             fargetema={fargetema}

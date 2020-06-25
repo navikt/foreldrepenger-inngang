@@ -12,7 +12,7 @@ const externalUrls = {
         'https://www.nav.no/no/Person/Familie/Venter+du+barn/engangsst%C3%B8nad-ved-f%C3%B8dsel-og-adopsjon',
     les_mer_svangerskapspenger: 'https://www.nav.no/no/Person/Familie/Relatert+informasjon/svangerskapspenger',
 
-    foreldrepengeplanlegger: 'https://foreldrepengeplanlegger.nav.no/foreldrepengeplanlegger'
+    foreldrepengeplanlegger: 'https://foreldrepengeplanlegger.nav.no/foreldrepengeplanlegger',
 };
 
 export type Søknadstyper = 'svangerskapspenger' | 'foreldrepenger' | 'engangsstønad' | 'planleggeren';

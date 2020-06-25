@@ -19,7 +19,7 @@ class App extends React.Component<unknown, State> {
         super(props);
 
         this.state = {
-            currentLanguage: DEFAULT_LANG
+            currentLanguage: DEFAULT_LANG,
         };
 
         moment.locale(DEFAULT_LANG);
@@ -28,7 +28,7 @@ class App extends React.Component<unknown, State> {
     setLanguage = (lang: Language) => {
         moment.locale(lang);
         this.setState({
-            currentLanguage: lang
+            currentLanguage: lang,
         });
     };
 

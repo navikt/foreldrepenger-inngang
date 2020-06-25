@@ -10,7 +10,7 @@ const StorToggle = ({
     isToggled,
     onToggle,
     children,
-    clsName
+    clsName,
 }: {
     isToggled: boolean;
     onToggle: () => void;

@@ -3,14 +3,11 @@ import Eventline from 'app/components/eventline/Eventline';
 import Event from 'app/components/eventline/Event';
 import EkspanderbarSnakkeboble from 'app/components/ekspanderbar-snakkeboble/EkspanderbarSnakkeboble';
 import Innhold, { getSource } from 'app/utils/innhold/Innhold';
-import { injectIntl, InjectedIntl } from 'react-intl';
+import { useIntl } from 'react-intl';
 import getTranslation from 'app/utils/i18nUtils';
 
-interface Props {
-    intl: InjectedIntl;
-}
-
-const InfoBareMorHarRett: FunctionComponent<Props> = ({ intl }) => {
+const InfoBareMorHarRett: FunctionComponent = () => {
+    const intl = useIntl();
     const kalender = require('../../assets/planlegge.svg').default;
     const morBrev = require('../../assets/foreldre/mor1-brev.svg').default;
     const inntektsOpplysninger = require('../../assets/inntektsopplysninger.svg').default;
@@ -54,4 +51,4 @@ const InfoBareMorHarRett: FunctionComponent<Props> = ({ intl }) => {
     );
 };
 
-export default injectIntl(InfoBareMorHarRett);
+export default InfoBareMorHarRett;

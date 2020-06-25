@@ -2,16 +2,15 @@ import React, { FunctionComponent, useState } from 'react';
 import BEMHelper from '../../utils/bem';
 import Sidebanner from '../../components/sidebanner/Sidebanner';
 import Breadcrumbs from '../../components/breadcrumbs/Breadcrumbs';
-import { injectIntl } from 'react-intl';
+import { useIntl } from 'react-intl';
 import Valg from './komponenter/valg/Valg';
 import PanelMedIllustrasjon from '../../components/panel-med-illustrasjon/PanelMedIllustrasjon';
 
 import './veiviser.less';
 import SvgMask from '../../components/svg-mask/SvgMask';
 import getTranslation from 'app/utils/i18nUtils';
-import * as CSSTransition from 'react-transition-group/CSSTransition';
+import CSSTransition from 'react-transition-group/CSSTransition';
 import NavigasjonsBoks from './komponenter/valg/komponenter/NavigasjonsBoks';
-import InjectedIntl = ReactIntl.InjectedIntl;
 
 const signSVG = require('../../assets/ark/ark-veiviser.svg').default;
 
@@ -20,25 +19,25 @@ const cls = BEMHelper('veiviser');
 const faner = [
     {
         label: 'veiviser.fane.mor',
-        icon: 'mor2'
+        icon: 'mor2',
     },
     {
         label: 'veiviser.fane.far',
-        icon: 'far1'
+        icon: 'far1',
     },
     {
         label: 'veiviser.fane.medmor',
-        icon: 'medmor2'
-    }
+        icon: 'medmor2',
+    },
 ];
 
 interface Props {
     location: any;
-    intl: InjectedIntl;
 }
 
-const Veiviser: FunctionComponent<Props> = ({ location, intl }) => {
+const Veiviser: FunctionComponent<Props> = ({ location }) => {
     const [visResultat, toggleResultat] = useState(false);
+    const intl = useIntl();
 
     const onToggle = (resultatVerdi: boolean) => () => {
         toggleResultat(resultatVerdi);
@@ -76,4 +75,4 @@ const Veiviser: FunctionComponent<Props> = ({ location, intl }) => {
     );
 };
 
-export default injectIntl(Veiviser);
+export default Veiviser;

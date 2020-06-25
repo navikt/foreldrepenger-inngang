@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { InjectedIntlProps, injectIntl } from 'react-intl';
+import { useIntl } from 'react-intl';
 import BEMHelper from '../../../utils/bem';
 import classnames from 'classnames';
 import getTranslation from 'app/utils/i18nUtils';
@@ -21,7 +21,9 @@ interface Props {
     mos?: boolean;
 }
 
-const Fane: React.StatelessComponent<Props & InjectedIntlProps> = ({ tab, isSelected, onSelect, mos, intl }) => {
+const Fane: React.StatelessComponent<Props> = ({ tab, isSelected, onSelect, mos }) => {
+    const intl = useIntl();
+
     return (
         <button
             tabIndex={0}
@@ -31,7 +33,7 @@ const Fane: React.StatelessComponent<Props & InjectedIntlProps> = ({ tab, isSele
             onKeyPress={onSelect}
             className={classnames(cls.block, {
                 [cls.modifier('selected')]: isSelected,
-                [cls.modifier('most')]: mos
+                [cls.modifier('most')]: mos,
             })}
         >
             <div className={cls.element('inner')}>
@@ -43,4 +45,4 @@ const Fane: React.StatelessComponent<Props & InjectedIntlProps> = ({ tab, isSele
     );
 };
 
-export default injectIntl(Fane);
+export default Fane;

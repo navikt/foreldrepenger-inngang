@@ -1,6 +1,6 @@
 import React from 'react';
 import BEMHelper from '../../../../utils/bem';
-import { injectIntl, InjectedIntlProps } from 'react-intl';
+import { injectIntl, IntlShape } from 'react-intl';
 import TypografiBase from 'nav-frontend-typografi';
 import Innhold, { getSource } from 'app/utils/innhold/Innhold';
 import { RadioPanel, Input } from 'nav-frontend-skjema';
@@ -31,7 +31,7 @@ const sprmalMor = [
     'veiviser.valg.spørsmål.mor.tre',
     'veiviser.valg.spørsmål.mor.fire',
     'veiviser.valg.spørsmål.mor.fem',
-    'veiviser.valg.spørsmål.mor.seks'
+    'veiviser.valg.spørsmål.mor.seks',
 ];
 
 const sprmalFarMedmor = [
@@ -40,7 +40,7 @@ const sprmalFarMedmor = [
     'veiviser.valg.spørsmål.far.tre',
     'veiviser.valg.spørsmål.far.fire',
     'veiviser.valg.spørsmål.far.fem',
-    'veiviser.valg.spørsmål.far.seks'
+    'veiviser.valg.spørsmål.far.seks',
 ];
 
 const svarMor = [
@@ -49,7 +49,7 @@ const svarMor = [
     ['veiviser.valg.svar.mor.tre.ja', 'veiviser.valg.svar.mor.tre.nei'],
     ['veiviser.valg.svar.mor.fire.ja', 'veiviser.valg.svar.mor.fire.nei'],
     ['veiviser.valg.svar.mor.fem.ja', 'veiviser.valg.svar.mor.fem.nei'],
-    ['veiviser.valg.svar.mor.seks.ja', 'veiviser.valg.svar.mor.seks.nei']
+    ['veiviser.valg.svar.mor.seks.ja', 'veiviser.valg.svar.mor.seks.nei'],
 ];
 
 const svarFarMedmor = [
@@ -58,7 +58,7 @@ const svarFarMedmor = [
     ['veiviser.valg.svar.far.tre.ja', 'veiviser.valg.svar.far.tre.nei'],
     ['veiviser.valg.svar.far.fire.ja', 'veiviser.valg.svar.far.fire.nei'],
     ['veiviser.valg.svar.far.fem.ja', 'veiviser.valg.svar.far.fem.nei'],
-    ['veiviser.valg.svar.far.seks.ja', 'veiviser.valg.svar.far.seks.nei']
+    ['veiviser.valg.svar.far.seks.ja', 'veiviser.valg.svar.far.seks.nei'],
 ];
 
 interface TabContent {
@@ -84,7 +84,11 @@ interface State {
     resultFade: boolean;
 }
 
-type Props = InjectedIntlProps & TabContent;
+interface InjectedProps {
+    intl: IntlShape;
+}
+
+type Props = InjectedProps & TabContent;
 
 class Valg extends React.Component<Props, State> {
     static goToSection(id: string): any {
@@ -113,7 +117,7 @@ class Valg extends React.Component<Props, State> {
                 [false, false],
                 [false, false],
                 [false, false],
-                [false, false]
+                [false, false],
             ],
             valg: [], // valg : listen som blir mappet i render
             items: [], // radiopanel list som blir mappet inne i valg list
@@ -126,7 +130,7 @@ class Valg extends React.Component<Props, State> {
             loadingSpinner: false,
             buttonCls: '',
             inntektCls: '',
-            resultFade: true
+            resultFade: true,
         };
     }
 
@@ -158,7 +162,7 @@ class Valg extends React.Component<Props, State> {
                     antallRader: 0,
                     result: [],
                     inntektCls: 'item--gone',
-                    resultFade: true
+                    resultFade: true,
                 },
                 () =>
                     this.insertBoxes(
@@ -198,7 +202,7 @@ class Valg extends React.Component<Props, State> {
                 sprmal: getTranslation(sprmalMor[input], this.props.intl),
                 svar1: getTranslation(svarMor[input][0], this.props.intl),
                 svar2: getTranslation(svarMor[input][1], this.props.intl),
-                obj: newItem
+                obj: newItem,
             });
         } else {
             list = valgListe;
@@ -210,7 +214,7 @@ class Valg extends React.Component<Props, State> {
                 sprmal: getTranslation(sprmalFarMedmor[input], this.props.intl),
                 svar1: getTranslation(svarFarMedmor[input][0], this.props.intl),
                 svar2: getTranslation(svarFarMedmor[input][1], this.props.intl),
-                obj: newItem
+                obj: newItem,
             });
         }
         this.setState({ valg: list });
@@ -225,7 +229,7 @@ class Valg extends React.Component<Props, State> {
             rad: radNummer,
             con: content,
             checkbox: ischeckbox,
-            sprmal: getTranslation(sprmalMor[input], this.props.intl)
+            sprmal: getTranslation(sprmalMor[input], this.props.intl),
         });
         this.setState({ valg: list, inntektCls: 'item--gone' });
     }
@@ -262,7 +266,7 @@ class Valg extends React.Component<Props, State> {
                 inntektCls: '',
                 valg: tmpItems,
                 checkbox: checked,
-                result: []
+                result: [],
             });
         } else {
             const initValue = e.target.value;
@@ -281,7 +285,7 @@ class Valg extends React.Component<Props, State> {
             this.setState({
                 loadingSpinner: false,
                 buttonCls: 'item--gone',
-                inntektCls: 'item-appear'
+                inntektCls: 'item-appear',
             });
         }, 750);
     };
@@ -296,7 +300,7 @@ class Valg extends React.Component<Props, State> {
                 valgIndex: this.state.teller,
                 name: getTranslation(value, this.props.intl),
                 label: getTranslation(value, this.props.intl),
-                onChange: () => this.checkRow(checkBoxNivaa, i, radNummer)
+                onChange: () => this.checkRow(checkBoxNivaa, i, radNummer),
             };
         }
         this.initItem(nyttValg, this.state.teller, newItem, radNummer, true, dropdown);
@@ -759,7 +763,7 @@ class Valg extends React.Component<Props, State> {
                                     {getTranslation(fane.label, this.props.intl)}
                                 </div>
                             ),
-                            onClick: this.updateToggle[index]
+                            onClick: this.updateToggle[index],
                         }))}
                         onChange={this.updateToggle}
                     />

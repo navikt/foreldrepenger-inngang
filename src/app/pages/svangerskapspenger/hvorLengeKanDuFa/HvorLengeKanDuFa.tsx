@@ -1,5 +1,5 @@
 import React from 'react';
-import { InjectedIntlProps, injectIntl } from 'react-intl';
+import { useIntl } from 'react-intl';
 import PanelMedIllustrasjon from '../../../components/panel-med-illustrasjon/PanelMedIllustrasjon';
 import getTranslation from '../../../utils/i18nUtils';
 import Innhold, { getSource } from '../../../utils/innhold/Innhold';
@@ -10,7 +10,9 @@ interface Props {
     id: string;
 }
 
-const HvorLengeKanDuFa: React.StatelessComponent<Props & InjectedIntlProps> = ({ id, intl }) => {
+const HvorLengeKanDuFa: React.StatelessComponent<Props> = ({ id }) => {
+    const intl = useIntl();
+
     return (
         <PanelMedIllustrasjon
             id={id}
@@ -22,4 +24,4 @@ const HvorLengeKanDuFa: React.StatelessComponent<Props & InjectedIntlProps> = ({
     );
 };
 
-export default injectIntl(HvorLengeKanDuFa);
+export default HvorLengeKanDuFa;

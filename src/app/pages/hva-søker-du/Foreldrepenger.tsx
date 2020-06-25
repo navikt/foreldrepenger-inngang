@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { injectIntl, InjectedIntlProps } from 'react-intl';
+import { useIntl } from 'react-intl';
 import ButtonPanel from './button-panel/ButtonPanel';
 import Environment from 'app/Environment';
 import getTranslation from 'app/utils/i18nUtils';
@@ -8,7 +8,9 @@ import PanelMedTittel from '../../components/panel-med-tittel/PanelMedTittel';
 import Innhold, { getSource } from 'app/utils/innhold/Innhold';
 import UserHelpAlternativ from './user-help-alternativ/UserHelpAlternativ';
 
-const Foreldrepenger: React.StatelessComponent<InjectedIntlProps> = ({ intl }) => {
+const Foreldrepenger: React.StatelessComponent = () => {
+    const intl = useIntl();
+
     return (
         <PanelMedTittel title={getTranslation('hva_søker_du.foreldrepenger.tittel', intl)}>
             <Innhold source={getSource('hva-søker-du/foreldrepenger', intl)} />
@@ -16,12 +18,12 @@ const Foreldrepenger: React.StatelessComponent<InjectedIntlProps> = ({ intl }) =
                 button={{
                     text: getTranslation('hva_søker_du.søk_foreldrepenger', intl),
                     url: Environment.SOK_FORELDREPENGER_URL,
-                    external: true
+                    external: true,
                 }}
                 secondButton={{
                     text: getTranslation('hva_søker_du.ettersend_vedlegg', intl),
                     url: Environment.DINE_FORELDREPENGER_URL,
-                    external: true
+                    external: true,
                 }}
                 alternativHelpSection={
                     <UserHelpAlternativ
@@ -36,4 +38,4 @@ const Foreldrepenger: React.StatelessComponent<InjectedIntlProps> = ({ intl }) =
     );
 };
 
-export default injectIntl(Foreldrepenger);
+export default Foreldrepenger;
