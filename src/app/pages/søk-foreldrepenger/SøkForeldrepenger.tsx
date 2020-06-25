@@ -87,8 +87,8 @@ const SøkForeldrepenger: React.FunctionComponent<Props> = () => {
         setValgtSituasjon(valgtSituasjon);
     };
 
-    const onOversiktToggle = (valgtProsess: any) => {
-        setValgtProsess(valgtProsess);
+    const onOversiktToggle = (vp: any) => {
+        setValgtProsess(vp);
     };
 
     return (
