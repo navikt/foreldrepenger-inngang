@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { IntlProvider as Provider } from 'react-intl';
 import moment from 'moment';
+import areIntlLocalesSupported from 'intl-locales-supported';
 
 import enMessages from './locales/en_GB.json';
 import nnMessages from './locales/nn_NO.json';
@@ -10,6 +11,18 @@ export type Language = 'nb' | 'nn' | 'en';
 
 interface StateProps {
     language: Language;
+}
+
+const localesMyAppSupports = ['nb-NO'];
+
+if (global.Intl) {
+    if (!areIntlLocalesSupported(localesMyAppSupports)) {
+        const IntlPolyfill = require('intl');
+        Intl.NumberFormat = IntlPolyfill.NumberFormat;
+        Intl.DateTimeFormat = IntlPolyfill.DateTimeFormat;
+    }
+} else {
+    global.Intl = require('intl');
 }
 
 moment.locale('nb');

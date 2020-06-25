@@ -11,10 +11,6 @@ import './styles/index.less';
 
 const root = document.getElementById('app');
 
-if (typeof (Intl.NumberFormat as any).__addLocaleData === 'function') {
-    (Intl.NumberFormat as any).__addLocaleData(require('@formatjs/intl-numberformat/dist/locale-data/nb.json'));
-}
-
 if (!Intl.PluralRules) {
     require('@formatjs/intl-pluralrules/polyfill');
     require('@formatjs/intl-pluralrules/dist/locale-data/nb');
