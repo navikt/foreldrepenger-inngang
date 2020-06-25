@@ -10,7 +10,7 @@ interface Props {
     id: string;
 }
 
-const Adopjson: React.StatelessComponent<Props> = ({ id }) => {
+const Adopsjon: React.StatelessComponent<Props> = ({ id }) => {
     const intl = useIntl();
 
     return (
@@ -24,4 +24,4 @@ const Adopjson: React.StatelessComponent<Props> = ({ id }) => {
     );
 };
 
-export default Adopjson;
+export default Adopsjon;
