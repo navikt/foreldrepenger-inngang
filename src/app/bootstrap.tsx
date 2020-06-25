@@ -11,6 +11,11 @@ import './styles/index.less';
 
 const root = document.getElementById('app');
 
+if (!Intl.PluralRules) {
+    require('@formatjs/intl-pluralrules/polyfill');
+    require('@formatjs/intl-pluralrules/dist/locale-data/nb');
+}
+
 Sentry.init({
     dsn: 'https://94b48adfe3f54da89bba5e481e3c0f31@sentry.gc.nav.no/5',
     environment: window.location.hostname,
