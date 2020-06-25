@@ -37,14 +37,14 @@ const startServer = (html) => {
     server.use('/dist/assets', express.static(path.join(__dirname, 'dist/assets')));
     server.use('/sitemap.xml', express.static(path.join(__dirname, 'dist/sitemap.xml')));
 
-    server.get(['/dist/js/settings.js'], (req, res) => {
+    server.get(['/dist/js/settings.js'], (_req, res) => {
         res.sendFile(path.resolve(`../../dist/js/settings.js`));
     });
 
-    server.get('/health/isAlive', (req, res) => res.sendStatus(200));
-    server.get('/health/isReady', (req, res) => res.sendStatus(200));
+    server.get('/health/isAlive', (_req, res) => res.sendStatus(200));
+    server.get('/health/isReady', (_req, res) => res.sendStatus(200));
 
-    server.get(/^\/(?!.*dist).*$/, (req, res) => {
+    server.get(/^\/(?!.*dist).*$/, (_req, res) => {
         res.send(html);
     });
 
@@ -64,7 +64,7 @@ server.set('view engine', 'mustache');
 server.engine('html', mustacheExpress());
 server.use(morgan('tiny'));
 
-server.use((req, res, next) => {
+server.use((_req, res, next) => {
     res.removeHeader('X-Powered-By');
     res.set('X-Frame-Options', 'SAMEORIGIN');
     res.set('X-XSS-Protection', '1; mode=block');

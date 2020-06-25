@@ -6,7 +6,7 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = merge(common, {
@@ -20,7 +20,19 @@ module.exports = merge(common, {
         rules: [
             {
                 test: /\.less$/,
-                use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader', 'less-loader'],
+                use: [
+                    {
+                        loader: MiniCssExtractPlugin.loader,
+                        options: {
+                            publicPath: (resourcePath, context) => {
+                                return path.relative(path.dirname(resourcePath), context) + '/';
+                            },
+                        },
+                    },
+                    'css-loader',
+                    'postcss-loader',
+                    'less-loader',
+                ],
             },
         ],
     },
@@ -37,9 +49,7 @@ module.exports = merge(common, {
         },
     },
     plugins: [
-        new CleanWebpackPlugin(['dist'], {
-            root: `${__dirname}/../../../`,
-        }),
+        new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
             template: `${__dirname}/../../app/index.html`,
             inject: 'body',
@@ -48,22 +58,18 @@ module.exports = merge(common, {
             sourceMap: true,
             uglifyOptions: {
                 mangle: {
-                    keep_classnames: true,
                     keep_fnames: true,
                 },
                 compress: {
                     keep_fnames: true,
-                    keep_classnames: true,
                 },
             },
         }),
         new MiniCssExtractPlugin({
             filename: 'css/[name].[contenthash].css',
             chunkFilename: 'css/[name].[contenthash].css',
-            disable: false,
-            allChunks: true,
         }),
         new CompressionPlugin(),
-        new CopyWebpackPlugin([{ from: path.resolve(__dirname, './../../../static'), to: '.' }]),
+        new CopyWebpackPlugin({ patterns: [{ from: path.resolve(__dirname, './../../../static'), to: '.' }] }),
     ],
 });
