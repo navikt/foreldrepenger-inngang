@@ -37,7 +37,8 @@ const SlikSokerDu: React.StatelessComponent<Props> = ({ intl, id }) => {
             className={cls.block}
             id={id}
             title={getTranslation('om_svangerskapspenger.slikSokerDu.tittel', intl)}
-            svg={seksjonsBilde}>
+            svg={seksjonsBilde}
+        >
             <div>
                 <Innhold source={getSource('svangerskapspenger/slik-soker-du/ingress', intl)} />
             </div>

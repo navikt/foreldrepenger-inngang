@@ -14,7 +14,8 @@ const HvaKanDuFå: React.StatelessComponent<Props> = ({ id, intl }) => (
     <PanelMedIllustrasjon
         id={id}
         title={getTranslation('om_engangsstønad.hva_kan_du_få.tittel', intl)}
-        svg={arbeidstakerSvg}>
+        svg={arbeidstakerSvg}
+    >
         <Innhold
             source={getSource('om-engangsstønad/hva-kan-du-få', intl)}
             values={{

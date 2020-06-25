@@ -7,8 +7,7 @@ import { addAntallUkerSomSnakkebobletittel } from './utils';
 import getTranslation from 'app/utils/i18nUtils';
 
 const content = 'om-foreldrepenger/hvor-lenge/bare-mor-har-rett/bare-mor-har-rett';
-const bareMorHarRettBeskrivelse =
-    'om-foreldrepenger/hvor-lenge/bare-mor-har-rett/bare-mor-har-rett-beskrivelse';
+const bareMorHarRettBeskrivelse = 'om-foreldrepenger/hvor-lenge/bare-mor-har-rett/bare-mor-har-rett-beskrivelse';
 const morsDel = 'om-foreldrepenger/hvor-lenge/bare-mor-har-rett/mors-del';
 
 const getInformasjonsfaner = (intl: InjectedIntl): InformasjonsfaneProps[] => [
@@ -19,12 +18,7 @@ const getInformasjonsfaner = (intl: InjectedIntl): InformasjonsfaneProps[] => [
             snakkeboble: {
                 tittel: 'til mor',
                 icon: 'mor1',
-                punkter: [
-                    getTranslation(
-                        'om_foreldrepenger.hvor_lenge.fordeling.i_tillegg_til_foreldrepenger',
-                        intl
-                    )
-                ]
+                punkter: [getTranslation('om_foreldrepenger.hvor_lenge.fordeling.i_tillegg_til_foreldrepenger', intl)]
             },
             component: <Innhold source={getSource(morsDel, intl)} />
         }
@@ -36,9 +30,7 @@ const BareMorHarRett = ({ intl }: InjectedIntlProps) => {
         <div>
             <Innhold source={getSource(content, intl)} />
             <Informasjonsfaner
-                tabs={getInformasjonsfaner(intl).map(
-                    addAntallUkerSomSnakkebobletittel('bareMorHarRett', intl)
-                )}
+                tabs={getInformasjonsfaner(intl).map(addAntallUkerSomSnakkebobletittel('bareMorHarRett', intl))}
             />
             <Innhold source={getSource(bareMorHarRettBeskrivelse, intl)} />
         </div>

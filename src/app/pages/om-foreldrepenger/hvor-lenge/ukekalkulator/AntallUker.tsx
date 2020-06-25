@@ -49,11 +49,10 @@ const AntallUker: React.StatelessComponent<Props & InjectedIntlProps> = ({
                 aria-label={ariaLabel}
                 onClick={onSelect}
                 onKeyPress={onSelect}
-                className={combinedClassnames}>
+                className={combinedClassnames}
+            >
                 <TypografiBase type="element">{numberOfWeeks}</TypografiBase>
-                {isSelected && (
-                    <TypografiBase type="undertekst">{getTranslation('uker', intl)}</TypografiBase>
-                )}
+                {isSelected && <TypografiBase type="undertekst">{getTranslation('uker', intl)}</TypografiBase>}
             </div>
         </div>
     );

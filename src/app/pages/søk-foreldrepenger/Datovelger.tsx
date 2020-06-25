@@ -25,10 +25,7 @@ const Datovelger: StatelessComponent<Props & InjectedIntlProps> = ({
     intl
 }) => {
     return (
-        <div
-            aria-label="Datovelger"
-            aria-haspopup={true}
-            className={parentCls.element('datovelger')}>
+        <div aria-label="Datovelger" aria-haspopup={true} className={parentCls.element('datovelger')}>
             <TypografiBase type="element">
                 {getTranslation('søk_foreldrepenger.første_dag_spørsmål', intl)}
             </TypografiBase>

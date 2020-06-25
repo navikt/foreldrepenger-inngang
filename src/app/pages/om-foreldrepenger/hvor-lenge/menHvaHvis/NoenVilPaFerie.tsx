@@ -12,7 +12,8 @@ const NoenVilPaFerie: React.StatelessComponent<Props> = ({ size }) => {
             viewBox="0 0 109 109"
             version="1.1"
             xmlns="http://www.w3.org/2000/svg"
-            xmlnsXlink="http://www.w3.org/1999/xlink">
+            xmlnsXlink="http://www.w3.org/1999/xlink"
+        >
             <title>Noen vil på ferie</title>
             <defs />
             <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
@@ -27,7 +28,8 @@ const NoenVilPaFerie: React.StatelessComponent<Props> = ({ size }) => {
                                         fontSize="16"
                                         fontWeight="normal"
                                         line-spacing="22"
-                                        fill="#0067C5">
+                                        fill="#0067C5"
+                                    >
                                         <tspan x="7.14" y="44">
                                             Jeg vil på{' '}
                                         </tspan>
@@ -39,7 +41,8 @@ const NoenVilPaFerie: React.StatelessComponent<Props> = ({ size }) => {
                                         transform="translate(25.000000, 0.000000)"
                                         stroke="#0067C5"
                                         strokeLinecap="round"
-                                        strokeLinejoin="round">
+                                        strokeLinejoin="round"
+                                    >
                                         <path d="M23.5,16.4844 L17.5,16.4844 C15.049,16.4844 12.879,17.2724 11.51,18.4844" />
                                         <path d="M17.5,16.5 L14.184,8.133" />
                                         <path d="M11.6055,1.6245 L11.2365,0.6955" />

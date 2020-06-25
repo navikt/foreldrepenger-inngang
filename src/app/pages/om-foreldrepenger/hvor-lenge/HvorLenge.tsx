@@ -100,10 +100,7 @@ class HvorLenge extends React.Component<Props, State> {
 
     setAntallUtbetalingsuker = () => {
         this.setState({
-            antallUtbetalingsuker: getAntallUtbetalingsuker(
-                this.state.valgtSituasjon,
-                this.state.valgtKvote
-            )
+            antallUtbetalingsuker: getAntallUtbetalingsuker(this.state.valgtSituasjon, this.state.valgtKvote)
         });
     };
 
@@ -114,36 +111,21 @@ class HvorLenge extends React.Component<Props, State> {
             <PanelMedIllustrasjon
                 id={id}
                 title={getTranslation('om_foreldrepenger.hvor_lenge.tittel', intl)}
-                svg={infoSvg}>
+                svg={infoSvg}
+            >
                 <div className={cls.block}>
                     <Innhold source={getSource('om-foreldrepenger/hvor-lenge/ingress', intl)} />
-                    <Innholdsfaner
-                        tabs={getTabs(this.onKvoteSelected)}
-                        onSelect={this.onSituasjonSelected}
-                    />
+                    <Innholdsfaner tabs={getTabs(this.onKvoteSelected)} onSelect={this.onSituasjonSelected} />
                     <Ukekalkulator antallUtbetalingsuker={this.state.antallUtbetalingsuker} />
                     <Normaltekst>
                         <WithLink url={Page.Regelendringer}>
-                            {getTranslation(
-                                'om_foreldrepenger.hvor_lenge.regelendringer_lenke',
-                                intl
-                            )}
+                            {getTranslation('om_foreldrepenger.hvor_lenge.regelendringer_lenke', intl)}
                         </WithLink>
                         <UtvidetInformasjon
-                            lukkLabel={getTranslation(
-                                'om_foreldrepenger.prematuruker.lesmer.lukk',
-                                intl
-                            )}
-                            apneLabel={getTranslation(
-                                'om_foreldrepenger.prematuruker.lesmer',
-                                intl
-                            )}>
-                            <Innhold
-                                source={getSource(
-                                    'om-foreldrepenger/hvor-lenge/prematuruker',
-                                    intl
-                                )}
-                            />
+                            lukkLabel={getTranslation('om_foreldrepenger.prematuruker.lesmer.lukk', intl)}
+                            apneLabel={getTranslation('om_foreldrepenger.prematuruker.lesmer', intl)}
+                        >
+                            <Innhold source={getSource('om-foreldrepenger/hvor-lenge/prematuruker', intl)} />
                         </UtvidetInformasjon>
                     </Normaltekst>
                 </div>

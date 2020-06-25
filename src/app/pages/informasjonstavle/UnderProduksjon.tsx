@@ -10,7 +10,8 @@ const UnderProduksjon = ({ group }: { group: string }) => {
             height="102px"
             width="102px"
             version="1.1"
-            viewBox="0 0 102 102">
+            viewBox="0 0 102 102"
+        >
             <g fill="none" stroke="none" strokeWidth="1">
                 <g transform="translate(-658.000000, -429.000000)">
                     <g transform="translate(0.000000, 177.000000)">
@@ -35,7 +36,8 @@ const UnderProduksjon = ({ group }: { group: string }) => {
                                         fill="#FDBC6D"
                                         fontFamily="SourceSansPro-Bold, Source Sans Pro"
                                         fontSize="16"
-                                        transform="translate(60.669048, 40.669048) rotate(45.000000) translate(-60.669048, -40.669048) ">
+                                        transform="translate(60.669048, 40.669048) rotate(45.000000) translate(-60.669048, -40.669048) "
+                                    >
                                         <tspan x="29.0210476" y="46.6690476">
                                             KOMMER
                                         </tspan>

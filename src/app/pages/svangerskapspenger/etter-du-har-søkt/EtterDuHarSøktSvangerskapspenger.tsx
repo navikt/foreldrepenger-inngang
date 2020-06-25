@@ -11,18 +11,14 @@ interface Props {
     id: string;
 }
 
-const EtterDuHarSøktSvangerskapspenger: React.StatelessComponent<Props & InjectedIntlProps> = ({
-    id,
-    intl
-}) => {
+const EtterDuHarSøktSvangerskapspenger: React.StatelessComponent<Props & InjectedIntlProps> = ({ id, intl }) => {
     return (
         <PanelMedIllustrasjon
             id={id}
             title={getTranslation('om_foreldrepenger.etter_du_har_søkt.tittel', intl)}
-            svg={statusSVG}>
-            <Innhold
-                source={getSource('svangerskapspenger/etter-du-har-søkt/etter-du-har-søkt', intl)}
-            />
+            svg={statusSVG}
+        >
+            <Innhold source={getSource('svangerskapspenger/etter-du-har-søkt/etter-du-har-søkt', intl)} />
         </PanelMedIllustrasjon>
     );
 };

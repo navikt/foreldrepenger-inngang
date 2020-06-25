@@ -27,15 +27,13 @@ interface Props {
     id: string;
 }
 
-const HvemKanFåForeldrepenger: React.StatelessComponent<Props & InjectedIntlProps> = ({
-    id,
-    intl
-}) => {
+const HvemKanFåForeldrepenger: React.StatelessComponent<Props & InjectedIntlProps> = ({ id, intl }) => {
     return (
         <PanelMedIllustrasjon
             id={id}
             title={getTranslation('om_foreldrepenger.for_å_få.tittel', intl)}
-            svg={<SvgMask svg={foreldrepengerSvg} anchorToBottom={true} />}>
+            svg={<SvgMask svg={foreldrepengerSvg} anchorToBottom={true} />}
+        >
             <Innhold source={getSource('om-foreldrepenger/hvem-kan-få/ingress', intl)} />
             <div className={cls.element('kravTilForeldrepenger')}>
                 {kravTilForeldrepenger.map((krav) => (

@@ -48,11 +48,7 @@ const MerInformasjonLink = ({
     urlIsExternal?: boolean;
 }) => {
     return (
-        <WithLink
-            url={url}
-            urlIsExternal={urlIsExternal}
-            noStyling={true}
-            className={cls.element('link')}>
+        <WithLink url={url} urlIsExternal={urlIsExternal} noStyling={true} className={cls.element('link')}>
             <div>
                 <TypografiBase type="undertittel">{title}</TypografiBase>
                 <Tekstomrade>{body}</Tekstomrade>

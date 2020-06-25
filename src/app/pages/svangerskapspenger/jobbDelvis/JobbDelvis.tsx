@@ -17,11 +17,10 @@ const JobbDelvis: React.StatelessComponent<Props & InjectedIntlProps> = ({ id, i
         <PanelMedIllustrasjon
             id={id}
             title={getTranslation('om_svangerskapspenger.jobbDelvis.tittel', intl)}
-            svg={seksjonsBilde}>
+            svg={seksjonsBilde}
+        >
             <div className={cls.element('alignLeft')}>
-                <Innhold
-                    source={getSource('svangerskapspenger/jobb-delvis/informasjonstekst', intl)}
-                />
+                <Innhold source={getSource('svangerskapspenger/jobb-delvis/informasjonstekst', intl)} />
             </div>
         </PanelMedIllustrasjon>
     );

@@ -17,7 +17,8 @@ const Ferie: React.StatelessComponent<InjectedIntlProps> = ({ intl }) => {
         <PanelMedIllustrasjon
             svg={svg}
             className={cls.block}
-            title={getTranslation('om_foreldrepenger.hjelp.tittel', intl)}>
+            title={getTranslation('om_foreldrepenger.hjelp.tittel', intl)}
+        >
             <Innhold source={getSource(content, intl)} />
             <Kontaktvalg />
         </PanelMedIllustrasjon>

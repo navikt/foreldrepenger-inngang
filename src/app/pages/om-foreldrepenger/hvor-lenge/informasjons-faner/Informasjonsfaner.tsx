@@ -66,14 +66,8 @@ class Informasjonsfaner extends React.Component<Props> {
                     {this.props.title
                         ? this.props.title
                         : this.props.tabs.length > 1
-                        ? getTranslation(
-                              'om_foreldrepenger.hvor_lenge.fordeling.tittel',
-                              this.props.intl
-                          )
-                        : getTranslation(
-                              'om_foreldrepenger.hvor_lenge.fordeling.tittel_alene',
-                              this.props.intl
-                          )}
+                        ? getTranslation('om_foreldrepenger.hvor_lenge.fordeling.tittel', this.props.intl)
+                        : getTranslation('om_foreldrepenger.hvor_lenge.fordeling.tittel_alene', this.props.intl)}
                 </TypografiBase>
             </div>
             {this.props.tabs.length > 1 && (

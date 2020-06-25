@@ -30,7 +30,6 @@ const JobbeHeltid: React.StatelessComponent<InjectedIntlProps> = ({ intl }) => {
                 <MediaQuery maxWidth={575}>
                     <JegVilJobbeHeltidMobile
                         fodsel={'om_foreldrepenger.jobbe.jobbeHeltidSvg.fodsel'}
-                        forskyvning={'om_foreldrepenger.jobbe.jobbeHeltidSvg.forskyvning'}
                         jobb={'om_foreldrepenger.jobbe.jobbeHeltidSvg.jobb'}
                         sluttdato={'om_foreldrepenger.jobbe.jobbeHeltidSvg.sluttdato'}
                         uker={'om_foreldrepenger.jobbe.jobbeHeltidSvg.uker'}

@@ -2,12 +2,7 @@ import * as React from 'react';
 
 import { injectIntl, InjectedIntlProps } from 'react-intl';
 import { Resultater } from '../Kalkulator';
-import {
-    tjenerOverUtbetalingsgrensen,
-    getLastYear,
-    getUtbetalingsgrense,
-    getEnHalvG
-} from 'app/utils/beregningUtils';
+import { tjenerOverUtbetalingsgrensen, getLastYear, getUtbetalingsgrense, getEnHalvG } from 'app/utils/beregningUtils';
 import Alertstriper from 'nav-frontend-alertstriper';
 import Alternativ from '../alternativ/Alternativ';
 import BEMHelper from 'app/utils/bem';
@@ -70,9 +65,7 @@ const Resultat = ({ results, fårUtbetaling, intl }: Props) => {
 
     return (
         <div className={cls.element('flexDownwards')}>
-            <TypografiBase type="undertittel">
-                {getTranslation('kalkulator.resultat.tittel', intl)}
-            </TypografiBase>
+            <TypografiBase type="undertittel">{getTranslation('kalkulator.resultat.tittel', intl)}</TypografiBase>
 
             <Veileder fargetema="normal" ansikt="glad" kompakt={true}>
                 <Veiledermelding
@@ -84,16 +77,8 @@ const Resultat = ({ results, fårUtbetaling, intl }: Props) => {
 
             {!tjenerForLite && (
                 <output className={cls.element('resultater')}>
-                    <Alternativ
-                        percentage={100}
-                        icon={pengerIcon}
-                        monthlyWage={snittlønnPerMåned}
-                    />
-                    <Alternativ
-                        percentage={80}
-                        icon={mindrePengerIcon}
-                        monthlyWage={snittlønnPerMåned}
-                    />
+                    <Alternativ percentage={100} icon={pengerIcon} monthlyWage={snittlønnPerMåned} />
+                    <Alternativ percentage={80} icon={mindrePengerIcon} monthlyWage={snittlønnPerMåned} />
                 </output>
             )}
 

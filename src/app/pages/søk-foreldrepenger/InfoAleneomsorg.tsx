@@ -18,9 +18,7 @@ const InfoAleneomsorg: React.FunctionComponent<Props> = ({ intl }) => {
 
     return (
         <div>
-            <Undertittel>
-                {getTranslation('søke_om_foreldrepenger.aleneomsorg.morEllerFar', intl)}
-            </Undertittel>
+            <Undertittel>{getTranslation('søke_om_foreldrepenger.aleneomsorg.morEllerFar', intl)}</Undertittel>
             <div className={cls.element('radioWrapper')}>
                 <RadioPanel
                     checked={valgtForelder === 'mor'}
@@ -37,8 +35,7 @@ const InfoAleneomsorg: React.FunctionComponent<Props> = ({ intl }) => {
                     value={'far'}
                 />
             </div>
-            {valgtForelder !== undefined &&
-                (valgtForelder === 'far' ? <InfoAleneomsorgFar /> : <InfoAleneomsorgMor />)}
+            {valgtForelder !== undefined && (valgtForelder === 'far' ? <InfoAleneomsorgFar /> : <InfoAleneomsorgMor />)}
         </div>
     );
 };

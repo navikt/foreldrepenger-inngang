@@ -55,13 +55,9 @@ const getInformasjonsfaner = (intl: InjectedIntl): InformasjonsfaneProps[] => [
                 icon: <Foreldrepar firstParent="far4" secondParent="far2" variant={4} />,
                 punkter: [
                     getTranslation(
-                        getTranslation(
-                            'om_foreldrepenger.hvor_lenge.fordeling.aktivitetskrav',
-                            intl,
-                            {
-                                subjekt: getTranslation('far1', intl)
-                            }
-                        ),
+                        getTranslation('om_foreldrepenger.hvor_lenge.fordeling.aktivitetskrav', intl, {
+                            subjekt: getTranslation('far1', intl)
+                        }),
                         intl
                     )
                 ]
@@ -77,9 +73,7 @@ const FarOgFar = ({ intl }: InjectedIntlProps) => {
             <Innhold source={getSource(farOgFarContent, intl)} />
             <Informasjonsfaner
                 title={getTranslation('om_foreldrepenger.hvor_lenge.fordeling.tittel', intl)}
-                tabs={getInformasjonsfaner(intl).map(
-                    addAntallUkerSomSnakkebobletittel('farOgFar', intl)
-                )}
+                tabs={getInformasjonsfaner(intl).map(addAntallUkerSomSnakkebobletittel('farOgFar', intl))}
             />
             <Innhold source={getSource(farOgFarBeskrivelse, intl)} />
         </div>

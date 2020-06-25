@@ -42,7 +42,8 @@ const Utregning = ({ valgteSituasjoner, onSnittlønnChange, results, intl }: Pro
             {fårUtbetaling && (
                 <UtvidetInformasjon
                     apneLabel={getTranslation('kalkulator.ytelser_som_gir_rett_tittel', intl)}
-                    lukkLabel={getTranslation('kalkulator.lukk_info', intl)}>
+                    lukkLabel={getTranslation('kalkulator.lukk_info', intl)}
+                >
                     <Innhold source={getSource('kalkulator/ytelser-som-gir-rett', intl)} />
                 </UtvidetInformasjon>
             )}

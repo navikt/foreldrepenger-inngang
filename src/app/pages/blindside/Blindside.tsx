@@ -20,9 +20,7 @@ const Blindside: React.StatelessComponent<Props> = ({ history, intl }) => {
             <div role="main" className={cls.element('body')}>
                 <Tilbakeknapp goBack={history.goBack} />
                 <Veileder ansikt="glad">
-                    <TypografiBase type="normaltekst">
-                        {getTranslation('blindside.veileder', intl)}
-                    </TypografiBase>
+                    <TypografiBase type="normaltekst">{getTranslation('blindside.veileder', intl)}</TypografiBase>
                 </Veileder>
             </div>
         </div>
@@ -36,7 +34,8 @@ const Tilbakeknapp = injectIntl(({ goBack, intl }: { goBack: any; intl: Injected
             className={cls.element('tilbake')}
             onClick={() => {
                 goBack();
-            }}>
+            }}
+        >
             <VenstreChevron />
             <TypografiBase type="element">{getTranslation('tilbake', intl)}</TypografiBase>
         </div>

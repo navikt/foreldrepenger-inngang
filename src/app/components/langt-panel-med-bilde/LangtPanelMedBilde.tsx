@@ -31,7 +31,7 @@ const LangtPanelMedBilde: React.StatelessComponent<Props> = ({ svg, url, title, 
     </WithLink>
 );
 
-const Mobilversjon = ({ svg, title, body }: { svg: IconRef; title: string; body: string }) => (
+const Mobilversjon = ({ svg: _svg, title, body }: { svg: IconRef; title: string; body: string }) => (
     <div className={cls.element('flexColumn')}>
         <div className={cls.element('leftAlign')}>
             <Undertittel>{title}</Undertittel>

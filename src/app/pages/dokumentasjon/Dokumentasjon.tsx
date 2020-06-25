@@ -26,7 +26,8 @@ const Dokumentasjon: React.StatelessComponent<Props & InjectedIntlProps> = ({ lo
                     <Breadcrumbs path={location.pathname} />
                     <PanelMedIllustrasjon
                         title={getTranslation('dokumentasjon.tittel', intl)}
-                        svg={<SvgMask svg={pageSvg} />}>
+                        svg={<SvgMask svg={pageSvg} />}
+                    >
                         <Innhold source={getSource('dokumentasjon/dokumentasjon', intl)} />
                     </PanelMedIllustrasjon>
                 </article>

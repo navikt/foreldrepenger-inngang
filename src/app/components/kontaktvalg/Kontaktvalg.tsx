@@ -16,17 +16,9 @@ const telefonSvg = require('../../assets/icons/telefon.svg').default;
 
 const Kontaktvalg = ({ intl }: { intl: InjectedIntl }) => (
     <div className={cls.block}>
-        <Valg
-            icon={facebookSvg}
-            href={externalUrls.facebook}
-            label={getTranslation('facebook', intl)}
-        />
+        <Valg icon={facebookSvg} href={externalUrls.facebook} label={getTranslation('facebook', intl)} />
         <Valg icon={chatSvg} href={externalUrls.chat} label={getTranslation('chat', intl)} />
-        <Valg
-            icon={telefonSvg}
-            href={externalUrls.telefon}
-            label={getTranslation('telefon', intl)}
-        />
+        <Valg icon={telefonSvg} href={externalUrls.telefon} label={getTranslation('telefon', intl)} />
     </div>
 );
 

@@ -1,10 +1,7 @@
 import * as React from 'react';
 import { CheckboksPanelGruppe } from 'nav-frontend-skjema';
 import { InjectedIntlProps, injectIntl } from 'react-intl';
-import {
-    tjenerOverUtbetalingsgrensen,
-    tjenerForLiteForForeldrepenger
-} from 'app/utils/beregningUtils';
+import { tjenerOverUtbetalingsgrensen, tjenerForLiteForForeldrepenger } from 'app/utils/beregningUtils';
 import BEMHelper from 'app/utils/bem';
 import Breadcrumbs from 'app/components/breadcrumbs/Breadcrumbs';
 import classnames from 'classnames';
@@ -21,10 +18,7 @@ import './kalkulator.less';
 const infosiderCls = BEMHelper('infosider');
 const cls = BEMHelper('kalkulator');
 
-export type Arbeidssituasjon =
-    | 'arbeidstaker_eller_frilanser'
-    | 'utbetaling_fra_nav'
-    | 'selvstendig_næringsdrivende';
+export type Arbeidssituasjon = 'arbeidstaker_eller_frilanser' | 'utbetaling_fra_nav' | 'selvstendig_næringsdrivende';
 
 const muligeSituasjoner: Arbeidssituasjon[] = [
     'arbeidstaker_eller_frilanser',
@@ -101,9 +95,7 @@ class Kalkulator extends React.Component<InjectedIntlProps, State> {
 
         const checkboxesForSituasjoner = this.getCheckboxes();
         const harValgtSituasjon = this.state.valgteSituasjoner.length > 0;
-        const kombinasjonIkkeStøttet = this.state.valgteSituasjoner.includes(
-            'selvstendig_næringsdrivende'
-        );
+        const kombinasjonIkkeStøttet = this.state.valgteSituasjoner.includes('selvstendig_næringsdrivende');
 
         return (
             <div className={classnames(cls.block, infosiderCls.block)}>
@@ -113,11 +105,9 @@ class Kalkulator extends React.Component<InjectedIntlProps, State> {
                         <Breadcrumbs path={location.pathname} />
                         <PanelMedIllustrasjon
                             title={getTranslation('kalkulator.tittel', intl)}
-                            svg={<SvgMask svg={pengerIcon} />}>
-                            <Innhold
-                                className="blokk-s"
-                                source={getSource('kalkulator/ingress', intl)}
-                            />
+                            svg={<SvgMask svg={pengerIcon} />}
+                        >
+                            <Innhold className="blokk-s" source={getSource('kalkulator/ingress', intl)} />
                             <TypografiBase type="undertittel">
                                 {getTranslation('kalkulator.valg.tittel', intl)}
                             </TypografiBase>

@@ -7,8 +7,7 @@ import { addAntallUkerSomSnakkebobletittel } from './utils';
 import getTranslation from 'app/utils/i18nUtils';
 
 const content = 'om-foreldrepenger/hvor-lenge/bare-far-har-rett/bare-far-har-rett';
-const bareFarHarRettBeskrivelse =
-    'om-foreldrepenger/hvor-lenge/bare-far-har-rett/bare-far-har-rett-beskrivelse';
+const bareFarHarRettBeskrivelse = 'om-foreldrepenger/hvor-lenge/bare-far-har-rett/bare-far-har-rett-beskrivelse';
 const farsDel = 'om-foreldrepenger/hvor-lenge/bare-far-har-rett/fars-del';
 
 const getInformasjonsfaner = (intl: InjectedIntl): InformasjonsfaneProps[] => [
@@ -35,9 +34,7 @@ const BareFarHarRett = ({ intl }: InjectedIntlProps) => {
         <div>
             <Innhold source={getSource(content, intl)} />
             <Informasjonsfaner
-                tabs={getInformasjonsfaner(intl).map(
-                    addAntallUkerSomSnakkebobletittel('bareFarHarRett', intl)
-                )}
+                tabs={getInformasjonsfaner(intl).map(addAntallUkerSomSnakkebobletittel('bareFarHarRett', intl))}
             />
             <Innhold source={getSource(bareFarHarRettBeskrivelse, intl)} />
         </div>

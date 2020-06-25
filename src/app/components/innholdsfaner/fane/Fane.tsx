@@ -21,13 +21,7 @@ interface Props {
     mos?: boolean;
 }
 
-const Fane: React.StatelessComponent<Props & InjectedIntlProps> = ({
-    tab,
-    isSelected,
-    onSelect,
-    mos,
-    intl
-}) => {
+const Fane: React.StatelessComponent<Props & InjectedIntlProps> = ({ tab, isSelected, onSelect, mos, intl }) => {
     return (
         <button
             tabIndex={0}
@@ -38,7 +32,8 @@ const Fane: React.StatelessComponent<Props & InjectedIntlProps> = ({
             className={classnames(cls.block, {
                 [cls.modifier('selected')]: isSelected,
                 [cls.modifier('most')]: mos
-            })}>
+            })}
+        >
             <div className={cls.element('inner')}>
                 {tab.icon}
                 <TypografiBase type="normaltekst">{getTranslation(tab.label, intl)}</TypografiBase>

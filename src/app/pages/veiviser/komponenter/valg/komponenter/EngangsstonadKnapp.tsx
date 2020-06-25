@@ -24,28 +24,22 @@ const EngangsstonadKnapp = ({
     knappRightStyle: any;
     lenkeLeft: string;
     lenkeRight: string;
-    buttonHeadertxtLeft?: object;
-    buttonHeadertxtRight?: object;
+    buttonHeadertxtLeft?: any;
+    buttonHeadertxtRight?: any;
 }) => {
     return (
         <div className={resultat.element('harRettKnapp group')}>
             <div className={resultat.element('harRettKol')}>
                 {buttonHeadertxtLeft}
-                <Lenkeknapp
-                    url={lenkeLeft}
-                    type={knappLeftStyle}
-                    urlIsExternal={false}
-                    children={getTranslation(knappLeft, intl)}
-                />
+                <Lenkeknapp url={lenkeLeft} type={knappLeftStyle} urlIsExternal={false}>
+                    {getTranslation(knappLeft, intl)}
+                </Lenkeknapp>
             </div>
             <div className={resultat.element('harRettKol')}>
                 {buttonHeadertxtRight}
-                <Lenkeknapp
-                    url={lenkeRight}
-                    type={knappRightStyle}
-                    urlIsExternal={true}
-                    children={getTranslation(knappRight, intl)}
-                />
+                <Lenkeknapp url={lenkeRight} type={knappRightStyle} urlIsExternal={true}>
+                    {getTranslation(knappRight, intl)}
+                </Lenkeknapp>
             </div>
         </div>
     );

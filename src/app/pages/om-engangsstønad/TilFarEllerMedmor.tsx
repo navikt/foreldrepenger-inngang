@@ -10,10 +10,7 @@ const farSvg = require('../../assets/ark/ark-far-og-medmor.svg').default;
 type Props = EngangsstonadSectionProps & InjectedIntlProps;
 
 const TilFarEllerMedmor: React.StatelessComponent<Props> = ({ id, intl }) => (
-    <PanelMedIllustrasjon
-        id={id}
-        title={getTranslation('om_engangsstønad.til_far.tittel', intl)}
-        svg={farSvg}>
+    <PanelMedIllustrasjon id={id} title={getTranslation('om_engangsstønad.til_far.tittel', intl)} svg={farSvg}>
         <Innhold source={getSource('om-engangsstønad/far-eller-medmor', intl)} />
     </PanelMedIllustrasjon>
 );

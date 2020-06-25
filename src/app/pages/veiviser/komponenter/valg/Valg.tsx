@@ -69,13 +69,13 @@ interface TabContent {
 
 interface State {
     parentToggled: boolean[]; // holder state på parent-tabs.
-    items: object[];
-    valg: object[];
-    checkbox: object[];
+    items: any[];
+    valg: any[];
+    checkbox: any[];
     teller: number;
     antallRader: number;
     numberofCheckBoxz: number;
-    result: object[];
+    result: any[];
     inputFade: boolean;
     inputVal: string;
     loadingSpinner: boolean;
@@ -94,7 +94,7 @@ class Valg extends React.Component<Props, State> {
         }
     }
 
-    static resultatPunkt(lang: any, txt: string, tegn: string) {
+    static resultatPunkt(_lang: any, txt: string, tegn: string) {
         return <ResultatPunkt translationString={txt} tegn={tegn} />;
     }
 
@@ -130,7 +130,7 @@ class Valg extends React.Component<Props, State> {
         };
     }
 
-    updateToggle = (e: any, nr: any): void => {
+    updateToggle = (_e: any, nr: any): void => {
         if (this.toggled !== nr) {
             // hvis annen tab valgt
             this.toggled = nr;
@@ -177,12 +177,12 @@ class Valg extends React.Component<Props, State> {
     };
 
     initItem(
-        valgListe: object[],
+        valgListe: any[],
         input: number,
-        newItem: object,
+        newItem: any,
         radNummer: number,
         ischeckbox: boolean,
-        dropdownContent?: object
+        dropdownContent?: any
     ) {
         let list;
         let content;
@@ -215,16 +215,9 @@ class Valg extends React.Component<Props, State> {
         }
         this.setState({ valg: list });
     }
-    initInputField(
-        valgListe: object[],
-        input: number,
-        radNummer: number,
-        ischeckbox: boolean,
-        dropdown: object
-    ) {
-        let list;
+    initInputField(valgListe: any[], input: number, radNummer: number, ischeckbox: boolean, dropdown: any) {
         let content;
-        list = valgListe;
+        const list = valgListe;
         this.belop = 'veiviser.skrivInn.belop';
         dropdown ? (content = dropdown) : (content = <div />);
         list.push({
@@ -242,7 +235,8 @@ class Valg extends React.Component<Props, State> {
             <div className={cls.element('dropdown')}>
                 <UtvidetInformasjon
                     apneLabel={getTranslation(aapneLabel, this.props.intl)}
-                    lukkLabel={getTranslation(lukeLabel, this.props.intl)}>
+                    lukkLabel={getTranslation(lukeLabel, this.props.intl)}
+                >
                     <Innhold source={getSource(jsonContentPath, this.props.intl)} />
                 </UtvidetInformasjon>
             </div>
@@ -292,19 +286,11 @@ class Valg extends React.Component<Props, State> {
         }, 750);
     };
 
-    insertBoxes(
-        numBox: number,
-        checkBoxNivaa: number,
-        nyttValg: object[],
-        radNummer: number,
-        dropdown?: object
-    ) {
+    insertBoxes(numBox: number, checkBoxNivaa: number, nyttValg: any[], radNummer: number, dropdown?: any) {
         const newItem = [];
         let value: string;
         for (let i = 0; i < numBox; i++) {
-            value = !this.state.parentToggled[0]
-                ? svarMor[this.state.teller][i]
-                : svarFarMedmor[this.state.teller][i];
+            value = !this.state.parentToggled[0] ? svarMor[this.state.teller][i] : svarFarMedmor[this.state.teller][i];
             newItem[i] = {
                 value,
                 valgIndex: this.state.teller,
@@ -316,43 +302,27 @@ class Valg extends React.Component<Props, State> {
         this.initItem(nyttValg, this.state.teller, newItem, radNummer, true, dropdown);
     }
 
-    insertResultat(logo: object, overskrift: string, checked: object[], knappType: object) {
+    insertResultat(logo: any, overskrift: string, checked: any[], knappType: any) {
         const sjekkPunkter = [];
         let taMedAndrePunkt = false;
         if (checked[2][0]) {
             taMedAndrePunkt = true;
             sjekkPunkter.push(
-                Valg.resultatPunkt(
-                    this.props.intl,
-                    'veiviser.valg.resultat.punkt.forste.godkjent',
-                    'godkjenttegn'
-                )
+                Valg.resultatPunkt(this.props.intl, 'veiviser.valg.resultat.punkt.forste.godkjent', 'godkjenttegn')
             );
         } else {
             sjekkPunkter.push(
-                Valg.resultatPunkt(
-                    this.props.intl,
-                    'veiviser.valg.resultat.punkt.forste.underkjent',
-                    'varseltegn'
-                )
+                Valg.resultatPunkt(this.props.intl, 'veiviser.valg.resultat.punkt.forste.underkjent', 'varseltegn')
             );
         }
         if (taMedAndrePunkt) {
             if (checked[3][0]) {
                 sjekkPunkter.push(
-                    Valg.resultatPunkt(
-                        this.props.intl,
-                        'veiviser.valg.resultat.punkt.andre.godkjent',
-                        'godkjenttegn'
-                    )
+                    Valg.resultatPunkt(this.props.intl, 'veiviser.valg.resultat.punkt.andre.godkjent', 'godkjenttegn')
                 );
             } else {
                 sjekkPunkter.push(
-                    Valg.resultatPunkt(
-                        this.props.intl,
-                        'veiviser.valg.resultat.punkt.andre.underkjent',
-                        'varseltegn'
-                    )
+                    Valg.resultatPunkt(this.props.intl, 'veiviser.valg.resultat.punkt.andre.underkjent', 'varseltegn')
                 );
             }
         } else {
@@ -360,30 +330,15 @@ class Valg extends React.Component<Props, State> {
         }
         if (checked[4][0] || checked[5][0]) {
             sjekkPunkter.push(
-                Valg.resultatPunkt(
-                    this.props.intl,
-                    'veiviser.valg.resultat.punkt.tredje.godkjent',
-                    'godkjenttegn'
-                )
+                Valg.resultatPunkt(this.props.intl, 'veiviser.valg.resultat.punkt.tredje.godkjent', 'godkjenttegn')
             );
         } else {
             sjekkPunkter.push(
-                Valg.resultatPunkt(
-                    this.props.intl,
-                    'veiviser.valg.resultat.punkt.tredje.underkjent',
-                    'varseltegn'
-                )
+                Valg.resultatPunkt(this.props.intl, 'veiviser.valg.resultat.punkt.tredje.underkjent', 'varseltegn')
             );
         }
         const res = [];
-        res.push(
-            <DuHarRett
-                minLogo={logo}
-                overskrift={overskrift}
-                punkter={sjekkPunkter}
-                knapp={knappType}
-            />
-        );
+        res.push(<DuHarRett minLogo={logo} overskrift={overskrift} punkter={sjekkPunkter} knapp={knappType} />);
         if (checked[2][0] && checked[3][0] && (checked[4][0] || checked[5][0])) {
             this.props.aktivereResultatLenker();
         }
@@ -406,9 +361,7 @@ class Valg extends React.Component<Props, State> {
                     checked[i][j] = false;
                 }
             }
-            this.setState({ valg: tmpItems, checkbox: checked }, () =>
-                this.checkResult(checkBoxNiva, svar, radNiva)
-            );
+            this.setState({ valg: tmpItems, checkbox: checked }, () => this.checkResult(checkBoxNiva, svar, radNiva));
         } else {
             this.checkResult(checkBoxNiva, svar, radNiva);
         }
@@ -417,9 +370,7 @@ class Valg extends React.Component<Props, State> {
     checkResult(checkBoxNiva: number, svar: number, radNiva: number) {
         if (this.state.result.length !== 0) {
             this.props.cancelResultatLenker();
-            this.setState({ result: [], resultFade: true }, () =>
-                this.appendRow(checkBoxNiva, svar, radNiva)
-            );
+            this.setState({ result: [], resultFade: true }, () => this.appendRow(checkBoxNiva, svar, radNiva));
         } else {
             this.appendRow(checkBoxNiva, svar, radNiva);
         }
@@ -435,40 +386,36 @@ class Valg extends React.Component<Props, State> {
                 checked[checkBoxNiva][svar] = true;
                 radNiva = 1;
                 checkBoxNiva = 2;
-                this.setState(
-                    { antallRader: radNiva, teller: checkBoxNiva, checkbox: checked, inputVal: '' },
-                    () =>
-                        this.insertBoxes(
-                            this.state.numberofCheckBoxz,
-                            this.state.teller,
-                            this.state.valg,
-                            this.state.antallRader,
-                            this.getDropdown(
-                                'veiviser.valg.hjelpetekst.hattInntekt',
-                                'veiviser.valg.hjelpetekst.lukk',
-                                'veiviser/infobox/hvorfor-inntekt'
-                            )
+                this.setState({ antallRader: radNiva, teller: checkBoxNiva, checkbox: checked, inputVal: '' }, () =>
+                    this.insertBoxes(
+                        this.state.numberofCheckBoxz,
+                        this.state.teller,
+                        this.state.valg,
+                        this.state.antallRader,
+                        this.getDropdown(
+                            'veiviser.valg.hjelpetekst.hattInntekt',
+                            'veiviser.valg.hjelpetekst.lukk',
+                            'veiviser/infobox/hvorfor-inntekt'
                         )
+                    )
                 );
             } else if (svar === 1) {
                 // svar : nei
                 checked[checkBoxNiva][svar] = true;
                 radNiva = 1;
                 checkBoxNiva = 1;
-                this.setState(
-                    { antallRader: radNiva, teller: checkBoxNiva, checkbox: checked },
-                    () =>
-                        this.insertBoxes(
-                            this.state.numberofCheckBoxz,
-                            this.state.teller,
-                            this.state.valg,
-                            this.state.antallRader,
-                            this.getDropdown(
-                                'veiviser.valg.hjelpetekst.utbetalinger',
-                                'veiviser.valg.hjelpetekst.lukk',
-                                'veiviser/infobox/andre-inntektskilder'
-                            )
+                this.setState({ antallRader: radNiva, teller: checkBoxNiva, checkbox: checked }, () =>
+                    this.insertBoxes(
+                        this.state.numberofCheckBoxz,
+                        this.state.teller,
+                        this.state.valg,
+                        this.state.antallRader,
+                        this.getDropdown(
+                            'veiviser.valg.hjelpetekst.utbetalinger',
+                            'veiviser.valg.hjelpetekst.lukk',
+                            'veiviser/infobox/andre-inntektskilder'
                         )
+                    )
                 );
             }
         } else if (checkBoxNiva === 1) {
@@ -478,40 +425,36 @@ class Valg extends React.Component<Props, State> {
                 checked[checkBoxNiva][svar] = true;
                 radNiva = 2;
                 checkBoxNiva = 2;
-                this.setState(
-                    { antallRader: radNiva, teller: checkBoxNiva, checkbox: checked, inputVal: '' },
-                    () =>
-                        this.insertBoxes(
-                            this.state.numberofCheckBoxz,
-                            this.state.teller,
-                            this.state.valg,
-                            this.state.antallRader,
-                            this.getDropdown(
-                                'veiviser.valg.hjelpetekst.hattInntekt',
-                                'veiviser.valg.hjelpetekst.lukk',
-                                'veiviser/infobox/hvorfor-inntekt'
-                            )
+                this.setState({ antallRader: radNiva, teller: checkBoxNiva, checkbox: checked, inputVal: '' }, () =>
+                    this.insertBoxes(
+                        this.state.numberofCheckBoxz,
+                        this.state.teller,
+                        this.state.valg,
+                        this.state.antallRader,
+                        this.getDropdown(
+                            'veiviser.valg.hjelpetekst.hattInntekt',
+                            'veiviser.valg.hjelpetekst.lukk',
+                            'veiviser/infobox/hvorfor-inntekt'
                         )
+                    )
                 );
             } else if (svar === 1) {
                 // svar : nei
                 checked[checkBoxNiva][svar] = true;
                 radNiva = 2;
                 checkBoxNiva = 4;
-                this.setState(
-                    { antallRader: radNiva, teller: checkBoxNiva, checkbox: checked },
-                    () =>
-                        this.insertBoxes(
-                            this.state.numberofCheckBoxz,
-                            this.state.teller,
-                            this.state.valg,
-                            this.state.antallRader,
-                            this.getDropdown(
-                                'veiviser.valg.hjelpetekst.medlemskap',
-                                'veiviser.valg.hjelpetekst.lukk',
-                                'veiviser/infobox/til-medlemskap'
-                            )
+                this.setState({ antallRader: radNiva, teller: checkBoxNiva, checkbox: checked }, () =>
+                    this.insertBoxes(
+                        this.state.numberofCheckBoxz,
+                        this.state.teller,
+                        this.state.valg,
+                        this.state.antallRader,
+                        this.getDropdown(
+                            'veiviser.valg.hjelpetekst.medlemskap',
+                            'veiviser.valg.hjelpetekst.lukk',
+                            'veiviser/infobox/til-medlemskap'
                         )
+                    )
                 );
             }
         } else if (checkBoxNiva === 2) {
@@ -521,40 +464,36 @@ class Valg extends React.Component<Props, State> {
                 checked[checkBoxNiva][svar] = true;
                 checked[0][0] ? (radNiva = 2) : (radNiva = 3);
                 checkBoxNiva = 3;
-                this.setState(
-                    { antallRader: radNiva, teller: checkBoxNiva, checkbox: checked, inputVal: '' },
-                    () =>
-                        this.initInputField(
-                            this.state.valg,
-                            this.state.teller,
-                            this.state.antallRader,
-                            false,
-                            this.getDropdown(
-                                'veiviser.valg.hjelpetekst.mndInntekt',
-                                'veiviser.valg.hjelpetekst.lukk',
-                                'veiviser/infobox/til-manedsinntekt'
-                            )
+                this.setState({ antallRader: radNiva, teller: checkBoxNiva, checkbox: checked, inputVal: '' }, () =>
+                    this.initInputField(
+                        this.state.valg,
+                        this.state.teller,
+                        this.state.antallRader,
+                        false,
+                        this.getDropdown(
+                            'veiviser.valg.hjelpetekst.mndInntekt',
+                            'veiviser.valg.hjelpetekst.lukk',
+                            'veiviser/infobox/til-manedsinntekt'
                         )
+                    )
                 );
             } else if (svar === 1) {
                 // svar : nei
                 checked[checkBoxNiva][svar] = true;
                 checked[0][0] ? (radNiva = 2) : (radNiva = 3);
                 checkBoxNiva = 4;
-                this.setState(
-                    { antallRader: radNiva, teller: checkBoxNiva, checkbox: checked },
-                    () =>
-                        this.insertBoxes(
-                            this.state.numberofCheckBoxz,
-                            this.state.teller,
-                            this.state.valg,
-                            this.state.antallRader,
-                            this.getDropdown(
-                                'veiviser.valg.hjelpetekst.medlemskap',
-                                'veiviser.valg.hjelpetekst.lukk',
-                                'veiviser/infobox/til-medlemskap'
-                            )
+                this.setState({ antallRader: radNiva, teller: checkBoxNiva, checkbox: checked }, () =>
+                    this.insertBoxes(
+                        this.state.numberofCheckBoxz,
+                        this.state.teller,
+                        this.state.valg,
+                        this.state.antallRader,
+                        this.getDropdown(
+                            'veiviser.valg.hjelpetekst.medlemskap',
+                            'veiviser.valg.hjelpetekst.lukk',
+                            'veiviser/infobox/til-medlemskap'
                         )
+                    )
                 );
             }
         } else if (checkBoxNiva === 3) {
@@ -565,20 +504,18 @@ class Valg extends React.Component<Props, State> {
                 checked[checkBoxNiva][1] = false;
                 checked[0][0] ? (radNiva = 3) : (radNiva = 4);
                 checkBoxNiva = 4;
-                this.setState(
-                    { antallRader: radNiva, teller: checkBoxNiva, checkbox: checked },
-                    () =>
-                        this.insertBoxes(
-                            this.state.numberofCheckBoxz,
-                            this.state.teller,
-                            this.state.valg,
-                            this.state.antallRader,
-                            this.getDropdown(
-                                'veiviser.valg.hjelpetekst.medlemskap',
-                                'veiviser.valg.hjelpetekst.lukk',
-                                'veiviser/infobox/til-medlemskap'
-                            )
+                this.setState({ antallRader: radNiva, teller: checkBoxNiva, checkbox: checked }, () =>
+                    this.insertBoxes(
+                        this.state.numberofCheckBoxz,
+                        this.state.teller,
+                        this.state.valg,
+                        this.state.antallRader,
+                        this.getDropdown(
+                            'veiviser.valg.hjelpetekst.medlemskap',
+                            'veiviser.valg.hjelpetekst.lukk',
+                            'veiviser/infobox/til-medlemskap'
                         )
+                    )
                 );
             } else if (svar === 1) {
                 // svar : nei
@@ -588,20 +525,18 @@ class Valg extends React.Component<Props, State> {
                 checked[0][0] ? (radNiva = 3) : (radNiva = 4);
 
                 checkBoxNiva = 4;
-                this.setState(
-                    { antallRader: radNiva, teller: checkBoxNiva, checkbox: checked },
-                    () =>
-                        this.insertBoxes(
-                            this.state.numberofCheckBoxz,
-                            this.state.teller,
-                            this.state.valg,
-                            this.state.antallRader,
-                            this.getDropdown(
-                                'veiviser.valg.hjelpetekst.medlemskap',
-                                'veiviser.valg.hjelpetekst.lukk',
-                                'veiviser/infobox/til-medlemskap'
-                            )
+                this.setState({ antallRader: radNiva, teller: checkBoxNiva, checkbox: checked }, () =>
+                    this.insertBoxes(
+                        this.state.numberofCheckBoxz,
+                        this.state.teller,
+                        this.state.valg,
+                        this.state.antallRader,
+                        this.getDropdown(
+                            'veiviser.valg.hjelpetekst.medlemskap',
+                            'veiviser.valg.hjelpetekst.lukk',
+                            'veiviser/infobox/til-medlemskap'
                         )
+                    )
                 );
             }
         } else if (checkBoxNiva === 4) {
@@ -614,80 +549,68 @@ class Valg extends React.Component<Props, State> {
                 ++radNiva;
                 if (checked[2][0] && checked[3][0]) {
                     // har hatt inntekt / annen inntekt + over 6mnd + over 49 929
-                    this.setState(
-                        { antallRader: radNiva, teller: checkBoxNiva, checkbox: checked },
-                        () =>
-                            this.insertResultat(
-                                <Logo />,
-                                'veiviser.valg.resultat.overskrift.foreldrepenger',
-                                checked,
+                    this.setState({ antallRader: radNiva, teller: checkBoxNiva, checkbox: checked }, () =>
+                        this.insertResultat(
+                            <Logo />,
+                            'veiviser.valg.resultat.overskrift.foreldrepenger',
+                            checked,
 
-                                <MainKnapp
-                                    knappType={'hoved'}
-                                    txt={'veiviser.valg.resultat.knapp.foreldrepenger'}
-                                    url={Environment.SOK_FORELDREPENGER_URL}
-                                />
-                            )
+                            <MainKnapp
+                                knappType={'hoved'}
+                                txt={'veiviser.valg.resultat.knapp.foreldrepenger'}
+                                url={Environment.SOK_FORELDREPENGER_URL}
+                            />
+                        )
                     );
                 } else {
                     // mangel på enten inntekt siste 6mnd eller inntekt over 49 929
                     if (!this.state.parentToggled[0]) {
-                        this.setState(
-                            { antallRader: radNiva, teller: checkBoxNiva, checkbox: checked },
-                            () =>
-                                this.insertResultat(
-                                    <Logo />,
-                                    'veiviser.valg.resultat.overskrift.Engangsstonad.mor',
-                                    checked,
-                                    <EngangsstonadKnapp
-                                        knappLeft={
-                                            'veiviser.valg.resultat.knapp.engangsstonad.info'
-                                        }
-                                        knappRight={'veiviser.valg.resultat.knapp.engangsstonad'}
-                                        knappLeftStyle={'standard'}
-                                        knappRightStyle={'hoved'}
-                                        lenkeLeft={Page.OmEngangsstønad}
-                                        lenkeRight={'https://engangsstonad.nav.no'}
-                                    />
-                                )
+                        this.setState({ antallRader: radNiva, teller: checkBoxNiva, checkbox: checked }, () =>
+                            this.insertResultat(
+                                <Logo />,
+                                'veiviser.valg.resultat.overskrift.Engangsstonad.mor',
+                                checked,
+                                <EngangsstonadKnapp
+                                    knappLeft={'veiviser.valg.resultat.knapp.engangsstonad.info'}
+                                    knappRight={'veiviser.valg.resultat.knapp.engangsstonad'}
+                                    knappLeftStyle={'standard'}
+                                    knappRightStyle={'hoved'}
+                                    lenkeLeft={Page.OmEngangsstønad}
+                                    lenkeRight={'https://engangsstonad.nav.no'}
+                                />
+                            )
                         );
                     } else {
-                        this.setState(
-                            { antallRader: radNiva, teller: checkBoxNiva, checkbox: checked },
-                            () =>
-                                this.insertResultat(
-                                    <Logo />,
-                                    'veiviser.valg.resultat.overskrift.Engangsstonad',
-                                    checked,
-                                    <EngangsstonadKnapp
-                                        knappLeft={
-                                            'veiviser.valg.resultat.knapp.engangsstonad.info'
-                                        }
-                                        knappRight={
-                                            'veiviser.valg.resultat.knapp.lesOmForeldrepenger'
-                                        }
-                                        knappRightStyle={'standard'}
-                                        knappLeftStyle={'standard'}
-                                        lenkeLeft={Page.OmEngangsstønad}
-                                        lenkeRight={Page.OmForeldrepenger}
-                                        buttonHeadertxtLeft={
-                                            <TypografiBase type={'normaltekst'}>
-                                                {getTranslation(
-                                                    'veiviser.valg.resultat.engangsstonad.headertxt',
-                                                    this.props.intl
-                                                )}{' '}
-                                            </TypografiBase>
-                                        }
-                                        buttonHeadertxtRight={
-                                            <TypografiBase type={'normaltekst'}>
-                                                {getTranslation(
-                                                    'veiviser.valg.resultat.foreldrepenger.headertxt',
-                                                    this.props.intl
-                                                )}{' '}
-                                            </TypografiBase>
-                                        }
-                                    />
-                                )
+                        this.setState({ antallRader: radNiva, teller: checkBoxNiva, checkbox: checked }, () =>
+                            this.insertResultat(
+                                <Logo />,
+                                'veiviser.valg.resultat.overskrift.Engangsstonad',
+                                checked,
+                                <EngangsstonadKnapp
+                                    knappLeft={'veiviser.valg.resultat.knapp.engangsstonad.info'}
+                                    knappRight={'veiviser.valg.resultat.knapp.lesOmForeldrepenger'}
+                                    knappRightStyle={'standard'}
+                                    knappLeftStyle={'standard'}
+                                    lenkeLeft={Page.OmEngangsstønad}
+                                    lenkeRight={Page.OmForeldrepenger}
+                                    buttonHeadertxtLeft={
+                                        <TypografiBase type={'normaltekst'}>
+                                            {getTranslation(
+                                                'veiviser.valg.resultat.engangsstonad.headertxt',
+                                                this.props.intl
+                                            )}{' '}
+                                        </TypografiBase>
+                                    }
+                                    buttonHeadertxtRight={
+                                        <TypografiBase type={'normaltekst'}>
+                                            {getTranslation(
+                                                'veiviser.valg.resultat.foreldrepenger.headertxt',
+                                                this.props.intl
+                                            )}{' '}
+                                        </TypografiBase>
+                                    }
+                                />
+                            )
                         );
                     }
                 }
@@ -696,20 +619,18 @@ class Valg extends React.Component<Props, State> {
                 checked[checkBoxNiva][svar] = true;
                 ++radNiva;
                 checkBoxNiva = 5;
-                this.setState(
-                    { antallRader: radNiva, teller: checkBoxNiva, checkbox: checked },
-                    () =>
-                        this.insertBoxes(
-                            this.state.numberofCheckBoxz,
-                            this.state.teller,
-                            this.state.valg,
-                            this.state.antallRader,
-                            this.getDropdown(
-                                'veiviser.valg.hjelpetekst.medlem.folketrygden',
-                                'veiviser.valg.hjelpetekst.lukk',
-                                'veiviser/infobox/medlemskap-folketrygden'
-                            )
+                this.setState({ antallRader: radNiva, teller: checkBoxNiva, checkbox: checked }, () =>
+                    this.insertBoxes(
+                        this.state.numberofCheckBoxz,
+                        this.state.teller,
+                        this.state.valg,
+                        this.state.antallRader,
+                        this.getDropdown(
+                            'veiviser.valg.hjelpetekst.medlem.folketrygden',
+                            'veiviser.valg.hjelpetekst.lukk',
+                            'veiviser/infobox/medlemskap-folketrygden'
                         )
+                    )
                 );
             }
         } else if (checkBoxNiva === 5) {
@@ -721,41 +642,35 @@ class Valg extends React.Component<Props, State> {
                 checkBoxNiva = 5;
                 if (checked[2][0] && checked[3][0]) {
                     // har hatt inntekt / annen inntekt + over 6mnd + over 49 929
-                    this.setState(
-                        { antallRader: radNiva, teller: checkBoxNiva, checkbox: checked },
-                        () =>
-                            this.insertResultat(
-                                <Logo />,
-                                'veiviser.valg.resultat.overskrift.foreldrepenger',
-                                checked,
-                                <MainKnapp
-                                    knappType={'hoved'}
-                                    txt={'veiviser.valg.resultat.knapp.foreldrepenger'}
-                                    url={'/hva-soker-du/foreldrepenger'}
-                                />
-                            )
+                    this.setState({ antallRader: radNiva, teller: checkBoxNiva, checkbox: checked }, () =>
+                        this.insertResultat(
+                            <Logo />,
+                            'veiviser.valg.resultat.overskrift.foreldrepenger',
+                            checked,
+                            <MainKnapp
+                                knappType={'hoved'}
+                                txt={'veiviser.valg.resultat.knapp.foreldrepenger'}
+                                url={'/hva-soker-du/foreldrepenger'}
+                            />
+                        )
                     );
                 } else {
                     // mangel på enten inntekt siste 6mnd eller inntekt over 49 929
                     if (!this.state.parentToggled[0]) {
-                        this.setState(
-                            { antallRader: radNiva, teller: checkBoxNiva, checkbox: checked },
-                            () =>
-                                this.insertResultat(
-                                    <Logo />,
-                                    'veiviser.valg.resultat.overskrift.Engangsstonad.mor',
-                                    checked,
-                                    <EngangsstonadKnapp
-                                        knappLeft={
-                                            'veiviser.valg.resultat.knapp.engangsstonad.info'
-                                        }
-                                        knappRight={'veiviser.valg.resultat.knapp.engangsstonad'}
-                                        knappLeftStyle={'standard'}
-                                        knappRightStyle={'hoved'}
-                                        lenkeLeft={'/om-engangsstonad'}
-                                        lenkeRight={'https://engangsstonad.nav.no'}
-                                    />
-                                )
+                        this.setState({ antallRader: radNiva, teller: checkBoxNiva, checkbox: checked }, () =>
+                            this.insertResultat(
+                                <Logo />,
+                                'veiviser.valg.resultat.overskrift.Engangsstonad.mor',
+                                checked,
+                                <EngangsstonadKnapp
+                                    knappLeft={'veiviser.valg.resultat.knapp.engangsstonad.info'}
+                                    knappRight={'veiviser.valg.resultat.knapp.engangsstonad'}
+                                    knappLeftStyle={'standard'}
+                                    knappRightStyle={'hoved'}
+                                    lenkeLeft={'/om-engangsstonad'}
+                                    lenkeRight={'https://engangsstonad.nav.no'}
+                                />
+                            )
                         );
                     } else {
                         this.setState(
@@ -766,12 +681,8 @@ class Valg extends React.Component<Props, State> {
                                     'veiviser.valg.resultat.overskrift.Engangsstonad',
                                     checked,
                                     <EngangsstonadKnapp
-                                        knappLeft={
-                                            'veiviser.valg.resultat.knapp.engangsstonad.info'
-                                        }
-                                        knappRight={
-                                            'veiviser.valg.resultat.knapp.lesOmForeldrepenger'
-                                        }
+                                        knappLeft={'veiviser.valg.resultat.knapp.engangsstonad.info'}
+                                        knappRight={'veiviser.valg.resultat.knapp.lesOmForeldrepenger'}
                                         knappRightStyle={'standard'}
                                         knappLeftStyle={'standard'}
                                         lenkeLeft={Page.OmEngangsstønad}
@@ -802,19 +713,17 @@ class Valg extends React.Component<Props, State> {
                 checked[checkBoxNiva][svar] = true;
                 ++radNiva;
                 checkBoxNiva = 5;
-                this.setState(
-                    { antallRader: radNiva, teller: checkBoxNiva, checkbox: checked },
-                    () =>
-                        this.insertResultat(
-                            <div />,
-                            'veiviser.valg.resultat.overskrift.foreldrepenger.ikkeRett',
-                            checked,
-                            <MainKnapp
-                                url={Page.OmForeldrepenger}
-                                txt={'veiviser.valg.resultat.knapp.ikkerett.info'}
-                                knappType={'standard'}
-                            />
-                        )
+                this.setState({ antallRader: radNiva, teller: checkBoxNiva, checkbox: checked }, () =>
+                    this.insertResultat(
+                        <div />,
+                        'veiviser.valg.resultat.overskrift.foreldrepenger.ikkeRett',
+                        checked,
+                        <MainKnapp
+                            url={Page.OmForeldrepenger}
+                            txt={'veiviser.valg.resultat.knapp.ikkerett.info'}
+                            knappType={'standard'}
+                        />
+                    )
                 );
             }
         }
@@ -842,11 +751,7 @@ class Valg extends React.Component<Props, State> {
                                     <div className={cls.element('valg-fane-bakgrunn')} />
                                     <div className={cls.element('valg-fane-bilde')}>
                                         <FlexibleSvg
-                                            iconRef={
-                                                require(`../../../../assets/foreldre/${
-                                                    fane.icon
-                                                }.svg`).default
-                                            }
+                                            iconRef={require(`../../../../assets/foreldre/${fane.icon}.svg`).default}
                                             height={75}
                                             width={50}
                                         />
@@ -876,11 +781,10 @@ class Valg extends React.Component<Props, State> {
                                                 appear={true}
                                                 classNames="fade"
                                                 in={this.fade}
-                                                timeout={1000}>
+                                                timeout={1000}
+                                            >
                                                 <RadioPanel
-                                                    checked={
-                                                        this.state.checkbox[item.valgIndex][index]
-                                                    }
+                                                    checked={this.state.checkbox[item.valgIndex][index]}
                                                     name={item.value}
                                                     onChange={item.onChange}
                                                     label={item.label} // item.label
@@ -894,24 +798,14 @@ class Valg extends React.Component<Props, State> {
                         );
                     } else {
                         return (
-                            <CSSTransition
-                                key={valg.nr}
-                                appear={true}
-                                classNames="fade"
-                                in={this.fade}
-                                timeout={1000}>
+                            <CSSTransition key={valg.nr} appear={true} classNames="fade" in={this.fade} timeout={1000}>
                                 <div className={inputCls.element('felt')}>
-                                    <TypografiBase type={'undertittel'}>
-                                        {valg.sprmal}
-                                    </TypografiBase>
+                                    <TypografiBase type={'undertittel'}>{valg.sprmal}</TypografiBase>
                                     {valg.con}
                                     <div className={inputCls.element('rad')}>
                                         <div className={inputCls.element('radKol-1')}>
                                             <TypografiBase type={'element'}>
-                                                {getTranslation(
-                                                    'veiviser.valg.inntekt.subHeader',
-                                                    this.props.intl
-                                                )}
+                                                {getTranslation('veiviser.valg.inntekt.subHeader', this.props.intl)}
                                             </TypografiBase>
                                             <Input
                                                 className={inputCls.element('felt--komponent')}
@@ -920,15 +814,8 @@ class Valg extends React.Component<Props, State> {
                                                 step={1000}
                                                 type="number"
                                                 value={this.state.inputVal}
-                                                onChange={this.insertInputVal(
-                                                    this.fade,
-                                                    valg.rad,
-                                                    valg.nr
-                                                )}
-                                                placeholder={getTranslation(
-                                                    this.belop,
-                                                    this.props.intl
-                                                )}
+                                                onChange={this.insertInputVal(this.fade, valg.rad, valg.nr)}
+                                                placeholder={getTranslation(this.belop, this.props.intl)}
                                             />
                                         </div>
                                         <div className={inputCls.element('radKnapp ')}>
@@ -936,16 +823,11 @@ class Valg extends React.Component<Props, State> {
                                                 className={this.state.buttonCls}
                                                 type="flat"
                                                 spinner={this.state.loadingSpinner}
-                                                onClick={this.checkInputValue(valg.nr, valg.rad)}>
-                                                {getTranslation(
-                                                    'veiviser.valg.beregn.knapp',
-                                                    this.props.intl
-                                                )}
+                                                onClick={this.checkInputValue(valg.nr, valg.rad)}
+                                            >
+                                                {getTranslation('veiviser.valg.beregn.knapp', this.props.intl)}
                                             </KnappBase>
-                                            <div
-                                                className={cls.element(
-                                                    'aarsInntekt ' + this.state.inntektCls
-                                                )}>
+                                            <div className={cls.element('aarsInntekt ' + this.state.inntektCls)}>
                                                 <div>
                                                     <TypografiBase type={'element'}>
                                                         {getTranslation(
@@ -956,9 +838,9 @@ class Valg extends React.Component<Props, State> {
                                                 </div>
                                                 <div className={cls.element('aarsInntektSum')}>
                                                     {12 * parseInt(this.state.inputVal, 10)
-                                                        ? (
-                                                              12 * parseInt(this.state.inputVal, 10)
-                                                          ).toLocaleString(this.props.intl.locale)
+                                                        ? (12 * parseInt(this.state.inputVal, 10)).toLocaleString(
+                                                              this.props.intl.locale
+                                                          )
                                                         : 0}{' '}
                                                     kr
                                                 </div>
@@ -979,7 +861,8 @@ class Valg extends React.Component<Props, State> {
                         appear={true}
                         classNames="message"
                         in={this.state.resultFade}
-                        timeout={800}>
+                        timeout={800}
+                    >
                         {res}
                     </CSSTransition>
                 );

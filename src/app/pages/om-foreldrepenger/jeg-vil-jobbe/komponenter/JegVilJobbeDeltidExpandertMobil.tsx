@@ -20,7 +20,8 @@ const JegVilJobbeDeltidExpandertMobil = ({
             viewBox="0 0 376 84"
             version="1.1"
             xmlns="http://www.w3.org/2000/svg"
-            xmlnsXlink="http://www.w3.org/1999/xlink">
+            xmlnsXlink="http://www.w3.org/1999/xlink"
+        >
             <title>Illustrasjon av eksempel på delvis jobb</title>
             <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
                 <rect fill="#FFFFFF" x="0" y="0" width="376" height="84" />
@@ -62,7 +63,8 @@ const JegVilJobbeDeltidExpandertMobil = ({
                                     fontFamily="SourceSansPro-Regular, Source Sans Pro"
                                     fontSize="12"
                                     fontWeight="normal"
-                                    fill="#3E3832">
+                                    fill="#3E3832"
+                                >
                                     <tspan x="26.466" y="17">
                                         {getTranslation(dager, intl)}
                                     </tspan>
@@ -83,7 +85,8 @@ const JegVilJobbeDeltidExpandertMobil = ({
                                     fontFamily="SourceSansPro-Bold, Source Sans Pro"
                                     fontSize="14"
                                     fontWeight="bold"
-                                    fill="#159345">
+                                    fill="#159345"
+                                >
                                     <tspan x="1.466" y="42">
                                         {getTranslation(dag, intl)}
                                     </tspan>
@@ -97,7 +100,8 @@ const JegVilJobbeDeltidExpandertMobil = ({
                                 fontSize="14"
                                 fontStyle="italic"
                                 fontWeight="normal"
-                                fill="#7F756C">
+                                fill="#7F756C"
+                            >
                                 <tspan x="1" y="14">
                                     {getTranslation(uke, intl)}
                                 </tspan>
@@ -132,7 +136,8 @@ const JegVilJobbeDeltidExpandertMobil = ({
                                     fontFamily="SourceSansPro-Regular, Source Sans Pro"
                                     fontSize="12"
                                     fontWeight="normal"
-                                    fill="#3E3832">
+                                    fill="#3E3832"
+                                >
                                     <tspan x="26.466" y="17">
                                         {getTranslation(dager, intl)}
                                     </tspan>
@@ -153,7 +158,8 @@ const JegVilJobbeDeltidExpandertMobil = ({
                                     fontFamily="SourceSansPro-Bold, Source Sans Pro"
                                     fontSize="14"
                                     fontWeight="bold"
-                                    fill="#159345">
+                                    fill="#159345"
+                                >
                                     <tspan x="1.466" y="42">
                                         {getTranslation(dag, intl)}
                                     </tspan>
@@ -167,7 +173,8 @@ const JegVilJobbeDeltidExpandertMobil = ({
                                 fontSize="14"
                                 fontStyle="italic"
                                 fontWeight="normal"
-                                fill="#7F756C">
+                                fill="#7F756C"
+                            >
                                 <tspan x="1" y="14">
                                     {getTranslation(uke, intl)}
                                 </tspan>
@@ -202,7 +209,8 @@ const JegVilJobbeDeltidExpandertMobil = ({
                                     fontFamily="SourceSansPro-Regular, Source Sans Pro"
                                     fontSize="12"
                                     fontWeight="normal"
-                                    fill="#3E3832">
+                                    fill="#3E3832"
+                                >
                                     <tspan x="26.466" y="17">
                                         {getTranslation(dager, intl)}
                                     </tspan>
@@ -223,7 +231,8 @@ const JegVilJobbeDeltidExpandertMobil = ({
                                     fontFamily="SourceSansPro-Bold, Source Sans Pro"
                                     fontSize="14"
                                     fontWeight="bold"
-                                    fill="#159345">
+                                    fill="#159345"
+                                >
                                     <tspan x="1.466" y="42">
                                         {getTranslation(dag, intl)}
                                     </tspan>
@@ -237,7 +246,8 @@ const JegVilJobbeDeltidExpandertMobil = ({
                                 fontSize="14"
                                 fontStyle="italic"
                                 fontWeight="normal"
-                                fill="#7F756C">
+                                fill="#7F756C"
+                            >
                                 <tspan x="1" y="14">
                                     {getTranslation(uke, intl)}
                                 </tspan>

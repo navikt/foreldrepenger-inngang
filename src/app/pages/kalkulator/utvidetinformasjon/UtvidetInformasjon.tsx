@@ -42,19 +42,12 @@ class UtvidetInformasjon extends React.Component<Props, State> {
         return (
             <div className={cls}>
                 <div className="utvidetInformasjon__toggler no-print">
-                    <InfoToggler
-                        onToggle={() => this.setState({ apen: !this.state.apen })}
-                        apen={this.state.apen}>
-                        <Normaltekst tag="span">
-                            {this.state.apen ? lukkLabel : this.props.apneLabel}
-                        </Normaltekst>
+                    <InfoToggler onToggle={() => this.setState({ apen: !this.state.apen })} apen={this.state.apen}>
+                        <Normaltekst tag="span">{this.state.apen ? lukkLabel : this.props.apneLabel}</Normaltekst>
                     </InfoToggler>
                 </div>
                 <div className="utvidetInformasjon__innhold" id={this.innholdId}>
-                    <EkspanderbartInnhold erApen={this.state.apen}>
-                        {' '}
-                        {this.props.children}
-                    </EkspanderbartInnhold>
+                    <EkspanderbartInnhold erApen={this.state.apen}>{this.props.children}</EkspanderbartInnhold>
 
                     <div className="print-only">{this.props.children}</div>
                 </div>

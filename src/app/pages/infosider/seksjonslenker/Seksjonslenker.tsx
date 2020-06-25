@@ -107,9 +107,8 @@ class Seksjonslenker extends React.Component<Props, State> {
                 <Normaltekst className={cls.element('lenke')} key={section}>
                     <WithLink
                         url={`#${section}`}
-                        className={
-                            this.state.currentSection === index ? cls.element('currentSection') : ''
-                        }>
+                        className={this.state.currentSection === index ? cls.element('currentSection') : ''}
+                    >
                         {this.state.sectionNames[index]}
                     </WithLink>
                 </Normaltekst>

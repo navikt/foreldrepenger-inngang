@@ -34,13 +34,9 @@ const Informasjonstavle: StatelessComponent<InjectedIntlProps> = ({ intl }) => {
                         body={getTranslation('informasjonstavle.velg_søknadsskjema.ingress', intl)}
                         url={Page.HvaSøkerDu}
                     />
-                    <Subheader
-                        text={getTranslation('informasjonstavle.mer_informasjon.tittel', intl)}
-                    />
+                    <Subheader text={getTranslation('informasjonstavle.mer_informasjon.tittel', intl)} />
                     <MerInformasjon />
-                    <Subheader
-                        text={getTranslation('informasjonstavle.andre_lenker.tittel', intl)}
-                    />
+                    <Subheader text={getTranslation('informasjonstavle.andre_lenker.tittel', intl)} />
                     <AndreLenker />
                 </div>
             </div>
@@ -61,30 +57,27 @@ const Bildelenker = ({ intl }: { intl: InjectedIntl }) => {
                 svgName="hva-skjer-når"
                 title={getTranslation('informasjonstavle.hva_kan_du_få', intl)}
                 urlIsExternal={false}
-                url={Page.SøkeOmForeldrepenger}>
-                <Tekstomrade>
-                    {getTranslation('informasjonstavle.hva_kan_du_få_ingress', intl)}
-                </Tekstomrade>
+                url={Page.SøkeOmForeldrepenger}
+            >
+                <Tekstomrade>{getTranslation('informasjonstavle.hva_kan_du_få_ingress', intl)}</Tekstomrade>
             </PanelMedBilde>
 
             <PanelMedBilde
                 svgName="hvor-lenge"
                 title={getTranslation('informasjonstavle.hvor_lenge', intl)}
                 urlIsExternal={true}
-                url={externalUrls.foreldrepengeplanlegger}>
-                <Tekstomrade>
-                    {getTranslation('informasjonstavle.hvor_lenge_ingress', intl)}
-                </Tekstomrade>
+                url={externalUrls.foreldrepengeplanlegger}
+            >
+                <Tekstomrade>{getTranslation('informasjonstavle.hvor_lenge_ingress', intl)}</Tekstomrade>
             </PanelMedBilde>
 
             <PanelMedBilde
                 svgName="hvor-mye"
                 title={getTranslation('informasjonstavle.hvor_mye', intl)}
                 urlIsExternal={false}
-                url={Page.HvorMye}>
-                <Tekstomrade>
-                    {getTranslation('informasjonstavle.hvor_mye_ingress', intl)}
-                </Tekstomrade>
+                url={Page.HvorMye}
+            >
+                <Tekstomrade>{getTranslation('informasjonstavle.hvor_mye_ingress', intl)}</Tekstomrade>
             </PanelMedBilde>
         </nav>
     );

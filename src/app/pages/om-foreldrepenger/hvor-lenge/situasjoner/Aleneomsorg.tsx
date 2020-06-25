@@ -23,10 +23,7 @@ const getInformasjonsfaner = (intl: InjectedIntl): InformasjonsfaneProps[] => [
                 tittel: 'til mor',
                 icon: 'medmor1',
                 punkter: [
-                    getTranslation(
-                        'om_foreldrepenger.hvor_lenge.fordeling.i_tillegg_til_foreldrepenger',
-                        intl
-                    ),
+                    getTranslation('om_foreldrepenger.hvor_lenge.fordeling.i_tillegg_til_foreldrepenger', intl),
                     getTranslation('om_foreldrepenger.hvor_lenge.fordeling.ingen_krav', intl, {
                         subjekt: getTranslation('far', intl)
                     })
@@ -60,7 +57,7 @@ interface OwnProps {
 type Props = OwnProps & InjectedIntlProps;
 
 class Aleneomsorg extends React.Component<Props> {
-    componentWillMount = () => {
+    componentDidMount = () => {
         this.props.onKvoteSelected(DEFAULT_TAB);
     };
 
@@ -72,10 +69,7 @@ class Aleneomsorg extends React.Component<Props> {
                     addAntallUkerSomSnakkebobletittel('aleneomsorg', this.props.intl)
                 )}
                 onTabSelected={this.props.onKvoteSelected}
-                title={getTranslation(
-                    'om_foreldrepenger.hvor_lenge.fordeling.tittel_alene',
-                    this.props.intl
-                )}
+                title={getTranslation('om_foreldrepenger.hvor_lenge.fordeling.tittel_alene', this.props.intl)}
             />
             <Innhold source={getSource(aleneomsorgBeskrivelse, this.props.intl)} />
         </div>

@@ -15,21 +15,13 @@ interface OwnProps {
 
 type Props = OwnProps & InjectedIntlProps;
 
-const DuHarRett: React.StatelessComponent<Props> = ({
-    minLogo,
-    overskrift,
-    punkter,
-    knapp,
-    intl
-}) => {
+const DuHarRett: React.StatelessComponent<Props> = ({ minLogo, overskrift, punkter, knapp, intl }) => {
     return (
         <div id="mainSokKnapp" className={resultat.element('stonadRett')}>
             {minLogo}
             <div className={resultat.element('stonadBody')}>
                 <div className={resultat.element('stonadTxt')}>
-                    <TypografiBase type="innholdstittel">
-                        {getTranslation(overskrift, intl)}
-                    </TypografiBase>
+                    <TypografiBase type="innholdstittel">{getTranslation(overskrift, intl)}</TypografiBase>
                     {punkter.map((punkt: any, index: number) => {
                         return <div key={index}>{punkt}</div>;
                     })}

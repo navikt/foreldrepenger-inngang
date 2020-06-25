@@ -6,13 +6,7 @@ import './panelMedTittel.less';
 
 const cls = BEMHelper('panelMedTittel');
 
-const PanelMedTittel = ({
-    title,
-    children
-}: {
-    title: string;
-    children: ReactNode;
-}) => {
+const PanelMedTittel = ({ title, children }: { title: string; children: ReactNode }) => {
     return (
         <section aria-label={title} className={cls.block}>
             <PanelBase>

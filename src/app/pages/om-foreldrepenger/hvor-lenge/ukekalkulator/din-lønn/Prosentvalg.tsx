@@ -15,15 +15,7 @@ interface OwnProps {
 
 type Props = OwnProps & InjectedIntlProps;
 
-const Prosentvalg = ({
-    parentCls,
-    grandParentCls,
-    percentage,
-    onSelect,
-    sum,
-    isSelected,
-    intl
-}: Props) => {
+const Prosentvalg = ({ parentCls, grandParentCls, percentage, onSelect, sum, isSelected, intl }: Props) => {
     const combinedClassnames = classnames(
         grandParentCls.element('option'),
         {
@@ -40,11 +32,10 @@ const Prosentvalg = ({
             tabIndex={0}
             onClick={() => onSelect(percentage)}
             onKeyPress={() => onSelect(percentage)}
-            className={combinedClassnames}>
+            className={combinedClassnames}
+        >
             <TypografiBase type="normaltekst">{`${percentage} %`}</TypografiBase>
-            <TypografiBase type="element">{`${sumToShow.toLocaleString(
-                intl.locale
-            )}`}</TypografiBase>
+            <TypografiBase type="element">{`${sumToShow.toLocaleString(intl.locale)}`}</TypografiBase>
         </div>
     );
 };

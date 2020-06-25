@@ -21,7 +21,8 @@ const Regelendringer = ({ intl, location }: InjectedIntlProps & RouteProps) => (
                 <PanelMedIllustrasjon
                     className={cls.block}
                     svg={svg}
-                    title={getTranslation('regelendringer.tittel', intl)}>
+                    title={getTranslation('regelendringer.tittel', intl)}
+                >
                     <Innhold source={getSource('regelendringer/regelendringer', intl)} />
                 </PanelMedIllustrasjon>
             </article>

@@ -17,47 +17,46 @@ const cls = BEMHelper('hvorMyeKanDuFa');
 const seksjonsBilde = require('../../../assets/ark/ark-beregning.svg').default;
 
 interface Props {
-  id: string;
+    id: string;
 }
 
 const getFaner = (intl: InjectedIntl) => [
-  {
-    label: 'om_svangerskapspenger.hvorMyeKanDuFa.faneTittel.arbeidstaker',
-    icon: <ArbeidstakerIkon />,
-    component: <Arbeidstaker />
-  },
-  {
-    label: 'om_svangerskapspenger.hvorMyeKanDuFa.faneTittel.frilanser',
-    icon: <FrilanserIkon />,
-    component: <Frilanser />
-  },
-  {
-    label: 'om_svangerskapspenger.hvorMyeKanDuFa.faneTittel.selvstendignaring',
-    icon: <SelvstendigIkon />,
-    component: <SelvStendigNaring />
-  },
-  {
-    label: 'om_foreldrepenger.beregning.fisker',
-    icon: <FiskerIkon />,
-    component: <Innhold source={getSource('om-foreldrepenger/beregning/fisker', intl)} />
-  }
+    {
+        label: 'om_svangerskapspenger.hvorMyeKanDuFa.faneTittel.arbeidstaker',
+        icon: <ArbeidstakerIkon />,
+        component: <Arbeidstaker />
+    },
+    {
+        label: 'om_svangerskapspenger.hvorMyeKanDuFa.faneTittel.frilanser',
+        icon: <FrilanserIkon />,
+        component: <Frilanser />
+    },
+    {
+        label: 'om_svangerskapspenger.hvorMyeKanDuFa.faneTittel.selvstendignaring',
+        icon: <SelvstendigIkon />,
+        component: <SelvStendigNaring />
+    },
+    {
+        label: 'om_foreldrepenger.beregning.fisker',
+        icon: <FiskerIkon />,
+        component: <Innhold source={getSource('om-foreldrepenger/beregning/fisker', intl)} />
+    }
 ];
 
 const HvorMyeKanDuFa: React.StatelessComponent<Props & InjectedIntlProps> = ({ id, intl }) => {
-  return (
-    <PanelMedIllustrasjon
-      id={id}
-      className={cls.block}
-      title={getTranslation('om_svangerskapspenger.hvorMyeKanDuFa.tittel', intl)}
-      svg={seksjonsBilde}>
-      <Innhold
-        source={getSource('svangerskapspenger/hvor-mye-kan-du-fa/informasjonstekst', intl)}
-      />
-      <div className={cls.element('alignLeft')}>
-        <Innholdsfaner tabs={getFaner(intl)} />
-      </div>
-    </PanelMedIllustrasjon>
-  );
+    return (
+        <PanelMedIllustrasjon
+            id={id}
+            className={cls.block}
+            title={getTranslation('om_svangerskapspenger.hvorMyeKanDuFa.tittel', intl)}
+            svg={seksjonsBilde}
+        >
+            <Innhold source={getSource('svangerskapspenger/hvor-mye-kan-du-fa/informasjonstekst', intl)} />
+            <div className={cls.element('alignLeft')}>
+                <Innholdsfaner tabs={getFaner(intl)} />
+            </div>
+        </PanelMedIllustrasjon>
+    );
 };
 
 export default injectIntl(HvorMyeKanDuFa);

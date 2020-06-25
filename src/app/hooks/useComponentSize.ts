@@ -12,14 +12,11 @@ const getSize = (element: HTMLElement | null) => {
 const useComponentSize = (ref: RefObject<HTMLElement>) => {
     const [componentSize, setComponentSize] = useState(getSize(ref.current));
 
-    useLayoutEffect(
-        () => {
-            if (ref.current) {
-                setComponentSize(getSize(ref.current));
-            }
-        },
-        [ref.current]
-    );
+    useLayoutEffect(() => {
+        if (ref.current) {
+            setComponentSize(getSize(ref.current));
+        }
+    }, [ref.current]);
 
     return componentSize;
 };

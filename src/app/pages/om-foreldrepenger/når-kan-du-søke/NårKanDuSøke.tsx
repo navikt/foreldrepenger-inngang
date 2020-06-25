@@ -54,7 +54,8 @@ const NårKanDuSøke = ({ id, intl }: Props) => {
             id={id}
             className={cls.block}
             title={getTranslation('om_foreldrepenger.når_kan_du_søke.tittel', intl)}
-            svg={iconSvg}>
+            svg={iconSvg}
+        >
             <FactsWithIcon>
                 <Fact
                     icon={<FlexibleSvg width={40} height={40} iconRef={morSvg} />}
@@ -69,15 +70,9 @@ const NårKanDuSøke = ({ id, intl }: Props) => {
                     content={getSource('om-foreldrepenger/når-kan-du-søke/adopsjon', intl)}
                 />
             </FactsWithIcon>
-            <Innhold
-                className="blokk-m"
-                source={getSource('om-foreldrepenger/når-kan-du-søke/tidligst-svar', intl)}
-            />
+            <Innhold className="blokk-m" source={getSource('om-foreldrepenger/når-kan-du-søke/tidligst-svar', intl)} />
             <Undertittel>
-                {getTranslation(
-                    'om_foreldrepenger.når_kan_du_søke.hvis_du_skal_utsette_fordi',
-                    intl
-                )}
+                {getTranslation('om_foreldrepenger.når_kan_du_søke.hvis_du_skal_utsette_fordi', intl)}
             </Undertittel>
             <Tabs kompakt={true} tabs={tabs} onChange={onTabChange} />
 
@@ -87,17 +82,15 @@ const NårKanDuSøke = ({ id, intl }: Props) => {
                     className={classnames(
                         'blokk-m',
                         cls.element('tabContent', tabIndex !== index ? 'inactive' : undefined)
-                    )}>
+                    )}
+                >
                     <Innhold source={tab.content} />
                 </div>
             ))}
 
             <Innhold
                 className="blokk-m"
-                source={getSource(
-                    'om-foreldrepenger/når-kan-du-søke/hvis-jeg-søker-for-sent',
-                    intl
-                )}
+                source={getSource('om-foreldrepenger/når-kan-du-søke/hvis-jeg-søker-for-sent', intl)}
             />
         </PanelMedIllustrasjon>
     );

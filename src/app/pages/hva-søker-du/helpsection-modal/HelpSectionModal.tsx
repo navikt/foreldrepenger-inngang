@@ -51,7 +51,8 @@ const HelpSectionModal = (props: Props) => {
                 isOpen={isOpen}
                 onRequestClose={closeModal}
                 closeButton={false}
-                contentLabel={getTranslation('hva_søker_du.engangsstønad_modal', intl)}>
+                contentLabel={getTranslation('hva_søker_du.engangsstønad_modal', intl)}
+            >
                 <div className={cls.element('topIconContainer')}>
                     <FlexibleSvg
                         className={cls.element('icon')}
@@ -67,16 +68,10 @@ const HelpSectionModal = (props: Props) => {
                     <Innhold source={getSource('hva-søker-du/helpSection-modal', intl)} />
                     <div className={cls.element('knapper')}>
                         <Lenkeknapp urlIsExternal={true} url={papirsøknadUrl}>
-                            {getTranslation(
-                                'hva_søker_du.engangsstønad.sokPapir.modal.knapp.standard',
-                                intl
-                            )}
+                            {getTranslation('hva_søker_du.engangsstønad.sokPapir.modal.knapp.standard', intl)}
                         </Lenkeknapp>
                         <Lenkeknapp type="hoved" url={søknadUrl} urlIsExternal={true}>
-                            {getTranslation(
-                                'hva_søker_du.engangsstønad.sokPapir.modal.knapp.hoved',
-                                intl
-                            )}
+                            {getTranslation('hva_søker_du.engangsstønad.sokPapir.modal.knapp.hoved', intl)}
                         </Lenkeknapp>
                     </div>
                 </div>

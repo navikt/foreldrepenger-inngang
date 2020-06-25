@@ -24,26 +24,16 @@ const Ferieforskyvning = ({ intl }: InjectedIntlProps) => (
                 y="46"
             />
             <rect height="27" width="27" rx="8" stroke="#634887" strokeWidth="1" x="1" y="46" />
-            <rect
-                height="26"
-                width="99"
-                fill="#159345"
-                rx="8"
-                stroke="#028939"
-                x="266.5"
-                y="46.5"
-            />
+            <rect height="26" width="99" fill="#159345" rx="8" stroke="#028939" x="266.5" y="46.5" />
             <text fill="#06893A" fontFamily="SourceSansPro-Bold, Source Sans Pro" fontSize="12">
                 <tspan fontWeight="bold" x="283.002" y="33">
                     {getTranslation('om_foreldrepenger.ferie.illustrasjon', intl)}
                 </tspan>
                 <tspan
                     fontFamily="SourceSansPro-Regular, Source Sans Pro"
-                    x={
-                        290 +
-                        5 * getTranslation('om_foreldrepenger.ferie.illustrasjon', intl).length
-                    }
-                    y="33">
+                    x={290 + 5 * getTranslation('om_foreldrepenger.ferie.illustrasjon', intl).length}
+                    y="33"
+                >
                     {getTranslation('om_foreldrepenger.sykdom.illustrasjon.ferievarighet', intl)}
                 </tspan>
             </text>

@@ -22,10 +22,7 @@ const getInformasjonsfaner = (intl: InjectedIntl): InformasjonsfaneProps[] => [
                 tittel: '',
                 icon: 'mor2',
                 punkter: [
-                    getTranslation(
-                        'om_foreldrepenger.hvor_lenge.fordeling.tre_uker_før_fødsel',
-                        intl
-                    ),
+                    getTranslation('om_foreldrepenger.hvor_lenge.fordeling.tre_uker_før_fødsel', intl),
                     getTranslation('om_foreldrepenger.hvor_lenge.fordeling.ingen_krav', intl, {
                         subjekt: getTranslation('medmor', intl)
                     })
@@ -73,9 +70,7 @@ const MorOgMor = ({ intl }: InjectedIntlProps) => {
         <div>
             <Innhold source={getSource(content, intl)} />
             <Informasjonsfaner
-                tabs={getInformasjonsfaner(intl).map(
-                    addAntallUkerSomSnakkebobletittel('morOgMor', intl)
-                )}
+                tabs={getInformasjonsfaner(intl).map(addAntallUkerSomSnakkebobletittel('morOgMor', intl))}
             />
             <Innhold source={getSource(kalkulatorbeskrivelse, intl)} />
         </div>

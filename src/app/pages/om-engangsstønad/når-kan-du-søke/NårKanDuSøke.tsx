@@ -16,10 +16,7 @@ const adopsjonSvg = require('../../../assets/icons/stork.svg').default;
 type Props = EngangsstonadSectionProps & InjectedIntlProps;
 
 const NårKanDuSøke: React.StatelessComponent<Props> = ({ id, intl }) => (
-    <PanelMedIllustrasjon
-        id={id}
-        title={getTranslation('om_engangsstønad.når_kan_du_søke.tittel', intl)}
-        svg={iconSvg}>
+    <PanelMedIllustrasjon id={id} title={getTranslation('om_engangsstønad.når_kan_du_søke.tittel', intl)} svg={iconSvg}>
         <FactsWithIcon>
             <Fact
                 icon={<FlexibleSvg width={40} height={40} iconRef={morSvg} />}

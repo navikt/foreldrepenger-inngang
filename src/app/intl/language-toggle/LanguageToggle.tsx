@@ -38,9 +38,7 @@ const renderMenuItem = (code: Language, intl: InjectedIntl) => {
     return (
         <li key={code}>
             <MenuItem className="languageToggle__menu__item">
-                <div className="languageToggle__button__flag">
-                    {code === 'en' ? <UKFlagSVG /> : <NorwayFlagSVG />}
-                </div>
+                <div className="languageToggle__button__flag">{code === 'en' ? <UKFlagSVG /> : <NorwayFlagSVG />}</div>
                 <div id={`languageCode_${code}`} className="languageToggle__button__language">
                     {getLanguageTextFromCode(code, intl)}
                 </div>
@@ -49,25 +47,19 @@ const renderMenuItem = (code: Language, intl: InjectedIntl) => {
     );
 };
 
-const handleSelection = (value: JSX.Element[], e: any, toggleLanguage: any) => {
+const handleSelection = (value: JSX.Element[], _e: any, toggleLanguage: any) => {
     toggleLanguage(getLanguageCodeFromValue(value[1].props.id));
 };
 
-const LanguageToggle: React.StatelessComponent<Props & InjectedIntlProps> = ({
-    intl,
-    toggleLanguage
-}) => {
-    const menuLanguages: Language[] = (['nb', 'nn', 'en'] as Language[]).filter(
-        (code) => code !== intl.locale
-    );
+const LanguageToggle: React.StatelessComponent<Props & InjectedIntlProps> = ({ intl, toggleLanguage }) => {
+    const menuLanguages: Language[] = (['nb', 'nn', 'en'] as Language[]).filter((code) => code !== intl.locale);
 
     return (
         <div className="languageToggle">
             <Wrapper
                 className="languageToggle__wrapper"
-                onSelection={(value: JSX.Element[], e: any) =>
-                    handleSelection(value, e, toggleLanguage)
-                }>
+                onSelection={(value: JSX.Element[], e: any) => handleSelection(value, e, toggleLanguage)}
+            >
                 <Button className="languageToggle__button">
                     <div className="languageToggle__button__flag">
                         {intl.locale === 'en' ? <UKFlagSVG /> : <NorwayFlagSVG />}

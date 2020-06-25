@@ -27,13 +27,9 @@ const Snakkeboble = (props: Props) => {
                         })
                     ) : (
                         <li>
-                            {getTranslation(
-                                'om_foreldrepenger.hvor_lenge.fordeling.ingen_krav',
-                                intl,
-                                {
-                                    subjekt: getTranslation('far', intl)
-                                }
-                            )}
+                            {getTranslation('om_foreldrepenger.hvor_lenge.fordeling.ingen_krav', intl, {
+                                subjekt: getTranslation('far', intl)
+                            })}
                         </li>
                     ))}
             </ul>

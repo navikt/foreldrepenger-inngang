@@ -28,14 +28,9 @@ const Faneinnhold = ({ snakkeboble, component }: Props) => {
                     posisjon={veilederposisjon}
                     storrelse="M"
                     center={true}
-                    tekst={
-                        <Snakkeboble tittel={snakkeboble.tittel} punkter={snakkeboble.punkter} />
-                    }>
-                    {svg ? (
-                        <CustomSVG className="Icon__svg" iconRef={svg} size={72} />
-                    ) : (
-                        snakkeboble.icon
-                    )}
+                    tekst={<Snakkeboble tittel={snakkeboble.tittel} punkter={snakkeboble.punkter} />}
+                >
+                    {svg ? <CustomSVG className="Icon__svg" iconRef={svg} size={72} /> : snakkeboble.icon}
                 </Veileder>
             </div>
             <div className={cls.element('bodyTxt')}>{component}</div>

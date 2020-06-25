@@ -42,7 +42,7 @@ class JegVilJobbe extends React.Component<Props> {
         };
     }
 
-    updateContent = (e: any, index: number): void => {
+    updateContent = (_e: any, index: number): void => {
         this.setState({ currentTab: faner[index].content });
     };
 
@@ -51,23 +51,19 @@ class JegVilJobbe extends React.Component<Props> {
             id={this.props.id}
             className={cls.block}
             title={getTranslation('om_foreldrepenger.jobbe.tittel', this.props.intl)}
-            svg={jobbeSvg}>
+            svg={jobbeSvg}
+        >
             <Innhold className="blokk-m" source={getSource(content, this.props.intl)} />
             <Tabs
                 kompakt={true}
                 defaultAktiv={0}
-                tabs={faner.map((fane, index) => ({
+                tabs={faner.map((fane) => ({
                     label: getTranslation(fane.label, this.props.intl)
                 }))}
                 onChange={this.updateContent}
             />
             {this.state.currentTab}
-            <Innhold
-                source={getSource(
-                    'om-foreldrepenger/jeg-vil-jobbe/slik-går-du-frem',
-                    this.props.intl
-                )}
-            />
+            <Innhold source={getSource('om-foreldrepenger/jeg-vil-jobbe/slik-går-du-frem', this.props.intl)} />
         </PanelMedIllustrasjon>
     );
 }

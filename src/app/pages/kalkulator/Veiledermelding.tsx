@@ -14,24 +14,13 @@ interface OwnProps {
 
 type Props = OwnProps & InjectedIntlProps;
 
-const Veiledermelding = ({
-    avviksvariabler,
-    utbetalingsgrensevariabler,
-    forLavLønnvariabler,
-    intl
-}: Props) => (
+const Veiledermelding = ({ avviksvariabler, utbetalingsgrensevariabler, forLavLønnvariabler, intl }: Props) => (
     <div className={cls.element('veiledermeldinger')}>
         {avviksvariabler && (
-            <Innhold
-                source={getSource('kalkulator/advarsel-avviksgrense', intl)}
-                values={avviksvariabler}
-            />
+            <Innhold source={getSource('kalkulator/advarsel-avviksgrense', intl)} values={avviksvariabler} />
         )}
         {forLavLønnvariabler && (
-            <Innhold
-                source={getSource('kalkulator/advarsel-lav-lønn', intl)}
-                values={forLavLønnvariabler}
-            />
+            <Innhold source={getSource('kalkulator/advarsel-lav-lønn', intl)} values={forLavLønnvariabler} />
         )}
         {utbetalingsgrensevariabler && (
             <Innhold

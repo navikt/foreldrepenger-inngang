@@ -16,8 +16,7 @@ const NUM_FAMILIES = 5;
 const getRandomSvgForHeader = () => {
     const randomFamily = getRandomInt(1, NUM_FAMILIES);
     return detErJul()
-        ? require(`../../../assets/familier-hjemme/familie-hjemme-sesong-${randomFamily}.svg`)
-              .default
+        ? require(`../../../assets/familier-hjemme/familie-hjemme-sesong-${randomFamily}.svg`).default
         : require(`../../../assets/familier-hjemme/familie-hjemme-${randomFamily}.svg`).default;
 };
 
@@ -38,20 +37,10 @@ const Header = ({ intl }: InjectedIntlProps) => {
                     </div>
                     <div role="presentation" className={cls.element('svgContainer')}>
                         <MediaQuery maxWidth={575}>
-                            <FlexibleSvg
-                                iconRef={svg}
-                                height={130}
-                                width={270}
-                                className={cls.element('svg')}
-                            />
+                            <FlexibleSvg iconRef={svg} height={130} width={270} className={cls.element('svg')} />
                         </MediaQuery>
                         <MediaQuery minWidth={576}>
-                            <FlexibleSvg
-                                iconRef={svg}
-                                height={160}
-                                width={332}
-                                className={cls.element('svg')}
-                            />
+                            <FlexibleSvg iconRef={svg} height={160} width={332} className={cls.element('svg')} />
                         </MediaQuery>
                     </div>
                 </div>

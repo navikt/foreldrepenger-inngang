@@ -12,7 +12,8 @@ const JegVilJobbe: React.StatelessComponent<Props> = ({ size }) => {
             viewBox="0 0 109 109"
             version="1.1"
             xmlns="http://www.w3.org/2000/svg"
-            xmlnsXlink="http://www.w3.org/1999/xlink">
+            xmlnsXlink="http://www.w3.org/1999/xlink"
+        >
             <title>Jeg vil jobbe</title>
             <defs />
             <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
@@ -27,7 +28,8 @@ const JegVilJobbe: React.StatelessComponent<Props> = ({ size }) => {
                                         fontSize="16"
                                         fontWeight="normal"
                                         line-spacing="22"
-                                        fill="#0067C5">
+                                        fill="#0067C5"
+                                    >
                                         <tspan x="14.26" y="44">
                                             Jeg vil{' '}
                                         </tspan>
@@ -39,7 +41,8 @@ const JegVilJobbe: React.StatelessComponent<Props> = ({ size }) => {
                                         transform="translate(25.000000, 0.000000)"
                                         stroke="#0067C5"
                                         strokeLinecap="round"
-                                        strokeLinejoin="round">
+                                        strokeLinejoin="round"
+                                    >
                                         <polygon points="11.5 23.5 0.5 23.5 0.5 9.5 11.5 9.5" />
                                         <polygon points="9.5 3.5 2.5 3.5 2.5 9.5 9.5 9.5" />
                                         <path d="M5.5,3.5 L5.5,0.5" />

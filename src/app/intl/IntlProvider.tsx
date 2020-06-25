@@ -12,14 +12,12 @@ import areIntlLocalesSupported from 'intl-locales-supported';
 
 export type Language = 'nb' | 'nn' | 'en';
 
-const localesMyAppSupports = [
-    'nb-NO'
-];
+const localesMyAppSupports = ['nb-NO'];
 
 if (global.Intl) {
     if (!areIntlLocalesSupported(localesMyAppSupports)) {
-        const IntlPolyfill    = require('intl');
-        Intl.NumberFormat   = IntlPolyfill.NumberFormat;
+        const IntlPolyfill = require('intl');
+        Intl.NumberFormat = IntlPolyfill.NumberFormat;
         Intl.DateTimeFormat = IntlPolyfill.DateTimeFormat;
     }
 } else {
@@ -46,10 +44,7 @@ class IntlProvider extends React.Component<StateProps> {
         }
 
         return (
-            <Provider
-                key={this.props.language}
-                locale={this.props.language}
-                messages={messages || {}}>
+            <Provider key={this.props.language} locale={this.props.language} messages={messages || {}}>
                 {this.props.children}
             </Provider>
         );

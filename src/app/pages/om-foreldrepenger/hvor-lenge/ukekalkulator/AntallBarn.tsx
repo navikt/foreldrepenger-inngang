@@ -5,15 +5,7 @@ import { FlexibleSvg } from 'app/utils/CustomSVG';
 
 const icon = require('../../../../assets/icons/tåteflaske.svg').default;
 
-const AntallBarn = ({
-    parentCls,
-    childCount,
-    label
-}: {
-    parentCls: BEMWrapper;
-    childCount: number;
-    label: string;
-}) => {
+const AntallBarn = ({ parentCls, childCount, label }: { parentCls: BEMWrapper; childCount: number; label: string }) => {
     const childCountIllustration = [];
     for (let i = 0; i < childCount; i++) {
         childCountIllustration.push(

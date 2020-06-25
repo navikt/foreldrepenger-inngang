@@ -21,7 +21,8 @@ const StorToggle = ({
         <button
             aria-selected={isToggled}
             onClick={onToggle}
-            className={classnames(cls.block, { [cls.modifier('toggled')]: isToggled }, clsName)}>
+            className={classnames(cls.block, { [cls.modifier('toggled')]: isToggled }, clsName)}
+        >
             {children}
         </button>
     );

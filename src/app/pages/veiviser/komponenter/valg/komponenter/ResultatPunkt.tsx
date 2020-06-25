@@ -24,9 +24,7 @@ const ResultatPunkt: React.StatelessComponent<Props> = ({ tegn, translationStrin
                 />
             </span>
             <span>
-                <TypografiBase type="normaltekst">
-                    {getTranslation(translationString, intl)}
-                </TypografiBase>
+                <TypografiBase type="normaltekst">{getTranslation(translationString, intl)}</TypografiBase>
             </span>
         </div>
     );

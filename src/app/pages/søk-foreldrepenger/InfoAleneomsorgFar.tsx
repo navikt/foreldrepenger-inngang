@@ -19,72 +19,40 @@ const InfoAleneomsorgFar: FunctionComponent<Props> = ({ intl }) => {
 
     return (
         <Eventline>
-            <Event
-                title={getTranslation('søke_om_foreldrepenger.aleneomsorg.far.venterBarn', intl)}>
+            <Event title={getTranslation('søke_om_foreldrepenger.aleneomsorg.far.venterBarn', intl)}>
                 <EkspanderbarSnakkeboble
                     svg={kalender}
-                    tittel={getTranslation(
-                        'søke_om_foreldrepenger.aleneomsorg.far.planleggTiden',
-                        intl
-                    )}>
-                    <Innhold
-                        source={getSource('søk-foreldrepenger/aleneomsorg-far/planlegg', intl)}
-                    />
+                    tittel={getTranslation('søke_om_foreldrepenger.aleneomsorg.far.planleggTiden', intl)}
+                >
+                    <Innhold source={getSource('søk-foreldrepenger/aleneomsorg-far/planlegg', intl)} />
                 </EkspanderbarSnakkeboble>
             </Event>
-            <Event
-                title={getTranslation(
-                    'søke_om_foreldrepenger.aleneomsorg.far.terminEllerOmsorgsovertakelse',
-                    intl
-                )}>
+            <Event title={getTranslation('søke_om_foreldrepenger.aleneomsorg.far.terminEllerOmsorgsovertakelse', intl)}>
                 <EkspanderbarSnakkeboble
                     svg={dokumentasjon}
-                    tittel={getTranslation(
-                        'søke_om_foreldrepenger.aleneomsorg.far.dokumentasjonAleneomsorg',
-                        intl
-                    )}>
-                    <Innhold
-                        source={getSource('søk-foreldrepenger/aleneomsorg-far/dokumentasjon', intl)}
-                    />
+                    tittel={getTranslation('søke_om_foreldrepenger.aleneomsorg.far.dokumentasjonAleneomsorg', intl)}
+                >
+                    <Innhold source={getSource('søk-foreldrepenger/aleneomsorg-far/dokumentasjon', intl)} />
                 </EkspanderbarSnakkeboble>
                 <EkspanderbarSnakkeboble
                     svg={farBrev}
-                    tittel={getTranslation(
-                        'søke_om_foreldrepenger.aleneomsorg.far.farKanSøke',
-                        intl
-                    )}>
-                    <Innhold
-                        source={getSource('søk-foreldrepenger/aleneomsorg-far/far-kan-søke', intl)}
-                    />
+                    tittel={getTranslation('søke_om_foreldrepenger.aleneomsorg.far.farKanSøke', intl)}
+                >
+                    <Innhold source={getSource('søk-foreldrepenger/aleneomsorg-far/far-kan-søke', intl)} />
                 </EkspanderbarSnakkeboble>
             </Event>
-            <Event
-                title={getTranslation(
-                    'søke_om_foreldrepenger.aleneomsorg.far.fireUkerFørFar',
-                    intl
-                )}>
+            <Event title={getTranslation('søke_om_foreldrepenger.aleneomsorg.far.fireUkerFørFar', intl)}>
                 <EkspanderbarSnakkeboble
                     svg={inntektsOpplysninger}
-                    tittel={getTranslation(
-                        'søke_om_foreldrepenger.aleneomsorg.far.inntektFar',
-                        intl
-                    )}>
-                    <Innhold
-                        source={getSource(
-                            'søk-foreldrepenger/aleneomsorg-far/opplysninger-inntekt-far',
-                            intl
-                        )}
-                    />
+                    tittel={getTranslation('søke_om_foreldrepenger.aleneomsorg.far.inntektFar', intl)}
+                >
+                    <Innhold source={getSource('søk-foreldrepenger/aleneomsorg-far/opplysninger-inntekt-far', intl)} />
                 </EkspanderbarSnakkeboble>
                 <EkspanderbarSnakkeboble
                     svg={fåSvar}
-                    tittel={getTranslation(
-                        'søke_om_foreldrepenger.aleneomsorg.far.farFårSvar',
-                        intl
-                    )}>
-                    <Innhold
-                        source={getSource('søk-foreldrepenger/aleneomsorg-far/far-får-svar', intl)}
-                    />
+                    tittel={getTranslation('søke_om_foreldrepenger.aleneomsorg.far.farFårSvar', intl)}
+                >
+                    <Innhold source={getSource('søk-foreldrepenger/aleneomsorg-far/far-får-svar', intl)} />
                 </EkspanderbarSnakkeboble>
             </Event>
         </Eventline>

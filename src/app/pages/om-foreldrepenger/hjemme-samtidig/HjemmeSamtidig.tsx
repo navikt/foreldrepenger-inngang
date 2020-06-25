@@ -16,7 +16,8 @@ const HjemmeSamtidig: React.StatelessComponent<Props & InjectedIntlProps> = ({ i
         <PanelMedIllustrasjon
             id={id}
             title={getTranslation('om_foreldrepenger.hjemme_samtidig.tittel', intl)}
-            svg={hjemmeSamtidigSvg}>
+            svg={hjemmeSamtidigSvg}
+        >
             <Innhold source={getSource(ingress, intl)} />
         </PanelMedIllustrasjon>
     );

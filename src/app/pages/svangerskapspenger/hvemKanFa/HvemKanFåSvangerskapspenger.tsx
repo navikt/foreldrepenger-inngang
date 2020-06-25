@@ -16,29 +16,19 @@ interface Props {
     id: string;
 }
 
-const HvemKanFåSvangerskapspenger: React.StatelessComponent<Props & InjectedIntlProps> = ({
-    id,
-    intl
-}) => {
+const HvemKanFåSvangerskapspenger: React.StatelessComponent<Props & InjectedIntlProps> = ({ id, intl }) => {
     return (
         <PanelMedIllustrasjon
             id={id}
-            title={getTranslation(
-                'om_svangerskapspenger.hvem_kan_fa_svangerskapspenger.tittel',
-                intl
-            )}
-            svg={<SvgMask svg={seksjonsbilde} anchorToBottom={true} />}>
+            title={getTranslation('om_svangerskapspenger.hvem_kan_fa_svangerskapspenger.tittel', intl)}
+            svg={<SvgMask svg={seksjonsbilde} anchorToBottom={true} />}
+        >
             <div className={cls.element('alignLeft')}>
-                <Innhold
-                    source={getSource(
-                        'svangerskapspenger/hvem-kan-fa-svangerskapspenger/ingress',
-                        intl
-                    )}
-                />
+                <Innhold source={getSource('svangerskapspenger/hvem-kan-fa-svangerskapspenger/ingress', intl)} />
             </div>
             <div className={cls.element('kravTilSvangerskapspenger')}>
                 {kravTilSvangerskapspengerStringPath.map((krav) => (
-                        <KravTilSvangerskapspenger key={krav} ingress={getSource(krav, intl)} />
+                    <KravTilSvangerskapspenger key={krav} ingress={getSource(krav, intl)} />
                 ))}
             </div>
         </PanelMedIllustrasjon>

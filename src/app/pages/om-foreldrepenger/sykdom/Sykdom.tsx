@@ -29,23 +29,15 @@ const BarnetErInnlagtWithoutIntl: React.StatelessComponent<InjectedIntlProps> = 
     <div>
         <Innhold className="blokk-m" source={getSource(barnetErInnlagt, intl)} />
         <div className={cls.element('eksempeltekst')}>
-            <Normaltekst>
-                {getTranslation('om_foreldrepenger.sykdom.innlagt.eksempeltittel', intl)}
-            </Normaltekst>
+            <Normaltekst>{getTranslation('om_foreldrepenger.sykdom.innlagt.eksempeltittel', intl)}</Normaltekst>
             <MediaQuery minWidth={576}>
                 <Illustrasjon
-                    grunnForForlengelse={getTranslation(
-                        'om_foreldrepenger.sykdom.barnet_er_innlagt',
-                        intl
-                    )}
+                    grunnForForlengelse={getTranslation('om_foreldrepenger.sykdom.barnet_er_innlagt', intl)}
                 />
             </MediaQuery>
             <MediaQuery maxWidth={575}>
                 <IllustrasjonMobil
-                    grunnForForlengelse={getTranslation(
-                        'om_foreldrepenger.sykdom.barnet_er_innlagt',
-                        intl
-                    )}
+                    grunnForForlengelse={getTranslation('om_foreldrepenger.sykdom.barnet_er_innlagt', intl)}
                 />
             </MediaQuery>
         </div>
@@ -59,18 +51,12 @@ const EnAvForeldreneErSykeWithoutIntl: React.StatelessComponent<InjectedIntlProp
     <div>
         <Innhold className="blokk-m" source={getSource(syke, intl)} />
         <div className={cls.element('eksempeltekst')}>
-            <Normaltekst>
-                {getTranslation('om_foreldrepenger.sykdom.sykmeldt.eksempeltittel', intl)}
-            </Normaltekst>
+            <Normaltekst>{getTranslation('om_foreldrepenger.sykdom.sykmeldt.eksempeltittel', intl)}</Normaltekst>
             <MediaQuery minWidth={576}>
-                <Illustrasjon
-                    grunnForForlengelse={getTranslation('om_foreldrepenger.sykdom.sykmeldt', intl)}
-                />
+                <Illustrasjon grunnForForlengelse={getTranslation('om_foreldrepenger.sykdom.sykmeldt', intl)} />
             </MediaQuery>
             <MediaQuery maxWidth={575}>
-                <IllustrasjonMobil
-                    grunnForForlengelse={getTranslation('om_foreldrepenger.sykdom.sykmeldt', intl)}
-                />
+                <IllustrasjonMobil grunnForForlengelse={getTranslation('om_foreldrepenger.sykdom.sykmeldt', intl)} />
             </MediaQuery>
         </div>
         <LesMer intro={getTranslation('om_foreldrepenger.sykdom.innlagt.utsette', intl)}>
@@ -114,7 +100,8 @@ const Sykdom: React.StatelessComponent<Props & InjectedIntlProps> = ({ id, intl 
             id={id}
             className={cls.block}
             svg={sykdomSvg}
-            title={getTranslation('om_foreldrepenger.sykdom.tittel', intl)}>
+            title={getTranslation('om_foreldrepenger.sykdom.tittel', intl)}
+        >
             <Innholdsfaner tabs={tabs} />
         </PanelMedIllustrasjon>
     );

@@ -15,7 +15,8 @@ const Adopjson: React.StatelessComponent<Props & InjectedIntlProps> = ({ id, int
         <PanelMedIllustrasjon
             id={id}
             title={getTranslation('om_foreldrepenger.adopsjon.tittel', intl)}
-            svg={adopsjonSvg}>
+            svg={adopsjonSvg}
+        >
             <Innhold source={getSource('om-foreldrepenger/adopsjon/adopsjon', intl)} />
         </PanelMedIllustrasjon>
     );

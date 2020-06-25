@@ -14,30 +14,24 @@ const Arbeidstaker: React.StatelessComponent<InjectedIntlProps> = ({ intl }) => 
                 <Sekvens
                     illustrasjon={
                         <FlexibleSvg
-                            iconRef={
-                                require(`../../../../assets/slik-soker-du/jordmor.svg`).default
-                            }
+                            iconRef={require(`../../../../assets/slik-soker-du/jordmor.svg`).default}
                             height={96}
                             width={96}
                         />
-                    }>
-                    <Innhold
-                        source={getSource('svangerskapspenger/slik-soker-du/arbeidstaker.1', intl)}
-                    />
+                    }
+                >
+                    <Innhold source={getSource('svangerskapspenger/slik-soker-du/arbeidstaker.1', intl)} />
                 </Sekvens>
                 <Sekvens
                     illustrasjon={
                         <FlexibleSvg
-                            iconRef={
-                                require(`../../../../assets/slik-soker-du/arbeidsgiver.svg`).default
-                            }
+                            iconRef={require(`../../../../assets/slik-soker-du/arbeidsgiver.svg`).default}
                             height={96}
                             width={96}
                         />
-                    }>
-                    <Innhold
-                        source={getSource('svangerskapspenger/slik-soker-du/arbeidstaker.2', intl)}
-                    />
+                    }
+                >
+                    <Innhold source={getSource('svangerskapspenger/slik-soker-du/arbeidstaker.2', intl)} />
                 </Sekvens>
                 <Sekvens
                     illustrasjon={
@@ -46,10 +40,9 @@ const Arbeidstaker: React.StatelessComponent<InjectedIntlProps> = ({ intl }) => 
                             height={96}
                             width={96}
                         />
-                    }>
-                    <Innhold
-                        source={getSource('svangerskapspenger/slik-soker-du/arbeidstaker.3', intl)}
-                    />
+                    }
+                >
+                    <Innhold source={getSource('svangerskapspenger/slik-soker-du/arbeidstaker.3', intl)} />
                 </Sekvens>
                 <Sekvens
                     illustrasjon={
@@ -58,15 +51,13 @@ const Arbeidstaker: React.StatelessComponent<InjectedIntlProps> = ({ intl }) => 
                             height={96}
                             width={96}
                         />
-                    }>
-                    <Innhold
-                        source={getSource('svangerskapspenger/slik-soker-du/arbeidstaker.4', intl)}
-                    />
+                    }
+                >
+                    <Innhold source={getSource('svangerskapspenger/slik-soker-du/arbeidstaker.4', intl)} />
                 </Sekvens>
             </Sekvensliste>
         </div>
-        <UtvidetInformasjon
-            apneLabel={getTranslation('info.svangerskapspenger.harIkkeElektroniskID.tittel', intl)}>
+        <UtvidetInformasjon apneLabel={getTranslation('info.svangerskapspenger.harIkkeElektroniskID.tittel', intl)}>
             <Innhold source={getSource('svangerskapspenger/slik-soker-du/elektroniskId', intl)} />
         </UtvidetInformasjon>
     </>

@@ -42,10 +42,7 @@ const sections: EngangsstonadSection[] = [
     'far-eller-medmor'
 ];
 
-const OmEngangsstonad: React.StatelessComponent<Props & InjectedIntlProps> = ({
-    location,
-    intl
-}) => {
+const OmEngangsstonad: React.StatelessComponent<Props & InjectedIntlProps> = ({ location, intl }) => {
     return (
         <div className={infosiderCls.block}>
             <HeaderInformasjon
@@ -59,7 +56,8 @@ const OmEngangsstonad: React.StatelessComponent<Props & InjectedIntlProps> = ({
                 button={{
                     label: getTranslation('innholdsfortegnelse.søk_nå', intl),
                     url: Environment.SOK_ENGANGSSTONAD_URL
-                }}>
+                }}
+            >
                 <article className={infosiderCls.element('article')}>
                     <Breadcrumbs path={location.pathname} />
                     <HvemKanFåEngangsstønad id={sections[0]} />

@@ -18,62 +18,34 @@ const InfoAleneomsorgMor: FunctionComponent<Props> = ({ intl }) => {
 
     return (
         <Eventline>
-            <Event
-                title={getTranslation('søke_om_foreldrepenger.aleneomsorg.mor.venterBarn', intl)}>
+            <Event title={getTranslation('søke_om_foreldrepenger.aleneomsorg.mor.venterBarn', intl)}>
                 <EkspanderbarSnakkeboble
                     svg={kalender}
-                    tittel={getTranslation(
-                        'søke_om_foreldrepenger.aleneomsorg.mor.planleggTiden',
-                        intl
-                    )}>
-                    <Innhold
-                        source={getSource('søk-foreldrepenger/aleneomsorg-mor/planlegg', intl)}
-                    />
+                    tittel={getTranslation('søke_om_foreldrepenger.aleneomsorg.mor.planleggTiden', intl)}
+                >
+                    <Innhold source={getSource('søk-foreldrepenger/aleneomsorg-mor/planlegg', intl)} />
                 </EkspanderbarSnakkeboble>
             </Event>
-            <Event
-                title={getTranslation(
-                    'søke_om_foreldrepenger.aleneomsorg.mor.svangerskapsuke',
-                    intl
-                )}>
+            <Event title={getTranslation('søke_om_foreldrepenger.aleneomsorg.mor.svangerskapsuke', intl)}>
                 <EkspanderbarSnakkeboble
                     svg={morBrev}
-                    tittel={getTranslation(
-                        'søke_om_foreldrepenger.aleneomsorg.mor.morKanSøke',
-                        intl
-                    )}>
-                    <Innhold
-                        source={getSource('søk-foreldrepenger/aleneomsorg-mor/mor-kan-søke', intl)}
-                    />
+                    tittel={getTranslation('søke_om_foreldrepenger.aleneomsorg.mor.morKanSøke', intl)}
+                >
+                    <Innhold source={getSource('søk-foreldrepenger/aleneomsorg-mor/mor-kan-søke', intl)} />
                 </EkspanderbarSnakkeboble>
             </Event>
-            <Event
-                title={getTranslation(
-                    'søke_om_foreldrepenger.aleneomsorg.mor.fireUkerFørMor',
-                    intl
-                )}>
+            <Event title={getTranslation('søke_om_foreldrepenger.aleneomsorg.mor.fireUkerFørMor', intl)}>
                 <EkspanderbarSnakkeboble
                     svg={inntektsOpplysninger}
-                    tittel={getTranslation(
-                        'søke_om_foreldrepenger.aleneomsorg.mor.inntektMor',
-                        intl
-                    )}>
-                    <Innhold
-                        source={getSource(
-                            'søk-foreldrepenger/aleneomsorg-mor/opplysninger-inntekt-mor',
-                            intl
-                        )}
-                    />
+                    tittel={getTranslation('søke_om_foreldrepenger.aleneomsorg.mor.inntektMor', intl)}
+                >
+                    <Innhold source={getSource('søk-foreldrepenger/aleneomsorg-mor/opplysninger-inntekt-mor', intl)} />
                 </EkspanderbarSnakkeboble>
                 <EkspanderbarSnakkeboble
                     svg={fåSvar}
-                    tittel={getTranslation(
-                        'søke_om_foreldrepenger.aleneomsorg.mor.morFårSvar',
-                        intl
-                    )}>
-                    <Innhold
-                        source={getSource('søk-foreldrepenger/aleneomsorg-mor/mor-får-svar', intl)}
-                    />
+                    tittel={getTranslation('søke_om_foreldrepenger.aleneomsorg.mor.morFårSvar', intl)}
+                >
+                    <Innhold source={getSource('søk-foreldrepenger/aleneomsorg-mor/mor-får-svar', intl)} />
                 </EkspanderbarSnakkeboble>
             </Event>
         </Eventline>

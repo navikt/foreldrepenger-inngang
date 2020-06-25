@@ -16,10 +16,9 @@ const EtterDuHarSøkt: React.StatelessComponent<Props & InjectedIntlProps> = ({ 
         <PanelMedIllustrasjon
             id={id}
             title={getTranslation('om_foreldrepenger.etter_du_har_søkt.tittel', intl)}
-            svg={statusSVG}>
-            <Innhold
-                source={getSource('om-foreldrepenger/etter-du-har-søkt/etter-du-har-søkt', intl)}
-            />
+            svg={statusSVG}
+        >
+            <Innhold source={getSource('om-foreldrepenger/etter-du-har-søkt/etter-du-har-søkt', intl)} />
         </PanelMedIllustrasjon>
     );
 };

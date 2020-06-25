@@ -22,10 +22,7 @@ interface Props {
 
 const Ferie: React.StatelessComponent<Props & InjectedIntlProps> = ({ id, intl }) => {
     return (
-        <PanelMedIllustrasjon
-            id={id}
-            svg={ferieSvg}
-            title={getTranslation('om_foreldrepenger.ferie.tittel', intl)}>
+        <PanelMedIllustrasjon id={id} svg={ferieSvg} title={getTranslation('om_foreldrepenger.ferie.tittel', intl)}>
             <Innhold source={getSource(content, intl)} />
             <div className={cls.element('eksempel')}>
                 <TypografiBase type="normaltekst">

@@ -2,12 +2,7 @@ import * as React from 'react';
 import { Arbeidssituasjon } from '../Kalkulator';
 import { injectIntl, InjectedIntlProps } from 'react-intl';
 import { Input } from 'nav-frontend-skjema';
-import {
-    lastThreeYears,
-    lastThreeMonths,
-    computeAverage,
-    MAKS_ANTALL_SIFFER
-} from 'app/utils/beregningUtils';
+import { lastThreeYears, lastThreeMonths, computeAverage, MAKS_ANTALL_SIFFER } from 'app/utils/beregningUtils';
 import BEMHelper from 'app/utils/bem';
 import getTranslation from 'app/utils/i18nUtils';
 import TypografiBase from 'nav-frontend-typografi';
@@ -25,7 +20,7 @@ type Props = OwnProps & InjectedIntlProps;
 interface State {
     monthlyAverage?: number;
     lastThreePeriods: string[];
-    fieldValues: Array<number | undefined>;
+    fieldValues: (number | undefined)[];
 }
 
 class Lønnskalkulator extends React.Component<Props, State> {
@@ -38,7 +33,7 @@ class Lønnskalkulator extends React.Component<Props, State> {
         this.props.onChange(undefined);
     };
 
-    componentWillReceiveProps = (nextProps: Props) => {
+    componentDidReceiveProps = (nextProps: Props) => {
         if (this.props.situasjoner !== nextProps.situasjoner) {
             this.setState(this.recomputeState(nextProps.situasjoner));
             this.props.onChange(undefined);
@@ -101,10 +96,7 @@ class Lønnskalkulator extends React.Component<Props, State> {
             <div className={cls.block}>
                 <div className={cls.element('perioder')}>
                     {this.state.lastThreePeriods.map((period, index) => {
-                        const value =
-                            this.state.fieldValues[index] === undefined
-                                ? ''
-                                : this.state.fieldValues[index];
+                        const value = this.state.fieldValues[index] === undefined ? '' : this.state.fieldValues[index];
 
                         return (
                             <Input
@@ -125,9 +117,7 @@ class Lønnskalkulator extends React.Component<Props, State> {
                 </div>
                 <output>
                     <label>
-                        <TypografiBase type="element">
-                            {getTranslation('kalkulator.lønn.resultat', intl)}
-                        </TypografiBase>
+                        <TypografiBase type="element">{getTranslation('kalkulator.lønn.resultat', intl)}</TypografiBase>
                     </label>
                     <TypografiBase type="ingress">{output}</TypografiBase>
                 </output>

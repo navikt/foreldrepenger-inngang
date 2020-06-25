@@ -1,7 +1,7 @@
 import React, { useRef, RefObject, useState, FunctionComponent } from 'react';
 import { Hovedknapp } from 'nav-frontend-knapper';
 import { InjectedIntlProps, injectIntl } from 'react-intl';
-import { Panel } from 'nav-frontend-paneler';
+import Panel from 'nav-frontend-paneler';
 import classnames from 'classnames';
 
 import './mobilmeny.less';
@@ -54,7 +54,8 @@ const Mobilmeny: FunctionComponent<Props> = ({ sections, button, intl }: Props) 
             ref={menuRef}
             className={classnames(classnames(cls.block), {
                 [cls.element('hidden')]: !currentSection
-            })}>
+            })}
+        >
             <Panel>
                 <MobilMenyHeader
                     header={currentSection || getTranslation('om_foreldrepenger.tittel', intl)}
@@ -64,11 +65,7 @@ const Mobilmeny: FunctionComponent<Props> = ({ sections, button, intl }: Props) 
                     <div className={cls.element('lenker')}>
                         <Seksjonslenker sections={sections} onSectionChange={onSectionChange} />
                     </div>
-                    <WithLink
-                        className={cls.element('søkNå')}
-                        urlIsExternal={true}
-                        url={button.url}
-                        noStyling={true}>
+                    <WithLink className={cls.element('søkNå')} urlIsExternal={true} url={button.url} noStyling={true}>
                         <Hovedknapp>{button.label}</Hovedknapp>
                     </WithLink>
                 </div>

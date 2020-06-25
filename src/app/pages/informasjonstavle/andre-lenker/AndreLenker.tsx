@@ -45,8 +45,7 @@ const links = [
     },
     {
         label: 'informasjonstavle.andre_lenker.regelverk',
-        href:
-            'https://lovdata.no/nav/folketrygdloven/kap14'
+        href: 'https://lovdata.no/nav/folketrygdloven/kap14'
     },
     {
         label: 'informasjonstavle.andre_lenker.slik_klager_du',

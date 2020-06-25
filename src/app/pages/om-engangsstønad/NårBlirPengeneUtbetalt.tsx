@@ -13,7 +13,8 @@ const NårBlirPengeneUtbetalt: React.StatelessComponent<Props> = ({ id, intl }) 
     <PanelMedIllustrasjon
         id={id}
         title={getTranslation('om_engangsstønad.utbetaling.tittel', intl)}
-        svg={utbetalingSvg}>
+        svg={utbetalingSvg}
+    >
         <Innhold source={getSource('om-engangsstønad/utbetaling', intl)} />
     </PanelMedIllustrasjon>
 );

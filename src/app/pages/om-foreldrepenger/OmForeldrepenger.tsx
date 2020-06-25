@@ -44,10 +44,7 @@ const sections: Section[] = [
     Section.OfteStilteSpørsmål
 ];
 
-const OmForeldrepenger: React.StatelessComponent<Props & InjectedIntlProps> = ({
-    location,
-    intl
-}) => {
+const OmForeldrepenger: React.StatelessComponent<Props & InjectedIntlProps> = ({ location, intl }) => {
     return (
         <div className={classnames(cls.block)}>
             <HeaderInformasjon
@@ -61,7 +58,8 @@ const OmForeldrepenger: React.StatelessComponent<Props & InjectedIntlProps> = ({
                 button={{
                     label: getTranslation('innholdsfortegnelse.søk_nå', intl),
                     url: Environment.SOK_FORELDREPENGER_URL
-                }}>
+                }}
+            >
                 <article className={cls.element('article')}>
                     <Breadcrumbs path={location.pathname} />
                     <HvemKanFåForeldrepenger id={Section.HvemKanFå} />

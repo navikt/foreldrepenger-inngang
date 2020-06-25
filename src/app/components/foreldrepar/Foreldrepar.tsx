@@ -29,31 +29,16 @@ const Foreldrepar: React.StatelessComponent<Props> = ({ firstParent, secondParen
             role="presentation"
             className={classnames(cls.block, {
                 [cls.element('closerParents')]: variant && variant === 4
-            })}>
-            <Forelder
-                className={cls.element('firstParent')}
-                svg={firstSvg}
-                lessOpacity={variant === 2}
-            />
+            })}
+        >
+            <Forelder className={cls.element('firstParent')} svg={firstSvg} lessOpacity={variant === 2} />
             {variant && variant === 3 && <span className={cls.element('parentSeparator')} />}
-            <Forelder
-                className={cls.element('secondParent')}
-                svg={secondSvg}
-                lessOpacity={variant === 1}
-            />
+            <Forelder className={cls.element('secondParent')} svg={secondSvg} lessOpacity={variant === 1} />
         </div>
     );
 };
 
-const Forelder = ({
-    className,
-    svg,
-    lessOpacity
-}: {
-    className: string;
-    svg: any;
-    lessOpacity?: boolean;
-}) => {
+const Forelder = ({ className, svg, lessOpacity }: { className: string; svg: any; lessOpacity?: boolean }) => {
     const svgToRender = (
         <FlexibleSvg
             className={classnames(className, { [cls.element('halfOpacity')]: lessOpacity })}

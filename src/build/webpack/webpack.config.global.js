@@ -23,13 +23,17 @@ const webpackConfig = {
         rules: [
             {
                 test: /\.(ts|tsx)$/,
-                loader: require.resolve('tslint-loader'),
-                enforce: 'pre'
-            },
-            {
-                test: /\.(ts|tsx)$/,
                 include: [path.resolve(__dirname, './../../app')],
                 loader: require.resolve('awesome-typescript-loader')
+            },
+            {
+                enforce: 'pre',
+                test: /\.(js|ts|tsx)$/,
+                exclude: /node_modules/,
+                loader: 'eslint-loader',
+                options: {
+                    cache: true
+                }
             },
             {
                 test: /\.js$/,

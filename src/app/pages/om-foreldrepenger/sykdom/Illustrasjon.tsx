@@ -2,13 +2,7 @@ import * as React from 'react';
 import { injectIntl, InjectedIntl } from 'react-intl';
 import getTranslation from '../../../utils/i18nUtils';
 
-const Illustrasjon = ({
-    grunnForForlengelse,
-    intl
-}: {
-    grunnForForlengelse: string;
-    intl: InjectedIntl;
-}) => (
+const Illustrasjon = ({ grunnForForlengelse, intl }: { grunnForForlengelse: string; intl: InjectedIntl }) => (
     <svg height="65px" width="100%" version="1.1" viewBox="0 0 622 65">
         <g fill="none" stroke="none" strokeWidth="1">
             <rect height="65" width="622" fill="none" x="0" y="0" />
@@ -25,15 +19,7 @@ const Illustrasjon = ({
                 y="37"
             />
             <rect height="27" width="28" rx="8" stroke="#634887" strokeWidth="1" x="0" y="37" />
-            <rect
-                height="26"
-                width="99"
-                fill="#931515"
-                rx="8"
-                stroke="#931515"
-                x="266.5"
-                y="37.5"
-            />
+            <rect height="26" width="99" fill="#931515" rx="8" stroke="#931515" x="266.5" y="37.5" />
             <text fill="#931515" fontFamily="SourceSansPro-Bold, Source Sans Pro" fontSize="12">
                 <tspan fontWeight="bold" x={316 - 2.6 * grunnForForlengelse.length} y="9">
                     {grunnForForlengelse}

@@ -19,15 +19,7 @@ const FerieforskyvningMobil = ({ intl }: InjectedIntlProps) => (
                 y="37"
             />
             <rect height="27" width="28" rx="8" stroke="#634887" strokeWidth="1" x="0" y="37" />
-            <rect
-                height="26"
-                width="74"
-                fill="#159345"
-                rx="8"
-                stroke="#159345"
-                x="129.5"
-                y="37.5"
-            />
+            <rect height="26" width="74" fill="#159345" rx="8" stroke="#159345" x="129.5" y="37.5" />
             <text fill="#159345" fontFamily="SourceSansPro-Bold, Source Sans Pro" fontSize="12">
                 <tspan x="154.204" y="11">
                     {getTranslation('om_foreldrepenger.ferie.illustrasjon', intl)}

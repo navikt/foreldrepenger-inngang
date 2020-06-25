@@ -18,11 +18,7 @@ interface Props {
     parentCls: BEMWrapper;
 }
 
-const Veiledermelding: React.StatelessComponent<Props & InjectedIntlProps> = ({
-    selectedDate,
-    parentCls,
-    intl
-}) => {
+const Veiledermelding: React.StatelessComponent<Props & InjectedIntlProps> = ({ selectedDate, parentCls, intl }) => {
     return (
         <div role="alert">
             <Veileder className={parentCls} ansikt="undrende" fargetema="advarsel" kompakt={true}>

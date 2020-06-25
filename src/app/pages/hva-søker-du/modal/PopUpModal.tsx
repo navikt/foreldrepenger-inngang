@@ -46,7 +46,8 @@ const PopUpModal = ({ intl, modalIsOpen }: Props) => {
                 isOpen={isOpen}
                 onRequestClose={closeModal}
                 closeButton={false}
-                contentLabel={getTranslation('hva_søker_du.engangsstønad_modal', intl)}>
+                contentLabel={getTranslation('hva_søker_du.engangsstønad_modal', intl)}
+            >
                 <div className={cls.element('body')}>
                     <div className={cls.element('knapp')}>
                         <Lukknapp onClick={closeModal} />

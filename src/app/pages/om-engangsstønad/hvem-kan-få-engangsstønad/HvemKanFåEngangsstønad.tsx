@@ -19,10 +19,7 @@ const utbetalingShortContent = 'om-engangsstønad/hvem-kan-få/krav2';
 type Props = EngangsstonadSectionProps & InjectedIntlProps;
 
 const HvemKanFåEngangsstønad: React.StatelessComponent<Props> = ({ id, intl }) => (
-    <PanelMedIllustrasjon
-        id={id}
-        title={getTranslation('om_engangsstønad.hva_er.tittel', intl)}
-        svg={engangsstønadSvg}>
+    <PanelMedIllustrasjon id={id} title={getTranslation('om_engangsstønad.hva_er.tittel', intl)} svg={engangsstønadSvg}>
         <Innhold source={getSource(hvaErEngangsstønadContent, intl)} />
         <div className={cls.element('kravContainer')}>
             <div className={cls.element('krav')}>

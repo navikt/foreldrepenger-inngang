@@ -58,7 +58,8 @@ const Breadcrumbs = (props: Props) => {
                 aria-label="Gå til forrige side"
                 key="tilbake"
                 type="normaltekst"
-                className={cls.element('item')}>
+                className={cls.element('item')}
+            >
                 <Link to={lastUrl}>{getTranslation('tilbake', intl)}</Link>
             </TypografiBase>
         );
@@ -81,7 +82,8 @@ const Breadcrumbs = (props: Props) => {
                     type="normaltekst"
                     className={classnames(cls.element('item'), {
                         [cls.element('current')]: current
-                    })}>
+                    })}
+                >
                     {current ? part.label : <Link to={part.url}>{part.label}</Link>}
                 </TypografiBase>
             );

@@ -15,12 +15,7 @@ const cls = BEMHelper('veiviser');
 const Header = ({ intl }: { intl: InjectedIntl }) => {
     return (
         <div className={cls.element('komponent-header')}>
-            <FlexibleSvg
-                className={cls.element('komponent-header-ikon')}
-                iconRef={svg}
-                width={35}
-                height={70}
-            />
+            <FlexibleSvg className={cls.element('komponent-header-ikon')} iconRef={svg} width={35} height={70} />
             <div className={cls.element('komponent-header-txt')}>
                 <Innhold source={getSource(headerTXT, intl)} />
             </div>
