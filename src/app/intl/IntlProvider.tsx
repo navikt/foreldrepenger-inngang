@@ -20,10 +20,6 @@ if (global.Intl) {
         const IntlPolyfill = require('intl');
         Intl.NumberFormat = IntlPolyfill.NumberFormat;
         Intl.DateTimeFormat = IntlPolyfill.DateTimeFormat;
-
-        if (typeof (Intl.NumberFormat as any).__addLocaleData === 'function') {
-            (Intl.NumberFormat as any).__addLocaleData(require('@formatjs/intl-numberformat/dist/locale-data/nb.json'));
-        }
     }
 } else {
     global.Intl = require('intl');

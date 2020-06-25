@@ -5,12 +5,27 @@ import Innhold from '../src/app/utils/innhold/Innhold';
 import { IntlProvider } from 'react-intl';
 import { MemoryRouter } from 'react-router-dom';
 import { getContentFiles } from '../jest/utils';
+import areIntlLocalesSupported from 'intl-locales-supported';
 
-const IntlMock = ({ children }) => (
-    <IntlProvider key="nb" locale="nb" messages={{ lukk_informasjon: 'Lukk' }}>
-        {children}
-    </IntlProvider>
-);
+const IntlMock = ({ children }) => {
+    const localesMyAppSupports = ['nb-NO'];
+
+    if (global.Intl) {
+        if (!areIntlLocalesSupported(localesMyAppSupports)) {
+            const IntlPolyfill = require('intl');
+            Intl.NumberFormat = IntlPolyfill.NumberFormat;
+            Intl.DateTimeFormat = IntlPolyfill.DateTimeFormat;
+        }
+    } else {
+        global.Intl = require('intl');
+    }
+
+    return (
+        <IntlProvider key="nb" locale="nb" messages={{ lukk_informasjon: 'Lukk' }}>
+            {children}
+        </IntlProvider>
+    );
+};
 
 let allContentFiles = [];
 
