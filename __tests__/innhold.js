@@ -20,7 +20,7 @@ beforeAll(() => {
 
 describe('Innhold klarer å rendre XML-strings til React-komponenter', () => {
     test('innhold klarer å tolke <innhold>-tags', () => {
-        const xml = '<innhold>Tekst</innhold>';
+        const xml = { default: '<innhold>Tekst</innhold>' };
         const component = mount(<Innhold source={xml} />);
 
         expect(component.exists('div.innhold')).toBe(true);
@@ -28,7 +28,7 @@ describe('Innhold klarer å rendre XML-strings til React-komponenter', () => {
     });
 
     test('innhold klarer å tolke <avsnitt>-tags', () => {
-        const xml = '<innhold><avsnitt>Tekst</avsnitt></innhold>';
+        const xml = { default: '<innhold><avsnitt>Tekst</avsnitt></innhold>' };
         const component = mount(<Innhold source={xml} />);
 
         expect(component.exists('p.typo-normal')).toBe(true);
@@ -37,23 +37,16 @@ describe('Innhold klarer å rendre XML-strings til React-komponenter', () => {
     });
 
     test('innhold klarer å tolke <liste>-tags', () => {
-        const xml = '<innhold><liste><punkt>Tekst</punkt></liste></innhold>';
+        const xml = { default: '<innhold><liste><punkt>Tekst</punkt></liste></innhold>' };
 
         const component = mount(<Innhold source={xml} />);
         expect(component.exists('ul')).toBe(true);
         expect(component.exists('li')).toBe(true);
-        expect(
-            component
-                .find('div')
-                .find('ul')
-                .find('li')
-                .props().children
-        ).toEqual('Tekst');
+        expect(component.find('div').find('ul').find('li').props().children).toEqual('Tekst');
     });
 
     test('innhold klarer å tolke <lesmer>-tags', () => {
-        const xml =
-            '<innhold><lesmer intro="Introduksjon"><avsnitt>Tekst</avsnitt></lesmer></innhold>';
+        const xml = { default: '<innhold><lesmer intro="Introduksjon"><avsnitt>Tekst</avsnitt></lesmer></innhold>' };
 
         const component = mount(<Innhold source={xml} />);
 
@@ -65,8 +58,9 @@ describe('Innhold klarer å rendre XML-strings til React-komponenter', () => {
     });
 
     test('innhold klarer å tolke <lesmer>-tags med prop "liten"', () => {
-        const xml =
-            '<innhold><lesmer liten="true" intro="Introduksjon"><avsnitt>Tekst</avsnitt></lesmer></innhold>';
+        const xml = {
+            default: '<innhold><lesmer liten="true" intro="Introduksjon"><avsnitt>Tekst</avsnitt></lesmer></innhold>',
+        };
 
         const component = mount(
             <IntlMock>
@@ -79,19 +73,9 @@ describe('Innhold klarer å rendre XML-strings til React-komponenter', () => {
 
         component.find('button.infoToggler').simulate('click');
 
-        expect(
-            component
-                .find('span.infoToggler__label')
-                .find('span.typo-normal')
-                .props().children
-        ).toEqual('Lukk');
+        expect(component.find('span.infoToggler__label').find('span.typo-normal').props().children).toEqual('Lukk');
 
-        expect(
-            component
-                .find('p.innhold__avsnitt')
-                .first()
-                .props().children
-        ).toEqual('Tekst');
+        expect(component.find('p.innhold__avsnitt').first().props().children).toEqual('Tekst');
     });
 });
 
@@ -101,7 +85,7 @@ describe('Innholdsfiler kompilerer til gyldige React-komponenter', () => {
         const spy = jest.spyOn(global.console, 'error');
 
         for (const filePath of allContentFiles) {
-            const file = fs.readFileSync(filePath, 'utf8');
+            const file = { default: fs.readFileSync(filePath, 'utf8') };
 
             const component = mount(
                 <MemoryRouter>
