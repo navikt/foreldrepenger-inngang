@@ -29,21 +29,13 @@ export interface ValueMap {
     [s: string]: string;
 }
 
-export const Innhold = (props: any) => (
-    <div {...props} className={classnames(cls.block, props.className)} />
-);
+export const Innhold = (props: any) => <div {...props} className={classnames(cls.block, props.className)} />;
 
-export const Avsnitt = (props: {
-    type?: TypografiType;
-    className?: string;
-    children: React.ReactNode;
-}) => (
-        <TypografiBase
-            type={props.type || 'normaltekst'}
-            className={classnames(cls.element('avsnitt'), props.className)}
-            children={props.children}
-        />
-    );
+export const Avsnitt = (props: { type?: TypografiType; className?: string; children: React.ReactNode }) => (
+    <TypografiBase type={props.type || 'normaltekst'} className={classnames(cls.element('avsnitt'), props.className)}>
+        {props.children}
+    </TypografiBase>
+);
 
 export const Variabel = (props: { values: ValueMap; children: string }) => {
     const { values, children } = props;
@@ -62,11 +54,7 @@ export const MidstiltTittel = (props: any) => (
     <Undertittel className={cls.element('midtstiltTittel')}>{props.children}</Undertittel>
 );
 
-export const SøkNåKnapp = (props: {
-    søknad: Søknadstyper;
-    sentrert?: boolean;
-    children: React.ReactNode;
-}) => {
+export const SøkNåKnapp = (props: { søknad: Søknadstyper; sentrert?: boolean; children: React.ReactNode }) => {
     const url = getSøknadsurl(props.søknad);
     if (!url) {
         return null;
@@ -86,28 +74,21 @@ export const SøkNåKnapp = (props: {
     return content;
 };
 
-export const LesMerPanel = (props: {
-    liten?: string;
-    intro: string;
-    children: React.ReactNode;
-}) => {
+export const LesMerPanel = (props: { liten?: string; intro: string; children: React.ReactNode }) => {
     const { liten, intro, children } = props;
 
     return liten ? (
-        <UtvidetInformasjon apneLabel={intro} children={children} />
+        <UtvidetInformasjon apneLabel={intro}>{children}</UtvidetInformasjon>
     ) : (
-            <LesMer intro={intro} children={children} />
-        );
+        <LesMer intro={intro}>{children}</LesMer>
+    );
 };
 
 export const Liste = (props: { type?: TypografiType; tag?: string; children: React.ReactNode }) => (
     <TypografiBase type={props.type || 'normaltekst'} {...props} tag={props.tag || 'ul'} />
 );
 
-export const EttersendKnapp = (props: {
-    sentrert?: boolean;
-    children: React.ReactNode;
-}) => {
+export const EttersendKnapp = (props: { sentrert?: boolean; children: React.ReactNode }) => {
     const content = (
         <Lenkeknapp url={Environment.DINE_FORELDREPENGER_URL} urlIsExternal={true}>
             {props.children}
@@ -115,18 +96,13 @@ export const EttersendKnapp = (props: {
     );
 
     if (props.sentrert) {
-        return (
-            <span style={{ display: 'inline' }}>{content}</span>
-        );
+        return <span style={{ display: 'inline' }}>{content}</span>;
     }
 
     return content;
 };
 
-export const SøkOgEttersendKnapp = (props: {
-    søknad: Søknadstyper;
-    children: string;
-}) => {
+export const SøkOgEttersendKnapp = (props: { søknad: Søknadstyper; children: string }) => {
     const url = getSøknadsurl(props.søknad);
     if (!url) {
         return null;
@@ -148,12 +124,8 @@ export const SøkOgEttersendKnapp = (props: {
 
     return (
         <div style={{ display: 'flex', justifyContent: 'space-evenly' }}>
-            <div>
-                {søkKnapp}
-            </div>
-            <div>
-                {ettersendKnapp}
-            </div>
+            <div>{søkKnapp}</div>
+            <div>{ettersendKnapp}</div>
         </div>
-    )
+    );
 };

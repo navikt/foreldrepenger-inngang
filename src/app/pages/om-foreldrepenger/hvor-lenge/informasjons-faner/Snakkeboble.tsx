@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { injectIntl, InjectedIntlProps } from 'react-intl';
+import { useIntl } from 'react-intl';
 import { Element } from 'nav-frontend-typografi';
 import BEMHelper from 'app/utils/bem';
 import getTranslation from 'app/utils/i18nUtils';
@@ -11,10 +11,11 @@ interface OwnProps {
     punkter: string[];
 }
 
-type Props = OwnProps & InjectedIntlProps;
+type Props = OwnProps;
 
 const Snakkeboble = (props: Props) => {
-    const { tittel, punkter, intl } = props;
+    const intl = useIntl();
+    const { tittel, punkter } = props;
 
     return (
         <div>
@@ -27,13 +28,9 @@ const Snakkeboble = (props: Props) => {
                         })
                     ) : (
                         <li>
-                            {getTranslation(
-                                'om_foreldrepenger.hvor_lenge.fordeling.ingen_krav',
-                                intl,
-                                {
-                                    subjekt: getTranslation('far', intl)
-                                }
-                            )}
+                            {getTranslation('om_foreldrepenger.hvor_lenge.fordeling.ingen_krav', intl, {
+                                subjekt: getTranslation('far', intl),
+                            })}
                         </li>
                     ))}
             </ul>
@@ -41,4 +38,4 @@ const Snakkeboble = (props: Props) => {
     );
 };
 
-export default injectIntl(Snakkeboble);
+export default Snakkeboble;

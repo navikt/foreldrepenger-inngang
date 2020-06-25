@@ -25,7 +25,7 @@ class SvgBanner extends Component<Props> {
         super(props);
 
         this.state = {
-            svgIndex: this.props.svgIndex || getRandomInt(1, NUM_FAMILIES)
+            svgIndex: this.props.svgIndex || getRandomInt(1, NUM_FAMILIES),
         };
     }
 
@@ -35,15 +35,8 @@ class SvgBanner extends Component<Props> {
 
         return (
             <div role="banner" className="svgBanner">
-                {this.state && (
-                    <FlexibleSvg className="svgBanner__svg" iconRef={svg} width={195} height={94} />
-                )}
-                <FlexibleSvg
-                    className="svgBanner__cribSvg"
-                    iconRef={cribSvg}
-                    width={111}
-                    height={88}
-                />
+                {this.state && <FlexibleSvg className="svgBanner__svg" iconRef={svg} width={195} height={94} />}
+                <FlexibleSvg className="svgBanner__cribSvg" iconRef={cribSvg} width={111} height={88} />
             </div>
         );
     };

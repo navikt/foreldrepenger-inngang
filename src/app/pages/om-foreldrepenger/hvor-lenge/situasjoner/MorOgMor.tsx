@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { addAntallUkerSomSnakkebobletittel } from './utils';
 
-import { injectIntl, InjectedIntl, InjectedIntlProps } from 'react-intl';
+import { IntlShape, useIntl } from 'react-intl';
 import Foreldrepar from '../../../../components/foreldrepar/Foreldrepar';
 import Informasjonsfaner, { InformasjonsfaneProps } from '../informasjons-faner/Informasjonsfaner';
 import Innhold, { getSource } from 'app/utils/innhold/Innhold';
@@ -13,7 +13,7 @@ const morsDel = 'om-foreldrepenger/hvor-lenge/mor-og-mor/mors-del';
 const medmorsDel = 'om-foreldrepenger/hvor-lenge/mor-og-mor/medmors-del';
 const fellesDel = 'om-foreldrepenger/hvor-lenge/mor-og-mor/felles-del';
 
-const getInformasjonsfaner = (intl: InjectedIntl): InformasjonsfaneProps[] => [
+const getInformasjonsfaner = (intl: IntlShape): InformasjonsfaneProps[] => [
     {
         kvote: 'mødrekvote',
         label: getTranslation('om_foreldrepenger.hvor_lenge.fordeling.mødrekvote', intl),
@@ -22,17 +22,14 @@ const getInformasjonsfaner = (intl: InjectedIntl): InformasjonsfaneProps[] => [
                 tittel: '',
                 icon: 'mor2',
                 punkter: [
-                    getTranslation(
-                        'om_foreldrepenger.hvor_lenge.fordeling.tre_uker_før_fødsel',
-                        intl
-                    ),
+                    getTranslation('om_foreldrepenger.hvor_lenge.fordeling.tre_uker_før_fødsel', intl),
                     getTranslation('om_foreldrepenger.hvor_lenge.fordeling.ingen_krav', intl, {
-                        subjekt: getTranslation('medmor', intl)
-                    })
-                ]
+                        subjekt: getTranslation('medmor', intl),
+                    }),
+                ],
             },
-            component: <Innhold source={getSource(morsDel, intl)} />
-        }
+            component: <Innhold source={getSource(morsDel, intl)} />,
+        },
     },
     {
         kvote: 'fedrekvote',
@@ -43,12 +40,12 @@ const getInformasjonsfaner = (intl: InjectedIntl): InformasjonsfaneProps[] => [
                 icon: 'medmor2',
                 punkter: [
                     getTranslation('om_foreldrepenger.hvor_lenge.fordeling.ingen_krav', intl, {
-                        subjekt: getTranslation('mor', intl)
-                    })
-                ]
+                        subjekt: getTranslation('mor', intl),
+                    }),
+                ],
             },
-            component: <Innhold source={getSource(medmorsDel, intl)} />
-        }
+            component: <Innhold source={getSource(medmorsDel, intl)} />,
+        },
     },
     {
         kvote: 'fellesperiode',
@@ -59,27 +56,27 @@ const getInformasjonsfaner = (intl: InjectedIntl): InformasjonsfaneProps[] => [
                 icon: <Foreldrepar firstParent="mor2" secondParent="medmor2" variant={4} />,
                 punkter: [
                     getTranslation('om_foreldrepenger.hvor_lenge.fordeling.aktivitetskrav', intl, {
-                        subjekt: getTranslation('mor', intl)
-                    })
-                ]
+                        subjekt: getTranslation('mor', intl),
+                    }),
+                ],
             },
-            component: <Innhold source={getSource(fellesDel, intl)} />
-        }
-    }
+            component: <Innhold source={getSource(fellesDel, intl)} />,
+        },
+    },
 ];
 
-const MorOgMor = ({ intl }: InjectedIntlProps) => {
+const MorOgMor = () => {
+    const intl = useIntl();
+
     return (
         <div>
             <Innhold source={getSource(content, intl)} />
             <Informasjonsfaner
-                tabs={getInformasjonsfaner(intl).map(
-                    addAntallUkerSomSnakkebobletittel('morOgMor', intl)
-                )}
+                tabs={getInformasjonsfaner(intl).map(addAntallUkerSomSnakkebobletittel('morOgMor', intl))}
             />
             <Innhold source={getSource(kalkulatorbeskrivelse, intl)} />
         </div>
     );
 };
 
-export default injectIntl(MorOgMor);
+export default MorOgMor;

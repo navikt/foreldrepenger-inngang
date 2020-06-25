@@ -1,40 +1,35 @@
 import * as React from 'react';
-import { addLocaleData, IntlProvider as Provider } from 'react-intl';
-import * as en from 'react-intl/locale-data/en';
-import * as nb from 'react-intl/locale-data/nb';
-import * as nn from 'react-intl/locale-data/nn';
+import { IntlProvider as Provider } from 'react-intl';
+import moment from 'moment';
+import areIntlLocalesSupported from 'intl-locales-supported';
 
 import enMessages from './locales/en_GB.json';
 import nnMessages from './locales/nn_NO.json';
 import nbMessages from './locales/nb_NO.json';
 
-import areIntlLocalesSupported from 'intl-locales-supported';
-
 export type Language = 'nb' | 'nn' | 'en';
 
-const localesMyAppSupports = [
-    'nb-NO'
-];
+interface StateProps {
+    language: Language;
+}
+
+const localesMyAppSupports = ['nb-NO'];
 
 if (global.Intl) {
     if (!areIntlLocalesSupported(localesMyAppSupports)) {
-        const IntlPolyfill    = require('intl');
-        Intl.NumberFormat   = IntlPolyfill.NumberFormat;
+        const IntlPolyfill = require('intl');
+        Intl.NumberFormat = IntlPolyfill.NumberFormat;
         Intl.DateTimeFormat = IntlPolyfill.DateTimeFormat;
     }
 } else {
     global.Intl = require('intl');
 }
 
-interface StateProps {
-    language: Language;
-}
+moment.locale('nb');
 
 class IntlProvider extends React.Component<StateProps> {
     constructor(props: StateProps) {
         super(props);
-
-        addLocaleData([...nb, ...nn, ...en]);
     }
 
     render() {
@@ -46,10 +41,7 @@ class IntlProvider extends React.Component<StateProps> {
         }
 
         return (
-            <Provider
-                key={this.props.language}
-                locale={this.props.language}
-                messages={messages || {}}>
+            <Provider key={this.props.language} locale={this.props.language} messages={messages || {}}>
                 {this.props.children}
             </Provider>
         );

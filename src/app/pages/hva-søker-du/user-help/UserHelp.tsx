@@ -7,15 +7,7 @@ import './userHelp.less';
 
 const cls = BEMHelper('userHelp');
 
-const UserHelp = ({
-    linkText,
-    linkUrl,
-    helpText
-}: {
-    linkText: string;
-    linkUrl: string;
-    helpText: string;
-}) => {
+const UserHelp = ({ linkText, linkUrl, helpText }: { linkText: string; linkUrl: string; helpText: string }) => {
     return (
         <div role="link" className={cls.block}>
             <TypografiBase className={cls.element('link')} type="normaltekst">

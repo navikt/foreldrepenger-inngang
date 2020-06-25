@@ -1,68 +1,34 @@
 import React from 'react';
-import { InjectedIntl, injectIntl } from 'react-intl';
+import { useIntl } from 'react-intl';
 import getTranslation from '../../../../utils/i18nUtils';
 
 const JegVilJobbeHeltidMobile = ({
     jobb,
     uker,
     sluttdato,
-    forskyvning,
     fodsel,
-    intl
 }: {
     jobb: string;
     uker: string;
     sluttdato: string;
-    forskyvning: string;
     fodsel: string;
-    intl: InjectedIntl;
 }) => {
+    const intl = useIntl();
+
     return (
         <svg height="100%" width="100%" version="1.1" viewBox="0 0 375 70">
             <g fill="none" stroke="none" strokeWidth="1">
                 <rect height="70" width="375" fill="#FFFFFF" x="0" y="0" />
-                <rect
-                    height="27"
-                    width="97"
-                    rx="8"
-                    stroke="#634887"
-                    strokeWidth="0.5"
-                    x="30"
-                    y="43"
-                />
-                <rect
-                    height="27"
-                    width="48"
-                    rx="8"
-                    stroke="#634887"
-                    strokeWidth="0.5"
-                    x="206"
-                    y="43"
-                />
+                <rect height="27" width="97" rx="8" stroke="#634887" strokeWidth="0.5" x="30" y="43" />
+                <rect height="27" width="48" rx="8" stroke="#634887" strokeWidth="0.5" x="206" y="43" />
                 <path
                     d="M258,43 L327,43 C329.209139,43 331,44.790861 331,47 L331,66 C331,68.209139 329.209139,70 327,70 L258,70 C255.790861,70 254,68.209139 254,66 L254,47 C254,44.790861 255.790861,43 258,43 Z"
                     stroke="#634887"
                     strokeDasharray="3,3"
                     strokeWidth="0.5"
                 />
-                <rect
-                    height="27"
-                    width="28"
-                    rx="8"
-                    stroke="#634887"
-                    strokeWidth="0.5"
-                    x="0"
-                    y="43"
-                />
-                <rect
-                    height="26"
-                    width="74"
-                    fill="#159345"
-                    rx="8"
-                    stroke="#159345"
-                    x="129.5"
-                    y="43.5"
-                />
+                <rect height="27" width="28" rx="8" stroke="#634887" strokeWidth="0.5" x="0" y="43" />
+                <rect height="26" width="74" fill="#159345" rx="8" stroke="#159345" x="129.5" y="43.5" />
                 <text fill="#159345" fontFamily="SourceSansPro-Bold, Source Sans Pro" fontSize="14">
                     <tspan x="149.53" y="12">
                         {getTranslation(jobb, intl)}
@@ -133,10 +99,7 @@ const JegVilJobbeHeltidMobile = ({
                         <path d="M1.57357373,4.23076918 C1.42354895,3.28280089 0.882373433,2.64035569 0.25767706,2.64035569 C0.119605872,2.64035569 0.00767705968,2.52842687 0.00767705968,2.39035569 C0.00767705968,2.2522845 0.119605872,2.14035569 0.25767706,2.14035569 C1.18517625,2.14035569 1.91162086,3.01946713 2.07853935,4.23072413 C4.40245109,4.2303894 10.1645322,4.22836988 11.9565217,4.23076923 C11.9565217,6.30262124 10.7585887,8 8.6050924,8 L4.26335223,8 C2.71203911,8 1.45445135,6.67407407 1.45445135,5.03846154 C1.45445135,4.75845514 1.49130778,4.48752481 1.56018475,4.23076923 C1.56461933,4.23076923 1.56908237,4.23076922 1.57357373,4.23076918 Z M8.75,10.5 C8.05964406,10.5 7.5,9.94035594 7.5,9.25 C7.5,8.55964406 8.05964406,8 8.75,8 C9.44035594,8 10,8.55964406 10,9.25 C10,9.94035594 9.44035594,10.5 8.75,10.5 Z M8.75,9.5 C8.88807119,9.5 9,9.38807119 9,9.25 C9,9.11192881 8.88807119,9 8.75,9 C8.61192881,9 8.5,9.11192881 8.5,9.25 C8.5,9.38807119 8.61192881,9.5 8.75,9.5 Z M4.25,10.5 C3.55964406,10.5 3,9.94035594 3,9.25 C3,8.55964406 3.55964406,8 4.25,8 C4.94035594,8 5.5,8.55964406 5.5,9.25 C5.5,9.94035594 4.94035594,10.5 4.25,10.5 Z M4.25,9.5 C4.38807119,9.5 4.5,9.38807119 4.5,9.25 C4.5,9.11192881 4.38807119,9 4.25,9 C4.11192881,9 4,9.11192881 4,9.25 C4,9.38807119 4.11192881,9.5 4.25,9.5 Z M8.33169499,0.5 C10.5717236,0.5 11.9565217,2.20158825 11.9565217,3.73076923 C10.8557091,3.73076923 9.04673502,3.72816364 6.65210935,3.72816364 L8.33169499,0.5 Z" />
                     </g>
                 </g>
-                <text
-                    fill="#3E3832"
-                    fontFamily="SourceSansPro-Regular, Source Sans Pro"
-                    fontSize="14">
+                <text fill="#3E3832" fontFamily="SourceSansPro-Regular, Source Sans Pro" fontSize="14">
                     <tspan x="9.771" y="12">
                         {getTranslation(fodsel, intl)}
                     </tspan>
@@ -149,4 +112,4 @@ const JegVilJobbeHeltidMobile = ({
     );
 };
 
-export default injectIntl(JegVilJobbeHeltidMobile);
+export default JegVilJobbeHeltidMobile;

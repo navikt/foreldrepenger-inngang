@@ -27,8 +27,9 @@ const Innholdsfortegnelse: React.StatelessComponent<Props> = ({ sections, button
             ref={ref}
             className={classnames('panel', cls.block)}
             style={{
-                top: `calc(50% - ${height / 2}px)`
-            }}>
+                top: `calc(50% - ${height / 2}px)`,
+            }}
+        >
             <div className={cls.element('icon')}>
                 <SvgMask small={true} svg={icon} />
             </div>

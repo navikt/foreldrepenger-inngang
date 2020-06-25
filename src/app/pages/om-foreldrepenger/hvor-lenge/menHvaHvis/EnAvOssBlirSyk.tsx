@@ -12,7 +12,8 @@ const EnAvOssBlirSyk: React.StatelessComponent<Props> = ({ size }) => {
             viewBox="0 0 109 109"
             version="1.1"
             xmlns="http://www.w3.org/2000/svg"
-            xmlnsXlink="http://www.w3.org/1999/xlink">
+            xmlnsXlink="http://www.w3.org/1999/xlink"
+        >
             <title>En av oss blir syke</title>
             <defs />
             <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
@@ -27,7 +28,8 @@ const EnAvOssBlirSyk: React.StatelessComponent<Props> = ({ size }) => {
                                         fontSize="16"
                                         fontWeight="normal"
                                         line-spacing="22"
-                                        fill="#0067C5">
+                                        fill="#0067C5"
+                                    >
                                         <tspan x="8.148" y="44">
                                             En av oss{' '}
                                         </tspan>

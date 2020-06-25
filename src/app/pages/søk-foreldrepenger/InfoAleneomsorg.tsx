@@ -4,23 +4,18 @@ import BEMHelper from 'app/utils/bem';
 import { Undertittel } from 'nav-frontend-typografi';
 import InfoAleneomsorgFar from './InfoAleneomsorgFar';
 import InfoAleneomsorgMor from './InfoAleneomsorgMor';
-import { injectIntl, InjectedIntl } from 'react-intl';
+import { useIntl } from 'react-intl';
 import getTranslation from 'app/utils/i18nUtils';
 
 const cls = BEMHelper('søkForeldrepenger');
 
-interface Props {
-    intl: InjectedIntl;
-}
-
-const InfoAleneomsorg: React.FunctionComponent<Props> = ({ intl }) => {
+const InfoAleneomsorg: React.FunctionComponent = () => {
+    const intl = useIntl();
     const [valgtForelder, setValgtForelder] = useState<string | undefined>(undefined);
 
     return (
         <div>
-            <Undertittel>
-                {getTranslation('søke_om_foreldrepenger.aleneomsorg.morEllerFar', intl)}
-            </Undertittel>
+            <Undertittel>{getTranslation('søke_om_foreldrepenger.aleneomsorg.morEllerFar', intl)}</Undertittel>
             <div className={cls.element('radioWrapper')}>
                 <RadioPanel
                     checked={valgtForelder === 'mor'}
@@ -37,10 +32,9 @@ const InfoAleneomsorg: React.FunctionComponent<Props> = ({ intl }) => {
                     value={'far'}
                 />
             </div>
-            {valgtForelder !== undefined &&
-                (valgtForelder === 'far' ? <InfoAleneomsorgFar /> : <InfoAleneomsorgMor />)}
+            {valgtForelder !== undefined && (valgtForelder === 'far' ? <InfoAleneomsorgFar /> : <InfoAleneomsorgMor />)}
         </div>
     );
 };
 
-export default injectIntl(InfoAleneomsorg);
+export default InfoAleneomsorg;

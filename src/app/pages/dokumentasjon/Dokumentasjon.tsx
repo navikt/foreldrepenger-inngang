@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { injectIntl, InjectedIntlProps } from 'react-intl';
+import { useIntl } from 'react-intl';
 import BEMHelper from '../../utils/bem';
 import Breadcrumbs from '../../components/breadcrumbs/Breadcrumbs';
 import getTranslation from 'app/utils/i18nUtils';
@@ -16,7 +16,9 @@ interface Props {
 const infosiderCls = BEMHelper('infosider');
 const pageSvg = require('./../../assets/icons/brev.svg').default;
 
-const Dokumentasjon: React.StatelessComponent<Props & InjectedIntlProps> = ({ location, intl }) => {
+const Dokumentasjon: React.StatelessComponent<Props> = ({ location }) => {
+    const intl = useIntl();
+
     return (
         <div className={infosiderCls.block}>
             <DokumentasjonHeader />
@@ -26,7 +28,8 @@ const Dokumentasjon: React.StatelessComponent<Props & InjectedIntlProps> = ({ lo
                     <Breadcrumbs path={location.pathname} />
                     <PanelMedIllustrasjon
                         title={getTranslation('dokumentasjon.tittel', intl)}
-                        svg={<SvgMask svg={pageSvg} />}>
+                        svg={<SvgMask svg={pageSvg} />}
+                    >
                         <Innhold source={getSource('dokumentasjon/dokumentasjon', intl)} />
                     </PanelMedIllustrasjon>
                 </article>
@@ -45,4 +48,4 @@ const DokumentasjonHeader = () => {
     );
 };
 
-export default injectIntl(Dokumentasjon);
+export default Dokumentasjon;

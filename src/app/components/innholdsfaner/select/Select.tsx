@@ -1,14 +1,14 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import './select.less';
 import BEMHelper from '../../../utils/bem';
 import { Innholdsfane } from '../fane/Fane';
-import { injectIntl, InjectedIntlProps } from 'react-intl';
-import { Panel } from 'nav-frontend-paneler';
+import { injectIntl, IntlShape } from 'react-intl';
+import Panel from 'nav-frontend-paneler';
 import TypografiBase from 'nav-frontend-typografi';
 import Chevron from 'nav-frontend-chevron';
 import classnames from 'classnames';
 import getTranslation from 'app/utils/i18nUtils';
+
+import './select.less';
 
 const cls = BEMHelper('select');
 
@@ -18,7 +18,11 @@ interface OwnProps {
     choices: Innholdsfane[];
 }
 
-type SelectProps = OwnProps & InjectedIntlProps;
+interface InjectedProps {
+    intl: IntlShape;
+}
+
+type SelectProps = OwnProps & InjectedProps;
 
 interface SelectState {
     open: boolean;
@@ -27,18 +31,20 @@ interface SelectState {
 class Select extends React.Component<SelectProps, SelectState> {
     mounted: boolean;
     selectRef: any;
+    node: any;
 
     constructor(props: SelectProps) {
         super(props);
 
         this.state = {
-            open: false
+            open: false,
         };
     }
 
     componentDidMount = () => {
         this.mounted = true;
         this.selectRef = React.createRef();
+        this.node = React.createRef<HTMLDivElement>();
 
         document.addEventListener('keydown', this.handleKeyPressEvent, false);
         document.addEventListener('click', this.handleDocumentClick, false);
@@ -60,7 +66,7 @@ class Select extends React.Component<SelectProps, SelectState> {
 
     closePopup = () => {
         this.setState({
-            open: false
+            open: false,
         });
     };
 
@@ -72,8 +78,7 @@ class Select extends React.Component<SelectProps, SelectState> {
 
     handleDocumentClick = (e: any) => {
         if (this.mounted) {
-            const node = ReactDOM.findDOMNode(this);
-            if (node && !node.contains(e.target)) {
+            if (this.node && !this.node.contains(e.target)) {
                 this.closePopup();
             }
         }
@@ -87,12 +92,12 @@ class Select extends React.Component<SelectProps, SelectState> {
 
     onClick = () => {
         this.setState({
-            open: !this.state.open
+            open: !this.state.open,
         });
     };
 
     render = () => (
-        <div style={{ position: 'relative' }}>
+        <div style={{ position: 'relative' }} ref={(node) => (this.node = node)}>
             <div
                 role="menu"
                 aria-haspopup={true}
@@ -102,8 +107,9 @@ class Select extends React.Component<SelectProps, SelectState> {
                 onClick={this.onClick}
                 onKeyPress={this.onClick}
                 className={classnames(cls.block, {
-                    [cls.modifier('open')]: this.state.open
-                })}>
+                    [cls.modifier('open')]: this.state.open,
+                })}
+            >
                 <div className={cls.element('selected')}>
                     <div className={cls.element('selectedIcon')}>{this.props.selected.icon}</div>
                     <TypografiBase type="normaltekst">
@@ -127,10 +133,10 @@ class Select extends React.Component<SelectProps, SelectState> {
                                     this.onChoiceClick(index);
                                 }}
                                 className={classnames(cls.element('choice'), {
-                                    [cls.element('choice', 'selected')]:
-                                        this.props.selected.label === choice.label
+                                    [cls.element('choice', 'selected')]: this.props.selected.label === choice.label,
                                 })}
-                                tabIndex={0}>
+                                tabIndex={0}
+                            >
                                 <TypografiBase type="normaltekst">
                                     {getTranslation(choice.label, this.props.intl)}
                                 </TypografiBase>

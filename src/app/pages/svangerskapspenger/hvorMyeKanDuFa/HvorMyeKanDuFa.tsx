@@ -1,5 +1,5 @@
 import React from 'react';
-import { InjectedIntlProps, injectIntl, InjectedIntl } from 'react-intl';
+import { IntlShape, useIntl } from 'react-intl';
 import PanelMedIllustrasjon from '../../../components/panel-med-illustrasjon/PanelMedIllustrasjon';
 import getTranslation from '../../../utils/i18nUtils';
 import Innhold, { getSource } from '../../../utils/innhold/Innhold';
@@ -17,47 +17,48 @@ const cls = BEMHelper('hvorMyeKanDuFa');
 const seksjonsBilde = require('../../../assets/ark/ark-beregning.svg').default;
 
 interface Props {
-  id: string;
+    id: string;
 }
 
-const getFaner = (intl: InjectedIntl) => [
-  {
-    label: 'om_svangerskapspenger.hvorMyeKanDuFa.faneTittel.arbeidstaker',
-    icon: <ArbeidstakerIkon />,
-    component: <Arbeidstaker />
-  },
-  {
-    label: 'om_svangerskapspenger.hvorMyeKanDuFa.faneTittel.frilanser',
-    icon: <FrilanserIkon />,
-    component: <Frilanser />
-  },
-  {
-    label: 'om_svangerskapspenger.hvorMyeKanDuFa.faneTittel.selvstendignaring',
-    icon: <SelvstendigIkon />,
-    component: <SelvStendigNaring />
-  },
-  {
-    label: 'om_foreldrepenger.beregning.fisker',
-    icon: <FiskerIkon />,
-    component: <Innhold source={getSource('om-foreldrepenger/beregning/fisker', intl)} />
-  }
+const getFaner = (intl: IntlShape) => [
+    {
+        label: 'om_svangerskapspenger.hvorMyeKanDuFa.faneTittel.arbeidstaker',
+        icon: <ArbeidstakerIkon />,
+        component: <Arbeidstaker />,
+    },
+    {
+        label: 'om_svangerskapspenger.hvorMyeKanDuFa.faneTittel.frilanser',
+        icon: <FrilanserIkon />,
+        component: <Frilanser />,
+    },
+    {
+        label: 'om_svangerskapspenger.hvorMyeKanDuFa.faneTittel.selvstendignaring',
+        icon: <SelvstendigIkon />,
+        component: <SelvStendigNaring />,
+    },
+    {
+        label: 'om_foreldrepenger.beregning.fisker',
+        icon: <FiskerIkon />,
+        component: <Innhold source={getSource('om-foreldrepenger/beregning/fisker', intl)} />,
+    },
 ];
 
-const HvorMyeKanDuFa: React.StatelessComponent<Props & InjectedIntlProps> = ({ id, intl }) => {
-  return (
-    <PanelMedIllustrasjon
-      id={id}
-      className={cls.block}
-      title={getTranslation('om_svangerskapspenger.hvorMyeKanDuFa.tittel', intl)}
-      svg={seksjonsBilde}>
-      <Innhold
-        source={getSource('svangerskapspenger/hvor-mye-kan-du-fa/informasjonstekst', intl)}
-      />
-      <div className={cls.element('alignLeft')}>
-        <Innholdsfaner tabs={getFaner(intl)} />
-      </div>
-    </PanelMedIllustrasjon>
-  );
+const HvorMyeKanDuFa: React.StatelessComponent<Props> = ({ id }) => {
+    const intl = useIntl();
+
+    return (
+        <PanelMedIllustrasjon
+            id={id}
+            className={cls.block}
+            title={getTranslation('om_svangerskapspenger.hvorMyeKanDuFa.tittel', intl)}
+            svg={seksjonsBilde}
+        >
+            <Innhold source={getSource('svangerskapspenger/hvor-mye-kan-du-fa/informasjonstekst', intl)} />
+            <div className={cls.element('alignLeft')}>
+                <Innholdsfaner tabs={getFaner(intl)} />
+            </div>
+        </PanelMedIllustrasjon>
+    );
 };
 
-export default injectIntl(HvorMyeKanDuFa);
+export default HvorMyeKanDuFa;

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { InjectedIntlProps, injectIntl, InjectedIntl } from 'react-intl';
+import { useIntl } from 'react-intl';
 import { VenstreChevron } from 'nav-frontend-chevron';
 import { withRouter, RouteComponentProps } from 'react-router';
 import BEMHelper from '../../utils/bem';
@@ -11,36 +11,38 @@ import './blindside.less';
 
 const cls = BEMHelper('blindside');
 
-type Props = RouteComponentProps & InjectedIntlProps;
+type Props = RouteComponentProps;
 
-const Blindside: React.StatelessComponent<Props> = ({ history, intl }) => {
+const Blindside: React.StatelessComponent<Props> = ({ history }) => {
+    const intl = useIntl();
+
     return (
         <div className={cls.block}>
             <Sidebanner text={getTranslation('blindside.tittel', intl)} />
             <div role="main" className={cls.element('body')}>
-                <Tilbakeknapp goBack={history.goBack} />
+                <Tilbakeknapp goBack={history.back} />
                 <Veileder ansikt="glad">
-                    <TypografiBase type="normaltekst">
-                        {getTranslation('blindside.veileder', intl)}
-                    </TypografiBase>
+                    <TypografiBase type="normaltekst">{getTranslation('blindside.veileder', intl)}</TypografiBase>
                 </Veileder>
             </div>
         </div>
     );
 };
 
-const Tilbakeknapp = injectIntl(({ goBack, intl }: { goBack: any; intl: InjectedIntl }) => {
+const Tilbakeknapp = ({ goBack }: { goBack: any }) => {
+    const intl = useIntl();
     return (
         <div
             tabIndex={0}
             className={cls.element('tilbake')}
             onClick={() => {
                 goBack();
-            }}>
+            }}
+        >
             <VenstreChevron />
             <TypografiBase type="element">{getTranslation('tilbake', intl)}</TypografiBase>
         </div>
     );
-});
+};
 
-export default injectIntl(withRouter(Blindside));
+export default withRouter(Blindside);

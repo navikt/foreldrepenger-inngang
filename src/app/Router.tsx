@@ -21,44 +21,19 @@ const ValidRoute = (props: ValidRouteProps) => <Route {...props} />;
 
 const Router = () => (
     <Switch>
-        <ValidRoute
-            exact={true}
-            path={Page.Root}
-            component={Informasjonstavle}
-            key="informasjonstavle"
-        />
-        <ValidRoute
-            exact={true}
-            path={Page.Dokumentasjon}
-            component={Dokumentasjon}
-            key="dokumentasjon"
-        />
+        <ValidRoute exact={true} path={Page.Root} component={Informasjonstavle} key="informasjonstavle" />
+        <ValidRoute exact={true} path={Page.Dokumentasjon} component={Dokumentasjon} key="dokumentasjon" />
         <ValidRoute exact={true} path={Page.HvaSøkerDu} component={HvaSøkerDu} key="hva-soker-du" />
         <ValidRoute exact={true} path={Page.HvorMye} component={Kalkulator} key="kalkulator" />
-        <ValidRoute
-            exact={true}
-            path={Page.OmEngangsstønad}
-            component={OmEngangsstønad}
-            key="om-engangsstonad"
-        />
-        <ValidRoute
-            exact={true}
-            path={Page.OmForeldrepenger}
-            component={OmForeldrepenger}
-            key="om-foreldrepenger"
-        />
+        <ValidRoute exact={true} path={Page.OmEngangsstønad} component={OmEngangsstønad} key="om-engangsstonad" />
+        <ValidRoute exact={true} path={Page.OmForeldrepenger} component={OmForeldrepenger} key="om-foreldrepenger" />
         <ValidRoute
             exact={true}
             path={Page.SøkeOmForeldrepenger}
             component={SøkForeldrepenger}
             key="sok-foreldrepenger"
         />
-        <ValidRoute
-            exact={true}
-            path={Page.Regelendringer}
-            component={Regelendringer}
-            key="regelendringer"
-        />
+        <ValidRoute exact={true} path={Page.Regelendringer} component={Regelendringer} key="regelendringer" />
         <ValidRoute
             exact={true}
             path={Page.OmSvangerskapspenger}

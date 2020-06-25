@@ -1,8 +1,6 @@
 import XMLToReact from '@condenast/xml-to-react';
 import * as Node from './Node';
-import { InjectedIntl } from 'react-intl';
-
-/* tslint:disable:no-console */
+import { IntlShape } from 'react-intl';
 
 type NodeType = React.ReactNode;
 
@@ -10,15 +8,15 @@ const contentSubstitute = '<innhold />';
 
 const renderAs = (type: NodeType) => (props: any) => ({
     type,
-    props: { ...props, className: props.className || props.class }
+    props: { ...props, className: props.className || props.class },
 });
 
 const renderWithValues = (type: NodeType) => (props: any, values: any) => ({
     type,
     props: {
         ...props,
-        values
-    }
+        values,
+    },
 });
 
 const xmlToReact = new XMLToReact({
@@ -36,10 +34,10 @@ const xmlToReact = new XMLToReact({
     søkKnapp: renderAs(Node.SøkNåKnapp),
     ettersendKnapp: renderAs(Node.EttersendKnapp),
     søkOgEttersendKnapp: renderAs(Node.SøkOgEttersendKnapp),
-    midstiltTittel: renderAs(Node.MidstiltTittel)
+    midstiltTittel: renderAs(Node.MidstiltTittel),
 });
 
-export const getSource = (path: string, intl: InjectedIntl): string => {
+export const getSource = (path: string, intl: IntlShape): string => {
     const inDevelopment = process.env.NODE_ENV === 'development';
     const localeSnippet = intl.locale === 'nb' ? '' : `.${intl.locale}`;
 
@@ -62,19 +60,11 @@ export const getSource = (path: string, intl: InjectedIntl): string => {
     }
 };
 
-const Innhold = ({
-    source,
-    values = {},
-    className
-}: {
-    source: string;
-    values?: Node.ValueMap;
-    className?: string;
-}) => {
+const Innhold = ({ source, values = {}, className }: { source: any; values?: Node.ValueMap; className?: string }) => {
     try {
-        const toRender = xmlToReact.convert(source, {
+        const toRender = xmlToReact.convert(source.default, {
             ...values,
-            className
+            className,
         });
         return toRender;
     } catch (e) {

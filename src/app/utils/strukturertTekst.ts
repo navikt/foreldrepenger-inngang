@@ -25,20 +25,20 @@ export interface MarkDefinition {
 export interface TekstsnuttKompleks {
     text: string;
     type?: TekstsnuttType;
-    marks?: Array<MarkReference | Mark>;
+    marks?: (MarkReference | Mark)[];
 }
 
 export type Tekstsnutt = TekstsnuttKompleks | string;
 
 export interface Avsnitt {
-    children: Array<Tekstsnutt>;
+    children: Tekstsnutt[];
     type?: AvsnittType;
     style?: TypografiType;
-    markDefs?: Array<MarkDefinition>;
+    markDefs?: MarkDefinition[];
     level?: number;
     listItem?: ListItem;
 }
 
 export type Definisjoner = { [s: string]: string };
 
-export type StrukturertTekst = Array<Avsnitt>;
+export type StrukturertTekst = Avsnitt[];

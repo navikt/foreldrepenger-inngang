@@ -15,7 +15,8 @@ const Callout: React.StatelessComponent<Props> = ({ children, arrowPlacement = '
         <div
             className={bemWrapper.classNames(bemWrapper.block, bemWrapper.modifier(arrowPlacement))}
             role="presentation"
-            aria-hidden={true}>
+            aria-hidden={true}
+        >
             <div className={bem.element('arrow')} />
         </div>
         <Normaltekst tag="div">{children}</Normaltekst>

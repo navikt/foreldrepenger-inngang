@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { injectIntl, InjectedIntlProps } from 'react-intl';
+import { useIntl } from 'react-intl';
 import ButtonPanel from './button-panel/ButtonPanel';
 import Environment from '../../Environment';
 import getTranslation from 'app/utils/i18nUtils';
@@ -8,7 +8,9 @@ import PopUpModal from './modal/PopUpModal';
 import Innhold, { getSource } from 'app/utils/innhold/Innhold';
 import UserHelpAlternativ from './user-help-alternativ/UserHelpAlternativ';
 
-const Engangsstonad = ({ intl }: InjectedIntlProps) => {
+const Engangsstonad = () => {
+    const intl = useIntl();
+
     return (
         <PanelMedTittel title={getTranslation('engangsstønad', intl)}>
             <Innhold source={getSource('hva-søker-du/engangsstønad', intl)} />
@@ -17,12 +19,12 @@ const Engangsstonad = ({ intl }: InjectedIntlProps) => {
                 button={{
                     text: getTranslation('hva_søker_du.søk_engangsstønad', intl),
                     url: Environment.SOK_ENGANGSSTONAD_URL,
-                    external: true
+                    external: true,
                 }}
                 secondButton={{
                     text: getTranslation('hva_søker_du.ettersend_vedlegg', intl),
                     url: Environment.DINE_FORELDREPENGER_URL,
-                    external: true
+                    external: true,
                 }}
                 alternativHelpSection={
                     <UserHelpAlternativ
@@ -37,4 +39,4 @@ const Engangsstonad = ({ intl }: InjectedIntlProps) => {
     );
 };
 
-export default injectIntl(Engangsstonad);
+export default Engangsstonad;

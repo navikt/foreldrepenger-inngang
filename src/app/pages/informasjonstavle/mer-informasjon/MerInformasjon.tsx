@@ -1,6 +1,6 @@
 import React, { StatelessComponent } from 'react';
 import { HoyreChevron } from 'nav-frontend-chevron';
-import { InjectedIntlProps, injectIntl } from 'react-intl';
+import { useIntl } from 'react-intl';
 import { Page } from 'app/types/Page';
 import BEMHelper from '../../../utils/bem';
 import getTranslation from 'app/utils/i18nUtils';
@@ -11,7 +11,9 @@ import './merInformasjon.less';
 
 const cls = BEMHelper('merInformasjon');
 
-const MerInformasjon: StatelessComponent<InjectedIntlProps> = ({ intl }) => {
+const MerInformasjon: StatelessComponent = () => {
+    const intl = useIntl();
+
     return (
         <nav className={cls.block}>
             <MerInformasjonLink
@@ -40,7 +42,7 @@ const MerInformasjonLink = ({
     title,
     body,
     url,
-    urlIsExternal
+    urlIsExternal,
 }: {
     title: string;
     body: string;
@@ -48,11 +50,7 @@ const MerInformasjonLink = ({
     urlIsExternal?: boolean;
 }) => {
     return (
-        <WithLink
-            url={url}
-            urlIsExternal={urlIsExternal}
-            noStyling={true}
-            className={cls.element('link')}>
+        <WithLink url={url} urlIsExternal={urlIsExternal} noStyling={true} className={cls.element('link')}>
             <div>
                 <TypografiBase type="undertittel">{title}</TypografiBase>
                 <Tekstomrade>{body}</Tekstomrade>
@@ -64,4 +62,4 @@ const MerInformasjonLink = ({
     );
 };
 
-export default injectIntl(MerInformasjon);
+export default MerInformasjon;

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { injectIntl, InjectedIntlProps } from 'react-intl';
+import { useIntl } from 'react-intl';
 import { ForeldrepengerSection } from 'app/types/Section';
 import BEMHelper from 'app/utils/bem';
 import getTranslation from 'app/utils/i18nUtils';
@@ -16,19 +16,22 @@ interface OwnProps {
     id: ForeldrepengerSection;
 }
 
-type Props = OwnProps & InjectedIntlProps;
+type Props = OwnProps;
 
-const OfteStilteSpørsmål: React.StatelessComponent<Props> = ({ id, intl }) => {
+const OfteStilteSpørsmål: React.StatelessComponent<Props> = ({ id }) => {
+    const intl = useIntl();
+
     return (
         <PanelMedIllustrasjon
             id={id}
             svg={svg}
             className={cls.block}
-            title={getTranslation('om_foreldrepenger.ofte_stilte_spørsmål.tittel', intl)}>
+            title={getTranslation('om_foreldrepenger.ofte_stilte_spørsmål.tittel', intl)}
+        >
             <Innhold source={getSource(content, intl)} />
             <Kontaktvalg />
         </PanelMedIllustrasjon>
     );
 };
 
-export default injectIntl(OfteStilteSpørsmål);
+export default OfteStilteSpørsmål;

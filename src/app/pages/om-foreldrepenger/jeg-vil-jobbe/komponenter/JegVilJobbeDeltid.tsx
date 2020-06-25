@@ -1,5 +1,5 @@
 import React from 'react';
-import { injectIntl, InjectedIntl } from 'react-intl';
+import { useIntl } from 'react-intl';
 import getTranslation from '../../../../utils/i18nUtils';
 
 const JegVilJobbeDeltid = ({
@@ -8,23 +8,24 @@ const JegVilJobbeDeltid = ({
     foreldrepenger,
     prosentAndelFra,
     prosentAndelTil,
-    intl
 }: {
     width: string;
     height: string;
     foreldrepenger: string;
     prosentAndelFra: string;
     prosentAndelTil: string;
-    intl: InjectedIntl;
 }) => {
+    const intl = useIntl();
+
     return (
         <svg
             width={width}
-            height={width}
+            height={height}
             viewBox="0 0 475 72"
             version="1.1"
             xmlns="http://www.w3.org/2000/svg"
-            xmlnsXlink="http://www.w3.org/1999/xlink">
+            xmlnsXlink="http://www.w3.org/1999/xlink"
+        >
             <title>Illustrasjon/Deltid - klikk</title>
 
             <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
@@ -46,7 +47,8 @@ const JegVilJobbeDeltid = ({
                                 fontFamily="SourceSansPro-Regular, Source Sans Pro"
                                 fontSize="16"
                                 fontWeight="normal"
-                                fill="#3E3832">
+                                fill="#3E3832"
+                            >
                                 <tspan x="9" y="16">
                                     {getTranslation(foreldrepenger, intl)}
                                 </tspan>
@@ -93,7 +95,8 @@ const JegVilJobbeDeltid = ({
                                 fontFamily="SourceSansPro-Regular, Source Sans Pro"
                                 fontSize="16"
                                 fontWeight="normal"
-                                fill="#3E3832">
+                                fill="#3E3832"
+                            >
                                 <tspan x="30" y="16">
                                     {getTranslation(foreldrepenger, intl)}
                                 </tspan>
@@ -138,7 +141,8 @@ const JegVilJobbeDeltid = ({
                                 fontFamily="SourceSansPro-Bold, Source Sans Pro"
                                 fontSize="16"
                                 fontWeight="bold"
-                                fill="#3E3832">
+                                fill="#3E3832"
+                            >
                                 <tspan x="28" y="36">
                                     {getTranslation(prosentAndelFra, intl)}
                                 </tspan>
@@ -147,7 +151,8 @@ const JegVilJobbeDeltid = ({
                                 fontFamily="SourceSansPro-Bold, Source Sans Pro"
                                 fontSize="16"
                                 fontWeight="bold"
-                                fill="#3E3832">
+                                fill="#3E3832"
+                            >
                                 <tspan x="17" y="16">
                                     {getTranslation(prosentAndelTil, intl)}
                                 </tspan>
@@ -160,4 +165,4 @@ const JegVilJobbeDeltid = ({
     );
 };
 
-export default injectIntl(JegVilJobbeDeltid);
+export default JegVilJobbeDeltid;

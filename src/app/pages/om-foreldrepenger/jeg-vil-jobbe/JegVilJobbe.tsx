@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { InjectedIntlProps, injectIntl } from 'react-intl';
+import { injectIntl, IntlShape } from 'react-intl';
 import BEMHelper from '../../../utils/bem';
 import getTranslation from 'app/utils/i18nUtils';
 import Innhold, { getSource } from 'app/utils/innhold/Innhold';
@@ -16,19 +16,23 @@ const cls = BEMHelper('jegVilJobbe');
 const faner = [
     {
         label: 'om_foreldrepenger.jobbe.fanetittel.jobbeHeltid',
-        content: <JobbeHeltid />
+        content: <JobbeHeltid />,
     },
     {
         label: 'om_foreldrepenger.jobbe.fanetittel.jobbeDelvis',
-        content: <JobbeDelvis />
-    }
+        content: <JobbeDelvis />,
+    },
 ];
 
 interface OwnProps {
     id: string;
 }
 
-type Props = OwnProps & InjectedIntlProps;
+interface InjectedProps {
+    intl: IntlShape;
+}
+
+type Props = OwnProps & InjectedProps;
 
 class JegVilJobbe extends React.Component<Props> {
     state: {
@@ -38,11 +42,11 @@ class JegVilJobbe extends React.Component<Props> {
     constructor(props: Props) {
         super(props);
         this.state = {
-            currentTab: faner[0].content
+            currentTab: faner[0].content,
         };
     }
 
-    updateContent = (e: any, index: number): void => {
+    updateContent = (_e: any, index: number): void => {
         this.setState({ currentTab: faner[index].content });
     };
 
@@ -51,23 +55,19 @@ class JegVilJobbe extends React.Component<Props> {
             id={this.props.id}
             className={cls.block}
             title={getTranslation('om_foreldrepenger.jobbe.tittel', this.props.intl)}
-            svg={jobbeSvg}>
+            svg={jobbeSvg}
+        >
             <Innhold className="blokk-m" source={getSource(content, this.props.intl)} />
             <Tabs
                 kompakt={true}
                 defaultAktiv={0}
-                tabs={faner.map((fane, index) => ({
-                    label: getTranslation(fane.label, this.props.intl)
+                tabs={faner.map((fane) => ({
+                    label: getTranslation(fane.label, this.props.intl),
                 }))}
                 onChange={this.updateContent}
             />
             {this.state.currentTab}
-            <Innhold
-                source={getSource(
-                    'om-foreldrepenger/jeg-vil-jobbe/slik-går-du-frem',
-                    this.props.intl
-                )}
-            />
+            <Innhold source={getSource('om-foreldrepenger/jeg-vil-jobbe/slik-går-du-frem', this.props.intl)} />
         </PanelMedIllustrasjon>
     );
 }

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { CSSTransition } from 'react-transition-group';
-import { InjectedIntlProps, injectIntl } from 'react-intl';
+import { injectIntl, IntlShape } from 'react-intl';
 import classnames from 'classnames';
 import MediaQuery from 'react-responsive';
 import TypografiBase from 'nav-frontend-typografi';
@@ -14,27 +14,31 @@ import JegVilJobbeDeltidExpandertMobil from './komponenter/JegVilJobbeDeltidExpa
 
 const cls = BEMHelper('jegVilJobbe');
 
-class JobbeDelvis extends React.Component<InjectedIntlProps> {
+interface InjectedProps {
+    intl: IntlShape;
+}
+
+class JobbeDelvis extends React.Component<InjectedProps> {
     state: {
-        svgList: object[];
+        svgList: any[];
         message: string;
         width: string;
         height: string;
     };
 
-    constructor(props: InjectedIntlProps) {
+    constructor(props: InjectedProps) {
         super(props);
         this.state = {
             svgList: [],
             message: 'om_foreldrepenger.jobbe.klikkForDetaljertInformasjon',
             width: '70%',
-            height: '70%'
+            height: '70%',
         };
 
         this.expandJegVilJobbe = this.expandJegVilJobbe.bind(this);
     }
 
-    componentWillMount = () => {
+    componentDidMount = () => {
         this.updateWindowSize();
         window.addEventListener('resize', this.updateWindowSize);
     };
@@ -47,12 +51,12 @@ class JobbeDelvis extends React.Component<InjectedIntlProps> {
         if (window.innerWidth < 575) {
             this.setState({
                 width: '100%',
-                height: '100%'
+                height: '100%',
             });
         } else if (window.innerWidth > 576) {
             this.setState({
                 width: '70%',
-                height: '70%'
+                height: '70%',
             });
         }
     };
@@ -62,7 +66,7 @@ class JobbeDelvis extends React.Component<InjectedIntlProps> {
         if (list.length === 1) {
             this.setState({
                 svgList: [],
-                message: 'om_foreldrepenger.jobbe.klikkForDetaljertInformasjon'
+                message: 'om_foreldrepenger.jobbe.klikkForDetaljertInformasjon',
             });
         } else {
             list.push(
@@ -87,7 +91,7 @@ class JobbeDelvis extends React.Component<InjectedIntlProps> {
             );
             this.setState({
                 svgList: list,
-                message: 'om_foreldrepenger.jobbe.kikkForLukkDetaljertInformasjon'
+                message: 'om_foreldrepenger.jobbe.kikkForLukkDetaljertInformasjon',
             });
         }
     }
@@ -97,27 +101,15 @@ class JobbeDelvis extends React.Component<InjectedIntlProps> {
             <div className={cls.element('illustrasjon')}>
                 <Innhold
                     className="blokk-s"
-                    source={getSource(
-                        'om-foreldrepenger/jeg-vil-jobbe/deltid-fane',
-                        this.props.intl
-                    )}
+                    source={getSource('om-foreldrepenger/jeg-vil-jobbe/deltid-fane', this.props.intl)}
                 />
-                <div
-                    className={cls.element('mainIcon')}
-                    role="button"
-                    onClick={this.expandJegVilJobbe}>
+                <div className={cls.element('mainIcon')} role="button" onClick={this.expandJegVilJobbe}>
                     <JegVilJobbeDeltid
                         width={this.state.width}
                         height={this.state.height}
-                        foreldrepenger={
-                            'om_foreldrepenger.jobbe.jobbDelvis.statiskSvg.foreldrepenger'
-                        }
-                        prosentAndelFra={
-                            'om_foreldrepenger.jobbe.jobbDelvis.statiskSvg.prosentAndelFra'
-                        }
-                        prosentAndelTil={
-                            'om_foreldrepenger.jobbe.jobbDelvis.statiskSvg.prosentAndelTil'
-                        }
+                        foreldrepenger={'om_foreldrepenger.jobbe.jobbDelvis.statiskSvg.foreldrepenger'}
+                        prosentAndelFra={'om_foreldrepenger.jobbe.jobbDelvis.statiskSvg.prosentAndelFra'}
+                        prosentAndelTil={'om_foreldrepenger.jobbe.jobbDelvis.statiskSvg.prosentAndelTil'}
                     />
                     <TypografiBase type={'normaltekst'}>
                         {getTranslation(this.state.message, this.props.intl)}
@@ -125,12 +117,7 @@ class JobbeDelvis extends React.Component<InjectedIntlProps> {
                 </div>
                 {this.state.svgList.map((item, index) => {
                     return (
-                        <CSSTransition
-                            key={index}
-                            appear={true}
-                            classNames="fade"
-                            in={true}
-                            timeout={1000}>
+                        <CSSTransition key={index} appear={true} classNames="fade" in={true} timeout={1000}>
                             <div key={index} className={' '}>
                                 {item}
                             </div>

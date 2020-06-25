@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Cancelable } from 'lodash';
-import { InjectedIntlProps, injectIntl } from 'react-intl';
+import { IntlShape, injectIntl } from 'react-intl';
 import { Normaltekst } from 'nav-frontend-typografi';
 import BEMHelper from 'app/utils/bem';
 import getTranslation from 'app/utils/i18nUtils';
@@ -25,7 +25,11 @@ interface OwnProps {
     onSectionChange?: (section: string) => void;
 }
 
-type Props = OwnProps & InjectedIntlProps;
+interface InjectedProps {
+    intl: IntlShape;
+}
+
+type Props = OwnProps & InjectedProps;
 
 interface State {
     currentSection?: number;
@@ -47,7 +51,7 @@ class Seksjonslenker extends React.Component<Props, State> {
 
         this.state = {
             documentHeight: this.getDocumentHeight(),
-            sectionNames
+            sectionNames,
         };
 
         this.debouncedOnScroll = throttle(this.onScroll, 100);
@@ -57,7 +61,7 @@ class Seksjonslenker extends React.Component<Props, State> {
         document.addEventListener('scroll', this.debouncedOnScroll);
 
         this.setState({
-            sectionOffsets: this.getSectionOffsets()
+            sectionOffsets: this.getSectionOffsets(),
         });
     };
 
@@ -107,9 +111,8 @@ class Seksjonslenker extends React.Component<Props, State> {
                 <Normaltekst className={cls.element('lenke')} key={section}>
                     <WithLink
                         url={`#${section}`}
-                        className={
-                            this.state.currentSection === index ? cls.element('currentSection') : ''
-                        }>
+                        className={this.state.currentSection === index ? cls.element('currentSection') : ''}
+                    >
                         {this.state.sectionNames[index]}
                     </WithLink>
                 </Normaltekst>

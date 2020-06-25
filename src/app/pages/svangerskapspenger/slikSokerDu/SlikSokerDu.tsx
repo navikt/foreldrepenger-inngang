@@ -1,5 +1,5 @@
 import React from 'react';
-import { InjectedIntlProps, injectIntl } from 'react-intl';
+import { useIntl } from 'react-intl';
 import PanelMedIllustrasjon from '../../../components/panel-med-illustrasjon/PanelMedIllustrasjon';
 import getTranslation from '../../../utils/i18nUtils';
 import Innhold, { getSource } from '../../../utils/innhold/Innhold';
@@ -20,24 +20,27 @@ const faner = [
     {
         label: 'om_svangerskapspenger.slikSokerDu.faneEn.tittel',
         icon: <ArbeidstakerIkon />,
-        component: <Arbeidstaker />
+        component: <Arbeidstaker />,
     },
     {
         label: 'om_svangerskapspenger.slikSokerDu.faneTo.tittel',
         icon: <FrilanserIkon />,
-        component: <SelvstendigNaringsdrivendeEllerFrilanser />
-    }
+        component: <SelvstendigNaringsdrivendeEllerFrilanser />,
+    },
 ];
 
-type Props = InputProps & InjectedIntlProps;
+type Props = InputProps;
 
-const SlikSokerDu: React.StatelessComponent<Props> = ({ intl, id }) => {
+const SlikSokerDu: React.StatelessComponent<Props> = ({ id }) => {
+    const intl = useIntl();
+
     return (
         <PanelMedIllustrasjon
             className={cls.block}
             id={id}
             title={getTranslation('om_svangerskapspenger.slikSokerDu.tittel', intl)}
-            svg={seksjonsBilde}>
+            svg={seksjonsBilde}
+        >
             <div>
                 <Innhold source={getSource('svangerskapspenger/slik-soker-du/ingress', intl)} />
             </div>
@@ -46,4 +49,4 @@ const SlikSokerDu: React.StatelessComponent<Props> = ({ intl, id }) => {
     );
 };
 
-export default injectIntl(SlikSokerDu);
+export default SlikSokerDu;

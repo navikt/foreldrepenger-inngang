@@ -1,5 +1,5 @@
 import BEMHelper from '../../../utils/bem';
-import { InjectedIntlProps, injectIntl } from 'react-intl';
+import { useIntl } from 'react-intl';
 import Modal from 'nav-frontend-modal';
 import TypografiBase from 'nav-frontend-typografi';
 import Lenke from 'nav-frontend-lenker';
@@ -20,10 +20,11 @@ interface OwnProps {
     søknadUrl: string;
 }
 
-type Props = OwnProps & InjectedIntlProps;
+type Props = OwnProps;
 
 const HelpSectionModal = (props: Props) => {
-    const { modalIsOpen, linktxt, papirsøknadUrl, søknadUrl, intl } = props;
+    const { modalIsOpen, linktxt, papirsøknadUrl, søknadUrl } = props;
+    const intl = useIntl();
     const [isOpen, toggle] = useState(modalIsOpen);
 
     const openModal = (e: any) => {
@@ -51,7 +52,8 @@ const HelpSectionModal = (props: Props) => {
                 isOpen={isOpen}
                 onRequestClose={closeModal}
                 closeButton={false}
-                contentLabel={getTranslation('hva_søker_du.engangsstønad_modal', intl)}>
+                contentLabel={getTranslation('hva_søker_du.engangsstønad_modal', intl)}
+            >
                 <div className={cls.element('topIconContainer')}>
                     <FlexibleSvg
                         className={cls.element('icon')}
@@ -67,16 +69,10 @@ const HelpSectionModal = (props: Props) => {
                     <Innhold source={getSource('hva-søker-du/helpSection-modal', intl)} />
                     <div className={cls.element('knapper')}>
                         <Lenkeknapp urlIsExternal={true} url={papirsøknadUrl}>
-                            {getTranslation(
-                                'hva_søker_du.engangsstønad.sokPapir.modal.knapp.standard',
-                                intl
-                            )}
+                            {getTranslation('hva_søker_du.engangsstønad.sokPapir.modal.knapp.standard', intl)}
                         </Lenkeknapp>
                         <Lenkeknapp type="hoved" url={søknadUrl} urlIsExternal={true}>
-                            {getTranslation(
-                                'hva_søker_du.engangsstønad.sokPapir.modal.knapp.hoved',
-                                intl
-                            )}
+                            {getTranslation('hva_søker_du.engangsstønad.sokPapir.modal.knapp.hoved', intl)}
                         </Lenkeknapp>
                     </div>
                 </div>
@@ -85,4 +81,4 @@ const HelpSectionModal = (props: Props) => {
     );
 };
 
-export default injectIntl(HelpSectionModal);
+export default HelpSectionModal;

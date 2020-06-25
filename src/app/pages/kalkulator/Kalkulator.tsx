@@ -1,10 +1,7 @@
 import * as React from 'react';
 import { CheckboksPanelGruppe } from 'nav-frontend-skjema';
-import { InjectedIntlProps, injectIntl } from 'react-intl';
-import {
-    tjenerOverUtbetalingsgrensen,
-    tjenerForLiteForForeldrepenger
-} from 'app/utils/beregningUtils';
+import { injectIntl, IntlShape } from 'react-intl';
+import { tjenerOverUtbetalingsgrensen, tjenerForLiteForForeldrepenger } from 'app/utils/beregningUtils';
 import BEMHelper from 'app/utils/bem';
 import Breadcrumbs from 'app/components/breadcrumbs/Breadcrumbs';
 import classnames from 'classnames';
@@ -21,15 +18,12 @@ import './kalkulator.less';
 const infosiderCls = BEMHelper('infosider');
 const cls = BEMHelper('kalkulator');
 
-export type Arbeidssituasjon =
-    | 'arbeidstaker_eller_frilanser'
-    | 'utbetaling_fra_nav'
-    | 'selvstendig_næringsdrivende';
+export type Arbeidssituasjon = 'arbeidstaker_eller_frilanser' | 'utbetaling_fra_nav' | 'selvstendig_næringsdrivende';
 
 const muligeSituasjoner: Arbeidssituasjon[] = [
     'arbeidstaker_eller_frilanser',
     'utbetaling_fra_nav',
-    'selvstendig_næringsdrivende'
+    'selvstendig_næringsdrivende',
 ];
 
 const pengerIcon = require('../../assets/icons/money-80.svg').default;
@@ -42,16 +36,20 @@ export interface Resultater {
     øvreAvviksgrense: number;
 }
 
+interface InjectedProps {
+    intl: IntlShape;
+}
+
 interface State {
     valgteSituasjoner: Arbeidssituasjon[];
     results?: Resultater;
 }
 
-class Kalkulator extends React.Component<InjectedIntlProps, State> {
-    constructor(props: InjectedIntlProps) {
+class Kalkulator extends React.Component<InjectedProps, State> {
+    constructor(props: InjectedProps) {
         super(props);
         this.state = {
-            valgteSituasjoner: []
+            valgteSituasjoner: [],
         };
     }
 
@@ -61,7 +59,7 @@ class Kalkulator extends React.Component<InjectedIntlProps, State> {
             : [...this.state.valgteSituasjoner, situasjon];
 
         this.setState({
-            valgteSituasjoner
+            valgteSituasjoner,
         });
     };
 
@@ -78,12 +76,12 @@ class Kalkulator extends React.Component<InjectedIntlProps, State> {
                     nedreAvviksgrense: årslønn - avviksgrense,
                     øvreAvviksgrense: årslønn + avviksgrense,
                     tjenerOverUtbetalingsgrensen: tjenerOverGrensen,
-                    tjenerForLite
-                }
+                    tjenerForLite,
+                },
             });
         } else {
             this.setState({
-                results: undefined
+                results: undefined,
             });
         }
     };
@@ -93,7 +91,7 @@ class Kalkulator extends React.Component<InjectedIntlProps, State> {
             checked: this.state.valgteSituasjoner.includes(situasjon),
             label: getTranslation(`kalkulator.situasjon.${situasjon}`, this.props.intl),
             id: situasjon,
-            value: situasjon
+            value: situasjon,
         }));
 
     render = () => {
@@ -101,9 +99,7 @@ class Kalkulator extends React.Component<InjectedIntlProps, State> {
 
         const checkboxesForSituasjoner = this.getCheckboxes();
         const harValgtSituasjon = this.state.valgteSituasjoner.length > 0;
-        const kombinasjonIkkeStøttet = this.state.valgteSituasjoner.includes(
-            'selvstendig_næringsdrivende'
-        );
+        const kombinasjonIkkeStøttet = this.state.valgteSituasjoner.includes('selvstendig_næringsdrivende');
 
         return (
             <div className={classnames(cls.block, infosiderCls.block)}>
@@ -113,11 +109,9 @@ class Kalkulator extends React.Component<InjectedIntlProps, State> {
                         <Breadcrumbs path={location.pathname} />
                         <PanelMedIllustrasjon
                             title={getTranslation('kalkulator.tittel', intl)}
-                            svg={<SvgMask svg={pengerIcon} />}>
-                            <Innhold
-                                className="blokk-s"
-                                source={getSource('kalkulator/ingress', intl)}
-                            />
+                            svg={<SvgMask svg={pengerIcon} />}
+                        >
+                            <Innhold className="blokk-s" source={getSource('kalkulator/ingress', intl)} />
                             <TypografiBase type="undertittel">
                                 {getTranslation('kalkulator.valg.tittel', intl)}
                             </TypografiBase>

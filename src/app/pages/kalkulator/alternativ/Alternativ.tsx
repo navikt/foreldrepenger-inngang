@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { getDailyPayment, GRUNNBELØPET } from 'app/utils/beregningUtils';
-import { InjectedIntlProps, injectIntl } from 'react-intl';
+import { useIntl } from 'react-intl';
 import BEMHelper from 'app/utils/bem';
 import CustomSVGFromSprite from 'app/utils/CustomSVG';
 import getTranslation from 'app/utils/i18nUtils';
@@ -9,15 +9,14 @@ import './alternativ.less';
 
 const cls = BEMHelper('alternativ');
 
-interface OwnProps {
+interface Props {
     percentage: number;
     monthlyWage: number;
     icon: any;
 }
 
-type Props = OwnProps & InjectedIntlProps;
-
-const Alternativ = ({ percentage, monthlyWage, icon, intl }: Props) => {
+const Alternativ = ({ percentage, monthlyWage, icon }: Props) => {
+    const intl = useIntl();
     const annualMax = 6 * GRUNNBELØPET;
     const monthlyMax = annualMax / 12;
 
@@ -50,4 +49,4 @@ const Alternativ = ({ percentage, monthlyWage, icon, intl }: Props) => {
     );
 };
 
-export default injectIntl(Alternativ);
+export default Alternativ;

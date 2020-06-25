@@ -1,5 +1,5 @@
 import React from 'react';
-import { injectIntl, InjectedIntlProps } from 'react-intl';
+import { useIntl } from 'react-intl';
 import BEMHelper from '../../../../../utils/bem';
 import getTranslation from 'app/utils/i18nUtils';
 import LangtPanelMedBilde from '../../../../../components/langt-panel-med-bilde/LangtPanelMedBilde';
@@ -8,7 +8,9 @@ const cls = BEMHelper('valg');
 const hvorMye = require('../../../../../assets/ark/ark-money2.svg').default;
 const hvorLenge = require('../../../../../assets/ark/ark-calendar.svg').default;
 
-const NavigasjonsBoks: React.StatelessComponent<InjectedIntlProps> = ({ intl }) => {
+const NavigasjonsBoks: React.StatelessComponent = () => {
+    const intl = useIntl();
+
     return (
         <div className={cls.element('navigasjonsboks')}>
             <div className={cls.element('boksBorder')}>
@@ -31,4 +33,4 @@ const NavigasjonsBoks: React.StatelessComponent<InjectedIntlProps> = ({ intl }) 
     );
 };
 
-export default injectIntl(NavigasjonsBoks);
+export default NavigasjonsBoks;

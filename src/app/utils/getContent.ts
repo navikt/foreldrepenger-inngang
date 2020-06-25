@@ -1,7 +1,7 @@
 import { StrukturertTekst } from './strukturertTekst';
-import { InjectedIntl } from 'react-intl';
+import { IntlShape } from 'react-intl';
 
-export const getContent = (contentPath: string, intl: InjectedIntl): StrukturertTekst => {
+export const getContent = (contentPath: string, intl: IntlShape): StrukturertTekst => {
     try {
         const content = require(`../../content/${intl.locale}/${contentPath}.json`);
         return content;

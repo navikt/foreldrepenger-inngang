@@ -1,5 +1,5 @@
 import React from 'react';
-import { injectIntl, InjectedIntlProps } from 'react-intl';
+import { useIntl } from 'react-intl';
 import BEMHelper from '../../../../../utils/bem';
 import getTranslation from 'app/utils/i18nUtils';
 import TypografiBase from 'nav-frontend-typografi';
@@ -13,23 +13,17 @@ interface OwnProps {
     knapp: React.ReactNode;
 }
 
-type Props = OwnProps & InjectedIntlProps;
+type Props = OwnProps;
 
-const DuHarRett: React.StatelessComponent<Props> = ({
-    minLogo,
-    overskrift,
-    punkter,
-    knapp,
-    intl
-}) => {
+const DuHarRett: React.StatelessComponent<Props> = ({ minLogo, overskrift, punkter, knapp }) => {
+    const intl = useIntl();
+
     return (
         <div id="mainSokKnapp" className={resultat.element('stonadRett')}>
             {minLogo}
             <div className={resultat.element('stonadBody')}>
                 <div className={resultat.element('stonadTxt')}>
-                    <TypografiBase type="innholdstittel">
-                        {getTranslation(overskrift, intl)}
-                    </TypografiBase>
+                    <TypografiBase type="innholdstittel">{getTranslation(overskrift, intl)}</TypografiBase>
                     {punkter.map((punkt: any, index: number) => {
                         return <div key={index}>{punkt}</div>;
                     })}
@@ -40,4 +34,4 @@ const DuHarRett: React.StatelessComponent<Props> = ({
     );
 };
 
-export default injectIntl(DuHarRett);
+export default DuHarRett;

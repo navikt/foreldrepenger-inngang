@@ -84,178 +84,171 @@ const antallUkerFør2019 = {
     farOgMor: {
         mødrekvote: {
             dekning100: 15,
-            dekning80: 15
+            dekning80: 15,
         },
         fedrekvote: {
             dekning100: 15,
-            dekning80: 15
+            dekning80: 15,
         },
         fellesperiode: {
             dekning100: 16,
-            dekning80: 26
-        }
+            dekning80: 26,
+        },
     },
     farOgFar: {
         mødrekvote: {
             dekning100: 15,
-            dekning80: 15
+            dekning80: 15,
         },
         fedrekvote: {
             dekning100: 15,
-            dekning80: 15
+            dekning80: 15,
         },
         fellesperiode: {
             dekning100: 16,
-            dekning80: 26
-        }
+            dekning80: 26,
+        },
     },
     morOgMor: {
         mødrekvote: {
             dekning100: 15,
-            dekning80: 15
+            dekning80: 15,
         },
         fedrekvote: {
             dekning100: 15,
-            dekning80: 15
+            dekning80: 15,
         },
         fellesperiode: {
             dekning100: 16,
-            dekning80: 26
-        }
+            dekning80: 26,
+        },
     },
     bareFarHarRett: {
         fedrekvote: {
             dekning100: 40,
-            dekning80: 50
-        }
+            dekning80: 50,
+        },
     },
     bareMorHarRett: {
         mødrekvote: {
             dekning100: 46,
-            dekning80: 56
-        }
+            dekning80: 56,
+        },
     },
     aleneomsorg: {
         mødrekvote: {
             dekning100: 46,
-            dekning80: 56
+            dekning80: 56,
         },
         fedrekvote: {
             dekning100: 46,
-            dekning80: 56
-        }
-    }
+            dekning80: 56,
+        },
+    },
 };
 
 const antallUkerFom2019 = {
     farOgMor: {
         mødrekvote: {
             dekning100: 15,
-            dekning80: 19
+            dekning80: 19,
         },
         fedrekvote: {
             dekning100: 15,
-            dekning80: 19
+            dekning80: 19,
         },
         fellesperiode: {
             dekning100: 16,
-            dekning80: 18
-        }
+            dekning80: 18,
+        },
     },
     farOgFar: {
         mødrekvote: {
             dekning100: 15,
-            dekning80: 19
+            dekning80: 19,
         },
         fedrekvote: {
             dekning100: 15,
-            dekning80: 19
+            dekning80: 19,
         },
         fellesperiode: {
             dekning100: 16,
-            dekning80: 18
-        }
+            dekning80: 18,
+        },
     },
     morOgMor: {
         mødrekvote: {
             dekning100: 15,
-            dekning80: 19
+            dekning80: 19,
         },
         fedrekvote: {
             dekning100: 15,
-            dekning80: 19
+            dekning80: 19,
         },
         fellesperiode: {
             dekning100: 16,
-            dekning80: 18
-        }
+            dekning80: 18,
+        },
     },
     bareFarHarRett: {
         fedrekvote: {
             dekning100: 40,
-            dekning80: 50
-        }
+            dekning80: 50,
+        },
     },
     bareMorHarRett: {
         mødrekvote: {
             dekning100: 46,
-            dekning80: 56
-        }
+            dekning80: 56,
+        },
     },
     aleneomsorg: {
         mødrekvote: {
             dekning100: 46,
-            dekning80: 56
+            dekning80: 56,
         },
         fedrekvote: {
             dekning100: 46,
-            dekning80: 56
-        }
-    }
+            dekning80: 56,
+        },
+    },
 };
 
 const oversettbareNavnForAlleKvoter = {
     farOgMor: {
         mødrekvote: 'mor',
         fedrekvote: 'far',
-        fellesperiode: 'begge'
+        fellesperiode: 'begge',
     },
     farOgFar: {
         mødrekvote: 'far2',
         fedrekvote: 'far1',
-        fellesperiode: 'begge'
+        fellesperiode: 'begge',
     },
     morOgMor: {
         mødrekvote: 'mor',
         fedrekvote: 'medmor',
-        fellesperiode: 'begge'
+        fellesperiode: 'begge',
     },
     bareFarHarRett: {
-        fedrekvote: 'far'
+        fedrekvote: 'far',
     },
     bareMorHarRett: {
-        mødrekvote: 'mor'
+        mødrekvote: 'mor',
     },
     aleneomsorg: {
         mødrekvote: 'mor',
-        fedrekvote: 'far'
-    }
+        fedrekvote: 'far',
+    },
 };
 
 const erFør2019 = () => moment().year() < 2019;
 
-export const getAntallUker = (
-    foreldresituasjon: Foreldresituasjon,
-    kvote: Kvote,
-    dekningsgrad: Dekningsgrad
-) => {
+export const getAntallUker = (foreldresituasjon: Foreldresituasjon, kvote: Kvote, dekningsgrad: Dekningsgrad) => {
     const reglement = erFør2019() ? antallUkerFør2019 : antallUkerFom2019;
     return reglement[foreldresituasjon][kvote][dekningsgrad];
 };
 
-export const getMottakersOversettbareNavn = (
-    foreldresituasjon: Foreldresituasjon,
-    kvote: Kvote
-) => {
+export const getMottakersOversettbareNavn = (foreldresituasjon: Foreldresituasjon, kvote: Kvote) => {
     return oversettbareNavnForAlleKvoter[foreldresituasjon][kvote];
 };

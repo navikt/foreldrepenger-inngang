@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { injectIntl, InjectedIntlProps } from 'react-intl';
+import { useIntl } from 'react-intl';
 import getTranslation from 'app/utils/i18nUtils';
 import Lenke from 'nav-frontend-lenker';
 import Lukknapp from 'nav-frontend-lukknapp';
@@ -17,9 +17,10 @@ interface OwnProps {
     modalIsOpen: boolean;
 }
 
-type Props = OwnProps & InjectedIntlProps;
+type Props = OwnProps;
 
-const PopUpModal = ({ intl, modalIsOpen }: Props) => {
+const PopUpModal = ({ modalIsOpen }: Props) => {
+    const intl = useIntl();
     const [isOpen, toggle] = useState(modalIsOpen);
 
     const openModal = (e: any) => {
@@ -46,7 +47,8 @@ const PopUpModal = ({ intl, modalIsOpen }: Props) => {
                 isOpen={isOpen}
                 onRequestClose={closeModal}
                 closeButton={false}
-                contentLabel={getTranslation('hva_søker_du.engangsstønad_modal', intl)}>
+                contentLabel={getTranslation('hva_søker_du.engangsstønad_modal', intl)}
+            >
                 <div className={cls.element('body')}>
                     <div className={cls.element('knapp')}>
                         <Lukknapp onClick={closeModal} />
@@ -58,4 +60,4 @@ const PopUpModal = ({ intl, modalIsOpen }: Props) => {
     );
 };
 
-export default injectIntl(PopUpModal);
+export default PopUpModal;

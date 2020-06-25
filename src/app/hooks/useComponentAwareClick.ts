@@ -9,9 +9,7 @@ const useComponentAwareClick = (
         if (ref.current) {
             const target = event.target as HTMLElement;
             const clickedInsideComponent = ref.current.contains(target);
-            const clickedOnException = clickExceptionClasses.some((c) =>
-                target.classList.contains(c)
-            );
+            const clickedOnException = clickExceptionClasses.some((c) => target.classList.contains(c));
 
             onClick(clickedInsideComponent, clickedOnException);
         }

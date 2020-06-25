@@ -1,13 +1,8 @@
 import * as React from 'react';
 
-import { injectIntl, InjectedIntlProps } from 'react-intl';
+import { useIntl } from 'react-intl';
 import { Resultater } from '../Kalkulator';
-import {
-    tjenerOverUtbetalingsgrensen,
-    getLastYear,
-    getUtbetalingsgrense,
-    getEnHalvG
-} from 'app/utils/beregningUtils';
+import { tjenerOverUtbetalingsgrensen, getLastYear, getUtbetalingsgrense, getEnHalvG } from 'app/utils/beregningUtils';
 import Alertstriper from 'nav-frontend-alertstriper';
 import Alternativ from '../alternativ/Alternativ';
 import BEMHelper from 'app/utils/bem';
@@ -22,14 +17,13 @@ const cls = BEMHelper('resultat');
 const pengerIcon = require('../../../assets/icons/money-100.svg').default;
 const mindrePengerIcon = require('../../../assets/icons/money-80.svg').default;
 
-interface OwnProps {
+interface Props {
     results: Resultater;
     fårUtbetaling: boolean;
 }
 
-type Props = OwnProps & InjectedIntlProps;
-
-const Resultat = ({ results, fårUtbetaling, intl }: Props) => {
+const Resultat = ({ results, fårUtbetaling }: Props) => {
+    const intl = useIntl();
     const { snittlønnPerMåned, nedreAvviksgrense, øvreAvviksgrense, tjenerForLite } = results;
     const localizeNumber = (n: number) => Math.round(n).toLocaleString(intl.locale);
 
@@ -45,7 +39,7 @@ const Resultat = ({ results, fårUtbetaling, intl }: Props) => {
         ÅRLIG_SNITTLØNN: localizeNumber(snittlønnPerMåned * 12),
         ÅRET_I_FJOR: getLastYear(),
         NEDRE_AVVIKSGRENSE: localizeNumber(nedreAvviksgrense),
-        ØVRE_AVVIKSGRENSE: localizeNumber(øvreAvviksgrense)
+        ØVRE_AVVIKSGRENSE: localizeNumber(øvreAvviksgrense),
     };
 
     let utbetalingsgrensevariabler;
@@ -53,7 +47,7 @@ const Resultat = ({ results, fårUtbetaling, intl }: Props) => {
 
     if (tjenerOverUtbetalingsgrensen(snittlønnPerMåned)) {
         utbetalingsgrensevariabler = tjenerOverUtbetalingsgrensen && {
-            UTBETALINGSGRENSE: localizeNumber(getUtbetalingsgrense())
+            UTBETALINGSGRENSE: localizeNumber(getUtbetalingsgrense()),
         };
     }
 
@@ -64,15 +58,13 @@ const Resultat = ({ results, fårUtbetaling, intl }: Props) => {
                 ? getTranslation('kalkulator.får', intl)
                 : getTranslation('kalkulator.tjener', intl),
             ÅRLIG_SNITTLØNN: localizeNumber(snittlønnPerMåned * 12),
-            EN_HALV_G: localizeNumber(getEnHalvG())
+            EN_HALV_G: localizeNumber(getEnHalvG()),
         };
     }
 
     return (
         <div className={cls.element('flexDownwards')}>
-            <TypografiBase type="undertittel">
-                {getTranslation('kalkulator.resultat.tittel', intl)}
-            </TypografiBase>
+            <TypografiBase type="undertittel">{getTranslation('kalkulator.resultat.tittel', intl)}</TypografiBase>
 
             <Veileder fargetema="normal" ansikt="glad" kompakt={true}>
                 <Veiledermelding
@@ -84,16 +76,8 @@ const Resultat = ({ results, fårUtbetaling, intl }: Props) => {
 
             {!tjenerForLite && (
                 <output className={cls.element('resultater')}>
-                    <Alternativ
-                        percentage={100}
-                        icon={pengerIcon}
-                        monthlyWage={snittlønnPerMåned}
-                    />
-                    <Alternativ
-                        percentage={80}
-                        icon={mindrePengerIcon}
-                        monthlyWage={snittlønnPerMåned}
-                    />
+                    <Alternativ percentage={100} icon={pengerIcon} monthlyWage={snittlønnPerMåned} />
+                    <Alternativ percentage={80} icon={mindrePengerIcon} monthlyWage={snittlønnPerMåned} />
                 </output>
             )}
 
@@ -108,4 +92,4 @@ const Resultat = ({ results, fårUtbetaling, intl }: Props) => {
     );
 };
 
-export default injectIntl(Resultat);
+export default Resultat;

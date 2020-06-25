@@ -1,5 +1,5 @@
 import React from 'react';
-import { InjectedIntlProps, injectIntl } from 'react-intl';
+import { useIntl } from 'react-intl';
 import PanelMedIllustrasjon from '../../../components/panel-med-illustrasjon/PanelMedIllustrasjon';
 import SvgMask from '../../../components/svg-mask/SvgMask';
 import BEMHelper from '../../../utils/bem';
@@ -16,29 +16,21 @@ interface Props {
     id: string;
 }
 
-const HvemKanFåSvangerskapspenger: React.StatelessComponent<Props & InjectedIntlProps> = ({
-    id,
-    intl
-}) => {
+const HvemKanFåSvangerskapspenger: React.StatelessComponent<Props> = ({ id }) => {
+    const intl = useIntl();
+
     return (
         <PanelMedIllustrasjon
             id={id}
-            title={getTranslation(
-                'om_svangerskapspenger.hvem_kan_fa_svangerskapspenger.tittel',
-                intl
-            )}
-            svg={<SvgMask svg={seksjonsbilde} anchorToBottom={true} />}>
+            title={getTranslation('om_svangerskapspenger.hvem_kan_fa_svangerskapspenger.tittel', intl)}
+            svg={<SvgMask svg={seksjonsbilde} anchorToBottom={true} />}
+        >
             <div className={cls.element('alignLeft')}>
-                <Innhold
-                    source={getSource(
-                        'svangerskapspenger/hvem-kan-fa-svangerskapspenger/ingress',
-                        intl
-                    )}
-                />
+                <Innhold source={getSource('svangerskapspenger/hvem-kan-fa-svangerskapspenger/ingress', intl)} />
             </div>
             <div className={cls.element('kravTilSvangerskapspenger')}>
                 {kravTilSvangerskapspengerStringPath.map((krav) => (
-                        <KravTilSvangerskapspenger key={krav} ingress={getSource(krav, intl)} />
+                    <KravTilSvangerskapspenger key={krav} ingress={getSource(krav, intl)} />
                 ))}
             </div>
         </PanelMedIllustrasjon>
@@ -48,7 +40,7 @@ const HvemKanFåSvangerskapspenger: React.StatelessComponent<Props & InjectedInt
 const kravTilSvangerskapspengerStringPath = [
     'svangerskapspenger/hvem-kan-fa-svangerskapspenger/krav1',
     'svangerskapspenger/hvem-kan-fa-svangerskapspenger/krav2',
-    'svangerskapspenger/hvem-kan-fa-svangerskapspenger/krav3'
+    'svangerskapspenger/hvem-kan-fa-svangerskapspenger/krav3',
 ];
 
 const KravTilSvangerskapspenger = ({ ingress }: { ingress: string }) => {
@@ -60,4 +52,4 @@ const KravTilSvangerskapspenger = ({ ingress }: { ingress: string }) => {
     );
 };
 
-export default injectIntl(HvemKanFåSvangerskapspenger);
+export default HvemKanFåSvangerskapspenger;

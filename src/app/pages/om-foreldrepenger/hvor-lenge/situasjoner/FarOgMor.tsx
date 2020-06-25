@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { addAntallUkerSomSnakkebobletittel } from './utils';
 
-import { injectIntl, InjectedIntl, InjectedIntlProps } from 'react-intl';
+import { IntlShape, useIntl } from 'react-intl';
 import Foreldrepar from 'app/components/foreldrepar/Foreldrepar';
 import Informasjonsfaner, { InformasjonsfaneProps } from '../informasjons-faner/Informasjonsfaner';
 import Innhold, { getSource } from 'app/utils/innhold/Innhold';
@@ -13,7 +13,7 @@ const morsdel = 'om-foreldrepenger/hvor-lenge/far-og-mor/mors-del';
 const fellesdel = 'om-foreldrepenger/hvor-lenge/far-og-mor/felles-del';
 const farsdel = 'om-foreldrepenger/hvor-lenge/far-og-mor/fars-del';
 
-const getInformasjonsfaner = (intl: InjectedIntl): InformasjonsfaneProps[] => [
+const getInformasjonsfaner = (intl: IntlShape): InformasjonsfaneProps[] => [
     {
         kvote: 'mødrekvote',
         label: getTranslation('om_foreldrepenger.hvor_lenge.fordeling.mødrekvote', intl),
@@ -22,17 +22,14 @@ const getInformasjonsfaner = (intl: InjectedIntl): InformasjonsfaneProps[] => [
                 tittel: '',
                 icon: 'mor2',
                 punkter: [
-                    getTranslation(
-                        'om_foreldrepenger.hvor_lenge.fordeling.tre_uker_før_fødsel',
-                        intl
-                    ),
+                    getTranslation('om_foreldrepenger.hvor_lenge.fordeling.tre_uker_før_fødsel', intl),
                     getTranslation('om_foreldrepenger.hvor_lenge.fordeling.ingen_krav', intl, {
-                        subjekt: getTranslation('far', intl)
-                    })
-                ]
+                        subjekt: getTranslation('far', intl),
+                    }),
+                ],
             },
-            component: <Innhold source={getSource(morsdel, intl)} />
-        }
+            component: <Innhold source={getSource(morsdel, intl)} />,
+        },
     },
     {
         kvote: 'fedrekvote',
@@ -43,12 +40,12 @@ const getInformasjonsfaner = (intl: InjectedIntl): InformasjonsfaneProps[] => [
                 icon: 'far1',
                 punkter: [
                     getTranslation('om_foreldrepenger.hvor_lenge.fordeling.ingen_krav', intl, {
-                        subjekt: getTranslation('mor', intl)
-                    })
-                ]
+                        subjekt: getTranslation('mor', intl),
+                    }),
+                ],
             },
-            component: <Innhold source={getSource(farsdel, intl)} />
-        }
+            component: <Innhold source={getSource(farsdel, intl)} />,
+        },
     },
     {
         kvote: 'fellesperiode',
@@ -59,27 +56,27 @@ const getInformasjonsfaner = (intl: InjectedIntl): InformasjonsfaneProps[] => [
                 icon: <Foreldrepar variant={4} firstParent="mor2" secondParent="far1" />,
                 punkter: [
                     getTranslation('om_foreldrepenger.hvor_lenge.fordeling.krav', intl, {
-                        subjekt: getTranslation('mor', intl)
-                    })
-                ]
+                        subjekt: getTranslation('mor', intl),
+                    }),
+                ],
             },
-            component: <Innhold source={getSource(fellesdel, intl)} />
-        }
-    }
+            component: <Innhold source={getSource(fellesdel, intl)} />,
+        },
+    },
 ];
 
-const FarOgMor = ({ intl }: InjectedIntlProps) => {
+const FarOgMor = () => {
+    const intl = useIntl();
+
     return (
         <div>
             <Innhold source={getSource(farOgMorContent, intl)} />
             <Informasjonsfaner
-                tabs={getInformasjonsfaner(intl).map(
-                    addAntallUkerSomSnakkebobletittel('farOgMor', intl)
-                )}
+                tabs={getInformasjonsfaner(intl).map(addAntallUkerSomSnakkebobletittel('farOgMor', intl))}
             />
             <Innhold source={getSource(kalkulatorbeskrivelse, intl)} />
         </div>
     );
 };
 
-export default injectIntl(FarOgMor);
+export default FarOgMor;

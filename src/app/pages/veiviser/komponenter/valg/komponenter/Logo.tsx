@@ -1,5 +1,4 @@
 import React from 'react';
-import { injectIntl } from 'react-intl';
 import BEMHelper from '../../../../../utils/bem';
 import ResultatBilde from './ResultatBilde';
 import MediaQuery from 'react-responsive';
@@ -20,4 +19,4 @@ const Logo = () => {
     );
 };
 
-export default injectIntl(Logo);
+export default Logo;

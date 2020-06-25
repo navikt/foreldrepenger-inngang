@@ -1,5 +1,5 @@
 import React from 'react';
-import { InjectedIntl, injectIntl } from 'react-intl';
+import { useIntl } from 'react-intl';
 import getTranslation from '../../../../../utils/i18nUtils';
 import BEMHelper from '../../../../../utils/bem';
 import Lenkeknapp from '../../../../../components/lenkeknapp/Lenkeknapp';
@@ -7,7 +7,6 @@ import Lenkeknapp from '../../../../../components/lenkeknapp/Lenkeknapp';
 const resultat = BEMHelper('resultat');
 
 const EngangsstonadKnapp = ({
-    intl,
     knappLeft,
     knappRight,
     knappLeftStyle,
@@ -15,40 +14,35 @@ const EngangsstonadKnapp = ({
     lenkeLeft,
     lenkeRight,
     buttonHeadertxtLeft,
-    buttonHeadertxtRight
+    buttonHeadertxtRight,
 }: {
-    intl: InjectedIntl;
     knappLeft: string;
     knappRight: string;
     knappLeftStyle: any;
     knappRightStyle: any;
     lenkeLeft: string;
     lenkeRight: string;
-    buttonHeadertxtLeft?: object;
-    buttonHeadertxtRight?: object;
+    buttonHeadertxtLeft?: any;
+    buttonHeadertxtRight?: any;
 }) => {
+    const intl = useIntl();
+
     return (
         <div className={resultat.element('harRettKnapp group')}>
             <div className={resultat.element('harRettKol')}>
                 {buttonHeadertxtLeft}
-                <Lenkeknapp
-                    url={lenkeLeft}
-                    type={knappLeftStyle}
-                    urlIsExternal={false}
-                    children={getTranslation(knappLeft, intl)}
-                />
+                <Lenkeknapp url={lenkeLeft} type={knappLeftStyle} urlIsExternal={false}>
+                    {getTranslation(knappLeft, intl)}
+                </Lenkeknapp>
             </div>
             <div className={resultat.element('harRettKol')}>
                 {buttonHeadertxtRight}
-                <Lenkeknapp
-                    url={lenkeRight}
-                    type={knappRightStyle}
-                    urlIsExternal={true}
-                    children={getTranslation(knappRight, intl)}
-                />
+                <Lenkeknapp url={lenkeRight} type={knappRightStyle} urlIsExternal={true}>
+                    {getTranslation(knappRight, intl)}
+                </Lenkeknapp>
             </div>
         </div>
     );
 };
 
-export default injectIntl(EngangsstonadKnapp);
+export default EngangsstonadKnapp;

@@ -13,7 +13,7 @@ const PanelMedIllustrasjon = ({
     title,
     svg,
     className,
-    children
+    children,
 }: {
     id?: string;
     title: string;

@@ -1,12 +1,6 @@
 import React, { StatelessComponent, ReactNode } from 'react';
 import TypografiBase from 'nav-frontend-typografi';
-import {
-    StrukturertTekst,
-    MarkDefinition,
-    Avsnitt,
-    Tekstsnutt,
-    Definisjoner
-} from '../../utils/strukturertTekst';
+import { StrukturertTekst, MarkDefinition, Avsnitt, Tekstsnutt, Definisjoner } from '../../utils/strukturertTekst';
 import WithLink from '../with-link/WithLink';
 import BEMHelper from '../../utils/bem';
 import './strukturertTekst.less';
@@ -19,20 +13,11 @@ interface Props {
 const cls = BEMHelper('strukturertTekst');
 
 const StrukturertTekst: StatelessComponent<Props> = ({ tekst, definisjoner }) => {
-    return (
-        <div className={cls.block}>{tekst ? tekst.map(renderAvsnitt(definisjoner)) : null}</div>
-    );
+    return <div className={cls.block}>{tekst ? tekst.map(renderAvsnitt(definisjoner)) : null}</div>;
 };
 
 const renderAvsnitt = (definisjoner?: Definisjoner) => (avsnitt: Avsnitt, index: number) => {
-    const {
-        type = 'avsnitt',
-        style = 'normaltekst',
-        markDefs = [],
-        children = [],
-        listItem,
-        level = 0
-    } = avsnitt;
+    const { type = 'avsnitt', style = 'normaltekst', markDefs = [], children = [], listItem, level = 0 } = avsnitt;
 
     if (level > 0) {
         const renderListElement = renderTekstsnutt(markDefs, definisjoner);
@@ -69,7 +54,7 @@ const renderTekstsnutt = (markDefs: MarkDefinition[], variabler?: Definisjoner) 
     index: number
 ) => {
     let snuttype = 'span';
-    let text: string = '';
+    let text = '';
     let marks: string[] = [];
 
     if (typeof tekstsnutt !== 'string') {
@@ -134,7 +119,7 @@ const renderTekstsnutt = (markDefs: MarkDefinition[], variabler?: Definisjoner) 
 const MarkWrapper = ({
     mark,
     otherMarks,
-    children
+    children,
 }: {
     mark: MarkDefinition;
     otherMarks: string[];
@@ -145,10 +130,7 @@ const MarkWrapper = ({
             const external = otherMarks.includes('external_link');
 
             return (
-                <WithLink
-                    urlIsExternal={external}
-                    addExternalIcon={external}
-                    url={mark.href || '/#'}>
+                <WithLink urlIsExternal={external} addExternalIcon={external} url={mark.href || '/#'}>
                     {children}
                 </WithLink>
             );

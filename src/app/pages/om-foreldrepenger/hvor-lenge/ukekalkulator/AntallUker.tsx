@@ -1,7 +1,7 @@
 import * as React from 'react';
 import classnames from 'classnames';
 import TypografiBase from 'nav-frontend-typografi';
-import { InjectedIntlProps, injectIntl } from 'react-intl';
+import { useIntl } from 'react-intl';
 import { BEMWrapper } from '../../../../utils/bem';
 import getTranslation from 'app/utils/i18nUtils';
 
@@ -14,15 +14,16 @@ interface Props {
     onSelect: () => void;
 }
 
-const AntallUker: React.StatelessComponent<Props & InjectedIntlProps> = ({
+const AntallUker: React.StatelessComponent<Props> = ({
     parentCls,
     numberOfWeeks,
     numberOfChildren,
     percentage,
     isSelected,
     onSelect,
-    intl
 }) => {
+    const intl = useIntl();
+
     const numberOfChildrenSpelled =
         numberOfChildren === 1
             ? getTranslation('ett_barn', intl)
@@ -35,7 +36,7 @@ const AntallUker: React.StatelessComponent<Props & InjectedIntlProps> = ({
         parentCls.element('option'),
         parentCls.element('antallUker'),
         {
-            [parentCls.element('option--selected')]: isSelected
+            [parentCls.element('option--selected')]: isSelected,
         }
     );
 
@@ -49,14 +50,13 @@ const AntallUker: React.StatelessComponent<Props & InjectedIntlProps> = ({
                 aria-label={ariaLabel}
                 onClick={onSelect}
                 onKeyPress={onSelect}
-                className={combinedClassnames}>
+                className={combinedClassnames}
+            >
                 <TypografiBase type="element">{numberOfWeeks}</TypografiBase>
-                {isSelected && (
-                    <TypografiBase type="undertekst">{getTranslation('uker', intl)}</TypografiBase>
-                )}
+                {isSelected && <TypografiBase type="undertekst">{getTranslation('uker', intl)}</TypografiBase>}
             </div>
         </div>
     );
 };
 
-export default injectIntl(AntallUker);
+export default AntallUker;

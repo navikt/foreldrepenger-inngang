@@ -14,12 +14,12 @@ interface State {
     currentLanguage: Language;
 }
 
-class App extends React.Component<{}, State> {
-    constructor(props: {}) {
+class App extends React.Component<unknown, State> {
+    constructor(props: any) {
         super(props);
 
         this.state = {
-            currentLanguage: DEFAULT_LANG
+            currentLanguage: DEFAULT_LANG,
         };
 
         moment.locale(DEFAULT_LANG);
@@ -28,7 +28,7 @@ class App extends React.Component<{}, State> {
     setLanguage = (lang: Language) => {
         moment.locale(lang);
         this.setState({
-            currentLanguage: lang
+            currentLanguage: lang,
         });
     };
 
@@ -40,9 +40,7 @@ class App extends React.Component<{}, State> {
         return (
             <IntlProvider language={this.state.currentLanguage}>
                 <div lang={this.state.currentLanguage}>
-                    {ENABLE_LANGUAGE_TOGGLER && (
-                        <LanguageToggle toggleLanguage={this.toggleLanguage} />
-                    )}
+                    {ENABLE_LANGUAGE_TOGGLER && <LanguageToggle toggleLanguage={this.toggleLanguage} />}
                     <NAVChatBot
                         customerKey="41155"
                         queueKey="Q_CHAT_BOT"

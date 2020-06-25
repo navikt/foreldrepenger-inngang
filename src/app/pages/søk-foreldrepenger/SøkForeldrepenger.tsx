@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import Breadcrumbs from '../../components/breadcrumbs/Breadcrumbs';
-import { InjectedIntlProps, injectIntl, InjectedIntl } from 'react-intl';
+import { IntlShape, useIntl } from 'react-intl';
 import classnames from 'classnames';
 import Sidebanner from 'app/components/sidebanner/Sidebanner';
 
@@ -29,7 +29,7 @@ const infoSvg = require('../../assets/hva-skjer-naar.svg').default;
 
 interface Props {
     route: any;
-    intl: InjectedIntl;
+    intl: IntlShape;
 }
 
 const SøkForeldrepengerHeader = () => {
@@ -46,156 +46,106 @@ const tabs: Innholdsfane[] = [
     {
         label: 'farOgMor',
         icon: <Foreldrepar firstParent="far1" secondParent="mor2" />,
-        component: <InfoFarOgMor />
+        component: <InfoFarOgMor />,
     },
     {
         label: 'bareFarHarRett',
         icon: <Foreldrepar firstParent="far3" secondParent="medmor1" variant={1} />,
-        component: <InfoBareFarHarRett />
+        component: <InfoBareFarHarRett />,
     },
     {
         label: 'bareMorHarRett',
         icon: <Foreldrepar firstParent="far2" secondParent="mor1" variant={2} />,
-        component: <InfoBareMorHarRett />
+        component: <InfoBareMorHarRett />,
     },
     {
         label: 'aleneomsorg',
         icon: <Foreldrepar firstParent="far1" secondParent="medmor1" variant={3} />,
-        component: <InfoAleneomsorg />
+        component: <InfoAleneomsorg />,
     },
     {
         label: 'morOgMor',
         icon: <Foreldrepar firstParent="mor2" secondParent="medmor2" />,
-        component: <InfoMorOgMor />
+        component: <InfoMorOgMor />,
     },
     {
         label: 'farOgFar',
         icon: <Foreldrepar firstParent="far4" secondParent="far2" />,
-        component: <InfoFarOgFar />
-    }
+        component: <InfoFarOgFar />,
+    },
 ];
 
 const cls = BEMHelper('søkForeldrepenger');
 const infoCls = BEMHelper('infosider');
 
-interface StateProps {
-    valgtSituasjon: string;
-    valgtProsess: string | undefined;
-}
+const SøkForeldrepenger: React.FunctionComponent<Props> = () => {
+    const intl = useIntl();
+    const setValgtSituasjon = useState('farOgMor')[1];
+    const [valgtProsess, setValgtProsess] = useState(undefined);
 
-class SøkForeldrepenger extends Component<Props & InjectedIntlProps, StateProps> {
-    constructor(props: Props) {
-        super(props);
-
-        this.state = {
-            valgtSituasjon: 'farOgMor',
-            valgtProsess: undefined
-        };
-    }
-
-    onSituasjonSelected = (valgtSituasjon: Foreldresituasjon) => {
-        this.setState({
-            valgtSituasjon
-        });
+    const onSituasjonSelected = (valgtSituasjon: Foreldresituasjon) => {
+        setValgtSituasjon(valgtSituasjon);
     };
 
-    onOversiktToggle = (valgtProsess: any) => {
-        this.setState({
-            valgtProsess
-        });
+    const onOversiktToggle = (vp: any) => {
+        setValgtProsess(vp);
     };
 
-    render = () => {
-        const { intl } = this.props;
+    return (
+        <div className={classnames(cls.block, infoCls.block)}>
+            <Sidebanner text={getTranslation('søk_foreldrepenger.tittel', intl)} />
+            <div className={infoCls.element('container')}>
+                <article className={infoCls.element('article')}>
+                    <SøkForeldrepengerHeader />
 
-        return (
-            <div className={classnames(cls.block, infoCls.block)}>
-                <Sidebanner text={getTranslation('søk_foreldrepenger.tittel', this.props.intl)} />
-                <div className={infoCls.element('container')}>
-                    <article className={infoCls.element('article')}>
-                        <SøkForeldrepengerHeader />
-
-                        <div role="main">
-                            <Breadcrumbs path={location.pathname} />
-                            <PanelMedIllustrasjon
-                                id={'test'}
-                                title={getTranslation(
-                                    'søke_om_foreldrepenger.forside.bildetekst',
-                                    intl
-                                )}
-                                svg={infoSvg}>
-                                <div className={cls.block}>
-                                    <Undertittel>
-                                        {getTranslation('søke_om_foreldrepenger.oversikt', intl)}
-                                    </Undertittel>
-                                    <div className={cls.element('radioWrapper')}>
-                                        <RadioPanel
-                                            checked={this.state.valgtProsess === 'hele'}
-                                            name={'hele'}
-                                            onChange={(e) =>
-                                                this.onOversiktToggle(
-                                                    (e.target as HTMLInputElement).value
-                                                )
-                                            }
-                                            label={getTranslation(
-                                                'søke_om_foreldrepenger.hele',
-                                                intl
-                                            )}
-                                            value={'hele'}
-                                        />
-                                        <RadioPanel
-                                            checked={this.state.valgtProsess === 'endre'}
-                                            name={'endre'}
-                                            onChange={(e) =>
-                                                this.onOversiktToggle(
-                                                    (e.target as HTMLInputElement).value
-                                                )
-                                            }
-                                            label={getTranslation(
-                                                'søke_om_foreldrepenger.endre',
-                                                intl
-                                            )}
-                                            value={'endre'}
-                                        />
-                                    </div>
-                                    {this.state.valgtProsess !== undefined &&
-                                        (this.state.valgtProsess === 'hele' ? (
-                                            <>
-                                                <Undertittel>
-                                                    {getTranslation(
-                                                        'søke_om_foreldrepenger.velgSituasjon',
-                                                        intl
-                                                    )}
-                                                </Undertittel>
-                                                <Innholdsfaner
-                                                    tabs={tabs}
-                                                    onSelect={this.onSituasjonSelected}
-                                                />
-                                            </>
-                                        ) : (
-                                            <>
-                                                <Undertittel>
-                                                    {getTranslation(
-                                                        'søke_om_foreldrepenger.søkOmEndring',
-                                                        intl
-                                                    )}
-                                                </Undertittel>
-                                                <Innhold
-                                                    source={getSource(
-                                                        'søk-foreldrepenger/endre',
-                                                        intl
-                                                    )}
-                                                />
-                                            </>
-                                        ))}
+                    <div role="main">
+                        <Breadcrumbs path={location.pathname} />
+                        <PanelMedIllustrasjon
+                            id={'test'}
+                            title={getTranslation('søke_om_foreldrepenger.forside.bildetekst', intl)}
+                            svg={infoSvg}
+                        >
+                            <div className={cls.block}>
+                                <Undertittel>{getTranslation('søke_om_foreldrepenger.oversikt', intl)}</Undertittel>
+                                <div className={cls.element('radioWrapper')}>
+                                    <RadioPanel
+                                        checked={valgtProsess === 'hele'}
+                                        name={'hele'}
+                                        onChange={(e) => onOversiktToggle((e.target as HTMLInputElement).value)}
+                                        label={getTranslation('søke_om_foreldrepenger.hele', intl)}
+                                        value={'hele'}
+                                    />
+                                    <RadioPanel
+                                        checked={valgtProsess === 'endre'}
+                                        name={'endre'}
+                                        onChange={(e) => onOversiktToggle((e.target as HTMLInputElement).value)}
+                                        label={getTranslation('søke_om_foreldrepenger.endre', intl)}
+                                        value={'endre'}
+                                    />
                                 </div>
-                            </PanelMedIllustrasjon>
-                        </div>
-                    </article>
-                </div>
+                                {valgtProsess !== undefined &&
+                                    (valgtProsess === 'hele' ? (
+                                        <>
+                                            <Undertittel>
+                                                {getTranslation('søke_om_foreldrepenger.velgSituasjon', intl)}
+                                            </Undertittel>
+                                            <Innholdsfaner tabs={tabs} onSelect={onSituasjonSelected} />
+                                        </>
+                                    ) : (
+                                        <>
+                                            <Undertittel>
+                                                {getTranslation('søke_om_foreldrepenger.søkOmEndring', intl)}
+                                            </Undertittel>
+                                            <Innhold source={getSource('søk-foreldrepenger/endre', intl)} />
+                                        </>
+                                    ))}
+                            </div>
+                        </PanelMedIllustrasjon>
+                    </div>
+                </article>
             </div>
-        );
-    };
-}
+        </div>
+    );
+};
 
-export default injectIntl(SøkForeldrepenger);
+export default SøkForeldrepenger;

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { InjectedIntlProps, injectIntl } from 'react-intl';
+import { injectIntl, IntlShape } from 'react-intl';
 import { Utbetalingsalternativ } from './utils';
 import AntallBarn from './AntallBarn';
 import AntallUker from './AntallUker';
@@ -15,7 +15,11 @@ interface KalkulatorProps {
     antallUtbetalingsuker: Utbetalingsalternativ[];
 }
 
-type Props = KalkulatorProps & InjectedIntlProps;
+interface InjectedProps {
+    intl: IntlShape;
+}
+
+type Props = KalkulatorProps & InjectedProps;
 
 interface State {
     selectedNumberOfWeeks: number;
@@ -30,17 +34,17 @@ class Ukekalkulator extends React.Component<Props, State> {
         this.state = {
             selectedNumberOfWeeks: props.antallUtbetalingsuker[0][100],
             selectedNumberOfChildren: 1,
-            selectedPercentage: 100
+            selectedPercentage: 100,
         };
     }
 
-    componentWillReceiveProps = (nextProps: Props) => {
+    componentDidUpdate = (nextProps: Props) => {
         if (nextProps.antallUtbetalingsuker !== this.props.antallUtbetalingsuker) {
             this.setState({
                 selectedNumberOfWeeks:
                     nextProps.antallUtbetalingsuker[this.state.selectedNumberOfChildren - 1][
                         this.state.selectedPercentage
-                    ]
+                    ],
             });
         }
     };
@@ -53,41 +57,31 @@ class Ukekalkulator extends React.Component<Props, State> {
         this.setState({
             selectedNumberOfWeeks,
             selectedNumberOfChildren,
-            selectedPercentage
+            selectedPercentage,
         });
     };
 
     onPercentageSelect = (selectedPercentage: number) => {
-        const selectedNumberOfWeeks = this.props.antallUtbetalingsuker[
-            this.state.selectedNumberOfChildren - 1
-        ][selectedPercentage];
+        const selectedNumberOfWeeks = this.props.antallUtbetalingsuker[this.state.selectedNumberOfChildren - 1][
+            selectedPercentage
+        ];
 
         this.setState({
             selectedPercentage,
-            selectedNumberOfWeeks
+            selectedNumberOfWeeks,
         });
     };
 
     render = () => {
-        const AntallUkerWrapper = addAntallUkerAttributes(
-            this.state.selectedNumberOfWeeks,
-            this.onNumberOfWeeksSelect
-        );
+        const AntallUkerWrapper = addAntallUkerAttributes(this.state.selectedNumberOfWeeks, this.onNumberOfWeeksSelect);
 
         return (
-            <div
-                role="section"
-                aria-label="Kalkulator for foreldrepengeperiode"
-                className={cls.block}>
+            <div role="section" aria-label="Kalkulator for foreldrepengeperiode" className={cls.block}>
                 <div className={cls.element('antallUkerOgBarn')}>
                     <div />
                     <TypografiBase type="normaltekst">100 %</TypografiBase>
                     <TypografiBase type="normaltekst">80 %</TypografiBase>
-                    <AntallBarn
-                        parentCls={cls}
-                        childCount={1}
-                        label={getTranslation('ett_barn', this.props.intl)}
-                    />
+                    <AntallBarn parentCls={cls} childCount={1} label={getTranslation('ett_barn', this.props.intl)} />
                     <AntallUkerWrapper
                         numberOfWeeks={this.props.antallUtbetalingsuker[0][100]}
                         numberOfChildren={1}
@@ -98,11 +92,7 @@ class Ukekalkulator extends React.Component<Props, State> {
                         numberOfChildren={1}
                         percentage={80}
                     />
-                    <AntallBarn
-                        parentCls={cls}
-                        childCount={2}
-                        label={getTranslation('tvillinger', this.props.intl)}
-                    />
+                    <AntallBarn parentCls={cls} childCount={2} label={getTranslation('tvillinger', this.props.intl)} />
                     <AntallUkerWrapper
                         numberOfWeeks={this.props.antallUtbetalingsuker[1][100]}
                         numberOfChildren={2}
@@ -113,11 +103,7 @@ class Ukekalkulator extends React.Component<Props, State> {
                         numberOfChildren={2}
                         percentage={80}
                     />
-                    <AntallBarn
-                        parentCls={cls}
-                        childCount={3}
-                        label={getTranslation('flere_barn', this.props.intl)}
-                    />
+                    <AntallBarn parentCls={cls} childCount={3} label={getTranslation('flere_barn', this.props.intl)} />
                     <AntallUkerWrapper
                         numberOfWeeks={this.props.antallUtbetalingsuker[2][100]}
                         numberOfChildren={3}
@@ -145,7 +131,7 @@ const addAntallUkerAttributes = (
 ) => ({
     numberOfWeeks,
     numberOfChildren,
-    percentage
+    percentage,
 }: {
     numberOfWeeks: number;
     numberOfChildren: number;

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { InjectedIntlProps, injectIntl } from 'react-intl';
+import { useIntl } from 'react-intl';
 import { ForeldrepengerSection as Section } from 'app/types/Section';
 import Adopsjon from './adopsjon/Adopsjon';
 import BEMHelper from '../../utils/bem';
@@ -41,13 +41,12 @@ const sections: Section[] = [
     Section.HjemmeSamtidig,
     Section.Adoptere,
     Section.EtterDuHarSøkt,
-    Section.OfteStilteSpørsmål
+    Section.OfteStilteSpørsmål,
 ];
 
-const OmForeldrepenger: React.StatelessComponent<Props & InjectedIntlProps> = ({
-    location,
-    intl
-}) => {
+const OmForeldrepenger: React.StatelessComponent<Props> = ({ location }) => {
+    const intl = useIntl();
+
     return (
         <div className={classnames(cls.block)}>
             <HeaderInformasjon
@@ -60,8 +59,9 @@ const OmForeldrepenger: React.StatelessComponent<Props & InjectedIntlProps> = ({
                 sections={sections}
                 button={{
                     label: getTranslation('innholdsfortegnelse.søk_nå', intl),
-                    url: Environment.SOK_FORELDREPENGER_URL
-                }}>
+                    url: Environment.SOK_FORELDREPENGER_URL,
+                }}
+            >
                 <article className={cls.element('article')}>
                     <Breadcrumbs path={location.pathname} />
                     <HvemKanFåForeldrepenger id={Section.HvemKanFå} />
@@ -82,4 +82,4 @@ const OmForeldrepenger: React.StatelessComponent<Props & InjectedIntlProps> = ({
     );
 };
 
-export default injectIntl(OmForeldrepenger);
+export default OmForeldrepenger;

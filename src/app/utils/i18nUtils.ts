@@ -1,10 +1,8 @@
-import InjectedIntl = ReactIntl.InjectedIntl;
-import MessageValue = ReactIntl.MessageValue;
+import { IntlShape } from 'react-intl';
 
-const getTranslation = (
-    id: string,
-    intl: InjectedIntl,
-    value?: { [key: string]: MessageValue }
-): string => intl.formatMessage({ id }, value);
+type MessageValue = string | number | boolean | Date | null | undefined;
+
+const getTranslation = (id: string, intl: IntlShape, value?: { [key: string]: MessageValue }): string =>
+    intl.formatMessage({ id }, value);
 
 export default getTranslation;

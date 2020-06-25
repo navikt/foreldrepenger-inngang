@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { injectIntl, InjectedIntlProps } from 'react-intl';
+import { useIntl } from 'react-intl';
 import BEMHelper from '../../../utils/bem';
 import Ferieforskyvning from './Ferieforskyvning';
 import FerieforskyvningMobil from './FerieforskyvningMobil';
@@ -20,12 +20,11 @@ interface Props {
     id: string;
 }
 
-const Ferie: React.StatelessComponent<Props & InjectedIntlProps> = ({ id, intl }) => {
+const Ferie: React.StatelessComponent<Props> = ({ id }) => {
+    const intl = useIntl();
+
     return (
-        <PanelMedIllustrasjon
-            id={id}
-            svg={ferieSvg}
-            title={getTranslation('om_foreldrepenger.ferie.tittel', intl)}>
+        <PanelMedIllustrasjon id={id} svg={ferieSvg} title={getTranslation('om_foreldrepenger.ferie.tittel', intl)}>
             <Innhold source={getSource(content, intl)} />
             <div className={cls.element('eksempel')}>
                 <TypografiBase type="normaltekst">
@@ -43,4 +42,4 @@ const Ferie: React.StatelessComponent<Props & InjectedIntlProps> = ({ id, intl }
     );
 };
 
-export default injectIntl(Ferie);
+export default Ferie;

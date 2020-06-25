@@ -7,7 +7,7 @@ import './utvidetInformasjon.less';
 import EkspanderbartInnhold from './EkspanderbartInnhold';
 import { Normaltekst } from 'nav-frontend-typografi';
 import getTranslation from '../../../../app/utils/i18nUtils';
-import { injectIntl, InjectedIntlProps } from 'react-intl';
+import { injectIntl, IntlShape } from 'react-intl';
 
 interface OwnProps {
     children: React.ReactNode;
@@ -16,7 +16,11 @@ interface OwnProps {
     lukkLabel?: string;
 }
 
-type Props = OwnProps & InjectedIntlProps;
+interface InjectedProps {
+    intl: IntlShape;
+}
+
+type Props = OwnProps & InjectedProps;
 
 interface State {
     apen: boolean;
@@ -29,12 +33,12 @@ class UtvidetInformasjon extends React.Component<Props, State> {
         super(props);
         this.innholdId = guid();
         this.state = {
-            apen: props.erApen || false
+            apen: props.erApen || false,
         };
     }
     render() {
         const cls = classnames('utvidetInformasjon', {
-            'utvidetInformasjon--apen': this.state.apen
+            'utvidetInformasjon--apen': this.state.apen,
         });
 
         const { lukkLabel = getTranslation('lukk_informasjon', this.props.intl) } = this.props;
@@ -42,19 +46,12 @@ class UtvidetInformasjon extends React.Component<Props, State> {
         return (
             <div className={cls}>
                 <div className="utvidetInformasjon__toggler no-print">
-                    <InfoToggler
-                        onToggle={() => this.setState({ apen: !this.state.apen })}
-                        apen={this.state.apen}>
-                        <Normaltekst tag="span">
-                            {this.state.apen ? lukkLabel : this.props.apneLabel}
-                        </Normaltekst>
+                    <InfoToggler onToggle={() => this.setState({ apen: !this.state.apen })} apen={this.state.apen}>
+                        <Normaltekst tag="span">{this.state.apen ? lukkLabel : this.props.apneLabel}</Normaltekst>
                     </InfoToggler>
                 </div>
                 <div className="utvidetInformasjon__innhold" id={this.innholdId}>
-                    <EkspanderbartInnhold erApen={this.state.apen}>
-                        {' '}
-                        {this.props.children}
-                    </EkspanderbartInnhold>
+                    <EkspanderbartInnhold erApen={this.state.apen}>{this.props.children}</EkspanderbartInnhold>
 
                     <div className="print-only">{this.props.children}</div>
                 </div>

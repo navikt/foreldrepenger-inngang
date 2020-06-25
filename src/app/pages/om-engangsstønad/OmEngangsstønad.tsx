@@ -1,6 +1,5 @@
 import * as React from 'react';
-
-import { injectIntl, InjectedIntlProps } from 'react-intl';
+import { useIntl } from 'react-intl';
 import BEMHelper from '../../utils/bem';
 import Breadcrumbs from '../../components/breadcrumbs/Breadcrumbs';
 import Environment from 'app/Environment';
@@ -39,13 +38,12 @@ const sections: EngangsstonadSection[] = [
     'hva-kan-du-fa',
     'nar-kan-du-soke',
     'nar-blir-pengene-utbetalt',
-    'far-eller-medmor'
+    'far-eller-medmor',
 ];
 
-const OmEngangsstonad: React.StatelessComponent<Props & InjectedIntlProps> = ({
-    location,
-    intl
-}) => {
+const OmEngangsstonad: React.StatelessComponent<Props> = ({ location }) => {
+    const intl = useIntl();
+
     return (
         <div className={infosiderCls.block}>
             <HeaderInformasjon
@@ -58,8 +56,9 @@ const OmEngangsstonad: React.StatelessComponent<Props & InjectedIntlProps> = ({
                 sections={sections}
                 button={{
                     label: getTranslation('innholdsfortegnelse.søk_nå', intl),
-                    url: Environment.SOK_ENGANGSSTONAD_URL
-                }}>
+                    url: Environment.SOK_ENGANGSSTONAD_URL,
+                }}
+            >
                 <article className={infosiderCls.element('article')}>
                     <Breadcrumbs path={location.pathname} />
                     <HvemKanFåEngangsstønad id={sections[0]} />
@@ -74,4 +73,4 @@ const OmEngangsstonad: React.StatelessComponent<Props & InjectedIntlProps> = ({
     );
 };
 
-export default injectIntl(OmEngangsstonad);
+export default OmEngangsstonad;

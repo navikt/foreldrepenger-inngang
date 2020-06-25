@@ -10,5 +10,5 @@ export enum Page {
     'Regelendringer' = '/om-foreldrepenger/regelendringer',
     'Dokumentasjon' = '/dokumentasjon',
     'Veiviser' = '/veiviser',
-    'SøkeOmForeldrepenger' = '/soke-om-foreldrepenger'
+    'SøkeOmForeldrepenger' = '/soke-om-foreldrepenger',
 }

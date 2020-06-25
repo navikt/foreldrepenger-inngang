@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react';
-import { InjectedIntlProps, injectIntl } from 'react-intl';
+import { injectIntl, IntlShape } from 'react-intl';
 import { Kvote } from 'app/utils/foreldresituasjon';
 import BEMHelper from '../../../../utils/bem';
 import Faneinnhold from './Faneinnhold';
@@ -31,7 +31,11 @@ interface OwnProps {
     onTabSelected?: (tab: string) => void;
 }
 
-type Props = OwnProps & InjectedIntlProps;
+interface InjectedProps {
+    intl: IntlShape;
+}
+
+type Props = OwnProps & InjectedProps;
 
 class Informasjonsfaner extends React.Component<Props> {
     state: {
@@ -44,7 +48,7 @@ class Informasjonsfaner extends React.Component<Props> {
 
         this.state = {
             currentTab: 0,
-            color: 'blue'
+            color: 'blue',
         };
     }
 
@@ -55,7 +59,7 @@ class Informasjonsfaner extends React.Component<Props> {
 
         this.setState({
             currentTab: index,
-            color: 'red'
+            color: 'red',
         });
     };
 
@@ -66,21 +70,15 @@ class Informasjonsfaner extends React.Component<Props> {
                     {this.props.title
                         ? this.props.title
                         : this.props.tabs.length > 1
-                        ? getTranslation(
-                              'om_foreldrepenger.hvor_lenge.fordeling.tittel',
-                              this.props.intl
-                          )
-                        : getTranslation(
-                              'om_foreldrepenger.hvor_lenge.fordeling.tittel_alene',
-                              this.props.intl
-                          )}
+                        ? getTranslation('om_foreldrepenger.hvor_lenge.fordeling.tittel', this.props.intl)
+                        : getTranslation('om_foreldrepenger.hvor_lenge.fordeling.tittel_alene', this.props.intl)}
                 </TypografiBase>
             </div>
             {this.props.tabs.length > 1 && (
                 <Tabs
                     kompakt={true}
                     tabs={this.props.tabs.map((tab) => ({
-                        label: tab.label
+                        label: tab.label,
                     }))}
                     onChange={this.onTabChange}
                 />

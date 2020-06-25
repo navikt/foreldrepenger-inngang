@@ -36,7 +36,7 @@ export class WithLink extends React.Component<Props> {
             if (target) {
                 target.scrollIntoView({
                     behavior: 'smooth',
-                    block: 'start'
+                    block: 'start',
                 });
             }
         } else {
@@ -45,7 +45,7 @@ export class WithLink extends React.Component<Props> {
             if (sectionNode) {
                 window.scroll({
                     top: sectionNode.offsetTop - SCROLL_OFFSET,
-                    behavior: 'smooth'
+                    behavior: 'smooth',
                 });
             }
         }
@@ -61,10 +61,10 @@ export class WithLink extends React.Component<Props> {
             className,
             style,
             ariaLabel,
-            children
+            children,
         } = this.props;
         const classNames = classnames(cls.block, className, {
-            [cls.element('noStyling')]: noStyling
+            [cls.element('noStyling')]: noStyling,
         });
 
         if (urlIsExternal) {
@@ -75,17 +75,14 @@ export class WithLink extends React.Component<Props> {
                         target="_blank"
                         rel="noopener noreferrer"
                         className={className}
-                        href={url}>
+                        href={url}
+                    >
                         {children}
                     </a>
                 );
             } else {
                 return (
-                    <Lenke
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className={classNames}
-                        href={url}>
+                    <Lenke target="_blank" rel="noopener noreferrer" className={classNames} href={url}>
                         {children}
                         {addExternalIcon && (
                             <span className={cls.element('icon')}>
@@ -103,7 +100,8 @@ export class WithLink extends React.Component<Props> {
                         aria-label={ariaLabel}
                         className={className + ' anchorLink'}
                         style={style}
-                        onClick={this.goToSection(url)}>
+                        onClick={this.goToSection(url)}
+                    >
                         {children}
                     </span>
                 );
@@ -113,7 +111,8 @@ export class WithLink extends React.Component<Props> {
                         className={className + ' anchorLink'}
                         style={style}
                         onClick={this.goToSection(url)}
-                        href={url}>
+                        href={url}
+                    >
                         {children}
                     </Lenke>
                 );
@@ -124,7 +123,8 @@ export class WithLink extends React.Component<Props> {
                     style={style}
                     tabIndex={noTabbing ? -1 : 0}
                     className={noStyling ? className : classNames}
-                    to={url}>
+                    to={url}
+                >
                     {children}
                 </Link>
             );

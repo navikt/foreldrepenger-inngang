@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { detErJul } from 'app/utils/datoUtils';
 
-import { injectIntl, InjectedIntlProps } from 'react-intl';
+import { useIntl } from 'react-intl';
 import BEMHelper from '../../../utils/bem';
 import CustomSVG from '../../../utils/CustomSVG';
 import getTranslation from 'app/utils/i18nUtils';
@@ -20,22 +20,22 @@ const checkmarkIcon = require('./checkmark.svg').default;
 const kravTilForeldrepenger = [
     'om-foreldrepenger/hvem-kan-få/krav1',
     'om-foreldrepenger/hvem-kan-få/krav2',
-    'om-foreldrepenger/hvem-kan-få/krav3'
+    'om-foreldrepenger/hvem-kan-få/krav3',
 ];
 
 interface Props {
     id: string;
 }
 
-const HvemKanFåForeldrepenger: React.StatelessComponent<Props & InjectedIntlProps> = ({
-    id,
-    intl
-}) => {
+const HvemKanFåForeldrepenger: React.StatelessComponent<Props> = ({ id }) => {
+    const intl = useIntl();
+
     return (
         <PanelMedIllustrasjon
             id={id}
             title={getTranslation('om_foreldrepenger.for_å_få.tittel', intl)}
-            svg={<SvgMask svg={foreldrepengerSvg} anchorToBottom={true} />}>
+            svg={<SvgMask svg={foreldrepengerSvg} anchorToBottom={true} />}
+        >
             <Innhold source={getSource('om-foreldrepenger/hvem-kan-få/ingress', intl)} />
             <div className={cls.element('kravTilForeldrepenger')}>
                 {kravTilForeldrepenger.map((krav) => (
@@ -55,4 +55,4 @@ const KravTilForeldrepenger = ({ ingress }: { ingress: string }) => {
     );
 };
 
-export default injectIntl(HvemKanFåForeldrepenger);
+export default HvemKanFåForeldrepenger;

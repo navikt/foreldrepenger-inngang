@@ -20,7 +20,7 @@ const PanelMedBilde = ({
     disabled,
     stopSign,
     bypassNavlab,
-    underArbeid
+    underArbeid,
 }: {
     svgName: any;
     title: string;
@@ -41,24 +41,15 @@ const PanelMedBilde = ({
             noStyling={true}
             noTabbing={disabled}
             bypassNavlab={bypassNavlab}
-            urlIsExternal={urlIsExternal}>
+            urlIsExternal={urlIsExternal}
+        >
             <div className={cls.element('imageOnPanel')}>
                 <div className={cls.element('svgContainer')}>
                     <MediaQuery maxWidth={799}>
-                        <FlexibleSvg
-                            className={cls.element('svg')}
-                            iconRef={svgFile}
-                            height={80}
-                            width="100%"
-                        />
+                        <FlexibleSvg className={cls.element('svg')} iconRef={svgFile} height={80} width="100%" />
                     </MediaQuery>
                     <MediaQuery minWidth={800}>
-                        <FlexibleSvg
-                            className={cls.element('svg')}
-                            iconRef={svgFile}
-                            height={110}
-                            width="100%"
-                        />
+                        <FlexibleSvg className={cls.element('svg')} iconRef={svgFile} height={110} width="100%" />
                     </MediaQuery>
                 </div>
             </div>

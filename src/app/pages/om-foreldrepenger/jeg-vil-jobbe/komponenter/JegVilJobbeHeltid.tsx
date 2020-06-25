@@ -1,5 +1,5 @@
 import React from 'react';
-import { InjectedIntl, injectIntl } from 'react-intl';
+import { useIntl } from 'react-intl';
 import getTranslation from '../../../../utils/i18nUtils';
 
 const JegVilJobbeHeltid = ({
@@ -8,15 +8,15 @@ const JegVilJobbeHeltid = ({
     sluttdato,
     forskyvning,
     fodsel,
-    intl
 }: {
     jobb: string;
     uker: string;
     sluttdato: string;
     forskyvning: string;
     fodsel: string;
-    intl: InjectedIntl;
 }) => {
+    const intl = useIntl();
+
     return (
         <svg
             width="100%"
@@ -24,7 +24,8 @@ const JegVilJobbeHeltid = ({
             viewBox="0 0 633 81"
             version="1.1"
             xmlns="http://www.w3.org/2000/svg"
-            xmlnsXlink="http://www.w3.org/1999/xlink">
+            xmlnsXlink="http://www.w3.org/1999/xlink"
+        >
             <title>Illustrasjon/Heltidsjobb</title>
 
             <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
@@ -76,36 +77,20 @@ const JegVilJobbeHeltid = ({
                     height="26"
                     rx="8"
                 />
-                <text
-                    fontFamily="SourceSansPro-Bold, Source Sans Pro"
-                    fontSize="16"
-                    fontWeight="bold"
-                    fill="#159345">
+                <text fontFamily="SourceSansPro-Bold, Source Sans Pro" fontSize="16" fontWeight="bold" fill="#159345">
                     <tspan x="266.884" y="44">
                         {getTranslation(jobb, intl)}
                     </tspan>
-                    <tspan
-                        x="302.244"
-                        y="44"
-                        fontFamily="SourceSansPro-Regular, Source Sans Pro"
-                        fontWeight="normal">
+                    <tspan x="302.244" y="44" fontFamily="SourceSansPro-Regular, Source Sans Pro" fontWeight="normal">
                         {' '}
                         {getTranslation(uker, intl)}
                     </tspan>
                 </text>
-                <text
-                    fontFamily="SourceSansPro-Bold, Source Sans Pro"
-                    fontSize="16"
-                    fontWeight="bold"
-                    fill="#3E3832">
+                <text fontFamily="SourceSansPro-Bold, Source Sans Pro" fontSize="16" fontWeight="bold" fill="#3E3832">
                     <tspan x="539.38" y="16">
                         {getTranslation(sluttdato, intl)}{' '}
                     </tspan>
-                    <tspan
-                        x="514.156"
-                        y="36"
-                        fontFamily="SourceSansPro-Regular, Source Sans Pro"
-                        fontWeight="normal">
+                    <tspan x="514.156" y="36" fontFamily="SourceSansPro-Regular, Source Sans Pro" fontWeight="normal">
                         {getTranslation(forskyvning, intl)}
                     </tspan>
                 </text>
@@ -113,7 +98,8 @@ const JegVilJobbeHeltid = ({
                     fontFamily="SourceSansPro-Regular, Source Sans Pro"
                     fontSize="16"
                     fontWeight="normal"
-                    fill="#3E3832">
+                    fill="#3E3832"
+                >
                     <tspan x="7.024" y="16">
                         {getTranslation(fodsel, intl)}
                     </tspan>
@@ -182,4 +168,4 @@ const JegVilJobbeHeltid = ({
     );
 };
 
-export default injectIntl(JegVilJobbeHeltid);
+export default JegVilJobbeHeltid;

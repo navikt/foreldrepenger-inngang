@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { injectIntl, InjectedIntlProps } from 'react-intl';
+import { useIntl } from 'react-intl';
 
 import getTranslation from 'app/utils/i18nUtils';
 import PanelMedIllustrasjon from '../../../components/panel-med-illustrasjon/PanelMedIllustrasjon';
@@ -11,20 +11,18 @@ interface Props {
     id: string;
 }
 
-const EtterDuHarSøktSvangerskapspenger: React.StatelessComponent<Props & InjectedIntlProps> = ({
-    id,
-    intl
-}) => {
+const EtterDuHarSøktSvangerskapspenger: React.StatelessComponent<Props> = ({ id }) => {
+    const intl = useIntl();
+
     return (
         <PanelMedIllustrasjon
             id={id}
             title={getTranslation('om_foreldrepenger.etter_du_har_søkt.tittel', intl)}
-            svg={statusSVG}>
-            <Innhold
-                source={getSource('svangerskapspenger/etter-du-har-søkt/etter-du-har-søkt', intl)}
-            />
+            svg={statusSVG}
+        >
+            <Innhold source={getSource('svangerskapspenger/etter-du-har-søkt/etter-du-har-søkt', intl)} />
         </PanelMedIllustrasjon>
     );
 };
 
-export default injectIntl(EtterDuHarSøktSvangerskapspenger);
+export default EtterDuHarSøktSvangerskapspenger;

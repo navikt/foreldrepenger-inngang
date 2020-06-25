@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { injectIntl, InjectedIntlProps } from 'react-intl';
+import { useIntl } from 'react-intl';
 import BEMHelper from '../../utils/bem';
 import Breadcrumbs from '../../components/breadcrumbs/Breadcrumbs';
 import Engangsstonad from './Engangsstonad';
@@ -16,7 +16,9 @@ interface Props {
     location: any;
 }
 
-const HvaSøkerDu: React.StatelessComponent<Props & InjectedIntlProps> = ({ location, intl }) => {
+const HvaSøkerDu: React.StatelessComponent<Props> = ({ location }) => {
+    const intl = useIntl();
+
     return (
         <div>
             <div className={cls.block}>
@@ -35,4 +37,4 @@ const HvaSøkerDu: React.StatelessComponent<Props & InjectedIntlProps> = ({ loca
     );
 };
 
-export default injectIntl(HvaSøkerDu);
+export default HvaSøkerDu;
