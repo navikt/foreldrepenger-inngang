@@ -11,4 +11,4 @@ COPY src/build/scripts/decorator.js ./src/build/scripts/decorator.js
 COPY src/build/scripts/envSettings.js ./src/build/scripts/envSettings.js
 
 EXPOSE 8080
-CMD ["yarn", "start-express"]
+CMD ["npm", "run", "start-express"]
