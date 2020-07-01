@@ -2,11 +2,7 @@ apiVersion: "nais.io/v1alpha1"
 kind: "Application"
 metadata:
   name: foreldrepenger-inngang
-{{#if namespace}}
   namespace: {{namespace}}
-  {{else}}
-  namespace: default
-{{/if}}  
   labels:
     team: teamforeldrepenger
 spec:
@@ -14,7 +10,6 @@ spec:
     outbound:
       external:
         - host: {{appres}}
-      rules : []
   image: {{image}}
   port: 8080
   replicas:
