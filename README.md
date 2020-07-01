@@ -2,7 +2,7 @@
 
 ## Komme i gang
 
-Installer og kjør applikasjonen lokalt:  
+Installer og kjør applikasjonen lokalt:
 
 ```
 npm install
@@ -31,13 +31,13 @@ npm run test
 
 ## Stack
 
-- `React`: Rendering og logikk
-- `TypeScript`: Typesikring
-- `Prettier`: Kodeformatering
-- `Jest`: Akseptansetesting av XML-filer, oversettelser og mer.
-- `XML-filer`: Innhold i et egendefinert XML-format.
-- `Node`: Applikasjon for å serve appen, bruker [Express](https://github.com/expressjs/express)
-    - Setter på dekoratøren ved oppstart, sender komprimerte (gzip) ressurser til brukeren på forespørsler.
+-   `React`: Rendering og logikk
+-   `TypeScript`: Typesikring
+-   `Prettier`: Kodeformatering
+-   `Jest`: Akseptansetesting av XML-filer, oversettelser og mer.
+-   `XML-filer`: Innhold i et egendefinert XML-format.
+-   `Node`: Applikasjon for å serve appen, bruker [Express](https://github.com/expressjs/express)
+    -   Setter på dekoratøren ved oppstart, sender komprimerte (gzip) ressurser til brukeren på forespørsler.
 
 ## Xml-to-React-parseren
 
@@ -45,28 +45,31 @@ Inngangssidene består av teksttunge seksjoner som også inneholder mange spesia
 
 Alle XML-filene er omgitt av en `<innhold>`-tag. Denne kan inneholde `<avsnitt>`, `<liste>` eller `<lesmer>`. Alle tags kan ta inn `class`-attributtet (string) som kan brukes til egendefinert CSS-styling.
 
-- `<avsnitt>`
-    - Bruker NAV-frontend sin [Typografi-komponent](https://design.nav.no/components/typografi)
-    - Tar inn en valgfri attributt `type` som korresponderer med TypografiBase sin "type"-prop (default: 'normaltekst')
+-   `<avsnitt>`
 
-- `<liste>`
-    - Forventer en `<punkt>`-tag for hvert punkt i listen.
-    - Tar inn en valgfri attributt `tag: ul | ol` (default: ul)
+    -   Bruker NAV-frontend sin [Typografi-komponent](https://design.nav.no/components/typografi)
+    -   Tar inn en valgfri attributt `type` som korresponderer med TypografiBase sin "type"-prop (default: 'normaltekst')
 
-- `<lesmer>`
-    - Rendrer til et [Ekspanderbartpanel](https://design.nav.no/components/ekspanderbartpanel) eller et [Lesmerpanel](https://design.nav.no/components/lesmerpanel) hvis attributten `liten="true"`.
-    - Krever attributten `intro: string`
-    - Kan inneholde andre tags som `<avsnitt>`, `<liste>` osv.
+-   `<liste>`
 
-- `<lenke>`
-    - Rendrer til en a-tag med NAV-frontend-stil
-    - Krever attributten `url: string`
-    - Tar inn et valgfri attributt `ekstern: boolean`
+    -   Forventer en `<punkt>`-tag for hvert punkt i listen.
+    -   Tar inn en valgfri attributt `tag: ul | ol` (default: ul)
 
-- Andre tags
-    - `<b>`: Fet tekst
-    - `<i>`: Kursiv tekst
+-   `<lesmer>`
 
+    -   Rendrer til et [Ekspanderbartpanel](https://design.nav.no/components/ekspanderbartpanel) eller et [Lesmerpanel](https://design.nav.no/components/lesmerpanel) hvis attributten `liten="true"`.
+    -   Krever attributten `intro: string`
+    -   Kan inneholde andre tags som `<avsnitt>`, `<liste>` osv.
+
+-   `<lenke>`
+
+    -   Rendrer til en a-tag med NAV-frontend-stil
+    -   Krever attributten `url: string`
+    -   Tar inn et valgfri attributt `ekstern: boolean`
+
+-   Andre tags
+    -   `<b>`: Fet tekst
+    -   `<i>`: Kursiv tekst
 
 ### Eksempler:
 
@@ -77,7 +80,7 @@ Alle XML-filene er omgitt av en `<innhold>`-tag. Denne kan inneholde `<avsnitt>`
 </innhold>
 ```
 
-Avansert eksempel: Se  ([src/content/dokumentasjon/dokumentasjon.xml](https://github.com/navikt/foreldrepenger-inngang/blob/master/src/content/dokumentasjon/dokumentasjon.xml).
+Avansert eksempel: Se ([src/content/dokumentasjon/dokumentasjon.xml](https://github.com/navikt/foreldrepenger-inngang/blob/master/src/content/dokumentasjon/dokumentasjon.xml).
 
 ### Testing av XML-filer
 
@@ -93,4 +96,4 @@ Interne henvendelser kan sendes via Slack i kanalen #bris.
 
 ### Icon License
 
-This project uses [Streamline Icons](http://www.streamlineicons.com/). If you use nav-frontend-moduler in your project please adhere to the [Streamline Icons license agreement](http://www.streamlineicons.com/license.html).
+This project uses [Streamline Icons](http://www.streamlineicons.com/). If you use nav-frontend-moduler in your project please adhere to the [Streamline Icons license agreement](http://www.streamlineicons.com/license.html)
