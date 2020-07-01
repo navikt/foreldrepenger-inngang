@@ -2,7 +2,7 @@
 
 ## Komme i gang
 
-Installer og kjør applikasjonen lokalt:
+Installer og kjør applikasjonen lokalt:  
 
 ```
 npm install
