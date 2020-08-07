@@ -1,5 +1,4 @@
 {
-    "namespace" : "teamforeldrepenger",
     "ingresses": ["https://familie.nav.no","https://www.nav.no/familie","https://familie.prod-sbs.nais.io"],
     "appres": "appres.nav.no",
     "env": {

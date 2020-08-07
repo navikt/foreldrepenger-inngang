@@ -1,7 +1,6 @@
 {
     "gcp" : "true",
     "ingresses": ["https://familie.nav.no"],
-    "namespace": "teamforeldrepenger",
     "appres": "appres.nav.no",
     "env": {
         "APPRES_CMS_URL": "https://www.nav.no/dekoratoren",
