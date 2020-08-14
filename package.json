@@ -92,7 +92,7 @@
         "@condenast/xml-to-react": "^1.0.0",
         "@formatjs/intl-numberformat": "^4.2.9",
         "@formatjs/intl-pluralrules": "^2.2.9",
-        "@formatjs/intl-relativetimeformat": "^5.2.9",
+        "@formatjs/intl-relativetimeformat": "^7.1.1",
         "@navikt/fnrvalidator": "^1.1.2",
         "@navikt/nav-chatbot": "^1.2.2",
         "@sentry/browser": "^5.18.0",
