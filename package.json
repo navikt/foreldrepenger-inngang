@@ -94,7 +94,7 @@
         "@formatjs/intl-pluralrules": "^2.2.9",
         "@formatjs/intl-relativetimeformat": "^5.2.9",
         "@navikt/fnrvalidator": "^1.1.2",
-        "@sentry/browser": "^5.18.0",
+        "@sentry/browser": "^5.21.4",
         "autoprefixer": "^9.8.4",
         "babel-runtime": "^6.22.0",
         "classnames": "^2.2.6",
