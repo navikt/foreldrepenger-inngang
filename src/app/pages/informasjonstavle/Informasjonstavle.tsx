@@ -12,7 +12,7 @@ import PanelMedBilde from '../../components/panel-med-bilde/PanelMedBilde';
 import Tekstomrade from 'nav-frontend-tekstomrade';
 import './informasjonstavle.less';
 import { Page } from 'app/types/Page';
-import externalUrls from '../../utils/externalUrls';
+import externalUrls, { getSøknadsurl } from '../../utils/externalUrls';
 import KoronaInformasjon from './korona-informasjon/KoronaInformasjon';
 
 const cls = BEMHelper('informasjonstavle');
@@ -68,7 +68,7 @@ const Bildelenker = () => {
                 svgName="hvor-lenge"
                 title={getTranslation('informasjonstavle.hvor_lenge', intl)}
                 urlIsExternal={true}
-                url={externalUrls.foreldrepengeplanlegger}
+                url={getSøknadsurl('planleggeren')}
             >
                 <Tekstomrade>{getTranslation('informasjonstavle.hvor_lenge_ingress', intl)}</Tekstomrade>
             </PanelMedBilde>
