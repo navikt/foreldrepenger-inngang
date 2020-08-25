@@ -1,6 +1,6 @@
 {
     "dekoratoren": "dekoratoren.dev.nav.no",
-    ingresses": ["https://familie.dev.nav.no"],
+    "ingresses": ["https://familie.dev.nav.no"],
     "env": {
         "APPRES_CMS_URL": "https://dekoratoren.dev.nav.no",
         "SOK_FORELDREPENGER_URL": "https://foreldrepengesoknad.dev.nav.no",
