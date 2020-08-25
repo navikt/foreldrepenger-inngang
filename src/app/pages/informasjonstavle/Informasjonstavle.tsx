@@ -12,7 +12,7 @@ import PanelMedBilde from '../../components/panel-med-bilde/PanelMedBilde';
 import Tekstomrade from 'nav-frontend-tekstomrade';
 import './informasjonstavle.less';
 import { Page } from 'app/types/Page';
-import externalUrls, { getSøknadsurl } from '../../utils/externalUrls';
+import { getSøknadsurl } from '../../utils/externalUrls';
 import KoronaInformasjon from './korona-informasjon/KoronaInformasjon';
 
 const cls = BEMHelper('informasjonstavle');
