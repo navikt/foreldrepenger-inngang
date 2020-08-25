@@ -1,16 +1,15 @@
 {
-    "gcp" : "true",
-    "appres": "appres-q1.nav.no",
-    "ingresses": ["https://familie.dev-nav.no"],
+    "dekoratoren": "dekoratoren.dev.nav.no",
+    ingresses": ["https://familie.dev.nav.no"],
     "env": {
-        "APPRES_CMS_URL": "https://www-q1.nav.no/dekoratoren",
-        "SOK_FORELDREPENGER_URL": "https://foreldrepengesoknad.dev-nav.no",
+        "APPRES_CMS_URL": "https://dekoratoren.dev.nav.no",
+        "SOK_FORELDREPENGER_URL": "https://foreldrepengesoknad.dev.nav.no",
         "SOK_FORELDREPENGER_PAPIR_URL": "https://www-q1.nav.no/no/Person/Skjemaer-for-privatpersoner/Skjemaer/Familie/foreldrepenger-og-engangsstonad/Foreldrepenger+og+engangsst%C3%B8nad?method=mail&veiledertype=privatperson",
-        "SOK_ENGANGSSTONAD_URL": "https://engangsstonad.dev-nav.no",
+        "SOK_ENGANGSSTONAD_URL": "https://engangsstonad.de.-nav.no",
         "SOK_ENGANGSSTONAD_PAPIR_URL": "https://www-q1.nav.no/no/Person/Skjemaer-for-privatpersoner/Skjemaer/Familie/foreldrepenger-og-engangsstonad/Foreldrepenger+og+engangsst%C3%B8nad?method=mail&veiledertype=privatperson",
-        "DINE_FORELDREPENGER_URL": "https://foreldrepenger.dev-nav.no/",
-        "SOK_SVANGERSKAPSPENGER_URL": "https://svangerskapspengesoknad.dev-nav.no/",
-        "SOK_SVANGERSKAPSPENGER_PAPIR_URL": "https://familie.dev-nav.no/om-svangerskapspenger#slik-soker-du",
-        "PLANLEGGEREN_URL": "https://foreldrepengeplanlegger.dev-nav.no/foreldrepengeplanlegger"
+        "DINE_FORELDREPENGER_URL": "https://foreldrepenger.dev.nav.no/",
+        "SOK_SVANGERSKAPSPENGER_URL": "https://svangerskapspengesoknad.dev.nav.no/",
+        "SOK_SVANGERSKAPSPENGER_PAPIR_URL": "https://familie.dev.nav.no/om-svangerskapspenger#slik-soker-du",
+        "PLANLEGGEREN_URL": "https://foreldrepengeplanlegger.dev.nav.no/foreldrepengeplanlegger"
     }
 }

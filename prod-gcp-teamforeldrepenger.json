@@ -1,7 +1,6 @@
 {
-    "gcp" : "true",
     "ingresses": ["https://familie.nav.no"],
-    "appres": "appres.nav.no",
+    "dekoratoren": "www.nav.no",
     "env": {
         "APPRES_CMS_URL": "https://www.nav.no/dekoratoren",
         "SOK_FORELDREPENGER_URL": "https://foreldrepengesoknad.nav.no",

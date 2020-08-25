@@ -9,7 +9,7 @@ spec:
   accessPolicy:
     outbound:
       external:
-        - host: {{appres}}
+        - host: {{dekoratøren}}
   image: {{image}}
   port: 8080
   replicas:
