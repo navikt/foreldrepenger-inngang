@@ -3,7 +3,7 @@
     "ingresses": ["https://familie.dev.nav.no"],
     "env": {
         "APPRES_CMS_URL": "https://dekoratoren.dev.nav.no",
-        "SOK_FORELDREPENGER_URL": "https://foreldrepengesoknad.dev.nav.no",
+        "SOK_FORELDREPENGER_URL": "https://foreldrepengesoknad.dev.adeo.no",
         "SOK_FORELDREPENGER_PAPIR_URL": "https://www-q1.nav.no/no/Person/Skjemaer-for-privatpersoner/Skjemaer/Familie/foreldrepenger-og-engangsstonad/Foreldrepenger+og+engangsst%C3%B8nad?method=mail&veiledertype=privatperson",
         "SOK_ENGANGSSTONAD_URL": "https://engangsstonad.dev.nav.no",
         "SOK_ENGANGSSTONAD_PAPIR_URL": "https://www-q1.nav.no/no/Person/Skjemaer-for-privatpersoner/Skjemaer/Familie/foreldrepenger-og-engangsstonad/Foreldrepenger+og+engangsst%C3%B8nad?method=mail&veiledertype=privatperson",
