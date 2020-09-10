@@ -55,31 +55,29 @@ const OmForeldrepenger: React.StatelessComponent<Props> = ({ location }) => {
                 siteUrl="https://familie.nav.no/om-foreldrepenger"
             />
             <Sidebanner text={getTranslation('om_foreldrepenger.tittel', intl)} />
-            <div className={cls.element('button')}>
-                <MedInnholdsfortegnelse
-                    sections={sections}
-                    button={{
-                        label: getTranslation('innholdsfortegnelse.søk_nå', intl),
-                        url: Environment.SOK_FORELDREPENGER_URL,
-                    }}
-                >
-                    <article className={cls.element('article')}>
-                        <Breadcrumbs path={location.pathname} />
-                        <HvemKanFåForeldrepenger id={Section.HvemKanFå} />
-                        <HvorLenge id={Section.HvorLengeKanDuFå} />
-                        <Opptjening id={Section.Opptjening} />
-                        <Beregning id={Section.HvaKanDuFå} />
-                        <NårKanDuSøke id={Section.NårKanDuSøke} />
-                        <Ferie id={Section.HvisDuSkalPåFerie} />
-                        <JegVilJobbe id={Section.HvisDuVilJobbe} />
-                        <Sykdom id={Section.HvisEnAvDereBlirSyke} />
-                        <HjemmeSamtidig id={Section.HjemmeSamtidig} />
-                        <Adopsjon id={Section.Adoptere} />
-                        <EtterDuHarSøkt id={Section.EtterDuHarSøkt} />
-                        <OfteStilteSpørsmål id={Section.OfteStilteSpørsmål} />
-                    </article>
-                </MedInnholdsfortegnelse>
-            </div>
+            <MedInnholdsfortegnelse
+                sections={sections}
+                button={{
+                    label: getTranslation('innholdsfortegnelse.søk_nå', intl),
+                    url: Environment.SOK_FORELDREPENGER_URL,
+                }}
+            >
+                <article className={cls.element('article')}>
+                    <Breadcrumbs path={location.pathname} />
+                    <HvemKanFåForeldrepenger id={Section.HvemKanFå} />
+                    <HvorLenge id={Section.HvorLengeKanDuFå} />
+                    <Opptjening id={Section.Opptjening} />
+                    <Beregning id={Section.HvaKanDuFå} />
+                    <NårKanDuSøke id={Section.NårKanDuSøke} />
+                    <Ferie id={Section.HvisDuSkalPåFerie} />
+                    <JegVilJobbe id={Section.HvisDuVilJobbe} />
+                    <Sykdom id={Section.HvisEnAvDereBlirSyke} />
+                    <HjemmeSamtidig id={Section.HjemmeSamtidig} />
+                    <Adopsjon id={Section.Adoptere} />
+                    <EtterDuHarSøkt id={Section.EtterDuHarSøkt} />
+                    <OfteStilteSpørsmål id={Section.OfteStilteSpørsmål} />
+                </article>
+            </MedInnholdsfortegnelse>
         </div>
     );
 };

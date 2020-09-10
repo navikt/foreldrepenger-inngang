@@ -408,7 +408,7 @@ const KoronaInformasjon = () => {
                         </Lenke>
                     </Normaltekst>
                 </div>
-                <div className={bem.element('knappPadding')}>
+                <div className={bem.element('textPadding')}>
                     <Normaltekst>
                         <Lenkeknapp urlIsExternal={true} url="https://foreldrepenger.nav.no">
                             Søk foreldrepenger
