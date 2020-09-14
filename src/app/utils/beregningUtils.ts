@@ -20,6 +20,12 @@ export const getUtbetalingsgrense = () => GRUNNBELØPET * 6;
 export const getGrunnbeløpet = () => GRUNNBELØPET;
 export const getEnHalvG = () => GRUNNBELØPET / 2;
 
+export const getEnHalvGFormatert = () => {
+    return Math.ceil(GRUNNBELØPET / 2)
+        .toString()
+        .replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
+};
+
 export const tjenerOverUtbetalingsgrensen = (månedslønn: number): boolean => {
     return månedslønn * 12 > getUtbetalingsgrense();
 };
