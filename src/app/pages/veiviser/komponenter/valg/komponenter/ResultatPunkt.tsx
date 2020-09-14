@@ -4,6 +4,7 @@ import { FlexibleSvg } from '../../../../../utils/CustomSVG';
 import TypografiBase from 'nav-frontend-typografi';
 import BEMHelper from '../../../../../utils/bem';
 import getTranslation from 'app/utils/i18nUtils';
+import { getEnHalvGFormatert } from '../../../../../utils/beregningUtils';
 const resultat = BEMHelper('resultat');
 
 interface OwnProps {
@@ -26,7 +27,11 @@ const ResultatPunkt: React.StatelessComponent<Props> = ({ tegn, translationStrin
                 />
             </span>
             <span>
-                <TypografiBase type="normaltekst">{getTranslation(translationString, intl)}</TypografiBase>
+                <TypografiBase type="normaltekst">
+                    {getTranslation(translationString, intl, {
+                        halvG: getEnHalvGFormatert(),
+                    })}
+                </TypografiBase>
             </span>
         </div>
     );
