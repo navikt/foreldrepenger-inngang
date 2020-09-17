@@ -76,7 +76,7 @@ class Ukekalkulator extends React.Component<Props, State> {
         const AntallUkerWrapper = addAntallUkerAttributes(this.state.selectedNumberOfWeeks, this.onNumberOfWeeksSelect);
 
         return (
-            <div role="section" aria-label="Kalkulator for foreldrepengeperiode" className={cls.block}>
+            <div aria-label="Kalkulator for foreldrepengeperiode" className={cls.block}>
                 <div className={cls.element('antallUkerOgBarn')}>
                     <div />
                     <TypografiBase type="normaltekst">100 %</TypografiBase>
