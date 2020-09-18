@@ -169,7 +169,7 @@
         "react-router-dom": "^5.2.0",
         "react-transition-group": "^4.4.1",
         "snyk": "^1.398.1",
-        "webpack": "^4.44.1"
+        "webpack": "^4.44.2"
     },
     "snyk": true
 }
