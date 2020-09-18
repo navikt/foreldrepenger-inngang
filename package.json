@@ -86,7 +86,7 @@
         "wait-on": "^5.0.1",
         "walk": "^2.3.14",
         "webpack-dev-server": "^3.11.0",
-        "webpack-merge": "^4.2.2"
+        "webpack-merge": "^5.1.4"
     },
     "dependencies": {
         "@condenast/xml-to-react": "^1.0.0",
