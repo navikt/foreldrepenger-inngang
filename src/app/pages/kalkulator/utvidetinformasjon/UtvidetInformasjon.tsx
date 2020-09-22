@@ -52,7 +52,6 @@ class UtvidetInformasjon extends React.Component<Props, State> {
                 </div>
                 <div className="utvidetInformasjon__innhold" id={this.innholdId}>
                     <EkspanderbartInnhold erApen={this.state.apen}>{this.props.children}</EkspanderbartInnhold>
-
                     <div className="print-only">{this.props.children}</div>
                 </div>
             </div>

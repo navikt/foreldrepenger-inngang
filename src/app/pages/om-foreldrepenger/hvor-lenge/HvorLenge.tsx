@@ -3,7 +3,6 @@ import { Foreldresituasjon, Kvote } from 'app/utils/foreldresituasjon';
 import { getAntallUtbetalingsuker, Utbetalingsalternativ } from './ukekalkulator/utils';
 import { injectIntl, IntlShape } from 'react-intl';
 import { Innholdsfane } from '../../../components/innholdsfaner/fane/Fane';
-import { Normaltekst } from 'nav-frontend-typografi';
 import Aleneomsorg from './situasjoner/Aleneomsorg';
 import BareFarHarRett from './situasjoner/BareFarHarRett';
 import BareMorHarRett from './situasjoner/BareMorHarRett';
@@ -121,17 +120,15 @@ class HvorLenge extends React.Component<Props, State> {
                     <Innhold source={getSource('om-foreldrepenger/hvor-lenge/ingress', intl)} />
                     <Innholdsfaner tabs={getTabs(this.onKvoteSelected)} onSelect={this.onSituasjonSelected} />
                     <Ukekalkulator antallUtbetalingsuker={this.state.antallUtbetalingsuker} />
-                    <Normaltekst>
-                        <WithLink url={Page.Regelendringer}>
-                            {getTranslation('om_foreldrepenger.hvor_lenge.regelendringer_lenke', intl)}
-                        </WithLink>
-                        <UtvidetInformasjon
-                            lukkLabel={getTranslation('om_foreldrepenger.prematuruker.lesmer.lukk', intl)}
-                            apneLabel={getTranslation('om_foreldrepenger.prematuruker.lesmer', intl)}
-                        >
-                            <Innhold source={getSource('om-foreldrepenger/hvor-lenge/prematuruker', intl)} />
-                        </UtvidetInformasjon>
-                    </Normaltekst>
+                    <WithLink url={Page.Regelendringer}>
+                        {getTranslation('om_foreldrepenger.hvor_lenge.regelendringer_lenke', intl)}
+                    </WithLink>
+                    <UtvidetInformasjon
+                        lukkLabel={getTranslation('om_foreldrepenger.prematuruker.lesmer.lukk', intl)}
+                        apneLabel={getTranslation('om_foreldrepenger.prematuruker.lesmer', intl)}
+                    >
+                        <Innhold source={getSource('om-foreldrepenger/hvor-lenge/prematuruker', intl)} />
+                    </UtvidetInformasjon>
                 </div>
             </PanelMedIllustrasjon>
         );

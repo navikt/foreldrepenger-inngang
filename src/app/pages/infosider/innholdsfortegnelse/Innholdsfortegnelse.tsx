@@ -2,23 +2,32 @@ import React, { useRef } from 'react';
 import BEMHelper from 'app/utils/bem';
 import classnames from 'classnames';
 import Lenkeknapp from 'app/components/lenkeknapp/Lenkeknapp';
+//import Lenke from 'nav-frontend-lenker';
 import Seksjonslenker from '../seksjonslenker/Seksjonslenker';
 import SvgMask from 'app/components/svg-mask/SvgMask';
 import useComponentSize from 'app/hooks/useComponentSize';
 import './innholdsfortegnelse.less';
+
+import WithLink from 'app/components/with-link/WithLink';
+//import CustomSVGFromSprite from 'app/utils/CustomSVG';
+import TypografiBase from 'nav-frontend-typografi';
 
 const cls = BEMHelper('innholdsfortegnelse');
 const icon = require('../../../assets/icons/rakett.svg').default;
 
 interface Props {
     sections: string[];
+    link: {
+        label: string;
+        url: string;
+    };
     button: {
         label: string;
         url: string;
     };
 }
 
-const Innholdsfortegnelse: React.StatelessComponent<Props> = ({ sections, button }) => {
+const Innholdsfortegnelse: React.StatelessComponent<Props> = ({ sections, link, button }) => {
     const ref = useRef(null);
     const { height } = useComponentSize(ref);
 
@@ -34,6 +43,9 @@ const Innholdsfortegnelse: React.StatelessComponent<Props> = ({ sections, button
                 <SvgMask small={true} svg={icon} />
             </div>
             <Seksjonslenker sections={sections} />
+            <WithLink url={link.url} urlIsExternal={true} addExternalIcon={true} className={cls.element('link')}>
+                <TypografiBase type="normaltekst">{link.label}</TypografiBase>
+            </WithLink>
             <Lenkeknapp type="hoved" url={button.url} urlIsExternal={true}>
                 {button.label}
             </Lenkeknapp>

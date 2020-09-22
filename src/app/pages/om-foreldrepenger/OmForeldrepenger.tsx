@@ -22,6 +22,7 @@ import Sykdom from './sykdom/Sykdom';
 import Opptjening from './opptjening/Opptjening';
 import EtterDuHarSøkt from './etter-du-har-søkt/EtterDuHarSøkt';
 import '../infosider/infosider.less';
+//import Innholdsfortegnelse from '../infosider/innholdsfortegnelse/Innholdsfortegnelse';
 
 const cls = BEMHelper('infosider');
 
@@ -57,6 +58,10 @@ const OmForeldrepenger: React.StatelessComponent<Props> = ({ location }) => {
             <Sidebanner text={getTranslation('om_foreldrepenger.tittel', intl)} />
             <MedInnholdsfortegnelse
                 sections={sections}
+                link={{
+                    label: getTranslation('innholdsfortegnelse.regelverk', intl),
+                    url: 'https://lovdata.no/nav/folketrygdloven/kap14',
+                }}
                 button={{
                     label: getTranslation('innholdsfortegnelse.søk_nå', intl),
                     url: Environment.SOK_FORELDREPENGER_URL,

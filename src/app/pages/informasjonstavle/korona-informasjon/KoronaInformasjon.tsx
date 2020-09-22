@@ -16,7 +16,7 @@ const KoronaInformasjon = () => {
             <Ekspanderbartpanel
                 tittel={
                     <div className={bem.element('tittel')}>
-                        <Icon kind="info-sirkel-fyll" wrapperStyle={{ paddingRight: '1rem' }} />
+                        <Icon kind="info-sirkel-fyll" style={{ paddingRight: '1rem' }} />
                         <div className={bem.element('tittelTekst')}>
                             Ofte stilte spørsmål om foreldrepenger og koronaviruset
                         </div>
