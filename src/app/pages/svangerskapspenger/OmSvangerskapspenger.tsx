@@ -59,6 +59,10 @@ const OmSvangerskapspenger: React.StatelessComponent<Props> = ({ location }) => 
             <Sidebanner text={getTranslation('om_svangerskapspenger.tittel', intl)} />
             <MedInnholdsfortegnelse
                 sections={sections}
+                link={{
+                    label: getTranslation('innholdsfortegnelse.regelverk', intl),
+                    url: 'https://lovdata.no/nav/folketrygdloven/kap14',
+                }}
                 button={{
                     label: getTranslation('om_svangerskapspenger.sok_na', intl),
                     url: Environment.SOK_SVANGERSKAPSPENGER_URL,

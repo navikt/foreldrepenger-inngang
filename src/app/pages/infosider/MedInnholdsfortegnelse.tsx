@@ -10,6 +10,10 @@ const cls = BEMHelper('infosider');
 
 interface MedInnholdsfortegnelseProps {
     sections: string[];
+    link: {
+        label: string;
+        url: string;
+    };
     button: {
         label: string;
         url: string;
@@ -17,12 +21,16 @@ interface MedInnholdsfortegnelseProps {
     children: React.ReactNode;
 }
 
-const MedInnholdsfortegnelse = ({ sections, button, children }: MedInnholdsfortegnelseProps) => (
+const MedInnholdsfortegnelse = ({ sections, link, button, children }: MedInnholdsfortegnelseProps) => (
     <div className={classnames(cls.element('container'), cls.modifier('medInnholdsfortegnelse'))}>
         <MediaQuery minWidth={1072}>
             <aside className={cls.element('sidebar')}>
                 <Innholdsfortegnelse
                     sections={sections}
+                    link={{
+                        label: link.label,
+                        url: link.url,
+                    }}
                     button={{
                         label: button.label,
                         url: button.url,
