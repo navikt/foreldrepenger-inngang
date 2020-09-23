@@ -2,14 +2,11 @@ import React, { useRef } from 'react';
 import BEMHelper from 'app/utils/bem';
 import classnames from 'classnames';
 import Lenkeknapp from 'app/components/lenkeknapp/Lenkeknapp';
-//import Lenke from 'nav-frontend-lenker';
 import Seksjonslenker from '../seksjonslenker/Seksjonslenker';
 import SvgMask from 'app/components/svg-mask/SvgMask';
 import useComponentSize from 'app/hooks/useComponentSize';
 import './innholdsfortegnelse.less';
-
 import WithLink from 'app/components/with-link/WithLink';
-//import CustomSVGFromSprite from 'app/utils/CustomSVG';
 import TypografiBase from 'nav-frontend-typografi';
 
 const cls = BEMHelper('innholdsfortegnelse');
@@ -27,7 +24,7 @@ interface Props {
     };
 }
 
-const Innholdsfortegnelse: React.StatelessComponent<Props> = ({ sections, link, button }) => {
+const Innholdsfortegnelse: React.FunctionComponent<Props> = ({ sections, link, button }) => {
     const ref = useRef(null);
     const { height } = useComponentSize(ref);
 
