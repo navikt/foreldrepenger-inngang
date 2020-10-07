@@ -265,8 +265,8 @@ const KoronaInformasjon = () => {
                     <Element>Er du blitt permittert og lurer på hvor mye du kan få utbetalt i foreldrepenger?</Element>
                     <Normaltekst>
                         Hvis du er permittert og tidspunktet for beregning, som er dagen før du starter
-                        foreldrepengeperioden din, er i lønnspliktperioden (i løpet av de 20 første dagene av
-                        permitteringen), så vil foreldrepengene dine som hovedregel beregnes til inntekten{' '}
+                        foreldrepengeperioden din, er i lønnspliktperioden, så vil foreldrepengene dine som hovedregel
+                        beregnes til inntekten{' '}
                         <Lenke
                             rel="noopener noreferrer"
                             target="_blank"
