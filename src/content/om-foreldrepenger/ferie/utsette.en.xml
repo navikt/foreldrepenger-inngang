@@ -15,4 +15,6 @@
     <avsnitt className="top-spacing" type="undertittel">Holiday pay from the parental benefit</avsnitt>
     <avsnitt>If you are an employee, you are entitled to holiday pay from the parental benefit. If your employer is paying you salary during your period of leave, the holiday pay is paid to your employer. </avsnitt>
     <avsnitt>The holiday pay amounts to 10.2 per cent of what is paid out before tax in the first 12 or 15 weeks of the parental benefit period. Holiday pay from NAV is paid in May the year after the right was accumulated.</avsnitt>
+    <avsnitt>If only one of the parents has been paid parental benefit for the first 12 or 15 weeks, the other parent will not receive holiday pay.</avsnitt>
+    <avsnitt><lenke url="https://www.nav.no/no/nav-og-samfunn/kontakt-nav/utbetalinger/snarveier/ferie-og-feriepenger" ekstern="true">Here you can read more about holidays and holiday pay.</lenke></avsnitt>
 </innhold>
