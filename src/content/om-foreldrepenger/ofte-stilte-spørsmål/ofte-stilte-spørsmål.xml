@@ -1,5 +1,4 @@
 <innhold>
-
     <lesmer intro="Hvor finner jeg informasjon om saken min?">
     <avsnitt>Du kan logge deg på <lenke url="https://foreldrepenger.nav.no" ekstern="true">Dine foreldrepenger</lenke> og se status i saken din. Her kan du også ettersende vedlegg til søknaden din.</avsnitt>
     </lesmer>
@@ -37,7 +36,10 @@
         <avsnitt>Ulønnet permisjon avtaler du med arbeidsgiveren din. Du kan ikke utsette foreldrepengene dine når du har ulønnet permisjon. Den andre forelderen kan utsette foreldrepengene på grunn av heltidsarbeid, sykdom eller ferie i perioden du har ulønnet permisjon. Dere kan bruke vår <lenke url="https://foreldrepengeplanlegger.nav.no/foreldrepengeplanlegger" ekstern="true">Foreldrepengeplanlegger</lenke> for å planlegge hvor lenge dere kan være hjemme med barnet.</avsnitt>
         <avsnitt>Ulønnet permisjon kan påvirke retten din til andre NAV utbetalinger og opptjening av rett til foreldrepenger for nytt barn. <lenke url="https://www.nav.no/no/Person/Arbeid/Sykmeldt%2C+arbeidsavklaringspenger+og+yrkesskade/Sykepenger/Sykepenger+til+sarskilte+grupper#chapter-5" ekstern="true">Her kan du lese mer om dine rettigheter.</lenke></avsnitt>
     </lesmer>
-    <avsnitt type="undertittel" className="center top-spacing">Fant du ikke det du lette etter?</avsnitt>
-    <avsnitt className="center">Ta gjerne kontakt med oss på:</avsnitt>
-
+     <lesmer intro="Hvorfor har jeg ikke fått feriepenger?">
+        <avsnitt>Hvis bare én av foreldrene har fått utbetalt foreldrepenger de første 12 eller 15 ukene, vil ikke den andre forelderen få feriepenger. Det betyr at hvis mor har tatt de første 12 eller 15 ukene av foreldrepengene, vil ikke far få utbetalt feriepenger. </avsnitt>
+        <avsnitt><lenke url="https://www.nav.no/no/nav-og-samfunn/kontakt-nav/utbetalinger/snarveier/ferie-og-feriepenger" ekstern="true">Her kan du lese mer om ferie og feriepenger.</lenke></avsnitt>
+    </lesmer>
+        <avsnitt type="undertittel" className="center top-spacing">Fant du ikke det du lette etter?</avsnitt>
+        <avsnitt className="center">Ta gjerne kontakt med oss på:</avsnitt>
 </innhold>

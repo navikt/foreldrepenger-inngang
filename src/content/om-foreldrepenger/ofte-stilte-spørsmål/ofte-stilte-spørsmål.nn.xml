@@ -36,7 +36,10 @@
         <avsnitt>Ulønt permisjon avtaler du med arbeidsgivaren din. Du kan ikkje utsetje foreldrepengane dine når du har ulønt permisjon. Den andre forelderen kan utsetje foreldrepengane på grunn av heiltidsarbeid, sjukdom eller ferie i perioden du har ulønt permisjon. De kan bruke vår <lenke url="https://foreldrepengeplanlegger.nav.no/foreldrepengeplanlegger" ekstern="true">Foreldrepengeplanleggar</lenke> for å planleggje kor lenge de kan være heime med barnet.</avsnitt>
         <avsnitt>Ulønt permisjon kan påverke retten din til andre NAV-ytingar og opptening av rett til foreldrepengar for nytt barn. <lenke url="https://www.nav.no/no/Person/Arbeid/Sykmeldt%2C+arbeidsavklaringspenger+og+yrkesskade/Sykepenger/Sykepenger+til+sarskilte+grupper#chapter-5" ekstern="true">Her kan du lese meir om kva du kan ha rett til.</lenke></avsnitt>
     </lesmer>
-     </lesmer>
+     <lesmer intro="Kvifor har eg ikkje fått feriepengar?">
+        <avsnitt>Viss berre éin av foreldra har fått utbetalt foreldrepengar dei første 12 eller 15 vekene, vil ikkje den andre forelderen få feriepengar. Det betyr at viss mor har tatt dei første 12 eller 15 vekene av foreldrepengane, vil ikkje far få utbetalt feriepengar. </avsnitt>
+        <avsnitt><lenke url="https://www.nav.no/no/nav-og-samfunn/kontakt-nav/utbetalinger/snarveier/ferie-og-feriepenger" ekstern="true">Her kan du lesa meir om ferie og feriepengar.</lenke></avsnitt>
+    </lesmer>
     <avsnitt type="undertittel" className="center top-spacing">Fann du ikkje det du leita etter?</avsnitt>
     <avsnitt className="center">Ta gjerne kontakt med oss på:</avsnitt>
 </innhold>
