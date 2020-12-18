@@ -22,6 +22,7 @@ import Sykdom from './sykdom/Sykdom';
 import Opptjening from './opptjening/Opptjening';
 import EtterDuHarSøkt from './etter-du-har-søkt/EtterDuHarSøkt';
 import '../infosider/infosider.less';
+import MorHarUføretrygd from './uføretrygd/MorHarUføretrygd';
 //import Innholdsfortegnelse from '../infosider/innholdsfortegnelse/Innholdsfortegnelse';
 
 const cls = BEMHelper('infosider');
@@ -79,6 +80,7 @@ const OmForeldrepenger: React.StatelessComponent<Props> = ({ location }) => {
                     <Sykdom id={Section.HvisEnAvDereBlirSyke} />
                     <HjemmeSamtidig id={Section.HjemmeSamtidig} />
                     <Adopsjon id={Section.Adoptere} />
+                    <MorHarUføretrygd id={Section.MorHarUføretrygd} />
                     <EtterDuHarSøkt id={Section.EtterDuHarSøkt} />
                     <OfteStilteSpørsmål id={Section.OfteStilteSpørsmål} />
                 </article>

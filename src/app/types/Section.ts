@@ -8,6 +8,7 @@ export enum ForeldrepengerSection {
     HvisEnAvDereBlirSyke = 'hvis-en-av-dere-blir-syke',
     HjemmeSamtidig = 'hjemme-samtidig',
     Adoptere = 'adoptere',
+    MorHarUføretrygd = 'mor_har_uføretrygd',
     OfteStilteSpørsmål = 'ofte-stilte-sporsmal',
     Opptjening = 'opptjening',
     EtterDuHarSøkt = 'etter-du-har-søkt',

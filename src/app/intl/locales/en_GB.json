@@ -249,6 +249,7 @@
     "om_foreldrepenger.beregning.harYtelse": "Payment\nfrom NAV",
     "om_foreldrepenger.beregning.andreInntektskilder": "Compulsory military service",
     "om_foreldrepenger.beregning.frilanser.ikontittel": "Freelancer",
+    "om_foreldrepenger.mor_uføretrygd.tittel": "Mother has disability benefits",
     "om_foreldrepenger.opptjening.tittel": "How do we calculate that you have had income in six of the past ten months?",
     "om_foreldrepenger.opptjening.mor": "Mother",
     "om_foreldrepenger.opptjening.farEllerMedmor": "Father or co-mother",
