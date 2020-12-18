@@ -1,9 +1,10 @@
 <innhold>
     <avsnitt class="blokk-m">Dersom de vil vere heime med barnet samtidig eller byte på, har de fleire val.</avsnitt>
-    <lesmer intro="Éin er heime fulltid, den andre inntil 50 prosent">
-        <avsnitt>Dersom den eine forelderen tar ut 100 prosent av kvoten sin, kan de vere heime samtidig inntil 150 prosent frå veke 7 etter fødselen. Dei første 6 vekene er reserverte for mor av medisinske grunnar.</avsnitt>
+    <lesmer intro="Éin er heime inntil fulltid, den andre inntil 50 prosent">
+        <avsnitt>Dersom den eine forelderen tar ut inntil 100 prosent av kvoten sin og den andre inntil 50 prosent av fellesperioden, kan de vere heime samtidig inntil 150 prosent frå veke 7 etter fødselen.</avsnitt>
         <avsnitt><b>Eksempel:</b> Far tek ut 100 prosent fedrekvote i same perioden som mor jobbar 50 prosent og tek ut 50 prosent frå fellesperioden.</avsnitt>
-    <avsnitt>Hugs, de må senda inn kvar deira <lenke url="https://foreldrepengesoknad.nav.no" ekstern="true">søknad om foreldrepengar.</lenke></avsnitt>
+        <avsnitt><b>Eksempel 2:</b> Far tek ut 80 prosent fedrekvote og jobbar 20 prosent i same periode som mor jobbar 60 prosent og tar ut 40 prosent frå fellesperioden.</avsnitt>
+        <avsnitt>Hugs, de må senda inn kvar deira <lenke url="https://foreldrepengesoknad.nav.no" ekstern="true">søknad om foreldrepengar.</lenke></avsnitt>
     </lesmer>
     <lesmer intro="Dele på å vere heime">
         <avsnitt>De kan dele på å vere heime og i jobb frå veke 7 etter fødselen. Dei første 6 vekene er reserverte for mor av medisinske grunnar.</avsnitt>
