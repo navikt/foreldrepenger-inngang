@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { useIntl } from 'react-intl';
+import { FormattedMessage, useIntl } from 'react-intl';
 import BEMHelper from '../../utils/bem';
 import Breadcrumbs from '../../components/breadcrumbs/Breadcrumbs';
 import Environment from 'app/Environment';
@@ -14,6 +14,7 @@ import Sidebanner from '../../components/sidebanner/Sidebanner';
 import TilFarEllerMedmor from './TilFarEllerMedmor';
 
 import '../infosider/infosider.less';
+import { AlertStripeInfo } from 'nav-frontend-alertstriper';
 
 const infosiderCls = BEMHelper('infosider');
 
@@ -64,6 +65,30 @@ const OmEngangsstonad: React.StatelessComponent<Props> = ({ location }) => {
             >
                 <article className={infosiderCls.element('article')}>
                     <Breadcrumbs path={location.pathname} />
+                    <AlertStripeInfo className={infosiderCls.element('infobanner2021')}>
+                        <div style={{ marginBottom: '1rem' }}>
+                            <FormattedMessage
+                                id="om_engangsstønad.infobanner2021"
+                                values={{
+                                    strong: (msg: any) => <strong>{msg}</strong>,
+                                }}
+                            />
+                        </div>
+                        <div style={{ marginBottom: '1rem' }}>
+                            <FormattedMessage id="om_engangsstønad.infobanner2021.sum" />
+                        </div>
+                        <div style={{ marginBottom: '1rem' }}>
+                            <FormattedMessage
+                                id="om_engangsstønad.infobanner2021.virkning"
+                                values={{
+                                    strong: (msg: any) => <strong>{msg}</strong>,
+                                }}
+                            />
+                        </div>
+                        <div>
+                            <FormattedMessage id="om_engangsstønad.infobanner2021.ekstra" />
+                        </div>
+                    </AlertStripeInfo>
                     <HvemKanFåEngangsstønad id={sections[0]} />
                     <HvaKanDuFå id={sections[1]} />
                     <NårKanDuSøke id={sections[2]} />
