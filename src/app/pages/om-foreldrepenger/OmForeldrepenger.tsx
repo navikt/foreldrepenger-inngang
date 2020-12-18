@@ -42,6 +42,7 @@ const sections: Section[] = [
     Section.HvisEnAvDereBlirSyke,
     Section.HjemmeSamtidig,
     Section.Adoptere,
+    Section.MorHarUføretrygd,
     Section.EtterDuHarSøkt,
     Section.OfteStilteSpørsmål,
 ];
