@@ -2,7 +2,7 @@ import moment from 'moment';
 
 const AVVIKSGRENSE = 0.25;
 export const GRUNNBELØPET = 101351;
-export const ENGANGSSUM_PER_BARN = 84720;
+export const ENGANGSSUM_PER_BARN = 90300;
 export const MÅNEDSLØNN_EKSEMPEL = 25000;
 export const ÅRSLØNN_EKSEMPEL = 250000;
 export const MAKS_ANTALL_SIFFER = 7;
