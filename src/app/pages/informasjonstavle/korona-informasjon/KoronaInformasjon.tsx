@@ -31,10 +31,10 @@ const KoronaInformasjon = () => {
                     <Normaltekst>
                         Du kan velge om du ønsker å utsette foreldrepengene, eller den andre forelderen kan søke om å
                         overta foreldrepengene fordi du er helt avhengig av hjelp for å ta deg av barnet, eller du ikke
-                        er sammen med barnet grunnet karantene. Det er nå ikke et krav til at du må legge ved
-                        dokumentasjon for 4 uker du utsetter, men du kan skrive en egenerklæring. I søknaden forteller
-                        du oss hvordan skaden eller sykdommen gjør deg eller den andre forelderen helt avhengig av hjelp
-                        til å ta seg av barnet. Les mer om hvordan du søker{' '}
+                        er sammen med barnet grunnet karantene. Legg ved en legeerklæring. Legen må beskrive konkret
+                        hvordan sykdommen eller skaden gjør deg helt avhengig av hjelp til å ta deg av barnet, hva du
+                        ikke kan gjøre på grunn av sykdommen eller skaden, og hvor lenge det vil vare. Det er ikke nok
+                        med vanlig sykmelding. Les mer om hvordan du søker{' '}
                         <Lenke
                             rel="noopener noreferrer"
                             target="_blank"
@@ -52,10 +52,10 @@ const KoronaInformasjon = () => {
                     <Normaltekst>
                         Du kan velge om du ønsker å utsette foreldrepengene, eller den andre forelderen kan søke om å
                         overta foreldrepengene fordi du er helt avhengig av hjelp for å ta deg av barnet, eller du ikke
-                        er sammen med barnet grunnet karantene. Det er nå ikke et krav til at du må legge ved
-                        dokumentasjon for 4 uker du utsetter, men du kan skrive en egenerklæring. I søknaden forteller
-                        du oss hvordan skaden eller sykdommen gjør deg eller den andre forelderen helt avhengig av hjelp
-                        til å ta seg av barnet. Les mer om hvordan du søker{' '}
+                        er sammen med barnet grunnet karantene. Legg ved en legeerklæring. Legen må beskrive konkret
+                        hvordan sykdommen eller skaden gjør deg helt avhengig av hjelp til å ta deg av barnet, hva du
+                        ikke kan gjøre på grunn av sykdommen eller skaden, og hvor lenge det vil vare. Det er ikke nok
+                        med vanlig sykmelding. Les mer om hvordan du søker{' '}
                         <Lenke
                             rel="noopener noreferrer"
                             target="_blank"
@@ -71,9 +71,9 @@ const KoronaInformasjon = () => {
                     </Element>
                     <Normaltekst>
                         Da kan du søke om å utsette foreldrepengene, eller at den andre forelderen overtar
-                        foreldrepengene. Det er nå ikke et krav til at du må legge ved dokumentasjon for 4 uker du
-                        utsetter, men du kan skrive en egenerklæring. I søknaden forteller du oss hvordan skaden eller
-                        sykdommen gjør deg eller den andre forelderen helt avhengig av hjelp til å ta seg av barnet.{' '}
+                        foreldrepengene. Legg ved en legeerklæring. Legen må beskrive konkret hvordan sykdommen eller
+                        skaden gjør deg helt avhengig av hjelp til å ta deg av barnet, hva du ikke kan gjøre på grunn av
+                        sykdommen eller skaden, og hvor lenge det vil vare. Det er ikke nok med vanlig sykmelding.{' '}
                         <Lenke
                             rel="noopener noreferrer"
                             target="_blank"
@@ -90,10 +90,10 @@ const KoronaInformasjon = () => {
                     </Element>
                     <Normaltekst>
                         Du beholder utsettelsen din. Blir du syk i en lengre periode enn du har fått innvilget
-                        utsettelse for, kan du søke om utsettelse på grunn av sykdom. Det er nå ikke et krav til at du
-                        må legge ved dokumentasjon for 4 uker du utsetter, men du kan skrive en egenerklæring. I
-                        søknaden forteller du oss hvordan skaden eller sykdommen gjør deg helt avhengig av hjelp til å
-                        ta seg av barnet. Les mer om hvordan du søker{' '}
+                        utsettelse for, kan du søke om utsettelse på grunn av sykdom. Legg ved en legeerklæring. Legen
+                        må beskrive konkret hvordan sykdommen eller skaden gjør deg helt avhengig av hjelp til å ta deg
+                        av barnet, hva du ikke kan gjøre på grunn av sykdommen eller skaden, og hvor lenge det vil vare.
+                        Det er ikke nok med vanlig sykmelding. Les mer om hvordan du søker{' '}
                         <Lenke
                             rel="noopener noreferrer"
                             target="_blank"
@@ -112,10 +112,10 @@ const KoronaInformasjon = () => {
                         Hvis du er syk eller satt i karantene i en periode der du har avtalt at du skal kombinere jobb
                         og foreldrepenger, kan du beholde retten til dette. Hvis du er helt avhengig av hjelp til å ta
                         deg av barnet kan du også søke om utsettelse eller den andre forelderen kan søke om å overta din
-                        periode. Det er nå ikke et krav til at du må legge ved dokumentasjon for 4 uker du utsetter, men
-                        du kan skrive en egenerklæring. I søknaden forteller du oss hvordan skaden eller sykdommen gjør
-                        deg eller den andre forelderen helt avhengig av hjelp til å ta seg av barnet. Les mer om hvordan
-                        du søker{' '}
+                        periode. Legg ved en legeerklæring. Legen må beskrive konkret hvordan sykdommen eller skaden
+                        gjør deg helt avhengig av hjelp til å ta deg av barnet, hva du ikke kan gjøre på grunn av
+                        sykdommen eller skaden, og hvor lenge det vil vare. Det er ikke nok med vanlig sykmelding. Les
+                        mer om hvordan du søker{' '}
                         <Lenke
                             rel="noopener noreferrer"
                             target="_blank"
@@ -132,11 +132,10 @@ const KoronaInformasjon = () => {
                     </Element>
                     <Normaltekst>
                         Hvis du er syk eller satt i karantene i en periode der du har avtalt at du skal kombinere jobb
-                        og foreldrepenger, kan du beholde retten til dette. Det er nå ikke et krav til at du må legge
-                        ved dokumentasjon for 4 uker du utsetter, men du kan skrive en egenerklæring. Hvis du er helt
-                        avhengig av hjelp til å ta deg av barnet kan du også søke om utsettelse eller den andre
-                        forelderen kan søke om å overta din periode. I søknaden forteller du oss hvordan skaden eller
-                        sykdommen gjør deg helt avhengig av hjelp til å ta seg av barnet. Les mer om hvordan du søker{' '}
+                        og foreldrepenger, kan du beholde retten til dette. Legg ved en legeerklæring. Legen må beskrive
+                        konkret hvordan sykdommen eller skaden gjør deg helt avhengig av hjelp til å ta deg av barnet,
+                        hva du ikke kan gjøre på grunn av sykdommen eller skaden, og hvor lenge det vil vare. Det er
+                        ikke nok med vanlig sykmelding. Les mer om hvordan du søker{' '}
                         <Lenke
                             rel="noopener noreferrer"
                             target="_blank"
@@ -192,9 +191,10 @@ const KoronaInformasjon = () => {
                     <Element>Er du syk og skal søke om utsettelse av foreldrepengene dine?</Element>
                     <Normaltekst>
                         Når du er syk må legen din dokumentere at du er helt avhengig av hjelp til å ta deg av barnet.
-                        Det er nå ikke et krav til at du må legge ved dokumentasjon for 4 uker du utsetter, du kan
-                        skrive en egenerklæring. I søknaden forteller du oss hvordan skaden eller sykdommen gjør deg
-                        helt avhengig av hjelp til å ta deg av barnet. Les mer om hvordan du søker{' '}
+                        Legg ved en legeerklæring. Legen må beskrive konkret hvordan sykdommen eller skaden gjør deg
+                        helt avhengig av hjelp til å ta deg av barnet, hva du ikke kan gjøre på grunn av sykdommen eller
+                        skaden, og hvor lenge det vil vare. Det er ikke nok med vanlig sykmeldingt. Les mer om hvordan
+                        du søker{' '}
                         <Lenke
                             rel="noopener noreferrer"
                             target="_blank"
@@ -209,9 +209,8 @@ const KoronaInformasjon = () => {
                         Er du innlagt i helseinstitusjon og skal søke om utsettelse av foreldrepengene dine?
                     </Element>
                     <Normaltekst>
-                        Når du er innlagt i helseinstitusjon må du dokumentere innleggelsen. Det er nå ikke et krav til
-                        at du må legge ved dokumentasjon for 4 uker du utsetter, men du kan skrive en egenerklæring. I
-                        søknaden forteller du oss i hvilken helseinstitusjon du er innlagt. Les mer om hvordan du søker{' '}
+                        Når du er innlagt i helseinstitusjon må du dokumentere innleggelsen. Legg ved dokumentasjon på
+                        innleggelsen fra helseinstitusjonen. Les mer om hvordan du søker{' '}
                         <Lenke
                             rel="noopener noreferrer"
                             target="_blank"
@@ -227,10 +226,10 @@ const KoronaInformasjon = () => {
                     </Element>
                     <Normaltekst>
                         Når den andre forelderen er for syk til å ta seg av barnet deres må legen dokumentere at den
-                        andre forelderen er helt avhengig av hjelp til å ta seg av barnet. Det er nå ikke et krav til at
-                        du må legge ved dokumentasjon for 4 uker, du kan skrive en egenerklæring. I søknaden forteller
-                        du oss hvordan skaden eller sykdommen gjør at den andre forelderen er helt avhengig av hjelp til
-                        å ta seg av barnet. Les mer om hvordan du søker{' '}
+                        andre forelderen er helt avhengig av hjelp til å ta seg av barnet. Legg ved en legeerklæring.
+                        Legen må beskrive konkret hvordan sykdommen eller skaden gjør deg helt avhengig av hjelp til å
+                        ta deg av barnet, hva du ikke kan gjøre på grunn av sykdommen eller skaden, og hvor lenge det
+                        vil vare. Det er ikke nok med vanlig sykmelding. Les mer om hvordan du søker{' '}
                         <Lenke
                             rel="noopener noreferrer"
                             target="_blank"
@@ -245,10 +244,8 @@ const KoronaInformasjon = () => {
                         Er den andre forelderen innlagt i helseinstitusjon og du skal overta foreldrepengene?
                     </Element>
                     <Normaltekst>
-                        Når den andre forelderen er innlagt i helseinstitusjon må du dokumentere innleggelsen. Det er nå
-                        ikke et krav til at du må legge ved dokumentasjon for 4 uker, men du kan skrive en
-                        egenerklæring. I søknaden forteller du oss i hvilken helseinstitusjon den andre forelderen er
-                        innlagt. Les mer om hvordan du søker{' '}
+                        Når den andre forelderen er innlagt i helseinstitusjon må du dokumentere innleggelsen. Legg ved
+                        dokumentasjon fra helseinstitusjonen på innleggelsen. Les mer om hvordan du søker{' '}
                         <Lenke
                             rel="noopener noreferrer"
                             target="_blank"
