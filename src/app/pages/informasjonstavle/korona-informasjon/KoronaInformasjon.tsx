@@ -193,8 +193,8 @@ const KoronaInformasjon = () => {
                         Når du er syk må legen din dokumentere at du er helt avhengig av hjelp til å ta deg av barnet.
                         Legg ved en legeerklæring. Legen må beskrive konkret hvordan sykdommen eller skaden gjør deg
                         helt avhengig av hjelp til å ta deg av barnet, hva du ikke kan gjøre på grunn av sykdommen eller
-                        skaden, og hvor lenge det vil vare. Det er ikke nok med vanlig sykmeldingt. Les mer om hvordan
-                        du søker{' '}
+                        skaden, og hvor lenge det vil vare. Det er ikke nok med vanlig sykmelding. Les mer om hvordan du
+                        søker{' '}
                         <Lenke
                             rel="noopener noreferrer"
                             target="_blank"
@@ -293,50 +293,6 @@ const KoronaInformasjon = () => {
                         Du kan også beholde en utsettelse som er innvilget før permitteringen. Du kan beholde de
                         graderte foreldrepengene selv om du blir permittert. Vær oppmerksom på at dagpenger utbetales
                         ikke sammen med foreldrepenger hvis du mottar mer enn 60 prosent foreldrepenger.
-                    </Normaltekst>
-                </div>
-                <div className={bem.element('tittelPadding')}>
-                    <Undertittel>Er du blitt beordret ut i jobb eller i heimevernet?</Undertittel>
-                </div>
-                <div className={bem.element('textPadding')}>
-                    <Element>Er du blitt beordret ut i en samfunnskritisk jobb, og skal kun jobbe delvis?</Element>
-                    <Normaltekst>
-                        Du kan da velge om du ønsker å søke om å kombinere foreldrepenger med arbeid eller om du ønsker
-                        å søke om å utsette hele foreldrepengeperiode. Det bestemmer du selv. Du finner en oversikt over
-                        hvilke arbeidsforhold som er{' '}
-                        <Lenke
-                            rel="noopener noreferrer"
-                            target="_blank"
-                            href="https://www.regjeringen.no/no/aktuelt/liste-over-kritiske-samfunnsfunksjoner-fastsatt/id2693800/"
-                        >
-                            samfunnskritiske her.
-                        </Lenke>
-                    </Normaltekst>
-                </div>
-                <div className={bem.element('textPadding')}>
-                    <Element>
-                        Er du beordret ut i jobb eller i heimevernet, og ønsker at den andre forelderen tar ut din
-                        kvote?
-                    </Element>
-                    <Normaltekst>
-                        Nei, den andre forelderen kan ikke overta din kvote om du må ut i jobb. Du kan søke om å utsette
-                        perioden din, og ta den ut på et senere tidspunkt.
-                    </Normaltekst>
-                </div>
-                <div className={bem.element('textPadding')}>
-                    <Element>Er du blitt beordret ut i jobb, og rekker ikke søke om utsettelse?</Element>
-                    <Normaltekst>
-                        Du må søke om utsettelse så fort som mulig om du skal jobbe. Hvis du jobber i en samfunnskritisk
-                        jobb så kan vi i slike tilfeller innvilge utsettelse tilbake i tid. Når du søker om utsettelse
-                        tilbake i tid så, får du mulighet til å skrive en begrunnelse til oss. Da forklarer du kort
-                        situasjonen til oss. Du finner en oversikt over hvilke arbeidsforhold som er{' '}
-                        <Lenke
-                            rel="noopener noreferrer"
-                            target="_blank"
-                            href="https://www.regjeringen.no/no/aktuelt/liste-over-kritiske-samfunnsfunksjoner-fastsatt/id2693800/"
-                        >
-                            samfunnskritiske her.
-                        </Lenke>
                     </Normaltekst>
                 </div>
                 <div className={bem.element('tittelPadding')}>
