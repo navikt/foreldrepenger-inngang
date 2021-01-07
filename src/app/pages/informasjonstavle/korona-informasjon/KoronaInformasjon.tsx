@@ -291,8 +291,8 @@ const KoronaInformasjon = () => {
                     <Normaltekst>
                         Du kan beholde periode med fulle foreldrepenger som er innvilget og påbegynt før permitteringen.
                         Du kan også beholde en utsettelse som er innvilget før permitteringen. Du kan beholde de
-                        graderte foreldrepengene selv om du blir permittert. Vær oppmerksom på at dagpenger utbetales
-                        ikke sammen med foreldrepenger hvis du mottar mer enn 60 prosent foreldrepenger.
+                        graderte foreldrepengene selv om du blir permittert. Vær oppmerksom på at du ikke får innvilget
+                        dagpenger om du mottar mer enn 50 prosent foreldrepenger.
                     </Normaltekst>
                 </div>
                 <div className={bem.element('tittelPadding')}>
