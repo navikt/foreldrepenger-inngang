@@ -10,7 +10,14 @@ spec:
   accessPolicy:
     outbound:
       external:
+        - host:  {{foreldrepenger}}
+        - host:  {{familie}}
+        - host:  {{fp}}
+        - host:  {{es}}
+        - host:  {{svp}}
+        - host:  {{plan}}
         - host:  {{dekoratoren}}
+        - host:  {{loginservice}}
         - host:  {{nav}}
 {{/if}}
   image: {{image}}
