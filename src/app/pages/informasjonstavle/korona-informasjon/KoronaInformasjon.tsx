@@ -110,12 +110,10 @@ const KoronaInformasjon = () => {
                     </Element>
                     <Normaltekst>
                         Hvis du er syk eller satt i karantene i en periode der du har avtalt at du skal kombinere jobb
-                        og foreldrepenger, kan du beholde retten til dette. Hvis du er helt avhengig av hjelp til å ta
-                        deg av barnet kan du også søke om utsettelse eller den andre forelderen kan søke om å overta din
-                        periode. Legg ved en legeerklæring. Legen må beskrive konkret hvordan sykdommen eller skaden
-                        gjør deg helt avhengig av hjelp til å ta deg av barnet, hva du ikke kan gjøre på grunn av
-                        sykdommen eller skaden, og hvor lenge det vil vare. Det er ikke nok med vanlig sykmelding. Les
-                        mer om hvordan du søker{' '}
+                        og foreldrepenger, kan du beholde retten til dette. Legg ved en legeerklæring. Legen må beskrive
+                        konkret hvordan sykdommen eller skaden gjør deg helt avhengig av hjelp til å ta deg av barnet,
+                        hva du ikke kan gjøre på grunn av sykdommen eller skaden, og hvor lenge det vil vare. Det er
+                        ikke nok med vanlig sykmelding. Les mer om hvordan du søker{' '}
                         <Lenke
                             rel="noopener noreferrer"
                             target="_blank"
