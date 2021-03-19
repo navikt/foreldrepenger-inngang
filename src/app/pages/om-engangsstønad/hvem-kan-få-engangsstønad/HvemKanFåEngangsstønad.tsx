@@ -13,6 +13,7 @@ const engangsstønadSvg = require('../../../assets/engangsstønad.svg').default;
 const checkmarkIcon = require('../../../assets/icons/checkmark.svg').default;
 
 const hvaErEngangsstønadContent = 'om-engangsstønad/hvem-kan-få/hvem-kan-få';
+const hvaErEngangsstønadContentDel2 = 'om-engangsstønad/hvem-kan-få/hvem-kan-få-del2';
 const engangssumContent = 'om-engangsstønad/hvem-kan-få/krav1';
 const utbetalingShortContent = 'om-engangsstønad/hvem-kan-få/krav2';
 
@@ -38,6 +39,7 @@ const HvemKanFåEngangsstønad: React.StatelessComponent<Props> = ({ id }) => {
                     <Innhold source={getSource(utbetalingShortContent, intl)} />
                 </div>
             </div>
+            <Innhold source={getSource(hvaErEngangsstønadContentDel2, intl)} />
             <Innhold source={getSource('om-engangsstønad/hvem-kan-få/veiviser', intl)} />
         </PanelMedIllustrasjon>
     );
