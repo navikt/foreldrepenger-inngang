@@ -11,7 +11,7 @@ npm run develop
 
 Dette kjører applikasjonen uten NAV-dekoratøren. For å aktivere denne må du kjøre `npm run start`, men da vil ikke autorefresh fungere ved kodeendringer.
 
-For å bygge appen i `production` kjører du:
+For å bygge  i `production` kjører du:
 
 ```
 npm run build
