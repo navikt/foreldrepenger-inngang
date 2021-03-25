@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { FormattedMessage, useIntl } from 'react-intl';
+import { useIntl } from 'react-intl';
 import BEMHelper from '../../utils/bem';
 import Breadcrumbs from '../../components/breadcrumbs/Breadcrumbs';
 import Environment from 'app/Environment';
@@ -14,7 +14,6 @@ import Sidebanner from '../../components/sidebanner/Sidebanner';
 import TilFarEllerMedmor from './TilFarEllerMedmor';
 
 import '../infosider/infosider.less';
-import { AlertStripeInfo } from 'nav-frontend-alertstriper';
 
 const infosiderCls = BEMHelper('infosider');
 
