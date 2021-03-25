@@ -5,8 +5,9 @@
     </liste>
     <avsnitt type="element">Dette må du legge ved søknaden</avsnitt>
     <liste>
+      <punkt>Du er blitt <b>syk</b>: Legg ved en legeerklæring. Legen må beskrive konkret på hvilken måte sykdommen eller skaden gjør deg helt avhengig av hjelp til å ta deg av barnet. Det vil si hvilke deler av stellet av barnet du ikke kan gjøre på grunn av sykdommen eller skaden. Det må også stå hvor lenge sykdommen eller skaden vil vare. Det er ikke nok med vanlig sykmelding.</punkt>
+       <punkt>Du er <b>innlagt</b>: Legg ved dokumentasjon fra helseinstitusjonen på periode for innleggelse.</punkt>
         <punkt>Du er blitt <b>syk</b>: Legg ved en legeerklæring. Den må beskrive hvordan sykdommen gjør deg helt avhengig av hjelp til å ta deg av barnet, og hvor lenge sykdommen vil vare. Det er ikke nok med vanlig sykmelding.</punkt>
-        <punkt>Du er <b>innlagt</b>: Legg ved dokumentasjon av perioden på innleggelsen fra helseinstitusjonen.</punkt>
     </liste>
     <avsnitt><b>Søkefrist</b>: Du må søke innen 3 måneder.</avsnitt>
 </innhold>

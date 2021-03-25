@@ -5,8 +5,8 @@
     </liste>
     <avsnitt type="element">You must attach this to your application</avsnitt>
     <liste>
-        <punkt>You have fallen <b>ill</b>: Attach a medical certificate from a doctor. It must describe how the illness entails that you are fully dependent on help to be able to take care of the child and how long the illness is expected to last.</punkt>
-        <punkt>You are <b>in a health institution</b>: Attach documentation of admission from the health institution.</punkt>
+        <punkt>You've fallen <b>ill</b>: Attach a medical certificate. The doctor must describe specifically how the disease or injury makes you fully dependent on help to be able to take care of the child. That is, what parts of the care of the child you can not do because of the disease or injury. It must also say how long the disease or injury will last. Regular sick leave is not sufficient.</punkt>
+        <punkt>You are <b>in a health institution</b>: Attach documentation from the health institution for the period of hospitalization.</punkt>
     </liste>
     <avsnitt><b>Application deadline</b>: You must apply within 3 months.</avsnitt>
 </innhold>
