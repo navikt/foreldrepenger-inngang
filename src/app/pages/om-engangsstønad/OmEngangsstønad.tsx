@@ -65,30 +65,6 @@ const OmEngangsstonad: React.StatelessComponent<Props> = ({ location }) => {
             >
                 <article className={infosiderCls.element('article')}>
                     <Breadcrumbs path={location.pathname} />
-                    <AlertStripeInfo className={infosiderCls.element('infobanner2021')}>
-                        <div style={{ marginBottom: '1rem' }}>
-                            <FormattedMessage
-                                id="om_engangsstønad.infobanner2021"
-                                values={{
-                                    strong: (msg: any) => <strong>{msg}</strong>,
-                                }}
-                            />
-                        </div>
-                        <div style={{ marginBottom: '1rem' }}>
-                            <FormattedMessage id="om_engangsstønad.infobanner2021.sum" />
-                        </div>
-                        <div style={{ marginBottom: '1rem' }}>
-                            <FormattedMessage
-                                id="om_engangsstønad.infobanner2021.virkning"
-                                values={{
-                                    strong: (msg: any) => <strong>{msg}</strong>,
-                                }}
-                            />
-                        </div>
-                        <div>
-                            <FormattedMessage id="om_engangsstønad.infobanner2021.ekstra" />
-                        </div>
-                    </AlertStripeInfo>
                     <HvemKanFåEngangsstønad id={sections[0]} />
                     <HvaKanDuFå id={sections[1]} />
                     <NårKanDuSøke id={sections[2]} />
