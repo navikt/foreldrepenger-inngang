@@ -14,7 +14,7 @@
         "start-express": "node ./server.js",
         "start": "node ./src/build/scripts/start-dev.js",
         "start-no-decorator": "node ./src/build/scripts/start-dev-nodecorator.js",
-        "develop": "npm run start-no-decorator",
+        "dev": "npm run start-no-decorator",
         "precommit": "pretty-quick --staged",
         "test": "jest --verbose --config ./jest/jest.config.js",
         "test-watch": "jest --watch --verbose --config ./jest/jest.config.js",

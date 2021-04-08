@@ -1,5 +1,5 @@
 {
-    "ingresses": ["https://familie.nav.no","https://www.nav.no/familie","https://familie.prod-sbs.nais.io"],
+    "ingresses": ["https://familie.nav.no", "https://familie.prod-sbs.nais.io"],
     "dekoratoren": "www.nav.no",
     "env": {
         "APPRES_CMS_URL": "https://www.nav.no/dekoratoren",
