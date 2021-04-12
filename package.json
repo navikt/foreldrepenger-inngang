@@ -92,7 +92,7 @@
         "@condenast/xml-to-react": "^1.0.0",
         "@formatjs/intl-numberformat": "^4.2.9",
         "@formatjs/intl-pluralrules": "^2.2.9",
-        "@formatjs/intl-relativetimeformat": "^5.2.9",
+        "@formatjs/intl-relativetimeformat": "^8.1.5",
         "@navikt/fnrvalidator": "^1.1.3",
         "@sentry/browser": "^5.23.0",
         "autoprefixer": "^9.8.4",
