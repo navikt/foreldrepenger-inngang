@@ -115,7 +115,15 @@ const NyttLovverk = () => {
                             </Lenke>{' '}
                             med nytt regelverk.
                         </div>{' '}
-                        Ta gjerne kontakt med oss på NAV Foreldrepenger Facebook hvis du har spørsmål.
+                        Ta gjerne kontakt med oss på{' '}
+                        <Lenke
+                            rel="noopener noreferrer"
+                            target="_blank"
+                            href="https://www.facebook.com/navforeldrepenger/"
+                        >
+                            NAV Foreldrepenger Facebook
+                        </Lenke>{' '}
+                        hvis du har spørsmål.
                     </Normaltekst>
                 </div>
             </Ekspanderbartpanel>
