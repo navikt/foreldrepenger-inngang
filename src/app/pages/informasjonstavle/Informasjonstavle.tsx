@@ -14,6 +14,7 @@ import './informasjonstavle.less';
 import { Page } from 'app/types/Page';
 import { getSøknadsurl } from '../../utils/externalUrls';
 import KoronaInformasjon from './korona-informasjon/KoronaInformasjon';
+import NyttLovverk from './nytt-lovverk/NyttLovverk';
 
 const cls = BEMHelper('informasjonstavle');
 const velgSkjemaIcon = require('../../assets/icons/brev.svg').default;
@@ -26,6 +27,7 @@ const Informasjonstavle: React.StatelessComponent = () => {
             <Header />
             <div className={cls.element('body')}>
                 <div role="main" className={cls.element('content')}>
+                    <NyttLovverk />
                     <KoronaInformasjon />
                     <Bildelenker />
                     <LangtPanelMedBilde
