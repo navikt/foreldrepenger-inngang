@@ -9,7 +9,7 @@ import './nyttLovverk.less';
 
 const bem = BEMHelper('nyttLovverk');
 
-const KoronaInformasjon = () => {
+const NyttLovverk = () => {
     return (
         <div className={bem.block}>
             <Ekspanderbartpanel
@@ -123,4 +123,4 @@ const KoronaInformasjon = () => {
     );
 };
 
-export default KoronaInformasjon;
+export default NyttLovverk;
