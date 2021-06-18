@@ -24,15 +24,15 @@ const NyttLovverk = () => {
                     <Element>Hvem gjelder lovendringen for?</Element>
                     <Normaltekst>
                         <div className={bem.element('bottomPadding')}>
-                            Lovendringen gjelder for deg som får barn etter 1. oktober 2021.
+                            Lovendringen gjelder for deg som får barn fra og med 1. oktober 2021.
                         </div>
-                        For deg som har barn født før 1. oktober 2021, gjelder nåværende lovverk. Du må fortsatt søke om
+                        For deg som får barn før 1. oktober 2021, gjelder nåværende lovverk. Du må fortsatt søke om
                         utsettelse for perioden du ikke skal ha foreldrepenger, eller hvis far ikke skal ta ut
                         fedrekvoten direkte etter mors uttak.
                     </Normaltekst>
                 </div>
                 <div className={bem.element('textPadding')}>
-                    <Element>Hva er endringen for deg som får barn etter 1. oktober 2021?</Element>
+                    <Element>Hva er endringen for deg som får barn fra og med 1. oktober 2021?</Element>
                     <Normaltekst>
                         <div className={bem.element('bottomPadding')}>
                             Hvis du ønsker opphold i uttaket av foreldrepenger, trenger du ikke søke om utsettelse av
@@ -67,7 +67,9 @@ const NyttLovverk = () => {
                     </Normaltekst>
                 </div>
                 <div className={bem.element('textPadding')}>
-                    <Element>Hvis kun far/medmor har rett til foreldrepenger og får barn etter 1. oktober 2021</Element>
+                    <Element>
+                        Hvis kun far/medmor har rett til foreldrepenger og får barn fra og med 1. oktober 2021
+                    </Element>
                     <Normaltekst>
                         <div className={bem.element('bottomPadding')}>
                             Når far/medmor har opphold i uttaket av foreldrepenger er det fortsatt krav til at mor er i
@@ -107,7 +109,9 @@ const NyttLovverk = () => {
                 <div className={bem.element('textPadding')}>
                     <Element>Når gjelder endringen fra?</Element>
                     <Normaltekst>
-                        <div className={bem.element('bottomPadding')}>Endringen gjelder fra 1. oktober 2021.</div>
+                        <div className={bem.element('bottomPadding')}>
+                            Endringen gjelder fra og med 1. oktober 2021.
+                        </div>
                         <div className={bem.element('bottomPadding')}>
                             Fra 1. oktober 2021 vil NAV oppdatere{' '}
                             <Lenke rel="noopener noreferrer" target="_blank" href="https://familie.nav.no/">
