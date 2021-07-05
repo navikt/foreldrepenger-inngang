@@ -26,15 +26,20 @@ const IkkeEnighetLovverk = () => {
                     <Normaltekst>
                         NAV har mottatt en uttalelse fra Sivilombudet, der det framgår at de ikke er enige i hvordan
                         lovverket som gjelder uttak av foreldrepenger praktiseres. Vi vil nå sette oss inn i uttalelsen
-                        og se den i sammenheng med lovverket på foreldrepenger.
+                        og se den i sammenheng med lovverket på foreldrepenger. Vi har forståelse for at dette er en
+                        viktig sak for mange foreldre.
                     </Normaltekst>
                 </div>
                 <div className={bem.element('textPadding')}>
                     <Normaltekst>
                         Inntil videre vil ikke uttalelsen fra Sivilombudet føre til forandringer i hvordan NAV behandler
                         sakene. For oppdatert informasjon om foreldrepenger og fedrekvote, se{' '}
-                        <Lenke rel="noopener noreferrer" target="_blank" href="https://familie.nav.no/">
-                            nav.no/foreldrepenger
+                        <Lenke
+                            rel="noopener noreferrer"
+                            target="_blank"
+                            href="https://familie.nav.no/om-foreldrepenger"
+                        >
+                            familie.nav.no/om-foreldrepenger
                         </Lenke>
                     </Normaltekst>
                 </div>
