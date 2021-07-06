@@ -1,7 +1,7 @@
 import React from 'react';
 import Icon from 'nav-frontend-ikoner-assets';
 import BEMHelper from 'app/utils/bem';
-import { Normaltekst } from 'nav-frontend-typografi';
+import { Normaltekst, Element } from 'nav-frontend-typografi';
 import Lenke from 'nav-frontend-lenker';
 import Ekspanderbartpanel from 'nav-frontend-ekspanderbartpanel';
 
@@ -31,9 +31,11 @@ const IkkeEnighetLovverk = () => {
                     </Normaltekst>
                 </div>
                 <div className={bem.element('textPadding')}>
+                    <Normaltekst>NAV vil besvare Sivilombudets henvendelse innen 31. august 2021.</Normaltekst>
+                </div>
+                <div className={bem.element('textPadding')}>
                     <Normaltekst>
-                        Inntil videre vil ikke uttalelsen fra Sivilombudet føre til forandringer i hvordan NAV behandler
-                        sakene. For oppdatert informasjon om foreldrepenger og fedrekvote, se{' '}
+                        For oppdatert informasjon om foreldrepenger og fedrekvote, se{' '}
                         <Lenke
                             rel="noopener noreferrer"
                             target="_blank"
