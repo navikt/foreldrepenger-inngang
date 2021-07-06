@@ -31,9 +31,11 @@ const IkkeEnighetLovverk = () => {
                     </Normaltekst>
                 </div>
                 <div className={bem.element('textPadding')}>
+                    <Normaltekst>NAV vil besvare Sivilombudets henvendelse innen 31. august 2021.</Normaltekst>
+                </div>
+                <div className={bem.element('textPadding')}>
                     <Normaltekst>
-                        Inntil videre vil ikke uttalelsen fra Sivilombudet føre til forandringer i hvordan NAV behandler
-                        sakene. For oppdatert informasjon om foreldrepenger og fedrekvote, se{' '}
+                        For oppdatert informasjon om foreldrepenger og fedrekvote, se{' '}
                         <Lenke
                             rel="noopener noreferrer"
                             target="_blank"
