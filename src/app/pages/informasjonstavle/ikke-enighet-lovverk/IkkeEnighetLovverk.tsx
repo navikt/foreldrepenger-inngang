@@ -1,7 +1,7 @@
 import React from 'react';
 import Icon from 'nav-frontend-ikoner-assets';
 import BEMHelper from 'app/utils/bem';
-import { Normaltekst, Element } from 'nav-frontend-typografi';
+import { Normaltekst } from 'nav-frontend-typografi';
 import Lenke from 'nav-frontend-lenker';
 import Ekspanderbartpanel from 'nav-frontend-ekspanderbartpanel';
 
