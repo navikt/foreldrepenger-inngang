@@ -31,7 +31,7 @@ const IkkeEnighetLovverk = () => {
                     </Normaltekst>
                 </div>
                 <div className={bem.element('textPadding')}>
-                    <Normaltekst>NAV vil besvare Sivilombudets henvendelse innen 31. august 2021.</Normaltekst>
+                    <Normaltekst>NAV vil besvare Sivilombudets henvendelse innen 15. oktober 2021.</Normaltekst>
                 </div>
                 <div className={bem.element('textPadding')}>
                     <Normaltekst>
