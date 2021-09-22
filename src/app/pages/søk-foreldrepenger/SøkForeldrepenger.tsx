@@ -126,8 +126,8 @@ enum Lovverk {
 const SøkForeldrepenger: React.FunctionComponent<Props> = () => {
     const intl = useIntl();
     const setValgtSituasjon = useState('farOgMor')[1];
-    const [valgtProsess, setValgtProsess] = useState('hele');
-    const [valgtLovverk, setValgtLovverk] = useState<string | undefined>(Lovverk.NYTT_LOVVERK);
+    const [valgtProsess, setValgtProsess] = useState(undefined);
+    const [valgtLovverk, setValgtLovverk] = useState<string | undefined>(undefined);
 
     const onSituasjonSelected = (valgtSituasjon: Foreldresituasjon) => {
         setValgtSituasjon(valgtSituasjon);
