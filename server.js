@@ -4,7 +4,6 @@ const path = require('path');
 const mustacheExpress = require('mustache-express');
 const Promise = require('promise');
 const getDecorator = require('./src/build/scripts/decorator');
-const createEnvSettingsFile = require('./src/build/scripts/envSettings');
 const morgan = require('morgan');
 
 const serveGzipped = (contentType) => (req, res, next) => {
@@ -37,8 +36,18 @@ const startServer = (html) => {
     server.use('/dist/assets', express.static(path.join(__dirname, 'dist/assets')));
     server.use('/sitemap.xml', express.static(path.join(__dirname, 'dist/sitemap.xml')));
 
-    server.get(['/dist/js/settings.js'], (_req, res) => {
-        res.sendFile(path.resolve(`../../dist/js/settings.js`));
+    server.get(['/dist/settings.js'], (_req, res) => {
+        res.set('content-type', 'application/javascript');
+        res.send(`window.appSettings = {
+            SOK_FORELDREPENGER_URL: '${process.env.SOK_FORELDREPENGER_URL}',
+            SOK_FORELDREPENGER_PAPIR_URL: '${process.env.SOK_FORELDREPENGER_PAPIR_URL}',
+            SOK_ENGANGSSTONAD_URL: '${process.env.SOK_ENGANGSSTONAD_URL}',
+            SOK_ENGANGSSTONAD_PAPIR_URL: '${process.env.SOK_ENGANGSSTONAD_PAPIR_URL}',
+            DINE_FORELDREPENGER_URL: '${process.env.DINE_FORELDREPENGER_URL}',
+            SOK_SVANGERSKAPSPENGER_URL: '${process.env.SOK_SVANGERSKAPSPENGER_URL}',
+            SOK_SVANGERSKAPSPENGER_PAPIR_URL: '${process.env.SOK_SVANGERSKAPSPENGER_PAPIR_URL}',
+            PLANLEGGEREN_URL: '${process.env.PLANLEGGEREN_URL}'
+        };`);
     });
 
     server.get('/health/isAlive', (_req, res) => res.sendStatus(200));
@@ -75,8 +84,6 @@ server.use((_req, res, next) => {
 
 server.get('*.js', serveGzipped('text/javascript'));
 server.get('*.css', serveGzipped('text/css'));
-
-createEnvSettingsFile(path.resolve(`${__dirname}/dist/js/settings.js`));
 
 // Start server
 getDecorator()
