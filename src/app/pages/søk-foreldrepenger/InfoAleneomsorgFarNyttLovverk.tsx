@@ -35,10 +35,10 @@ const InfoAleneomsorgFarNyttLovverk: FunctionComponent = () => {
                     svg={farBrev}
                     tittel={getTranslation('søke_om_foreldrepenger.aleneomsorg.far.farKanSøke', intl)}
                 >
-                    <Innhold source={getSource('søk-foreldrepenger/aleneomsorg-far/far-kan-søke', intl)} />
+                    <Innhold source={getSource('søk-foreldrepenger/aleneomsorg-far/far-kan-søke-nytt-lovverk', intl)} />
                 </EkspanderbarSnakkeboble>
             </Event>
-            <Event title={getTranslation('søke_om_foreldrepenger.aleneomsorg.far.fireUkerFørFar', intl)}>
+            <Event title={getTranslation('søke_om_foreldrepenger.aleneomsorg.far.fireUkerFørFarNyttLovverk', intl)}>
                 <EkspanderbarSnakkeboble
                     svg={inntektsOpplysninger}
                     tittel={getTranslation('søke_om_foreldrepenger.aleneomsorg.far.inntektFar', intl)}

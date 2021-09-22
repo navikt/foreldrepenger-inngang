@@ -44,7 +44,7 @@ const InfoFarOgFarNyttLovverk: FunctionComponent = () => {
                         <Innhold source={getSource('søk-foreldrepenger/far-og-far/far-kan-søke', intl)} />
                     </EkspanderbarSnakkeboble>
                 </Event>
-                <Event title={getTranslation('søke_om_foreldrepenger.farOgFar.fireUkerFørFar1', intl)}>
+                <Event title={getTranslation('søke_om_foreldrepenger.farOgFar.fireUkerFørFar1NyttLovverk', intl)}>
                     <EkspanderbarSnakkeboble
                         svg={inntektsOpplysninger}
                         tittel={getTranslation('søke_om_foreldrepenger.farOgFar.inntektFar1', intl)}
@@ -64,7 +64,7 @@ const InfoFarOgFarNyttLovverk: FunctionComponent = () => {
                         <Innhold source={getSource('søk-foreldrepenger/far-og-far/medfar-kan-søke', intl)} />
                     </EkspanderbarSnakkeboble>
                 </Event>
-                <Event title={getTranslation('søke_om_foreldrepenger.farOgFar.fireUkerFørFar2', intl)}>
+                <Event title={getTranslation('søke_om_foreldrepenger.farOgFar.fireUkerFørFar2NyttLovverk', intl)}>
                     <EkspanderbarSnakkeboble
                         svg={inntektsOpplysninger}
                         tittel={getTranslation('søke_om_foreldrepenger.farOgFar.inntektFar2', intl)}

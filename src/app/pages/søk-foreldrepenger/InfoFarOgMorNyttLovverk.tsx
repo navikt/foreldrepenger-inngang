@@ -51,10 +51,10 @@ const InfoFarOgMorNyttLovverk: FunctionComponent = () => {
                     svg={farBrev}
                     tittel={getTranslation('søke_om_foreldrepenger.farOgMor.farKanSøke', intl)}
                 >
-                    <Innhold source={getSource('søk-foreldrepenger/far-og-mor/far-kan-søke', intl)} />
+                    <Innhold source={getSource('søk-foreldrepenger/far-og-mor/far-kan-søke-nytt-lovverk', intl)} />
                 </EkspanderbarSnakkeboble>
             </Event>
-            <Event title={getTranslation('søke_om_foreldrepenger.farOgMor.fireUkerFørFar', intl)}>
+            <Event title={getTranslation('søke_om_foreldrepenger.farOgMor.fireUkerFørFarNyttLovverk', intl)}>
                 <EkspanderbarSnakkeboble
                     svg={inntektsOpplysninger}
                     tittel={getTranslation('søke_om_foreldrepenger.farOgMor.inntektFar', intl)}

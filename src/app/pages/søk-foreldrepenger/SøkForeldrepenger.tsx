@@ -118,11 +118,16 @@ const tabsNyttLovverk: Innholdsfane[] = [
 const cls = BEMHelper('søkForeldrepenger');
 const infoCls = BEMHelper('infosider');
 
+enum Lovverk {
+    GAMMELT_LOVVERK = 'gammeltLovverk',
+    NYTT_LOVVERK = 'nyttLovverk',
+}
+
 const SøkForeldrepenger: React.FunctionComponent<Props> = () => {
     const intl = useIntl();
     const setValgtSituasjon = useState('farOgMor')[1];
-    const [valgtProsess, setValgtProsess] = useState(undefined);
-    const [valgtLovverk, setValgtLovverk] = useState<string | undefined>(undefined);
+    const [valgtProsess, setValgtProsess] = useState('hele');
+    const [valgtLovverk, setValgtLovverk] = useState<string | undefined>(Lovverk.NYTT_LOVVERK);
 
     const onSituasjonSelected = (valgtSituasjon: Foreldresituasjon) => {
         setValgtSituasjon(valgtSituasjon);
@@ -135,11 +140,6 @@ const SøkForeldrepenger: React.FunctionComponent<Props> = () => {
     const onOversiktToggle = (vp: any) => {
         setValgtProsess(vp);
     };
-
-    enum Lovverk {
-        GAMMELT_LOVVERK = 'gammeltLovverk',
-        NYTT_LOVVERK = 'nyttLovverk',
-    }
 
     return (
         <div className={classnames(cls.block, infoCls.block)}>

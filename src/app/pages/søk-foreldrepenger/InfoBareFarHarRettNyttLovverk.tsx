@@ -29,16 +29,20 @@ const InfoBareFarHarRettNyttLovverk: FunctionComponent = () => {
                     svg={dokumentasjon}
                     tittel={getTranslation('søke_om_foreldrepenger.bareFarHarRett.dokumentasjon', intl)}
                 >
-                    <Innhold source={getSource('søk-foreldrepenger/bare-far-har-rett/dokumentasjon', intl)} />
+                    <Innhold
+                        source={getSource('søk-foreldrepenger/bare-far-har-rett/dokumentasjon-nytt-lovverk', intl)}
+                    />
                 </EkspanderbarSnakkeboble>
                 <EkspanderbarSnakkeboble
                     svg={farBrev}
                     tittel={getTranslation('søke_om_foreldrepenger.bareFarHarRett.farKanSøke', intl)}
                 >
-                    <Innhold source={getSource('søk-foreldrepenger/bare-far-har-rett/far-kan-søke', intl)} />
+                    <Innhold
+                        source={getSource('søk-foreldrepenger/bare-far-har-rett/far-kan-søke-nytt-lovverk', intl)}
+                    />
                 </EkspanderbarSnakkeboble>
             </Event>
-            <Event title={getTranslation('søke_om_foreldrepenger.bareFarHarRett.fireUkerFørFar', intl)}>
+            <Event title={getTranslation('søke_om_foreldrepenger.bareFarHarRett.fireUkerFørFarNyttLovverk', intl)}>
                 <EkspanderbarSnakkeboble
                     svg={inntektsOpplysninger}
                     tittel={getTranslation('søke_om_foreldrepenger.bareFarHarRett.inntektFar', intl)}
