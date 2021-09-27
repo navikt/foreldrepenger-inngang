@@ -23,7 +23,6 @@ type Props = OwnProps & InjectedProps;
 
 interface State {
     currentTab: number;
-    componentToRender: React.ReactNode;
 }
 
 class Innholdsfaner extends React.Component<Props, State> {
@@ -32,20 +31,16 @@ class Innholdsfaner extends React.Component<Props, State> {
 
         this.state = {
             currentTab: 0,
-            componentToRender: props.tabs[0].component,
         };
     }
 
     onTabSelect = (tabIndex: number) => {
-        const componentToRender = this.props.tabs[tabIndex].component;
-
         if (this.props.onSelect) {
             this.props.onSelect(this.props.tabs[tabIndex].label);
         }
 
         this.setState({
             currentTab: tabIndex,
-            componentToRender,
         });
     };
 
@@ -80,7 +75,7 @@ class Innholdsfaner extends React.Component<Props, State> {
                     ))}
                 </div>
             </MediaQuery>
-            <div role="tabpanel">{this.state.componentToRender}</div>
+            <div role="tabpanel">{this.props.tabs[this.state.currentTab].component}</div>
         </div>
     );
 }

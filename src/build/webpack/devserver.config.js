@@ -7,8 +7,18 @@ const configureDevServer = (decoratorFragments) => ({
         app.engine('html', mustacheExpress());
         app.set('views', `${__dirname}/../../../dist/dev`);
         app.set('view engine', 'mustache');
-        app.get('/dist/js/settings.js', (_req, res) => {
-            res.sendFile(path.resolve(`${__dirname}/../../../dist/js/settings.js`));
+        app.get(['/dist/settings.js'], (_req, res) => {
+            res.set('content-type', 'application/javascript');
+            res.send(`window.appSettings = {
+                SOK_FORELDREPENGER_URL: '${process.env.SOK_FORELDREPENGER_URL}',
+                SOK_FORELDREPENGER_PAPIR_URL: '${process.env.SOK_FORELDREPENGER_PAPIR_URL}',
+                SOK_ENGANGSSTONAD_URL: '${process.env.SOK_ENGANGSSTONAD_URL}',
+                SOK_ENGANGSSTONAD_PAPIR_URL: '${process.env.SOK_ENGANGSSTONAD_PAPIR_URL}',
+                DINE_FORELDREPENGER_URL: '${process.env.DINE_FORELDREPENGER_URL}',
+                SOK_SVANGERSKAPSPENGER_URL: '${process.env.SOK_SVANGERSKAPSPENGER_URL}',
+                SOK_SVANGERSKAPSPENGER_PAPIR_URL: '${process.env.SOK_SVANGERSKAPSPENGER_PAPIR_URL}',
+                PLANLEGGEREN_URL: '${process.env.PLANLEGGEREN_URL}'
+            };`);
         });
         app.get(/^\/(?!.*dist).*$/, (_req, res) => {
             res.render('index.html', Object.assign(decoratorFragments));
