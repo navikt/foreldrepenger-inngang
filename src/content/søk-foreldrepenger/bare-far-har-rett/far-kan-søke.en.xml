@@ -10,6 +10,6 @@
             <punkt>interim pay or allowance</punkt>
         </liste>
     </lesmer>
-    <søkKnapp søknad="foreldrepenger">Apply now</søkKnapp>
     <lesmer liten="true" intro="Is the mother sick?">If the mother is sick or hospitalised in a hospital or health care institution, you may apply for parental benefit before the child is born. In this case, you must send the application by post.</lesmer>
+    <søkKnapp søknad="foreldrepenger">Apply now</søkKnapp>
 </innhold>

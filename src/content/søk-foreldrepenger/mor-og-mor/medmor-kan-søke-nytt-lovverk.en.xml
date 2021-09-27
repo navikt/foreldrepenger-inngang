@@ -1,16 +1,15 @@
 <innhold>
     <avsnitt>You may only apply for parental benefit when the child has been born.</avsnitt>
-    <avsnitt>You must <b>apply no later than the last day the mother has parental benefit</b>. This also applies if you are starting by postponing your parental benefit period. If you apply later, you will be granted fewer days of parental benefit.</avsnitt>
     <avsnitt>To apply, log in using your BankID system from your bank or another approved electronic ID. The questions asked in the application are adapted to your situation, and instructions and information are provided as you fill in the form.</avsnitt>
-    <lesmer liten="true" intro="Have you received a severance package, interim pay or been in compulsory military service?">
-        <avsnitt>You must submit documentation of your income and the period if you have had one of these sources of income:</avsnitt>
+    <lesmer liten="true" intro="Har du fått sluttpakke, ventelønn eller vært i førstegangstjenesten?">
+        <avsnitt>Du må legge ved dokumentasjon på inntekten og perioden hvis du har hatt en av disse inntektskildene:</avsnitt>
         <liste>
-            <punkt>compulsory military service or the Norwegian Civil Defence</punkt>
-            <punkt>severance package</punkt>
-            <punkt>interim pay or allowance</punkt>
+            <punkt>førstegangstjeneste i forsvaret eller sivilforsvaret</punkt>
+            <punkt>sluttpakke</punkt>
+            <punkt>ventelønn eller vartpenger</punkt>
         </liste>
     </lesmer>
-    <lesmer liten="true" intro="will you be receiving parental benefit in the shared period?">
+    <lesmer liten="true" intro="Skal du ha foreldrepenger i fellesperioden?">
         <avsnitt>You must provide documentation of the mother’s activity requirement if you are staying at home during the shared period. She must either:</avsnitt>
         <liste>
             <punkt>be employed</punkt>
@@ -22,6 +21,7 @@
             <punkt>participate full-time in the Introduction Programme for newly arrived immigrants pursuant to chapter 4 of the Introduction Act</punkt>
         </liste>
         <avsnitt>When mother works part-time, your parental benefits are reduced corresponding to mothers working hours. If the mothers working hours is 75 per cent or more, the mother is considered to have a full position. You can then receive up to 100 per cent parental benefit.</avsnitt>
+    </lesmer>
     </lesmer>
     <søkKnapp søknad="foreldrepenger">Apply now</søkKnapp>
     <lesmer liten="true" intro="Is the mother sick?">If the mother is sick or hospitalised in a hospital or health care institution, you may apply for parental benefit before the child is born. In this case, you must send the application by post.</lesmer>

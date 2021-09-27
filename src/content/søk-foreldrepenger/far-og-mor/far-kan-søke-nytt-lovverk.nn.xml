@@ -1,18 +1,16 @@
 <innhold>
-    <avsnitt>Du kan søkje om foreldrepengar når du veit datoen for <b>omsorgsovertaking eller heimkomst til Noreg</b> eller <b>stebarnsadopsjon</b>.</avsnitt>
+    <avsnitt>Du kan tidlegast søkje om foreldrepengar når barnet er født, men i rår til at du søkjer 4-6 veker før du skal ha foreldrepengar..</avsnitt>
     <avsnitt>Når du skal søkje, loggar du deg inn med BankID frå banken din eller ein annan elektronisk id. Spørsmåla du får i søknaden, er tilpassa situasjonen din, og du får rettleiing og informasjon undervegs.</avsnitt>
-    <avsnitt>Medan du søkjer, kjem du til å bli beden om å leggje ved dokumentasjon på omsorgsovertakinga eller stebarnsadopsjonen.</avsnitt>
     <lesmer liten="true" intro="Har du fått sluttpakke, ventelønn eller vore i førstegongstenesta?">
         <avsnitt>Du må leggje ved dokumentasjon på inntekta og perioden dersom du har hatt ei av desse inntektskjeldene:</avsnitt>
         <liste>
             <punkt>førstegongsteneste i forsvaret eller sivilforsvaret</punkt>
             <punkt>sluttpakke</punkt>
-            <punkt>lønn frå arbeidsgivarar under vidare- eller etterutdanning</punkt>
             <punkt>ventelønn eller vartpengar</punkt>
         </liste>
     </lesmer>
     <lesmer liten="true" intro="Skal du ha foreldrepengar i fellesperioden?">
-    <avsnitt>Du må leggje ved dokumentasjon på aktivitetskravet til far 1 dersom du skal vere heime i fellesperioden. Han må anten:</avsnitt>
+        <avsnitt>Du må leggje ved dokumentasjon på aktivitetskravet til mor dersom du skal vere heime i fellesperioden. Ho må anten:</avsnitt>
         <liste>
             <punkt>vere i arbeid</punkt>
             <punkt>ta utdanning på heiltid</punkt>
@@ -22,7 +20,9 @@
             <punkt>delta i kvalifiseringsprogrammet</punkt>
             <punkt>delta på heiltid i introduksjonsprogrammet etter kapittel 4 for nyinnkomne innvandrarar</punkt>
         </liste>
-        <avsnitt>Når far 1 arbeider deltid, blir foreldrepengene dine redusert tilsvarende far 1 sin arbeidstid. Hvis far 1 sin stillingsandel er på 75 prosent eller mer, anses far 1 for å ha full stilling. Du kan da få utbetalt opptil 100 prosent foreldrepenger.</avsnitt>
+        <avsnitt>Når mor arbeider deltid, blir foreldrepengane dine redusert tilsvarande arbeidstida til mor. Viss mors stillingsdel er på 75 prosent eller meir, reknast mor for å ha full stilling. Du kan då få utbetalt opptil 100 prosent foreldrepengar.</avsnitt>
     </lesmer>
-    <søkKnapp søknad="foreldrepengar">Søk no</søkKnapp>
+    </lesmer>
+    <søkKnapp søknad="foreldrepenger">Søk nå</søkKnapp>
+    <lesmer liten="true" intro="Er mor sjuk?">Dersom mor er sjuk eller lagd inn på sjukehus eller helseinstitusjon, kan du søkje om foreldrepengar før barnet er født. Då må du sende søknaden i posten.</lesmer>
 </innhold>

@@ -1,19 +1,16 @@
 <innhold>
-    <avsnitt>You may apply for parental benefit when you know the date of <b>assumption of care or the day you arrive in Norway</b> or <b>stepchild adoption</b>.</avsnitt>
-    </lesmer>
+    <avsnitt>You may only apply for parental benefit when the child has been born, but we recommend that you apply 4-6 weeks before you are entitled to parental benefit.</avsnitt>
     <avsnitt>To apply, log in using your BankID system from your bank or another approved electronic ID. The questions asked in the application are adapted to your situation, and instructions and information are provided as you fill in the form.</avsnitt>
-    <avsnitt>In the application you will be asked to enclose documentation of assumption of care or stepchild adoption.</avsnitt>
     <lesmer liten="true" intro="Have you received a severance package, interim pay or been in compulsory military service?">
         <avsnitt>You must submit documentation of your income and the period if you have had one of these sources of income:</avsnitt>
         <liste>
-            <punkt>compulsory military service or Norwegian Civil Defence</punkt>
+            <punkt>compulsory military service or the Norwegian Civil Defence</punkt>
             <punkt>severance package</punkt>
-            <punkt>salary from employer during further or continuing education</punkt>
             <punkt>interim pay or allowance</punkt>
         </liste>
     </lesmer>
-        <lesmer liten="true" intro="Will you be receiving parental benefit in the shared period?">
-        <avsnitt>You must provide documentation of father 1’s activity requirement if you are staying at home during the shared period. He must either:</avsnitt>
+    <lesmer liten="true" intro="will you be receiving parental benefit in the shared period?">
+        <avsnitt>You must provide documentation of the mother’s activity requirement if you are staying at home during the shared period. She must either:</avsnitt>
         <liste>
             <punkt>be employed</punkt>
             <punkt>study full-time</punkt>
@@ -23,7 +20,8 @@
             <punkt>participate in a qualification programme</punkt>
             <punkt>participate full-time in the Introduction Programme for newly arrived immigrants pursuant to chapter 4 of the Introduction Act</punkt>
         </liste>
-        <avsnitt>When father 1 works part-time, your parental benefits are reduced corresponding to father 1's working hours. If father 1's working hours is 75 per cent or more, father 1 is considered to have a full position. You can then receive up to 100 per cent parental benefit.</avsnitt>
+        <avsnitt>When the mother works part-time, your parental benefits are reduced corresponding to the mother's working hours. If the mother's working hours is 75 per cent or more, the mother is considered to have a full position. You can then receive up to 100 per cent parental benefit.</avsnitt>
     </lesmer>
-    <søkKnapp søknad="parental benefit">Apply now</søkKnapp>
+    <søkKnapp søknad="foreldrepenger">Apply now</søkKnapp>
+    <lesmer liten="true" intro="Is the mother sick?">If the mother is sick or hospitalised in a hospital or health care institution, you may apply for parental benefit before the child is born. In this case, you must send the application by post.</lesmer>
 </innhold>

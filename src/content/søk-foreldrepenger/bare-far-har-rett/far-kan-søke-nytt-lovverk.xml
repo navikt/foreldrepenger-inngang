@@ -8,9 +8,10 @@
         <liste>
             <punkt>førstegangstjeneste i forsvaret eller sivilforsvaret</punkt>
             <punkt>sluttpakke</punkt>
+            <punkt>salary from employer during further or continuing education</punkt>
             <punkt>ventelønn eller vartpenger</punkt>
         </liste>
     </lesmer>
-    <søkKnapp søknad="foreldrepenger">Søk nå</søkKnapp>
     <lesmer liten="true" intro="Er mor syk?">Hvis mor er syk eller innlagt på sykehus eller helseinstitusjon kan du søke om foreldrepenger før barnet er født. Da må du sende søknaden i posten.</lesmer>
+    <søkKnapp søknad="foreldrepenger">Søk nå</søkKnapp>
 </innhold>

@@ -1,11 +1,11 @@
 <innhold>
-    <avsnitt>You may only apply for parental benefit when you know the <b>estimated date of delivery</b> or date for <b>assumption of care</b>.</avsnitt>
-    <avsnitt>You must apply no later than the day of assumption of care. If you adopt from abroad, you can choose if you would like to start receiving the parental benefit when you assume care of the child while abroad, or the day you arrive in Norway with the child. This also applies if you want to postpone your parental benefit period. If you apply later than this, you will have fewer days of parental benefit.</avsnitt>
+    <avsnitt>You can apply for parental benefits at the earliest when you know the date of <b>expected delivery</b> or <b>care transfer.</b></avsnitt>
+    <avsnitt>If you adopt from abroad, you can choose if you at the earliest would like to start receiving the parental benefit when you assume care of the child while abroad, or the day you arrive in Norway with the child.</avsnitt>
     <avsnitt>To apply, log in using your BankID system from your bank or another approved electronic ID. The questions asked in the application are adapted to your situation, and instructions and information are provided as you fill in the form.</avsnitt>
     <lesmer liten="true" intro="Have you received a severance package, interim pay or been in compulsory military service?">
         <avsnitt>You must submit documentation of your income and the period if you have had one of these sources of income:</avsnitt>
         <liste>
-            <punkt>compulsory military service or Norwegian Civil Defence</punkt>
+            <punkt>compulsory military service or the Norwegian Civil Defence</punkt>
             <punkt>severance package</punkt>
             <punkt>salary from employer during further or continuing education</punkt>
             <punkt>interim pay or allowance</punkt>
