@@ -1,15 +1,16 @@
 <innhold>
     <avsnitt>You may only apply for parental benefit when the child has been born.</avsnitt>
     <avsnitt>To apply, log in using your BankID system from your bank or another approved electronic ID. The questions asked in the application are adapted to your situation, and instructions and information are provided as you fill in the form.</avsnitt>
-    <lesmer liten="true" intro="Har du fått sluttpakke, ventelønn eller vært i førstegangstjenesten?">
-        <avsnitt>Du må legge ved dokumentasjon på inntekten og perioden hvis du har hatt en av disse inntektskildene:</avsnitt>
+    <lesmer liten="true" intro="Have you received a severance package, interim pay or been in compulsory military service?">
+        <avsnitt>You must submit documentation of your income and the period if you have had one of these sources of income:</avsnitt>
         <liste>
-            <punkt>førstegangstjeneste i forsvaret eller sivilforsvaret</punkt>
-            <punkt>sluttpakke</punkt>
-            <punkt>ventelønn eller vartpenger</punkt>
+            <punkt>compulsory military service or the Norwegian Civil Defence</punkt>
+            <punkt>severance package</punkt>
+            <punkt>salary from employer during further or continuing education</punkt>
+            <punkt>interim pay or allowance</punkt>
         </liste>
     </lesmer>
-    <lesmer liten="true" intro="Skal du ha foreldrepenger i fellesperioden?">
+    <lesmer liten="true" intro="Will you be receiving parental benefit in the shared period?">
         <avsnitt>You must provide documentation of the mother’s activity requirement if you are staying at home during the shared period. She must either:</avsnitt>
         <liste>
             <punkt>be employed</punkt>

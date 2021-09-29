@@ -51,7 +51,7 @@ const InfoMorOgMorNyttLovverk: FunctionComponent = () => {
                     svg={medmorBrev}
                     tittel={getTranslation('søke_om_foreldrepenger.morOgMedmor.medmorKanSøke', intl)}
                 >
-                    <Innhold source={getSource('søk-foreldrepenger/mor-og-mor/medmor-kan-søke', intl)} />
+                    <Innhold source={getSource('søk-foreldrepenger/mor-og-mor/medmor-kan-søke-nytt-lovverk', intl)} />
                 </EkspanderbarSnakkeboble>
             </Event>
             <Event title={getTranslation('søke_om_foreldrepenger.morOgMedmor.fireUkerFørMedmorNyttLovverk', intl)}>

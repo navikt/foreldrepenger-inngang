@@ -7,10 +7,11 @@
         <liste>
             <punkt>compulsory military service or the Norwegian Civil Defence</punkt>
             <punkt>severance package</punkt>
+            <punkt>salary from employer during further or continuing education</punkt>
             <punkt>interim pay or allowance</punkt>
         </liste>
     </lesmer>
-    <lesmer liten="true" intro="will you be receiving parental benefit in the shared period?">
+    <lesmer liten="true" intro="Will you be receiving parental benefit in the shared period?">
         <avsnitt>You must provide documentation of the mother’s activity requirement if you are staying at home during the shared period. She must either:</avsnitt>
         <liste>
             <punkt>be employed</punkt>

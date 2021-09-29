@@ -1,6 +1,6 @@
 <innhold>
     <avsnitt>Du kan tidligst søke om foreldrepenger når barnet er født.</avsnitt>
-    <avsnitt>Du kan starte foreldrepengeperioden din fra uke 7 etter fødselen.</avsnitt>
+    <avsnitt>Du kan starte foreldrepengeperioden din fra uke syv etter fødselen. Dersom du ikke ønsker å starte uttak av foreldrepenger fra uke syv må du dokumentere at mor er i godkjent aktivitet for å ikke miste dager</avsnitt>
     <avsnitt>Når du skal søke, logger du deg inn med BankID fra banken din eller en annen elektronisk id. Spørsmålene du får i søknaden er tilpasset din situasjon og du får veiledning og informasjon underveis.</avsnitt>
     <avsnitt>I søknaden vil du bli bedt om å legge ved dokumentasjon på at mor fyller aktivitetskravet.</avsnitt>
     <lesmer liten="true" intro="Har du fått sluttpakke, ventelønn eller vært i førstegangstjenesten?">
@@ -8,7 +8,7 @@
         <liste>
             <punkt>førstegangstjeneste i forsvaret eller sivilforsvaret</punkt>
             <punkt>sluttpakke</punkt>
-            <punkt>salary from employer during further or continuing education</punkt>
+            <punkt>lønn fra arbeidsgivere under videre- eller etterutdanning</punkt>
             <punkt>ventelønn eller vartpenger</punkt>
         </liste>
     </lesmer>
