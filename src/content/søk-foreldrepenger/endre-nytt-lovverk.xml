@@ -3,9 +3,9 @@
     <søkKnapp søknad="foreldrepenger" sentrert="true">Søk om endring</søkKnapp>
     <avsnitt>Les mer om å søke om endring for følgende situasjoner</avsnitt>
     <liste>
-        <punkt><lenke url="https://familie.nav.no/om-foreldrepenger#hvis-du-vil-jobbe" ekstern="true">Jobbe delvis når du tar ut foreldrepenger</lenke></punkt>
-        <punkt><lenke url="https://familie.nav.no/om-foreldrepenger#hvis-en-av-dere-blir-syke" ekstern="true">Utsette fordi du er syk</lenke></punkt>
-        <punkt><lenke url="https://familie.nav.no/om-foreldrepenger#hvis-en-av-dere-blir-syke" ekstern="true">Utsette fordi barnet er syk</lenke></punkt>
-        <punkt><lenke url="https://familie.nav.no/om-foreldrepenger#hvis-en-av-dere-blir-syke" ekstern="true">Overta foreldrepenger fordi den andre forelderen er syk</lenke></punkt>
+        <punkt><lenke url="https://www.nav.no/no/person/familie/foreldrepenger/foreldrepenger-etter-oktober#arbeid" ekstern="true">Jobbe delvis når du tar ut foreldrepenger</lenke></punkt>
+        <punkt><lenke url="https://www.nav.no/no/person/familie/foreldrepenger/foreldrepenger-etter-oktober#sykdom" ekstern="true">Utsette fordi du er syk</lenke></punkt>
+        <punkt><lenke url="https://www.nav.no/no/person/familie/foreldrepenger/foreldrepenger-etter-oktober#sykdom" ekstern="true">Utsette fordi barnet er syk</lenke></punkt>
+        <punkt><lenke url="https://www.nav.no/no/person/familie/foreldrepenger/foreldrepenger-etter-oktober#sykdom" ekstern="true">Overta foreldrepenger fordi den andre forelderen er syk</lenke></punkt>
     </liste>
 </innhold>
