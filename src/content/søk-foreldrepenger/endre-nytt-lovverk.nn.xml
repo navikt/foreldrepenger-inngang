@@ -1,0 +1,11 @@
+<innhold>
+    <avsnitt>Du kan søkje om endring når som helst etter at du har sendt søknaden eller allereie har fått innvilga foreldrepengar. Uansett kva som er grunnen til at du vil søkje om endring, bruker du det same skjemaet.</avsnitt>
+    <søkKnapp søknad="foreldrepenger" sentrert="true">Søk om endring</søkKnapp>
+    <avsnitt>Les meir om å søkje om endring for følgjande situasjonar</avsnitt>
+    <liste>
+        <punkt><lenke url="https://familie.nav.no/om-foreldrepenger#hvis-du-vil-jobbe" ekstern="true">Jobbe delvis når du tek ut foreldrepengar</lenke></punkt>
+        <punkt><lenke url="https://familie.nav.no/om-foreldrepenger#hvis-en-av-dere-blir-syke" ekstern="true">Utsetje fordi du er sjuk</lenke></punkt>
+        <punkt><lenke url="https://familie.nav.no/om-foreldrepenger#hvis-en-av-dere-blir-syke" ekstern="true">Utsetje fordi barnet er sjukt</lenke></punkt>
+        <punkt><lenke url="https://familie.nav.no/om-foreldrepenger#hvis-en-av-dere-blir-syke" ekstern="true">Overta foreldrepengar fordi den andre forelderen er sjuk</lenke></punkt>
+    </liste>
+</innhold>

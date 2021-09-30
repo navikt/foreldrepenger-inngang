@@ -1,0 +1,11 @@
+<innhold>
+    <avsnitt>You may apply for a change at any time after you have submitted the application or already have been granted parental benefit. Regardless of the reason you are applying for a change, you use the same form.</avsnitt>
+    <søkKnapp søknad="foreldrepenger" sentrert="true">Apply for change</søkKnapp>
+    <avsnitt>More about applying for a change for the following situations</avsnitt>
+    <liste>
+        <punkt><lenke url="https://familie.nav.no/om-foreldrepenger#hvis-du-vil-jobbe" ekstern="true">Work part-time while you are drawing parental benefit</lenke></punkt>
+        <punkt><lenke url="https://familie.nav.no/om-foreldrepenger#hvis-en-av-dere-blir-syke" ekstern="true">Postponement because you are sick</lenke></punkt>
+        <punkt><lenke url="https://familie.nav.no/om-foreldrepenger#hvis-en-av-dere-blir-syke" ekstern="true">Postponement because the child is sick</lenke></punkt>
+        <punkt><lenke url="https://familie.nav.no/om-foreldrepenger#hvis-en-av-dere-blir-syke" ekstern="true">Take over parental benefit because the other parent is sick</lenke></punkt>
+    </liste>
+</innhold>

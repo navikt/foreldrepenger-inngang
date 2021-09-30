@@ -13,7 +13,6 @@ import Tekstomrade from 'nav-frontend-tekstomrade';
 import './informasjonstavle.less';
 import { Page } from 'app/types/Page';
 import { getSøknadsurl } from '../../utils/externalUrls';
-import KoronaInformasjon from './korona-informasjon/KoronaInformasjon';
 import NyttLovverk from './nytt-lovverk/NyttLovverk';
 import IkkeEnighetLovverk from './ikke-enighet-lovverk/IkkeEnighetLovverk';
 
@@ -30,7 +29,6 @@ const Informasjonstavle: React.StatelessComponent = () => {
                 <div role="main" className={cls.element('content')}>
                     <NyttLovverk />
                     <IkkeEnighetLovverk />
-                    <KoronaInformasjon />
                     <Bildelenker />
                     <LangtPanelMedBilde
                         svg={velgSkjemaIcon}

@@ -219,7 +219,9 @@ const SøkForeldrepenger: React.FunctionComponent<Props> = () => {
                                                 {getTranslation('søke_om_foreldrepenger.søkOmEndring', intl)}
                                             </Undertittel>
                                             {valgtLovverk === Lovverk.NYTT_LOVVERK ? (
-                                                <Innhold source={getSource('søk-foreldrepenger/endre', intl)} />
+                                                <Innhold
+                                                    source={getSource('søk-foreldrepenger/endre-nytt-lovverk', intl)}
+                                                />
                                             ) : (
                                                 <Innhold source={getSource('søk-foreldrepenger/endre', intl)} />
                                             )}

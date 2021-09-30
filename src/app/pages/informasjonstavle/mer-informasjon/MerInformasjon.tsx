@@ -15,26 +15,36 @@ const MerInformasjon: StatelessComponent = () => {
     const intl = useIntl();
 
     return (
-        <nav className={cls.block}>
-            <MerInformasjonLink
-                title={getTranslation('foreldrepenger', intl)}
-                body={getTranslation('informasjonstavle.mer_informasjon.foreldrepenger', intl)}
-                url={Page.OmForeldrepenger}
-                urlIsExternal={false}
-            />
-            <MerInformasjonLink
-                title={getTranslation('engangsstønad', intl)}
-                body={getTranslation('informasjonstavle.mer_informasjon.engangsstønad', intl)}
-                url={Page.OmEngangsstønad}
-                urlIsExternal={false}
-            />
-            <MerInformasjonLink
-                title={getTranslation('svangerskapspenger', intl)}
-                body={getTranslation('informasjonstavle.mer_informasjon.svangerskapspenger', intl)}
-                url={'/om-svangerskapspenger'}
-                urlIsExternal={false}
-            />
-        </nav>
+        <>
+            <nav className={cls.block}>
+                <MerInformasjonLink
+                    title={getTranslation('foreldrepenger', intl)}
+                    body={getTranslation('informasjonstavle.mer_informasjon.foreldrepenger', intl)}
+                    url={Page.OmForeldrepenger}
+                    urlIsExternal={false}
+                />
+                <MerInformasjonLink
+                    title={getTranslation('foreldrepenger', intl)}
+                    body={getTranslation('informasjonstavle.mer_informasjon.foreldrepenger', intl)}
+                    url={Page.OmForeldrepenger}
+                    urlIsExternal={false}
+                />
+            </nav>
+            <nav className={cls.block}>
+                <MerInformasjonLink
+                    title={getTranslation('engangsstønad', intl)}
+                    body={getTranslation('informasjonstavle.mer_informasjon.engangsstønad', intl)}
+                    url={Page.OmEngangsstønad}
+                    urlIsExternal={false}
+                />
+                <MerInformasjonLink
+                    title={getTranslation('svangerskapspenger', intl)}
+                    body={getTranslation('informasjonstavle.mer_informasjon.svangerskapspenger', intl)}
+                    url={Page.OmSvangerskapspenger}
+                    urlIsExternal={false}
+                />
+            </nav>
+        </>
     );
 };
 

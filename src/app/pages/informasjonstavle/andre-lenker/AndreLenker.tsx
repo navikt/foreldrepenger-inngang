@@ -1,6 +1,4 @@
 import * as React from 'react';
-import { ForeldrepengerSection } from 'app/types/Section';
-import { getForeldrepengerSectionUrl } from 'app/utils/pageUtils';
 import { useIntl } from 'react-intl';
 import { Page } from 'app/types/Page';
 import BEMHelper from '../../../utils/bem';
@@ -23,16 +21,6 @@ const links = [
     {
         label: 'informasjonstavle.andre_lenker.informasjon_om_kontantstøtte',
         href: 'https://www.nav.no/no/person/familie/barnetrygd-og-kontantstotte/kontantstotte2',
-    },
-    {
-        label: 'informasjonstavle.andre_lenker.ofte_stilte_spørsmål',
-        internal: true,
-        href: getForeldrepengerSectionUrl(ForeldrepengerSection.OfteStilteSpørsmål),
-    },
-    {
-        label: 'informasjonstavle.andre_lenker.hvis_en_av_dere_blir_syke',
-        internal: true,
-        href: getForeldrepengerSectionUrl(ForeldrepengerSection.HvisEnAvDereBlirSyke),
     },
     {
         label: 'informasjonstavle.andre_lenker.meld_fra_om_endringer',
