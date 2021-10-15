@@ -7,7 +7,6 @@ import HvaSøkerDu from './pages/hva-søker-du/HvaSøkerDu';
 import Informasjonstavle from './pages/informasjonstavle/Informasjonstavle';
 import Kalkulator from './pages/kalkulator/Kalkulator';
 import OmEngangsstønad from './pages/om-engangsstønad/OmEngangsstønad';
-import OmForeldrepenger from './pages/om-foreldrepenger/OmForeldrepenger';
 import OmSvangerskapspenger from './pages/svangerskapspenger/OmSvangerskapspenger';
 import Regelendringer from './pages/regelendringer/Regelendringer';
 import SøkForeldrepenger from './pages/søk-foreldrepenger/SøkForeldrepenger';
@@ -26,7 +25,6 @@ const Router = () => (
         <ValidRoute exact={true} path={Page.HvaSøkerDu} component={HvaSøkerDu} key="hva-soker-du" />
         <ValidRoute exact={true} path={Page.HvorMye} component={Kalkulator} key="kalkulator" />
         <ValidRoute exact={true} path={Page.OmEngangsstønad} component={OmEngangsstønad} key="om-engangsstonad" />
-        <ValidRoute exact={true} path={Page.OmForeldrepenger} component={OmForeldrepenger} key="om-foreldrepenger" />
         <ValidRoute
             exact={true}
             path={Page.SøkeOmForeldrepenger}
