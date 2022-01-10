@@ -1,8 +1,5 @@
 {
-  "ingresses": [
-    "https://familie.nav.no",
-    "https://www.nav.no/familie"
-  ],
+  "ingresses": ["https://familie.nav.no"],
   "dekoratoren": "dekoratoren.nav.no",
   "nav": "www.nav.no",
   "svp": "svangerskapspengesoknad.nav.no",
