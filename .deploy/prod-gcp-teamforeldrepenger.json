@@ -1,15 +1,26 @@
 {
-    "ingresses": ["https://familie.nav.no", "https://www.nav.no/familie"],
-    "dekoratoren": "www.nav.no",
-    "env": {
-        "APPRES_CMS_URL": "https://www.nav.no/dekoratoren",
-        "SOK_FORELDREPENGER_URL": "https://foreldrepengesoknad.nav.no",
-        "SOK_FORELDREPENGER_PAPIR_URL": "https://www.nav.no/no/Person/Skjemaer-for-privatpersoner/Skjemaer/Familie/foreldrepenger-og-engangsstonad/Foreldrepenger+og+engangsst%C3%B8nad?method=mail&veiledertype=privatperson",
-        "SOK_ENGANGSSTONAD_URL": "https://engangsstonad.nav.no",
-        "SOK_ENGANGSSTONAD_PAPIR_URL": "https://www.nav.no/no/Person/Skjemaer-for-privatpersoner/Skjemaer/Familie/foreldrepenger-og-engangsstonad/Foreldrepenger+og+engangsst%C3%B8nad?method=mail&veiledertype=privatperson",
-        "DINE_FORELDREPENGER_URL": "https://foreldrepenger.nav.no",
-        "SOK_SVANGERSKAPSPENGER_URL": "https://svangerskapspengesoknad.nav.no/",
-        "SOK_SVANGERSKAPSPENGER_PAPIR_URL": "https://familie.nav.no/om-svangerskapspenger#slik-soker-du",
-        "PLANLEGGEREN_URL": "https://foreldrepengeplanlegger.nav.no/foreldrepengeplanlegger"
-    }
+  "ingresses": [
+    "https://familie.nav.no",
+    "https://www.nav.no/familie"
+  ],
+  "dekoratoren": "dekoratoren.nav.no",
+  "nav": "www.nav.no",
+  "svp": "svangerskapspengesoknad.nav.no",
+  "es": "engangsstonad.nav.no",
+  "fp": "foreldrepengesoknad.nav.no",
+  "foreldrepenger": "foreldrepenger.nav.no",
+  "familie": "familie.nav.no",
+  "plan": "foreldrepengeplanlegger.nav.no",
+  "loginservice": "loginservice.dev.nav.no",
+  "env": {
+    "APPRES_CMS_URL": "https://www.nav.no/dekoratoren",
+    "SOK_FORELDREPENGER_URL": "https://foreldrepengesoknad.nav.no",
+    "SOK_FORELDREPENGER_PAPIR_URL": "https://www.nav.no/soknader/nb/person/familie/foreldrepenger-og-engangsstonad",
+    "SOK_ENGANGSSTONAD_URL": "https://engangsstonad.nav.no",
+    "SOK_ENGANGSSTONAD_PAPIR_URL": "https://www.nav.no/soknader/nb/person/familie/foreldrepenger-og-engangsstonad",
+    "DINE_FORELDREPENGER_URL": "https://foreldrepenger.nav.no",
+    "SOK_SVANGERSKAPSPENGER_URL": "https://svangerskapspengesoknad.nav.no/",
+    "SOK_SVANGERSKAPSPENGER_PAPIR_URL": "https://familie.nav.no/om-svangerskapspenger#slik-soker-du",
+    "PLANLEGGEREN_URL": "https://foreldrepengeplanlegger.nav.no/foreldrepengeplanlegger"
+  }
 }
