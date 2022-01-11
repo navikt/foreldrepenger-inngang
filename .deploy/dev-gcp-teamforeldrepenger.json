@@ -1,13 +1,4 @@
 {
-    "nav": "www.dev,nav.no",
-    "svp": "svangerskapspengesoknad.dev.nav.no",
-    "es": "engangsstonad.dev.nav.no",
-    "fp": "foreldrepengesoknad.dev.nav.no",
-    "foreldrepenger": "foreldrepenger.dev.nav.no",
-    "familie": "familie.dev.nav.no",
-    "plan": "foreldrepengeplanlegger.dev.nav.no",
-    "dekoratoren": "dekoratoren.dev.nav.no",
-    "loginservice": "loginservice.dev.nav.no",
     "ingresses": ["https://familie.dev.nav.no"],
     "env": {
         "APPRES_CMS_URL": "https://dekoratoren.dev.nav.no",
