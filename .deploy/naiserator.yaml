@@ -9,9 +9,9 @@ spec:
   image: {{image}}
   port: 8080
   replicas:
-      min: 2
-      max: 2
-      cpuThresholdPercentage: 50
+    min: 2
+    max: 2
+    disableAutoScaling: true
   liveness:
       path: /health/isAlive
       initialDelay: 60
@@ -21,10 +21,6 @@ spec:
   prometheus:
       enabled: false
       path: /internal/actuator/prometheus
-  replicas:
-      min: 2
-      max: 2
-      cpuThresholdPercentage: 50
   ingresses:
 {{#each ingresses as |url|}}
     - {{url}}
