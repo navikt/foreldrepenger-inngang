@@ -3,11 +3,11 @@
     <søkKnapp søknad="foreldrepenger" sentrert="true">Apply for change</søkKnapp>
     <avsnitt>More about applying for a change for the following situations</avsnitt>
     <liste>
-        <punkt><lenke url="https://www.nav.no/no/person/familie/foreldrepenger/foreldrepenger-for-oktober#arbeid" ekstern="true">Postponement because you will be working</lenke></punkt>
-        <punkt><lenke url="https://www.nav.no/no/person/familie/foreldrepenger/foreldrepenger-for-oktober#arbeid" ekstern="true">Work part-time while you are drawing parental benefit</lenke></punkt>
-        <punkt><lenke url="https://www.nav.no/no/person/familie/foreldrepenger/foreldrepenger-for-oktober#ferie" ekstern="true">Postponement because you are going on holiday</lenke></punkt>
-        <punkt><lenke url="https://www.nav.no/no/person/familie/foreldrepenger/foreldrepenger-for-oktober#sykdom" ekstern="true">Postponement because you are sick</lenke></punkt>
-        <punkt><lenke url="https://www.nav.no/no/person/familie/foreldrepenger/foreldrepenger-for-oktober#sykdom" ekstern="true">Postponement because the child is sick</lenke></punkt>
-        <punkt><lenke url="https://www.nav.no/no/person/familie/foreldrepenger/foreldrepenger-for-oktober#sykdom" ekstern="true">Take over parental benefit because the other parent is sick</lenke></punkt>
+        <punkt><lenke url="https://www.nav.no/no/person/familie/foreldrepenger/foreldrepenger#arbeid" ekstern="true">Postponement because you will be working</lenke></punkt>
+        <punkt><lenke url="https://www.nav.no/no/person/familie/foreldrepenger/foreldrepenger#arbeid" ekstern="true">Work part-time while you are drawing parental benefit</lenke></punkt>
+        <punkt><lenke url="https://www.nav.no/no/person/familie/foreldrepenger/foreldrepenger#ferie" ekstern="true">Postponement because you are going on holiday</lenke></punkt>
+        <punkt><lenke url="https://www.nav.no/no/person/familie/foreldrepenger/foreldrepenger#sykdom" ekstern="true">Postponement because you are sick</lenke></punkt>
+        <punkt><lenke url="https://www.nav.no/no/person/familie/foreldrepenger/foreldrepenger#sykdom" ekstern="true">Postponement because the child is sick</lenke></punkt>
+        <punkt><lenke url="https://www.nav.no/no/person/familie/foreldrepenger/foreldrepenger#sykdom" ekstern="true">Take over parental benefit because the other parent is sick</lenke></punkt>
     </liste>
 </innhold>

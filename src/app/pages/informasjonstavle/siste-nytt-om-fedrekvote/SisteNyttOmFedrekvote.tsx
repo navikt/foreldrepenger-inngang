@@ -71,7 +71,7 @@ const SisteNyttOmFedrekvote = () => {
                 <div className={bem.element('textPadding')}>
                     <Normaltekst>
                         For oppdatert informasjon om foreldrepenger og fedrekvote, se{' '}
-                        <Lenke href="https://www.nav.no/foreldrepenger-for-oktober">
+                        <Lenke href="https://www.nav.no/no/person/familie/foreldrepenger/foreldrepenger">
                             familie.nav.no/om-foreldrepenger
                         </Lenke>
                     </Normaltekst>

@@ -18,19 +18,11 @@ const MerInformasjon: StatelessComponent = () => {
         <>
             <nav className={cls.block}>
                 <MerInformasjonLink
-                    title={getTranslation('foreldrepenger-nytt-lovverk', intl)}
-                    body={getTranslation('informasjonstavle.mer_informasjon.foreldrepenger', intl)}
-                    url="https://www.nav.no/foreldrepenger-etter-oktober"
-                    urlIsExternal={true}
-                />
-                <MerInformasjonLink
                     title={getTranslation('foreldrepenger', intl)}
                     body={getTranslation('informasjonstavle.mer_informasjon.foreldrepenger', intl)}
-                    url="https://www.nav.no/foreldrepenger-for-oktober"
+                    url="https://www.nav.no/no/person/familie/foreldrepenger/foreldrepenger"
                     urlIsExternal={true}
                 />
-            </nav>
-            <nav className={cls.block}>
                 <MerInformasjonLink
                     title={getTranslation('engangsstønad', intl)}
                     body={getTranslation('informasjonstavle.mer_informasjon.engangsstønad', intl)}
