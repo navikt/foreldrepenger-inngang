@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useIntl } from 'react-intl';
 import { Undertittel } from 'nav-frontend-typografi';
 import AndreLenker from './andre-lenker/AndreLenker';
@@ -15,12 +15,24 @@ import { Page } from 'app/types/Page';
 import { getSøknadsurl } from '../../utils/externalUrls';
 import NyttLovverk from './nytt-lovverk/NyttLovverk';
 import SisteNyttOmFedrekvote from './siste-nytt-om-fedrekvote/SisteNyttOmFedrekvote';
+import NavFrontendSpinner from 'nav-frontend-spinner';
 
 const cls = BEMHelper('informasjonstavle');
 const velgSkjemaIcon = require('../../assets/icons/brev.svg').default;
 
 const Informasjonstavle: React.StatelessComponent = () => {
     const intl = useIntl();
+    const [hasRedirected, setHasRedirected] = useState(false);
+
+    useEffect(() => {
+        (window as any).location = 'https://www.nav.no/foreldrepenger';
+        setHasRedirected(true);
+    }, [hasRedirected]);
+
+    if (!hasRedirected) {
+        return <NavFrontendSpinner type="XXL" />;
+    }
+
     return (
         <div className={cls.block}>
             <InformasjonstavleHeader />
