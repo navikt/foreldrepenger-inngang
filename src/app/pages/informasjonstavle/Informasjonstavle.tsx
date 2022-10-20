@@ -25,7 +25,7 @@ const Informasjonstavle: React.StatelessComponent = () => {
     const [hasRedirected, setHasRedirected] = useState(false);
 
     useEffect(() => {
-        (window as any).location = 'https://www.nav.no/foreldrepenger';
+        (window as any).location = 'https://www.nav.no/barn';
         setHasRedirected(true);
     }, [hasRedirected]);
 
