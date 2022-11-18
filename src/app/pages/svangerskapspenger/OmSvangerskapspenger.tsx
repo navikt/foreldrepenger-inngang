@@ -16,9 +16,6 @@ import JobbDelvis from './jobbDelvis/JobbDelvis';
 import HvorLengeKanDuFa from './hvorLengeKanDuFa/HvorLengeKanDuFa';
 import HvorMyeKanDuFa from './hvorMyeKanDuFa/HvorMyeKanDuFa';
 import Environment from '../../Environment';
-import AlertStripe from 'nav-frontend-alertstriper';
-import { Normaltekst, Element } from 'nav-frontend-typografi';
-import Lenke from 'nav-frontend-lenker';
 import EtterDuHarSøktSvangerskapspenger from './etter-du-har-søkt/EtterDuHarSøktSvangerskapspenger';
 
 const cls = BEMHelper('infosider');
@@ -69,23 +66,6 @@ const OmSvangerskapspenger: React.StatelessComponent<Props> = ({ location }) => 
                 }}
             >
                 <article className={cls.element('article')}>
-                    <div style={{ marginTop: '2rem' }}>
-                        <AlertStripe type="info">
-                            <Element>Er du gravid og i arbeid, og i risikogruppen grunnet korona?</Element>
-                            <Normaltekst>
-                                Er du gravid, tar du kontakt med lege eller jordmor (etter retningslinjene for kontakt
-                                gitt av helsemyndighetene) som gjør en vurdering av om smittefaren er en risiko for
-                                fosteret. Da kan du ha rett på svangerskapspenger, les mer om hvordan du søker{' '}
-                                <Lenke
-                                    rel="noopener noreferrer"
-                                    target="_blank"
-                                    href="https://familie.nav.no/om-svangerskapspenger#slik-soker-du"
-                                >
-                                    på våre nettsider
-                                </Lenke>
-                            </Normaltekst>
-                        </AlertStripe>
-                    </div>
                     <Breadcrumbs path={location.pathname} />
                     <HvemKanFåSvangerskapspenger id={sections[0]} />
                     <JobbDelvis id={sections[1]} />
