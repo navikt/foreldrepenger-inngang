@@ -8,7 +8,6 @@ import getTranslation from 'app/utils/i18nUtils';
 
 const InfoAleneomsorgFarNyttLovverk: FunctionComponent = () => {
     const intl = useIntl();
-    const kalender = require('../../assets/planlegge.svg').default;
     const dokumentasjon = require('../../assets/dokumentasjon.svg').default;
     const farBrev = require('../../assets/foreldre/far4-brev.svg').default;
     const inntektsOpplysninger = require('../../assets/inntektsopplysninger.svg').default;
@@ -16,14 +15,6 @@ const InfoAleneomsorgFarNyttLovverk: FunctionComponent = () => {
 
     return (
         <Eventline>
-            <Event title={getTranslation('søke_om_foreldrepenger.aleneomsorg.far.venterBarn', intl)}>
-                <EkspanderbarSnakkeboble
-                    svg={kalender}
-                    tittel={getTranslation('søke_om_foreldrepenger.aleneomsorg.far.planleggTiden', intl)}
-                >
-                    <Innhold source={getSource('søk-foreldrepenger/aleneomsorg-far/planlegg', intl)} />
-                </EkspanderbarSnakkeboble>
-            </Event>
             <Event title={getTranslation('søke_om_foreldrepenger.aleneomsorg.far.terminEllerOmsorgsovertakelse', intl)}>
                 <EkspanderbarSnakkeboble
                     svg={dokumentasjon}

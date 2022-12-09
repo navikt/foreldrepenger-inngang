@@ -8,21 +8,12 @@ import getTranslation from 'app/utils/i18nUtils';
 
 const InfoBareMorHarRettNyttLovverk: FunctionComponent = () => {
     const intl = useIntl();
-    const kalender = require('../../assets/planlegge.svg').default;
     const morBrev = require('../../assets/foreldre/mor1-brev.svg').default;
     const inntektsOpplysninger = require('../../assets/inntektsopplysninger.svg').default;
     const fåSvar = require('../../assets/faa-svar.svg').default;
 
     return (
         <Eventline>
-            <Event title={getTranslation('søke_om_foreldrepenger.bareMorHarRett.venterBarn', intl)}>
-                <EkspanderbarSnakkeboble
-                    svg={kalender}
-                    tittel={getTranslation('søke_om_foreldrepenger.bareMorHarRett.planleggTiden', intl)}
-                >
-                    <Innhold source={getSource('søk-foreldrepenger/bare-mor-har-rett/planlegg', intl)} />
-                </EkspanderbarSnakkeboble>
-            </Event>
             <Event title={getTranslation('søke_om_foreldrepenger.bareMorHarRett.svangerskapsuke', intl)}>
                 <EkspanderbarSnakkeboble
                     svg={morBrev}

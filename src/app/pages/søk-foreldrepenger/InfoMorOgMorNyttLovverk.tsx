@@ -8,7 +8,6 @@ import getTranslation from 'app/utils/i18nUtils';
 
 const InfoMorOgMorNyttLovverk: FunctionComponent = () => {
     const intl = useIntl();
-    const kalender = require('../../assets/planlegge.svg').default;
     const morBrev = require('../../assets/foreldre/mor2-brev.svg').default;
     const inntektsOpplysninger = require('../../assets/inntektsopplysninger.svg').default;
     const fåSvar = require('../../assets/faa-svar.svg').default;
@@ -16,14 +15,6 @@ const InfoMorOgMorNyttLovverk: FunctionComponent = () => {
 
     return (
         <Eventline>
-            <Event title={getTranslation('søke_om_foreldrepenger.morOgMedmor.venterBarn', intl)}>
-                <EkspanderbarSnakkeboble
-                    svg={kalender}
-                    tittel={getTranslation('søke_om_foreldrepenger.morOgMedmor.planleggTiden', intl)}
-                >
-                    <Innhold source={getSource('søk-foreldrepenger/mor-og-mor/planlegg', intl)} />
-                </EkspanderbarSnakkeboble>
-            </Event>
             <Event title={getTranslation('søke_om_foreldrepenger.morOgMedmor.svangerskapsuke', intl)}>
                 <EkspanderbarSnakkeboble
                     svg={morBrev}

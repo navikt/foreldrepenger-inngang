@@ -9,7 +9,6 @@ import Veileder from 'app/components/veileder/Veileder';
 
 const InfoFarOgFarNyttLovverk: FunctionComponent = () => {
     const intl = useIntl();
-    const kalender = require('../../assets/planlegge.svg').default;
     const dokumentasjon = require('../../assets/dokumentasjon.svg').default;
     const far1Brev = require('../../assets/foreldre/far2-brev.svg').default;
     const inntektsOpplysninger = require('../../assets/inntektsopplysninger.svg').default;
@@ -19,14 +18,6 @@ const InfoFarOgFarNyttLovverk: FunctionComponent = () => {
     return (
         <>
             <Eventline>
-                <Event title={getTranslation('søke_om_foreldrepenger.farOgFar.venterBarn', intl)}>
-                    <EkspanderbarSnakkeboble
-                        svg={kalender}
-                        tittel={getTranslation('søke_om_foreldrepenger.farOgFar.planleggTiden', intl)}
-                    >
-                        <Innhold source={getSource('søk-foreldrepenger/far-og-far/planlegg', intl)} />
-                    </EkspanderbarSnakkeboble>
-                </Event>
                 <Event title={getTranslation('søke_om_foreldrepenger.farOgFar.terminEllerOmsorgsovertakelse', intl)}>
                     <EkspanderbarSnakkeboble
                         svg={dokumentasjon}
