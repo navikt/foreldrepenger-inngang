@@ -12,7 +12,6 @@ import PanelMedBilde from '../../components/panel-med-bilde/PanelMedBilde';
 import Tekstomrade from 'nav-frontend-tekstomrade';
 import './informasjonstavle.less';
 import { Page } from 'app/types/Page';
-import { getSøknadsurl } from '../../utils/externalUrls';
 import NyttLovverk from './nytt-lovverk/NyttLovverk';
 import SisteNyttOmFedrekvote from './siste-nytt-om-fedrekvote/SisteNyttOmFedrekvote';
 import NavFrontendSpinner from 'nav-frontend-spinner';
@@ -76,15 +75,6 @@ const Bildelenker = () => {
                 url={Page.SøkeOmForeldrepenger}
             >
                 <Tekstomrade>{getTranslation('informasjonstavle.hva_kan_du_få_ingress', intl)}</Tekstomrade>
-            </PanelMedBilde>
-
-            <PanelMedBilde
-                svgName="hvor-lenge"
-                title={getTranslation('informasjonstavle.hvor_lenge', intl)}
-                urlIsExternal={true}
-                url={getSøknadsurl('planleggeren')}
-            >
-                <Tekstomrade>{getTranslation('informasjonstavle.hvor_lenge_ingress', intl)}</Tekstomrade>
             </PanelMedBilde>
 
             <PanelMedBilde
