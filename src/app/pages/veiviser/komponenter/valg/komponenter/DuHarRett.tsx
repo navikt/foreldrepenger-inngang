@@ -23,7 +23,7 @@ const DuHarRett: React.StatelessComponent<Props> = ({ minLogo, overskrift, punkt
             {minLogo}
             <div className={resultat.element('stonadBody')}>
                 <div className={resultat.element('stonadTxt')}>
-                    <TypografiBase type="innholdstittel">{getTranslation(overskrift, intl)}</TypografiBase>
+                    <TypografiBase type="undertittel">{getTranslation(overskrift, intl)}</TypografiBase>
                     {punkter.map((punkt: any, index: number) => {
                         return <div key={index}>{punkt}</div>;
                     })}

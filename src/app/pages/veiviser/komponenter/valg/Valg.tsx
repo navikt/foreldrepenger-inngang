@@ -3,7 +3,7 @@ import BEMHelper from '../../../../utils/bem';
 import { injectIntl, IntlShape } from 'react-intl';
 import TypografiBase from 'nav-frontend-typografi';
 import Innhold, { getSource } from 'app/utils/innhold/Innhold';
-import { RadioPanel, Input } from 'nav-frontend-skjema';
+import { RadioPanel, Input, Label } from 'nav-frontend-skjema';
 import Tabs from 'nav-frontend-tabs';
 import { FlexibleSvg } from '../../../../utils/CustomSVG';
 import { CSSTransition } from 'react-transition-group';
@@ -808,12 +808,12 @@ class Valg extends React.Component<Props, State> {
                                     {valg.con}
                                     <div className={inputCls.element('rad')}>
                                         <div className={inputCls.element('radKol-1')}>
-                                            <TypografiBase type={'element'}>
+                                            <Label htmlFor="manedslonn-for-skatt">
                                                 {getTranslation('veiviser.valg.inntekt.subHeader', this.props.intl)}
-                                            </TypografiBase>
+                                            </Label>
                                             <Input
                                                 className={inputCls.element('felt--komponent')}
-                                                label={''}
+                                                id="manedslonn-for-skatt"
                                                 min={0}
                                                 step={1000}
                                                 type="number"

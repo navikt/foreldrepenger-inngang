@@ -31,7 +31,7 @@ interface FlexibleProps {
 export const FlexibleSvg = ({ iconRef, height, width, className, ...other }: FlexibleProps) => {
     const viewBox = { 'view-box': iconRef.viewBox };
     return (
-        <svg className={className} height={height} width={width} {...viewBox} {...other}>
+        <svg role="img" aria-hidden="true" className={className} height={height} width={width} {...viewBox} {...other}>
             <use xlinkHref={`#${iconRef.id}`} />
         </svg>
     );
