@@ -5,6 +5,9 @@ metadata:
   namespace: teamforeldrepenger
   labels:
     team: teamforeldrepenger
+annotations:
+  nginx.ingress.kubernetes.io/configuration-snippet: |
+    rewrite ^(foreldrepengeplanlegger\.dev\.nav\.no|foreldrepengeplanlegger\.nav\.no)/.* https://www.nav.no/foreldrepenger#hvor-lenge;
 spec:
   accessPolicy:
     outbound:
