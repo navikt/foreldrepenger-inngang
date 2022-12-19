@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { Cancelable } from 'lodash';
 import { IntlShape, injectIntl } from 'react-intl';
 import { Normaltekst } from 'nav-frontend-typografi';
 import BEMHelper from 'app/utils/bem';
@@ -39,7 +38,7 @@ interface State {
 }
 
 class Seksjonslenker extends React.Component<Props, State> {
-    debouncedOnScroll: (() => void) & Cancelable;
+    debouncedOnScroll: (() => void) & any;
 
     constructor(props: Props) {
         super(props);

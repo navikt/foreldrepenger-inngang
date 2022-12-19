@@ -52,17 +52,8 @@ export class WithLink extends React.Component<Props> {
     };
 
     render = () => {
-        const {
-            urlIsExternal,
-            url,
-            addExternalIcon,
-            noStyling,
-            noTabbing,
-            className,
-            style,
-            ariaLabel,
-            children,
-        } = this.props;
+        const { urlIsExternal, url, addExternalIcon, noStyling, noTabbing, className, style, ariaLabel, children } =
+            this.props;
         const classNames = classnames(cls.block, className, {
             [cls.element('noStyling')]: noStyling,
         });

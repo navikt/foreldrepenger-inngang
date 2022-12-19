@@ -4,7 +4,6 @@ import TypografiBase from 'nav-frontend-typografi';
 
 import { BEMWrapper } from '../../utils/bem';
 import { useIntl } from 'react-intl';
-import { StatelessComponent } from 'enzyme';
 import CustomSVGFromSprite from 'app/utils/CustomSVG';
 import getTranslation from 'app/utils/i18nUtils';
 
@@ -17,7 +16,7 @@ interface Props {
     parentCls: BEMWrapper;
 }
 
-const Datovelger: StatelessComponent<Props> = ({ date, dateIsValid, onChange, parentCls }) => {
+const Datovelger: React.FunctionComponent<Props> = ({ date, dateIsValid, onChange, parentCls }) => {
     const intl = useIntl();
 
     return (
