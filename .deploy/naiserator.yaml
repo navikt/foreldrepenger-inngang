@@ -7,7 +7,9 @@ metadata:
     team: teamforeldrepenger
   annotations:
     nginx.ingress.kubernetes.io/configuration-snippet: |
-      rewrite ^https://foreldrepengeplanlegger(.*) https://www.nav.no/foreldrepenger#hvor-lenge;
+      if ($host ~* foreldrepengeplanlegger\.(.*)) {
+        return 301 https://www.nav.no/foreldrepenger#hvor-lenge;
+      }
 spec:
   accessPolicy:
     outbound:
