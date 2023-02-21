@@ -90,7 +90,7 @@
     },
     "dependencies": {
         "@condenast/xml-to-react": "^1.0.0",
-        "@formatjs/intl-numberformat": "^4.2.9",
+        "@formatjs/intl-numberformat": "^8.3.5",
         "@formatjs/intl-pluralrules": "^2.2.9",
         "@formatjs/intl-relativetimeformat": "^5.2.9",
         "@navikt/fnrvalidator": "^1.1.3",
