@@ -2,7 +2,7 @@ const path = require('path');
 const { merge } = require('webpack-merge');
 const common = require('./webpack.config.global.js');
 
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
@@ -47,23 +47,22 @@ module.exports = merge(common, {
                 },
             },
         },
+        minimizer: [
+            new TerserPlugin({
+                terserOptions: {
+                    mangle: true, // Note `mangle.properties` is `false` by default.
+                    ie8: true,
+                    keep_classnames: true,
+                    keep_fnames: true,
+                },
+            }),
+        ],
     },
     plugins: [
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
             template: `${__dirname}/../../app/index.html`,
             inject: 'body',
-        }),
-        new UglifyJsPlugin({
-            sourceMap: true,
-            uglifyOptions: {
-                mangle: {
-                    keep_fnames: true,
-                },
-                compress: {
-                    keep_fnames: true,
-                },
-            },
         }),
         new MiniCssExtractPlugin({
             filename: 'css/[name].[contenthash].css',
