@@ -9,7 +9,7 @@ const farSvg = require('../../assets/ark/ark-far-og-medmor.svg').default;
 
 type Props = EngangsstonadSectionProps;
 
-const TilFarEllerMedmor: React.StatelessComponent<Props> = ({ id }) => {
+const TilFarEllerMedmor: React.FunctionComponent<Props> = ({ id }) => {
     const intl = useIntl();
 
     return (

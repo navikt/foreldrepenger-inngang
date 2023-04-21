@@ -19,7 +19,7 @@ const utbetalingShortContent = 'om-engangsstønad/hvem-kan-få/krav2';
 
 type Props = EngangsstonadSectionProps;
 
-const HvemKanFåEngangsstønad: React.StatelessComponent<Props> = ({ id }) => {
+const HvemKanFåEngangsstønad: React.FunctionComponent<Props> = ({ id }) => {
     const intl = useIntl();
 
     return (

@@ -12,7 +12,7 @@ interface Props {
     id: string;
 }
 
-const JobbDelvis: React.StatelessComponent<Props> = ({ id }) => {
+const JobbDelvis: React.FunctionComponent<Props> = ({ id }) => {
     const intl = useIntl();
 
     return (

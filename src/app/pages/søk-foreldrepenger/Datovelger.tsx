@@ -25,21 +25,20 @@ const Datovelger: React.FunctionComponent<Props> = ({ date, dateIsValid, onChang
                 {getTranslation('søk_foreldrepenger.første_dag_spørsmål', intl)}
             </TypografiBase>
             <div className={parentCls.element('container')}>
-                <NavDatovelger.Datovelger
+                <NavDatovelger.Datepicker
+                    
                     aria-label="datovelger"
-                    kanVelgeUgyldigDato={true}
-                    id="foreldrepenger-startdato"
-                    locale="no"
-                    valgtDato={date}
+                    allowInvalidDateSelection
+                    inputId="foreldrepenger-startdato"
+                    locale="nb"
+                    value={date}
                     onChange={(datoString: string) => {
                         const nyDato = datoString && datoString !== 'Invalid date' ? new Date(datoString) : undefined;
                         if (date !== nyDato && nyDato !== undefined) {
                             onChange(nyDato);
                         }
                     }}
-                    input={{
-                        name: 'foreldrepenger-startdato',
-                        id: 'foreldrepenger-startdato',
+                    inputProps={{
                         placeholder: 'dd.mm.åååå',
                     }}
                 />

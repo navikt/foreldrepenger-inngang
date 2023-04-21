@@ -4,7 +4,7 @@ interface Props {
     size: string;
 }
 
-const HjemmeSamtidig: React.StatelessComponent<Props> = ({ size }) => {
+const HjemmeSamtidig: React.FunctionComponent<Props> = ({ size }) => {
     return (
         <svg
             width={size}

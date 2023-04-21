@@ -11,6 +11,7 @@ import SvgMask from '../../components/svg-mask/SvgMask';
 import getTranslation from 'app/utils/i18nUtils';
 import CSSTransition from 'react-transition-group/CSSTransition';
 import NavigasjonsBoks from './komponenter/valg/komponenter/NavigasjonsBoks';
+import { useLocation } from 'react-router-dom';
 
 const signSVG = require('../../assets/ark/ark-veiviser.svg').default;
 
@@ -31,13 +32,10 @@ const faner = [
     },
 ];
 
-interface Props {
-    location: any;
-}
-
-const Veiviser: FunctionComponent<Props> = ({ location }) => {
+const Veiviser: FunctionComponent = () => {
     const [visResultat, toggleResultat] = useState(false);
     const intl = useIntl();
+    const location = useLocation();
 
     const onToggle = (resultatVerdi: boolean) => () => {
         toggleResultat(resultatVerdi);

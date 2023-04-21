@@ -18,7 +18,7 @@ interface OwnProps {
 
 type Props = OwnProps;
 
-const OfteStilteSpørsmål: React.StatelessComponent<Props> = ({ id }) => {
+const OfteStilteSpørsmål: React.FunctionComponent<Props> = ({ id }) => {
     const intl = useIntl();
 
     return (

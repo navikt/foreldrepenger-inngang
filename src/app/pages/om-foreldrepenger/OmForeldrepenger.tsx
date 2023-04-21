@@ -47,7 +47,7 @@ const sections: Section[] = [
     Section.OfteStilteSpørsmål,
 ];
 
-const OmForeldrepenger: React.StatelessComponent<Props> = ({ location }) => {
+const OmForeldrepenger: React.FunctionComponent<Props> = ({ location }) => {
     const intl = useIntl();
 
     return (

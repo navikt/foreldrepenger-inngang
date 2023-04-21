@@ -43,7 +43,7 @@ const getFaner = (intl: IntlShape) => [
     },
 ];
 
-const HvorMyeKanDuFa: React.StatelessComponent<Props> = ({ id }) => {
+const HvorMyeKanDuFa: React.FunctionComponent<Props> = ({ id }) => {
     const intl = useIntl();
 
     return (

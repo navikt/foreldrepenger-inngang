@@ -46,7 +46,7 @@ const Resultat = ({ results, fårUtbetaling }: Props) => {
     let forLavLønnvariabler;
 
     if (tjenerOverUtbetalingsgrensen(snittlønnPerMåned)) {
-        utbetalingsgrensevariabler = tjenerOverUtbetalingsgrensen && {
+        utbetalingsgrensevariabler = {
             UTBETALINGSGRENSE: localizeNumber(getUtbetalingsgrense()),
         };
     }

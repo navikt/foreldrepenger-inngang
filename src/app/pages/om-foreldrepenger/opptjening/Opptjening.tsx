@@ -38,7 +38,7 @@ const getTabs = (intl: IntlShape) => [
 
 const cls = BEMHelper('opptjening');
 
-const Opptjening: React.StatelessComponent<Props> = ({ id }) => {
+const Opptjening: React.FunctionComponent<Props> = ({ id }) => {
     const [tabIndex, setTabIndex] = React.useState(0);
     const intl = useIntl();
 

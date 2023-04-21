@@ -1,12 +1,11 @@
 import { Component } from 'react';
-import { withRouter, RouteComponentProps } from 'react-router-dom';
 
 // Scroll restoration
 // Som beskrevet i dokumentasjonen til react-router:
 // https://reacttraining.com/react-router/web/guides/scroll-restoration
 
-class ScrollToTop extends Component<RouteComponentProps> {
-    componentDidUpdate(prevProps: RouteComponentProps) {
+class ScrollToTop extends Component<any> {
+    componentDidUpdate(prevProps: any) {
         if (this.props.location !== prevProps.location) {
             // Gå til riktig seksjon basert på hash i URL
             if (this.props.location.hash.includes('#')) {
@@ -26,4 +25,4 @@ class ScrollToTop extends Component<RouteComponentProps> {
     }
 }
 
-export default withRouter(ScrollToTop);
+export default ScrollToTop;

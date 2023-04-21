@@ -10,7 +10,7 @@ interface Props {
     id: string;
 }
 
-const Adopsjon: React.StatelessComponent<Props> = ({ id }) => {
+const Adopsjon: React.FunctionComponent<Props> = ({ id }) => {
     const intl = useIntl();
 
     return (

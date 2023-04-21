@@ -42,7 +42,7 @@ const links = [
 
 const cls = BEMHelper('andreLenker');
 
-const AndreLenker: React.StatelessComponent = () => {
+const AndreLenker: React.FunctionComponent = () => {
     const intl = useIntl();
 
     const otherLinks = links.map((link) => (

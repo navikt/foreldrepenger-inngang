@@ -10,7 +10,7 @@ interface Props {
 
 const bem = BEMHelper('callout');
 const bemWrapper = bem.child('arrowWrapper');
-const Callout: React.StatelessComponent<Props> = ({ children, arrowPlacement = 'left' }) => (
+const Callout: React.FunctionComponent<Props> = ({ children, arrowPlacement = 'left' }) => (
     <div className={bem.block}>
         <div
             className={bemWrapper.classNames(bemWrapper.block, bemWrapper.modifier(arrowPlacement))}

@@ -14,7 +14,7 @@ interface Props {
     onSelect: () => void;
 }
 
-const AntallUker: React.StatelessComponent<Props> = ({
+const AntallUker: React.FunctionComponent<Props> = ({
     parentCls,
     numberOfWeeks,
     numberOfChildren,

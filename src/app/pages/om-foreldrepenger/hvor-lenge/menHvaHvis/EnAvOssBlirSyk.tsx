@@ -4,7 +4,7 @@ interface Props {
     size: string;
 }
 
-const EnAvOssBlirSyk: React.StatelessComponent<Props> = ({ size }) => {
+const EnAvOssBlirSyk: React.FunctionComponent<Props> = ({ size }) => {
     return (
         <svg
             width={size}

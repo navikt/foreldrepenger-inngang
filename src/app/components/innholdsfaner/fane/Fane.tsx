@@ -21,7 +21,7 @@ interface Props {
     mos?: boolean;
 }
 
-const Fane: React.StatelessComponent<Props> = ({ tab, isSelected, onSelect, mos }) => {
+const Fane: React.FunctionComponent<Props> = ({ tab, isSelected, onSelect, mos }) => {
     const intl = useIntl();
 
     return (

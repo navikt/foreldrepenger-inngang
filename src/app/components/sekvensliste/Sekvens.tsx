@@ -12,7 +12,7 @@ interface Props {
 
 const bem = BEMHelper('sekvens');
 
-const Sekvens: React.StatelessComponent<Props> = ({ illustrasjon, children }) => (
+const Sekvens: React.FunctionComponent<Props> = ({ illustrasjon, children }) => (
     <div className={bem.block}>
         <div className={bem.element('illustrasjon')}>{illustrasjon}</div>
         <div className={bem.element('innhold')}>

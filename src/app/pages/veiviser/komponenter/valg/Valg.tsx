@@ -749,6 +749,7 @@ class Valg extends React.Component<Props, State> {
                         kompakt={true}
                         defaultAktiv={-1}
                         tabs={this.props.faner.map((fane, index) => ({
+                            // @ts-ignore
                             label: this.updateToggle[index],
                             children: (
                                 <div className={cls.element('valg-fane')}>
@@ -763,6 +764,7 @@ class Valg extends React.Component<Props, State> {
                                     {getTranslation(fane.label, this.props.intl)}
                                 </div>
                             ),
+                            // @ts-ignore
                             onClick: this.updateToggle[index],
                         }))}
                         onChange={this.updateToggle}

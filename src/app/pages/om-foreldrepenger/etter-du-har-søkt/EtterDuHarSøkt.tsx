@@ -11,7 +11,7 @@ interface Props {
     id: string;
 }
 
-const EtterDuHarSøkt: React.StatelessComponent<Props> = ({ id }) => {
+const EtterDuHarSøkt: React.FunctionComponent<Props> = ({ id }) => {
     const intl = useIntl();
 
     return (

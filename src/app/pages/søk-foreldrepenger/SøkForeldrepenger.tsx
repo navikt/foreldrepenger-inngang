@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Breadcrumbs from '../../components/breadcrumbs/Breadcrumbs';
-import { FormattedMessage, IntlShape, useIntl } from 'react-intl';
+import { FormattedMessage, useIntl } from 'react-intl';
 import classnames from 'classnames';
 import Sidebanner from 'app/components/sidebanner/Sidebanner';
 
@@ -31,13 +31,9 @@ import InfoMorOgMorNyttLovverk from './InfoMorOgMorNyttLovverk';
 import InfoFarOgFarNyttLovverk from './InfoFarOgFarNyttLovverk';
 
 import './søkForeldrepenger.less';
+import { useLocation } from 'react-router-dom';
 
 const infoSvg = require('../../assets/hva-skjer-naar.svg').default;
-
-interface Props {
-    route: any;
-    intl: IntlShape;
-}
 
 const SøkForeldrepengerHeader = () => {
     return (
@@ -123,8 +119,9 @@ enum Lovverk {
     NYTT_LOVVERK = 'nyttLovverk',
 }
 
-const SøkForeldrepenger: React.FunctionComponent<Props> = () => {
+const SøkForeldrepenger: React.FunctionComponent = () => {
     const intl = useIntl();
+    const location = useLocation();
     const setValgtSituasjon = useState('farOgMor')[1];
     const [valgtProsess, setValgtProsess] = useState(undefined);
     const [valgtLovverk, setValgtLovverk] = useState<string | undefined>(undefined);

@@ -7,13 +7,14 @@ import '../infosider/infosider.less';
 import BEMHelper from 'app/utils/bem';
 import Sidebanner from 'app/components/sidebanner/Sidebanner';
 import Breadcrumbs from 'app/components/breadcrumbs/Breadcrumbs';
-import { RouteProps } from 'react-router';
+import { useLocation } from 'react-router-dom';
 
 const cls = BEMHelper('infosider');
 const svg = require('../../assets/ark/ark-hjelp.svg').default;
 
-const Regelendringer = ({ location }: RouteProps) => {
+const Regelendringer = () => {
     const intl = useIntl();
+    const location = useLocation();
 
     return (
         <div className={cls.block}>

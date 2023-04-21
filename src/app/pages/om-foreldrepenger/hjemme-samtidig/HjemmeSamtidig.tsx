@@ -11,7 +11,7 @@ interface Props {
     id: string;
 }
 
-const HjemmeSamtidig: React.StatelessComponent<Props> = ({ id }) => {
+const HjemmeSamtidig: React.FunctionComponent<Props> = ({ id }) => {
     const intl = useIntl();
 
     return (

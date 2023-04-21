@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { render } from 'react-dom';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import ScrollToTop from './utils/ScrollToTop';
 import App from './App';
 import * as Sentry from '@sentry/browser';
@@ -13,7 +13,7 @@ const root = document.getElementById('app');
 
 if (!Intl.PluralRules) {
     require('@formatjs/intl-pluralrules/polyfill');
-    require('@formatjs/intl-pluralrules/dist/locale-data/nb');
+    require('@formatjs/intl-pluralrules/locale-data/nb');
 }
 
 Sentry.init({
@@ -24,13 +24,13 @@ Sentry.init({
 
 render(
     <ErrorBoundary>
-        <Router>
+        <BrowserRouter basename="/">
             <ScrollToTop>
                 <Normaltekst tag="div">
                     <App />
                 </Normaltekst>
             </ScrollToTop>
-        </Router>
+        </BrowserRouter>
     </ErrorBoundary>,
     root
 );

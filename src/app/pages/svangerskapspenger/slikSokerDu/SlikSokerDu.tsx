@@ -31,7 +31,7 @@ const faner = [
 
 type Props = InputProps;
 
-const SlikSokerDu: React.StatelessComponent<Props> = ({ id }) => {
+const SlikSokerDu: React.FunctionComponent<Props> = ({ id }) => {
     const intl = useIntl();
 
     return (

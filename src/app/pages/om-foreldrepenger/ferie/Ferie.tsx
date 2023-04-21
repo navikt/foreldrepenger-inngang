@@ -20,7 +20,7 @@ interface Props {
     id: string;
 }
 
-const Ferie: React.StatelessComponent<Props> = ({ id }) => {
+const Ferie: React.FunctionComponent<Props> = ({ id }) => {
     const intl = useIntl();
 
     return (

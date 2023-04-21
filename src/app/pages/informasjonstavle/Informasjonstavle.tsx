@@ -19,7 +19,7 @@ import NavFrontendSpinner from 'nav-frontend-spinner';
 const cls = BEMHelper('informasjonstavle');
 const velgSkjemaIcon = require('../../assets/icons/brev.svg').default;
 
-const Informasjonstavle: React.StatelessComponent = () => {
+const Informasjonstavle: React.FunctionComponent = () => {
     const intl = useIntl();
     const [hasRedirected, setHasRedirected] = useState(false);
 

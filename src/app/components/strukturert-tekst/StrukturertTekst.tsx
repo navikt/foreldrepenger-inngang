@@ -1,4 +1,4 @@
-import React, { StatelessComponent, ReactNode } from 'react';
+import React, { FunctionComponent, ReactNode } from 'react';
 import TypografiBase from 'nav-frontend-typografi';
 import { StrukturertTekst, MarkDefinition, Avsnitt, Tekstsnutt, Definisjoner } from '../../utils/strukturertTekst';
 import WithLink from '../with-link/WithLink';
@@ -12,7 +12,7 @@ interface Props {
 
 const cls = BEMHelper('strukturertTekst');
 
-const StrukturertTekst: StatelessComponent<Props> = ({ tekst, definisjoner }) => {
+const StrukturertTekst: FunctionComponent<Props> = ({ tekst, definisjoner }) => {
     return <div className={cls.block}>{tekst ? tekst.map(renderAvsnitt(definisjoner)) : null}</div>;
 };
 

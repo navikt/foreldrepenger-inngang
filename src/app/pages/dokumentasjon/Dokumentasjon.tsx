@@ -8,16 +8,14 @@ import PanelMedIllustrasjon from '../../components/panel-med-illustrasjon/PanelM
 import Sidebanner from '../../components/sidebanner/Sidebanner';
 import SvgMask from 'app/components/svg-mask/SvgMask';
 import Innhold, { getSource } from 'app/utils/innhold/Innhold';
-
-interface Props {
-    location: any;
-}
+import { useLocation } from 'react-router-dom';
 
 const infosiderCls = BEMHelper('infosider');
 const pageSvg = require('./../../assets/icons/brev.svg').default;
 
-const Dokumentasjon: React.StatelessComponent<Props> = ({ location }) => {
+const Dokumentasjon: React.FunctionComponent = () => {
     const intl = useIntl();
+    const location = useLocation();
 
     return (
         <div className={infosiderCls.block}>

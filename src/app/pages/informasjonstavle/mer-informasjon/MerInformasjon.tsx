@@ -1,4 +1,4 @@
-import React, { StatelessComponent } from 'react';
+import React, { FunctionComponent } from 'react';
 import { HoyreChevron } from 'nav-frontend-chevron';
 import { useIntl } from 'react-intl';
 import { Page } from 'app/types/Page';
@@ -11,7 +11,7 @@ import './merInformasjon.less';
 
 const cls = BEMHelper('merInformasjon');
 
-const MerInformasjon: StatelessComponent = () => {
+const MerInformasjon: FunctionComponent = () => {
     const intl = useIntl();
 
     return (

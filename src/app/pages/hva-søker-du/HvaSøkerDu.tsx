@@ -9,15 +9,13 @@ import Sidebanner from 'app/components/sidebanner/Sidebanner';
 import Svangerskapspenger from './Svangerskapspenger';
 import SvgBanner from '../../components/svg-banner/SvgBanner';
 import './hvaSøkerDu.less';
+import { useLocation } from 'react-router-dom';
 
 const cls = BEMHelper('hvaSøkerDu');
 
-interface Props {
-    location: any;
-}
-
-const HvaSøkerDu: React.StatelessComponent<Props> = ({ location }) => {
+const HvaSøkerDu: React.FunctionComponent = () => {
     const intl = useIntl();
+    const location = useLocation();
 
     return (
         <div>

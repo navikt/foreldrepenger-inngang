@@ -15,7 +15,7 @@ interface OwnProps {
 
 type Props = OwnProps;
 
-const DuHarRett: React.StatelessComponent<Props> = ({ minLogo, overskrift, punkter, knapp }) => {
+const DuHarRett: React.FunctionComponent<Props> = ({ minLogo, overskrift, punkter, knapp }) => {
     const intl = useIntl();
 
     return (

@@ -10,7 +10,7 @@ const arbeidstakerSvg = require('../../assets/ark/ark-beregning.svg').default;
 
 type Props = EngangsstonadSectionProps;
 
-const HvaKanDuFå: React.StatelessComponent<Props> = ({ id }) => {
+const HvaKanDuFå: React.FunctionComponent<Props> = ({ id }) => {
     const intl = useIntl();
 
     return (

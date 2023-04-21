@@ -6,7 +6,7 @@ import LangtPanelMedBilde from '../../../../../components/langt-panel-med-bilde/
 const cls = BEMHelper('valg');
 const hvorMye = require('../../../../../assets/ark/ark-money2.svg').default;
 
-const NavigasjonsBoks: React.StatelessComponent = () => {
+const NavigasjonsBoks: React.FunctionComponent = () => {
     const intl = useIntl();
 
     return (

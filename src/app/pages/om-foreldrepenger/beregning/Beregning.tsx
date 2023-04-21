@@ -62,7 +62,7 @@ interface Props {
     id: string;
 }
 
-const Beregning: React.StatelessComponent<Props> = ({ id }) => {
+const Beregning: React.FunctionComponent<Props> = ({ id }) => {
     const intl = useIntl();
 
     return (

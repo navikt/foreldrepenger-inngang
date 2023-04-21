@@ -17,7 +17,7 @@ interface Props {
     body: string;
 }
 
-const LangtPanelMedBilde: React.StatelessComponent<Props> = ({ svg, url, title, body }) => (
+const LangtPanelMedBilde: React.FunctionComponent<Props> = ({ svg, url, title, body }) => (
     <WithLink url={url} noStyling={true} className={classnames(cls.block)}>
         <MediaQuery minWidth={576}>
             <Desktopversjon svg={svg} title={title} body={body} />

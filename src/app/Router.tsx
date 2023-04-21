@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Route, Redirect, Switch, withRouter, RouteProps } from 'react-router-dom';
+import { Route, Routes, Navigate } from 'react-router-dom';
 
 import { Page } from './types/Page';
 import Dokumentasjon from './pages/dokumentasjon/Dokumentasjon';
@@ -12,35 +12,19 @@ import Regelendringer from './pages/regelendringer/Regelendringer';
 import SøkForeldrepenger from './pages/søk-foreldrepenger/SøkForeldrepenger';
 import Veiviser from './pages/veiviser/Veiviser';
 
-interface ValidRouteProps extends RouteProps {
-    path?: Page;
-}
-
-const ValidRoute = (props: ValidRouteProps) => <Route {...props} />;
-
 const Router = () => (
-    <Switch>
-        <ValidRoute exact={true} path={Page.Root} component={Informasjonstavle} key="informasjonstavle" />
-        <ValidRoute exact={true} path={Page.Dokumentasjon} component={Dokumentasjon} key="dokumentasjon" />
-        <ValidRoute exact={true} path={Page.HvaSøkerDu} component={HvaSøkerDu} key="hva-soker-du" />
-        <ValidRoute exact={true} path={Page.HvorMye} component={Kalkulator} key="kalkulator" />
-        <ValidRoute exact={true} path={Page.OmEngangsstønad} component={OmEngangsstønad} key="om-engangsstonad" />
-        <ValidRoute
-            exact={true}
-            path={Page.SøkeOmForeldrepenger}
-            component={SøkForeldrepenger}
-            key="sok-foreldrepenger"
-        />
-        <ValidRoute exact={true} path={Page.Regelendringer} component={Regelendringer} key="regelendringer" />
-        <ValidRoute
-            exact={true}
-            path={Page.OmSvangerskapspenger}
-            component={OmSvangerskapspenger}
-            key="om-svangerskapspenger"
-        />
-        <ValidRoute exact={true} path={Page.Veiviser} component={Veiviser} key="veiviser" />
-        <Redirect to="/" />
-    </Switch>
+    <Routes>
+        <Route path={Page.Root} element={<Informasjonstavle />} />
+        <Route path={Page.Dokumentasjon} element={<Dokumentasjon />} />
+        <Route path={Page.HvaSøkerDu} element={<HvaSøkerDu />} />
+        <Route path={Page.HvorMye} element={<Kalkulator />} />
+        <Route path={Page.OmEngangsstønad} element={<OmEngangsstønad />} />
+        <Route path={Page.SøkeOmForeldrepenger} element={<SøkForeldrepenger />} />
+        <Route path={Page.Regelendringer} element={<Regelendringer />} />
+        <Route path={Page.OmSvangerskapspenger} element={<OmSvangerskapspenger />} />
+        <Route path={Page.Veiviser} element={<Veiviser />} />
+        <Route path="/" element={<Navigate to={Page.Root} key="redirect" />} />
+    </Routes>
 );
 
-export default withRouter(Router);
+export default Router;

@@ -5,12 +5,11 @@ const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
 
 const webpackConfig = {
     entry: {
-        bundle: ['babel-polyfill', `${__dirname}/../../app/bootstrap.tsx`],
+        bundle: [`${__dirname}/../../app/bootstrap.tsx`],
     },
     output: {
         path: path.resolve(__dirname, './../../../dist'),
         filename: 'js/[name].js',
-        chunkFilename: 'js/[name].js',
         publicPath: '/dist/',
     },
     resolve: {
@@ -23,17 +22,15 @@ const webpackConfig = {
         rules: [
             {
                 test: /\.(ts|tsx)$/,
-                include: [path.resolve(__dirname, './../../app')],
-                loader: require.resolve('awesome-typescript-loader'),
-            },
-            {
-                enforce: 'pre',
-                test: /\.(js|ts|tsx)$/,
+                use: [
+                    {
+                        loader: 'ts-loader',
+                        options: {
+                            transpileOnly: false,
+                        },
+                    },
+                ],
                 exclude: /node_modules/,
-                loader: 'eslint-loader',
-                options: {
-                    cache: true,
-                },
             },
             {
                 test: /\.js$/,
@@ -42,7 +39,7 @@ const webpackConfig = {
             },
             {
                 test: /\.svg$/,
-                use: 'svg-sprite-loader',
+                use: [{ loader: 'svg-sprite-loader', options: {} }],
             },
             {
                 test: /\.xml$/,

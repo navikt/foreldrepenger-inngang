@@ -10,7 +10,7 @@ interface Props {
     id: string;
 }
 
-const HvorLengeKanDuFa: React.StatelessComponent<Props> = ({ id }) => {
+const HvorLengeKanDuFa: React.FunctionComponent<Props> = ({ id }) => {
     const intl = useIntl();
 
     return (

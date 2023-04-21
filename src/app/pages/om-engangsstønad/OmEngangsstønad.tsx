@@ -17,10 +17,6 @@ import '../infosider/infosider.less';
 
 const infosiderCls = BEMHelper('infosider');
 
-interface Props {
-    location: any;
-}
-
 export type EngangsstonadSection =
     | 'hvem-kan-fa-engangsstonad'
     | 'hva-kan-du-fa'
@@ -40,7 +36,7 @@ const sections: EngangsstonadSection[] = [
     'far-eller-medmor',
 ];
 
-const OmEngangsstonad: React.StatelessComponent<Props> = ({ location }) => {
+const OmEngangsstonad: React.FunctionComponent = () => {
     const intl = useIntl();
 
     return (

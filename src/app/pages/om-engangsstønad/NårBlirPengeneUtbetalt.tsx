@@ -9,7 +9,7 @@ const utbetalingSvg = require('../../assets/ark/ark-timeglass.svg').default;
 
 type Props = EngangsstonadSectionProps;
 
-const NårBlirPengeneUtbetalt: React.StatelessComponent<Props> = ({ id }) => {
+const NårBlirPengeneUtbetalt: React.FunctionComponent<Props> = ({ id }) => {
     const intl = useIntl();
     return (
         <PanelMedIllustrasjon
