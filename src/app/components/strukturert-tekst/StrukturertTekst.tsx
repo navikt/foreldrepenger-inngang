@@ -49,72 +49,70 @@ const renderAvsnitt = (definisjoner?: Definisjoner) => (avsnitt: Avsnitt, index:
     }
 };
 
-const renderTekstsnutt = (markDefs: MarkDefinition[], variabler?: Definisjoner) => (
-    tekstsnutt: Tekstsnutt,
-    index: number
-) => {
-    let snuttype = 'span';
-    let text = '';
-    let marks: string[] = [];
+const renderTekstsnutt =
+    (markDefs: MarkDefinition[], variabler?: Definisjoner) => (tekstsnutt: Tekstsnutt, index: number) => {
+        let snuttype = 'span';
+        let text = '';
+        let marks: string[] = [];
 
-    if (typeof tekstsnutt !== 'string') {
-        snuttype = tekstsnutt.type || 'span';
-        text = tekstsnutt.text;
-        marks = tekstsnutt.marks || [];
-    } else {
-        text = tekstsnutt;
-    }
-
-    const variablesAvailable = variabler && variabler[text] && marks && marks.includes('variable');
-    let toRender: ReactNode = variabler && variablesAvailable ? variabler[text] : text;
-
-    switch (snuttype) {
-        case 'span': {
-            toRender = <span>{toRender}</span>;
-            break;
+        if (typeof tekstsnutt !== 'string') {
+            snuttype = tekstsnutt.type || 'span';
+            text = tekstsnutt.text;
+            marks = tekstsnutt.marks || [];
+        } else {
+            text = tekstsnutt;
         }
-        case 'span_nowrap': {
-            toRender = <span className={cls.element('unbreakable')}>{toRender}</span>;
-            break;
-        }
-        default: {
-            toRender = <span>{toRender}</span>;
-        }
-    }
 
-    marks.forEach((mark) => {
-        switch (mark) {
-            case 'bold': {
-                toRender = <b>{toRender}</b>;
+        const variablesAvailable = variabler && variabler[text] && marks && marks.includes('variable');
+        let toRender: ReactNode = variabler && variablesAvailable ? variabler[text] : text;
+
+        switch (snuttype) {
+            case 'span': {
+                toRender = <span>{toRender}</span>;
                 break;
             }
-
-            case 'italic': {
-                toRender = <i>{toRender}</i>;
+            case 'span_nowrap': {
+                toRender = <span className={cls.element('unbreakable')}>{toRender}</span>;
                 break;
             }
-
-            case 'variable': {
-                break;
-            }
-
             default: {
-                if (markDefs) {
-                    const markDefinition = markDefs.find((m) => m.key === mark);
-                    if (markDefinition) {
-                        toRender = (
-                            <MarkWrapper mark={markDefinition} otherMarks={marks}>
-                                {toRender}
-                            </MarkWrapper>
-                        );
+                toRender = <span>{toRender}</span>;
+            }
+        }
+
+        marks.forEach((mark) => {
+            switch (mark) {
+                case 'bold': {
+                    toRender = <b>{toRender}</b>;
+                    break;
+                }
+
+                case 'italic': {
+                    toRender = <i>{toRender}</i>;
+                    break;
+                }
+
+                case 'variable': {
+                    break;
+                }
+
+                default: {
+                    if (markDefs) {
+                        const markDefinition = markDefs.find((m) => m.key === mark);
+                        if (markDefinition) {
+                            toRender = (
+                                <MarkWrapper mark={markDefinition} otherMarks={marks}>
+                                    {toRender}
+                                </MarkWrapper>
+                            );
+                        }
                     }
                 }
             }
-        }
-    });
+        });
 
-    return addKeyToComponent(index, toRender);
-};
+        return addKeyToComponent(index, toRender);
+    };
 
 const MarkWrapper = ({
     mark,

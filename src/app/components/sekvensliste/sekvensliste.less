@@ -2,11 +2,11 @@
 @import './sekvenslisteVariables.less';
 
 .verticalStroke() {
-    content: "";
+    content: '';
     position: absolute;
     top: 0;
     bottom: 0;
-    left: (@sekvens-diameter / 2) - (@stroke-width/2);
+    left: (@sekvens-diameter / 2) - (@stroke-width / 2);
     width: @stroke-width;
     background-color: @lavender;
 }
@@ -35,7 +35,7 @@
     @media (max-width: @mobile-breakpoint) {
         &__sekvens {
             &:after {
-                left: calc(50% - @stroke-width/2);
+                left: calc(50% - @stroke-width / 2);
                 display: block !important;
             }
         }

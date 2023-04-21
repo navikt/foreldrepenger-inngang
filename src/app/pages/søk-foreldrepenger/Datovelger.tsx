@@ -26,7 +26,6 @@ const Datovelger: React.FunctionComponent<Props> = ({ date, dateIsValid, onChang
             </TypografiBase>
             <div className={parentCls.element('container')}>
                 <NavDatovelger.Datepicker
-                    
                     aria-label="datovelger"
                     allowInvalidDateSelection
                     inputId="foreldrepenger-startdato"

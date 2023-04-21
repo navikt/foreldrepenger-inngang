@@ -11,6 +11,7 @@
         "clean-build": "rimraf ./dist",
         "lint": "eslint --quiet \"./src/**/*.{js,ts,tsx}\"",
         "lint:fix": "eslint --quiet --fix \"./src/**/*.{js,ts,tsx}\"",
+        "prettier": "prettier --write src",
         "start-express": "node ./server.js",
         "start": "node ./src/build/scripts/start-dev.js",
         "start-no-decorator": "node ./src/build/scripts/start-dev-nodecorator.js",

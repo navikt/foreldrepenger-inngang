@@ -27,7 +27,6 @@ const JegVilJobbe: React.FunctionComponent<Props> = ({ size }) => {
                                         fontFamily="SourceSansPro-Regular, Source Sans Pro"
                                         fontSize="16"
                                         fontWeight="normal"
-                                        line-spacing="22"
                                         fill="#0067C5"
                                     >
                                         <tspan x="14.26" y="44">

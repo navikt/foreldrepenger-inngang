@@ -64,7 +64,8 @@ class Ukekalkulator extends React.Component<Props, State> {
 
     onPercentageSelect = (selectedPercentage: number) => {
         // @ts-ignore
-        const selectedNumberOfWeeks = this.props.antallUtbetalingsuker[this.state.selectedNumberOfChildren - 1][selectedPercentage];
+        const selectedNumberOfWeeks =
+            this.props.antallUtbetalingsuker[this.state.selectedNumberOfChildren - 1][selectedPercentage];
 
         this.setState({
             selectedPercentage,
@@ -125,30 +126,32 @@ class Ukekalkulator extends React.Component<Props, State> {
     };
 }
 
-const addAntallUkerAttributes = (
-    selectedNumberOfWeeks: number,
-    onSelect: (numberOfWeeks: number, numberOfChildren: number, percentage: number) => void
-) => ({
-    numberOfWeeks,
-    numberOfChildren,
-    percentage,
-}: {
-    numberOfWeeks: number;
-    numberOfChildren: number;
-    percentage: number;
-}) => {
-    return (
-        <AntallUker
-            parentCls={cls}
-            numberOfWeeks={numberOfWeeks}
-            numberOfChildren={numberOfChildren}
-            percentage={percentage}
-            isSelected={selectedNumberOfWeeks === numberOfWeeks}
-            onSelect={() => {
-                onSelect(numberOfWeeks, numberOfChildren, percentage);
-            }}
-        />
-    );
-};
+const addAntallUkerAttributes =
+    (
+        selectedNumberOfWeeks: number,
+        onSelect: (numberOfWeeks: number, numberOfChildren: number, percentage: number) => void
+    ) =>
+    ({
+        numberOfWeeks,
+        numberOfChildren,
+        percentage,
+    }: {
+        numberOfWeeks: number;
+        numberOfChildren: number;
+        percentage: number;
+    }) => {
+        return (
+            <AntallUker
+                parentCls={cls}
+                numberOfWeeks={numberOfWeeks}
+                numberOfChildren={numberOfChildren}
+                percentage={percentage}
+                isSelected={selectedNumberOfWeeks === numberOfWeeks}
+                onSelect={() => {
+                    onSelect(numberOfWeeks, numberOfChildren, percentage);
+                }}
+            />
+        );
+    };
 
 export default injectIntl(Ukekalkulator);
