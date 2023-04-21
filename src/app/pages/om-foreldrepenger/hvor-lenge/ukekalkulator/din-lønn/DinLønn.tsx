@@ -15,7 +15,7 @@ interface Props {
     onPercentageSelect: (p: number) => void;
 }
 
-const DinLønn: React.StatelessComponent<Props> = ({ grandParentCls, selectedPercentage, onPercentageSelect }) => {
+const DinLønn: React.FunctionComponent<Props> = ({ grandParentCls, selectedPercentage, onPercentageSelect }) => {
     const intl = useIntl();
     const monthlyWage = EKSEMPEL_KRONER_PER_MÅNED;
 

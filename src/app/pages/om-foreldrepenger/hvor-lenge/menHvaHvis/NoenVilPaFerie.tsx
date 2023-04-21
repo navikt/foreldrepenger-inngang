@@ -4,7 +4,7 @@ interface Props {
     size: string;
 }
 
-const NoenVilPaFerie: React.StatelessComponent<Props> = ({ size }) => {
+const NoenVilPaFerie: React.FunctionComponent<Props> = ({ size }) => {
     return (
         <svg
             width={size}
@@ -27,7 +27,6 @@ const NoenVilPaFerie: React.StatelessComponent<Props> = ({ size }) => {
                                         fontFamily="SourceSansPro-Regular, Source Sans Pro"
                                         fontSize="16"
                                         fontWeight="normal"
-                                        line-spacing="22"
                                         fill="#0067C5"
                                     >
                                         <tspan x="7.14" y="44">

@@ -14,7 +14,7 @@ interface OwnProps {
 
 type Props = OwnProps;
 
-const ResultatPunkt: React.StatelessComponent<Props> = ({ tegn, translationString }) => {
+const ResultatPunkt: React.FunctionComponent<Props> = ({ tegn, translationString }) => {
     const intl = useIntl();
 
     return (

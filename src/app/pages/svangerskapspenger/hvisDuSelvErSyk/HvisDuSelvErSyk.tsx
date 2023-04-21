@@ -10,7 +10,7 @@ interface Props {
     id: string;
 }
 
-const HvisDuSelvErSyk: React.StatelessComponent<Props> = ({ id }) => {
+const HvisDuSelvErSyk: React.FunctionComponent<Props> = ({ id }) => {
     const intl = useIntl();
 
     return (

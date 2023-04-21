@@ -16,7 +16,7 @@ interface Props {
     parentCls: BEMWrapper;
 }
 
-const Veiledermelding: React.StatelessComponent<Props> = ({ selectedDate, parentCls }) => {
+const Veiledermelding: React.FunctionComponent<Props> = ({ selectedDate, parentCls }) => {
     const intl = useIntl();
 
     return (

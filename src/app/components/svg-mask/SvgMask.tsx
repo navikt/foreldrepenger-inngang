@@ -1,4 +1,4 @@
-import React, { StatelessComponent } from 'react';
+import React, { FunctionComponent } from 'react';
 import CustomSVGFromSprite, { IconRef } from 'app/utils/CustomSVG';
 import BEMHelper from 'app/utils/bem';
 import classnames from 'classnames';
@@ -13,7 +13,7 @@ interface Props {
     anchorToBottom?: boolean;
 }
 
-const SvgMask: StatelessComponent<Props> = ({ svg, small, smaller, anchorToBottom }) => {
+const SvgMask: FunctionComponent<Props> = ({ svg, small, smaller, anchorToBottom }) => {
     let svgSize = smaller ? 40 : small ? 64 : 100;
     if (!anchorToBottom) {
         svgSize = svgSize * 0.6;

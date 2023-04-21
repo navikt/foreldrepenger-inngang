@@ -1,4 +1,4 @@
-import React, { ReactNodeArray } from 'react';
+import React from 'react';
 import { IntlShape, useIntl } from 'react-intl';
 import { Link } from 'react-router-dom';
 import BEMHelper from '../../utils/bem';
@@ -41,7 +41,7 @@ const Breadcrumbs = (props: Props) => {
     const { width } = useWindowSize();
     const { path } = props;
 
-    const breadcrumbChain: ReactNodeArray = [];
+    const breadcrumbChain = [];
     const parsedPath = parsePath(path, intl);
 
     if (width && width < 576) {

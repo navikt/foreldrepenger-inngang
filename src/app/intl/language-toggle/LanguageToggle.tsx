@@ -51,7 +51,7 @@ const handleSelection = (value: JSX.Element[], _e: any, toggleLanguage: any) => 
     toggleLanguage(getLanguageCodeFromValue(value[1].props.id));
 };
 
-const LanguageToggle: React.StatelessComponent<Props> = ({ toggleLanguage }) => {
+const LanguageToggle: React.FunctionComponent<Props> = ({ toggleLanguage }) => {
     const intl = useIntl();
     const menuLanguages: Language[] = (['nb', 'nn', 'en'] as Language[]).filter((code) => code !== intl.locale);
 

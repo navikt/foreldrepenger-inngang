@@ -15,7 +15,7 @@ const adopsjonSvg = require('../../../assets/icons/stork.svg').default;
 
 type Props = EngangsstonadSectionProps;
 
-const NårKanDuSøke: React.StatelessComponent<Props> = ({ id }) => {
+const NårKanDuSøke: React.FunctionComponent<Props> = ({ id }) => {
     const intl = useIntl();
 
     return (

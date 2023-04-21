@@ -11,7 +11,7 @@ interface Props {
     children: React.ReactNode;
 }
 
-const LesMer: React.StatelessComponent<Props> = ({ intro, children }) => (
+const LesMer: React.FunctionComponent<Props> = ({ intro, children }) => (
     <div className={cls.block}>
         <Ekspanderbartpanel border={true} tittel={<Element>{intro}</Element>}>
             {children}

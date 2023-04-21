@@ -1,5 +1,5 @@
 const path = require('path');
-const merge = require('webpack-merge');
+const { merge } = require('webpack-merge');
 const common = require('./webpack.config.global.js');
 
 const HtmlWebpackHarddiskPlugin = require('html-webpack-harddisk-plugin');
@@ -32,8 +32,6 @@ module.exports = merge(common, {
         new MiniCssExtractPlugin({
             filename: 'css/[name].css',
             chunkFilename: 'css/[name].css',
-            disable: false,
-            allChunks: true,
         }),
     ],
 });

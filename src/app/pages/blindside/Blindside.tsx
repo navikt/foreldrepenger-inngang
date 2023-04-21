@@ -13,7 +13,7 @@
 
 // type Props = RouteComponentProps;
 
-// const Blindside: React.StatelessComponent<Props> = ({ history }) => {
+// const Blindside: React.FunctionComponent<Props> = ({ history }) => {
 //     const intl = useIntl();
 
 //     return (

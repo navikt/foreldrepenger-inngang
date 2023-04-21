@@ -8,7 +8,7 @@ import PanelMedTittel from '../../components/panel-med-tittel/PanelMedTittel';
 import Innhold, { getSource } from 'app/utils/innhold/Innhold';
 import UserHelpAlternativ from './user-help-alternativ/UserHelpAlternativ';
 
-const Foreldrepenger: React.StatelessComponent = () => {
+const Foreldrepenger: React.FunctionComponent = () => {
     const intl = useIntl();
 
     return (

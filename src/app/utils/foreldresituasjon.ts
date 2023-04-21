@@ -246,9 +246,11 @@ const erFør2019 = () => moment().year() < 2019;
 
 export const getAntallUker = (foreldresituasjon: Foreldresituasjon, kvote: Kvote, dekningsgrad: Dekningsgrad) => {
     const reglement = erFør2019() ? antallUkerFør2019 : antallUkerFom2019;
+    // @ts-ignore
     return reglement[foreldresituasjon][kvote][dekningsgrad];
 };
 
 export const getMottakersOversettbareNavn = (foreldresituasjon: Foreldresituasjon, kvote: Kvote) => {
+    // @ts-ignore
     return oversettbareNavnForAlleKvoter[foreldresituasjon][kvote];
 };

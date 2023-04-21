@@ -10,7 +10,7 @@ import JegVilJobbeHeltidMobile from './komponenter/JegVilJobbeHeltidMobile';
 
 const cls = BEMHelper('jegVilJobbe');
 
-const JobbeHeltid: React.StatelessComponent = () => {
+const JobbeHeltid: React.FunctionComponent = () => {
     const intl = useIntl();
 
     return (

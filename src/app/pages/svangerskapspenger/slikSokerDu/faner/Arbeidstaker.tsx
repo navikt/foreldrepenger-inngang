@@ -7,7 +7,7 @@ import { FlexibleSvg } from '../../../../utils/CustomSVG';
 import UtvidetInformasjon from '../../../kalkulator/utvidetinformasjon/UtvidetInformasjon';
 import getTranslation from '../../../../utils/i18nUtils';
 
-const Arbeidstaker: React.StatelessComponent = () => {
+const Arbeidstaker: React.FunctionComponent = () => {
     const intl = useIntl();
 
     return (

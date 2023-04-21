@@ -20,7 +20,7 @@ interface Props {
 
 const cls = BEMHelper('foreldrepar');
 
-const Foreldrepar: React.StatelessComponent<Props> = ({ firstParent, secondParent, variant }) => {
+const Foreldrepar: React.FunctionComponent<Props> = ({ firstParent, secondParent, variant }) => {
     const firstSvg = require(`../../assets/foreldre/${firstParent}.svg`).default;
     const secondSvg = require(`../../assets/foreldre/${secondParent}.svg`).default;
 

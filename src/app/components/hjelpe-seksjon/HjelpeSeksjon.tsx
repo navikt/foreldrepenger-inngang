@@ -12,7 +12,7 @@ const svg = require('../../assets/ark/ark-hjelp.svg').default;
 const content = 'om-foreldrepenger/hjelp/hjelp';
 const cls = BEMHelper('hjelp');
 
-const Ferie: React.StatelessComponent = () => {
+const Ferie: React.FunctionComponent = () => {
     const intl = useIntl();
 
     return (

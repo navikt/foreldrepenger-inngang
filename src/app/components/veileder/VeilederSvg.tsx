@@ -5,7 +5,7 @@ export interface Props {
     svgProps: any;
 }
 
-const VeilederSvg: React.StatelessComponent<Props> = ({ svgProps }) => (
+const VeilederSvg: React.FunctionComponent<Props> = ({ svgProps }) => (
     <svg role="img" aria-hidden="true" viewBox="0 0 96 96" xmlnsXlink="http://www.w3.org/1999/xlink" {...svgProps}>
         <title>Veileder fra NAV</title>
         <g fill="none" fillRule="evenodd">

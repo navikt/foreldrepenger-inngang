@@ -4,7 +4,7 @@ interface Props {
     size: string;
 }
 
-const EnAvOssBlirSyk: React.StatelessComponent<Props> = ({ size }) => {
+const EnAvOssBlirSyk: React.FunctionComponent<Props> = ({ size }) => {
     return (
         <svg
             width={size}
@@ -27,7 +27,6 @@ const EnAvOssBlirSyk: React.StatelessComponent<Props> = ({ size }) => {
                                         fontFamily="SourceSansPro-Regular, Source Sans Pro"
                                         fontSize="16"
                                         fontWeight="normal"
-                                        line-spacing="22"
                                         fill="#0067C5"
                                     >
                                         <tspan x="8.148" y="44">

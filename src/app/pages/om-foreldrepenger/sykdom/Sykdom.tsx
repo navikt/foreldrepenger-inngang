@@ -25,7 +25,7 @@ const syke = 'om-foreldrepenger/sykdom/en-av-foreldrene-er-syke/en-av-foreldrene
 const sykeUtsette = 'om-foreldrepenger/sykdom/en-av-foreldrene-er-syke/utsette';
 const sykeOverta = 'om-foreldrepenger/sykdom/en-av-foreldrene-er-syke/overta';
 
-const BarnetErInnlagtWithoutIntl: React.StatelessComponent = () => {
+const BarnetErInnlagtWithoutIntl: React.FunctionComponent = () => {
     const intl = useIntl();
 
     return (
@@ -51,7 +51,7 @@ const BarnetErInnlagtWithoutIntl: React.StatelessComponent = () => {
     );
 };
 
-const EnAvForeldreneErSykeWithoutIntl: React.StatelessComponent = () => {
+const EnAvForeldreneErSykeWithoutIntl: React.FunctionComponent = () => {
     const intl = useIntl();
 
     return (
@@ -104,7 +104,7 @@ interface Props {
     id: string;
 }
 
-const Sykdom: React.StatelessComponent<Props> = ({ id }) => {
+const Sykdom: React.FunctionComponent<Props> = ({ id }) => {
     const intl = useIntl();
 
     return (

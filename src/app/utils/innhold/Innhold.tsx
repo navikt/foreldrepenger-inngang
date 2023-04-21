@@ -20,20 +20,31 @@ const renderWithValues = (type: NodeType) => (props: any, values: any) => ({
 });
 
 const xmlToReact = new XMLToReact({
+    // @ts-ignore
     innhold: renderAs(Node.Innhold),
+    // @ts-ignore
     avsnitt: renderAs(Node.Avsnitt),
+    // @ts-ignore
     lenke: renderAs(Node.Lenke),
+    // @ts-ignore
     liste: renderAs(Node.Liste),
     punkt: renderAs('li'),
     b: renderAs('strong'),
     i: renderAs('emphasize'),
     span: renderAs('span'),
+    // @ts-ignore
     lesmer: renderAs(Node.LesMerPanel),
+    // @ts-ignore
     variabel: renderWithValues(Node.Variabel),
+    // @ts-ignore
     unbreakable: renderAs(Node.Unbreakable),
+    // @ts-ignore
     søkKnapp: renderAs(Node.SøkNåKnapp),
+    // @ts-ignore
     ettersendKnapp: renderAs(Node.EttersendKnapp),
+    // @ts-ignore
     søkOgEttersendKnapp: renderAs(Node.SøkOgEttersendKnapp),
+    // @ts-ignore
     midstiltTittel: renderAs(Node.MidstiltTittel),
 });
 

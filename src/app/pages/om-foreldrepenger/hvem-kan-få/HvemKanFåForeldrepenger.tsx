@@ -27,7 +27,7 @@ interface Props {
     id: string;
 }
 
-const HvemKanFåForeldrepenger: React.StatelessComponent<Props> = ({ id }) => {
+const HvemKanFåForeldrepenger: React.FunctionComponent<Props> = ({ id }) => {
     const intl = useIntl();
 
     return (

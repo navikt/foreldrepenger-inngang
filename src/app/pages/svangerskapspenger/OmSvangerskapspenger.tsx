@@ -17,12 +17,9 @@ import HvorLengeKanDuFa from './hvorLengeKanDuFa/HvorLengeKanDuFa';
 import HvorMyeKanDuFa from './hvorMyeKanDuFa/HvorMyeKanDuFa';
 import Environment from '../../Environment';
 import EtterDuHarSøktSvangerskapspenger from './etter-du-har-søkt/EtterDuHarSøktSvangerskapspenger';
+import { useLocation } from 'react-router-dom';
 
 const cls = BEMHelper('infosider');
-
-interface Props {
-    location: any;
-}
 
 export type SvangerskapSection =
     | 'hvem-kan-fa-svangerskapspenger'
@@ -43,8 +40,9 @@ const sections: SvangerskapSection[] = [
     'etter-du-har-søkt',
 ];
 
-const OmSvangerskapspenger: React.StatelessComponent<Props> = ({ location }) => {
+const OmSvangerskapspenger: React.FunctionComponent = () => {
     const intl = useIntl();
+    const location = useLocation();
 
     return (
         <div className={classnames(cls.block)}>

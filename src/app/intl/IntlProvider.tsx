@@ -11,6 +11,7 @@ export type Language = 'nb' | 'nn' | 'en';
 
 interface StateProps {
     language: Language;
+    children: React.ReactElement;
 }
 
 const localesMyAppSupports = ['nb-NO'];
