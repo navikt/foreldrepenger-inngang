@@ -1,4 +1,4 @@
-FROM node:18.16.0
+FROM node:17.9.1
 LABEL org.opencontainers.image.source=https://github.com/navikt/foreldrepengesoknad
 WORKDIR /usr/src/app
 
