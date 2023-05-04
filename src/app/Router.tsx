@@ -21,7 +21,7 @@ const Router = () => (
         <Route path={Page.Regelendringer} element={<Regelendringer />} />
         <Route path={Page.OmSvangerskapspenger} element={<OmSvangerskapspenger />} />
         <Route path={Page.Veiviser} element={<Veiviser />} />
-        <Route path="/" element={<Navigate to={Page.Root} key="redirect" />} />
+        <Route path="/*" element={<Navigate to={Page.Root} key="redirect" />} />
     </Routes>
 );
 
