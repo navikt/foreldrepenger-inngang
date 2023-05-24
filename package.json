@@ -82,7 +82,7 @@
         "style-loader": "^3.3.2",
         "svg-sprite-loader": "^6.0.11",
         "ts-jest": "^29.1.0",
-        "ts-loader": "^9.4.2",
+        "ts-loader": "^9.4.3",
         "typescript": "^5.0.4",
         "wait-on": "^7.0.1",
         "walk": "^2.3.14",
