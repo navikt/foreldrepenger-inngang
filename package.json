@@ -86,7 +86,7 @@
         "typescript": "^5.0.4",
         "wait-on": "^7.0.1",
         "walk": "^2.3.14",
-        "webpack": "^5.82.0",
+        "webpack": "^5.87.0",
         "webpack-dev-server": "^4.13.3",
         "webpack-merge": "^5.8.0"
     },
