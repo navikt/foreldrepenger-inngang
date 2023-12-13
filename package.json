@@ -84,7 +84,7 @@
         "ts-jest": "^29.1.0",
         "ts-loader": "^9.4.2",
         "typescript": "^5.0.4",
-        "wait-on": "^7.0.1",
+        "wait-on": "^7.2.0",
         "walk": "^2.3.14",
         "webpack": "^5.82.0",
         "webpack-dev-server": "^4.13.3",
