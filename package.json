@@ -168,7 +168,7 @@
         "react-modal": "^3.11.2",
         "react-motion": "^0.5.2",
         "react-responsive": "^9.0.2",
-        "react-router-dom": "^6.11.1",
+        "react-router-dom": "^6.21.0",
         "react-transition-group": "^4.4.1",
         "request": "^2.88.2",
         "snyk": "^1.817.0"
