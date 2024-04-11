@@ -23,7 +23,6 @@ const server = new WebpackDevServer(
         NAV_STYLES: '',
         NAV_HEADING: '',
         NAV_FOOTER: '',
-        NAV_MENU_RESOURCES: '',
     })
 );
 
