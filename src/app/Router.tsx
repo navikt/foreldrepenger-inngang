@@ -23,7 +23,6 @@ const Router = () => (
         <Route path={Page.Root} element={<Informasjonstavle />} />
         <Route path={Page.Dokumentasjon} element={<Dokumentasjon />} />
         <Route path={Page.HvaSøkerDu} element={<HvaSøkerDu />} />
-        <Route path={Page.HvorMye} element={<Navigate to={Page.Root} key="redirect" />} />
         <Route
             path={Page.HvorMye}
             element={<RedirectUrl url="https://www.nav.no/foreldrepenger/veivisere/hvor-mye" />}
