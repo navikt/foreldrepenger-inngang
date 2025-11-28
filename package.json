@@ -32,7 +32,7 @@
         "@babel/preset-env": "^7.21.5",
         "@babel/preset-react": "^7.10.4",
         "@types/classnames": "^2.2.10",
-        "@types/enzyme": "^3.10.13",
+        "@types/enzyme": "^3.10.19",
         "@types/enzyme-adapter-react-16": "^1.0.6",
         "@types/history": "^5.0.0",
         "@types/jest": "^29.5.1",
