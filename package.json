@@ -65,7 +65,7 @@
         "eslint-config-prettier": "^8.8.0",
         "eslint-import-resolver-webpack": "^0.13.2",
         "eslint-loader": "^4.0.2",
-        "eslint-plugin-import": "^2.27.5",
+        "eslint-plugin-import": "^2.32.0",
         "eslint-plugin-prettier": "^4.2.1",
         "eslint-plugin-react": "^7.32.2",
         "html-webpack-harddisk-plugin": "^2.0.0",
